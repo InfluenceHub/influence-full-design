@@ -6,7 +6,7 @@ get_header();
 the_post();
 ?>
 
-<?php
+<!--<?php
   // The interviews page displays the latest interview for now
   $args = array(
     'numberposts' => 1,
@@ -20,7 +20,7 @@ the_post();
   $interview_flag = true;
   include('single-inf-interview.php');
   die;
-?>
+?> -->
 	<section id="content" class="interviews">
 		<div class="shell">
       <div class="section-heading">
