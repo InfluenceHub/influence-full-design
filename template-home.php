@@ -77,8 +77,7 @@ if ($iPod || $iPhone || $iPad || $Android) { $mobileOS = true; }
                     $entry_id  = $v->ID;
                     $video_url = carbon_get_post_meta($entry_id, 'inf_video_url');
                     if (!$mobileOS) {
-                      $video_url_revelens = carbon_get_post_meta($entry_id, 'inf_video_url_rev'); //mediaStream
-                      $video_slug_revelens = carbon_get_post_meta($entry_id, 'inf_video_slug_rev'); //exhibitSlug
+                      $video_url_revelens = carbon_get_post_meta($entry_id, 'inf_video_url'); //mediaStream
                     }
                     $video_temp = explode('?v=', $video_url);
                     $video_id = $video_temp[1];
