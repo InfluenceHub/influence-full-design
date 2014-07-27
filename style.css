@@ -5828,7 +5828,7 @@ textarea { overflow: auto; }
 }
 .more_interviews {
   margin: 0 auto;
-  width: 940pxpx;
+  width: 940px;
 }
 #content.interview .more_interviews h2 {
   border-bottom: 1px solid #ccc;
@@ -5870,4 +5870,64 @@ textarea { overflow: auto; }
 .page-id-8435 #header_inner {
    min-width: 975px;
    width: 90%;
+}
+
+/* 7/24/2014 Code by Stefan Bowerman */
+/* Directly affects the Interview Archive page */
+
+.int-archive-column-right {
+  width:70%; 
+  display:block;
+  float: right;
+}
+
+.int-archive-column-left {
+  width: 30%;
+  display: block;
+  float: left;
+}
+
+.int-archive-title-link {
+  display:block; 
+  text-align:center; 
+  margin-top:300px;
+}
+
+.int-archive-image-link-wrap {
+  position: relative;
+}
+
+.int-archive-image-link-overlay {
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  text-align:center;
+  padding-top:30%;
+  opacity:0;
+  color:#FFF; 
+  font-style: italic;
+  font-size: 50px;
+  background-color: transparent;
+  transition: all 100ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+}
+
+.int-archive-image-link-overlay:hover {
+  opacity: 1;
+  background-color: rgb(65, 65, 65);
+  background-color: rgba(65, 65, 65, 0.6);
+  transition: all 100ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+}
+
+.int-archive-item-divider {
+  height: 0;
+  border-bottom: 1px solid #ccc; 
+  margin: 15px 0;
 }
