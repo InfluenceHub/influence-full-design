@@ -40,7 +40,7 @@ the_post();
                 $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider');
                 $blockcount++;
                 if ($blockcount == 4) { $last = ' last'; }
-                if ($blockcount == 1) { echo '<h2>In Focus</h2>'; }
+                if ($blockcount == 1) { echo '<h2>In Focus</h2><br /><br />'; }
                
                 ?>
                 <div class="slides <?php echo $last; ?>">
