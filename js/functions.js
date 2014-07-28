@@ -599,8 +599,8 @@ function infContentResize() {
 
 //Pin header
 var headerHeight = parseInt($('#header').height()+20);
-if ($('#top_ad').length > 0) {
-  var topOffset = $('#top_ad').height();
+if ($('#top_ad-block').length > 0) {
+  var topOffset = $('#top_ad-block').height();
   $(window).scroll(function() {
     var thisEl = $('#header');
     if ($(window).scrollTop() >= topOffset && !thisEl.hasClass('pinned')) {

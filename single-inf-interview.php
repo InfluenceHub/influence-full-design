@@ -13,7 +13,7 @@
 <?php } else { ?>
   <section id="content" class="interview">
     <div class="shell group">
-    <div id="top_ad" style="padding-bottom: 25px;">
+    <div id="top_ad-block" style="padding-bottom: 25px;">
       <a href="http://shop.theinfluence.com">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopbanner.png" />
       </a>
@@ -24,7 +24,7 @@
         <!--
         -->
         <!--<div id="topSlider" class="interview-slider group"> -->
-          <ul class="slides">
+          <ul class="slides" style="list-style-type: none;">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
             $attachments_type = 'attachments';
