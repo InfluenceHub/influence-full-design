@@ -32,7 +32,8 @@
     <script type="text/javascript" src="//use.typekit.net/lzr4wxq.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script src="https://staging.cosmiccart.com/shop/widget"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.js"></script>\
+    <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/influencedocs/js/skrollr.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
   </head>
 	<body <?php body_class(); ?>>
@@ -93,7 +94,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             //$signinlink = '<li><a href="" class="sign-in-link">SIGN IN</a></li><li class="up">/<a href="" class="sign-up-link">UP</a></li>';
           }
         ?>
-        <a id="logo" href="<?php echo get_home_url(null, '/'); ?>"><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+        <a id="logo" style="padding-top: 5px;"href="<?php echo get_home_url(null, '/'); ?>"><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 viewBox="0 0 233 80" enable-background="new 0 0 233 80" xml:space="preserve">
 <g>
