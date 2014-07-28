@@ -54,7 +54,7 @@ the_post();
                           }
                           ?>
                         <a href="<?php the_permalink() ?>" class="int-archive-image-link-overlay">
-                          See The Shoot
+                        View More
                         </a>
                       </div>
                     </div>
