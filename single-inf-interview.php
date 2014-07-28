@@ -13,7 +13,7 @@
 <?php } else { ?>
   <section id="content" class="interview">
     <div class="shell group">
-    <div id="top_ad" style="padding-bottom: 25px;">
+    <div id="top_ad-block" style="padding-bottom: 25px;">
       <a href="http://shop.theinfluence.com">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopbanner.png" />
       </a>

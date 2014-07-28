@@ -728,30 +728,30 @@ img.alignleft {
   
 }
 
-#content .ad_wrapper {
+#content .ad_wrapper-block {
   width: 100%;
   /* background: url('images/banner_takeover_temp.jpg') center top repeat-y; */
 }
 
-#content .ad_wrapper .sideads_wrapper {
+#content .ad_wrapper-block .sideads_wrapper {
   position: absolute;
   width: 1331px;
   height: auto;
   display: block;
   left: -185px;
 }
-#content .ad_wrapper  .sidead {
+#content .ad_wrapper-block  .sidead {
   position: absolute;
   width: 160px;
   margin: 0;
   height: 0;
 }
 
-#content .ad_wrapper  .sidead.leftad {
+#content .ad_wrapper-block  .sidead.leftad {
   left: 0;
 }
 
-#content .ad_wrapper  .sidead.rightad {
+#content .ad_wrapper-block  .sidead.rightad {
   right: 0;
 }
 
@@ -760,7 +760,7 @@ img.alignleft {
   margin: 0 auto 29px auto;
 }
 
-#content .ad_wrapper  > div {
+#content .ad_wrapper-block  > div {
   width: 968px;
   margin: 0 auto 25px auto;
 }
@@ -773,13 +773,13 @@ img.alignleft {
   padding: 0 25px 25px 25px !important;
 }
 
-body.home #content .ad_wrapper > div {
+body.home #content .ad_wrapper-block > div {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 10px;
 }
 
-body.home #content > div.shell, body.home #content .ad_wrapper > div.shell {
+body.home #content > div.shell, body.home #content .ad_wrapper-block > div.shell {
   width: 100%;
   margin-bottom: 36px;
 }
@@ -1038,7 +1038,7 @@ div.ad_banner img {
 }
 
 /* Home Latest Influencers */
-body.home #content .ad_wrapper > div.latest {
+body.home #content .ad_wrapper-block > div.latest {
   position: relative;
 }
 
@@ -3783,7 +3783,7 @@ hr.bottomline {
 
 
 /* Header and Nav */
-#top_ad {
+.top_ad-block { /* Used to be #top_ad which is blocked by AdBlock CSS */
   width: 100%;
   height: 90px;
   padding: 10px 0;
