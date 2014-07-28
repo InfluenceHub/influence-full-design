@@ -5907,7 +5907,7 @@ textarea { overflow: auto; }
   padding-top:30%;
   opacity:0;
   color:#FFF; 
-  font-style: italic;
+  font-family: "BaskervilleBT-Italic",serif;
   font-size: 50px;
   background-color: transparent;
   transition: all 100ms ease-in-out;
