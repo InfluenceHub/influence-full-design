@@ -13,7 +13,7 @@
 <?php } else { ?>
   <section id="content" class="interview">
     <div class="shell group">
-    <div id="top_ad-block" style="padding-bottom: 25px;">
+    <div class="top_ad-block">
       <a href="http://shop.theinfluence.com">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopbanner.png" />
       </a>
@@ -32,7 +32,7 @@
             while($attachment = $attachments->get()) {
               $title = $attachments->field('title');
               $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider');
-              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" width="1214" /></li>';
+              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" /></li>';
               $i++;
             }
           ?>
