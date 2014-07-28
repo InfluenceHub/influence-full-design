@@ -105,7 +105,6 @@
 							<!--<a href="<?php //echo get_permalink($influencer_id); ?>" class="shop-viewall">VIEW ALL <?php //echo $influencer_name; ?> LOOKS</a>-->
               <img class="shop-published-by" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
 						</div><!-- /.text-holder -->
-<br /> <br />
 						<?php 
             
             //if(!empty($exact_items)) : 
@@ -139,7 +138,7 @@
 											<a href="<?php echo esc_url($product_link); ?>" target="_blank" title="<?php echo $product_designer . ' -- ' . get_the_title($post_id); ?>">
 												<?php if(has_post_thumbnail($post_id)) : ?>
 													<span class="img-hold">
-														<?php echo get_the_post_thumbnail($post_id, 'inf_single_product'); ?>
+														<?php echo get_the_post_thumbnail($post_id, 'inf_single_product_new'); ?>
 													</span> 
 												<?php endif; ?>
 												<h5 style="font-weight: bold;"><?php echo $shortDesigner; ?></h5>
