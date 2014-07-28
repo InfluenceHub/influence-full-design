@@ -189,6 +189,7 @@
             <?php
               $i=0;
               foreach($latest_posts as $lp) {
+                // '<pre>'.var_dump($lp).'</pre>';
                 $args = array(
                   'connected_type' => 'posts_to_influencers',
                   'connected_items' => $lp->ID,
@@ -196,15 +197,19 @@
                   'posts_per_page' => 1
                 );
                 $connected = new WP_Query($args);
+                $posts = get_posts($args);
+                $influencer_id = $posts[0]->ID;
                 //if($connected->have_posts()) {
                   $i++;
                   //while($connected->have_posts()) {
                     //$connected->the_post();
 
+                    // Format Post Title
                     $infTitle = inf_name_from_post($lp->ID);
                     if (trim($infTitle) <= '') { $infTitle = '&nbsp;'; }
                     $thisTitle = get_the_title($lp->ID);
                     
+                    // Pull in shop image
                     $custom_fields = get_post_custom($lp->ID);
                     $image  = trim($custom_fields['wpcf-post-shop-the-look'][0]);
                     if ($image <= '') {
@@ -235,6 +240,30 @@
                         <a href="<?php echo get_permalink($lp->ID); ?>">
                           <h2><?php echo $thisTitle; ?></h2>
                         </a>
+
+                      <?php
+                        $extraclass = '';
+                        $current_user_influencers = array();
+                        if(is_user_logged_in()) {
+                          $extraclass = 'subscribe-link';
+                          $current_user_influencers = inf_get_influencers();
+                        }
+                      ?>
+                        <?php if($influencer_id): ?>
+                          <form method="post" class="interact-with-influencer">
+                            <div class="home-feed-subscribe-options">
+                              <?php if(in_array($influencer_id, $current_user_influencers)) { ?>
+                                <a class="in-circle active <?php echo $extraclass ?>" href="<?php echo home_url().'/my-influence/'; ?>"></a>
+                                <div class="shop-subscribe"><a class="sub-link <?php echo $extraclass; ?>" href="<?php echo home_url().'/my-influence/'; ?>">UNSUBSCRIBE</a></div><!-- /.flag -->
+                              <?php } else { ?>
+                                <input type="hidden" name="influencer_subscribe" value="<?php echo $influencer_id; ?>">
+                                <a class="in-circle <?php echo $extraclass ?>" href="<?php echo home_url().'/my-influence/'; ?>"></a>
+                                <div class="shop-subscribe"><a class="sub-link <?php echo $extraclass; ?>" href="<?php echo home_url().'/my-influence/'; ?>">SUBSCRIBE</a></div><!-- /.flag -->
+                              <?php } ?>
+                            </div>
+                          </form>
+                        <?php endif; // $influencer_id ?>
+
                         <?php 
                           $content = get_post_field('post_content', $lp->ID);
                           // $content = apply_filters($content);
@@ -243,7 +272,11 @@
                           }
                           echo '<p class="home-feed-pcontent">'.$content.'</p>';
                         ?>
-                        <a href="<?php echo get_permalink($lp->ID); ?>" class="home-feed-post-view-more">VIEW MORE</a>
+                        <a href="<?php echo get_permalink($lp->ID); ?>" class="home-feed-post-view-more">VIEW MORE <span class="home-feed-post-view-more-arrow">&rsaquo;</span></a>
+                        
+                        <?php // Pull in outfit images
+                          ?>
+
                         <a href="<?php echo get_permalink($lp->ID); ?>">
                           <!-- <img class="shoplook" src="<?php echo $image; ?>" width="90" height="400" alt="Shop the Look" /> -->
 <!--                           <h4><?php echo $infTitle; ?></h4>

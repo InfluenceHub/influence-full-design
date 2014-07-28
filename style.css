@@ -5966,17 +5966,41 @@ textarea { overflow: auto; }
 }
 
 .home-feed-post-view-more {
-  text-align: right;
-  font-family: "AvenirNext LT Pro MediumCn", arial, sans-serif;
-  text-transform: uppercase;
   display: block;
   margin-bottom: 10px;
+  text-align: right;
+  font-family: "AvenirNext LT Pro Regular", arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: -0.4px;
+}
+
+.home-feed-post-view-more-arrow {
+  font-size: 17px;
+}
+
+.home-feed-subscribe-options {
+  height: 30px;
+  margin: 5px 0 10px;
+}
+
+.home-feed-subscribe-options .in-circle.subscribe-link {
+  float: left;
+}
+
+.home-feed-subscribe-options .sub-link.subscribe-link {
+    font-family: "AvenirNext LT Pro Regular", arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 33px;
+    margin-left: 5px;
 }
 
 .latest-home li p.home-feed-pcontent { /* Need to break specified generic selectors (.latest-home li p) */
   border-top: none;
   text-align: left;
-  font-family: arial;
+  font-family: 'AvenirNext LT Pro Regular', 'din_promedium', 'din_prolight', arial;
   font-size: 12px;
   letter-spacing: 0;
   line-height: 16px;
