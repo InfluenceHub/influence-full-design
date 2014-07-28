@@ -200,6 +200,7 @@
                   $i++;
                   //while($connected->have_posts()) {
                     //$connected->the_post();
+
                     $infTitle = inf_name_from_post($lp->ID);
                     if (trim($infTitle) <= '') { $infTitle = '&nbsp;'; }
                     $thisTitle = get_the_title($lp->ID);
@@ -209,24 +210,46 @@
                     if ($image <= '') {
                       $image = get_bloginfo('stylesheet_directory') . '/images/clicktoshop.jpg';
                     }
-			// PAGELY PERFORMANCE HACK
-			$image_file = '/httpdocs'.str_replace(get_option('siteurl'), '', $image);
+              			// PAGELY PERFORMANCE HACK
+              			$image_file = '/httpdocs'.str_replace(get_option('siteurl'), '', $image);
                     list($width_one, $height_one) = getimagesize($image_file);
                     if (strlen($thisTitle) > 70) {
                       $thisTitle = substr($thisTitle, 0, 70) . '...';
                     }
-                    $extra_class = '';
-                    if ($i % 2 == 0) {
-                      $extra_class = ' last';
-                    }
                     ?>
-                    <li class="column<?php echo $extra_class; ?>">
-                      <a href="<?php echo get_permalink($lp->ID); ?>">
+                    <li class="column-two home-feed-post">
+                      <div class="home-feed-post-img-wrap">
                         <?php echo get_the_post_thumbnail($lp->ID, 'inf_home_latest'); ?>
-                        <img class="shoplook" src="<?php echo $image; ?>" width="90" height="400" alt="Shop the Look" />
-                        <h4><?php echo $infTitle; ?></h4>
-                        <p><?php echo $thisTitle; ?></p>
-                      </a>
+                        <?php $post_categories = wp_get_post_categories($lp->ID); ?>
+                        <?php if(!empty($post_categories[0])):?>
+                          <?php $cat = get_category( $post_categories[0] )?>
+                          <?php $category_link = get_category_link($post_categories[0]); ?>
+                          <div class="shop-main">
+                            <div class="shop-maintag">
+                              <a href="<?php echo esc_url($category_link); ?>"><?php echo strtoupper($cat->cat_name); ?></a>
+                            </div>
+                          </div>
+                        <?php endif; ?>
+                      </div>
+                      <div class="home-feed-post-info">
+                        <a href="<?php echo get_permalink($lp->ID); ?>">
+                          <h2><?php echo $thisTitle; ?></h2>
+                        </a>
+                        <?php 
+                          $content = get_post_field('post_content', $lp->ID);
+                          // $content = apply_filters($content);
+                          if (strlen($content) > 300) {
+                            $content = substr($content, 0, 300) . '...';
+                          }
+                          echo '<p class="home-feed-pcontent">'.$content.'</p>';
+                        ?>
+                        <a href="<?php echo get_permalink($lp->ID); ?>" class="home-feed-post-view-more">VIEW MORE</a>
+                        <a href="<?php echo get_permalink($lp->ID); ?>">
+                          <!-- <img class="shoplook" src="<?php echo $image; ?>" width="90" height="400" alt="Shop the Look" /> -->
+<!--                           <h4><?php echo $infTitle; ?></h4>
+                          <p><?php echo $thisTitle; ?></p> -->
+                        </a>
+                      </div>
                     </li>
                   <?php
                   //}

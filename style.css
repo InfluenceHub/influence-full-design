@@ -5871,3 +5871,54 @@ textarea { overflow: auto; }
    min-width: 975px;
    width: 90%;
 }
+
+/* Home page posts */
+.home-feed-post {
+  margin-bottom: 60px;
+}
+
+.home-feed-post-img-wrap {
+  width: 210px;
+  float: left;
+  position: relative;
+}
+
+.home-feed-post-img-wrap .shop-main {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.home-feed-post-info {
+  margin-left: 235px;
+}
+
+.home-feed-post-info h2 {
+    word-wrap: break-word;
+    white-space: normal;
+    font-family: "AvenirNext LT Pro MediumCn", arial, sans-serif;
+    border-bottom: none;
+    font-weight: normal;
+    font-size: 26px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    border: none;
+}
+
+.home-feed-post-view-more {
+  text-align: right;
+  font-family: "AvenirNext LT Pro MediumCn", arial, sans-serif;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.latest-home li p.home-feed-pcontent { /* Need to break specified generic selectors (.latest-home li p) */
+  border-top: none;
+  text-align: left;
+  font-family: arial;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-bottom: 10px;
+}
