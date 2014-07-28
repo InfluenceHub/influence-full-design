@@ -7,53 +7,69 @@ the_post();
 ?>
 <section id="content">
   <div class="shell">
-      <ul class="slides">
-          <?php
-            $attachments = new Attachments('inf_interview_attachments', $post->ID);
-            $attachments_type = 'attachments';
-            $i = 0;
-            while($attachment = $attachments->get()) {
-              $title = $attachments->field('title');
-              $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider');
-              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" width="1214" /></li>';
-              $i++;
-            }
-          ?>
-          </ul><!-- /.slides -->
+
+      <div class="section-heading" style="margin-bottom: 70px;">
+        <h1><span>INTERVIEW</span>archive</h1>
+        <div class="line"></div>
+      </div>
+
         <?php
+          $num_posts = 4;
           $args = array(
-            'numberposts' => 4,
+            'numberposts' => $num_posts,
             'orderby' => 'date',
             'order' => 'DESC',
             'post_type' => 'inf-interview',
             'post_status' => 'publish'
           );
           $interviews = get_posts($args);
-          setup_postdata($interview[0]);
-         
-          if (count($interviews) > 0) {
+
+          if (count($interviews) > 0) { ?>
+
+            <?php 
             $blockcount = 0;
-            foreach($interviews as $key=>$interview) {
-              if ($post->ID != $interview->ID) {
-                $title = $interview->post_title;
-                $link = get_permalink($interview->ID);
-                $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider');
-                $blockcount++;
-                if ($blockcount == 4) { $last = ' last'; }
-                if ($blockcount == 1) { echo '<h2>In Focus</h2><br /><br />'; }
-               
-                ?>
-                <div class="slides <?php echo $last; ?>">
-                <a href="<?php echo $link; ?>">
-                <h3><?php echo $title; ?></h3>
-                <img src="<?php echo $image[0]; ?>" alt="<?php echo $title; ?>" />
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/int_more_link.png" />
-                </a>
+            
+            foreach ($interviews as $k => $post) {
+                setup_postdata($post);
+                $attachments = new Attachments('inf_interview_attachments', $post->ID);
+              ?>
+
+                <div class="column-three">
+                    <div class="column-left int-archive-column-left">
+                      <a href="<?php the_permalink() ?>" class="int-archive-title-link">
+                        <h3><?php the_title(); ?></h3>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/int_more_link.png" />
+                      </a>
+                    </div>
+                    <div class="column-right int-archive-column-right">
+                      <div class="int-archive-image-link-wrap">
+                        <?php 
+                          if($attachments->exist()){
+                            $first_attachment = $attachments->get_single(0);
+
+                            $image = wp_get_attachment_image_src($first_attachment->id, 'inf_interviewslider');
+
+                            echo '<img src="'.$image[0].'" style="width:100%">';
+
+                          }
+                          ?>
+                        <a href="<?php the_permalink() ?>" class="int-archive-image-link-overlay">
+                        View More
+                        </a>
+                      </div>
+                    </div>
                 </div>
-                <?php
+              <?php 
+
+              $blockcount++;
+
+              if($blockcount != count($interviews)){
+                echo '<div class="int-archive-item-divider"></div>';
               }
+
             }
           }
+         
         ?>
     </div>
 </section>
