@@ -24,7 +24,7 @@
         <!--
         -->
         <!--<div id="topSlider" class="interview-slider group"> -->
-          <ul class="slides">
+          <ul class="slides" style="list-style-type: none;">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
             $attachments_type = 'attachments';

@@ -79,6 +79,17 @@ the_post();
         }
        ?>
 		</div>
-	</section>
+</section>
+<script type="text/javascript">
+  var s = skrollr.init({
+    edgeStrategy: 'set',
+    easing: {
+      WTF: Math.random,
+      inverted: function(p) {
+        return 1-p;
+      }
+    }
+  });
+  </script>
   <?php inf_browse_by(); ?>
 <?php get_footer(); ?>
