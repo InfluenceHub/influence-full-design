@@ -9,8 +9,8 @@
   }
   if ($_GET['test']) {
 ?>
-
 <?php } else { ?>
+
   <section id="content" class="interview">
     <div class="shell group">
     <div class="top_ad-block">
@@ -156,7 +156,7 @@
         if(!empty($products_sections)) {
 
           foreach($products_sections as $key=>$ps) {
-            if ($key > 0) {
+
               $products = $ps['products'];
 
               if(!empty($products)) { ?>
@@ -215,7 +215,7 @@
                 </div><!-- /.prod-row -->
               <?php }
             }
-          }
+
 
         }
       ?> 
@@ -282,13 +282,8 @@
     
     </div>
   </section><!-- /#content -->
-  
-  
-  
-  
-  
-  
-  
+    
+
   <?php } ?>
   <?php inf_browse_by(); ?>
 <?php get_footer(); ?>
