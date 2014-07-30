@@ -810,18 +810,17 @@
           $caption_four = substr($caption_four, 0, 0) . ' <span style="font-weight; bold; text-transform: uppercase;">READ MORE ></span>';
         }
     ?>  
-      <div class="instagram-posts">
+     <!-- <div class="instagram-posts">
         <div class="section-heading" style="margin-top: -15px;">
           <h2><a href="<?php echo home_url().'/shop-this-instagram'; ?>">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthisinsta.png" /></a></h2>
-        </div><!-- /.section-heading -->
+        </div>
         <a href="<?php echo home_url().'/shop-this-instagram'; ?>">
               <div class="shop-instagram one" style="margin-top: -15px;">
                 <div class="instagram-photo">
                   <img src="<?php echo $image_one[0]; ?>" alt="<?php echo $title_one; ?>" />
                   <p><span style="color: #000;"><?php echo $title_one; ?></span>
                   <?php echo $caption_one; ?></p>
-                 <!-- <div class="shop-link">SHOP</div> -->
                 </div>
               </div>
             </a>
@@ -831,7 +830,6 @@
                   <img src="<?php echo $image_two[0]; ?>" alt="<?php echo $title_two; ?>" />
                 <p><span style="color:#000;"><?php echo $title_two; ?></span>
                 <?php echo $caption_two; ?></p>
-                <!-- <div class="shop-link">SHOP</div> -->
                 </div>
               </div>
             </a>
@@ -841,7 +839,6 @@
                   <img src="<?php echo $image_three[0]; ?>" alt="<?php echo $title_three; ?>" />
                 <p><span style="color:#000;"><?php echo $title_three; ?></span>
                 <?php echo $caption_three; ?></p>
-                <!-- <div class="shop-link">SHOP</div> -->
                 </div>
               </div>
             </a>
@@ -851,7 +848,6 @@
                   <img src="<?php echo $image_four[0]; ?>" alt="<?php echo $title_four; ?>" />
                 <p><span style="color:#000;"><?php echo $title_four; ?></span>
                 <?php echo $caption_four; ?></p>
-                <!-- <div class="shop-link">SHOP</div> -->
                 </div>
               </div>
             </a>            
@@ -859,7 +855,7 @@
       <div class="viewall-latest">
         <a href="<?php echo home_url(); ?>/shop-this-instagram/">VIEW ALL INSTAGRAM</a>
       </div>
-      <div style="clear: left;"></div>
+      <div style="clear: left;"></div>  -->
     <?php
   }
   
