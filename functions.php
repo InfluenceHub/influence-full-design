@@ -888,7 +888,7 @@ function inf_footer_signup() { ?>
         <ul class="word-list">
           <div class="browse-email-signup">
             <form action="http://theinfluence.us8.list-manage.com/subscribe/post?u=527260c47d9de3929c883ec2d&amp;id=69a8f6e293" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-				Get Influenced By Your Celebrity Style Obsessions & <span style="font-family: 'BaskervilleBT-Italic'; text-transform: none;">Sign Up</span> For Our Daily Newsletter! 
+				Get Influenced By Your Celebrity Style Obsessions & <span style="font-family: 'BaskervilleBT-Italic'; text-transform: none; font-size: 18px; color: #FFF;">Sign Up</span> For Our Daily Newsletter! 
               <input type="email" value="" name="EMAIL" class="required email field">
               <div style="position: absolute; left: -5000px;"><input type="text" name="b_527260c47d9de3929c883ec2d_69a8f6e293" value=""></div>
               <input type="submit" value="+" name="subscribe" class="submit_button">
