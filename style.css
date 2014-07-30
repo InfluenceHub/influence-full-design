@@ -5312,7 +5312,7 @@ div.archive-col .shop-link {
 }
 
 /* Helper Classes */
-.group:after { /* clear floats without markup, add "group" class to parent container */
+.group:after, .clearfix:after { /* clear floats without markup, add "group" class to parent container */
   content: "";
   display: table;
   clear: both;
@@ -5967,13 +5967,17 @@ textarea { overflow: auto; }
 
 .home-feed-post-view-more {
   display: block;
-  margin-bottom: 10px;
+  margin: 5px 0 3px;
   text-align: right;
   font-family: "AvenirNext LT Pro Regular", arial, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12px;
   letter-spacing: -0.4px;
+}
+.home-feed-post-view-more.shop-look {
+  font-family: "din_promedium";
+  letter-spacing: 1px;
 }
 
 .home-feed-post-view-more-arrow {
@@ -5985,11 +5989,11 @@ textarea { overflow: auto; }
   margin: 5px 0 10px;
 }
 
-.home-feed-subscribe-options .in-circle.subscribe-link {
+.home-feed-subscribe-options .in-circle {
   float: left;
 }
 
-.home-feed-subscribe-options .sub-link.subscribe-link {
+.home-feed-subscribe-options .sub-link {
     font-family: "AvenirNext LT Pro Regular", arial, sans-serif;
     font-size: 11px;
     font-weight: bold;
@@ -6004,5 +6008,51 @@ textarea { overflow: auto; }
   font-size: 12px;
   letter-spacing: 0;
   line-height: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  height: auto;
 }
+
+.home-feed-prod-row.prod-row.small {
+  padding: 0;
+  border-top: none;
+  height: auto;
+}
+
+.latest-home ul.home-feed-prod-list {
+  width: 100%;
+  list-style: none;
+  float: none;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #555;
+}
+
+.prod-row.small ul li.home-feed-prod-list-item { /*  Over specificity needs to die */
+  width: 33%;
+  float: left;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.prod-row.small ul li.home-feed-prod-list-item h5 {
+    /* Truncate with elipsis */
+    white-space: nowrap;   
+    overflow: hidden;   
+    text-overflow: ellipsis;
+}
+
+.prod-row.small ul li.home-feed-prod-list-item .img-hold {
+  display: inline-block;
+  height: 120px;
+  margin-bottom: 5px;
+}
+
+.prod-row.small ul li.home-feed-prod-list-item .img-hold img {
+  float: none;
+  max-width: 100%;
+  max-height: 100%;
+}
+

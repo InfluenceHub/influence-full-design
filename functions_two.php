@@ -159,7 +159,7 @@
   
   //Home Page Latest Looks
   function inf_home_latest() {
-        $args = array(
+    $args = array(
       'post_type' => 'post',
       'posts_per_page' => 6,
       'meta_query' => array(
@@ -171,6 +171,14 @@
       )
     );
     $latest_posts = get_posts($args);
+
+
+    $extraclass = '';
+    $current_user_influencers = array();
+    if(is_user_logged_in()) {
+      $extraclass = 'subscribe-link';
+      $current_user_influencers = inf_get_influencers();
+    }
 
 
      ?>
@@ -187,72 +195,41 @@
           </div><!-- /.section-heading -->
           <ul>
             <?php
-              $i=0;
-              foreach($latest_posts as $lp) {
-                // '<pre>'.var_dump($lp).'</pre>';
-                $args = array(
-                  'connected_type' => 'posts_to_influencers',
-                  'connected_items' => $lp->ID,
-                  'nopaging' => true,
-                  'posts_per_page' => 1
-                );
-                $connected = new WP_Query($args);
-                $posts = get_posts($args);
-                $influencer_id = $posts[0]->ID;
-                //if($connected->have_posts()) {
-                  $i++;
-                  //while($connected->have_posts()) {
-                    //$connected->the_post();
+              global $post;
+              foreach($latest_posts as $post) {
 
-                    // Format Post Title
-                    $infTitle = inf_name_from_post($lp->ID);
-                    if (trim($infTitle) <= '') { $infTitle = '&nbsp;'; }
-                    $thisTitle = get_the_title($lp->ID);
-                    
-                    // Pull in shop image
-                    $custom_fields = get_post_custom($lp->ID);
-                    $image  = trim($custom_fields['wpcf-post-shop-the-look'][0]);
-                    if ($image <= '') {
-                      $image = get_bloginfo('stylesheet_directory') . '/images/clicktoshop.jpg';
-                    }
-              			// PAGELY PERFORMANCE HACK
-              			$image_file = '/httpdocs'.str_replace(get_option('siteurl'), '', $image);
-                    list($width_one, $height_one) = getimagesize($image_file);
-                    if (strlen($thisTitle) > 70) {
-                      $thisTitle = substr($thisTitle, 0, 70) . '...';
-                    }
-                    ?>
-                    <li class="column-two home-feed-post">
+                $influencer_id = get_influencer_id_by_connected_post($post);
+                
+                ?>
+
+                <li class="column-two home-feed-post">
                       <div class="home-feed-post-img-wrap">
-                        <?php echo get_the_post_thumbnail($lp->ID, 'inf_home_latest'); ?>
-                        <?php $post_categories = wp_get_post_categories($lp->ID); ?>
-                        <?php if(!empty($post_categories[0])):?>
-                          <?php $cat = get_category( $post_categories[0] )?>
-                          <?php $category_link = get_category_link($post_categories[0]); ?>
-                          <div class="shop-main">
-                            <div class="shop-maintag">
-                              <a href="<?php echo esc_url($category_link); ?>"><?php echo strtoupper($cat->cat_name); ?></a>
-                            </div>
-                          </div>
-                        <?php endif; ?>
+                        <?php 
+                              echo the_post_thumbnail('inf_home_latest'); 
+                              $post_categories = wp_get_post_categories(get_the_id());
+                              if(!empty($post_categories[0])){
+                                $cat = get_category($post_categories[0]);
+                                $category_link = get_category_link($cat); // Refactor to use category obj?
+                                ?>
+                                <div class="shop-main">
+                                  <div class="shop-maintag">
+                                    <a href="<php echo esc_url($category_link); ?>">
+                                      <?php echo strtoupper($cat->cat_name); ?>
+                                    </a>
+                                  </div>
+                                </div>
+                        <?php } // endif !empty($post_categories[0]) ?>
                       </div>
                       <div class="home-feed-post-info">
-                        <a href="<?php echo get_permalink($lp->ID); ?>">
-                          <h2><?php echo $thisTitle; ?></h2>
+                        <a href="<?php the_permalink(); ?>">
+                          <?php the_title("<h2>", "</h2>"); ?>
                         </a>
 
-                      <?php
-                        $extraclass = '';
-                        $current_user_influencers = array();
-                        if(is_user_logged_in()) {
-                          $extraclass = 'subscribe-link';
-                          $current_user_influencers = inf_get_influencers();
-                        }
-                      ?>
                         <?php if($influencer_id): ?>
                           <form method="post" class="interact-with-influencer">
                             <div class="home-feed-subscribe-options">
                               <?php if(in_array($influencer_id, $current_user_influencers)) { ?>
+                                <input type="hidden" name="influencer_unsubscribe" value="<?php echo $influencer_id; ?>">
                                 <a class="in-circle active <?php echo $extraclass ?>" href="<?php echo home_url().'/my-influence/'; ?>"></a>
                                 <div class="shop-subscribe"><a class="sub-link <?php echo $extraclass; ?>" href="<?php echo home_url().'/my-influence/'; ?>">UNSUBSCRIBE</a></div><!-- /.flag -->
                               <?php } else { ?>
@@ -265,32 +242,73 @@
                         <?php endif; // $influencer_id ?>
 
                         <?php 
-                          $content = get_post_field('post_content', $lp->ID);
-                          // $content = apply_filters($content);
-                          if (strlen($content) > 300) {
-                            $content = substr($content, 0, 300) . '...';
-                          }
-                          echo '<p class="home-feed-pcontent">'.$content.'</p>';
-                        ?>
-                        <a href="<?php echo get_permalink($lp->ID); ?>" class="home-feed-post-view-more">VIEW MORE <span class="home-feed-post-view-more-arrow">&rsaquo;</span></a>
-                        
-                        <?php // Pull in outfit images
-                          ?>
 
-                        <a href="<?php echo get_permalink($lp->ID); ?>">
-                          <!-- <img class="shoplook" src="<?php echo $image; ?>" width="90" height="400" alt="Shop the Look" /> -->
-<!--                           <h4><?php echo $infTitle; ?></h4>
-                          <p><?php echo $thisTitle; ?></p> -->
+                              $content = $post->post_content;
+                              if (strlen($content) > 220) {
+                                $content = substr($content, 0, 220) . '...';
+                              }
+                        ?>
+                        <p class="home-feed-pcontent"><?php echo $content ?></p>
+                        <a href="<?php the_permalink(); ?>" class="home-feed-post-view-more">
+                          VIEW MORE <span class="home-feed-post-view-more-arrow">&rsaquo;</span>
                         </a>
-                      </div>
-                    </li>
+
+                      
+                        <?php $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex'); ?>
+                        
+                        <?php if(!empty($products_sections)): ?>
+                          <?php
+                            $products_section = $products_sections[0];
+                            $products = $products_section['products'];
+                          ?>
+                          <div class="home-feed-prod-row prod-row small">
+                            <ul class="home-feed-prod-list group">
+                                <?php foreach ($products as $k => $post_id): ?>
+                                  <?php 
+                                    if ($k >2) { // Only list first three products
+                                      break;
+                                    }
+                                    $product_designer = get_post_meta($post_id, 'designer', true);
+                                    $shortDesigner = $product_designer;
+                                    // NOTE : String truncation is taken care of with CSS
+                                    // if (strlen($shortDesigner) > 24) {
+                                    //   $shortDesigner = substr($shortDesigner, 0, 24) . '...';
+                                    // }
+                                    $product_price = get_post_meta($post_id, 'price', true);
+                                    $product_link = get_post_meta($post_id, 'product_url', true);
+                                    $shortTitle = get_the_title($post_id);
+                                    // if (strlen($shortTitle) > 24) {
+                                    //   $shortTitle = substr($shortTitle, 0, 24) . '...';
+                                    // }
+                                  ?>
+                                  <li class="home-feed-prod-list-item">
+                                    <a href="<?php echo esc_url($product_link); ?>" target="_blank" title="<?php echo $product_designer . ' -- ' . get_the_title($post_id); ?>">
+                                      <?php if(has_post_thumbnail($post_id)) : ?>
+                                        <span class="img-hold">
+                                          <?php echo get_the_post_thumbnail($post_id, 'inf_single_product'); ?>
+                                        </span> 
+                                      <?php endif; ?>
+                                      <h5 style="font-weight: bold;"><?php echo $shortDesigner; ?></h5>
+                                      <h5><?php echo $shortTitle; ?></h5>
+                                    </a>
+                                  </li>
+                              <?php endforeach; ?>
+                            </ul>
+                          </div>
+                          <a href="<?php the_permalink(); ?>" class="home-feed-post-view-more shop-look" style="font-weight:bold;">
+                            SHOP THE LOOK <span class="home-feed-post-view-more-arrow">&rsaquo;</span>
+                          </a>
+                        <?php endif; ?>
+                          
+                      </div> <!-- END .home-feed-post-info -->
+
+                </li>
+
                   <?php
-                  //}
-                //}
 
                 wp_reset_postdata();
 
-              }
+              } // end foreach $latest_posts as $post
             ?>
           </ul><!-- /.recent-list -->
           <!-- HOME PAGE 300 X 900 AD SPACE -->
@@ -828,5 +846,22 @@
     }
 
     return $caption;
+  }
+
+  // Pass in a WP_Post object connected to an influencer
+  function get_influencer_id_by_connected_post($post){
+    $args = array(
+      'connected_type' => 'posts_to_influencers',
+      'connected_items' => $post->ID,
+      'nopaging' => true,
+      'posts_per_page' => 1
+    );
+    $influencer = get_posts($args);
+
+    $influencer_id = null;
+    if(isset($influencer[0])){
+      $influencer_id = $influencer[0]->ID;
+    }
+    return $influencer_id;
   }
 ?>
