@@ -5963,6 +5963,56 @@ textarea { overflow: auto; }
   margin-bottom: 60px;
 }
 
+li.home-feed-side-by-side {
+  width: 300px;
+  height: 460px;
+  margin: 0 0 30px;
+}
+
+li.home-feed-side-by-side:nth-child(2n+1) {
+  margin-right: 30px;
+}
+
+li.home-feed-side-by-side .home-feed-post-img-wrap {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  float: none;
+}
+
+li.home-feed-side-by-side .home-feed-post-img-wrap img {
+  width: 300px;
+  height: auto;
+  margin-top: -10px;
+}
+
+li.home-feed-side-by-side .home-feed-post-info {
+  margin: 0;
+}
+
+li.home-feed-side-by-side .home-feed-post-info h2 {
+  font-size: 20px;
+}
+
+.home-feed-side-by-side .home-feed-meta-content {
+  font-family: "AvenirNext LT Pro MediumCn",sans-serif;
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.home-feed-side-by-side .home-feed-pcontent {
+  height: 31px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #555;
+}
+
+.meta-content-divider {
+  display: inline-block;
+  margin: 0 4px;
+}
+
 .home-feed-post-img-wrap {
   width: 210px;
   float: left;
