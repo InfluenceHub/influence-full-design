@@ -204,13 +204,14 @@
 
                 <li class="column-two home-feed-post">
                       <div class="home-feed-post-img-wrap">
+                      <a href="<?php the_permalink(); ?>">
                         <?php 
                               echo the_post_thumbnail('inf_home_latest'); 
                               $post_categories = wp_get_post_categories(get_the_id());
                               if(!empty($post_categories[0])){
                                 $cat = get_category($post_categories[0]);
                                 $category_link = get_category_link($cat); // Refactor to use category obj?
-                                ?>
+                                ?> </a>
                                 <div class="shop-main">
                                   <div class="shop-maintag">
                                     <a href="<php echo esc_url($category_link); ?>">

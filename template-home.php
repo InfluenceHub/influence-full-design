@@ -6,8 +6,7 @@ get_header();
 
 the_post();
 //Detect mobile
-if ($detect->isMobile()) {$mobileOS = true;}
-else {$mobileOS = false;}
+
 ?>
   <section id="content">
     <div class="shell">

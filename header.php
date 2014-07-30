@@ -36,9 +36,7 @@ $detect = new Mobile_Detect;
     <meta name="viewport" content="width=1200" />
     <script type="text/javascript" src="//use.typekit.net/lzr4wxq.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <script src="https://staging.cosmiccart.com/shop/widget"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.js"></script>\
-    <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/influencedocs/js/skrollr.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
   </head>
 	<body <?php body_class(); ?>>
