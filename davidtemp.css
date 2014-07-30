@@ -306,7 +306,8 @@ body.home #content .content_wrapper {
   width: 100%;
 }
 .prod-row.small {
-  height: 240px;
+  /*height: 240px;*/
+  height: 292px;
 }
 .prod-row.small ul li .img-hold {
   margin-bottom: 0;
@@ -604,7 +605,8 @@ a.shop-inf-name:hover {
 }
 
 .shop-main .prod-row.small .caroufredsel_wrapper {
-  height: 240px !important;
+  /*height: 240px !important;*/
+  height: 292px !important;
 }
 
 .prod-row.small ul li .img-hold {

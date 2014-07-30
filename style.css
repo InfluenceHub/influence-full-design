@@ -3447,7 +3447,8 @@ a.subscribe-img {
   white-space: nowrap;
 }
 .shop-main .prod-row.small ul, .shop-main .prod-row.small li, .shop-main .prod-row.small .caroufredsel_wrapper {
-  height: 230px !important;
+  /*height: 230px !important;*/
+  height: 292px !important;
 }
 
 .shop-main .prev, .shop-main .next, .shop .prev-1, .shop .next-1, .shop .prev-2, .shop .next-2, .shop .prev-3, .shop .next-3, .shop .prev-4, .shop .next-4, .shop .prev-5, .shop .next-5, .shop .prev-6, .shop .next-6 {
@@ -3662,7 +3663,8 @@ a.subscribe-img {
 
 .prod-row.small ul li {
   margin: 0 10px 0 0;
-  width: 144px;
+  /*width: 144px;*/
+  width: 195px;
 }
 
 .prod-row ul li .img-hold {
@@ -3710,8 +3712,10 @@ a.subscribe-img {
 }
 
 .prod-row.small .img-hold img{
-  max-width: 144px;
-  max-height: 164px;
+/*  max-width: 144px;
+  max-height: 164px;*/
+  max-width: 195px;
+  max-height: 222px;
 }
 
 .prod-row ul li h6 {

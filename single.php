@@ -16,19 +16,10 @@
 		<div class="shell shop">
 			<?php $post_categories = wp_get_post_terms( get_the_ID(), 'category' );
 
-			$args = array(
-				'connected_type' => 'posts_to_influencers',
-				'connected_items' => get_the_ID(),
-				'nopaging' => true,
-				'posts_per_page' => 1
-			);
+      $influencer_id = get_influencer_id_by_connected_post($post);
 
-			$influencer = get_posts($args);
+			if(!is_null($influencer_id)) :
 
-
-			if(!empty($influencer)) :
-
-				$influencer_id = $influencer[0]->ID;
         $influencer_name = get_the_title($influencer_id);
         $influencer_name_parts = explode(' ', $influencer_name);
         $influencer_name_first = $influencer_name_parts[0];
@@ -348,7 +339,10 @@ jQuery(window).load(function() {
   jQuery('.shop-main .left-col .slides').carouFredSel({
 			prev: '.shop-featured-prev',
 			next: '.shop-featured-next',
-			items: 1,
+			items: {
+        minimum: 0;
+      },
+      // items: 1,
 			auto: false
   });
 });
