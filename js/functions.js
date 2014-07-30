@@ -623,33 +623,33 @@ if ($('#top_ad-block').length > 0) {
     var vpWidth         = $(window).width();
     var vpHeight        = $(window).height() - $('#header').height() - $('#footer').height();
     
-    var slideItems      = 8;
+    var slideItems      = 9;
     var sliderWidth     = '100%';
     var slideCenter     = 4;
     
-    var leftOffset = (slideCenter * slideBaseWidth) - (vpWidth/2) + (slideBaseWidth/2); //offset to put 
+    var leftOffset = (slideCenter* slideBaseWidth) - (vpWidth/2) + (slideBaseWidth/2); //offset to put 
     if (leftOffset > 1005) {
       leftOffset = 1005;
     }
     
-    /*No longer responsive
-    //choose appropriate slide number, 5, 7 or 9
-    //slide height is greater than viewable space, use more slides
+    /*No longer responsive 
+    choose appropriate slide number, 5, 7 or 9
+    //slide height is greater than viewable space, use more slides 
     var topSlider = $('.top-slider');
     if (slideBaseHeight > vpHeight) {
-      //if (vpHeight <= 500) { slideItems = 7; sliderWidth = '118%'; slideCenter = 3; topSlider.addClass('seven').removeClass('nine'); }
-      //if (vpHeight <= 250) { slideItems = 9; sliderWidth = '114%'; slideCenter = 4; topSlider.addClass('nine').removeClass('seven'); }
+      if (vpHeight <= 500) { slideItems = 7; sliderWidth = '118%'; slideCenter = 3; topSlider.addClass('seven').removeClass('nine'); }
+      if (vpHeight <= 250) { slideItems = 9; sliderWidth = '114%'; slideCenter = 4; topSlider.addClass('nine').removeClass('seven'); }
       slideItems = 7; sliderWidth = '118%'; slideCenter = 3; topSlider.addClass('seven').removeClass('nine');
     }
     //browser width is greater than 4 x slideBaseWidth, use more slides
     var maxWidth = slideBaseWidth*(slideItems-1);
     if (vpWidth > maxWidth) {
-      //if (vpWidth <= (slideBaseWidth*6)) { slideItems = 7; sliderWidth = '118%'; slideCenter = 3; topSlider.addClass('seven').removeClass('nine'); }
-      //else { slideItems = 9; sliderWidth = '114%'; slideCenter = 4; topSlider.addClass('nine').removeClass('seven'); }
+      if (vpWidth <= (slideBaseWidth*6)) { slideItems = 7; sliderWidth = '118%'; slideCenter = 3; topSlider.addClass('seven').removeClass('nine'); }
+      else { slideItems = 9; sliderWidth = '114%'; slideCenter = 4; topSlider.addClass('nine').removeClass('seven'); }
       slideItems = 7; sliderWidth = '118%'; slideCenter = 3; topSlider.addClass('seven').removeClass('nine');
     }
-    */
     
+    */
     $('.top-slider .slides').carouFredSel({
       width : '5000px',
       //align: 'center',

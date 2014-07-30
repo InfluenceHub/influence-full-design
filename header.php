@@ -7,6 +7,11 @@
     $version = 134; //update to force reload of CSS
   }
 ?>
+<?php
+// These lines are mandatory.
+require_once 'lib/Mobile_Detect.php';
+$detect = new Mobile_Detect;
+?>
 <!DOCTYPE html>
 <html>
 	<head profile="http://gmpg.org/xfn/11">
