@@ -5,14 +5,9 @@
 get_header();
 
 the_post();
-
 //Detect mobile
-$iPod     = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
-$iPhone   = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
-$iPad     = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
-$Android  = stripos($_SERVER['HTTP_USER_AGENT'],"Android");
-$mobileOS = false;
-if ($iPod || $iPhone || $iPad || $Android) { $mobileOS = true; }
+if ($detect->isMobile()) {$mobileOS = true;}
+else {$mobileOS = false;}
 ?>
   <section id="content">
     <div class="shell">

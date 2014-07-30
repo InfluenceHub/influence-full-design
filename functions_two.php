@@ -161,7 +161,7 @@
   function inf_home_latest() {
     $args = array(
       'post_type' => 'post',
-      'posts_per_page' => 6,
+      'posts_per_page' => 4,
       'meta_query' => array(
         array(
           'key' => '_thumbnail_id',
