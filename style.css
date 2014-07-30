@@ -42,7 +42,282 @@ Description: Custom Theme
   font-style:   normal;
   font-weight:  400;
 }
+@font-face {
+    font-family: 'din_procondensed_black';
+    src: url('fonts/dinpro-condblack-webfont.eot');
+    src: url('fonts/dinpro-condblack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-condblack-webfont.woff') format('woff'),
+         url('fonts/dinpro-condblack-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 
+}
+
+
+
+
+@font-face {
+    font-family: 'din_procondensed';
+    src: url('fonts/dinpro-cond-webfont.eot');
+    src: url('fonts/dinpro-cond-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-cond-webfont.woff') format('woff'),
+         url('fonts/dinpro-cond-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_probold_italic';
+    src: url('fonts/dinpro-bolditalic-webfont.eot');
+    src: url('fonts/dinpro-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-bolditalic-webfont.woff') format('woff'),
+         url('fonts/dinpro-bolditalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_probold';
+    src: url('fonts/dinpro-bold-webfont.eot');
+    src: url('fonts/dinpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-bold-webfont.woff') format('woff'),
+         url('fonts/dinpro-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_problack_italic';
+    src: url('fonts/dinpro-blackitalic-webfont.eot');
+    src: url('fonts/dinpro-blackitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-blackitalic-webfont.woff') format('woff'),
+         url('fonts/dinpro-blackitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_proCnMdIt';
+    src: url('fonts/dinpro-condmediita-webfont.eot');
+    src: url('fonts/dinpro-condmediita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-condmediita-webfont.woff') format('woff'),
+         url('fonts/dinpro-condmediita-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_problack';
+    src: url('fonts/dinpro-black-webfont.eot');
+    src: url('fonts/dinpro-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-black-webfont.woff') format('woff'),
+         url('fonts/dinpro-black-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_procondensed_light_italic';
+    src: url('fonts/dinpro-condlightita-webfont.eot');
+    src: url('fonts/dinpro-condlightita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-condlightita-webfont.woff') format('woff'),
+         url('fonts/dinpro-condlightita-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_procondensed_italic';
+    src: url('fonts/dinpro-condita-webfont.eot');
+    src: url('fonts/dinpro-condita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-condita-webfont.woff') format('woff'),
+         url('fonts/dinpro-condita-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_procondensed_bold_italic';
+    src: url('fonts/dinpro-condboldita-webfont.eot');
+    src: url('fonts/dinpro-condboldita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-condboldita-webfont.woff') format('woff'),
+         url('fonts/dinpro-condboldita-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_procondensed_black_italic';
+    src: url('fonts/dinpro-condblackita-webfont.eot');
+    src: url('fonts/dinpro-condblackita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-condblackita-webfont.woff') format('woff'),
+         url('fonts/dinpro-condblackita-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_procondensed_bold';
+    src: url('fonts/dinpro-condbold-webfont.eot');
+    src: url('fonts/dinpro-condbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-condbold-webfont.woff') format('woff'),
+         url('fonts/dinpro-condbold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_prolight';
+    src: url('fonts/dinpro-light-webfont.eot');
+    src: url('fonts/dinpro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-light-webfont.woff') format('woff'),
+         url('fonts/dinpro-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_proitalic';
+    src: url('fonts/dinpro-italic-webfont.eot');
+    src: url('fonts/dinpro-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-italic-webfont.woff') format('woff'),
+         url('fonts/dinpro-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_procondensed_medium';
+    src: url('fonts/dinpro-condmedium-webfont.eot');
+    src: url('fonts/dinpro-condmedium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-condmedium-webfont.woff') format('woff'),
+         url('fonts/dinpro-condmedium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_procondensed_light';
+    src: url('fonts/dinpro-condlight-webfont.eot');
+    src: url('fonts/dinpro-condlight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-condlight-webfont.woff') format('woff'),
+         url('fonts/dinpro-condlight-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'dinproregular';
+    src: url('fonts/dinpro-webfont.eot');
+    src: url('fonts/dinpro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-webfont.woff') format('woff'),
+         url('fonts/dinpro-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_promedium_italic';
+    src: url('fonts/dinpro-mediumitalic-webfont.eot');
+    src: url('fonts/dinpro-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-mediumitalic-webfont.woff') format('woff'),
+         url('fonts/dinpro-mediumitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_promedium';
+    src: url('fonts/dinpro-medium-webfont.eot');
+    src: url('fonts/dinpro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-medium-webfont.woff') format('woff'),
+         url('fonts/dinpro-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'din_prolight_italic';
+    src: url('fonts/dinpro-lightitalic-webfont.eot');
+    src: url('fonts/dinpro-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinpro-lightitalic-webfont.woff') format('woff'),
+         url('fonts/dinpro-lightitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
 /* Font Smoothing */
 html {
   /* text-rendering: optimizeLegibility !important; /* Use this for all but Safari */
