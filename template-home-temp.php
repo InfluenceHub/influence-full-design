@@ -11,7 +11,7 @@ the_post();
       <?php inf_home_topslider(); ?>
     </div><!-- /.shell -->
 
-    <div class="ad_wrapper">
+    <div class="ad_wrapper-block">
       <?php inf_browse_by(); ?>
       <div class="content_wrapper">
     <?php
@@ -278,6 +278,6 @@ the_post();
   }
 </script> 
     </div><!-- /.content_wrapper -->
-  </div><!-- /.ad_wrapper -->
+  </div><!-- /.ad_wrapper-block -->
   </section><!-- /#content -->
 <?php get_footer(); ?>

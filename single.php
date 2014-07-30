@@ -323,7 +323,7 @@
     
     
 	</section><!-- /#content -->
-  <?php inf_browse_by(); ?>
+ <?php inf_footer_signup() ?>
 <?php get_footer(); ?>
 
 <?php

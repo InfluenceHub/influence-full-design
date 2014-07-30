@@ -42,7 +42,6 @@ Description: Custom Theme
   font-style:   normal;
   font-weight:  400;
 }
-
 @font-face {
     font-family: 'din_procondensed_black';
     src: url('fonts/dinpro-condblack-webfont.eot');
@@ -319,7 +318,6 @@ Description: Custom Theme
     font-style: normal;
 
 }
-
 /* Font Smoothing */
 html {
   /* text-rendering: optimizeLegibility !important; /* Use this for all but Safari */
@@ -622,8 +620,8 @@ img.alignleft {
 */
 
 #footer {
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 10px;
+  padding-bottom: 50px;
   text-align: center;
   background-color: #F4F4F4;
   width: 1020px;
@@ -728,30 +726,30 @@ img.alignleft {
   
 }
 
-#content .ad_wrapper {
+#content .ad_wrapper-block {
   width: 100%;
   /* background: url('images/banner_takeover_temp.jpg') center top repeat-y; */
 }
 
-#content .ad_wrapper .sideads_wrapper {
+#content .ad_wrapper-block .sideads_wrapper {
   position: absolute;
   width: 1331px;
   height: auto;
   display: block;
   left: -185px;
 }
-#content .ad_wrapper  .sidead {
+#content .ad_wrapper-block  .sidead {
   position: absolute;
   width: 160px;
   margin: 0;
   height: 0;
 }
 
-#content .ad_wrapper  .sidead.leftad {
+#content .ad_wrapper-block  .sidead.leftad {
   left: 0;
 }
 
-#content .ad_wrapper  .sidead.rightad {
+#content .ad_wrapper-block  .sidead.rightad {
   right: 0;
 }
 
@@ -760,7 +758,7 @@ img.alignleft {
   margin: 0 auto 29px auto;
 }
 
-#content .ad_wrapper  > div {
+#content .ad_wrapper-block  > div {
   width: 968px;
   margin: 0 auto 25px auto;
 }
@@ -773,13 +771,13 @@ img.alignleft {
   padding: 0 25px 25px 25px !important;
 }
 
-body.home #content .ad_wrapper > div {
+body.home #content .ad_wrapper-block > div {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 10px;
 }
 
-body.home #content > div.shell, body.home #content .ad_wrapper > div.shell {
+body.home #content > div.shell, body.home #content .ad_wrapper-block > div.shell {
   width: 100%;
   margin-bottom: 36px;
 }
@@ -1013,6 +1011,34 @@ div.ad_banner img {
   cursor: pointer;
 }
 
+.browse form[name="mc-embedded-subscribe-form"] {
+  color: #ccc;
+  font: bold 12px/30px "AvenirNext LT Pro MediumCn",arial,sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: 2px;
+  padding-top: 5px;
+}
+
+.browse form[name="mc-embedded-subscribe-form"] input[type="email"] {
+  border: none;
+  height: 22px;
+  width: 150px;
+  padding: 2px 20px 2px 3px
+}
+
+.browse form[name="mc-embedded-subscribe-form"] input[type="submit"] {
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
 /* Contact */
 .contactpage h2 {
   font: 32px/38px "BaskervilleBT-Italic",serif;
@@ -1038,7 +1064,7 @@ div.ad_banner img {
 }
 
 /* Home Latest Influencers */
-body.home #content .ad_wrapper > div.latest {
+body.home #content .ad_wrapper-block > div.latest {
   position: relative;
 }
 
@@ -1642,20 +1668,20 @@ div.adspot {
 }
 
 .bottom-section .shop-pinterest-inner {
-  width: 652px;
-  height: 163px;
+/*  width: 652px;
+  height: 163px;*/
 }
 
 .bottom-section .pins-feed-item {
-  width: 160px;
-  height: 160px;
-  margin: 0 3px 3px 0;
+  width: 153px;
+  height: 153px;
+  margin: 0 4px 4px;
   text-align: center;
 }
 
 .bottom-section .nailthumb-container img.nailthumb-image {
   top: 0 !important;
-  height: 160px !important;
+  /*height: 160px !important;*/
   left: auto !important;
   position: relative !important;
   top: auto !important;
@@ -1669,8 +1695,8 @@ div.adspot {
 }
 
 .bottom-section .istragram-box {
-  height: 160px;
-  width: 650px;
+/*  height: 160px;
+  width: 650px;*/
 }
 
 .bottom-section .nailthumb-container {
@@ -1680,13 +1706,13 @@ div.adspot {
 
 .bottom-section .home-social {
   width: 160px;
-  margin: 0 3px 0 0;
+  margin: 0 3px 3px;
   float: left;
 }
 .bottom-section .home-instagram {
-  width: 650px;
+  /*width: 650px;*/
   margin: 0;
-  float: left;
+/*  float: left;*/
 }
 
 .bottom-section .home-newsletter {
@@ -3783,7 +3809,7 @@ hr.bottomline {
 
 
 /* Header and Nav */
-#top_ad {
+.top_ad-block { /* Used to be #top_ad which is blocked by AdBlock CSS */
   width: 100%;
   height: 90px;
   padding: 10px 0;
@@ -5312,7 +5338,7 @@ div.archive-col .shop-link {
 }
 
 /* Helper Classes */
-.group:after { /* clear floats without markup, add "group" class to parent container */
+.group:after, .clearfix:after { /* clear floats without markup, add "group" class to parent container */
   content: "";
   display: table;
   clear: both;
@@ -5828,7 +5854,7 @@ textarea { overflow: auto; }
 }
 .more_interviews {
   margin: 0 auto;
-  width: 940pxpx;
+  width: 940px;
 }
 #content.interview .more_interviews h2 {
   border-bottom: 1px solid #ccc;
@@ -5871,3 +5897,259 @@ textarea { overflow: auto; }
    min-width: 975px;
    width: 90%;
 }
+
+/* 7/24/2014 Code by Stefan Bowerman */
+/* Directly affects the Interview Archive page */
+
+.int-archive-column-right {
+  width:70%; 
+  display:block;
+  float: right;
+}
+
+.int-archive-column-left {
+  width: 30%;
+  display: block;
+  float: left;
+}
+
+.int-archive-title-link {
+  display:block; 
+  text-align:center; 
+  margin-top:300px;
+}
+
+.int-archive-image-link-wrap {
+  position: relative;
+}
+
+.int-archive-image-link-overlay {
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  text-align:center;
+  padding-top:30%;
+  opacity:0;
+  color:#FFF; 
+  font-family: "BaskervilleBT-Italic",serif;
+  font-size: 50px;
+  background-color: transparent;
+  transition: all 100ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+}
+
+.int-archive-image-link-overlay:hover {
+  opacity: 1;
+  background-color: rgb(65, 65, 65);
+  background-color: rgba(65, 65, 65, 0.6);
+  transition: all 100ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+}
+
+.int-archive-item-divider {
+  height: 0;
+  border-bottom: 1px solid #ccc; 
+  margin: 15px 0;
+}
+
+/* Home page posts */
+.home-feed-post {
+  margin-bottom: 60px;
+}
+
+li.home-feed-side-by-side {
+  width: 300px;
+  height: 460px;
+  margin: 0 0 30px;
+}
+
+li.home-feed-side-by-side:nth-child(2n+1) {
+  margin-right: 30px;
+}
+
+li.home-feed-side-by-side .home-feed-post-img-wrap {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  float: none;
+}
+
+li.home-feed-side-by-side .home-feed-post-img-wrap img {
+  width: 300px;
+  height: auto;
+  margin-top: -10px;
+}
+
+li.home-feed-side-by-side .home-feed-post-info {
+  margin: 0;
+}
+
+li.home-feed-side-by-side .home-feed-post-info h2 {
+  font-size: 20px;
+}
+
+.home-feed-side-by-side .home-feed-meta-content {
+  font-family: "AvenirNext LT Pro MediumCn",sans-serif;
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.home-feed-side-by-side .home-feed-pcontent {
+  height: 31px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #555;
+}
+
+.meta-content-divider {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.home-feed-post-img-wrap {
+  width: 210px;
+  float: left;
+  position: relative;
+}
+
+.home-feed-post-img-wrap .shop-main {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.home-feed-post-info {
+  margin-left: 235px;
+}
+
+.home-feed-post-info h2 {
+    word-wrap: break-word;
+    white-space: normal;
+    font-family: "AvenirNext LT Pro MediumCn", arial, sans-serif;
+    border-bottom: none;
+    font-weight: normal;
+    font-size: 26px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    border: none;
+}
+
+.home-feed-post-view-more {
+  display: block;
+  margin: 5px 0 3px;
+  text-align: right;
+  font-family: "AvenirNext LT Pro Regular", arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: -0.4px;
+}
+.home-feed-post-view-more.shop-look {
+  font-family: "din_promedium";
+  letter-spacing: 1px;
+}
+
+.home-feed-post-view-more-arrow {
+  font-size: 17px;
+}
+
+.home-feed-subheading-options {
+  height: 30px;
+  margin: 5px 0 10px;
+  font-family: "AvenirNext LT Pro Regular", arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 33px;
+}
+
+.home-feed-subscribe-options {
+  float: left;
+}
+
+.home-feed-subscribe-options .in-circle {
+  float: left;
+}
+
+.home-feed-subscribe-options .sub-link {
+
+    margin-left: 5px;
+}
+
+.home-feed-pint-options {
+  float: right;
+}
+
+.home-feed-pint-link {
+  position: relative;
+  top: -2px;
+}
+
+.home-feed-pint-img {
+  height: 25px !important; /* Can't believe I have to do this */
+  width: 25px !important;
+  margin-right: 6px;
+}
+
+.latest-home li p.home-feed-pcontent { /* Need to break specified generic selectors (.latest-home li p) */
+  border-top: none;
+  text-align: left;
+  font-family: 'AvenirNext LT Pro Regular', 'din_promedium', 'din_prolight', arial;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-bottom: 5px;
+  height: auto;
+}
+
+.home-feed-prod-row.prod-row.small {
+  padding: 0;
+  border-top: none;
+  height: auto;
+}
+
+.latest-home ul.home-feed-prod-list {
+  width: 100%;
+  list-style: none;
+  float: none;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #555;
+}
+
+.prod-row.small ul li.home-feed-prod-list-item { /*  Over specificity needs to die */
+  width: 33%;
+  float: left;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.prod-row.small ul li.home-feed-prod-list-item h5 {
+    /* Truncate with elipsis */
+    white-space: nowrap;   
+    overflow: hidden;   
+    text-overflow: ellipsis;
+}
+
+.prod-row.small ul li.home-feed-prod-list-item .img-hold {
+  display: inline-block;
+  height: 120px;
+  margin-bottom: 5px;
+}
+
+.prod-row.small ul li.home-feed-prod-list-item .img-hold img {
+  float: none;
+  max-width: 100%;
+  max-height: 100%;
+}
+

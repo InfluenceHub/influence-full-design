@@ -16,5 +16,5 @@
 			</div>
 		</div>
 	</section>
-  <?php inf_browse_by(); ?>
+   <?php inf_footer_signup() ?>
 <?php get_footer(); ?>

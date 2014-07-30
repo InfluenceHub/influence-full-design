@@ -9,11 +9,11 @@
   }
   if ($_GET['test']) {
 ?>
-
 <?php } else { ?>
+
   <section id="content" class="interview">
     <div class="shell group">
-    <div id="top_ad" style="padding-bottom: 25px;">
+    <div class="top_ad-block">
       <a href="http://shop.theinfluence.com">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopbanner.png" />
       </a>
@@ -24,7 +24,7 @@
         <!--
         -->
         <!--<div id="topSlider" class="interview-slider group"> -->
-          <ul class="slides">
+          <ul class="slides" style="list-style-type: none;">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
             $attachments_type = 'attachments';
@@ -32,7 +32,7 @@
             while($attachment = $attachments->get()) {
               $title = $attachments->field('title');
               $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider');
-              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" width="1214" /></li>';
+              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" /></li>';
               $i++;
             }
           ?>
@@ -156,7 +156,7 @@
         if(!empty($products_sections)) {
 
           foreach($products_sections as $key=>$ps) {
-            if ($key > 0) {
+
               $products = $ps['products'];
 
               if(!empty($products)) { ?>
@@ -215,7 +215,7 @@
                 </div><!-- /.prod-row -->
               <?php }
             }
-          }
+
 
         }
       ?> 
@@ -282,13 +282,8 @@
     
     </div>
   </section><!-- /#content -->
-  
-  
-  
-  
-  
-  
-  
+    
+
   <?php } ?>
   <?php inf_browse_by(); ?>
 <?php get_footer(); ?>
