@@ -225,21 +225,31 @@
                           <?php the_title("<h2>", "</h2>"); ?>
                         </a>
 
-                        <?php if($influencer_id): ?>
-                          <form method="post" class="interact-with-influencer">
-                            <div class="home-feed-subscribe-options">
-                              <?php if(in_array($influencer_id, $current_user_influencers)) { ?>
-                                <input type="hidden" name="influencer_unsubscribe" value="<?php echo $influencer_id; ?>">
-                                <a class="in-circle active <?php echo $extraclass ?>" href="<?php echo home_url().'/my-influence/'; ?>"></a>
-                                <div class="shop-subscribe"><a class="sub-link <?php echo $extraclass; ?>" href="<?php echo home_url().'/my-influence/'; ?>">UNSUBSCRIBE</a></div><!-- /.flag -->
-                              <?php } else { ?>
-                                <input type="hidden" name="influencer_subscribe" value="<?php echo $influencer_id; ?>">
-                                <a class="in-circle <?php echo $extraclass ?>" href="<?php echo home_url().'/my-influence/'; ?>"></a>
-                                <div class="shop-subscribe"><a class="sub-link <?php echo $extraclass; ?>" href="<?php echo home_url().'/my-influence/'; ?>">SUBSCRIBE</a></div><!-- /.flag -->
-                              <?php } ?>
-                            </div>
-                          </form>
-                        <?php endif; // $influencer_id ?>
+                        <div class="home-feed-subheading-options">
+                          <?php if($influencer_id): ?>
+                            <form method="post" class="interact-with-influencer">
+                              <div class="home-feed-subscribe-options">
+                                <?php if(in_array($influencer_id, $current_user_influencers)) { ?>
+                                  <input type="hidden" name="influencer_unsubscribe" value="<?php echo $influencer_id; ?>">
+                                  <a class="in-circle active <?php echo $extraclass ?>" href="<?php echo home_url().'/my-influence/'; ?>"></a>
+                                  <div class="shop-subscribe"><a class="sub-link <?php echo $extraclass; ?>" href="<?php echo home_url().'/my-influence/'; ?>">UNSUBSCRIBE</a></div><!-- /.flag -->
+                                <?php } else { ?>
+                                  <input type="hidden" name="influencer_subscribe" value="<?php echo $influencer_id; ?>">
+                                  <a class="in-circle <?php echo $extraclass ?>" href="<?php echo home_url().'/my-influence/'; ?>"></a>
+                                  <div class="shop-subscribe"><a class="sub-link <?php echo $extraclass; ?>" href="<?php echo home_url().'/my-influence/'; ?>">SUBSCRIBE</a></div><!-- /.flag -->
+                                <?php } ?>
+                              </div>
+                            </form>
+                          <?php endif; // $influencer_id ?>
+
+                          <div class="home-feed-pint-options">
+                            <a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink() ?>&amp;media=<?php echo wp_get_attachment_thumb_url( get_post_thumbnail_id( $post->ID ) ) ?>&amp;description=<?php echo urlencode($post->post_content) ?>" target="_blank" class="home-feed-pint-link" title="Pin This">
+                              <img src="<?php echo bloginfo('stylesheet_directory'); ?>/images/pinterest-logo-black.jpg" class="home-feed-pint-img">
+                              Pin it
+                            </a>
+                          </div>
+
+                        </div>
 
                         <?php 
 
@@ -327,7 +337,7 @@
             <div class="line" style="margin-top: 7px; padding-top: 7px;"></div>
             <?php inf_qa(); ?>
             <!-- <div class="hash-influence"></div> -->
-            <?php inf_hash_influencer() ?>
+            <?php // inf_hash_influencer() ?>
           </div>
           <div class="viewall-latest">
             <a href="<?php echo home_url(); ?>/the-latest/">VIEW ALL LATEST LOOKS</a>
