@@ -6,41 +6,6 @@ get_header();
 the_post();
 ?>
 <style>
-@font-face {
-  font-family: 'AvenirNext LT Pro MediumCn';
-  src: url('fonts/AvenirNextLTPro-MediumCn.eot'); /* IE9 Compat Modes */
-  src: url('fonts/AvenirNextLTPro-MediumCn.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/AvenirNextLTPro-MediumCn.woff') format('woff'), /* Modern Browsers */
-       url('fonts/AvenirNextLTPro-MediumCn.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/AvenirNextLTPro-MediumCn.svg#45bd2a838130e26af6af9e7ad5c4bbd6') format('svg'); /* Legacy iOS */
-       
-  font-style:   normal;
-  font-weight:  400;
-}
-@font-face {
-  font-family: 'AvenirNext LT Pro AvenirNextLTPro-BoldCn';
-  src: url('fonts/AvenirNextLTPro-BoldCn.eot'); /* IE9 Compat Modes */
-  src: url('fonts/AvenirNextLTPro-BoldCn.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/AvenirNextLTPro-BoldCn.woff') format('woff'), /* Modern Browsers */
-       url('fonts/AvenirNextLTPro-BoldCn.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/AvenirNextLTPro-BoldCn.svg#a86e9067e3ebeec02dfcd4a9c594ca4d') format('svg'); /* Legacy iOS */
-       
-  font-style:   normal;
-  font-weight:  700;
-}
-
-
-@font-face {
-  font-family: 'AvenirNext LT Pro Regular';
-  src: url('fonts/AvenirNextLTPro-Regular.eot'); /* IE9 Compat Modes */
-  src: url('fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/AvenirNextLTPro-Regular.woff') format('woff'), /* Modern Browsers */
-       url('fonts/AvenirNextLTPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/AvenirNextLTPro-Regular.svg#fa20c367c6a148cda65f50238befb5f2') format('svg'); /* Legacy iOS */
-       
-  font-style:   normal;
-  font-weight:  400;
-}
 @font-face {font-family: 'BaskervilleBT-Italic';src: url('webfonts/2A93D2_0_0.eot');src: url('webfonts/2A93D2_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2A93D2_0_0.woff') format('woff'),url('webfonts/2A93D2_0_0.ttf') format('truetype');}
 </style>
 <section id="content">
@@ -111,5 +76,5 @@ the_post();
         ?>
     </div>
 </section>
-<?php inf_browse_by(); ?>
+<?php inf_footer_signup() ?>
 <?php get_footer(); ?>

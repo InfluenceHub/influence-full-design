@@ -6,7 +6,6 @@ get_header();
 
 the_post();
 //Detect mobile
-
 ?>
   <section id="content">
     <div class="shell">

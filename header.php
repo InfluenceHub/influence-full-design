@@ -6,9 +6,6 @@
   } else {
     $version = 134; //update to force reload of CSS
   }
-?>
-<?php
-// These lines are mandatory.
 require_once 'lib/Mobile_Detect.php';
 $detect = new Mobile_Detect;
 ?>
@@ -36,7 +33,7 @@ $detect = new Mobile_Detect;
     <meta name="viewport" content="width=1200" />
     <script type="text/javascript" src="//use.typekit.net/lzr4wxq.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.js"></script>\
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
   </head>
 	<body <?php body_class(); ?>>
