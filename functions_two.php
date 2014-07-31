@@ -387,10 +387,9 @@
             <a href="<?php echo home_url(); ?>/the-latest/">VIEW ALL LATEST LOOKS</a>
           </div>
         </div><!-- /.shell -->
-        
 
-        <?php inf_featured_theme('one'); ?>
-        
+         <?php //inf_featured_theme('one'); ?> 
+
         <?php inf_home_instagram(); ?>
         
         <?php //inf_featured_theme('two'); ?>

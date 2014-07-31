@@ -165,7 +165,7 @@ the_post();
           <div class="column-three">
             <h2><img height="30px" width="30px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/pinterest-logo-black.jpg" /></h2>
             <div class="shop-pinterest-inner">
-              <?php echo do_shortcode('[prw username="theinfluencepin" maxfeeds="6" thumbwidth="153" thumbheight="153" showfollow="none"]'); ?>
+              <?php echo do_shortcode('[prw username="theinfluencepin" maxfeeds="12" thumbwidth="153" thumbheight="153" showfollow="none"]'); ?>
             </div>
 
             <div class="home-instagram">
@@ -190,7 +190,7 @@ the_post();
                           </a>
                         </li>
                       <?php
-                        if($index == 5) {
+                        if($index == 11) {
                           break;
                         }
                       }
