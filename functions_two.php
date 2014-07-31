@@ -191,7 +191,7 @@
         </div>
         <div class="shell">
           <div class="section-heading first">	
-           <h2><a href="<?php echo home_url().'/the-latest'; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/thelatest.png" /></a></h2><br />
+           <h2>STYLE SETTERS OF THE DAY</h2><br />
           </div><!-- /.section-heading -->
           <ul>
             <?php
@@ -372,7 +372,14 @@
 
                           </div>
                           <a href="<?php the_permalink(); ?>">
-                            <?php the_title("<h2>", "</h2>"); ?>
+                          <?php 
+
+                                $title = $post->post_title;
+                                if (strlen($title) > 55) {
+                                  $title = substr($title, 0, 55) . '...';
+                                }
+                          ?>
+                            <h2><?php echo $title ?></h2>
                           </a>
 
                           <?php 

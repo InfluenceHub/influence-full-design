@@ -37,7 +37,7 @@
 
 @import url("//hello.myfonts.net/count/2a93d2");
 @font-face {font-family: 'BaskervilleBT-Italic';src: url('webfonts/2A93D2_0_0.eot');src: url('webfonts/2A93D2_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2A93D2_0_0.woff') format('woff'),url('webfonts/2A93D2_0_0.ttf') format('truetype');}
-
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
 
 /* Home */
 /*.column.adcolumn {
@@ -102,7 +102,10 @@ body.home #content .content_wrapper {
   margin-bottom: 20px;
 }
 .video-row h3.video-title {
-  font: 32px/32px "AvenirNext LT Pro Regular",arial,sans-serif;
+  font-size: 32px;
+  line-height: 32px;
+  font-family: "Oswald",arial,sans-serif;
+  font-weight: 300;
   text-align: center;
   letter-spacing: 1px;
 }

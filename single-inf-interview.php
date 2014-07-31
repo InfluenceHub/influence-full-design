@@ -24,8 +24,7 @@
         <!--
         -->
         <!--<div id="topSlider" class="interview-slider group"> -->
-        <div class="stellar-slides-container" data-stellar-offset-parent="true">
-          <ul class="slides stellar-slides">
+          <ul class="slides">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
             $attachments_type = 'attachments';
@@ -33,8 +32,8 @@
             while($attachment = $attachments->get()) {
               $title = $attachments->field('title');
               $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider');
-              echo '<li data-index="' . $i . '" class="stellar-slide" style="background-image:url('.$image[0].');" data-stellar-background-ratio="0.2"></li>';
-              //echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" /></li>';
+              //echo '<li data-index="' . $i . $image . '"></li>';
+              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" /></li>';
               $i++;
             }
           ?>

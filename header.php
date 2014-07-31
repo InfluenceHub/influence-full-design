@@ -1,6 +1,6 @@
 <?php
   //Set to true to force CSS to load uncached, false for production
-  // $dev_flag = true;
+  $dev_flag = true;
   if ($dev_flag == true) {
     $version = time();
   } else {
