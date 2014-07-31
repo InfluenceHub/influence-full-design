@@ -21,6 +21,7 @@
   add_image_size('inf_single_product_small',          144, 164, false);
   add_image_size('inf_single_product_large',          250, 600, false);
   add_image_size('inf_single_product',                144, 164, false);
+  add_image_size('inf_single_product_new',            176, 200, false);
   add_image_size('inf_single_more_like',              186, 352, true);
   add_image_size('inf_profile_loop',                  300, 542, true);
   
