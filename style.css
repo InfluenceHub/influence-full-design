@@ -5144,6 +5144,25 @@ div.archive-col .shop-link {
   top: 47px;
 }
 
+/* Interview Parallax Imagery */
+
+.interview .stellar-slides {
+  list-style: none; 
+  width: 900px;
+  margin: 0 auto;
+}
+
+.interview .stellar-slide {
+  position: relative;
+  background-attachment: fixed;
+  /*background-position: 50% 80%;*/
+  background-position: 50% 425%;
+  background-repeat: no-repeat;
+  background-size: 900px auto;
+  width: 100%;
+  height: 700px;
+}
+
 /* Influencers Page */
 
 #content.influencers .column-two {

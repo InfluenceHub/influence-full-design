@@ -21,7 +21,6 @@
   add_image_size('inf_single_product_small',          144, 164, false);
   add_image_size('inf_single_product_large',          250, 600, false);
   add_image_size('inf_single_product',                144, 164, false);
-  add_image_size('inf_single_product_new',            176, 200, false);
   add_image_size('inf_single_more_like',              186, 352, true);
   add_image_size('inf_profile_loop',                  300, 542, true);
   
@@ -212,13 +211,7 @@
                                   $cat = get_category($post_categories[0]);
                                   $category_link = get_category_link($cat); // Refactor to use category obj?
                                   ?> </a>
-                                  <div class="shop-main">
-                                    <div class="shop-maintag">
-                                      <a href="<?php echo esc_url($category_link); ?>">
-                                        <?php echo strtoupper($cat->cat_name); ?>
-                                      </a>
-                                    </div>
-                                  </div>
+
                           <?php } // endif !empty($post_categories[0]) ?>
                         </div>
                         <div class="home-feed-post-info">
@@ -255,16 +248,16 @@
                           <?php 
 
                                 $content = $post->post_content;
-                                if (strlen($content) > 220) {
-                                  $content = substr($content, 0, 220) . '...';
+                                if (strlen($content) > 200) {
+                                  $content = substr($content, 0, 200) . '<a href="<?php the_permalink(); ?>"><span style="font-weight: bold;"> VIEW MORE<span class="home-feed-post-view-more-arrow">&rsaquo;</span></span></a>';
                                 }
                           ?>
                           <p class="home-feed-pcontent"><?php echo $content ?></p>
                           <a href="<?php the_permalink(); ?>" class="home-feed-post-view-more">
-                            VIEW MORE <span class="home-feed-post-view-more-arrow">&rsaquo;</span>
+                             
                           </a>
 
-                        
+                        <br /><br />
                           <?php $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex'); ?>
                           
                           <?php if(!empty($products_sections)): ?>
@@ -293,7 +286,7 @@
                                       // }
                                     ?>
                                     <li class="home-feed-prod-list-item">
-                                      <a href="<?php echo esc_url($product_link); ?>" target="_blank" title="<?php echo $product_designer . ' -- ' . get_the_title($post_id); ?>">
+                                      <a href="<?php the_permalink()?>" title="<?php echo $product_designer . ' -- ' . get_the_title($post_id); ?>">
                                         <?php if(has_post_thumbnail($post_id)) : ?>
                                           <span class="img-hold">
                                             <?php echo get_the_post_thumbnail($post_id, 'inf_single_product'); ?>
@@ -306,9 +299,14 @@
                                 <?php endforeach; ?>
                               </ul>
                             </div>
-                            <a href="<?php the_permalink(); ?>" class="home-feed-post-view-more shop-look" style="font-weight:bold;">
-                              SHOP THE LOOK <span class="home-feed-post-view-more-arrow">&rsaquo;</span>
-                            </a>
+        <!--
+                            <a href="<?php echo esc_url($category_link); ?>">
+                               <?php echo strtoupper($cat->cat_name); ?>
+                           </a>
+        -->
+                          <a href="<?php the_permalink(); ?>" class="home-feed-post-view-more shop-look" style="font-weight:bold;">
+                            SHOP THE LOOK <span class="home-feed-post-view-more-arrow">&rsaquo;</span>
+                          </a>
                           <?php endif; ?>
                             
                         </div> <!-- END .home-feed-post-info -->

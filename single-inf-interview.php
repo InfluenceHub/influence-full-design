@@ -24,7 +24,8 @@
         <!--
         -->
         <!--<div id="topSlider" class="interview-slider group"> -->
-          <ul class="slides" style="list-style-type: none;">
+        <div class="stellar-slides-container" data-stellar-offset-parent="true">
+          <ul class="slides stellar-slides">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
             $attachments_type = 'attachments';
@@ -32,12 +33,14 @@
             while($attachment = $attachments->get()) {
               $title = $attachments->field('title');
               $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider');
-              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" /></li>';
+              echo '<li data-index="' . $i . '" class="stellar-slide" style="background-image:url('.$image[0].');" data-stellar-background-ratio="0.2"></li>';
+              //echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" /></li>';
               $i++;
             }
           ?>
           </ul><!-- /.slides -->
-        </div><!-- /.interview-slider -->
+        </div>
+        <!-- </div> /.interview-slider -->
        <!-- <div class="interview-slider bottom group">
           <ul class="slides">
           <?php
@@ -285,5 +288,5 @@
     
 
   <?php } ?>
-  <?php inf_browse_by(); ?>
+<?php inf_footer_signup() ?>
 <?php get_footer(); ?>
