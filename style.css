@@ -6005,9 +6005,11 @@ li.home-feed-side-by-side .home-feed-post-img-wrap {
 }
 
 li.home-feed-side-by-side .home-feed-post-img-wrap img {
-  width: 300px;
-  height: auto;
   margin-top: -10px;
+  min-height: 310px;
+  max-width: 300px;
+  height: auto;
+  width: auto;
 }
 
 li.home-feed-side-by-side .home-feed-post-info {
@@ -6016,6 +6018,7 @@ li.home-feed-side-by-side .home-feed-post-info {
 
 li.home-feed-side-by-side .home-feed-post-info h2 {
   font-size: 20px;
+  height: 52px; /* Give it a defined height to ensure all the borders and sub text line up */
 }
 
 .home-feed-side-by-side .home-feed-meta-content {
@@ -6066,7 +6069,6 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
 
 .home-feed-post-view-more {
   display: block;
-  margin: 5px 0 3px;
   text-align: right;
   font-family: "AvenirNext LT Pro Regular", arial, sans-serif;
   text-transform: uppercase;
@@ -6074,13 +6076,26 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
   font-size: 12px;
   letter-spacing: -0.4px;
 }
+.home-feed-pcontent .home-feed-post-view-more {
+  display: inline-block;
+  margin: 0 0 0 3px;
+}
+
 .home-feed-post-view-more.shop-look {
-  font-family: "din_promedium";
+  display: block;
+  margin: 5px 0 3px;
+  text-align: right;
+  font-family: "din_promedium", arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
   letter-spacing: 1px;
 }
 
 .home-feed-post-view-more-arrow {
+  display: inline-block;
   font-size: 17px;
+  margin-left: 2px;
 }
 
 .home-feed-subheading-options {
@@ -6128,12 +6143,13 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
   font-size: 12px;
   letter-spacing: 0;
   line-height: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   height: auto;
 }
 
 .home-feed-prod-row.prod-row.small {
   padding: 0;
+  margin-top: 20px;
   border-top: none;
   height: auto;
 }

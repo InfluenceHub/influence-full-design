@@ -195,6 +195,7 @@
           </div><!-- /.section-heading -->
           <ul>
             <?php
+              $latest_theme = inf_get_latest_theme();
               global $post;
               foreach($latest_posts as $k => $post) {
 
@@ -248,16 +249,17 @@
                           <?php 
 
                                 $content = $post->post_content;
-                                if (strlen($content) > 200) {
-                                  $content = substr($content, 0, 200) . '<a href="<?php the_permalink(); ?>"><span style="font-weight: bold;"> VIEW MORE<span class="home-feed-post-view-more-arrow">&rsaquo;</span></span></a>';
+                                if (strlen($content) > 180) {
+                                  $content = substr($content, 0, 180).'...';
                                 }
                           ?>
-                          <p class="home-feed-pcontent"><?php echo $content ?></p>
-                          <a href="<?php the_permalink(); ?>" class="home-feed-post-view-more">
-                             
-                          </a>
+                          <p class="home-feed-pcontent">
+                            <?php echo $content ?>
+                            <a href="<?php the_permalink(); ?>" class="home-feed-post-view-more">
+                              VIEW MORE<span class="home-feed-post-view-more-arrow">&rsaquo;</span>
+                            </a>
+                          </p>
 
-                        <br /><br />
                           <?php $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex'); ?>
                           
                           <?php if(!empty($products_sections)): ?>
@@ -311,6 +313,38 @@
                             
                         </div> <!-- END .home-feed-post-info -->
 
+                  </li>
+                <?php elseif ($k == 7 && !is_null($latest_theme)): // replace the last one with a featured theme, if it exists ?>
+                  <?php $post = $latest_theme ?>
+                  <li class="column home-feed-post home-feed-side-by-side">
+                        <div class="home-feed-post-img-wrap">
+                          <a href="<?php the_permalink(); ?>">
+                            <?php if (has_post_thumbnail()) {
+                              the_post_thumbnail('inf_featured_theme');
+                            } ?>
+                          </a>
+                        </div>
+                        <div class="home-feed-post-info">
+                          <div class="home-feed-meta-content">
+                            <?php the_time('F j, Y'); ?>
+                             <span class="meta-content-divider">|</span>
+                            Featured Theme
+                          </div>
+                          <a href="<?php the_permalink(); ?>">
+                            <?php the_title("<h2>", "</h2>"); ?>
+                          </a>
+                          <?php 
+
+                                $content = $post->post_content;
+                                if (strlen($content) > 90) {
+                                  $content = substr($content, 0, 90) . '...';
+                                }
+                          ?>
+                          <p class="home-feed-pcontent"><?php echo $content ?></p>
+                          <a href="<?php the_permalink(); ?>" class="home-feed-post-view-more">
+                            VIEW MORE <span class="home-feed-post-view-more-arrow">&rsaquo;</span>
+                          </a>
+                        </div>
                   </li>
                 <?php else: // Show the last 4 posts as single column posts ?>
                   <li class="column home-feed-post home-feed-side-by-side">
@@ -438,6 +472,18 @@
         <p><?php echo $title; ?> <a class="viewmore" href="<?php echo $link_url; ?>">VIEW MORE &gt;</a></p>
       </div>
     <?php
+  }
+
+  function inf_get_latest_theme() {
+    $args = array(
+      'post_type' => 'inf_theme',
+      'posts_per_page' => 1
+    );
+    $themes = get_posts($args);
+    if(isset($themes[0])){
+      return $themes[0];
+    }
+    return null;
   }
   
   //Favorite Items
