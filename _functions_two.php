@@ -1,0 +1,349 @@
+<?php
+  add_theme_support('post-thumbnails');
+  
+  add_image_size('inf_home_slider',                  332, 424, true);
+  add_image_size('inf_home_latest',                  210, 400, true);
+  add_image_size('inf_home_latest_shoplook',         90, 400, true);
+  
+  //add_image_size('inf_single_image',                  372, 576, true);
+  add_image_size('inf_single_image',                  331, 518, true);
+  add_image_size('inf_influencer_single_image',       300, 323, true);
+  //add_image_size('inf_single_product',                124, 144, false);
+  add_image_size('inf_single_product_small',          144, 164, false);
+  add_image_size('inf_single_product_large',          250, 600, false);
+  add_image_size('inf_single_product',                144, 164, false);
+  add_image_size('inf_single_more_like',              186, 352, true);
+  add_image_size('inf_profile_loop',                  300, 542, true);
+  
+  add_image_size('inf_instagram',                     245, 245, true);
+  //add_image_size('inf_instagram',                     230, 230, true);
+  add_image_size('inf_inst_product',                  245, 245, false);
+  
+  add_image_size('inf_homevid_thumb',                  215, 130, true);
+  add_image_size('inf_homevid',                        650, 370, true);
+  
+  add_image_size('inf_interview_featured',             267, 267, true);
+  add_image_size('inf_interviewslider',                610, 350, true);
+  add_image_size('inf_interviewslider_small',          114, 72, true);
+  
+  //Attachments metabox customization
+  function inf_interview_attachments($attachments) {
+    $args = array(
+      'label' => 'Slider Images',
+      'post_type' => array('inf-interview'),
+      'filetype' => 'image', // allowed file type(s) (array) (image|video|text|audio|application)
+      'note' => '',
+      'button_text' => __('Upload Images', 'attachments'),
+      'modal_text' => __('Attach', 'attachments'),
+      'fields' => array(
+        array(
+        'name'        => 'title', // unique field name
+        'type'        => 'text', // registered field type
+        'label'       => __('Title', 'attachments'), // label to display
+        'default'   => 'title'
+        )
+      ),
+    );
+    $attachments->register('inf_interview_attachments', $args);
+  }
+  add_action('attachments_register', 'inf_interview_attachments');
+  
+  
+  //Home Top Slider
+  function inf_home_topslider() {
+    ?>
+      <div class="top-slider">
+      <div class="loader">&nbsp;</div><!-- /.loader -->
+        <ul class="slides">
+    <?php
+      $args = array(
+        'numberposts' => 9999,
+        'orderby' => 'menu_order',
+        'order' => 'ASC',
+        'post_type' => 'inf-slide-home',
+        'post_status' => 'publish'
+      ); 
+      $list_items = get_posts($args);
+      $listblock = '';
+
+      foreach ($list_items as $key => $list_item ) {
+        $custom_fields = get_post_custom($list_item->ID);
+        $title      = trim(get_the_title($list_item->ID));
+        $title_two  = trim($custom_fields['wpcf-hslide-title-two'][0]);
+        $longTitle = $title . ' ' . $title_two;
+        $shortTitle = '<span>' . $title . '</span> ' . $title_two;
+        if (strlen(strip_tags($title_two)) > 38) {
+          $shortTitle = '<span>' . $title . '</span> ' . substr($title_two, 0, 38) . '...';
+        }
+        //$position = trim($custom_fields['wpcf-staff-title'][0]);
+        //$content  = get_post_field('post_content', $list_item->ID);
+        $slide_link = trim($custom_fields['wpcf-hslide-link-url'][0]);
+        $image_one  = trim($custom_fields['wpcf-hslide-image'][0]);
+        list($width_one, $height_one) = getimagesize($image_one);
+        $image_two  = trim($custom_fields['wpcf-hslide-bottom-image'][0]);
+        list($width_two, $height_two) = getimagesize($image_two);
+        $content    = apply_filters('the_content', get_post_field('post_content', $list_item->ID));
+        $image      = wp_get_attachment_image_src(get_post_thumbnail_id($list_item->ID), 'inf_home_slider');
+    ?>
+          <li>
+            <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
+              <div class="inner-slide">
+                <?php
+                  if (trim($image_one) > '') {
+                    echo '<img src="' . $image_one . '" width="' . $width_one . '" height="' . $height_one . '" alt="' . $longTitle . '" />';
+                  }
+                ?>
+                <div class="text-box">
+                  <div class="products-box">
+                    <?php
+                      if (trim($image_two) > '') {
+                        echo '<img src="' . $image_two . '" width="' . $width_two . '" height="' . $height_two . '" alt="' . $longTitle . '" />';
+                      }
+                    ?>
+                  </div><!-- /.products-box -->
+                  <h4><?php echo $shortTitle; ?></h4>
+                </div><!-- /.text-box -->
+              </div><!-- /.inner-slide -->
+            </a>
+          </li>
+    <?php
+      }
+    ?>
+      </ul><!-- /.slides -->
+    <div class="prev">&nbsp;</div><!-- /.prev -->
+    <div class="next">&nbsp;</div><!-- /.next -->
+  </div><!-- /.top-slider -->
+  <?php
+  }
+  
+  //Home Page Latest Looks
+  function inf_home_latest() {
+        $args = array(
+      'post_type' => 'post',
+      'posts_per_page' => 6,
+      'meta_query' => array(
+        array(
+          'key' => '_thumbnail_id',
+          'value' => '',
+          'compare' => '!='
+        )
+      )
+    );
+    $latest_posts = get_posts($args);
+
+
+     ?>
+      <div class="latest-home group">
+        <div class="sideads_wrapper">
+          <div class="sidead leftad">
+          </div>
+          <div class="sidead rightad">
+          </div>
+        </div>
+        <div class="shell">
+          <div class="section-heading">
+            <h2><a href="<?php echo home_url().'/the-latest'; ?>"><span>LATEST</span> looks</a></h2>
+            <div class="line"></div>
+          </div><!-- /.section-heading -->
+          <ul>
+            <?php
+              $i=0;
+              foreach($latest_posts as $lp) {
+                $args = array(
+                  'connected_type' => 'posts_to_influencers',
+                  'connected_items' => $lp->ID,
+                  'nopaging' => true,
+                  'posts_per_page' => 1
+                );
+                $connected = new WP_Query($args);
+                //if($connected->have_posts()) {
+                  $i++;
+                  //while($connected->have_posts()) {
+                    //$connected->the_post();
+                    $infTitle = inf_name_from_post($lp->ID);
+                    if (trim($infTitle) <= '') { $infTitle = '&nbsp;'; }
+                    $thisTitle = get_the_title($lp->ID);
+                    
+                    $custom_fields = get_post_custom($lp->ID);
+                    $image  = trim($custom_fields['wpcf-post-shop-the-look'][0]);
+                    if ($image <= '') {
+                      $image = get_bloginfo('stylesheet_directory') . '/images/home-shoplook-placeholder.jpg';
+                    }
+                    list($width_one, $height_one) = getimagesize($image);
+                    if (strlen($thisTitle) > 70) {
+                      $thisTitle = substr($thisTitle, 0, 70) . '...';
+                    }
+                    $extra_class = '';
+                    if ($i % 2 == 0) {
+                      $extra_class = ' last';
+                    }
+                    ?>
+                    <li class="column<?php echo $extra_class; ?>">
+                      <a href="<?php echo get_permalink($lp->ID); ?>">
+                        <?php echo get_the_post_thumbnail($lp->ID, 'inf_home_latest'); ?>
+                        <img class="shoplook" src="<?php echo $image; ?>" width="90" height="400" alt="Shop the Look" />
+                        <h4><?php echo $infTitle; ?></h4>
+                        <p><?php echo $thisTitle; ?></p>
+                      </a>
+                    </li>
+                  <?php
+                  //}
+                //}
+
+                wp_reset_postdata();
+
+              }
+            ?>
+          </ul><!-- /.recent-list -->
+          <div class="column adcolumn">
+            <!-- <div style="width: 300px; height: 600px; background: #000;"></div> -->
+            <!-- BEGIN IFRAME TAG - theinfluence 300x600 < - DO NOT MODIFY -->
+            <IFRAME SRC="http://ib.adnxs.com/tt?id=2438106&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="300" HEIGHT="600"></IFRAME>
+            <!-- END TAG -->
+            <div class="line" style="margin-top: 7px; padding-top: 7px;"></div>
+            <?php inf_item_of_the_day(); ?>
+            <div class="line" style="margin-top: 7px; padding-top: 7px;"></div>
+            <!-- <div style="width: 300px; height: 250px; background: #000;"></div> -->
+            <!-- BEGIN JS TAG - theinfluence 300x250 -->
+            <SCRIPT SRC="http://ib.adnxs.com/ttj?id=2411077&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" TYPE="text/javascript"></SCRIPT>
+            <!-- END TAG -->
+            <div class="line" style="margin-top: 5px; padding-top: 5px;"></div>
+            <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/temp-home-styleseeker.jpg" width="300" height="713" alt="" style="margin-bottom: 18px;" />
+            <a href="<?php echo home_url(); ?>/my-influence" class="subscribe-img"></a>
+            
+          </div>
+          <div class="viewall-latest">
+            <a href="<?php echo home_url(); ?>/the-latest/">VIEW ALL LATEST LOOKS</a>
+            <div class="line"></div>
+          </div>
+        </div><!-- /.shell -->
+        <?php inf_home_instagram(); ?>
+      </div><!-- /.latest -->
+  <?php
+  }
+  
+  function inf_home_instagram() {
+    //Get Shop Instagram items
+      $args = array(
+        'numberposts' => 2,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'post_type' => 'inf_instagram',
+        'post_status' => 'publish'
+      ); 
+      $inst_items = get_posts($args);
+
+        $instagram_one_prod = get_post_meta($inst_items[0]->ID, '_inf_instagram_products', true);
+        $instagram_one_prodID   = $instagram_one_prod[0];
+        $instagram_two_prod = get_post_meta($inst_items[1]->ID, '_inf_instagram_products', true);
+        $instagram_two_prodID   = $instagram_two_prod[0];
+        
+        $image_one = wp_get_attachment_image_src(get_post_thumbnail_id($inst_items[0]->ID), 'inf_home_inst_prod_nocrop');
+        $title_one = trim(get_the_title($inst_items[0]->ID));
+        if (strlen($title_one) > 45) {
+          $title_one = substr($title_one, 0, 37) . '...';
+        }
+        $page_object = get_page($inst_items[0]->ID);
+        $caption_one = $page_object->post_content;
+        /*
+        $product_title_one    = get_the_title($instagram_one_prodID);
+        if (strlen($product_title_one) > 45) {
+          $product_title_one = substr($product_title_one, 0, 45) . '...';
+        }
+        $product_designer_one = get_post_meta($instagram_one_prodID, 'designer', true);
+        $product_price_one    = get_post_meta($instagram_one_prodID, 'price', true);
+				$product_link_one     = get_post_meta($instagram_one_prodID, 'product_url', true);
+        $product_image_one    = wp_get_attachment_image_src(get_post_thumbnail_id($instagram_one_prodID), 'inf_home_inst_prod_nocrop');
+        */
+        
+        $image_two = wp_get_attachment_image_src(get_post_thumbnail_id($inst_items[1]->ID), 'inf_home_inst_prod_nocrop');
+        $title_two = trim(get_the_title($inst_items[1]->ID));
+        if (strlen($title_two) > 45) {
+          $title_two = substr($title_two, 0, 37) . '...';
+        }
+        $page_object = get_page($inst_items[1]->ID);
+        $caption_two = $page_object->post_content;
+        /*
+        $product_title_two    = get_the_title($instagram_two_prodID);
+        if (strlen($product_title_two) > 45) {
+          $product_title_two = substr($product_title_two, 0, 45) . '...';
+        }
+        $product_designer_two = get_post_meta($instagram_two_prodID, 'designer', true);
+        $product_price_two    = get_post_meta($instagram_two_prodID, 'price', true);
+				$product_link_two     = get_post_meta($instagram_two_prodID, 'product_url', true);
+        $product_image_two    = wp_get_attachment_image_src(get_post_thumbnail_id($instagram_two_prodID), 'inf_home_inst_prod_nocrop');
+        */
+    ?>  
+      <div class="instagram-posts">
+        <div class="section-heading">
+          <h2><a href="<?php echo home_url().'/shop-this-instagram'; ?>"><span>SHOP THIS</span> instagram</a></h2>
+          <div class="line"></div>
+        </div><!-- /.section-heading -->
+        <a href="<?php echo home_url().'/shop-this-instagram'; ?>">
+              <div class="shop-instagram one">
+                <div class="instagram-photo">
+                  <img src="<?php echo $image_one[0]; ?>" width="314" height="314" alt="<?php echo $title_one; ?>" />
+                  <h4><?php echo $title_one; ?></h4>
+                  <p><?php echo $caption_one; ?></p>
+                  <div class="shop-link">SHOP</div>
+                </div>
+              </div>
+            </a>
+            <a href="<?php echo home_url().'/shop-this-instagram';//$product_link; ?>">
+              <div class="shop-instagram">
+                <div class="instagram-photo">
+                  <img src="<?php echo $image_two[0]; ?>" width="314" height="314" alt="<?php echo $title_two; ?>" />
+                <h4><?php echo $title_two; ?></h4>
+                <p><?php echo $caption_two; ?></p>
+                <div class="shop-link">SHOP</div>
+                </div>
+              </div>
+            </a>
+          <div class="viewall-latest">
+            <a href="<?php echo home_url(); ?>/shop-this-instagram/">VIEW ALL INSTAGRAM</a>
+            <div class="line"></div>
+          </div>
+      </div>
+    <?php
+  }
+  
+  function inf_item_of_the_day() {
+    $home_id = get_option('page_on_front');
+    ?>
+      <div class="item-of-the-day">
+          <?php  
+          //$item_of_the_day = carbon_get_theme_option('inf_item_of_the_day');
+          $home_products = get_post_meta($home_id, '_inf_product_of_the_day', true);
+          $home_prodID   = $home_products[0];
+          
+        $product_title    = get_the_title($home_prodID);
+        if (strlen($product_title) > 45) {
+          $product_title = substr($product_title, 0, 45) . '...';
+        }
+        //$product_designer = get_post_meta($home_prodID, 'designer', true);
+        $product_price    = get_post_meta($home_prodID, 'price', true);
+				$product_url     = get_post_meta($home_prodID, 'product_url', true);
+        $product_image    = wp_get_attachment_image_src(get_post_thumbnail_id($home_prodID), 'inf_home_inst_prod_nocrop');
+    ?>
+          <a href="<?php echo esc_url($product_url); ?>" target="_blank">
+            <h2>Item of the Day</h2>
+            <img src="<?php echo $product_image[0] ?>" width="<?php echo $product_image[1]; ?>" height="<?php echo $product_image[2]; ?>" alt="Item of the Day" />
+            <h5><?php echo $product_title; ?><br />$<?php echo $product_price; ?></h5>
+          </a>
+      </div><!-- /.item-of-the-day -->
+    <?php
+  }
+  
+  function the_post_thumbnail_caption($post_id) {
+    //global $post;
+
+    $thumbnail_id    = get_post_thumbnail_id($post_id);
+    $thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
+
+    if ($thumbnail_image && isset($thumbnail_image[0])) {
+      $caption = $thumbnail_image[0]->post_excerpt;
+    }
+
+    return $caption;
+  }
+?>

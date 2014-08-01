@@ -1,0 +1,776 @@
+<?php
+  //Set to true to force CSS to load uncached, false for production
+  $dev_flag = true;
+  if ($dev_flag == true) {
+    $version = time();
+  } else {
+    $version = 134; //update to force reload of CSS
+  }
+
+  add_theme_support('post-thumbnails');
+  
+  add_image_size('inf_home_slider',                  342, 416, true);
+  add_image_size('inf_home_latest',                  210, 400, true);
+  add_image_size('inf_home_latest_shoplook',         90, 400, true);
+  add_image_size('inf_styleseeker',                  268, 268, true);
+  
+  //add_image_size('inf_single_image',                  372, 576, true);
+  add_image_size('inf_single_image',                  331, 518, true);
+  add_image_size('inf_influencer_single_image',       300, 323, true);
+  //add_image_size('inf_single_product',                124, 144, false);
+  add_image_size('inf_single_product_small',          144, 164, false);
+  add_image_size('inf_single_product_large',          250, 600, false);
+  add_image_size('inf_single_product',                144, 164, false);
+  add_image_size('inf_single_more_like',              186, 352, true);
+  add_image_size('inf_profile_loop',                  300, 542, true);
+  
+  add_image_size('inf_instagram',                     314, 314, false);
+  //add_image_size('inf_instagram',                     230, 230, true);
+  add_image_size('inf_inst_product',                  314, 314, false);
+  add_image_size('inf_hash_influenced',               232, 232, false);
+  
+  
+  //add_image_size('inf_homevid_thumb',                  215, 130, true);
+  //add_image_size('inf_homevid',                        650, 370, true);
+  add_image_size('inf_homevid_thumb',                  133, 133, true);
+  add_image_size('inf_homevid',                        830, 401, true);
+  
+  add_image_size('inf_interview_featured',             267, 267, true);
+  add_image_size('inf_interviewslider',                1214, 794, false);
+  add_image_size('inf_interviewslider_small',          114, 72, true);
+  add_image_size('inf_interviewmore', 220, 235, true);
+  add_image_size('inf_featured_theme',                 634, 500, true);
+
+  
+  //Attachments metabox customization
+  function inf_interview_attachments($attachments) {
+    $args = array(
+      'label' => 'Slider Images',
+      'post_type' => array('inf-interview'),
+      'filetype' => 'image', // allowed file type(s) (array) (image|video|text|audio|application)
+      'note' => '',
+      'button_text' => __('Upload Images', 'attachments'),
+      'modal_text' => __('Attach', 'attachments'),
+      'fields' => array(
+        array(
+        'name'        => 'title', // unique field name
+        'type'        => 'text', // registered field type
+        'label'       => __('Title', 'attachments'), // label to display
+        'default'   => 'title'
+        )
+      ),
+    );
+    $attachments->register('inf_interview_attachments', $args);
+  }
+  add_action('attachments_register', 'inf_interview_attachments');
+ 
+  //Home Top Slider
+  function inf_home_topslider() {
+    ?>
+      <div class="top-slider">
+      <div class="loader">&nbsp;</div><!-- /.loader -->
+        <ul class="slides">
+    <?php
+      $args = array(
+        'numberposts' => 9999,
+        'orderby' => 'menu_order',
+        'order' => 'ASC',
+        'post_type' => 'inf-slide-home',
+        'post_status' => 'publish'
+      ); 
+      $list_items = get_posts($args);
+      $listblock = '';
+
+      foreach ($list_items as $key => $list_item ) {
+        /* old fields
+        $custom_fields = get_post_custom($list_item->ID);
+        $title      = trim(get_the_title($list_item->ID));
+        $title_two  = trim($custom_fields['wpcf-hslide-title-two'][0]);
+        $longTitle = $title . ' ' . $title_two;
+        $shortTitle = '<span>' . $title . '</span> ' . $title_two;
+        if (strlen(strip_tags($title_two)) > 38) {
+          $shortTitle = '<span>' . $title . '</span> ' . substr($title_two, 0, 38) . '...';
+        }
+        //$position = trim($custom_fields['wpcf-staff-title'][0]);
+        //$content  = get_post_field('post_content', $list_item->ID);
+        $slide_link = trim($custom_fields['wpcf-hslide-link-url'][0]);
+        $image_one  = trim($custom_fields['wpcf-hslide-image'][0]);
+        $image_two  = trim($custom_fields['wpcf-hslide-bottom-image'][0]);
+        */
+        
+        //NEW FIELDS
+        $title      = trim(get_the_title($list_item->ID));
+        $title_two  = trim(carbon_get_post_meta($list_item->ID, 'hslide_title_two'));
+        $slide_link = trim(carbon_get_post_meta($list_item->ID, 'hslide_link_url'));
+        $image_oneID = carbon_get_post_meta($list_item->ID, 'hslide_image');
+        $image_oneA = wp_get_attachment_image_src($image_oneID,'full', true);
+        $image_one = $image_oneA[0];
+        $image_twoID = carbon_get_post_meta($list_item->ID, 'hslide_bottom_image');
+        $image_twoA = wp_get_attachment_image_src($image_twoID,'inf_home_slider', true);
+        $image_two = $image_twoA[0];
+        $longTitle = $title . ' ' . $title_two;
+        $shortTitle = '<span>' . $title . '</span> ' . $title_two;
+        if (strlen(strip_tags($title_two)) > 80) {
+          $shortTitle = '<span>' . $title . '</span> ' . substr($title_two, 0, 79) . '...';
+        }
+
+	// PAGELY PERFORMACE HACK
+	// $image_one is the url to the image, so getimagesize downloads the image (from cloudflare and on the miss case all the way back to us
+	// you must use the local file
+	// lets get it a hacky way
+   $image_one_file = '/httpdocs/'.str_replace(get_option('siteurl'), '', $image_one);
+   $image_two_file = '/httpdocs/'.str_replace(get_option('siteurl'), '', $image_two);
+
+        list($width_one, $height_one) = getimagesize($image_one_file);
+        list($width_two, $height_two) = getimagesize($image_two_file);
+        $content    = apply_filters('the_content', get_post_field('post_content', $list_item->ID));
+        //$image      = wp_get_attachment_image_src(get_post_thumbnail_id($list_item->ID), 'inf_home_slider');
+    ?>
+          <li>
+            <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
+              <div class="inner-slide">
+                <?php
+                  if (trim($image_one) > '') {
+                    echo '<img src="' . $image_one . '" width="' . $width_one . '" height="' . $height_one . '" alt="' . $longTitle . '" />';
+                  }
+                ?>
+                <div class="text-box">
+                  <div class="products-box">
+                    <?php
+                      if (trim($image_two) > '') {
+                        echo '<img src="' . $image_two . '" width="' . $width_two . '" height="' . $height_two . '" alt="' . $longTitle . '" />';
+                      }
+                    ?>
+                  </div><!-- /.products-box -->
+                  <h4><?php echo $shortTitle; ?></h4>
+                </div><!-- /.text-box -->
+              </div><!-- /.inner-slide -->
+            </a>
+          </li>
+    <?php
+      }
+    ?>
+      </ul><!-- /.slides -->
+    <div class="prev">&nbsp;</div><!-- /.prev -->
+    <div class="next">&nbsp;</div><!-- /.next -->
+  </div><!-- /.top-slider -->
+  <?php
+  }
+  
+  //Home Page Latest Looks
+  function inf_home_latest() {
+        $args = array(
+      'post_type' => 'post',
+      'posts_per_page' => 6,
+      'meta_query' => array(
+        array(
+          'key' => '_thumbnail_id',
+          'value' => '',
+          'compare' => '!='
+        )
+      )
+    );
+    $latest_posts = get_posts($args);
+
+
+     ?>
+      <div class="latest-home group">
+        <div class="sideads_wrapper">
+          <div class="sidead leftad">
+          </div>
+          <div class="sidead rightad">
+          </div>
+        </div>
+        <div class="shell">
+          <div class="section-heading first">	
+           <h2><a href="<?php echo home_url().'/the-latest'; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/thelatest.png" /></a></h2><br />
+          </div><!-- /.section-heading -->
+          <ul>
+            <?php
+              $i=0;
+              foreach($latest_posts as $lp) {
+                $args = array(
+                  'connected_type' => 'posts_to_influencers',
+                  'connected_items' => $lp->ID,
+                  'nopaging' => true,
+                  'posts_per_page' => 1
+                );
+                $connected = new WP_Query($args);
+                //if($connected->have_posts()) {
+                  $i++;
+                  //while($connected->have_posts()) {
+                    //$connected->the_post();
+                    $infTitle = inf_name_from_post($lp->ID);
+                    if (trim($infTitle) <= '') { $infTitle = '&nbsp;'; }
+                    $thisTitle = get_the_title($lp->ID);
+                    
+                    $custom_fields = get_post_custom($lp->ID);
+                    $image  = trim($custom_fields['wpcf-post-shop-the-look'][0]);
+                    if ($image <= '') {
+                      $image = get_bloginfo('stylesheet_directory') . '/images/clicktoshop.jpg';
+                    }
+			// PAGELY PERFORMANCE HACK
+			$image_file = '/httpdocs'.str_replace(get_option('siteurl'), '', $image);
+                    list($width_one, $height_one) = getimagesize($image_file);
+                    if (strlen($thisTitle) > 70) {
+                      $thisTitle = substr($thisTitle, 0, 70) . '...';
+                    }
+                    $extra_class = '';
+                    if ($i % 2 == 0) {
+                      $extra_class = ' last';
+                    }
+                    ?>
+                    <li class="column<?php echo $extra_class; ?>">
+                      <a href="<?php echo get_permalink($lp->ID); ?>">
+                        <?php echo get_the_post_thumbnail($lp->ID, 'inf_home_latest'); ?>
+                        <img class="shoplook" src="<?php echo $image; ?>" width="90" height="400" alt="Shop the Look" />
+                        <h4><?php echo $infTitle; ?></h4>
+                        <p><?php echo $thisTitle; ?></p>
+                      </a>
+                    </li>
+                  <?php
+                  //}
+                //}
+
+                wp_reset_postdata();
+
+              }
+            ?>
+          </ul><!-- /.recent-list -->
+          <!-- HOME PAGE 300 X 900 AD SPACE -->
+          <div class="column adcolumn">
+          <a href="http://click.linksynergy.com/fs-bin/click?id=pwlaa2*cgnI&offerid=276224.10013359&subid=0&type=4">
+           <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nordstrom2.jpg" />
+          </a>
+            <!-- BEGIN IFRAME TAG - theinfluence 300x600 < - DO NOT MODIFY -->
+            <!-- <IFRAME SRC="http://ib.adnxs.com/tt?id=2438106&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="300" HEIGHT="600"></IFRAME> -->
+            <!-- END TAG -->
+            <div class="line" style="margin-top: 7px; padding-top: 7px;"></div>
+            <?php inf_favorite_items(); ?>
+            <a href="<?php echo home_url(); ?>/my-influence" class="subscribe-img-home"></a>
+            <div class="line" style="margin-top: 7px; padding-top: 7px;"></div>
+            <?php inf_item_of_the_day(); ?>
+            <div class="line" style="margin-top: 7px; padding-top: 7px;"></div>
+            <?php inf_qa(); ?>
+            <!-- <div class="hash-influence"></div> -->
+            <?php inf_hash_influencer() ?>
+          </div>
+          <div class="viewall-latest">
+            <a href="<?php echo home_url(); ?>/the-latest/">VIEW ALL LATEST LOOKS</a>
+          </div>
+        </div><!-- /.shell -->
+        
+
+        <?php inf_featured_theme('one'); ?>
+        
+        <?php inf_home_instagram(); ?>
+        
+        <?php //inf_featured_theme('two'); ?>
+        
+      </div><!-- /.latest -->
+  <?php
+  }
+  
+  //Featured Themes
+  function inf_featured_theme($theme_num) {
+    $home_id = get_option('page_on_front');
+    $theme_type = '_inf_theme_' . $theme_num;
+    $theme_items = get_post_meta($home_id, $theme_type, true);
+    $title = get_post_meta($home_id, '_inf_theme_intro_' . $theme_num, true);
+    $date = get_post_time('n.j.Y', false, $theme_items[0], false);
+    $style = '';
+    if ($theme_num == 'two') {
+      $style = ' style="margin-top: 70px; padding-bottom: 20px;"';
+    }
+    
+    $imgID = carbon_get_post_meta($home_id, '_inf_theme_' . $theme_num . '_image');
+    $image = wp_get_attachment_image_src($imgID,'full', true);
+    $link_url  = get_permalink($theme_items[0]);
+    ?>
+      <div class="featured-theme home"<?php echo $style; ?>>
+      <!--<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/_temp-featured-theme.jpg" alt="Favorite Items of the Moment" />-->
+      <a href="<?php echo $link_url; ?>"><img src="<?php echo $image[0]; ?>" width="644" height="158" alt="Featured Theme" /></a>
+    <?php
+    if(!empty($theme_items)) {
+      /*
+      foreach($theme_items as $key=>$this_id) {
+        $link_url  = get_permalink($this_id);
+        $image     = wp_get_attachment_image_src(get_post_thumbnail_id($this_id), 'inf_inst_product');
+        if (($key+1) == count($theme_items)) {
+          $last = 'class="last" ';
+        }
+        ?>
+        <a <?php echo $last; ?>href="<?php echo $link_url; ?>"><img src="<?php echo $image[0]; ?>" width="158" height="158" /></a>
+        <?php
+      }
+      */
+    }
+    ?>
+        <!--<h2>featured theme</h2>-->
+        <p class="theme_date">PUBLISHED <?php echo $date; ?></p><br />
+        <p><?php echo $title; ?> <a class="viewmore" href="<?php echo $link_url; ?>">VIEW MORE &gt;</a></p>
+      </div>
+    <?php
+  }
+  
+  //Favorite Items
+  function inf_favorite_items() {
+    $home_id = get_option('page_on_front');
+    $fav_items = get_post_meta($home_id, '_inf_favorite_items', true);
+    if(!empty($fav_items)) {
+      ?>
+        <div class="favorite-items">
+          <h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/header-fav-items.png" alt="Favorite Items of the Moment" /></h2>
+          <div class="fav-items-grid">
+            <div class="fav-items-grid">
+              <?php
+                foreach($fav_items as $key => $this_id) {
+                  $product_url     = get_post_meta($this_id, 'product_url', true);
+                  $product_image    = wp_get_attachment_image_src(get_post_thumbnail_id($this_id), 'inf_home_inst_prod_nocrop');
+                  $row_alt = 'left';
+                  if ($key % 2 != 0) { $row_alt = 'right'; }
+                  ?>
+                    <div class="fav-item <?php echo $row_alt; ?>"><a href="<?php echo $product_url; ?>"><img src="<?php echo $product_image[0]; ?>" /></a></div>
+                  <?php
+                }
+              ?>
+            </div>
+          </div>
+        </div>
+      <?php
+    }
+  }
+  
+  //Q&A
+  function inf_qa() {
+    $args = array(
+      'post_type' => 'inf_qanda',
+      'posts_per_page' => -1,
+      'orderby' => 'menu_order',
+      'order' => 'ASC'
+    );
+    $qa = get_posts($args);
+
+    if(!empty($qa)) {
+      ?>
+        <div class="styleseeker home_feature">
+          <div class="arrows"><a class="prev"></a><a class="next"></a></div>
+          <h2><img class="qa" src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/header-qa.png" alt="Q and A" /></h2>
+          <div class="qa-slider">
+            <ul class="slides">
+      <?php
+      foreach($qa as $key => $this_qa) {
+        $entry_id  = $this_qa->ID;
+        $inf_url = carbon_get_post_meta($this_qa, 'inf_hinfluencer_link_url');
+        
+        $question   = carbon_get_post_meta($entry_id, 'inf_qa_question');
+        $question_n = carbon_get_post_meta($entry_id, 'inf_qa_question_n');
+        $answer     = carbon_get_post_meta($entry_id, 'inf_qa_answer');
+        $answer_n   = carbon_get_post_meta($entry_id, 'inf_qa_answer_n');
+        $image      = wp_get_attachment_image_src(get_post_thumbnail_id($entry_id), 'inf_inst_product', true);
+          
+          //$custom_fields = get_post_custom($post->ID);
+          //$question   = trim($custom_fields['wpcf-home-style-question'][0]);
+          //$question_n = trim($custom_fields['wpcf-home-style-question-name'][0]);
+          //$answer     = trim($custom_fields['wpcf-home-style-answer'][0]);
+          //$answer_n   = trim($custom_fields['wpcf-home-style-answer-name'][0]);
+          //$image      = trim($custom_fields['wpcf-home-style-image'][0]);
+          
+          //Q & A
+          //$question   = 'Can you help me find Miranda Kerr`s top?';
+          //$question_n = 'Amanda, NY';
+          //$answer     = 'That is <span style="text-decoration: underline;">name goes here blouse</span> by Tory Burch';
+          //$answer_n   = 'Danielle, Editor';
+          //$image = get_bloginfo('stylesheet_directory') . '/images/styleseeker.jpg';
+      ?>      
+        <li class="slide">
+          <p class="question"><?php echo $question; ?></p>
+          <div class="name">- <?php echo $question_n; ?></div>
+            <div class="image-container">
+              <img class="main" src="<?php echo $image[0]; ?>" width="280" height="280" alt="" />
+              <p class="answer"><?php echo $answer; ?></p>
+            <div class="name two">- <?php echo $answer_n; ?></div>
+          </div>
+        </li>
+      <?php
+      }
+      ?>
+            </ul>
+          </div>
+          <div class="bottom-contact">
+            <a href="mailto:styleseeker@theinfluence.com"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/qa-email.png" alt="" /></a>
+          </div>
+        </div>
+      <?php
+    }
+  }
+  
+  //#Influencer
+  function inf_hash_influencer() {
+    $args = array(
+      'post_type' => 'inf_hash_influencer',
+      'posts_per_page' => -1,
+      'orderby' => 'menu_order',
+      'order' => 'ASC'
+    );
+    $hash_infs = get_posts($args);
+
+    if(!empty($hash_infs)) {
+      ?>
+        <div class="hash-influence home_feature">
+          <h2>#INFLUENCED</h2>
+          <div class="arrows"><a class="prev"></a><a class="next"></a></div>
+          <div id="hash-inf-slider">
+            <ul class="slides">
+      <?php
+      foreach($hash_infs as $key => $this_inf) {
+        $entry_id  = $this_inf->ID;
+        $inf_url = carbon_get_post_meta($entry_id, 'inf_hinfluencer_link_url');
+        $image = wp_get_attachment_image_src(get_post_thumbnail_id($entry_id), 'inf_hash_influenced', true);
+        echo '<li class="slide">';
+        ?>
+          <a href="http://instagram.com/theinfluence" target="_blank"><img src="<?php echo $image[0]; ?>" /></a>
+        <?php
+        echo '</li>';
+      }
+      ?>
+            </ul>
+          </div>
+        </div>
+      <?php
+    }
+  }
+  
+  //Home Page Latest Looks -- Replaced 5/20/14 DC
+  function inf_home_latest_old() {
+        $args = array(
+      'post_type' => 'post',
+      'posts_per_page' => 6,
+      'meta_query' => array(
+        array(
+          'key' => '_thumbnail_id',
+          'value' => '',
+          'compare' => '!='
+        )
+      )
+    );
+    $latest_posts = get_posts($args);
+
+
+     ?>
+      <div class="latest-home group">
+        <div class="sideads_wrapper">
+          <div class="sidead leftad">
+          </div>
+          <div class="sidead rightad">
+          </div>
+        </div>
+        <div class="shell">
+          <div class="section-heading first">	
+           <h2><a href="<?php echo home_url().'/the-latest'; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/thelatest2.png" /></a></h2><br />
+          </div><!-- /.section-heading -->
+          <ul>
+            <?php
+              $i=0;
+              foreach($latest_posts as $lp) {
+                $args = array(
+                  'connected_type' => 'posts_to_influencers',
+                  'connected_items' => $lp->ID,
+                  'nopaging' => true,
+                  'posts_per_page' => 1
+                );
+                $connected = new WP_Query($args);
+                //if($connected->have_posts()) {
+                  $i++;
+                  //while($connected->have_posts()) {
+                    //$connected->the_post();
+                    $infTitle = inf_name_from_post($lp->ID);
+                    if (trim($infTitle) <= '') { $infTitle = '&nbsp;'; }
+                    $thisTitle = get_the_title($lp->ID);
+                    
+                    $custom_fields = get_post_custom($lp->ID);
+                    $image  = trim($custom_fields['wpcf-post-shop-the-look'][0]);
+                    if ($image <= '') {
+                      $image = get_bloginfo('stylesheet_directory') . '/images/home-shoplook-placeholder.jpg';
+                    }
+                    list($width_one, $height_one) = getimagesize($image);
+                    if (strlen($thisTitle) > 70) {
+                      $thisTitle = substr($thisTitle, 0, 70) . '...';
+                    }
+                    $extra_class = '';
+                    if ($i % 2 == 0) {
+                      $extra_class = ' last';
+                    }
+                    ?>
+                    <li class="column<?php echo $extra_class; ?>">
+                      <a href="<?php echo get_permalink($lp->ID); ?>">
+                        <?php echo get_the_post_thumbnail($lp->ID, 'inf_home_latest'); ?>
+                        <img class="shoplook" src="<?php echo $image; ?>" width="90" height="400" alt="Shop the Look" />
+                        <h4><?php echo $infTitle; ?></h4>
+                        <p><?php echo $thisTitle; ?></p>
+                      </a>
+                    </li>
+                  <?php
+                  //}
+                //}
+
+                wp_reset_postdata();
+
+              }
+            ?>
+          </ul><!-- /.recent-list -->
+          <div class="column adcolumn">
+            <div style="width: 300px; height: 600px; background: #000;"></div>
+            <!-- BEGIN IFRAME TAG - theinfluence 300x600 < - DO NOT MODIFY -->
+            <!-- <IFRAME SRC="http://ib.adnxs.com/tt?id=2438106&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="300" HEIGHT="600"></IFRAME> -->
+            <!-- END TAG -->
+            <div class="line" style="margin-top: 7px; padding-top: 7px;"></div>
+            <div class="favorite-items">
+              <h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/header-fav-items.png" alt="Favorite Items of the Moment" /></h2>
+              
+              <div class="fav-items-grid">
+                <div class="fav-items-grid">
+                  <?php
+                    $fav_items = array('x','x','x','x','x','x');
+                    foreach($fav_items as $key=>$fav_item) {
+                      $row_alt = 'left';
+                      if ($key % 2 != 0) { $row_alt = 'right'; }
+                  ?>
+                    <div class="fav-item <?php echo $row_alt; ?>"><a href="#"></a></div>
+                  <?php } ?>
+                </div>
+              </div>
+            </div>
+            <a href="<?php echo home_url(); ?>/my-influence" class="subscribe-img-home"></a>
+            <div class="line" style="margin-top: 7px; padding-top: 7px;"></div>
+            <?php inf_item_of_the_day(); ?>
+            <div class="line" style="margin-top: 7px; padding-top: 7px;"></div>
+            <?php
+              //Style Seeker
+              $custom_fields = get_post_custom($post->ID);
+              $question   = trim($custom_fields['wpcf-home-style-question'][0]);
+              $question_n = trim($custom_fields['wpcf-home-style-question-name'][0]);
+              $answer     = trim($custom_fields['wpcf-home-style-answer'][0]);
+              $answer_n   = trim($custom_fields['wpcf-home-style-answer-name'][0]);
+              $image      = trim($custom_fields['wpcf-home-style-image'][0]);
+              
+              //Q & A
+              $question   = 'Can you help me find Miranda Kerr`s top?';
+              $question_n = 'Amanda, NY';
+              $answer     = 'That is <span style="text-decoration: underline;">name goes here blouse</span> by Tory Burch';
+              $answer_n   = 'Danielle, Editor';
+              $image = get_bloginfo('stylesheet_directory') . '/images/styleseeker.jpg';
+            ?>
+            <div class="styleseeker">
+              <div class="arrows"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/home-block-arrows.png" alt="" /></div>
+              <h2><img class="qa" src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/header-qa.png" alt="Q and A" /></h2>
+              <p class="question"><?php echo $question; ?></p>
+              <div class="name">- <?php echo $question_n; ?></div>
+                
+              <div class="image-container">
+                <img class="main" src="<?php echo $image; ?>" width="280" height="280" alt="" />
+                
+                <p class="answer"><?php echo $answer; ?></p>
+                <div class="name two">- <?php echo $answer_n; ?></div>
+              </div>
+              <div class="bottom-contact">
+                <a href="mailto:styleseeker@theinfluence.com"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/qa-email.png" alt="" /></a>
+              </div>
+            </div>
+            <div class="hash-influence">
+            </div>
+          </div>
+          <div class="viewall-latest">
+            <a href="<?php echo home_url(); ?>/the-latest/">VIEW ALL LATEST LOOKS</a>
+          </div>
+        </div><!-- /.shell -->
+        
+        <div class="featured-theme">
+          <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/_temp-featured-theme.jpg" alt="Favorite Items of the Moment" />
+          <h2>featured theme</h2>
+          <p>BEYONCE KILLING IT WEARING LEOPARD<br />SKINNY JEANS AT THE COACHELL A FESTIVAL</p>
+        </div>
+        
+        <?php inf_home_instagram(); ?>
+        
+        <div class="featured-theme" style="margin-top: 70px; padding-bottom: 20px;">
+          <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/_temp-featured-theme.jpg" alt="Favorite Items of the Moment" />
+          <h2>featured theme</h2>
+          <p>BEYONCE KILLING IT WEARING LEOPARD<br />SKINNY JEANS AT THE COACHELL A FESTIVAL</p>
+        </div>
+        
+      </div><!-- /.latest -->
+  <?php
+  }
+  
+  function inf_home_instagram() {
+    //Get Shop Instagram items
+      $args = array(
+        'numberposts' => 4,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'post_type' => 'inf_instagram',
+        'post_status' => 'publish'
+      ); 
+      $inst_items = get_posts($args);
+
+        $instagram_one_prod = get_post_meta($inst_items[0]->ID, '_inf_instagram_products', true);
+        $instagram_one_prodID   = $instagram_one_prod[0];
+        $instagram_two_prod = get_post_meta($inst_items[1]->ID, '_inf_instagram_products', true);
+        $instagram_two_prodID   = $instagram_two_prod[0];
+        
+        $image_one = wp_get_attachment_image_src(get_post_thumbnail_id($inst_items[0]->ID), 'inf_home_inst_prod_nocrop_quad');
+        $title_one = trim(get_the_title($inst_items[0]->ID));
+        if (strlen($title_one) > 20) {
+          $title_one = substr($title_one, 0, 10) . '...';
+        }
+        $page_object = get_page($inst_items[0]->ID);
+        $caption_one = $page_object->post_content;
+        if (strlen($caption_one) > 25) {
+          $caption_one = substr($caption_one, 0, 0)  . ' <span style="font-weight; bold; text-transform: uppercase;">READ MORE ></span>';
+        }        
+        /*
+        $product_title_one    = get_the_title($instagram_one_prodID);
+        if (strlen($product_title_one) > 45) {
+          $product_title_one = substr($product_title_one, 0, 45) . '...';
+        }
+        $product_designer_one = get_post_meta($instagram_one_prodID, 'designer', true);
+        $product_price_one    = get_post_meta($instagram_one_prodID, 'price', true);
+				$product_link_one     = get_post_meta($instagram_one_prodID, 'product_url', true);
+        $product_image_one    = wp_get_attachment_image_src(get_post_thumbnail_id($instagram_one_prodID), 'inf_home_inst_prod_nocrop');
+        */
+        
+        $image_two = wp_get_attachment_image_src(get_post_thumbnail_id($inst_items[1]->ID), 'inf_home_inst_prod_nocrop_quad');
+        $title_two = trim(get_the_title($inst_items[1]->ID));
+        if (strlen($title_two) > 30) {
+          $title_two = substr($title_two, 0, 25) . '...';
+        }
+        $page_object = get_page($inst_items[1]->ID);
+        $caption_two = $page_object->post_content;
+        if (strlen($caption_two) > 25) {
+          $caption_two = substr($caption_two, 0, 0) . ' <span style="font-weight; bold; text-transform: uppercase;">READ MORE ></span>';
+        }
+        /*
+        $product_title_two    = get_the_title($instagram_two_prodID);
+        if (strlen($product_title_two) > 45) {
+          $product_title_two = substr($product_title_two, 0, 45) . '...';
+        }
+        $product_designer_two = get_post_meta($instagram_two_prodID, 'designer', true);
+        $product_price_two    = get_post_meta($instagram_two_prodID, 'price', true);
+				$product_link_two     = get_post_meta($instagram_two_prodID, 'product_url', true);
+        $product_image_two    = wp_get_attachment_image_src(get_post_thumbnail_id($instagram_two_prodID), 'inf_home_inst_prod_nocrop');
+        */
+        $image_three = wp_get_attachment_image_src(get_post_thumbnail_id($inst_items[2]->ID), 'inf_home_inst_prod_nocrop_quad');
+        $title_three = trim(get_the_title($inst_items[2]->ID));
+        if (strlen($title_three) > 30) {
+          $title_three = substr($title_three, 0, 25) . '...';
+        }
+        $page_object = get_page($inst_items[2]->ID);
+        $caption_three = $page_object->post_content;
+        if (strlen($caption_three) > 25) {
+          $caption_three = substr($caption_three, 0, 0) . ' <span style="font-weight; bold; text-transform: uppercase;">READ MORE ></span>';
+        }
+        $image_four = wp_get_attachment_image_src(get_post_thumbnail_id($inst_items[3]->ID), 'inf_home_inst_prod_nocrop_quad');
+        $title_four = trim(get_the_title($inst_items[3]->ID));
+        if (strlen($title_four) > 30) {
+          $title_four = substr($title_four, 0, 35) . '...';
+        }
+        $page_object = get_page($inst_items[3]->ID);
+        $caption_four = $page_object->post_content;
+        if (strlen($caption_four) > 24) {
+          $caption_four = substr($caption_four, 0, 0) . ' <span style="font-weight; bold; text-transform: uppercase;">READ MORE ></span>';
+        }
+    ?>  
+      <div class="instagram-posts">
+        <div class="section-heading" style="margin-top: -15px;">
+          <h2><a href="<?php echo home_url().'/shop-this-instagram'; ?>">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthisinsta.png" /></a></h2>
+        </div><!-- /.section-heading -->
+        <a href="<?php echo home_url().'/shop-this-instagram'; ?>">
+              <div class="shop-instagram one" style="margin-top: -15px;">
+                <div class="instagram-photo">
+                  <img src="<?php echo $image_one[0]; ?>" alt="<?php echo $title_one; ?>" />
+                  <p><span style="color: #000;"><?php echo $title_one; ?></span>
+                  <?php echo $caption_one; ?></p>
+                 <!-- <div class="shop-link">SHOP</div> -->
+                </div>
+              </div>
+            </a>
+            <a href="<?php echo home_url().'/shop-this-instagram';//$product_link; ?>">
+              <div class="shop-instagram" style="margin-top: -15px; margin-left: 35px;">
+                <div class="instagram-photo">
+                  <img src="<?php echo $image_two[0]; ?>" alt="<?php echo $title_two; ?>" />
+                <p><span style="color:#000;"><?php echo $title_two; ?></span>
+                <?php echo $caption_two; ?></p>
+                <!-- <div class="shop-link">SHOP</div> -->
+                </div>
+              </div>
+            </a>
+            <a href="<?php echo home_url().'/shop-this-instagram';//$product_link; ?>">
+              <div class="shop-instagram" style="margin-top: -35px;">
+                <div class="instagram-photo">
+                  <img src="<?php echo $image_three[0]; ?>" alt="<?php echo $title_three; ?>" />
+                <p><span style="color:#000;"><?php echo $title_three; ?></span>
+                <?php echo $caption_three; ?></p>
+                <!-- <div class="shop-link">SHOP</div> -->
+                </div>
+              </div>
+            </a>
+            <a href="<?php echo home_url().'/shop-this-instagram';//$product_link; ?>">
+              <div class="shop-instagram" style="margin-top: -35px; margin-left: 35px;">
+                <div class="instagram-photo">
+                  <img src="<?php echo $image_four[0]; ?>" alt="<?php echo $title_four; ?>" />
+                <p><span style="color:#000;"><?php echo $title_four; ?></span>
+                <?php echo $caption_four; ?></p>
+                <!-- <div class="shop-link">SHOP</div> -->
+                </div>
+              </div>
+            </a>            
+      </div>
+      <div class="viewall-latest">
+        <a href="<?php echo home_url(); ?>/shop-this-instagram/">VIEW ALL INSTAGRAM</a>
+      </div>
+      <div style="clear: left;"></div>
+    <?php
+  }
+  
+  function inf_item_of_the_day() {
+    $home_id = get_option('page_on_front');
+    ?>
+      <div class="item-of-the-day">
+          <?php  
+          //$item_of_the_day = carbon_get_theme_option('inf_item_of_the_day');
+          $home_products = get_post_meta($home_id, '_inf_product_of_the_day', true);
+          $home_prodID   = $home_products[0];
+          
+        $product_title    = get_the_title($home_prodID);
+        if (strlen($product_title) > 45) {
+          $product_title = substr($product_title, 0, 45) . '...';
+        }
+        $product_designer = get_post_meta($home_prodID, 'designer', true);
+        $product_price    = get_post_meta($home_prodID, 'price', true);
+				$product_url     = get_post_meta($home_prodID, 'product_url', true);
+        $product_image    = wp_get_attachment_image_src(get_post_thumbnail_id($home_prodID), 'inf_home_inst_prod_nocrop');
+    ?>
+          <a href="<?php echo esc_url($product_url); ?>" target="_blank">
+            <h2>Item of the Day</h2>
+            <img src="<?php echo $product_image[0] ?>" width="<?php echo $product_image[1]; ?>" height="<?php echo $product_image[2]; ?>" alt="Item of the Day" />
+             <h5><span style="text-transform: uppercase; font-weight: bold;"><?php echo $product_designer?></span></h5><h6><?php echo $product_title; ?>, $<?php echo $product_price; ?></h6> 
+          </a>
+      </div><!-- /.item-of-the-day -->
+    <?php
+  }
+  
+  function the_post_thumbnail_caption($post_id) {
+    //global $post;
+
+    $thumbnail_id    = get_post_thumbnail_id($post_id);
+    $thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
+
+    if ($thumbnail_image && isset($thumbnail_image[0])) {
+      $caption = $thumbnail_image[0]->post_excerpt;
+    }
+
+    return $caption;
+  }
+?>

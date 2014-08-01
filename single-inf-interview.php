@@ -24,7 +24,8 @@
         <!--
         -->
         <!--<div id="topSlider" class="interview-slider group"> -->
-          <ul class="slides">
+
+  <ul class="slides" style="list-style-type: none;">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
             $attachments_type = 'attachments';
@@ -32,11 +33,11 @@
             while($attachment = $attachments->get()) {
               $title = $attachments->field('title');
               $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider');
-              //echo '<li data-index="' . $i . $image . '"></li>';
               echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" /></li>';
               $i++;
             }
           ?>
+
           </ul><!-- /.slides -->
         </div>
         <!-- </div> /.interview-slider -->
