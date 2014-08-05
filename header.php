@@ -28,13 +28,16 @@ $detect = new Mobile_Detect;
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/davidtemp.css?ver=<?php echo $version; ?>" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/semantic.css?ver=<?php echo $version; ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
-    <meta name="viewport" content="width=1200" />
+    
     <script type="text/javascript" src="//use.typekit.net/lzr4wxq.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/mobile.css" type="text/css" media="screen and (max-height: 700px)" />
   </head>
 	<body <?php body_class(); ?>>
   <!-- Google Tag Manager 1 -->
@@ -56,7 +59,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MCHHLQ');</script>
 <!-- End Google Tag Manager 2-->
     <?php if (is_front_page()) { ?>
-    <div id="top_ad-block" class="top_ad-block">
+    <div id="top_ad-block" class="top_ad-block no-mobile">
       <a href="http://shop.theinfluence.com">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopbanner.png" />
       </a>
@@ -82,7 +85,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
 -->
-  <br /><br />
+  <br class="no-mobile" /><br class="no-mobile" />
 		<header id="header">
 			<div id="header_inner" class="inner_wrap">
 				<?php
@@ -148,8 +151,9 @@ c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c
 </g>
 </svg></a>
 
-
+        <a href="#" id="hamburger"> /// </a>
 				<div class="nav">
+
 					<div class="nav-icons">
             <ul class="soc-list">
               <?php inf_list_social_networks('header'); ?>
