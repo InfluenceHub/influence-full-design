@@ -538,6 +538,55 @@ div.az-links li.scr-link a {
 	}
 }
 
+.my-inf.browse-by .azSteps {
+	margin-bottom: 0;
+}
+
+.my-inf.browse-by .azSteps h2 {
+	width: inherit;
+	margin-bottom: 50px;
+}
+
+.my-inf.browse-by .azStep {
+	width: inherit;
+	border: none;
+	padding: 0 ;
+	margin: 0;
+}
+
+.my-inf.browse-by .azStep h2 {
+	width: inherit;
+}
+
+.my-inf.browse-by#content > div {
+
+	margin-bottom:0;
+}
+
+
+.AZ-signup-submit {
+	width:100px;
+	margin: 10px auto 10px auto ;
+	float: none;
+}
+
+#myInfluence input[type="submit"], #myInfluence input[type="button"] {
+	float:none;
+	margin: 0;
+}
+
+
+.page-template-template-my_influence-php #footer {
+	margin-top: 30px;
+}
+
+/*.page-template-template-my_influence-php .az-links { display:none;}
+.page-template-template-my_influence-php .az-row { display:none;}*/
+
+/*.my_inf .az-row {
+	display: none;
+}*/
+
 
 
 

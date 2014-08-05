@@ -54,7 +54,7 @@
         ?>
         <div class="shell browse-az<?php echo $extraclass; ?>">
 
-          <div class="right-side">
+          <div class="right-side no-mobile">
          <a href="http://www.tkqlhce.com/click-7580048-11850643">
            <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/nasty1.gif" />
          </a>
@@ -83,10 +83,10 @@
           </div>
           <?php } ?>
           
-          <div class="section-heading" style=>
+          <div class="section-heading no-mobile">
             <h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/a-z2.png" width="600" height="87" alt="the influencer index" /></h2>           <!-- <h2><span class="text-block">A</span> <span class="text-block">Z</span> the influencer index</h2> -->
           </div><!-- /.section-heading --><br /><br />
-          <div class="az-links">
+          <div class="az-links no-mobile">
             <ul>
             <?php
               foreach (range('a', 'z') as $letter) {
@@ -110,7 +110,7 @@
           }
           
           if ($first_letter != $last_letter) {
-            echo '<div class="az-row">';
+            echo '<div class="az-row no-mobile">';
             echo '<h2 class="az-' . $first_letter . '">' . strtoupper($first_letter) . '</h2>';
             echo '<div class="az-column">';
           }
