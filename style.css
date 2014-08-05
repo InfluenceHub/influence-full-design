@@ -1,3 +1,8 @@
+
+.mobile-only {
+  display:none;
+}
+
 /*hamburger menu should be hidden by default*/
 #hamburger {
   display:none;
