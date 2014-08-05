@@ -192,15 +192,18 @@ jQuery(function($) {
       },
 			auto: false
 		});
-    $('#shop-slider-1 .slides').carouFredSel({
-			prev: '.prev-1',
-			next: '.next-1',
-			items: 5,
-      scroll: {
-        items: 1
-      },
-			auto: false
-		});
+
+    if($(window).width() > 700) {
+      $('#shop-slider-1 .slides').carouFredSel({
+  			prev: '.prev-1',
+  			next: '.next-1',
+  			items: 5,
+        scroll: {
+          items: 1
+        },
+  			auto: false
+  		});
+    } 
     $('#shop-slider-2 .slides').carouFredSel({
 			prev: '.prev-2',
 			next: '.next-2',

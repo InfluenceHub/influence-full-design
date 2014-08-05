@@ -8,7 +8,7 @@
 		$current_user_influencers = inf_get_influencers();
 	} ?>
 	<section id="content">
-    <div class="ad_banner">
+    <div class="ad_banner no-mobile">
       <a href="http://shop.theinfluence.com">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopbanner.png" />
       </a>
@@ -233,8 +233,8 @@
 
                     } ?>
                   </ul>
-                    <div class="prev-<?php echo $key; ?>">&nbsp;</div><!-- /.prev -->
-                    <div class="next-<?php echo $key; ?>">&nbsp;</div><!-- /.next -->
+                    <div class="no-mobile prev-<?php echo $key; ?>">&nbsp;</div><!-- /.prev -->
+                    <div class="no-mobile next-<?php echo $key; ?>">&nbsp;</div><!-- /.next -->
                 </div><!-- /.prod-row -->
               <?php endif;
             }
@@ -244,7 +244,7 @@
       ?>
         </div>
         
-        <div class="ad_banner" style="margin-top: 50px; padding-bottom: 25px;">
+        <div class="ad_banner no-mobile" style="margin-top: 50px; padding-bottom: 25px;">
         <a href="http://shop.theinfluence.com">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopbanner.png" />
         </a>

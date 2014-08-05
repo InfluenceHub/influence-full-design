@@ -882,7 +882,7 @@ function inf_get_terms_for_carbon_select($taxonomy) {
 
 function inf_footer_signup() { ?>
 
-  <div class="browse">
+  <div class="browse no-mobile">
     <div class="shell">
       <div class="browse-holder">
         <ul class="word-list">

@@ -1,144 +1,205 @@
-@media only screen and (max-width: 700px) {
+
 	
-	body {
-		min-width: 0;
+/*global resets to get grid onto device width*/
+body {
+	min-width: 0;
 
-	}
-
-	body * {
-		max-width: 100% !important;
-		box-sizing:border-box;
-	}
-
-	.home-feed-post-info {
-		margin: 0;
-	}
-
-	.no-mobile {
-		display: none !important;
-	}
-
-	div.nav {
-		display:none;
-		top: initial;
-	}
-
-	.nav-icons {
-		display:none;
-	}
-
-	#menu-main-menu {
-
-	}
-
-	#menu-main-menu > li {
-		display: block;
-	}
-
-	#header, #header.pinned {
-		background: transparent;
-		height: initial;
-		padding-top: 0;
-	}
-
-	#header_inner.inner_wrap {
-		/*max-width: 400px;*/
-		width: 100%;
-		margin: 0;
-	}
-
-	.latest-home ul {
-		width: 100%;
-	}
-
-	a#logo {
-		display: none;
-	}
-
-	.content_wrapper {
-		margin: 0;
-	}
-
-	#content .ad_wrapper-block > div {
-		width: 100%;
-	}
-
-	.column-two, .column{
-		width: 100%;
-	}
-
-	.column {
-
-	}
-
-	#footer {
-		width: 100%;
-	}
-
-	.section-heading h2 {
-		white-space: initial;
-		font-size:25px;
-	}
-
-	.section-heading .first {
-		margin:0;
-		padding:0;
-	}
-
-	li.home-feed-side-by-side .home-feed-post-info h2 {
-		height: initial;
-	}
-
-	.home-feed-post-img-wrap {
-		width: initial;
-	}
-
-	.home-feed-post-img-wrap a img {
-		width: 105px;
-		height: 200px;
-		margin: .3em;
-	}
-
-	.home-feed-prod-row {
-
-		clear: left;
-	}
-
-	li.home-feed-side-by-side {
-		width: initial;
-		height: initial;
-	}
-
-/*	.home-feed-side-by-side .home-feed-pcontent {
-		border-bottom: none;
-	}
-*/
-/*	li.home-feed-side-by-side .home-feed-post-img-wrap {
-		width: 150px;
-		height: 150px;
-	}*/
-
-/*	#top_ad-block {
-		display: none !important;
-	}*/
-
-/*	div.shell div.top-slider {
-		display: none;
-	}
-
-	div.adcolumn {
-		display: none;
-	}
-
-	.browse {
-		display:none;
-	}
-
-	.nav-icons {
-		display: none;
-	}
-
-	.sideads_wrapper {
-		display:none;
-	}*/
 }
+
+body * {
+	max-width: 100% !important;
+	box-sizing:border-box;
+}
+
+/*utility classes*/
+
+.no-mobile {
+	display: none !important;
+}
+
+/*grid resets and top level content wrappers*/
+
+
+.content_wrapper {
+	margin: 0;
+}
+
+#content .ad_wrapper-block > div {
+	width: 100%;
+}
+
+.column-two, .column{
+	width: 100%;
+}
+
+.column {
+
+}
+
+/*header styles*/
+
+
+a#logo {
+	display: none;
+}
+
+div.nav {
+	display:none;
+	top: initial;
+}
+
+#hamburger {
+	position: absolute;
+	z-index: 20;
+}
+
+.nav-icons {
+	display:none;
+}
+
+#menu-main-menu {
+	background: white;
+	top:0;
+}
+
+#menu-main-menu > li {
+	display: block;
+}
+
+#header, #header.pinned {
+	background: white;
+	height: 30px;
+	padding-top: 0;
+}
+
+#header_inner.inner_wrap {
+	/*max-width: 400px;*/
+	width: 100%;
+	margin: 0;
+	height: initial;
+}
+
+/*home feed styles*/
+
+.latest-home ul {
+	width: 100%;
+}
+
+li.home-feed-side-by-side .home-feed-post-info h2 {
+	height: initial;
+}
+
+.home-feed-post-img-wrap {
+	width: initial;
+}
+
+.home-feed-post-img-wrap a img {
+	width: 105px;
+	height: 200px;
+	margin: .3em;
+}
+
+.home-feed-prod-row {
+
+	clear: left;
+}
+
+li.home-feed-side-by-side {
+	width: initial;
+	height: initial;
+}
+
+.home-feed-post-info {
+	margin: 0;
+}
+
+/*sectioanl heading styles*/
+
+.section-heading h2 {
+	white-space: initial;
+	font-size:25px;
+}
+
+.section-heading .first {
+	margin:0;
+	padding:0;
+}
+
+
+/*footer styles*/
+
+#footer {
+	width: 100%;
+}
+
+
+/*styles explicitly for single*/
+.shop-main .right-col .text-holder {
+	height:100%;
+	margin: 0 10px 0 10px;
+}
+
+#shop-slider-small.prod-row.small {
+	height: 100%;
+}
+
+.shop-main .column-three {
+	height: 100%;
+}
+
+#shop-slider-1.prod-row {
+	height: initial;
+}
+
+.shop .column-three h2 {
+	margin-top: 0px; 
+}
+.shop-published-by {
+	position: initial
+}
+
+.column-three .left-col{
+	float: none;
+}
+
+.shop-main .inner {
+	margin: 0 auto;
+}
+
+.prod-row.small ul li {
+	width: 100%;
+}
+
+@media screen and (min-width: 400px){
+	/*targeting landscape here*/
+	.prod-row.small ul li {
+		width: 31%;
+	}
+
+	.morelike div.row.no-border > div {
+		width: 170px !important;	
+	}
+}
+
+.prod-row {
+	padding: 25px 0 8px 15px;
+}
+
+.prod-row ul li {
+	display: inline-block;
+	margin: 10px 0 10px 0;
+	float: none;
+	width: 130px;
+}
+@media screen and (max-width: 400px) {
+
+	.morelike div.row.no-border {
+		width: 186px; 
+		margin: 0 auto 0 auto;
+	}
+
+}
+
+
+
+
