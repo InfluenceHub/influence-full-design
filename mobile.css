@@ -1,9 +1,5 @@
 @media only screen and (max-width: 700px) {
 	
-/*	body, html {
-		width: auto !important;
-	}*/
-
 	body {
 		min-width: 0;
 
@@ -31,15 +27,21 @@
 		display:none;
 	}
 
+	#menu-main-menu {
+
+	}
+
 	#menu-main-menu > li {
 		display: block;
 	}
 
-	#header {
+	#header, #header.pinned {
 		background: transparent;
+		height: initial;
+		padding-top: 0;
 	}
 
-	.inner_wrap {
+	#header_inner.inner_wrap {
 		/*max-width: 400px;*/
 		width: 100%;
 		margin: 0;
@@ -52,10 +54,6 @@
 	a#logo {
 		display: none;
 	}
-
-/*	#content {
-		max-width: 400px;
-	}*/
 
 	.content_wrapper {
 		margin: 0;
