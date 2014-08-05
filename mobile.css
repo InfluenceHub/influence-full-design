@@ -336,7 +336,7 @@ li.home-feed-side-by-side {
 
 	.text-holder .browse-type {
 		position: absolute;
-		bottom: 0;
+		bottom: 10px;
 		left: 0;
 		margin-left: 20px;
 	}
