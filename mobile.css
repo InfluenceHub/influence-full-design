@@ -40,6 +40,7 @@ body * {
 
 
 a#logo {
+	position: fixed;
 	left: inherit;
 	right:10px;
 	width: 36px;
@@ -49,6 +50,7 @@ a#logo {
 }
 
 div.nav {
+	position: fixed;
 	display:none;
 	background: white;
 	top: 0px;
@@ -56,7 +58,7 @@ div.nav {
 
 #hamburger {
 	display: block;
-	position: absolute;
+	position: fixed;
 	z-index: 20;
 	
 }
