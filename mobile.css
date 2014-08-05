@@ -178,6 +178,30 @@ li.home-feed-side-by-side {
 
 #footer {
 	width: 100%;
+	padding-bottom: 0;
+}
+
+#menu-footer-menu li {
+	display: block;
+}
+
+.foot-nav {
+	margin-bottom: 50px;
+
+}
+
+.foot-nav li a {
+	font: 16px/18px "Oswald",arial,sans-serif; 
+}
+
+.foot-copy {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+.foot-copy * {
+	display: block;
 }
 
 
@@ -200,7 +224,8 @@ li.home-feed-side-by-side {
 }
 
 .shop .column-three h2 {
-	margin-top: 0px; 
+	margin-top: 0px;
+	font: 18px/18px "Oswald",arial,sans-serif;
 }
 .shop-published-by {
 	position: initial
@@ -212,6 +237,10 @@ li.home-feed-side-by-side {
 
 .shop-main .inner {
 	margin: 0 auto;
+}
+
+.shop-main p {
+	font: 16px/22px "AvenirNext LT Pro Regular",arial,sans-serif; 
 }
 
 .prod-row.small ul li {
@@ -240,6 +269,9 @@ li.home-feed-side-by-side {
 }
 
 
+.col_5 p {
+	font: 14px/14px "AvenirNext LT Pro Regular",arial,sans-serif !important;
+}
 
 .prod-row ul li {
 	display: inline-block;
