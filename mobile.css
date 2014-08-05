@@ -20,6 +20,10 @@ body * {
 /*grid resets and top level content wrappers*/
 
 
+#content > div {
+	margin: 0 auto 0 auto;
+}
+
 #content .content_wrapper {
 	margin: 0;
 }
