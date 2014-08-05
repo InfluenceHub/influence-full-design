@@ -37,8 +37,10 @@ $detect = new Mobile_Detect;
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/mobile.css?var=<?php echo $version; ?>" type="text/css" media="screen and (max-width: 700px)" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/mobile.css<?php echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" media="screen and (max-width: 700px)" />
   </head>
+
+
 	<body <?php body_class(); ?>>
   <!-- Google Tag Manager 1 -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NQL75C"
