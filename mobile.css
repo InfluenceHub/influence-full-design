@@ -252,7 +252,14 @@ li.home-feed-side-by-side {
 }
 
 .shop-main .inner {
-	margin: 0 auto;
+	margin: 21px auto 0 auto;
+}
+
+.shop-main .shop-maintag {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin-top: 0;
 }
 
 .shop-main p {
@@ -261,6 +268,17 @@ li.home-feed-side-by-side {
 
 .prod-row.small ul li {
 	width: 100%;
+}
+
+.shop-main .left-col .inner {
+	height: initial;
+	width: initial;
+}
+
+.shop-main .left-col img {
+	height: 345.33px;
+	width: 220.66px;
+	margin: 0 auto;
 }
 
 @media screen and (min-width: 400px){
@@ -322,6 +340,10 @@ li.home-feed-side-by-side {
 	padding-left: 15px !important; 
 }
 
+.shop-main .left-col .slides li {
+	float: none;
+}
+
 /*styles for single influencer page*/
 
 .cols.browse-col {
@@ -353,6 +375,8 @@ div.archive-col .text-box {
 .single-inf_influencer .profile-image {
 	height: initial !important;
 }
+
+
 
 
 
