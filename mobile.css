@@ -337,7 +337,7 @@ div.archive-col .text-box {
 }
 
 .single-inf_influencer .profile-image {
-	height: initial;
+	height: initial !important;
 }
 
 
