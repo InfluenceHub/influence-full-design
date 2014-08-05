@@ -40,22 +40,25 @@ body * {
 
 
 a#logo {
-	display: none;
 	left: inherit;
-	right:0px;
-	width: 100px;
+	right:10px;
+	width: 36px;
+	height: 36px;
+	background: url('images/icons/apple-touch-icon-57x57.png') no-repeat;
+	background-size: contain;
 }
 
 div.nav {
 	display:none;
-	top: initial;
 	background: white;
+	top: 0px;
 }
 
 #hamburger {
 	display: block;
 	position: absolute;
 	z-index: 20;
+	
 }
 
 .nav-icons {
@@ -65,19 +68,49 @@ div.nav {
 #menu-main-menu {
 	background: white;
 	top:0;
+	padding: 20px 0 0 10px;
+	border-bottom: solid 1px black;
 }
 
-.sub-menu {
+ul.sub-menu {
+	position:static !important;
+	background: white !important;
+	border-left: solid 1px black;
+	padding: 0 0 0 5px !important;
+}
 
+ul.sub-menu li {
+	display: block !important;
+}
+
+ul.sub-menu li a {
+	color: black !important;
+	vertical-align: top;
+}
+
+ul.sub-menu .arrow {
+	display:none;
+}
+
+li#menu-item-15636 {
+	background: url('images/slash.png') left bottom no-repeat;
 }
 
 #menu-main-menu > li {
 	display: block;
 }
 
+#menu-main-menu > li > a {
+	display: block;
+	text-align: left;
+}
+
+#header {
+	height: 50px;
+}
+
 #header, #header.pinned {
 	background: transparent;
-	height: 30px;
 	padding-top: 0;
 	margin-bottom: 10px;
 }
@@ -85,8 +118,8 @@ div.nav {
 #header_inner.inner_wrap {
 	/*max-width: 400px;*/
 	width: 100%;
-	margin: 0;
-	height: initial;
+	padding: 5px;
+	height: 46px;
 }
 
 /*home feed styles*/
@@ -208,10 +241,6 @@ li.home-feed-side-by-side {
 		margin: 0 auto 0 auto;
 	}
 
-}
-
-.nav > ul > li:hover ul {
-	display:initial;
 }
 
 

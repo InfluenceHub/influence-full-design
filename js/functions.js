@@ -2,7 +2,7 @@ jQuery(function($) {
 
   //mobile js for menu
   $("#hamburger").on('click', function(){
-    $(this).siblings('.nav, #logo').toggle(); 
+    $(this).siblings('.nav').toggle(); 
   });
 
 
