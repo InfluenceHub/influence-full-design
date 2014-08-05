@@ -220,6 +220,7 @@ li.home-feed-side-by-side {
 
 @media screen and (min-width: 400px){
 	/*targeting landscape here*/
+
 	.prod-row.small ul li {
 		width: 31%;
 	}
@@ -232,23 +233,29 @@ li.home-feed-side-by-side {
 		width: 170px !important;	
 
 	}
+
+	.prod-row {
+		padding: 30px 0 8px 17px;
+	}
 }
 
-.prod-row {
-	padding: 25px 0 8px 15px;
-}
+
 
 .prod-row ul li {
 	display: inline-block;
 	margin: 10px 0 10px 0;
 	float: none;
-	width: 130px;
+	width: 133px;
 }
 @media screen and (max-width: 400px) {
 
 	.morelike div.row.no-border {
 		width: 186px; 
 		margin: 10px auto 0 auto;
+	}
+
+	.prod-row {
+		padding: 30px 0 8px 25px;
 	}
 
 }
