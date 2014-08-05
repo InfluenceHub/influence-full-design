@@ -40,6 +40,11 @@ body * {
 
 }
 
+body.home #content div.content_wrapper {
+	border-top: 1px solid #CCCCCC;
+	padding-top: 20px !important
+}
+
 /*header styles*/
 
 
@@ -118,7 +123,7 @@ li#menu-item-15636 {
 #header, #header.pinned {
 	background: transparent;
 	padding-top: 0;
-	margin-bottom: 10px;
+	/*margin-bottom: 10px;*/
 }
 
 #header_inner.inner_wrap {
@@ -132,6 +137,7 @@ li#menu-item-15636 {
 
 .latest-home ul {
 	width: 100%;
+	margin-top: 10px;
 }
 
 .home-feed-post-info h2 {
@@ -173,9 +179,7 @@ li.home-feed-side-by-side {
 	font-size:25px;
 }
 
-.section-heading .first {
-	margin:0;
-	padding:0;
+.section-heading.first h2 {
 	border-bottom: 1px solid black;
 }
 
