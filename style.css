@@ -1,6 +1,8 @@
 
+@media screen and (min-width: 700px) {
 .mobile-only {
   display:none;
+}
 }
 
 /*hamburger menu should be hidden by default*/
