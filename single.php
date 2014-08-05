@@ -336,14 +336,19 @@ function inf_shop_slider() {
 <script>
 jQuery(window).load(function() {
   //jQuery('.shop-main .inner.slides').flexslider();
-  jQuery('.shop-main .left-col .slides').carouFredSel({
-			prev: '.shop-featured-prev',
-			next: '.shop-featured-next',
-			items: {
-        minimum: 0
-      },
-      // items: 1,
-			auto: false
-  });
+  var $slides = jQuery('.shop-main .left-col .slides');
+  // herp derp we shouldnt be initializing sliders when there is one image in the collection
+  if ($slides.length > 1) {
+    $slides.siblings('.shop-featured-next, .shop-featured-prev').show();
+    $slides.carouFredSel({
+  			prev: '.shop-featured-prev',
+  			next: '.shop-featured-next',
+  			items: {
+          minimum: 0
+        },
+        // items: 1,
+  			auto: false
+    });
+  }
 });
 </script>
