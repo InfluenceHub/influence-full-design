@@ -580,6 +580,14 @@ div.az-links li.scr-link a {
 	margin-top: 30px;
 }
 
+a.sign-in-link {
+	display:none !important;
+}
+
+#menu-item-137 {
+	display: none !important;
+}
+
 /*.page-template-template-my_influence-php .az-links { display:none;}
 .page-template-template-my_influence-php .az-row { display:none;}*/
 
