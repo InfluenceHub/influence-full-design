@@ -902,7 +902,7 @@ function inf_footer_signup() { ?>
 <?php }
 
 function inf_browse_by() { ?>
-	<div class="browse">
+	<div class="browse no-mobile">
 		<div class="shell">
 			<div class="browse-holder">
 				<?php $letters_influencers = inf_letters();
