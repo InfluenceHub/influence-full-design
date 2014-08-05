@@ -20,7 +20,7 @@ body * {
 /*grid resets and top level content wrappers*/
 
 
-.content_wrapper {
+#content .content_wrapper {
 	margin: 0;
 }
 
@@ -306,6 +306,26 @@ li.home-feed-side-by-side {
 
 .prod-section {
 	padding-left: 15px !important; 
+}
+
+/*styles for single influencer page*/
+
+.cols.browse-col {
+	margin: 0;
+}
+
+div.archive-col, .profile-loop div.archive-col {
+	width: 100%;
+	margin: 0 0 20px 0;
+
+}
+
+.browse-row.browse-row {
+	margin: 0;
+}
+
+.ad-300-600 {
+	height: initial;
 }
 
 
