@@ -3,6 +3,21 @@
   display:none;
 }
 
+/*styles for return to top button*/
+
+a.az-return {
+  float: right;
+  margin-right: 10px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+}
+
+.influencers-az h2 {
+  float: left;
+  width: 90% !important;
+}
+
 /*
 Theme name: Influence
 Description: Custom Theme

@@ -106,6 +106,8 @@ get_header();
       
       <?php if(!empty($inf_posts)) { ?>
           <h2 class="az-<?php echo $letter; ?>" id="az-<?php echo $letter; ?>"><?php echo strtoupper($letter); ?></h2>
+          <a class='az-return' href="#"> ^ </a>
+  
           <ul>
 						<?php foreach($inf_posts as $pp) { 
             
@@ -145,7 +147,7 @@ get_header();
      
       </div>
       
-      <div class="ad_banner" style="margin-bottom: 40px;">
+      <div class="ad_banner no-mobile" style="margin-bottom: 40px;">
        <a href="http://shop.theinfluence.com">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopbanner.png" />
       </a>

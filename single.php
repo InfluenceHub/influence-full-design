@@ -174,7 +174,7 @@
           echo '</div>';
         }
         ?>
-        <div class="column-three bottom">
+        <div class="bottom">
 				<?php $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
 
 				if(!empty($products_sections)) :
@@ -275,7 +275,7 @@
 			$random = get_posts($args);
 
 			if(!empty($random)) : ?>
-				<div class="cols column-three morelike">
+				<div class="cols morelike">
           <h2>More Like This</h2>
 					<div class="row no-border">
 						<?php foreach($random as $r) :

@@ -137,6 +137,13 @@ jQuery(function($) {
 		return false;
 	})
 
+  
+  $("a.az-return").on('click', function(e){
+    $('html,body').animate({scrollTop: $('div.az-links').offset().top}, 'slow');
+    console.log('blah');
+    return false;
+  });
+
 	$('.colorbox').colorbox({
 		maxWidth: '90%',
 		maxHeight: '90%'

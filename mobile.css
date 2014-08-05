@@ -466,6 +466,31 @@ div.az-links li.scr-link a {
 	margin-top: 30px !important;
 }
 
+.sorted-content.influencers-az ul {
+	padding: 0 2px 0 2px;
+}
+
+.influencers-az h3 {
+	width: initial;
+}
+
+@media screen and (min-width: 400px) {
+
+
+	.sorted-content.influencers-az ul li {
+		margin-right:10px;
+	}
+
+	#content.influencers > div.influencers-az {
+		margin: 30px;
+		width: initial;
+	}
+}
+
+@media screen and (max-width: 400px) {
+
+}
+
 
 
 
