@@ -1,3 +1,8 @@
+/*hamburger menu should be hidden by default*/
+#hamburger {
+  display:none;
+}
+
 /*
 Theme name: Influence
 Description: Custom Theme

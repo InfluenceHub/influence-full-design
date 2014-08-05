@@ -41,14 +41,19 @@ body * {
 
 a#logo {
 	display: none;
+	left: inherit;
+	right:0px;
+	width: 100px;
 }
 
 div.nav {
 	display:none;
 	top: initial;
+	background: white;
 }
 
 #hamburger {
+	display: block;
 	position: absolute;
 	z-index: 20;
 }
@@ -67,9 +72,10 @@ div.nav {
 }
 
 #header, #header.pinned {
-	background: white;
+	background: transparent;
 	height: 30px;
 	padding-top: 0;
+	margin-bottom: 10px;
 }
 
 #header_inner.inner_wrap {
