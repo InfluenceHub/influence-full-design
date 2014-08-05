@@ -184,6 +184,7 @@ jQuery(function($) {
       },
 			auto: false
 		});
+    console.log($('#topSlider.influencers-slider .slides')); 
     $('#topSlider.influencers-slider .slides').carouFredSel({
 			prev: '.prev',
 			next: '.next',

@@ -7,12 +7,12 @@ get_header();
 	the_post(); ?>
   <section id="content" class="influencers">
 		<div class="shell">
-      <div class="section-heading">
-        <h1 style="padding-bottom: -5px;"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/fashionarchive.png"></h1><br /><br /><br />
-     </div><!-- /.section-heading --><br /> <br /><br />
+      <div class="section-heading no-mobile">
+        <h1 style="padding-bottom: -5px;"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/fashionarchive.png"></h1><br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
+     </div><!-- /.section-heading --><br class="no-mobile" /> <br class="no-mobile" /><br class="no-mobile" />
 
       <div class="column-two">
-        <h2>most popular</h2>
+        <h2 class='no-mobile'>most popular</h2>
         <?php
           $popular_category = carbon_get_the_post_meta('inf_popular_posts_category');
           if(!empty($popular_category)) {
@@ -32,7 +32,7 @@ get_header();
             if(!empty($popular_posts)) {
               $popular_section_title = carbon_get_the_post_meta('inf_popular_posts_section_title');
             ?>
-            <div id="topSlider" class="influencers-slider group">
+            <div id="topSlider" class="influencers-slider group no-mobile">
               <ul class="slides">
                 <?php foreach($popular_posts as $pp) {
                   $related = p2p_type( 'posts_to_influencers' )->get_related( $pp->ID );
@@ -74,7 +74,7 @@ get_header();
           </ul>
         </div>
       </div>
-      <div class="column adcolumn">
+      <div class="column adcolumn no-mobile">
       <a href="http://www.tkqlhce.com/click-7580048-11850643">
         <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/nasty1.gif" />
         </a>
