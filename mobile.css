@@ -67,6 +67,10 @@ div.nav {
 	top:0;
 }
 
+.sub-menu {
+
+}
+
 #menu-main-menu > li {
 	display: block;
 }
@@ -204,6 +208,10 @@ li.home-feed-side-by-side {
 		margin: 0 auto 0 auto;
 	}
 
+}
+
+.nav > ul > li:hover ul {
+	display:initial;
 }
 
 

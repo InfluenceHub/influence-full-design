@@ -340,7 +340,7 @@ jQuery(window).load(function() {
 			prev: '.shop-featured-prev',
 			next: '.shop-featured-next',
 			items: {
-        minimum: 0;
+        minimum: 0
       },
       // items: 1,
 			auto: false

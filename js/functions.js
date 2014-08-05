@@ -2,9 +2,17 @@ jQuery(function($) {
 
   //mobile js for menu
   $("#hamburger").on('click', function(){
-    var $this= $(this);
     $(this).siblings('.nav, #logo').toggle(); 
   });
+
+
+  var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+  if (isMobile.matches) {
+    $("li.menu-item-has-children a").on('click', function(e){
+      e.preventDefault();
+      $(this).next('.sub-menu').toggle();
+    });
+  }
 
 
 	$(document).on('focusin', '.field, textarea', function() {
@@ -194,7 +202,7 @@ jQuery(function($) {
 			auto: false
 		});
 
-    if($(window).width() > 700) {
+    if(!isMobile.matches) {
       $('#shop-slider-1 .slides').carouFredSel({
   			prev: '.prev-1',
   			next: '.next-1',
