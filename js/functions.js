@@ -1,4 +1,11 @@
 jQuery(function($) {
+
+  //mobile js for menu
+  $("#hamburger").on('click', function(){
+    $(this).next('.nav').toggle(); 
+  });
+
+
 	$(document).on('focusin', '.field, textarea', function() {
 		if(this.title==this.value) {
 			this.value = '';
