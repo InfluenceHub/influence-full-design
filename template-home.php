@@ -8,7 +8,7 @@ the_post();
 //Detect mobile
 ?>
   <section id="content">
-    <div class="shell">
+    <div class="shell no-mobile">
       <?php inf_home_topslider(); ?>
     </div><!-- /.shell -->
 
@@ -46,7 +46,7 @@ the_post();
     if(!empty($videos)) :
     ?>
 <!--<div class="in-video"> -->
-<div class="in-video" style="margin-top: -50px;">
+<div class="in-video no-mobile" style="margin-top: -50px;">
  <div class="video-row" id="videos">
   <br />
         <div class="section-heading">
@@ -151,7 +151,7 @@ the_post();
     <?php
       //$section_title = carbon_get_the_post_meta('inf_home_social_section_title');
     ?>
-    <div class="bottom-section" style="border-top: 1px solid #ccc; margin-top: -30px;">
+    <div class="bottom-section no-mobile" style="border-top: 1px solid #ccc; margin-top: -30px;">
       <!--<div class="section-heading">
         <h2 style="width: 400px;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/TITLES_UNDER THE INFLUENCE.svg" style="top: -5px;" /></h2>
       </div> -->
