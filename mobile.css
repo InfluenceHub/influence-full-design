@@ -233,6 +233,7 @@ li.home-feed-side-by-side {
 
 .shop-main .column-three {
 	height: 100%;
+	
 }
 
 #shop-slider-1.prod-row {
@@ -251,7 +252,7 @@ li.home-feed-side-by-side {
 	float: none;
 }
 
-.shop-main .inner {
+/*.shop-main .inner {
 	margin: 21px auto 0 auto;
 }
 
@@ -260,7 +261,7 @@ li.home-feed-side-by-side {
 	top: 0px;
 	left: 0px;
 	margin-top: 0;
-}
+}*/
 
 .shop-main p {
 	font: 16px/22px "AvenirNext LT Pro Regular",arial,sans-serif; 
@@ -281,8 +282,16 @@ li.home-feed-side-by-side {
 	margin: 0 auto;
 }
 
+.shop-main .interact-with-influencer {
+	margin-bottom: 0;
+}
+
 @media screen and (min-width: 400px){
 	/*targeting landscape here*/
+
+	.shop-main .left-col.left {
+		margin-left: 10px;
+	}
 
 	.prod-row.small ul li {
 		width: 31%;
@@ -299,6 +308,59 @@ li.home-feed-side-by-side {
 
 	.prod-row {
 		padding: 30px 0 8px 17px;
+	}
+
+	/*some styles for the singular looks page*/
+	.shop-main .left-col img {
+		margin: 0;
+	}
+
+	.column-three .left-col{
+		float: left;
+		display: inline-block;
+	}
+
+	.right-col.right {
+		float: right;
+		display: inline-block;
+		width: 59%;
+	}
+
+	h2.prod-section {
+		clear: both;
+	}
+
+	.shop-main .column-three h1 {
+		font: 32px/38px "futura-pt",serif
+	}
+
+	.text-holder .browse-type {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin-left: 20px;
+	}
+
+		/*styles explicitly for single*/
+	.shop-main .right-col .text-holder {
+		padding-bottom: 70px;
+	}
+
+	.text-holder img.shop-published-by {
+		position: absolute;
+		top: initial;
+		bottom: 0px;
+		right: 0px;
+		margin-right: 20px;
+	}
+
+	.text-holder h2 {
+		font: 16px/18px "Oswald",arial,sans-serif;
+	}
+
+	.shop-main p {
+		font: 14px/18px "AvenirNext LT Pro Regular",arial,sans-serif;
+
 	}
 }
 
@@ -330,7 +392,9 @@ li.home-feed-side-by-side {
 	margin-bottom: 10px;
 }
 
-
+.morelike h2 {
+	padding: 0 0 0 15px;
+}
 
 .category-list {
 	padding-left: 15px;

@@ -96,6 +96,7 @@
 							<!--<a href="<?php //echo get_permalink($influencer_id); ?>" class="shop-viewall">VIEW ALL <?php //echo $influencer_name; ?> LOOKS</a>-->
               <img class="shop-published-by" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
 						</div><!-- /.text-holder -->
+          </div><!-- /.right-col -->
 						<?php 
             
             //if(!empty($exact_items)) : 
@@ -275,7 +276,7 @@
 
 			if(!empty($random)) : ?>
 				<div class="cols column-three morelike">
-          <h2>more like this</h2>
+          <h2>More Like This</h2>
 					<div class="row no-border">
 						<?php foreach($random as $r) :
 
