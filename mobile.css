@@ -328,6 +328,14 @@ div.archive-col, .profile-loop div.archive-col {
 	height: initial;
 }
 
+div.archive-col .img-hold img, .profile-loop div.archive-col .img-hold img {
+	padding-bottom: 70px;
+}
+
+div.archive-col .text-box {
+	width: initial;
+}
+
 
 
 
