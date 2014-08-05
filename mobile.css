@@ -365,9 +365,13 @@ li.home-feed-side-by-side {
 }
 
 
-.col_5 p {
-	font: 14px/14px "AvenirNext LT Pro Regular",arial,sans-serif !important;
+.col_5 .img-hold {
+	position:relative;
 }
+
+/*.col_5 p {
+	font: 14px/14px "AvenirNext LT Pro Regular",arial,sans-serif !important;
+}*/
 
 .prod-row ul li {
 	display: inline-block;
