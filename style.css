@@ -6222,8 +6222,41 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
   max-height: 100%;
 }
 @media only screen and (max-width: 768px) {
-.no-mobile {
-  display: none !important;
-  visibility: hidden !important;
- }
+  .shop-subscribe {
+    visibility: hidden;
+    display: none;
+  }
+  .sub-link {
+    visibility: hidden;
+    display: none;
+  }
+    .in-circle {
+      visibility: hidden;
+      display: none;
+    }
+    .shop-main .next, .shop .next-1, .shop .next-2, .shop .next-3, .shop .next-4, .shop .next-5, .shop .next-6 {
+      display: block;
+      height: 25px;
+      width: 25px;
+      z-index: 5;
+    }
+    #menu-item-15429 {
+      display: none;
+      visibility: hidden;
+    }
+    .hide-me img {
+      display: none;
+      visibility: hidden;
+    }
+    #menu-item-16 {
+      display: none;
+      visibility: hidden;
+    }
+    #menu-item-15636 {
+      margin-top: -25px;
+    }
+   .no-mobile {
+      display: none !important;
+      visibility: hidden !important;
+    }
 }
