@@ -645,6 +645,13 @@ a.sign-in-link {
     	display: none;
     	visibility: hidden;
     }
-
+   .nav > ul > li > a {
+  		display: inline-block;
+  		font: normal 15px "Oswald",sans-serif;
+  		letter-spacing: 1px;
+  		color: #000;
+  		text-transform: uppercase;
+  		text-align: center;
+  }
 }
 
