@@ -24,7 +24,11 @@ show if we have more than 1 item*/
 }
 
 /*grid resets and top level content wrappers*/
-
+.shop .column-three.morelike .col_5 p {
+  font: 12px/14px "AvenirNext LT Pro Regular",arial,sans-serif;
+  margin: 8px 6px 0;
+  text-align: center;
+}
 
 #content > div {
 	margin: 0 auto 0 auto;
@@ -62,7 +66,8 @@ a#logo {
 	height: 36px;
 	background: url('images/icons/apple-touch-icon-72x72.png') no-repeat;
 	background-size: contain;
-	margin-top: 3px;
+	margin-top: -2px;
+	z-index: 100;
 }
 .mobile-text {
 	backround: url('images/icons/header-influence.gif') no-repeat;
@@ -80,13 +85,16 @@ div.nav {
 }
 
 #hamburger {
-	padding-top: 2px;
+	margin-top: 5px;
 	padding-bottom: 2px;
 	display: block;
 	position: fixed;
 	z-index: 20;
+	background-color: #fff;
+	width: 100%;
 	
 }
+
 
 #menu-main-menu {
 	background: white;
@@ -605,7 +613,15 @@ a.sign-in-link {
 /*.my_inf .az-row {
 	display: none;
 }*/
-
+ @media screen and (max-device-width: 480px) {
+  div[class=wording]{
+    display: block !important;
+    max-height: none !important;
+    width: 25px;
+    padding-left: 75px;
+    padding-top: 10px;
+  }
+}
 
 
 

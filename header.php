@@ -152,10 +152,11 @@ c0,0.1,0.1,0.2,0.2,0.2h5.6c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-5.6c
 c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c-0.2,0-0.3-0.1-0.3-0.3V45.5z"/>
 </g>
 </svg></a>
-        <a href="#" id="hamburger"> 
-	 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" width="30px" height="30px" />
+        <a href="#" id="hamburger" style="width: 100%; height: 40px; margin-top: -5px;"> 
+    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" style="z-index: 2; background-color: #fff;" width="35x" height="35px" />
+    <div style="padding-left: 60px; margin-top: -30px;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div>    
         </a>
-	<div style="padding-left: 75px; padding-top: 10px; "><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="20px"  /></div>
+
 				<div class="nav">
 					<div class="nav-icons">
            <!-- <ul class="soc-list">

@@ -43,10 +43,9 @@
 								</a></li>
                 <?php inf_shop_slider(); ?>
                 </ul>
-                <div class="shop-featured-prev">&nbsp;</div>
-                <div class="shop-featured-next">&nbsp;</div>
+                <!--<div class="shop-featured-prev">&nbsp;</div>
+                <div class="shop-featured-next">&nbsp;</div> -->
 							</div><!-- /.inner -->
-              <div class="shop-maintag"><a href="<?php echo $category_link; ?>"><?php echo strtoupper($post_categories[0]->name); ?></a></div>
 						<?php endif; ?>
 					</div><!-- /.left-col -->
 					<div class="right-col right">
@@ -184,7 +183,7 @@
               $products = $ps['products'];
 
               if(!empty($products)) : ?>
-                <h2 class="prod-section"><?php echo $ps['section_name']; ?></h2>
+                <h2 class="prod-section" style="font-family: futura-pt; font-weight: lighter; font-size: 16px; color: #000; text-transform: uppercase;"><?php echo $ps['section_name']; ?></h2>
                 <div id="shop-slider-<?php echo $key; ?>" class="prod-row">
                   <ul class="slides">
                     <?php $index = 1;
@@ -276,7 +275,7 @@
 
 			if(!empty($random)) : ?>
 				<div class="cols morelike">
-          <h2>More Like This</h2>
+          <h2 class="prod-section" style="font-family: futura-pt; font-weight: lighter; font-size: 24px; color: #000; text-align: center; text-transform: uppercase;">More Like This</h2>
 					<div class="row no-border">
 						<?php foreach($random as $r) :
 
