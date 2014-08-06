@@ -627,12 +627,6 @@ a.sign-in-link {
     	visibility: hidden;
     	display: none;
     }
-    .prod-row.small .img-hold img {
-  		max-width: 150px;
-	    max-height: 150px;
-	    z-index: 1;
-
-}
     .shop-main .next, .shop .next-1, .shop .next-2, .shop .next-3, .shop .next-4, .shop .next-5, .shop .next-6 {
     	display: block;
     	height: 25px;
@@ -643,9 +637,6 @@ a.sign-in-link {
     	display: none;
     	visibility: hidden;
     }
-    .caroufredsel_wrapper {
-    	width: 10%;
-    	margin-right: 25px;
-    }
+
 }
 
