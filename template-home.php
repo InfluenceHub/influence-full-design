@@ -50,7 +50,7 @@ the_post();
  <div class="video-row" id="videos">
   <br />
         <div class="section-heading">
-          <h2><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/TITLES_IN VIDEO.svg" /></h2></div><!-- /.section-heading -->
+          <h2 style="width: 400px;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/TITLES_IN VIDEO.svg" /></h2></div><!-- /.section-heading -->
         <div class="column-two">
           <div class="player-part">
             <div class="playbutton"></div>
