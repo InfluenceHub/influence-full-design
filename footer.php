@@ -18,7 +18,15 @@
 					'fallback_cb'     => '',
 				));
         ?>
-			</div>		
+			</div>	
+<script type="text/javascript">
+  function isMobile() {
+    return navigator.userAgent.toLowerCase().indexOf("mobile")>=0;
+  }
+  if (isMobile()) {
+  $('#menu-item-21538').attr("href","/inf-interview");
+  }
+</script>	
 		</footer>
 		<!-- END Footer -->
 		<?php wp_footer(); ?>

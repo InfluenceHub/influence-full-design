@@ -193,7 +193,7 @@ c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c
     return navigator.userAgent.toLowerCase().indexOf("mobile")>=0;
   }
   if (isMobile()) {
-  $('#menu-item-21538').attr("href","/interviews");
+  $('#menu-item-21538').attr("href","/inf-interview");
   }
 </script>
 		</header><!-- /#header -->
