@@ -625,7 +625,6 @@ function infContentResize() {
   homeSliderInit();
 }
 
-if (!isMobile) {
 //Pin header
 var headerHeight = parseInt($('#header').height()+20);
   if ($('#top_ad-block').length > 0) {
@@ -644,7 +643,7 @@ var headerHeight = parseInt($('#header').height()+20);
     $('#header').addClass('pinned');
     $('#content').css({'margin-top': headerHeight+'px'});
   }
-}
+
   
 //Initialize Home Page Slider
   function homeSliderInit() {

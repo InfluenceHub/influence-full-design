@@ -3485,16 +3485,19 @@ a.subscribe-img {
   height: 16px;
   background: url("images/shop-arrows.png") no-repeat 0 0;
   cursor: pointer;
-  z-index: 3;
+  z-index: 7;
 }
 
 .shop-main .prev, .shop .prev-1, .shop .prev-2, .shop .prev-3, .shop .prev-4, .shop .prev-5, .shop .prev-6 {
   left: 5px;
+  z-index: 7;
 }
 
 .shop-main .next, .shop .next-1, .shop .next-2, .shop .next-3, .shop .next-4, .shop .next-5, .shop .next-6 {
   right: 5px;
   background-position: -15px 0;
+  z-index: 8;
+  width: 25px;
   
 }
 .shop-main .prev:hover , .shop-main .next:hover{

@@ -87,7 +87,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
 -->
-  <br class="no-mobile" /><br class="no-mobile" />
 		<header id="header">
 			<div id="header_inner" class="inner_wrap">
 				<?php
@@ -152,8 +151,8 @@ c0,0.1,0.1,0.2,0.2,0.2h5.6c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-5.6c
 c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c-0.2,0-0.3-0.1-0.3-0.3V45.5z"/>
 </g>
 </svg></a>
-        <a href="#" id="hamburger" style="width: 100%; height: 40px; margin-top: -5px;"> 
-    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" style="z-index: 2; background-color: #fff;" width="35x" height="35px" />
+        <a href="#" id="hamburger" style="width: 100%; height: 45px; margin-top: -5px;"> 
+    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" style="z-index: 2; background-color: #fff; margin-top: 5px;" width="35x" height="35px" />
     <div style="padding-left: 60px; margin-top: -30px;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div>    
         </a>
 
