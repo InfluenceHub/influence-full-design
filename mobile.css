@@ -643,7 +643,7 @@ a.sign-in-link {
     }
     #menu-item-16 {
     	display: none;
-    	visibility: none;
+    	visibility: hidden;
     }
 
 }
