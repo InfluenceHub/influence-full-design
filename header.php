@@ -152,13 +152,13 @@ c0,0.1,0.1,0.2,0.2,0.2h5.6c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-5.6c
 c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c-0.2,0-0.3-0.1-0.3-0.3V45.5z"/>
 </g>
 </svg></a>
-
         <a href="#" id="hamburger"> 
-          <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMzJweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNCwxMGgyNGMxLjEwNCwwLDItMC44OTYsMi0ycy0wLjg5Ni0yLTItMkg0QzIuODk2LDYsMiw2Ljg5NiwyLDhTMi44OTYsMTAsNCwxMHogTTI4LDE0SDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDIgIHMwLjg5NiwyLDIsMmgyNGMxLjEwNCwwLDItMC44OTYsMi0yUzI5LjEwNCwxNCwyOCwxNHogTTI4LDIySDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDJzMC44OTYsMiwyLDJoMjRjMS4xMDQsMCwyLTAuODk2LDItMiAgUzI5LjEwNCwyMiwyOCwyMnoiLz48L3N2Zz4="/>
+	 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" width="30px" height="30px" />
         </a>
+	<div style="padding-left: 75px; padding-top: 10px; "><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="20px"  /></div>
 				<div class="nav">
 					<div class="nav-icons">
-            <ul class="soc-list">
+           <!-- <ul class="soc-list">
               <?php inf_list_social_networks('header'); ?>
               <li>
               <form action="<?php bloginfo('url'); ?>" method="get" class="search">
@@ -167,7 +167,7 @@ c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c
               </form>
               </li>
             </ul><!-- /.soc-list -->
-				  </div><!-- /.nav-icons -->
+				  </div><!-- /.nav-icons --> 
           <?php wp_nav_menu( array(
 						'theme_location'  => 'main-navigation',
 						'container'       => '', 
@@ -177,13 +177,13 @@ c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s' . $signinlink . '<li class="stretcher"></li></ul>'
 					)); ?>
 
-          <div class="subscribe-mobile mobile-only">
+         <!-- <div class="subscribe-mobile mobile-only">
             <form action="http://theinfluence.us8.list-manage.com/subscribe/post?u=527260c47d9de3929c883ec2d&amp;id=69a8f6e293" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
               <input type="email" value="" name="EMAIL" class="required email field">
               <div style="position: absolute; left: -5000px;"><input type="text" name="b_527260c47d9de3929c883ec2d_69a8f6e293" value=""></div>
               <input type="submit" value="+" name="subscribe" class="submit_button">
             </form>
-          </div>
+          </div>-->
 				</div><!-- /.nav -->
 			</div><!-- /#header_inner -->
       

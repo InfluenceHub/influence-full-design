@@ -60,10 +60,17 @@ a#logo {
 	right:10px;
 	width: 36px;
 	height: 36px;
-	background: url('images/icons/apple-touch-icon-57x57.png') no-repeat;
+	background: url('images/icons/apple-touch-icon-72x72.png') no-repeat;
 	background-size: contain;
+	margin-top: 3px;
 }
-
+.mobile-text {
+	backround: url('images/icons/header-influence.gif') no-repeat;
+	background-size: contain;
+	left: inherit;
+	right: 5px;
+   	height: 25px;
+}
 div.nav {
 	height: 250px;
 	position: fixed;
@@ -73,6 +80,8 @@ div.nav {
 }
 
 #hamburger {
+	padding-top: 2px;
+	padding-bottom: 2px;
 	display: block;
 	position: fixed;
 	z-index: 20;
@@ -82,7 +91,7 @@ div.nav {
 #menu-main-menu {
 	background: white;
 	top:0;
-	padding: 20px 0 0 10px;
+	padding: 20px 5px 5px 10px;
 	border-bottom: solid 1px black;
 }
 
@@ -112,9 +121,11 @@ li#menu-item-15636 {
 
 #menu-main-menu > li {
 	display: block;
+	padding-top: 5px;
 }
 
 #menu-main-menu > li > a {
+	padding-top: 5px;
 	display: block;
 	text-align: left;
 }
