@@ -191,7 +191,7 @@
         </div>
         <div class="shell">
           <div class="section-heading first">	
-           <h2>STYLE SETTERS OF THE DAY</h2><br />
+           <h2><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br />
           </div><!-- /.section-heading -->
           <ul>
             <?php

@@ -637,6 +637,10 @@ a.sign-in-link {
     	display: none;
     	visibility: hidden;
     }
+    .hide-me img {
+    	display: none;
+    	visibility: hidden;
+    }
 
 }
 

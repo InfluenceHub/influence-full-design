@@ -8,7 +8,7 @@ get_header();
   <section id="content" class="influencers">
 		<div class="shell">
       <div class="section-heading no-mobile">
-        <h1 style="padding-bottom: -5px;"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/fashionarchive.png"></h1><br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
+        <h1 style="padding-bottom: -5px;"><img class="hide-me" src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/fashionarchive.png"></h1><br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
      </div><!-- /.section-heading --><br class="no-mobile" /> <br class="no-mobile" /><br class="no-mobile" />
 
       <div class="column-two">
