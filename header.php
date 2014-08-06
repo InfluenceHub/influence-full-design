@@ -176,14 +176,7 @@ c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c
 						'fallback_cb'     => '',
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s' . $signinlink . '<li class="stretcher"></li></ul>'
 					)); ?>
-<script type="text/javascript">
-  function isMobile() {
-    return navigator.userAgent.toLowerCase().indexOf("mobile")>=0;
-  }
-  if (isMobile()) {
-  $('#menu-item-21538').attr("href","/inf-interview");
-  }
-</script> 
+
          <!-- <div class="subscribe-mobile mobile-only">
             <form action="http://theinfluence.us8.list-manage.com/subscribe/post?u=527260c47d9de3929c883ec2d&amp;id=69a8f6e293" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
               <input type="email" value="" name="EMAIL" class="required email field">
