@@ -191,7 +191,7 @@
         </div>
         <div class="shell">
           <div class="section-heading first">	
-           <h2 class="no-mobile" style="margin-top: -25px;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br />
+           <h2 class="no-mobile" style="margin-top: -25px; border: none;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br />
           </div><!-- /.section-heading -->
           <ul>
             <?php
