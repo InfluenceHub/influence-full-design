@@ -641,6 +641,10 @@ a.sign-in-link {
     	display: none;
     	visibility: hidden;
     }
+    #menu-item-16 {
+    	display: none;
+    	visibility: none;
+    }
 
 }
 
