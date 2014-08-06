@@ -6221,7 +6221,9 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
   max-width: 100%;
   max-height: 100%;
 }
+@media only screen and (max-width: 768px) {
 .no-mobile {
   display: none !important;
   visibility: hidden !important;
+ }
 }
