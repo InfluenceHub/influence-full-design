@@ -5,22 +5,16 @@
 get_header();
 
 the_post();
-
 //Detect mobile
-$iPod     = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
-$iPhone   = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
-$iPad     = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
-$Android  = stripos($_SERVER['HTTP_USER_AGENT'],"Android");
-$mobileOS = false;
-if ($iPod || $iPhone || $iPad || $Android) { $mobileOS = true; }
 ?>
   <section id="content">
-    <div class="shell">
+    <div class="shell no-mobile">
       <?php inf_home_topslider(); ?>
     </div><!-- /.shell -->
 
     <div class="ad_wrapper-block">
-      <?php inf_browse_by(); ?>
+      <?php inf_footer_signup() ?>
+      <?php //inf_browse_by(); ?>
       <div class="content_wrapper">
     <?php
       inf_home_latest();
@@ -52,11 +46,11 @@ if ($iPod || $iPhone || $iPad || $Android) { $mobileOS = true; }
     if(!empty($videos)) :
     ?>
 <!--<div class="in-video"> -->
-<div class="in-video" style="margin-top: -50px;">
+<div class="in-video no-mobile" style="margin-top: -50px;">
  <div class="video-row" id="videos">
   <br />
         <div class="section-heading">
-          <h2 style="width: 400px;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/TITLES_IN VIDEO.svg" /></h2></div><!-- /.section-heading -->
+          <h2>IN VIDEO</h2></div><!-- /.section-heading -->
         <div class="column-two">
           <div class="player-part">
             <div class="playbutton"></div>
@@ -157,32 +151,23 @@ if ($iPod || $iPhone || $iPad || $Android) { $mobileOS = true; }
     <?php
       //$section_title = carbon_get_the_post_meta('inf_home_social_section_title');
     ?>
-    <div class="bottom-section" style="padding-top: -10px; border-top: 1px solid #ccc;">
+    <div class="bottom-section no-mobile" style="border-top: 1px solid #ccc; margin-top: -30px;">
       <!--<div class="section-heading">
         <h2 style="width: 400px;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/TITLES_UNDER THE INFLUENCE.svg" style="top: -5px;" /></h2>
       </div> -->
       <br />
       <div class="shell" style="margin-top: -10px;">
-        <?php
-        $pinterest_username = carbon_get_theme_option('inf_home_pinterest_username');
-        //theinfluence
-        if(!empty($pinterest_username)) { ?>
-          <div class="column-two">
+
+        <?php $pinterest_username = carbon_get_theme_option('inf_home_pinterest_username'); ?>
+
+        <?php if(!empty($pinterest_username)) { ?>
+
+          <div class="column-three">
             <h2><img height="30px" width="30px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/pinterest-logo-black.jpg" /></h2>
             <div class="shop-pinterest-inner">
-              <?php echo do_shortcode('[prw username="theinfluencepin" maxfeeds="8" thumbwidth="160" thumbheight="160" showfollow="none"]'); ?>
-            </div><!-- /.shop-pinterest-inner -->
-           <!-- <div class="home-social">
-              <h2>SOCIAL</h2>
-              <div class="social-links">
-                <a class="soc-twitter" href="<?php echo carbon_get_theme_option('twitter_header'); ?>" target="_blank"></a>
-                <a class="soc-youtube" href="<?php echo carbon_get_theme_option('youtube_header'); ?>" target="_blank"></a>
-                <a class="soc-tumblr" href="<?php echo carbon_get_theme_option('tumblr_header'); ?>" target="_blank"></a>
-                <a class="soc-pinterest" href="<?php echo carbon_get_theme_option('pinterest_header'); ?>" target="_blank"></a>
-                <a class="soc-instagram" href="<?php echo carbon_get_theme_option('instagram_header'); ?>" target="_blank"></a>
-                <a class="soc-facebook" href="<?php echo carbon_get_theme_option('facebook_header'); ?>" target="_blank"></a>
-              </div> 
-            </div> -->
+              <?php echo do_shortcode('[prw username="theinfluencepin" maxfeeds="12" thumbwidth="153" thumbheight="153" showfollow="none"]'); ?>
+            </div>
+
             <div class="home-instagram">
               <h2 ><img height="30px" width="30px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/instagram.jpg" /></h2>
               <?php
@@ -191,18 +176,21 @@ if ($iPod || $iPhone || $iPad || $Android) { $mobileOS = true; }
                 //echo $access_token;
                 //print_r($instagram_data);
               ?>
-              <div class="istragram-box">
+              <div class="istragram-box group">
                 <ul class="pins-feed-list">
                   <?php 
                     if (count($instagram_data) > 0) {
                       foreach($instagram_data as $index => $id) {
-                        $last = ''; if($index == 3) { $last = ' margin-right: 0;'; }
                       ?>
-                        <li style="width:160px; <?php echo $last; ?>" class="pins-feed-item">
-                          <a href="<?php echo esc_url($id['image_url']); ?>" target="_blank"><div class="nailthumb-container" style="padding: 0px; width: 160px; height: 160px;"><img src="<?php echo $id['image_src']; ?>" width="160" height="160" alt="" /></div></a>
+                        <li style="width:153px;" class="pins-feed-item">
+                          <a href="<?php echo esc_url($id['image_url']); ?>" target="_blank">
+                            <div class="nailthumb-container" style="padding: 0px; width: 153px; height: 153px;">
+                              <img src="<?php echo $id['image_src']; ?>" width="153" height="153" alt="" />
+                            </div>
+                          </a>
                         </li>
                       <?php
-                        if($index == 3) {
+                        if($index == 11) {
                           break;
                         }
                       }
@@ -211,48 +199,21 @@ if ($iPod || $iPhone || $iPad || $Android) { $mobileOS = true; }
                 </ul>
               </div><!-- /.istragram-box -->
             </div>
-            <h2 style="clear: both; padding-bottom: 5px;">NEWSLETTER</h2>
-            <div class="home-newsletter">
-              <form action="http://theinfluence.us8.list-manage.com/subscribe/post?u=527260c47d9de3929c883ec2d&amp;id=69a8f6e293" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <input type="email" value="" name="EMAIL" class="required email field">
-                <div style="position: absolute; left: -5000px;"><input type="text" name="b_527260c47d9de3929c883ec2d_69a8f6e293" value=""></div>
-                <input type="submit" value="" name="subscribe" class="submit_button">
-              </form>
-            </div>
-          </div><!-- /.column-two -->
-          <div class="column adcolumn" style="border-left: 1px solid #ccc;">
-            <h2>FEATURED INFLUENCER</h2>
-            <a href="<?php echo home_url(); ?>/inf-interview/zoey-deutch/"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/courtneytrop.png" width="300" height="415" alt="Featured Influencer" /></a>
-          <div class="ad-300-250">
-          <a href="http://click.linksynergy.com/fs-bin/click?id=pwlaa2*cgnI&offerid=293189.1062&subid=0&type=4">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/barneys4.jpg" />
-          </a>
-            <!-- BEGIN IFRAME TAG - theinfluence 300x250 < - DO NOT MODIFY -->
-            <!--<IFRAME SRC="http://ib.adnxs.com/tt?id=2411077&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="300" HEIGHT="250"></IFRAME>-->
-            <!-- END TAG -->
+
           </div>
-            <!--
-            <link rel="stylesheet" type="text/css" href="http://cache.blogads.com/302168405/feed.css" />
-            <script language="javascript" src="http://cache.blogads.com/302168405/feed.js"></script>
-            -->
-          </div>
-        <?php } 
-        
-        $custom_fields = get_post_custom($post->ID);
-        $featured_post_img = trim($custom_fields['wpcf-bottom-left-image'][0]);
-        $featured_post_url = trim($custom_fields['wpcf-bottom-left-link-url'][0]);
-        ?>
+
+        <?php } ?>
       </div>    
     </div>      
     <!-- END Bottom Section -->
     <!--MODAL -->
 <div class="ui basic modal">
-  <div class="content" style="background-color: #fff; height: 550px; width: 675px;">
+  <div class="content" style="background-color: #fff; height: 550px; width: 100%;">
   <br /><br />
   <div class="form-wrapper">
     <form action="http://theinfluence.us8.list-manage.com/subscribe/post?u=527260c47d9de3929c883ec2d&amp;id=69a8f6e293" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="container" target="_blank" novalidate class="container">
-        <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/signup2.jpg" alt="The Influence" />
-<br /><br /><br />
+        <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/signup5.jpg" alt="The Influence" />
+      <br />
       <div class="input-wrapper">
         <input type="email" value="" name="EMAIL" class="field" id="mce-EMAIL" placeholder="ENTER YOUR EMAIL">
           <div id="mce-responses" style="display:none">
@@ -274,7 +235,7 @@ if ($iPod || $iPhone || $iPad || $Android) { $mobileOS = true; }
   var homeCookie = getCookie('showHomePopup');
   document.cookie="showHomePopup=false";
   if (!homeCookie) {
-    setTimeout(function(){showSignup()}, 6000);
+    setTimeout(function(){showSignup()}, 10000);
     function showSignup() {
       $('.ui.modal').modal('show');
     }      

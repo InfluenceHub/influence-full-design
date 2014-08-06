@@ -8,7 +8,7 @@
 		$current_user_influencers = inf_get_influencers();
 	} ?>
 	<section id="content">
-    <div class="ad_banner">
+    <div class="ad_banner no-mobile">
       <a href="http://shop.theinfluence.com">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopbanner.png" />
       </a>
@@ -96,6 +96,7 @@
 							<!--<a href="<?php //echo get_permalink($influencer_id); ?>" class="shop-viewall">VIEW ALL <?php //echo $influencer_name; ?> LOOKS</a>-->
               <img class="shop-published-by" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
 						</div><!-- /.text-holder -->
+          </div><!-- /.right-col -->
 						<?php 
             
             //if(!empty($exact_items)) : 
@@ -173,7 +174,7 @@
           echo '</div>';
         }
         ?>
-        <div class="column-three bottom">
+        <div class="bottom">
 				<?php $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
 
 				if(!empty($products_sections)) :
@@ -233,8 +234,8 @@
 
                     } ?>
                   </ul>
-                    <div class="prev-<?php echo $key; ?>">&nbsp;</div><!-- /.prev -->
-                    <div class="next-<?php echo $key; ?>">&nbsp;</div><!-- /.next -->
+                    <div class="no-mobile prev-<?php echo $key; ?>">&nbsp;</div><!-- /.prev -->
+                    <div class="no-mobile next-<?php echo $key; ?>">&nbsp;</div><!-- /.next -->
                 </div><!-- /.prod-row -->
               <?php endif;
             }
@@ -244,7 +245,7 @@
       ?>
         </div>
         
-        <div class="ad_banner" style="margin-top: 50px; padding-bottom: 25px;">
+        <div class="ad_banner no-mobile" style="margin-top: 50px; padding-bottom: 25px;">
         <a href="http://shop.theinfluence.com">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopbanner.png" />
         </a>
@@ -274,8 +275,8 @@
 			$random = get_posts($args);
 
 			if(!empty($random)) : ?>
-				<div class="cols column-three morelike">
-          <h2>more like this</h2>
+				<div class="cols morelike">
+          <h2>More Like This</h2>
 					<div class="row no-border">
 						<?php foreach($random as $r) :
 
@@ -336,14 +337,19 @@ function inf_shop_slider() {
 <script>
 jQuery(window).load(function() {
   //jQuery('.shop-main .inner.slides').flexslider();
-  jQuery('.shop-main .left-col .slides').carouFredSel({
-			prev: '.shop-featured-prev',
-			next: '.shop-featured-next',
-			items: {
-        minimum: 0;
-      },
-      // items: 1,
-			auto: false
-  });
+  var $slides = jQuery('.shop-main .left-col .slides');
+  // herp derp we shouldnt be initializing sliders when there is one image in the collection
+  if ($slides.length > 1) {
+    $slides.siblings('.shop-featured-next, .shop-featured-prev').show();
+    $slides.carouFredSel({
+  			prev: '.shop-featured-prev',
+  			next: '.shop-featured-next',
+  			items: {
+          minimum: 0
+        },
+        // items: 1,
+  			auto: false
+    });
+  }
 });
 </script>

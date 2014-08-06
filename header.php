@@ -28,14 +28,19 @@ $detect = new Mobile_Detect;
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/davidtemp.css?ver=<?php echo $version; ?>" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/semantic.css?ver=<?php echo $version; ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
-    <meta name="viewport" content="width=1200" />
+    
     <script type="text/javascript" src="//use.typekit.net/lzr4wxq.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/mobile.css<?php echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" media="screen and (max-width: 700px)" />
   </head>
+
+
 	<body <?php body_class(); ?>>
   <!-- Google Tag Manager 1 -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NQL75C"
@@ -56,7 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MCHHLQ');</script>
 <!-- End Google Tag Manager 2-->
     <?php if (is_front_page()) { ?>
-    <div id="top_ad-block" class="top_ad-block">
+    <div id="top_ad-block" class="top_ad-block no-mobile">
       <a href="http://shop.theinfluence.com">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopbanner.png" />
       </a>
@@ -82,7 +87,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
 -->
-  <br /><br />
+  <br class="no-mobile" /><br class="no-mobile" />
 		<header id="header">
 			<div id="header_inner" class="inner_wrap">
 				<?php
@@ -95,7 +100,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }
         ?>
         <a id="logo" style="padding-top: 5px;"href="<?php echo get_home_url(null, '/'); ?>"><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg class="no-mobile" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 viewBox="0 0 233 80" enable-background="new 0 0 233 80" xml:space="preserve">
 <g>
 <circle cx="40" cy="40" r="38.9"/>
@@ -148,7 +153,9 @@ c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c
 </g>
 </svg></a>
 
-
+        <a href="#" id="hamburger"> 
+          <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMzJweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNCwxMGgyNGMxLjEwNCwwLDItMC44OTYsMi0ycy0wLjg5Ni0yLTItMkg0QzIuODk2LDYsMiw2Ljg5NiwyLDhTMi44OTYsMTAsNCwxMHogTTI4LDE0SDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDIgIHMwLjg5NiwyLDIsMmgyNGMxLjEwNCwwLDItMC44OTYsMi0yUzI5LjEwNCwxNCwyOCwxNHogTTI4LDIySDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDJzMC44OTYsMiwyLDJoMjRjMS4xMDQsMCwyLTAuODk2LDItMiAgUzI5LjEwNCwyMiwyOCwyMnoiLz48L3N2Zz4="/>
+        </a>
 				<div class="nav">
 					<div class="nav-icons">
             <ul class="soc-list">
@@ -169,6 +176,14 @@ c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c
 						'fallback_cb'     => '',
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s' . $signinlink . '<li class="stretcher"></li></ul>'
 					)); ?>
+
+          <div class="subscribe-mobile mobile-only">
+            <form action="http://theinfluence.us8.list-manage.com/subscribe/post?u=527260c47d9de3929c883ec2d&amp;id=69a8f6e293" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <input type="email" value="" name="EMAIL" class="required email field">
+              <div style="position: absolute; left: -5000px;"><input type="text" name="b_527260c47d9de3929c883ec2d_69a8f6e293" value=""></div>
+              <input type="submit" value="+" name="subscribe" class="submit_button">
+            </form>
+          </div>
 				</div><!-- /.nav -->
 			</div><!-- /#header_inner -->
       

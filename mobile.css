@@ -1,0 +1,600 @@
+
+	
+/*global resets to get grid onto device width*/
+body {
+	min-width: 0;
+
+}
+
+body * {
+	max-width: 100% !important;
+	box-sizing:border-box;
+}
+
+/*utility classes*/
+
+.no-mobile {
+	display: none !important;
+}
+
+/*hide these by default, then when scripts initialize 
+show if we have more than 1 item*/
+.shop-featured-next, .shop-featured-prev {
+	display: none;
+}
+
+/*grid resets and top level content wrappers*/
+
+
+#content > div {
+	margin: 0 auto 0 auto;
+}
+
+#content .content_wrapper {
+	margin: 0;
+}
+
+#content .ad_wrapper-block > div {
+	width: 100%;
+}
+
+.column-two, .column{
+	width: 100%;
+}
+
+.column {
+
+}
+
+body.home #content div.content_wrapper {
+	border-top: 1px solid #CCCCCC;
+	padding-top: 20px !important
+}
+
+/*header styles*/
+
+
+a#logo {
+	position: fixed;
+	left: inherit;
+	right:10px;
+	width: 36px;
+	height: 36px;
+	background: url('images/icons/apple-touch-icon-57x57.png') no-repeat;
+	background-size: contain;
+}
+
+div.nav {
+	height: 250px;
+	position: fixed;
+	display:none;
+	background: white;
+	top: 0px;
+}
+
+#hamburger {
+	display: block;
+	position: fixed;
+	z-index: 20;
+	
+}
+
+#menu-main-menu {
+	background: white;
+	top:0;
+	padding: 20px 0 0 10px;
+	border-bottom: solid 1px black;
+}
+
+ul.sub-menu {
+	position:static !important;
+	background: white !important;
+	border-left: solid 1px black;
+	padding: 0 0 0 5px !important;
+}
+
+ul.sub-menu li {
+	display: block !important;
+}
+
+ul.sub-menu li a {
+	color: black !important;
+	vertical-align: top;
+}
+
+ul.sub-menu .arrow {
+	display:none;
+}
+
+li#menu-item-15636 {
+	background: url('images/slash.png') left bottom no-repeat;
+}
+
+#menu-main-menu > li {
+	display: block;
+}
+
+#menu-main-menu > li > a {
+	display: block;
+	text-align: left;
+}
+
+#header {
+	height: 50px;
+}
+
+#header, #header.pinned {
+	background: transparent;
+	padding-top: 0;
+	/*margin-bottom: 10px;*/
+}
+
+#header_inner.inner_wrap {
+	/*max-width: 400px;*/
+	width: 100%;
+	padding: 5px;
+	height: 46px;
+}
+
+/*home feed styles*/
+
+.latest-home ul {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.home-feed-post-info h2 {
+	font-size: 20px;
+}
+
+li.home-feed-side-by-side .home-feed-post-info h2 {
+	height: initial;
+}
+
+.home-feed-post-img-wrap {
+	width: initial;
+}
+
+.home-feed-post-img-wrap a img {
+	width: 105px;
+	height: 200px;
+	margin: 0 .3em .3em 0;
+}
+
+.home-feed-prod-row {
+
+	clear: left;
+}
+
+li.home-feed-side-by-side {
+	width: initial;
+	height: initial;
+}
+
+.home-feed-post-info {
+	margin: 0;
+}
+
+/*sectioanl heading styles*/
+
+.section-heading h2 {
+	white-space: initial;
+	font-size:25px;
+}
+
+.section-heading.first h2 {
+	border-bottom: 1px solid black;
+}
+
+
+/*footer styles*/
+
+#footer {
+	width: 100%;
+	padding-bottom: 0;
+}
+
+#menu-footer-menu li {
+	display: block;
+}
+
+.foot-nav {
+	margin-bottom: 50px;
+
+}
+
+.foot-nav li a {
+	font: 16px/18px "Oswald",arial,sans-serif; 
+}
+
+.foot-copy {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+.foot-copy * {
+	display: block;
+}
+
+
+/*styles explicitly for single*/
+.shop-main .right-col .text-holder {
+	height:100%;
+	margin: 0 10px 0 10px;
+}
+
+#shop-slider-small.prod-row.small {
+	height: 100%;
+}
+
+.shop-main .column-three {
+	height: 100%;
+	
+}
+
+#shop-slider-1.prod-row {
+	height: initial;
+}
+
+.shop .column-three h2 {
+	margin-top: 0px;
+	font: 18px/18px "Oswald",arial,sans-serif;
+}
+.shop-published-by {
+	position: initial
+}
+
+.column-three .left-col{
+	float: none;
+}
+
+/*.shop-main .inner {
+	margin: 21px auto 0 auto;
+}
+
+.shop-main .shop-maintag {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin-top: 0;
+}*/
+
+.shop-main p {
+	font: 16px/22px "AvenirNext LT Pro Regular",arial,sans-serif; 
+}
+
+.prod-row.small ul li {
+	width: 100%;
+}
+
+.shop-main .left-col .inner {
+	height: initial;
+	width: initial;
+}
+
+.shop-main .left-col img {
+	height: 345.33px;
+	width: 220.66px;
+	margin: 0 auto;
+}
+
+.shop-main .interact-with-influencer {
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 400px){
+	/*targeting landscape here*/
+
+	.shop-main .left-col.left {
+		margin-left: 10px;
+	}
+
+	.prod-row.small ul li {
+		width: 31%;
+	}
+
+	.morelike div.row.no-border {
+		margin: 15px 0 0 15px;
+	}
+
+	.morelike div.row.no-border > div {
+		width: 170px !important;	
+
+	}
+
+	.prod-row {
+		padding: 30px 0 8px 17px;
+	}
+
+	/*some styles for the singular looks page*/
+	.shop-main .left-col img {
+		margin: 0;
+	}
+
+	.column-three .left-col{
+		float: left;
+		display: inline-block;
+	}
+
+	.right-col.right {
+		float: right;
+		display: inline-block;
+		width: 59%;
+	}
+
+	h2.prod-section {
+		clear: both;
+	}
+
+	.shop-main .column-three h1 {
+		font: 32px/38px "futura-pt",serif
+	}
+
+	.text-holder .browse-type {
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		margin-left: 20px;
+	}
+
+		/*styles explicitly for single*/
+	.shop-main .right-col .text-holder {
+		padding-bottom: 70px;
+	}
+
+	.text-holder img.shop-published-by {
+		position: absolute;
+		top: initial;
+		bottom: 0px;
+		right: 0px;
+		margin-right: 20px;
+	}
+
+	.text-holder h2 {
+		font: 16px/18px "Oswald",arial,sans-serif;
+	}
+
+	.shop-main p {
+		font: 14px/18px "AvenirNext LT Pro Regular",arial,sans-serif;
+
+	}
+}
+
+
+.col_5 .img-hold {
+	position:relative;
+}
+
+.prod-row ul li {
+	display: inline-block;
+	margin: 10px 0 10px 0;
+	float: none;
+	width: 133px;
+}
+@media screen and (max-width: 400px) {
+
+	.morelike div.row.no-border {
+		width: 186px; 
+		margin: 10px auto 0 auto;
+	}
+
+	.prod-row {
+		padding: 30px 0 8px 25px;
+	}
+
+}
+
+.morelike div.row.no-border > div {
+	margin-bottom: 10px;
+}
+
+.morelike h2 {
+	padding: 0 0 0 15px;
+}
+
+.category-list {
+	padding-left: 15px;
+}
+
+.prod-section {
+	padding-left: 15px !important; 
+}
+
+.shop-main .left-col .slides li {
+	float: none;
+}
+
+/*styles for single influencer page*/
+
+.cols.browse-col {
+	margin: 0;
+}
+
+div.archive-col, .profile-loop div.archive-col {
+	width: 100%;
+	margin: 0 0 20px 0;
+
+}
+
+.browse-row.browse-row {
+	margin: 0;
+}
+
+.ad-300-600 {
+	height: initial;
+}
+
+div.archive-col .img-hold img, .profile-loop div.archive-col .img-hold img {
+	padding-bottom: 70px;
+}
+
+div.archive-col .text-box {
+	width: initial;
+}
+
+.single-inf_influencer .profile-image {
+	height: initial !important;
+}
+
+
+/*styles for the influencer index page*/
+
+.column-two .influencers-slider {
+	margin: 0;
+
+}
+
+div.az-links li.scr-link a {
+	font: 14px "AvenirNext LT Pro Regular", arial, sans-serif;
+}
+
+#content.influencers div .az-links {
+	white-space: normal;
+	text-align: center;
+	margin: 0 30px 0 30px;
+}
+
+#content.influencers div.influencers-az > h2 {
+	font: bold 22px "AvenirNext LT Pro Regular",arial,sans-serif;
+}
+
+.sorted-content.influencers-az {
+	margin-top: 30px !important;
+}
+
+.sorted-content.influencers-az ul {
+	padding: 0 2px 0 2px;
+}
+
+.influencers-az h3 {
+	width: initial;
+}
+
+@media screen and (min-width: 400px) {
+
+
+	.sorted-content.influencers-az ul li {
+		margin-right:10px;
+	}
+
+	#content.influencers > div.influencers-az {
+		margin: 30px;
+		width: initial;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	
+	div.nav {
+		height: 400px !important ;
+		border-bottom: solid 1px black;
+
+	}
+
+	.subscribe-mobile {
+		position:absolute;
+		z-index: 4;
+		right: 0 ;
+		bottom: 80px;
+	}
+
+	.subscribe-mobile * { float: right;}
+
+	.nav-icons {
+		position: absolute;
+		z-index: 4;
+		right: 0;
+		top: initial;
+		bottom: 10px !important;
+		padding: 0;
+		margin: 0;
+		border:none;
+	}
+
+	.nav-icons * {float:right;}
+
+	#menu-main-menu { border: none !important;}
+}
+
+
+@media screen and (min-width: 400px) {
+	.subscribe-mobile {
+		position:absolute;
+		z-index: 4;
+		right: 20px;
+		bottom: 80px;
+	}
+
+	.nav-icons {
+		position: absolute;
+		z-index: 4;
+		right: 20px;
+		top: initial;
+		bottom: 0px !important;
+		padding: 0;
+		margin: 0;
+		border:none;
+	}
+}
+
+.my-inf.browse-by .azSteps {
+	margin-bottom: 0;
+}
+
+.my-inf.browse-by .azSteps h2 {
+	width: inherit;
+	margin-bottom: 50px;
+}
+
+.my-inf.browse-by .azStep {
+	width: inherit;
+	border: none;
+	padding: 0 ;
+	margin: 0;
+}
+
+.my-inf.browse-by .azStep h2 {
+	width: inherit;
+}
+
+.my-inf.browse-by#content > div {
+
+	margin-bottom:0;
+}
+
+
+.AZ-signup-submit {
+	width:100px;
+	margin: 10px auto 10px auto ;
+	float: none;
+}
+
+#myInfluence input[type="submit"], #myInfluence input[type="button"] {
+	float:none;
+	margin: 0;
+}
+
+
+.page-template-template-my_influence-php #footer {
+	margin-top: 30px;
+}
+
+a.sign-in-link {
+	display:none !important;
+}
+
+#menu-item-137 {
+	display: none !important;
+}
+
+/*.page-template-template-my_influence-php .az-links { display:none;}
+.page-template-template-my_influence-php .az-row { display:none;}*/
+
+/*.my_inf .az-row {
+	display: none;
+}*/
+
+
+
+

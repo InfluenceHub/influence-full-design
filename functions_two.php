@@ -183,7 +183,7 @@
 
      ?>
       <div class="latest-home group">
-        <div class="sideads_wrapper">
+        <div class="sideads_wrapper no-mobile">
           <div class="sidead leftad">
           </div>
           <div class="sidead rightad">
@@ -237,7 +237,7 @@
                               </form>
                             <?php endif; // $influencer_id ?>
 
-                            <div class="home-feed-pint-options">
+                            <div class="home-feed-pint-options no-mobile">
                               <a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink() ?>&amp;media=<?php echo wp_get_attachment_thumb_url( get_post_thumbnail_id( $post->ID ) ) ?>&amp;description=<?php echo urlencode($post->post_content) ?>" target="_blank" class="home-feed-pint-link" title="Pin This">
                                 <img src="<?php echo bloginfo('stylesheet_directory'); ?>/images/pinterest-logo-black.jpg" class="home-feed-pint-img">
                                 Pin it
@@ -407,7 +407,7 @@
             ?>
           </ul><!-- /.recent-list -->
           <!-- HOME PAGE 300 X 900 AD SPACE -->
-          <div class="column adcolumn">
+          <div class="column adcolumn no-mobile">
           <a href="http://click.linksynergy.com/fs-bin/click?id=pwlaa2*cgnI&offerid=276224.10013359&subid=0&type=4">
            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nordstrom2.jpg" />
           </a>
