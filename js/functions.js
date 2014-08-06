@@ -14,9 +14,7 @@ jQuery(function($) {
       $(this).next('.sub-menu').toggle();
     });
   }
-  if (isMobile()) {
-  $('#menu-item-21538').attr("href","/inf-interview");
-  }
+
 	$(document).on('focusin', '.field, textarea', function() {
 		if(this.title==this.value) {
 			this.value = '';
