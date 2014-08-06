@@ -63,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <?php if (is_front_page()) { ?>
     <div id="top_ad-block" class="top_ad-block no-mobile">
       <a href="http://shop.theinfluence.com">
-      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopbanner.png" />
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shop-banner.gif" />
       </a>
       <!-- BEGIN IFRAME TAG - theinfluence 728x90 < - DO NOT MODIFY -->
       <!--<IFRAME SRC="http://ib.adnxs.com/tt?id=2411079&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="728" HEIGHT="90"></IFRAME>-->
