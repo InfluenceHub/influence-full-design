@@ -6254,6 +6254,8 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
     }
     #menu-item-15636 {
       margin-top: -100px;
+      font-weight: bolder;
+      font-size: 2rem;
     }
    .no-mobile {
       display: none !important;
