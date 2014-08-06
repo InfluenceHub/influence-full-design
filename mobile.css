@@ -78,9 +78,9 @@ a#logo {
 }
 div.nav {
 	height: 250px;
-	position: fixed;
+	position: relative;
 	display:none;
-	background: white;
+	background: #ccc;
 	top: 0px;
 }
 
@@ -645,13 +645,5 @@ a.sign-in-link {
     	display: none;
     	visibility: hidden;
     }
-   .nav > ul > li > a {
-  		display: inline-block;
-  		font: normal 15px "Oswald",sans-serif;
-  		letter-spacing: 1px;
-  		color: #000;
-  		text-transform: uppercase;
-  		text-align: center;
-  }
 }
 
