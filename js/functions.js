@@ -15,6 +15,18 @@ jQuery(function($) {
     });
   }
 
+  $("#menu-main-menu li a").on('click', function(e) {
+    //pages we want to redirect on mobile and where to redirect to
+    var pages = {
+      "/in-focus/":"/inf-interview/"
+    }
+    
+    if (pages[this.pathname] && isMobile.matches) { 
+      e.preventDefault();
+      window.location = window.location.origin + pages[this.pathname];
+    }
+  });
+
 	$(document).on('focusin', '.field, textarea', function() {
 		if(this.title==this.value) {
 			this.value = '';
