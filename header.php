@@ -87,7 +87,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
 -->
-		<header id="header">
+<br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />	
+	<header id="header">
 			<div id="header_inner" class="inner_wrap">
 				<?php
           //Create login/out link

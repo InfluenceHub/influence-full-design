@@ -13,9 +13,6 @@ body * {
 
 /*utility classes*/
 
-.no-mobile {
-	display: none !important;
-}
 
 /*hide these by default, then when scripts initialize 
 show if we have more than 1 item*/
@@ -649,5 +646,9 @@ a.sign-in-link {
     div.archive-col .img-hold {
 	padding-bottom: 75px;
     }
+    .no-mobile {
+        display: none !important;
+}
+
 }
 
