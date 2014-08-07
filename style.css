@@ -6240,25 +6240,16 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
       width: 25px;
       z-index: 5;
     }
-    #menu-item-15429 {
-      display: none;
-      visibility: hidden;
-    }
     .hide-me img {
       display: none;
       visibility: hidden;
     }
-    #menu-item-16 {
-      display: none;
-      visibility: hidden;
-    }
-    #menu-item-15636 {
-      margin-top: -150px;
-      font-weight: bolder;
-      font-size: 2rem;
-    }
+
    .no-mobile {
       display: none !important;
       visibility: hidden !important;
+    }
+    div.nav {
+      height: 10%;
     }
 }

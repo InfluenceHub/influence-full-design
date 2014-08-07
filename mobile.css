@@ -77,7 +77,7 @@ a#logo {
    	height: 25px;
 }
 div.nav {
-	height: 250px;
+	/*height: 250px;*/
 	position: relative;
 	display:none;
 	background: #fff;
@@ -633,20 +633,18 @@ a.sign-in-link {
     	width: 25px;
     	z-index: 5;
     }
-    #menu-item-15429 {
+    li#menu-item-15429 {
     	display: none;
-    	visibility: hidden;
     }
     .hide-me img {
     	display: none;
     	visibility: hidden;
     }
-    #menu-item-16 {
+    li#menu-item-16 {
     	display: none;
-    	visibility: hidden;
     }
-    #menu-item-15636 {
-    	margin-top: -25px;
+    li#menu-item-15636 {
+    	font-weight: bold;
     }
 }
 
