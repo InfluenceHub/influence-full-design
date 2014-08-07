@@ -153,12 +153,12 @@ c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c
 </svg></a>
         <a href="#" id="hamburger" style="width: 100%; height: 45px; margin-top: -5px;"> 
     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" style="z-index: 2; background-color: #fff; margin-top: 5px;" width="35x" height="35px" />
-    <a href="<?php echo get_home_url(null, '/'); ?>"><div style="padding-left: 60px; margin-top: -30px;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div></a>    
-        </a>
+	<div style="padding-left: 60px; margin-top: -30px; z-index: 5;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div>    
+      </a>
 
 				<div class="nav">
 					<div class="nav-icons">
-           <!-- <ul class="soc-list">
+           <ul class="soc-list">
               <?php inf_list_social_networks('header'); ?>
               <li>
               <form action="<?php bloginfo('url'); ?>" method="get" class="search">
@@ -166,7 +166,7 @@ c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c
                 <input type="submit" value="" />
               </form>
               </li>
-            </ul><!-- /.soc-list -->
+            </ul>
 				  </div><!-- /.nav-icons --> 
           <?php wp_nav_menu( array(
 						'theme_location'  => 'main-navigation',

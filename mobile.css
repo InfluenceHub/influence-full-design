@@ -646,5 +646,8 @@ a.sign-in-link {
     li#menu-item-15636 {
     	font-weight: bold;
     }
+    div.archive-col .img-hold {
+	padding-bottom: 75px;
+    }
 }
 
