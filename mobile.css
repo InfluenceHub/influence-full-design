@@ -630,9 +630,9 @@ a.sign-in-link {
     	width: 25px;
     	z-index: 5;
     }
-    li#menu-item-15429 {
+    /*li#menu-item-15429 {
     	display: none;
-    }
+    }*/
     .hide-me img {
     	display: none;
     	visibility: hidden;
