@@ -9,6 +9,83 @@ the_post();
 ?>
   <section id="content">
     <div class="content_wrapper top-block">
+    <?php
+      $args = array(
+        'numberposts' => 9999,
+        'orderby' => 'menu_order',
+        'order' => 'ASC',
+        'post_type' => 'inf-slide-home',
+        'post_status' => 'publish'
+      ); 
+      $list_items = get_posts($args);
+      $listblock = '';
+
+      foreach ($list_items as $key => $list_item ) {
+        /* old fields
+        $custom_fields = get_post_custom($list_item->ID);
+        $title      = trim(get_the_title($list_item->ID));
+        $title_two  = trim($custom_fields['wpcf-hslide-title-two'][0]);
+        $longTitle = $title . ' ' . $title_two;
+        $shortTitle = '<span>' . $title . '</span> ' . $title_two;
+        if (strlen(strip_tags($title_two)) > 38) {
+          $shortTitle = '<span>' . $title . '</span> ' . substr($title_two, 0, 38) . '...';
+        }
+        //$position = trim($custom_fields['wpcf-staff-title'][0]);
+        //$content  = get_post_field('post_content', $list_item->ID);
+        $slide_link = trim($custom_fields['wpcf-hslide-link-url'][0]);
+        $image_one  = trim($custom_fields['wpcf-hslide-image'][0]);
+        $image_two  = trim($custom_fields['wpcf-hslide-bottom-image'][0]);
+        */
+        
+        //NEW FIELDS
+        $title      = trim(get_the_title($list_item->ID));
+        $title_two  = trim(carbon_get_post_meta($list_item->ID, 'hslide_title_two'));
+        $slide_link = trim(carbon_get_post_meta($list_item->ID, 'hslide_link_url'));
+        $image_oneID = carbon_get_post_meta($list_item->ID, 'hslide_image');
+        $image_oneA = wp_get_attachment_image_src($image_oneID,'full', true);
+        $image_one = $image_oneA[0];
+        $image_twoID = carbon_get_post_meta($list_item->ID, 'hslide_bottom_image');
+        $image_twoA = wp_get_attachment_image_src($image_twoID,'inf_home_slider', true);
+        $image_two = $image_twoA[0];
+        $longTitle = $title . ' ' . $title_two;
+        $shortTitle = '<span>' . $title . '</span> ' . $title_two;
+        if (strlen(strip_tags($title_two)) > 80) {
+          $shortTitle = '<span>' . $title . '</span> ' . substr($title_two, 0, 79) . '...';
+        }
+
+  // PAGELY PERFORMACE HACK
+  // $image_one is the url to the image, so getimagesize downloads the image (from cloudflare and on the miss case all the way back to us
+  // you must use the local file
+  // lets get it a hacky way
+   $image_one_file = '/httpdocs/'.str_replace(get_option('siteurl'), '', $image_one);
+   $image_two_file = '/httpdocs/'.str_replace(get_option('siteurl'), '', $image_two);
+
+        list($width_one, $height_one) = getimagesize($image_one_file);
+        list($width_two, $height_two) = getimagesize($image_two_file);
+        $content    = apply_filters('the_content', get_post_field('post_content', $list_item->ID));
+        //$image      = wp_get_attachment_image_src(get_post_thumbnail_id($list_item->ID), 'inf_home_slider');
+    ?>
+          <li>
+            <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
+              <div class="inner-slide">
+                <?php
+                  if (trim($image_one) > '') {
+                    echo '<img src="' . $image_one . '" width="' . $width_one . '" height="' . $height_one . '" alt="' . $longTitle . '" />';
+                  }
+                ?>
+                <div class="text-box">
+                  <div class="products-box">
+                    <?php
+                      if (trim($image_two) > '') {
+                        echo '<img src="' . $image_two . '" width="' . $width_two . '" height="' . $height_two . '" alt="' . $longTitle . '" />';
+                      }
+                    ?>
+                  </div><!-- /.products-box -->
+                  <h4><?php echo $shortTitle; ?></h4>
+                </div><!-- /.text-box -->
+              </div><!-- /.inner-slide -->
+            </a>
+          </li>
       <div class="column-two">
         <a class="left-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
         <a class="right-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
@@ -90,7 +167,9 @@ the_post();
         </div>
       </div>
     </div>
-
+    <?php
+      }
+    ?>
     <div class="ad_wrapper-block">
       <?php inf_footer_signup() ?>
       <?php //inf_browse_by(); ?>
