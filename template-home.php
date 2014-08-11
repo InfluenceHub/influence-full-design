@@ -65,27 +65,6 @@ the_post();
         $content    = apply_filters('the_content', get_post_field('post_content', $list_item->ID));
         //$image      = wp_get_attachment_image_src(get_post_thumbnail_id($list_item->ID), 'inf_home_slider');
     ?>
-          <li>
-            <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
-              <div class="inner-slide">
-                <?php
-                  if (trim($image_one) > '') {
-                    echo '<img src="' . $image_one . '" width="' . $width_one . '" height="' . $height_one . '" alt="' . $longTitle . '" />';
-                  }
-                ?>
-                <div class="text-box">
-                  <div class="products-box">
-                    <?php
-                      if (trim($image_two) > '') {
-                        echo '<img src="' . $image_two . '" width="' . $width_two . '" height="' . $height_two . '" alt="' . $longTitle . '" />';
-                      }
-                    ?>
-                  </div><!-- /.products-box -->
-                  <h4><?php echo $shortTitle; ?></h4>
-                </div><!-- /.text-box -->
-              </div><!-- /.inner-slide -->
-            </a>
-          </li>
       <div class="column-two">
         <a class="left-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
         <a class="right-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
