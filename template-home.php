@@ -7,7 +7,6 @@ get_header();
 the_post();
 //Detect mobile
 ?>
-    ?>
       <div class="top-slider">
       <div class="loader">&nbsp;</div><!-- /.loader -->
         <ul class="slides">
