@@ -175,7 +175,7 @@ c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c
       </a>
 
 				<div class="nav">
-					<div class="nav-icons">
+					<div class="nav-icons" style="display:none;">
            <ul class="soc-list">
               <?php inf_list_social_networks('header'); ?>
               <li>

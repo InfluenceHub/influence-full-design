@@ -8,9 +8,88 @@ the_post();
 //Detect mobile
 ?>
   <section id="content">
-    <div class="shell no-mobile">
-      <?php inf_home_topslider(); ?>
-    </div><!-- /.shell -->
+    <div class="content_wrapper top-block">
+      <div class="column-two">
+        <a class="left-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
+        <a class="right-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
+        <ul class="slides">
+          <li>
+            <div class="image-wrap">
+              <div class="main"> <img src="http://placehold.it/331x512"></div>
+              <div class='right'>
+                <div> <img src="http://placehold.it/130x160"></div>
+                <div> <img src="http://placehold.it/130x160"></div>
+                <div> <img src="http://placehold.it/130x160"></div>
+              </div>
+            </div>
+            <div class='text-wrap'>
+              <h2> blahblahblahblahblah </h2>
+              <p> a paragraph asdkl;jasdlkajsdlkajsdlkajsdlakjsdlkajsdlkjasd </p>
+              <a href="#" class="button"> A link </a>
+            </div>
+          </li>
+          <li>
+            <div class="image-wrap">
+              <div class="main"> <img src="http://placehold.it/331x512"></div>
+              <div class='right'>
+                <div> <img src="http://placehold.it/130x160"></div>
+                <div> <img src="http://placehold.it/130x160"></div>
+                <div> <img src="http://placehold.it/130x160"></div>
+              </div>
+            </div>
+            <div class='text-wrap'>
+              <h2> blahblahblahblahblah </h2>
+              <p> a paragraph asdkl;jasdlkajsdlkajsdlkajsdlakjsdlkajsdlkjasd </p>
+              <a href="#" class="button"> A link </a>
+            </div>
+          </li>
+          <li>
+            <div class="image-wrap">
+              <div class="main"> <img src="http://placehold.it/331x512"></div>
+              <div class='right'>
+                <div> <img src="http://placehold.it/130x160"></div>
+                <div> <img src="http://placehold.it/130x160"></div>
+                <div> <img src="http://placehold.it/130x160"></div>
+              </div>
+            </div>
+            <div class='text-wrap'>
+              <h2> blahblahblahblahblah </h2>
+              <p> a paragraph asdkl;jasdlkajsdlkajsdlkajsdlakjsdlkajsdlkjasd </p>
+              <a href="#" class="button"> A link </a>
+            </div>
+          </li>
+          <li>
+            <div class="image-wrap">
+              <div class="main"> <img src="http://placehold.it/331x512"></div>
+              <div class='right'>
+                <div> <img src="http://placehold.it/130x160"></div>
+                <div> <img src="http://placehold.it/130x160"></div>
+                <div> <img src="http://placehold.it/130x160"></div>
+              </div>
+            </div>
+            <div class='text-wrap'>
+              <h2> blahblahblahblahblah </h2>
+              <p> a paragraph asdkl;jasdlkajsdlkajsdlkajsdlakjsdlkajsdlkjasd </p>
+              <a href="#" class="button"> A link </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="column">
+        <div>
+          <img src="http://placehold.it/300x200">
+          <h2> Look Here! </h2>
+          <p> Some Paragraph here explaingin </p>
+          <a> and a link </a>
+        </div>
+        <div>
+          <img src="http://placehold.it/300x200">
+          <h2> Look Here! </h2>
+          <p> Some Paragraph here explaingin </p>
+          <a> and a link </a>
+        </div>
+      </div>
+    </div>
 
     <div class="ad_wrapper-block">
       <?php inf_footer_signup() ?>
@@ -232,6 +311,17 @@ the_post();
 </div>
 
  <script>
+
+ console.log(jQuery('.top-block .slides'));
+
+ jQuery('.top-block .slides').carouFredSel({
+  prev: '.left-arrow',
+  next: '.right-arrow',
+  items:1, 
+  scroll: { items: 1 }, 
+  auto: false
+ });
+
   //uncomment to force cookie reset
   //document.cookie = "showHomePopup=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
   var homeCookie = getCookie('showHomePopup');
