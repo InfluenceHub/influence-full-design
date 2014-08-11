@@ -7,7 +7,6 @@ get_header();
 the_post();
 //Detect mobile
 ?>
-  <section id="content">
     <?php
       $args = array(
         'numberposts' => 9999,
@@ -64,6 +63,7 @@ the_post();
         $content    = apply_filters('the_content', get_post_field('post_content', $list_item->ID));
         //$image      = wp_get_attachment_image_src(get_post_thumbnail_id($list_item->ID), 'inf_home_slider');
     ?>
+      <section id="content">
         <div class="content_wrapper top-block">
       <div class="column-two">
         <a class="left-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
