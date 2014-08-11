@@ -8,6 +8,7 @@ the_post();
 //Detect mobile
 ?>
       <section id="content">
+      <?php inf_home_thelatestslide() ?>
         <div class="content_wrapper top-block">
       <div class="column-two">
         <a class="left-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
