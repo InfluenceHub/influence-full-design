@@ -5,9 +5,6 @@
 get_header();
 the_post();
 ?>
-<style>
-@font-face {font-family: 'BaskervilleBT-Italic';src: url('webfonts/2A93D2_0_0.eot');src: url('webfonts/2A93D2_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2A93D2_0_0.woff') format('woff'),url('webfonts/2A93D2_0_0.ttf') format('truetype');}
-</style>
 <section id="content">
   <div class="shell">
 
