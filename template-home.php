@@ -7,6 +7,7 @@ get_header();
 the_post();
 //Detect mobile
 ?>
+<?php inf_home_topslider() ?>
       <section id="content">
         <div class="content_wrapper top-block">
       <div class="column-two">
