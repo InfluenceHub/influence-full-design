@@ -92,7 +92,12 @@
                 echo $content;
                 */
               ?>
-							<!--<a href="<?php //echo get_permalink($influencer_id); ?>" class="shop-viewall">VIEW ALL <?php //echo $influencer_name; ?> LOOKS</a>-->
+		<div class="mobile-like">
+<div class="fb-like" data-href="http://www.theinfluence.com" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div><br />
+                   <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true" data-count="none" data-via="twitterapi">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>					
+		<!--<a href="<?php //echo get_permalink($influencer_id); ?>" class="shop-viewall">VIEW ALL <?php //echo $influencer_name; ?> LOOKS</a>-->
               <img class="shop-published-by" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
 						</div><!-- /.text-holder -->
           </div><!-- /.right-col -->

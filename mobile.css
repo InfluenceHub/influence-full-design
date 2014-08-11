@@ -648,7 +648,37 @@ a.sign-in-link {
     }
     .no-mobile {
         display: none !important;
-}
+    }
+    #content.interview #interview_wrapper {
+  	width: 100%;
+  	/*padding: 60px 40px 40px 60px;*/
+  	border: none;
+ 	margin: 0 auto;   
+    }
+    #content.interview .column.two {
+ 	 width: 100%;
+ 	 margin: 0;
+	 border: none;
+    }
+    #content.interview #interview_wrapper .column.one {
+         width: 100%;
+         margin: 0;
+         border: none;
+    }
+    #content.interview #interview_wrapper .column.one p{
+         width: 100%;
+         margin: 0;
+         border: none;
+    }
+    #content.interview .column.one {
+	padding-right: 0px !important;
+    }
+    #shop-slider-0.prod-row {
+        height: initial;
+   }
+   .mobile-like {
+	display: block !important;
+   }
 
 }
 

@@ -402,12 +402,12 @@ a.shop-inf-name:hover {
   overflow-x: hidden;
 }
 #content.interview .shell.group {
- width: 1214px;
+ width: 1191px;
  margin: 0 auto;
 }
 #content.interview #interview_wrapper {
-  width: 940px;
-  padding: 60px 40px;
+  width: 80%;
+  padding: 60px 40px 40px 60px;
   border: 1px solid #ccc;
   margin: 0 auto;
 }
@@ -448,14 +448,20 @@ a.shop-inf-name:hover {
   font: bold 22px "futura-pt",arial,sans-serif;
   letter-spacing: 0.19em;
 }
+
+#content.interview .column h3 {
+  font: bold 22px "futura-pt",arial,sans-serif;
+  letter-spacing: 0.19em;
+}
 #content.interview .column {
-  display: inline-block;
+  display: block;
   vertical-align: top;
   font: 16px/28px "AvenirNext LT Pro Regular",arial,sans-serif;
   letter-spacing: 1px;
+  width: 100%;
 }
 #content.interview .column.one {
-  width: 360px;
+  width: 100%;
   padding-right: 40px;
   margin-right: 40px;
   border-right: 1px solid #ccc;

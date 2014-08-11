@@ -42,6 +42,23 @@ $detect = new Mobile_Detect;
 
 
 	<body <?php body_class(); ?>>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1404104409810179',
+          xfbml      : true,
+          version    : 'v2.0'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
   <!-- Google Tag Manager 1 -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NQL75C"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

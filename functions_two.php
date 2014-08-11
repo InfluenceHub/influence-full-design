@@ -8,7 +8,7 @@
   }
 
   add_theme_support('post-thumbnails');
-  
+  add_image_size('inf_makrket_slider',               460, 552, false);
   add_image_size('inf_home_slider',                  342, 416, true);
   add_image_size('inf_home_latest',                  210, 400, true);
   add_image_size('inf_home_latest_shoplook',         90, 400, true);
@@ -970,4 +970,4 @@
     }
     return $influencer_id;
   }
-?>
+    ?>

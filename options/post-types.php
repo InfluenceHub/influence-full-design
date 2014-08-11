@@ -216,3 +216,31 @@ register_post_type('inf_theme', array(
 	'query_var' => true,
 	'supports' => array('title', 'editor', 'page-attributes', 'thumbnail'),
 ));
+//Market
+register_post_type('inf_market', array(
+	'labels' => array(
+		'name'	 => 'Market',
+		'singular_name' => 'Market',
+		'add_new' => __( 'Add New' ),
+		'add_new_item' => __( 'Add new Market Story' ),
+		'view_item' => 'View Market Story',
+		'edit_item' => 'Edit Market Story',
+		'new_item' => __('New Market Story'),
+		'view_item' => __('View Market Story'),
+		'search_items' => __('Search Market Stories'),
+		'not_found' =>  __('No entries found'),
+		'not_found_in_trash' => __('No entries found in Trash'),
+	),
+	'public' => true,
+	'exclude_from_search' => true,
+	'show_ui' => true,
+	'capability_type' => 'post',
+	'hierarchical' => false,
+	'_edit_link' =>  'post.php?post=%d',
+	'rewrite' => array(
+		"slug" => "market",
+		"with_front" => false,
+	),
+	'query_var' => true,
+	'supports' => array('title', 'editor', 'page-attributes', 'thumbnail'),
+));

@@ -276,3 +276,19 @@ Carbon_Container::factory('custom_fields', __('Featured Theme Two', 'inf'))
 			->set_max(4)
 	));
 */
+
+//Market Story  
+/*Carbon_Container::factory('custom_fields', __('Additional Featured Images', 'inf'))
+	->show_on_post_type(array('post', 'inf_market'))
+	->add_fields(array(
+		Carbon_Field::factory('complex', 'inf_market_slider', 'Images')
+			->add_fields(array(
+				Carbon_Field::factory('attachment', 'inf_market_slider', 'Image')
+			))
+	));
+
+Carbon_Container::factory('term_meta', __('Category settings', 'inf'))
+	->show_on_taxonomy('category')
+	->add_fields(array(
+		Carbon_Field::factory('attachment', 'inf_category_image', 'Category image')
+	));*/
