@@ -49,6 +49,11 @@
   width: 331px;
 }
 
+.image-wrap .main img {
+  height: 512px;
+  width: 331px;
+}
+
 .top-block {
   height: 600px ;
 }
