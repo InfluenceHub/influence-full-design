@@ -76,7 +76,7 @@ the_post();
           <li>
             <div class="image-wrap">
               <div class="main"> 
-                <img src="<?php echo '<img src="' . $image_one . '" width="' . $width_one . '" height="' . $height_one . '" alt="' . $longTitle . '" />'?>"
+               <!-- <img src="<?php echo '<img src="' . $image_one . '" width="' . $width_one . '" height="' . $height_one . '" alt="' . $longTitle . '" />'?>"-->
               </div>
               <div class='right'>
                 <div> <img src="http://placehold.it/130x160"></div>
