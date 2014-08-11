@@ -12,68 +12,7 @@ the_post();
       <div class="column-two">
         <a class="left-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
         <a class="right-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
-        <ul class="slides">
-          <li>
-            <div class="image-wrap">
-              <div class="main"> <img src="http://placehold.it/331x512"></div>
-              <div class='right'>
-                <div> <img src="http://placehold.it/130x160"></div>
-                <div> <img src="http://placehold.it/130x160"></div>
-                <div> <img src="http://placehold.it/130x160"></div>
-              </div>
-            </div>
-            <div class='text-wrap'>
-              <h2> blahblahblahblahblah </h2>
-              <p> a paragraph asdkl;jasdlkajsdlkajsdlkajsdlakjsdlkajsdlkjasd </p>
-              <a href="#" class="button"> A link </a>
-            </div>
-          </li>
-          <li>
-            <div class="image-wrap">
-              <div class="main"> <img src="http://placehold.it/331x512"></div>
-              <div class='right'>
-                <div> <img src="http://placehold.it/130x160"></div>
-                <div> <img src="http://placehold.it/130x160"></div>
-                <div> <img src="http://placehold.it/130x160"></div>
-              </div>
-            </div>
-            <div class='text-wrap'>
-              <h2> blahblahblahblahblah </h2>
-              <p> a paragraph asdkl;jasdlkajsdlkajsdlkajsdlakjsdlkajsdlkjasd </p>
-              <a href="#" class="button"> A link </a>
-            </div>
-          </li>
-          <li>
-            <div class="image-wrap">
-              <div class="main"> <img src="http://placehold.it/331x512"></div>
-              <div class='right'>
-                <div> <img src="http://placehold.it/130x160"></div>
-                <div> <img src="http://placehold.it/130x160"></div>
-                <div> <img src="http://placehold.it/130x160"></div>
-              </div>
-            </div>
-            <div class='text-wrap'>
-              <h2> blahblahblahblahblah </h2>
-              <p> a paragraph asdkl;jasdlkajsdlkajsdlkajsdlakjsdlkajsdlkjasd </p>
-              <a href="#" class="button"> A link </a>
-            </div>
-          </li>
-          <li>
-            <div class="image-wrap">
-              <div class="main"> <img src="http://placehold.it/331x512"></div>
-              <div class='right'>
-                <div> <img src="http://placehold.it/130x160"></div>
-                <div> <img src="http://placehold.it/130x160"></div>
-                <div> <img src="http://placehold.it/130x160"></div>
-              </div>
-            </div>
-            <div class='text-wrap'>
-              <h2> blahblahblahblahblah </h2>
-              <p> a paragraph asdkl;jasdlkajsdlkajsdlkajsdlakjsdlkajsdlkjasd </p>
-              <a href="#" class="button"> A link </a>
-            </div>
-          </li>
-        </ul>
+        <?php inf_home_topslider()?>
       </div>
       <div class="column">
         <div>
