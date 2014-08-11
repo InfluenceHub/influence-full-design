@@ -7,9 +7,6 @@ get_header();
 the_post();
 //Detect mobile
 ?>
-      <div class="top-slider">
-      <div class="loader">&nbsp;</div><!-- /.loader -->
-        <ul class="slides">
   <section id="content">
     <div class="content_wrapper top-block">
       <div class="column-two">
@@ -18,9 +15,7 @@ the_post();
         <ul class="slides">
           <li>
             <div class="image-wrap">
-              <div class="main"> 
-               <!-- <img src="<?php echo '<img src="' . $image_one . '" width="' . $width_one . '" height="' . $height_one . '" alt="' . $longTitle . '" />'?>"-->
-              </div>
+              <div class="main"> <img src="http://placehold.it/331x512"></div>
               <div class='right'>
                 <div> <img src="http://placehold.it/130x160"></div>
                 <div> <img src="http://placehold.it/130x160"></div>
