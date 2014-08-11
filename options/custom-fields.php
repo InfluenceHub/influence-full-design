@@ -26,7 +26,6 @@ Carbon_Container::factory('custom_fields', __('Home template settings', 'inf'))
 */
 //Market Story  
 Carbon_Container::factory('custom_fields', __('Additional Featured Images', 'inf'))
-	->show_on_template(array('template-market.php'))
 	->add_fields(array(
 		Carbon_Field::factory('complex', 'inf_market_slider', 'Images')
 			->add_fields(array(
