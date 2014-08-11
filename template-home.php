@@ -7,6 +7,11 @@ get_header();
 the_post();
 //Detect mobile
 ?>
+<?php 
+ $image_oneID = carbon_get_post_meta($list_item->ID, 'hslide_image');
+ $image_oneA = wp_get_attachment_image_src($image_oneID,'full', true);
+ $image_one = $image_oneA[0];
+ ?>
       <section id="content">
         <div class="content_wrapper top-block">
       <div class="column-two">
@@ -15,7 +20,7 @@ the_post();
         <ul class="slides">
           <li>
             <div class="image-wrap">
-              <div class="main"> <img src="http://placehold.it/331x512"></div>
+              <div class="main"> <?php echo image_oneA[0] ?></div>
               <div class='right'>
                 <div> <img src="http://placehold.it/130x160"></div>
                 <div> <img src="http://placehold.it/130x160"></div>
