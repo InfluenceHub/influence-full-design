@@ -24,13 +24,7 @@ Carbon_Container::factory('custom_fields', __('Home template settings', 'inf'))
 			->set_default_value('SOCIAL')
 	));
 */
-//Market Story  
-Carbon_Container::factory('custom_fields', __('Additional Featured Images', 'inf'))
-	->show_on_post_type(array('inf_market'))
-	->add_fields(array(
-		Carbon_Field::factory('attachment', 'inf_market_slider', 'Image')
-			))
-	)); 
+
 Carbon_Container::factory('custom_fields', __('Product of the Day', 'inf'))
 	->show_on_template(array('template-home.php'))
 	->show_on_post_type('page')
