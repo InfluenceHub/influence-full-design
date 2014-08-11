@@ -7,7 +7,6 @@ get_header();
 the_post();
 //Detect mobile
 ?>
-
       <section id="content">
         <div class="content_wrapper top-block">
       <div class="column-two">
@@ -91,9 +90,7 @@ the_post();
         </div>
       </div>
     </div>
-    <?php
-      }
-    ?>
+
     <div class="ad_wrapper-block">
       <?php inf_footer_signup() ?>
       <?php //inf_browse_by(); ?>
