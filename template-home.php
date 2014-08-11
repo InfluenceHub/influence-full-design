@@ -7,8 +7,8 @@ get_header();
 the_post();
 //Detect mobile
 ?>
-  <section id="content">
-    <div class="content_wrapper top-block">
+      <section id="content">
+        <div class="content_wrapper top-block">
       <div class="column-two">
         <a class="left-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
         <a class="right-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
