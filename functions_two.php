@@ -116,9 +116,9 @@
               </a>
             </div>
             <div class='right'>
-              <div> <img src="http://placehold.it/130x160"></div>
-              <div> <img src="http://placehold.it/130x160"></div>
-              <div> <img src="http://placehold.it/130x160"></div>
+              <div> <img src="http://placehold.it/100x100"></div>
+              <div> <img src="http://placehold.it/130x100"></div>
+              <div> <img src="http://placehold.it/130x100"></div>
             </div>
           </div>
           <div class='text-wrap'>

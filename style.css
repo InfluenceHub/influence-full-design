@@ -29,11 +29,12 @@
 }
 
 .image-wrap {
-  height: 512px;
+  height: 416px;
 }
 
 .text-wrap{
   width: 500px;
+  height: 184px;
   margin-top: 25px;
   text-align: center;
 }
@@ -45,13 +46,12 @@
 
 .image-wrap .main {
   padding: 0 50px 0 0;
-  height: 518px;
   width: 331px;
 }
 
 .image-wrap .main img {
-  height: 512px;
-  width: 331px;
+  height: 416px;
+  width: 342px;
 }
 
 .top-block {
