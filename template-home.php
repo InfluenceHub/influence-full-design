@@ -15,7 +15,7 @@ the_post();
         <ul class="slides">
           <li>
             <div class="image-wrap">
-              <div class="main"> <?php echo image_oneA[0] ?></div>
+              <div class="main"> <img src="http://placehold.it/331x512"></div>
               <div class='right'>
                 <div> <img src="http://placehold.it/130x160"></div>
                 <div> <img src="http://placehold.it/130x160"></div>
@@ -90,6 +90,7 @@ the_post();
         </div>
       </div>
     </div>
+
     <div class="ad_wrapper-block">
       <?php inf_footer_signup() ?>
       <?php //inf_browse_by(); ?>
