@@ -30,6 +30,12 @@ div.home-box img {
   font-size: 26px;
   text-transform: uppercase;
 }
+.small-boxes {
+  word-wrap: break-word;
+  font-family: "Oswald", arial, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
 
 .right-arrow {
   left: 580px;

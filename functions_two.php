@@ -255,7 +255,7 @@
                       }
                     ?>
                   </div><!-- /.products-box -->
-                  <h4><?php echo $shortTitle; ?></h4>
+                  <h4 class="boxes"><?php echo $shortTitle; ?></h4>
                 </div><!-- /.text-box -->
               </div><!-- /.inner-slide -->
               </div>
