@@ -41,6 +41,32 @@
   add_image_size('inf_interviewmore', 220, 235, true);
   add_image_size('inf_featured_theme',                 634, 500, true);
 
+
+  function inf_home_box1() {
+    $args = array(
+      'post_type' => 'inf_home_box1',
+      'posts_per_page' => 1
+    );
+    $box1 = get_posts($args);
+    if(isset($box1[0])){
+      return $box1[0];
+    }
+    return null;
+  }
+
+  function inf_home_box2(){
+    $args = array(
+      'post_type' => 'inf_home_box2',
+      'posts_per_page' => 1
+    );
+    $box2 = get_posts($args);
+    if(isset($box2[0])){
+      return $box2[0];
+    }
+    return null;
+  }
+
+
   
   //Attachments metabox customization
   function inf_interview_attachments($attachments) {

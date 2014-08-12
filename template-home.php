@@ -15,18 +15,21 @@ the_post();
         <?php inf_home_topslider()?>
       </div>
       <div class="column">
-        <?php $theme = inf_get_latest_theme(); ?>
-        <div class="feat-theme">
-          <?php echo get_the_post_thumbnail($theme->ID, 'inf_featured_theme') ?>
-          <h2> <?php echo $theme->post_title ?> </h2>
-          <p> <?php echo substr( $theme->post_content, 0, 60) . '...'; ?> </p>
-          <a> View More </a>
+        <?php $box1 = inf_home_box1(); ?>
+        <div class="home-box">
+          <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox1_link_url'); ?>">
+            <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1') ?>
+            <h2> <?php echo $box1->post_title ?> </h2>
+            <p> <?php echo substr( $box1->post_content, 0, 60) . '...'; ?> </p>
+          </a>
         </div>
-        <div>
-          <img src="http://placehold.it/300x200">
-          <h2> Look Here! </h2>
-          <p> Some Paragraph here explaingin </p>
-          <a> and a link </a>
+        <div class="home-box">
+          <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
+            <?php $box2 = inf_home_box2(); ?>
+            <?php echo get_the_post_thumbnail($box2->ID, 'inf_home_box2') ?>
+            <h2> <?php echo $box2->post_title ?> </h2>
+            <p> <?php echo substr( $box2->post_content, 0, 60) . '...'; ?> </p>
+          </a>
         </div>
       </div>
     </div>
