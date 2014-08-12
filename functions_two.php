@@ -96,6 +96,16 @@
         $image_oneA = wp_get_attachment_image_src($image_oneID,'full', true);
         $image_one = $image_oneA[0];
 
+        $side_oneID = carbon_get_post_meta($list_item->ID, 'hslide_side_image1');
+        $side_image1A = wp_get_attachment_image_src($side_oneID,'full', true);
+        $side_one = $side_image1A[0];       
+        $side_twoID = carbon_get_post_meta($list_item->ID, 'hslide_side_image2');
+        $side_image2A = wp_get_attachment_image_src($side_twoID,'full', true);
+        $side_two = $side_image2A[0];
+        $side_threeID = carbon_get_post_meta($list_item->ID, 'hslide_side_image3');
+        $side_image3A = wp_get_attachment_image_src($side_threeID,'full', true);
+        $side_three = $side_image3A[0];
+
         // PAGELY PERFORMACE HACK
         // $image_one is the url to the image, so getimagesize downloads the image (from cloudflare and on the miss case all the way back to us
         // you must use the local file
@@ -120,9 +130,9 @@
               </a>
             </div>
             <div class='right'>
-              <div> <img src="http://placehold.it/130x130"></div>
-              <div> <img src="http://placehold.it/130x130"></div>
-              <div> <img src="http://placehold.it/130x130"></div>
+              <div> <img src="<?php echo $side_one ?>"></div>
+              <div> <img src="<?php echo $side_two ?>"></div>
+              <div> <img src="<?php echo $side_three ?>"></div>
             </div>
           </div>
           <div class='text-wrap'>

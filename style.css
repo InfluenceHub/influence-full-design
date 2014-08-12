@@ -50,6 +50,11 @@
   width: 331px;
 }
 
+.image-wrap .right div {
+  width: 130px;
+  height:130px;
+}
+
 .image-wrap .main img.look-overlay {
   position:absolute;
   top: 0px;
