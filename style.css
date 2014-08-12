@@ -45,11 +45,20 @@
 }
 
 .image-wrap .main {
+  position: relative;
   padding: 0 50px 0 0;
   width: 331px;
 }
 
-.image-wrap .main img {
+.image-wrap .main img.look-overlay {
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  width: 193px;
+  height: 46px;
+}
+
+.image-wrap .main a img {
   height: 416px;
   width: 342px;
 }
