@@ -162,11 +162,10 @@
             </div>
           </div>
           <div class='text-wrap'>
-            <h2> <?php echo($longTitle); ?> </h2>
+            <h2 class="boxes"> <?php echo($longTitle); ?> </h2>
             <p> <?php
               echo($content);
               ?> </p>
-            <a href="#" class="button"> A link </a>
           </div>
         </li>
       <?php 
@@ -255,7 +254,7 @@
                       }
                     ?>
                   </div><!-- /.products-box -->
-                  <h4><?php echo $shortTitle; ?></h4>
+                  <h4 class="boxes"><?php echo $shortTitle; ?></h4>
                 </div><!-- /.text-box -->
               </div><!-- /.inner-slide -->
               </div>
