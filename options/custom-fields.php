@@ -267,7 +267,7 @@ Carbon_Container::factory('custom_fields', __('Slide Options', 'inf'))
 			->help_text('Image dimensions - 130 × 130 pixels.')
 	));
 
- Carbon_Container::factory('custom_fields', __('Slide Options', 'inf'))
+ Carbon_Container::factory('custom_fields', __('Box Options', 'inf'))
 	->show_on_post_type('inf_home_box1')
   ->add_fields(array(
 		Carbon_Field::factory('text', 'homebox1_title_two', 'Secondary Title'),
