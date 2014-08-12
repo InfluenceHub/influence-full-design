@@ -253,7 +253,7 @@ inf-hslide-image
 inf-hslide-bottom-image
 */
 Carbon_Container::factory('custom_fields', __('Slide Options', 'inf'))
-	->show_on_post_type('inf-slide-home')
+	->show_on_post_type('post','inf-slide-home')
   ->add_fields(array(
 		Carbon_Field::factory('text', 'hslide_title_two', 'Secondary Title'),
 		Carbon_Field::factory('text', 'hslide_link_url', 'Link URL'),
