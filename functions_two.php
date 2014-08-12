@@ -102,6 +102,9 @@
         // lets get it a hacky way
         $image_one_file = '/httpdocs/'.str_replace(get_option('siteurl'), '', $image_one);
         list($width_one, $height_one) = getimagesize($image_one_file);
+
+        //get da content
+        $content    = apply_filters('the_content', get_post_field('post_content', $list_item->ID));
         //build homepage slide
       ?>
         <li>
@@ -116,14 +119,16 @@
               </a>
             </div>
             <div class='right'>
-              <div> <img src="http://placehold.it/100x100"></div>
-              <div> <img src="http://placehold.it/130x100"></div>
-              <div> <img src="http://placehold.it/130x100"></div>
+              <div> <img src="http://placehold.it/130x130"></div>
+              <div> <img src="http://placehold.it/130x130"></div>
+              <div> <img src="http://placehold.it/130x130"></div>
             </div>
           </div>
           <div class='text-wrap'>
-            <h2> blahblahblahblahblah </h2>
-            <p> a paragraph asdkl;jasdlkajsdlkajsdlkajsdlakjsdlkajsdlkjasd </p>
+            <h2> <?php echo($longTitle); ?> </h2>
+            <p> <?php
+              echo($content);
+              ?> </p>
             <a href="#" class="button"> A link </a>
           </div>
         </li>
