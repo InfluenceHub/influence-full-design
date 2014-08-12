@@ -1,3 +1,8 @@
+div.feat-theme img {
+  width: 300px;
+  height: 200px;
+}
+
 .top-block {
   border: 0 !important;
 }

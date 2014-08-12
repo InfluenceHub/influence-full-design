@@ -15,11 +15,12 @@ the_post();
         <?php inf_home_topslider()?>
       </div>
       <div class="column">
-        <div>
-          <img src="http://placehold.it/300x200">
-          <h2> Look Here! </h2>
-          <p> Some Paragraph here explaingin </p>
-          <a> and a link </a>
+        <?php $theme = inf_get_latest_theme(); ?>
+        <div class="feat-theme">
+          <?php echo get_the_post_thumbnail($theme->ID, 'inf_featured_theme') ?>
+          <h2> <?php echo $theme->post_title ?> </h2>
+          <p> <?php echo substr( $theme->post_content, 0, 60) . '...'; ?> </p>
+          <a> View More </a>
         </div>
         <div>
           <img src="http://placehold.it/300x200">
