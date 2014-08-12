@@ -163,7 +163,7 @@
           </div>
           <div class='text-wrap'>
             <h2 class="boxes"> <?php echo($longTitle); ?> </h2>
-            <p> <?php
+            <p class="slide-text"> <?php
               echo($content);
               ?> </p>
           </div>
