@@ -4424,6 +4424,7 @@ a#logo {
   background: none repeat scroll 0 0 #FFFFFF;
   margin: 0 0 0 -26px;
   padding: 0 26px 25px;
+  text-align: center;
 }
 
 .latest-home .shell {
