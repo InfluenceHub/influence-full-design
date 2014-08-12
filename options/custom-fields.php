@@ -162,13 +162,6 @@ Carbon_Container::factory('custom_fields', __('Additional Featured Images', 'inf
 				Carbon_Field::factory('attachment', 'inf_featured_image', 'Image')
 			))
 	));
-	Carbon_Container::factory('custom_fields', __('Additional Featured Images', 'inf'))
-	->show_on_post_type(array('post', 'inf_market'))
-	->add_fields(array(
-		Carbon_Field::factory('attachment', 'inf_featured_images', 'Images')
-			)),
-	));
-
 Carbon_Container::factory('term_meta', __('Category settings', 'inf'))
 	->show_on_taxonomy('category')
 	->add_fields(array(
@@ -272,6 +265,19 @@ Carbon_Container::factory('custom_fields', __('Slide Options', 'inf'))
 			->help_text('Image dimensions - 130 × 130 pixels.'),
 		Carbon_Field::factory('attachment', 'hslide_side_image3', 'Side Attachment 3')
 			->help_text('Image dimensions - 130 × 130 pixels.')
+	));
+
+  Carbon_Container::factory('custom_fields', __('Slide Options', 'inf'))
+	->show_on_post_type('inf-market')
+  ->add_fields(array(
+		Carbon_Field::factory('text', 'hslide_title_two', 'Secondary Title'),
+		Carbon_Field::factory('text', 'hslide_link_url', 'Link URL'),
+		Carbon_Field::factory('attachment', 'theme_slide1', 'Image')
+		Carbon_Field::factory('attachment', 'theme_slide2', 'Slide Attachment 2')
+		Carbon_Field::factory('attachment', 'theme_slide3', 'Slide Attachment 3')
+		Carbon_Field::factory('attachment', 'theme_slide4', 'Slide Attachment 4')
+		Carbon_Field::factory('attachment', 'theme_slide5', 'Slide Attachment 5')
+		Carbon_Field::factory('attachment', 'theme_slide6', 'Slide Attachment 6')
 	));
   
   
