@@ -164,7 +164,7 @@
           <div class='text-wrap'>
             <h2 class="boxes"> <?php echo($longTitle); ?> </h2>
             <p class="slide-text"> <?php
-              echo($content);
+              echo('hslide_title_two');
               ?> </p>
           </div>
         </li>
