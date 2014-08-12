@@ -18,7 +18,7 @@ div.feat-theme img {
 
 .right-arrow, .left-arrow {
   position: absolute;
-  top: 300px;
+  top: 200px;
   z-index: 1000;
   margin-top: -52px;
 }
