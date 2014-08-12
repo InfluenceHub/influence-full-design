@@ -270,16 +270,12 @@ Carbon_Container::factory('custom_fields', __('Slide Options', 'inf'))
  Carbon_Container::factory('custom_fields', __('Box Options', 'inf'))
 	->show_on_post_type('inf_home_box1')
   ->add_fields(array(
-		Carbon_Field::factory('text', 'homebox1_title_two', 'Secondary Title'),
 		Carbon_Field::factory('text', 'homebox1_link_url', 'Link URL'),
-		Carbon_Field::factory('attachment', 'homebox_image1', 'Image')
 	)); 
   Carbon_Container::factory('custom_fields', __('Box Options2', 'inf'))
 	->show_on_post_type('inf_home_box2')
   ->add_fields(array(
-		Carbon_Field::factory('text', 'homebox2_title_two', 'Secondary Title'),
 		Carbon_Field::factory('text', 'homebox2_link_url', 'Link URL'),
-		Carbon_Field::factory('attachment', 'homebox_image2', 'Image')
 	)); 
 /*
 Carbon_Container::factory('custom_fields', __('Featured Theme Two', 'inf'))
