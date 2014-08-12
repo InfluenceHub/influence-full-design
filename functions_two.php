@@ -150,7 +150,7 @@
               <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
               <?php
               if (trim($image_one) > '') {
-                    echo '<img src="' . $image_one . '" width="100%' . '" height="100%' . '" alt="' . $longTitle . '" />';
+                    echo '<img src="' . $image_one . '" width="' . $width_one . '" height="' . $height_one . '" alt="' . $longTitle . '" />';
                   }
               ?>
               </a>
@@ -304,6 +304,7 @@
         </div>
         <div class="shell">
          <h2 class="no-mobile" style="margin-top: -25px; border: none; text-align: center;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br />
+
           <div class="section-heading first">	
           </div><!-- /.section-heading -->
           <ul>
