@@ -24,8 +24,8 @@ the_post();
           </a>
         </div>
         <div class="home-box">
+          <?php $box2 = inf_home_box2(); ?>
           <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
-            <?php $box2 = inf_home_box2(); ?>
             <?php echo get_the_post_thumbnail($box2->ID, 'inf_home_box2') ?>
             <h2> <?php echo $box2->post_title ?> </h2>
             <p> <?php echo substr( $box2->post_content, 0, 60) . '...'; ?> </p>
