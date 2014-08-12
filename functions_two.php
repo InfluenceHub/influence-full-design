@@ -150,7 +150,7 @@
               <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
               <?php
               if (trim($image_one) > '') {
-                    echo '<img src="' . $image_one . '" width="100%' . $width_one . '" height="100%' . $height_one . '" alt="' . $longTitle . '" />';
+                    echo '<img src="' . $image_one . '" width="100%' . '" height="100%' . '" alt="' . $longTitle . '" />';
                   }
               ?>
               </a>
