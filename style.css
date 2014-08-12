@@ -79,7 +79,7 @@ div.home-box img {
 .image-wrap .main img.look-overlay {
   position:absolute;
   top: 0px;
-  left: 0px;
+  left: -2px;
   width: 193px;
   height: 46px;
 }
