@@ -267,7 +267,13 @@ Carbon_Container::factory('custom_fields', __('Slide Options', 'inf'))
 			->help_text('Image dimensions - 130 × 130 pixels.')
 	));
 
-  
+ Carbon_Container::factory('custom_fields', __('Slide Options', 'inf'))
+	->show_on_post_type('inf_home_box1')
+  ->add_fields(array(
+		Carbon_Field::factory('text', 'homebox1_title_two', 'Secondary Title'),
+		Carbon_Field::factory('text', 'homebox1_link_url', 'Link URL'),
+		Carbon_Field::factory('attachment', 'homebox_image1', 'Image')
+	)); 
   
 /*
 Carbon_Container::factory('custom_fields', __('Featured Theme Two', 'inf'))
