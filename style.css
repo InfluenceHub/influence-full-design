@@ -20,6 +20,7 @@ div.feat-theme img {
   position: absolute;
   top: 200px;
   z-index: 1000;
+  right: 10px;
   margin-top: -52px;
 }
 
