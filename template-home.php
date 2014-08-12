@@ -19,7 +19,7 @@ the_post();
         <div class="home-box">
           <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox1_link_url'); ?>">
             <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1') ?>
-            <h2> <?php echo $box1->post_title ?> </h2>
+            <h2 class="boxes"> <?php echo $box1->post_title ?> </h2>
             <p> <?php echo substr( $box1->post_content, 0, 60) . '...'; ?> </p>
           </a>
         </div>
@@ -27,7 +27,7 @@ the_post();
           <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
             <?php $box2 = inf_home_box2(); ?>
             <?php echo get_the_post_thumbnail($box2->ID, 'inf_home_box2') ?>
-            <h2> <?php echo $box2->post_title ?> </h2>
+            <h2 class="boxes"> <?php echo $box2->post_title ?> </h2>
             <p> <?php echo substr( $box2->post_content, 0, 60) . '...'; ?> </p>
           </a>
         </div>
