@@ -60,7 +60,7 @@ div.home-box img {
 }
 
 .image-wrap .main, .image-wrap .right {
-  display:block;
+  display:inline-block;
   float:left;
   margin-left: 45px;
 }
