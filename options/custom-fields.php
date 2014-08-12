@@ -260,11 +260,11 @@ Carbon_Container::factory('custom_fields', __('Slide Options', 'inf'))
 		Carbon_Field::factory('text', 'hslide_link_url', 'Link URL'),
 		Carbon_Field::factory('attachment', 'hslide_image', 'Image')
 			->help_text('Image dimensions - 332 × 423 pixels.'),
-		Carbon_Field::factory('attachment', 'hslide_bottom_image', 'Side Attachment 1')
+		Carbon_Field::factory('attachment', 'hslide_side_image1', 'Side Attachment 1')
 			->help_text('Image dimensions - 130 × 130 pixels.')
-		Carbon_Field::factory('attachment', 'hslide_bottom_image', 'Side Attachment 2')
+		Carbon_Field::factory('attachment', 'hslide_side_image2', 'Side Attachment 2')
 			->help_text('Image dimensions - 130 × 130 pixels.')
-		Carbon_Field::factory('attachment', 'hslide_bottom_image', 'Side Attachment 3')
+		Carbon_Field::factory('attachment', 'hslide_side_image3', 'Side Attachment 3')
 			->help_text('Image dimensions - 130 × 130 pixels.')
 	));
   
