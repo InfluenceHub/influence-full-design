@@ -110,6 +110,7 @@
         <li>
           <div class="image-wrap">
             <div class="main">
+              <img class="look-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/the_look_overlay.png" />
               <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
               <?php
               if (trim($image_one) > '') {
