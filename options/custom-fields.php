@@ -270,7 +270,7 @@ Carbon_Container::factory('custom_fields', __('Slide Options', 'inf'))
   Carbon_Container::factory('custom_fields', __('Slide Options', 'inf'))
 	->show_on_post_type('inf-market')
   ->add_fields(array(
-		Carbon_Field::factory('attachment', 'theme_slide1', 'Image')
+		Carbon_Field::factory('attachment', 'theme_slide1', 'Slide Attachment 1'),
 		Carbon_Field::factory('attachment', 'theme_slide2', 'Slide Attachment 2'),
 		Carbon_Field::factory('attachment', 'theme_slide3', 'Slide Attachment 3'),
 		Carbon_Field::factory('attachment', 'theme_slide4', 'Slide Attachment 4'),
