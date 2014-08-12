@@ -4421,7 +4421,7 @@ a#logo {
 }
 
 .latest-home .section-heading.first {
-  background: none repeat scroll 0 0 #FFFFFF;
+  /*background: none repeat scroll 0 0 #FFFFFF;*/
   margin: 0 0 0 -26px;
   padding: 0 26px 25px;
   text-align: center;
@@ -4429,6 +4429,7 @@ a#logo {
 
 .latest-home .shell {
   height: 100%;
+  text-align: center;
 }
 
 .latest-home .section-heading {
