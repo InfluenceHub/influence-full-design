@@ -140,7 +140,7 @@
         list($width_one, $height_one) = getimagesize($image_one_file);
 
         //get da content
-        $content    = apply_filters('the_content', get_post_field('post_content', $list_item->ID));
+        $content    = apply_filters('the_content', get_post_field('hslide_title_two', $list_item->ID));
         //build homepage slide
       ?>
         <li>
@@ -164,7 +164,7 @@
           <div class='text-wrap'>
             <h2 class="boxes"> <?php echo($longTitle); ?> </h2>
             <p class="slide-text"> <?php
-              echo('hslide_title_two');
+              echo($content);
               ?> </p>
           </div>
         </li>
