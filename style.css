@@ -24,6 +24,11 @@ div.home-box img {
   margin-top: -52px;
 }
 
+.boxes h2 {
+  word-wrap: break-word;
+  font-family: "Oswald", arial, sans-serif;
+  font-size: 26px;
+}
 
 .right-arrow {
   left: 580px;
