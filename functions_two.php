@@ -9,7 +9,7 @@
 
   add_theme_support('post-thumbnails');
   add_image_size('inf_makrket_slider',               460, 552, false);
-  add_image_size('inf_home_slider',                  300, 571, false);
+  add_image_size('inf_home_slider',                  330, 518, false);
   add_image_size('inf_home_latest',                  210, 400, true);
   add_image_size('inf_home_latest_shoplook',         90, 400, true);
   add_image_size('inf_styleseeker',                  268, 268, true);
@@ -146,7 +146,7 @@
         <li>
           <div class="image-wrap">
             <div class="main">
-              <img class="look-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/the_look_overlay.png" />
+              <img class="look-overlay" style="margin-left: 3px;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/the_look_overlay.png" />
               <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
               <?php
               if (trim($image_one) > '') {
