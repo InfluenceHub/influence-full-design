@@ -82,7 +82,7 @@
 	  <h2 style="text-align:center;"><?php echo $credit_styling ?></h2>
         <h2 style="text-align:center;"> <?php echo $credit_photos ?></h2>
         <h2 style="text-align:center;"> <?php echo $credit_makeup ?></h2><br />
-	   <h3 class="mobile-like">THE INTERVIEW</h3>
+	   <h3>THE INTERVIEW</h3>
             <?php echo the_content(); ?>              
           </div>
           
