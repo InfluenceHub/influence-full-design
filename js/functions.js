@@ -9,8 +9,9 @@ jQuery(function($) {
 
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
   if (isMobile.matches) {
-    $("li.menu-item-has-children a").on('click', function(e){
+    $("li.menu-item-has-children > a").on('click', function(e){
       e.preventDefault();
+      console.log('Something');
       $(this).next('.sub-menu').toggle();
     });
   }
