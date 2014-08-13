@@ -9,7 +9,7 @@
 
   add_theme_support('post-thumbnails');
   add_image_size('inf_makrket_slider',               460, 552, false);
-  add_image_size('inf_home_slider',                  342, 416, true);
+  add_image_size('inf_home_slider',                  330, 518, false);
   add_image_size('inf_home_latest',                  210, 400, true);
   add_image_size('inf_home_latest_shoplook',         90, 400, true);
   add_image_size('inf_styleseeker',                  268, 268, true);
@@ -140,13 +140,13 @@
         list($width_one, $height_one) = getimagesize($image_one_file);
 
         //get da content
-        $content    = apply_filters('the_content', get_post_field('post_content', $list_item->ID));
+        $content    = apply_filters('the_content', get_post_field('hslide_title_two', $list_item->ID));
         //build homepage slide
       ?>
         <li>
           <div class="image-wrap">
             <div class="main">
-              <img class="look-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/the_look_overlay.png" />
+              <img class="look-overlay" style="margin-left: 12px;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/the_look_overlay.png" />
               <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
               <?php
               if (trim($image_one) > '') {
@@ -156,14 +156,14 @@
               </a>
             </div>
             <div class='right'>
-              <div> <img src="<?php echo $side_one ?>"></div>
-              <div> <img src="<?php echo $side_two ?>"></div>
-              <div> <img src="<?php echo $side_three ?>"></div>
+              <div style="margin-bottom: 40px;"> <img src="<?php echo $side_one ?>" height="130px" width="130px"></div>
+              <div style="margin-bottom: 40px;"> <img src="<?php echo $side_two ?>" height="130px" width="130px"></div>
+              <div> <img src="<?php echo $side_three ?>" height="130px" width="130px"></div>
             </div>
           </div>
           <div class='text-wrap'>
             <h2 class="boxes"> <?php echo($longTitle); ?> </h2>
-            <p> <?php
+            <p class="slide-text"> <?php
               echo($content);
               ?> </p>
           </div>
@@ -303,10 +303,9 @@
           </div>
         </div>
         <div class="shell">
-          <div class="section-heading first">	
-           <h2 class="no-mobile" style="margin-top: -25px; border: none;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br />
+         <h2 class="no-mobile" style="border: none; text-align: center;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br />
           </div><!-- /.section-heading -->
-          <ul>
+         <ul>
             <?php
               $latest_theme = inf_get_latest_theme();
               global $post;

@@ -18,19 +18,21 @@ div.home-box img {
 
 .right-arrow, .left-arrow {
   position: absolute;
-  top: 200px;
+  top: 250px;
   z-index: 1000;
-  margin-left: -40px;
+  margin-left: -10px;
   margin-top: -52px;
 }
 
 .boxes {
+  padding-top: 10px;
   word-wrap: break-word;
   font-family: "Oswald", arial, sans-serif;
   font-size: 26px;
   text-transform: uppercase;
 }
 .small-boxes {
+  padding-top: 10px;
   word-wrap: break-word;
   font-family: "Oswald", arial, sans-serif;
   font-size: 18px;
@@ -53,13 +55,15 @@ div.home-box img {
 .text-wrap{
   width: 500px;
   height: 184px;
-  margin-top: 25px;
+  margin-top: 100px;
   text-align: center;
+  border: none;
 }
 
 .image-wrap .main, .image-wrap .right {
   display:inline-block;
   float:left;
+  margin-left: -20px;
 }
 
 .image-wrap .main {
@@ -76,18 +80,18 @@ div.home-box img {
 .image-wrap .main img.look-overlay {
   position:absolute;
   top: 0px;
-  left: 0px;
-  width: 193px;
-  height: 46px;
+  margin-right: -4px;
+  width: 186px;
+  height: 44px;
 }
 
 .image-wrap .main a img {
-  height: 416px;
-  width: 342px;
+  height: 518px;
+  width: 330px;
 }
 
 .top-block {
-  height: 600px ;
+  height: 700px ;
 }
 
 .top-block .column-two {
@@ -104,7 +108,10 @@ div.home-box img {
 .top-block .column div {
   height: 295px;
 }
-
+.slide-text {
+  margin-top: 20px;
+  text-align: center;
+}
 @media screen and (min-width: 700px) {
 .mobile-only {
   display:none;
@@ -4421,17 +4428,20 @@ a#logo {
 }
 
 .latest-home .section-heading.first {
-  background: none repeat scroll 0 0 #FFFFFF;
+  /*background: none repeat scroll 0 0 #FFFFFF;*/
   margin: 0 0 0 -26px;
   padding: 0 26px 25px;
+  text-align: center;
 }
 
 .latest-home .shell {
   height: 100%;
+  text-align: center;
 }
 
 .latest-home .section-heading {
   margin-bottom: 25px;
+  text-align: center;
 }
 
 .latest-home ul {
