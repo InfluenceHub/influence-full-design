@@ -57,6 +57,7 @@ div.home-box img {
   height: 184px;
   margin-top: 120px;
   text-align: center;
+  border: none;
 }
 
 .image-wrap .main, .image-wrap .right {
