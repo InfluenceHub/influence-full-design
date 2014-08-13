@@ -156,8 +156,8 @@
               </a>
             </div>
             <div class='right'>
-              <div style="margin-bottom: 20px;"> <img src="<?php echo $side_one ?>" height="130px" width="130px"></div>
-              <div style="margin-bottom: 20px;"> <img src="<?php echo $side_two ?>" height="130px" width="130px"></div>
+              <div style="margin-bottom: 40px;"> <img src="<?php echo $side_one ?>" height="130px" width="130px"></div>
+              <div style="margin-bottom: 40px;"> <img src="<?php echo $side_two ?>" height="130px" width="130px"></div>
               <div> <img src="<?php echo $side_three ?>" height="130px" width="130px"></div>
             </div>
           </div>
