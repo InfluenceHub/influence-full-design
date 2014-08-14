@@ -108,6 +108,7 @@
               ?>			
 		<!--<a href="<?php //echo get_permalink($influencer_id); ?>" class="shop-viewall">VIEW ALL <?php //echo $influencer_name; ?> LOOKS</a>-->
               <img class="shop-published-by" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
+              <br /><br />
 						</div><!-- /.text-holder -->
 
           </div><!-- /.right-col -->
