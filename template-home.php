@@ -8,7 +8,7 @@ the_post();
 //Detect mobile
 ?>
       <section id="content">
-        <div class="content_wrapper top-block">
+        <div class="top-block">
       <div class="column-two no-mobile">
         <a class="left-arrow no-mobile"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
         <a class="right-arrow no-mobile"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
@@ -37,6 +37,7 @@ the_post();
     <div class="ad_wrapper-block">
       <?php inf_footer_signup() ?>
       <?php //inf_browse_by(); ?>
+      <div class="content_wrapper">
     <?php
       inf_home_latest();
 
