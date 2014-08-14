@@ -4037,6 +4037,7 @@ a#logo {
   height: 80px;
   display: block;
   z-index: 3;
+  margin-top: 20px;
 }
 
 .nav-icons {
