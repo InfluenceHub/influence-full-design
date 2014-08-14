@@ -116,7 +116,7 @@
             //if(!empty($exact_items)) : 
             if(!empty($products_sections)) : 
             ?>
-							<h2 class="prod-section">THE LOOK</h2>
+							<!--<h2 class="prod-section">THE LOOK</h2>-->
 							<div id="shop-slider-small" class="prod-row small">
 								<ul class="slides" style="text-align: center;">
 									<?php 
