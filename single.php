@@ -303,7 +303,7 @@
                       <?php echo get_the_post_thumbnail($r->ID, 'inf_single_more_like'); ?>
                       <div class="shop-link">SHOP</div>
                     </div>
-										<p><?php echo $thisTitle; ?></p>
+										<p class="more-likey"><?php echo $thisTitle; ?></p>
 									</a>
 								</div><!-- /.col_5 -->
 							<?php

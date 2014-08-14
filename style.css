@@ -113,6 +113,10 @@ div.home-box img {
   margin-top: 20px;
   text-align: center;
 }
+.more-likey {
+  font-family: "AvenirNext LT Pro Regular",arial,sans-serif;
+  font-size: 14px;
+}
 @media screen and (min-width: 700px) {
 .mobile-only {
   display:none;
