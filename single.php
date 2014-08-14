@@ -112,7 +112,8 @@
           <br /><br />
 
           </div><!-- /.right-col -->
-						<?php 
+					<br /><br /> 	
+            <?php 
             
             //if(!empty($exact_items)) : 
             if(!empty($products_sections)) : 
