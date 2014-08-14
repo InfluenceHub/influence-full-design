@@ -3981,6 +3981,7 @@ hr.bottomline {
   position: fixed;
   height: 95px;
   padding-top: 5px;
+  z-index: 99;
 }
 
 #header_inner {
