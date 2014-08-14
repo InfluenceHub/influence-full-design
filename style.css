@@ -47,7 +47,11 @@ div.home-box img {
 .left-arrow {
   left: 0px;
 }
-
+.breaker-shell {
+  width: 600px;
+  height: 69px;
+  background-image: url('images/breaker.png');
+}
 .image-wrap {
   height: 416px;
 }
