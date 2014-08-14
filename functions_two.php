@@ -494,8 +494,8 @@
                           <?php 
 
                                 $title = $post->post_title;
-                                if (strlen($title) > 55) {
-                                  $title = substr($title, 0, 55) . '...';
+                                if (strlen($title) > 50) {
+                                  $title = substr($title, 0, 50) . '...';
                                 }
                           ?>
                             <h2><?php echo $title ?></h2>
