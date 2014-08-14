@@ -9,9 +9,9 @@ the_post();
 ?>
       <section id="content">
         <div class="content_wrapper top-block">
-      <div class="column-two">
-        <a class="left-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
-        <a class="right-arrow"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
+      <div class="column-two no-mobile">
+        <a class="left-arrow no-mobile"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
+        <a class="right-arrow no-mobile"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
         <?php inf_home_topslider()?>
       </div>
       <div class="column">
