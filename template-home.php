@@ -23,7 +23,7 @@ the_post();
             <p class="small-boxes"> <?php echo substr( $box1->post_content, 0, 60) . ''; ?> </p>
           </a>
         </div>
-        <div style="margin-top: -25px;">
+        <div style="margin-top: -50px;">
           <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
             <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
           </a>
@@ -36,7 +36,7 @@ the_post();
             <p class= "small-boxes"> <?php echo substr( $box2->post_content, 0, 60) . ''; ?></p>
           </a>
         </div>
-        <div style="margin-top: -25px;">        
+        <div style="margin-top: -50px;">        
           <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
             <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
           </a>
