@@ -428,7 +428,7 @@
                         </div> <!-- END .home-feed-post-info -->
                         <br />
                   </li>
-                <div class="breaker-image"></div>
+                <div class="breaker-shell"></div>
                 <?php elseif ($k == 7 && !is_null($latest_theme)): // replace the last one with a featured theme, if it exists ?>
                   <?php $post = $latest_theme ?>
                   <li class="column home-feed-post home-feed-side-by-side">
