@@ -6291,7 +6291,7 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
 .latest-home li p.home-feed-pcontent { /* Need to break specified generic selectors (.latest-home li p) */
   border-top: none;
   text-align: left;
-  font-family: 'AvenirNext LT Pro Regular', 'din_promedium', 'din_prolight', arial;
+  font-family: 'AvenirNext LT Pro Regular',arial,sans-serif;
   font-size: 12px;
   letter-spacing: 0;
   line-height: 16px;
@@ -6381,6 +6381,6 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
       height: 10%;
     }
   #header.pinned {
-    display: none;
+    border: none;
   }
 }
