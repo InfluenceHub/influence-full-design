@@ -36,7 +36,18 @@
                 inf_social_share($thisURL, $influencer_name, $img_obj[0], $thisDESC);
                 $category_link = get_category_link($post_categories[0]->term_id);
               ?>
-        <?php
+              <div class="inner">
+								<ul class="slides"><?php endif; ?>
+								<li><a href="<?php echo $img_obj[0]; ?>" class="colorbox">
+									<?php the_post_thumbnail('inf_single_image', array('class' => 'inf_single_image')); ?>
+								</a></li>
+                <?php inf_shop_slider(); ?>
+                </ul>
+                <!--<div class="shop-featured-prev">&nbsp;</div>
+                <div class="shop-featured-next">&nbsp;</div> -->
+							</div><!-- /.inner -->
+						<?php endif; ?>
+                    <?php
         if (!empty($post_categories)) {
           echo '<div class="category-list">';
           $caption = the_post_thumbnail_caption($post->ID);
@@ -50,17 +61,6 @@
           echo '</div>';
         }
         ?>
-              <div class="inner">
-								<ul class="slides"><?php endif; ?>
-								<li><a href="<?php echo $img_obj[0]; ?>" class="colorbox">
-									<?php the_post_thumbnail('inf_single_image', array('class' => 'inf_single_image')); ?>
-								</a></li>
-                <?php inf_shop_slider(); ?>
-                </ul>
-                <!--<div class="shop-featured-prev">&nbsp;</div>
-                <div class="shop-featured-next">&nbsp;</div> -->
-							</div><!-- /.inner -->
-						<?php endif; ?>
 					</div><!-- /.left-col -->
 					<div class="right-col right">
 						<?php
