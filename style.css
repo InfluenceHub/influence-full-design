@@ -6380,4 +6380,7 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
     div.nav {
       height: 10%;
     }
+  #header.pinned {
+    display: none;
+  }
 }
