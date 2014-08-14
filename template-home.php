@@ -24,15 +24,20 @@ the_post();
             <img height="43px" width="134px"src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
           </a>
         </div>
+          <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
+            <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
+          </a>
         <div class="home-box">
           <?php $box2 = inf_home_box2(); ?>
           <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
             <?php echo get_the_post_thumbnail($box2->ID, 'inf_home_box2') ?>
             <h2 class="boxes"> <?php echo $box2->post_title ?> </h2>
             <p class= "small-boxes"> <?php echo substr( $box2->post_content, 0, 60) . ''; ?></p>
-            <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
           </a>
         </div>
+          <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
+            <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
+          </a>
       </div>
     </div>
 
