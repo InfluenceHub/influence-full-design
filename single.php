@@ -163,8 +163,7 @@
 						<?php endif; ?>
 					</div><!-- /.right-col -->
           </div><!-- /.column-three -->
-				</div><!-- /.shop-main -->
-        <?php
+           <?php
         if (!empty($post_categories)) {
           echo '<div class="category-list">';
           $caption = the_post_thumbnail_caption($post->ID);
@@ -178,6 +177,8 @@
           echo '</div>';
         }
         ?>
+				</div><!-- /.shop-main -->
+       
         <div class="bottom">
 				<?php $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
 
