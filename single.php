@@ -36,6 +36,20 @@
                 inf_social_share($thisURL, $influencer_name, $img_obj[0], $thisDESC);
                 $category_link = get_category_link($post_categories[0]->term_id);
               ?>
+        <?php
+        if (!empty($post_categories)) {
+          echo '<div class="category-list">';
+          $caption = the_post_thumbnail_caption($post->ID);
+          if (trim($caption) > '') {
+            echo '<span>' . trim($caption) . '</span> ';
+          }
+          foreach($post_categories as $post_category) {
+            $category_link = get_category_link($post_category->term_id);
+            echo '<a href="'.$category_link.'">'.strtolower($post_category->name).'</a>';
+          }
+          echo '</div>';
+        }
+        ?>
               <div class="inner">
 								<ul class="slides"><?php endif; ?>
 								<li><a href="<?php echo $img_obj[0]; ?>" class="colorbox">
@@ -95,20 +109,7 @@
 		<!--<a href="<?php //echo get_permalink($influencer_id); ?>" class="shop-viewall">VIEW ALL <?php //echo $influencer_name; ?> LOOKS</a>-->
               <img class="shop-published-by" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
 						</div><!-- /.text-holder -->
-                       <?php
-        if (!empty($post_categories)) {
-          echo '<div class="category-list">';
-          $caption = the_post_thumbnail_caption($post->ID);
-          if (trim($caption) > '') {
-            echo '<span>' . trim($caption) . '</span> ';
-          }
-          foreach($post_categories as $post_category) {
-            $category_link = get_category_link($post_category->term_id);
-            echo '<a href="'.$category_link.'">'.strtolower($post_category->name).'</a>';
-          }
-          echo '</div>';
-        }
-        ?>
+
           </div><!-- /.right-col -->
 						<?php 
             
