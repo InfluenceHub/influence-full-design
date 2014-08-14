@@ -111,7 +111,6 @@
 						</div><!-- /.text-holder -->
 
           </div><!-- /.right-col --> 	
-          <br />
             <?php 
             
             //if(!empty($exact_items)) : 
