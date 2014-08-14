@@ -514,7 +514,6 @@
 
                   </li>
                 <?php endif; ?>
-               <img width="600px" height="59px" src='<?php echo get_stylesheet_directory_uri(); ?>/images/breaker.png' />                
 
                   <?php
 
@@ -522,6 +521,8 @@
 
               } // end foreach $latest_posts as $post
             ?>
+                         <img width="600px" height="59px" src='<?php echo get_stylesheet_directory_uri(); ?>/images/breaker.png' />                
+
           </ul><!-- /.recent-list -->
           <!-- HOME PAGE 300 X 900 AD SPACE -->
           <div class="column adcolumn no-mobile">
