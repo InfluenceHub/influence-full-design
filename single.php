@@ -91,15 +91,24 @@
                 }
                 echo $content;
                 */
-              ?>
-		<div class="mobile-like">
-<div class="fb-like" data-href="http://www.theinfluence.com" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div><br />
-                   <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true" data-count="none" data-via="twitterapi">Tweet</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		</div>					
+              ?>			
 		<!--<a href="<?php //echo get_permalink($influencer_id); ?>" class="shop-viewall">VIEW ALL <?php //echo $influencer_name; ?> LOOKS</a>-->
               <img class="shop-published-by" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
 						</div><!-- /.text-holder -->
+                       <?php
+        if (!empty($post_categories)) {
+          echo '<div class="category-list">';
+          $caption = the_post_thumbnail_caption($post->ID);
+          if (trim($caption) > '') {
+            echo '<span>' . trim($caption) . '</span> ';
+          }
+          foreach($post_categories as $post_category) {
+            $category_link = get_category_link($post_category->term_id);
+            echo '<a href="'.$category_link.'">'.strtolower($post_category->name).'</a>';
+          }
+          echo '</div>';
+        }
+        ?>
           </div><!-- /.right-col -->
 						<?php 
             
@@ -163,20 +172,6 @@
 						<?php endif; ?>
 					</div><!-- /.right-col -->
           </div><!-- /.column-three -->
-           <?php
-        if (!empty($post_categories)) {
-          echo '<div class="category-list">';
-          $caption = the_post_thumbnail_caption($post->ID);
-          if (trim($caption) > '') {
-            echo '<span>' . trim($caption) . '</span> ';
-          }
-          foreach($post_categories as $post_category) {
-            $category_link = get_category_link($post_category->term_id);
-            echo '<a href="'.$category_link.'">'.strtolower($post_category->name).'</a>';
-          }
-          echo '</div>';
-        }
-        ?>
 				</div><!-- /.shop-main -->
        
         <div class="bottom">
