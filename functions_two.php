@@ -427,6 +427,8 @@
                             
                         </div> <!-- END .home-feed-post-info -->
                   </li>
+                <?php endforeach; ?>
+                 <img width="600px" height="59px" src='<?php echo get_stylesheet_directory_uri(); ?>/images/breaker.png' />                
 
                 <?php elseif ($k == 7 && !is_null($latest_theme)): // replace the last one with a featured theme, if it exists ?>
 
@@ -521,7 +523,6 @@
 
               } // end foreach $latest_posts as $post
             ?>
-                         <img width="600px" height="59px" src='<?php echo get_stylesheet_directory_uri(); ?>/images/breaker.png' />                
 
           </ul><!-- /.recent-list -->
           <!-- HOME PAGE 300 X 900 AD SPACE -->
