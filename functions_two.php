@@ -427,7 +427,7 @@
                             
                         </div> <!-- END .home-feed-post-info -->
                         <br />
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/breaker.png" />
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/breaker.png" width="600px" height="59px" />
                   </li>
                 <?php elseif ($k == 7 && !is_null($latest_theme)): // replace the last one with a featured theme, if it exists ?>
                   <?php $post = $latest_theme ?>
