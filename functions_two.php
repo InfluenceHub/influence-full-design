@@ -430,10 +430,11 @@
                  <br />
 
                 <?php elseif ($k == 7 && !is_null($latest_theme)): // replace the last one with a featured theme, if it exists ?>
-                  <?php $post = $latest_theme ?>
                 <div class="breaker-shell">
                   <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/breaker.png" />
-                </div> 
+                </div>
+                  <?php $post = $latest_theme ?>
+
                   <li class="column home-feed-post home-feed-side-by-side">
                         <div class="home-feed-post-img-wrap">
                           <a href="<?php the_permalink(); ?>">
