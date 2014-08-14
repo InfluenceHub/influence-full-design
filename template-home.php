@@ -32,6 +32,7 @@ the_post();
           </a>
         </div>
       </div>
+    </div>
 
     <div class="ad_wrapper-block">
       <?php inf_footer_signup() ?>
