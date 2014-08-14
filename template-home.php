@@ -21,7 +21,7 @@ the_post();
             <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1') ?>
             <h2 class="boxes"> <?php echo $box1->post_title ?> </h2>
             <p class="small-boxes"> <?php echo substr( $box1->post_content, 0, 60) . ''; ?> </p>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
+            <img height="43px" width="134px"src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
           </a>
         </div>
         <div class="home-box">
@@ -30,7 +30,7 @@ the_post();
             <?php echo get_the_post_thumbnail($box2->ID, 'inf_home_box2') ?>
             <h2 class="boxes"> <?php echo $box2->post_title ?> </h2>
             <p class= "small-boxes"> <?php echo substr( $box2->post_content, 0, 60) . ''; ?></p>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
+            <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
           </a>
         </div>
       </div>
