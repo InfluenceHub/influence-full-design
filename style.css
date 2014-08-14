@@ -4166,7 +4166,7 @@ a#logo {
 .nav > ul > li > a {
   display: block;
   font: normal 12px "AvenirNext LT Pro Regular", arial, sans-serif;
-  letter-spacing: .75px;
+  letter-spacing: .65px;
   color: #000;
   text-transform: uppercase;
   text-align: center;
