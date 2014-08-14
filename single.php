@@ -36,6 +36,7 @@
                 inf_social_share($thisURL, $influencer_name, $img_obj[0], $thisDESC);
                 $category_link = get_category_link($post_categories[0]->term_id);
               ?>
+              <br /><br />
               <div class="inner">
 								<ul class="slides"><?php endif; ?>
 								<li><a href="<?php echo $img_obj[0]; ?>" class="colorbox">
