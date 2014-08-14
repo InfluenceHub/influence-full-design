@@ -155,11 +155,13 @@
               ?>
               </a>
             </div>
+            <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
             <div class='right'>
               <div style="margin-bottom: 40px;"> <img src="<?php echo $side_one ?>" height="130px" width="130px"></div>
               <div style="margin-bottom: 40px;"> <img src="<?php echo $side_two ?>" height="130px" width="130px"></div>
               <div> <img src="<?php echo $side_three ?>" height="130px" width="130px"></div>
             </div>
+            </a>
           </div>
           <div class='text-wrap'>
             <h2 class="boxes"> <?php echo($longTitle); ?> </h2>
