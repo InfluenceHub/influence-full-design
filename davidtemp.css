@@ -209,6 +209,7 @@ body.home #content .content_wrapper {
 /* Shop */
 .category-list, .category-list > a {
  color: #000;
+ padding-top: 5px;
 }
 .shop-main .left-col .inner {
   height: 518px;
