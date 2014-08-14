@@ -280,7 +280,7 @@
 
 			if(!empty($random)) : ?>
 				<div class="cols morelike">
-          <h2 class="prod-section" style="font-family: "AvenirNext LT Pro Regular", arial, sans-serif; font-weight: lighter; font-size: 24px; color: #000; text-align: center; text-transform: uppercase;">More Like This</h2>
+          <h2 class="prod-section" style="font-family: 'AvenirNext LT Pro Regular', arial, sans-serif; font-weight: lighter; font-size: 24px; color: #000; text-align: center; text-transform: uppercase;">More Like This</h2>
 					<div class="row no-border">
 						<?php foreach($random as $r) :
 
