@@ -28,7 +28,7 @@ div.home-box img {
   padding-top: 10px;
   word-wrap: break-word;
   font-family: "Oswald", arial, sans-serif;
-  font-size: 26px;
+  font-size: 24px;
   text-transform: uppercase;
 }
 .small-boxes {
@@ -6211,8 +6211,8 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
     white-space: normal;
     font-family: "Oswald", arial, sans-serif;
     border-bottom: none;
-    font-weight: normal;
-    font-size: 26px;
+    font-weight: light;
+    font-size: 24px;
     letter-spacing: 0.3px;
     text-transform: uppercase;
     border: none;
