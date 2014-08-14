@@ -32,9 +32,8 @@ div.home-box img {
   text-transform: uppercase;
 }
 .small-boxes {
-  padding-top: 10px;
   word-wrap: break-word;
-  font-family: "Oswald", arial, sans-serif;
+  font-family: "AvenirNext LT Pro Regular", arial, sans-serif;
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -1799,7 +1798,7 @@ div.adspot {
 }
 
 .bottom-section .shell h2 {
-  font: 18px/35px "AvenirNext LT Pro AvenirNextLTPro-BoldCn",arial,sans-serif;
+  font: 18px/35px "Oswald",arial,sans-serif;
   letter-spacing: .75px;
   height: 25px;
   color: #000;
