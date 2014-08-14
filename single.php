@@ -143,10 +143,10 @@
                       <?php //inf_social_share($product_link, get_the_title($post_id), wp_get_attachment_thumb_url($post_id), get_the_title($post_id)); ?>
 												<?php if(has_post_thumbnail($post_id)) : ?>
 													<span class="img-hold">
+                        <a href="<?php echo esc_url($product_link); ?>" target="_blank" title="<?php echo $product_designer . ' -- ' . get_the_title($post_id); ?>">
 														<?php echo get_the_post_thumbnail($post_id, 'inf_single_product_new'); ?>
 													</span> 
 												<?php endif; ?>
-                      <a href="<?php echo esc_url($product_link); ?>" target="_blank" title="<?php echo $product_designer . ' -- ' . get_the_title($post_id); ?>">
 												<h5 style="font-weight: bold;"><?php echo $shortDesigner; ?></h5>
 												<h5><?php echo $shortTitle; ?></h5>
 												<?php
