@@ -34,7 +34,8 @@ div.home-box img {
 .small-boxes {
   word-wrap: break-word;
   font-family: "AvenirNext LT Pro Regular", arial, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
+  margin-top: -5px;
 }
 
 .right-arrow {
