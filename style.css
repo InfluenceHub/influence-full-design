@@ -111,7 +111,9 @@ div.home-box img {
   height: 295px;
 }
 .slide-text {
-  margin-top: 20px;
+  font-family: "AvenirNext LT Pro Regular",arial,sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
   text-align: center;
 }
 .more-likey {
