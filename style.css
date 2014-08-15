@@ -93,7 +93,7 @@ div.home-box img {
 }
 
 .top-block {
-  height: 700px ;
+  height: 1000px ;
 }
 
 .top-block .column-two {
@@ -112,7 +112,7 @@ div.home-box img {
 }
 .slide-text {
   font-family: "AvenirNext LT Pro Regular",arial,sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 10px;
   text-align: center;
 }
