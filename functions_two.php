@@ -164,10 +164,10 @@
             </a>
           </div>
           <div class='text-wrap'>
-            <h2 class="boxes"> <?php echo($longTitle); ?> </h2>
+            <h2 class="boxes"> <?php echo($longTitle); ?></h2>
             <p class="slide-text"> <?php
               echo($content);
-              ?> </p>
+              ?></p>
           </div>
         </li>
       <?php 
