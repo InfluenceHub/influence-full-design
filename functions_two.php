@@ -115,6 +115,7 @@
         $title      = trim(get_the_title($list_item->ID));
         $title_two  = trim(carbon_get_post_meta($list_item->ID, 'hslide_title_two'));
         $slide_link = trim(carbon_get_post_meta($list_item->ID, 'hslide_link_url'));
+        $subtext = trim(carbon_get_post_meta($list_item->ID, 'hslide_subtext'));
         $longTitle = $title . ' ' . $title_two;
 
         //retrieve images from post meta data
@@ -166,7 +167,7 @@
           <div class='text-wrap'>
             <h2 class="boxes"><?php echo($longTitle); ?></h2>
             <p class="slide-text"><?php
-              echo($content);
+              echo($subtext);
               ?></p>
           </div>
         </li>

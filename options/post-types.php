@@ -247,7 +247,7 @@ register_post_type('inf_market', array(
 
 register_post_type('inf_home_box1', array(
 	'labels' => array(
-		'name'	 => 'Home Box 2',
+		'name'	 => 'Home Box 1',
 		'singular_name' => 'Home Box',
 		'add_new' => __( 'Add New' ),
 		'add_new_item' => __( 'Add new Home Box Story' ),
@@ -274,7 +274,7 @@ register_post_type('inf_home_box1', array(
 ));
 register_post_type('inf_home_box2', array(
 	'labels' => array(
-		'name'	 => 'Home Box 1',
+		'name'	 => 'Home Box 2',
 		'singular_name' => 'Home Box',
 		'add_new' => __( 'Add New' ),
 		'add_new_item' => __( 'Add new Home Box Story' ),
