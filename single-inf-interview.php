@@ -79,9 +79,9 @@
             $credit_photos   = 'Photography by ' . carbon_get_the_post_meta('inf_credit_photo');
             $credit_makeup  = 'Make-up and Hair by ' . carbon_get_the_post_meta('inf_credit_makeup');
  	   ?>
-	  <h2 style="text-align:center;"><?php echo $credit_styling ?></h2>
+	  <!--<h2 style="text-align:center;"><?php echo $credit_styling ?></h2>
         <h2 style="text-align:center;"> <?php echo $credit_photos ?></h2>
-        <h2 style="text-align:center;"> <?php echo $credit_makeup ?></h2><br />
+        <h2 style="text-align:center;"> <?php echo $credit_makeup ?></h2>--><br />
 	   <h3>THE INTERVIEW</h3>
             <?php echo the_content(); ?>              
           </div>
