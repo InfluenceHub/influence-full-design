@@ -6406,14 +6406,14 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
 }
 
 .theme-archive-image-link {
-  display: block; 
+  display: inline-block; 
   text-align: left; 
   margin-top: 0px;
 }
 
 
 .theme-archive-title-link {
-  display: block; 
+  display: inline-block; 
   text-align: center; 
   margin-top: 0px;
 }
