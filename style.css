@@ -2992,7 +2992,7 @@ a.subscribe-img-home {
   text-align: center;
   font: 20px/45px "BaskervilleBT-Italic",arial, sans-serif;
   text-transform: uppercase;
-  color: #000;
+  color: #fff;
   letter-spacing: 2.5px;
   font-weight: normal;
 }
@@ -3021,6 +3021,7 @@ a.subscribe-img-home {
   margin: 0 auto;
   border-left: 5px solid #d6f7eb;
   padding-left: 10px;
+  padding-top: 50px;
 }
 
 .sign-in-pop .inner.reset {
