@@ -129,6 +129,7 @@ div.home-box img {
   background-image: url('images/viewmoreblack.png');
   height: 43px;
   width: 134px;
+  margin-top: -5px;
 }
 .cta-shop-look {
   height: 43px;
@@ -138,6 +139,7 @@ div.home-box img {
   background-image: url('images/shopthelookblack.png');
   height: 43px;
   width: 134px;
+  margin-top: -5px;
 }
 @media screen and (min-width: 700px) {
 .mobile-only {
