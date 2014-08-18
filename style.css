@@ -3084,6 +3084,7 @@ a.subscribe-img-home {
   font-size: 14px;
   font-family: "Oswald";
   border-bottom: 1px solid #fff;
+  letter-spacing: 1.3px;
   position: relative;
   margin-left: 20px;
 
@@ -3092,7 +3093,6 @@ a.subscribe-img-home {
   color: #fff;
   font-size: 10px;
   font-family: "Oswald",arial,sans-serif;
-  letter-spacing: 1.3px;
   text-align: center;
 }
 
