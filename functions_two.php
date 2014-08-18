@@ -169,9 +169,6 @@
             <p class="slide-text"><?php
               echo($subtext);
               ?>
-          <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
-           <img style="text-align: center;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthelook.png" />
-           </a>
               </p>
           </div>
         </li>
@@ -181,6 +178,9 @@
       // close ul container
        ?>
       </ul>
+            <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
+           <img style="text-align: center;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthelook.png" />
+           </a>
       
   <?php
   }
