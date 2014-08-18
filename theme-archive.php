@@ -34,7 +34,7 @@ the_post();
             
             foreach ($themes as $k => $post) {
                 setup_postdata($post);
-                $attachments = new Attachments('inf_featured_images', $post->ID);
+                $attachments = new Attachments('inf_featured_image', $post->ID);
               ?>
 
                 <div class="column-three">
@@ -50,7 +50,7 @@ the_post();
                           if($attachments->exist()){
                             $first_attachment = $attachments->get_single(0);
 
-                            $image = wp_get_attachment_image_src($first_attachment->id, 'inf_interviewslider');
+                            $image = wp_get_attachment_image_src($first_attachment->id, 'inf_featured_image');
 
                             echo '<img src="'.$image[0].'" style="width:100%">';
 
