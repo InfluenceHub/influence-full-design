@@ -537,8 +537,8 @@
           </ul><!-- /.recent-list -->
           <!-- HOME PAGE 300 X 900 AD SPACE -->
           <div class="column adcolumn no-mobile">
-          <a href="http://click.linksynergy.com/fs-bin/click?id=pwlaa2*cgnI&offerid=276224.10013359&subid=0&type=4">
-           <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nordstrom2.jpg" />
+          <a href="http://www.anrdoezrs.net/click-7580048-11914509">
+           <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nastydenim.gif" />
           </a>
           <a href="https://www.thehunt.com/the-hunt/6Dmf7D-janel-on-the-hunt-">
            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/thehunt.jpg" />
