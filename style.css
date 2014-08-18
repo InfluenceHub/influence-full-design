@@ -6422,6 +6422,8 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
   margin-top: 0px;
   border-bottom: 1px solid #CCC;
   margin-bottom: 30px;
+}
+.theme-image-sizer {
   max-width: 380px;
   max-height: 300px;
 }
