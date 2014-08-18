@@ -169,9 +169,10 @@
             <p class="slide-text"><?php
               echo($subtext);
               ?></p>
+           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthelook.png" />
+
           </div>
         </li>
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthelook.png" />
 
       <?php 
       }
