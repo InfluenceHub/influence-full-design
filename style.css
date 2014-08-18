@@ -5,6 +5,7 @@ div.home-box img {
 
 .top-block {
   border: 0 !important;
+  margin-left: -15px;
 }
 
 .top-block .slides {
