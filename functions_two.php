@@ -299,13 +299,14 @@
 
      ?>
       <div class="latest-home group">
+     <h2 class="no-mobile" style="border: none; text-align: center;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br />
+
         <div class="sideads_wrapper no-mobile">
           <div class="sidead leftad">
           </div>
           <div class="sidead rightad">
           </div>
         </div>
-    <h2 class="no-mobile" style="border: none; text-align: center;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br />
         <div class="shell">
           </div><!-- /.section-heading -->
          <ul>
