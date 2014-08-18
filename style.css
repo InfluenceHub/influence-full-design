@@ -6426,6 +6426,7 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
 .theme-image-sizer {
   width: 380px;
   height: 300px;
+  overflow: hidden;
 }
 
 
