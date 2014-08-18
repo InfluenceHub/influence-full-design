@@ -6402,9 +6402,7 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
 .theme-archive-column-left {
   width: 100%;
   display: block;
-  float: center;
-  margin-left: 25%;
-  margin-right: 75%;
+  margin-left: 15%;
 }
 
 .theme-archive-image-link {
