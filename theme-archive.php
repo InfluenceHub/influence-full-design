@@ -36,14 +36,12 @@ the_post();
 
                 <div class="column-three">
                     <div class="theme-archive-column-left">
-                  <div class="theme-image-sizer">           
                     <a href="<?php the_permalink() ?>" class="theme-archive-image-link">
                           <?php if (has_post_thumbnail()) {
                               the_post_thumbnail('inf_featured_theme');
+                              set_post_thumbnail_size( 380, 300 );
+
                           } ?>  
-                    </a>
-                  </div>
-                    <a href="<?php the_permalink() ?>" class="theme-archive-title-link">
                         <h3 style="font-family: BaskervilleBT-Italic; font-weight: 300; text-transform: none; font-size: 30px;"><?php the_title(); ?></h3>
                       </a>
                     </div>
