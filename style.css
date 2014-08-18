@@ -3084,6 +3084,7 @@ a.subscribe-img-home {
   font: 12px "Oswald",arial,sans-serif;
   border-bottom: 1px solid #fff;
   position: relative;
+  padding-left: 10px;
 }
 .sign-in-pop p.status {
   color: #fff;
