@@ -48,6 +48,8 @@ the_post();
       <?php inf_footer_signup() ?>
       <?php //inf_browse_by(); ?>
       <div class="content_wrapper">
+        <h2 class="no-mobile" style="border: none; text-align: center;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
+
     <?php
       inf_home_latest();
 
