@@ -38,7 +38,7 @@ the_post();
               ?>
 
                 <div class="column-three">
-                    <div class="column-left int-archive-column-left">
+                    <div class="column-left theme-archive-column-left">
                       <a href="<?php the_permalink() ?>" class="int-archive-title-link">
                           <?php if (has_post_thumbnail()) {
                               the_post_thumbnail('inf_featured_theme');
@@ -46,7 +46,7 @@ the_post();
                         <h3 style="font-family: BaskervilleBT-Italic; font-weight: 300; text-transform: none; font-size: 30px;"><?php the_title(); ?></h3>
                       </a>
                     </div>
-                    <div class="column-right int-archive-column-right">
+                    <!--<div class="column-right int-archive-column-right">
                       <div class="int-archive-image-link-wrap">
                         <?php 
                           if($attachments->exist()){
@@ -63,7 +63,7 @@ the_post();
                         </a>
                       </div>
                     </div>
-                </div>
+                </div> -->
               <?php 
 
               $blockcount++;
