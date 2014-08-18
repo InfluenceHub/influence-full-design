@@ -46,8 +46,8 @@ the_post();
                           <?php if (has_post_thumbnail()) {
                               the_post_thumbnail('inf_featured_theme');
                           } ?>  
-                    </a>
                     </div>
+                    </a>
                         <h3 style="font-family: BaskervilleBT-Italic; font-weight: 300; text-transform: none; font-size: 30px;"><?php the_title(); ?></h3>
                       </a>
                     </div>
