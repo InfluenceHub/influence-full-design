@@ -2982,15 +2982,16 @@ a.subscribe-img-home {
   right: 180px;
   top: 175px;
   width: 350px;
-  height: 153px;
+  height: 250px;
   background: #000;
-  opacity: .75;
+  opacity: .90;
   display: none;
 }
 
 .sign-in-pop h3 {
   text-align: center;
-  font: 20px/45px "Oswald",arial, sans-serif;
+  font: 20px/45px "BaskervilleBT-Italic",arial, sans-serif;
+  text-transform: uppercase;
   color: #000;
   letter-spacing: 2.5px;
   font-weight: normal;
@@ -3019,7 +3020,7 @@ a.subscribe-img-home {
   width: 326px;
   margin: 0 auto;
   border-left: 5px solid #d6f7eb;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
 .sign-in-pop .inner.reset {
