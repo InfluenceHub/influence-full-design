@@ -25,6 +25,7 @@ the_post();
         </div>
         <div style="margin-top: -30px;">
           <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox1_link_url'); ?>" class="cta-view-more">
+          View More
           </a>
           </div>
         <div class="home-box" style="margin-top: -210px;">
