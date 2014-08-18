@@ -169,8 +169,8 @@
             <p class="slide-text"><?php
               echo($subtext);
               ?>
-          <a style="text-align: center;" href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
-           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthelook.png" />
+          <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
+           <img style="text-align: center;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthelook.png" />
            </a>
               </p>
           </div>
