@@ -39,14 +39,11 @@ the_post();
 
                 <div class="column-three">
                     <div class="theme-archive-column-left">
-                    <div class="theme-archive-image-link-wrap">
-                    <a class="theme-archive-image-link-overlay" href="<?php the_permalink() ?>">
+                    <a href="<?php the_permalink() ?>" class="theme-archive-image-link">
                     View More
                           <?php if (has_post_thumbnail()) {
                               the_post_thumbnail('inf_featured_theme');
                           } ?>  
-                  </div>
-
                         <h3 style="font-family: BaskervilleBT-Italic; font-weight: 300; text-transform: none; font-size: 30px;"><?php the_title(); ?></h3>
                       </a>
                     </div>
