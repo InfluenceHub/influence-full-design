@@ -43,7 +43,7 @@ the_post();
                           } ?>  
                     </a>
                   </div>
-                    <a href="<?php the_permalink() ?>" class="theme-archive-image-link">
+                    <a href="<?php the_permalink() ?>" class="theme-archive-title-link">
                         <h3 style="font-family: BaskervilleBT-Italic; font-weight: 300; text-transform: none; font-size: 30px;"><?php the_title(); ?></h3>
                       </a>
                     </div>
