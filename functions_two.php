@@ -177,10 +177,11 @@
       }
       // close ul container
        ?>
-      </ul>
-            <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
+      <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
            <img style="text-align: center;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthelook.png" />
-           </a>
+     </a>
+      </ul>
+
       
   <?php
   }
