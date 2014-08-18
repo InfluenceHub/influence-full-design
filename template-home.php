@@ -24,7 +24,7 @@ the_post();
           </a>
         </div>
         <div style="margin-top: -30px;">
-          <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox1_link_url'); ?>" class="cta-view-more">
+          <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox1_link_url'); ?>">
             <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
           </a>
           </div>
@@ -37,7 +37,7 @@ the_post();
           </a>
         </div>
         <div style="margin-top: -30px;">        
-          <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>" class="cta-view-more">
+          <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
             <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
           </a>
           </div>
