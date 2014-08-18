@@ -3080,14 +3080,14 @@ a.subscribe-img-home {
 }
 
 .sign-in-pop .switchform {
-  color: #000;
+  color: #fff;
   position: absolute;
   bottom: 13px;
   left: 12px;
   font: 12px "futura-pt", arial,sans-serif;
 }
 .sign-in-pop p.status {
-  color: #000;
+  color: #fff;
   font: 10px "futura-pt",arial,sans-serif;
   text-align: center;
 }
