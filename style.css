@@ -3001,7 +3001,7 @@ a.subscribe-img-home {
 
 .sign-in-pop .close {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 30px;
   height: 30px;
@@ -3010,7 +3010,7 @@ a.subscribe-img-home {
 }
 .sign-in-pop .close:hover {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 30px;
   height: 30px;
