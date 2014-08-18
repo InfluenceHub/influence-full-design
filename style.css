@@ -784,6 +784,7 @@ img.alignleft {
 #content > div {
   width: 968px;
   margin: 0 auto 29px auto;
+  overflow:hidden;
 }
 
 #content .ad_wrapper-block  > div {
@@ -897,10 +898,8 @@ div.ad_banner img {
 }
 
 .browse {
-  position: fixed;
   width: 100% !important;
   background: #000;
-  bottom: 0;
   text-align: center;
   z-index: 10;
   margin-bottom: 0 !important;
@@ -4320,10 +4319,12 @@ a#logo {
 
 .latest-home .shell {
   height: 100%;
+  text-align: center;
 }
 
 .latest-home .section-heading {
   margin-bottom: 25px;
+  text-align: center;
 }
 
 .latest-home ul {
@@ -6255,4 +6256,23 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
     div.nav {
       height: 10%;
     }
+}
+.fixed_social_block {
+position: fixed;
+right: 0px;
+top: 165px;
+width: 40px;
+height: 240px;
+z-index: 999;
+background: url('social.png') no-repeat;
+}
+.fixed_social_block a {
+display: block;
+width: 40px;
+height: 40px;
+margin-top: 1px;
+font-size: 0;
+}
+.fixed_social_block a:first-child {
+margin-top: 0;
 }
