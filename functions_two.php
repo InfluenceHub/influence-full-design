@@ -298,9 +298,8 @@
 
 
      ?>
+     <h2 class="no-mobile" style="border: none; text-align: center;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
       <div class="latest-home group">
-     <h2 class="no-mobile" style="border: none; text-align: center;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br />
-
         <div class="sideads_wrapper no-mobile">
           <div class="sidead leftad">
           </div>
