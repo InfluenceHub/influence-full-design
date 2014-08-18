@@ -6401,14 +6401,14 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
 
 .theme-archive-column-left {
   width: 100%;
-  display: inline-block;
+  display: inline;
   float: left;
 }
 
 .theme-archive-title-link {
   display: block; 
   text-align:center; 
-  margin-top:300px;
+  margin-top: 0px;
 }
 
 .theme-archive-image-link-wrap {
