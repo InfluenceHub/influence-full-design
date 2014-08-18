@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: Interview Archive
+* Template Name: Theme Archive
 */
 get_header();
 the_post();
