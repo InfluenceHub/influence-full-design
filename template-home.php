@@ -43,12 +43,13 @@ the_post();
           </div>
       </div>
     </div>
-      <h2 class="no-mobile" style="border: none; text-align: center;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
 
     <div class="ad_wrapper-block">
 
       <?php inf_footer_signup() ?>
       <?php //inf_browse_by(); ?>
+     <h2 class="no-mobile" style="border: none; text-align: center;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
+
       <div class="content_wrapper">
 
     <?php
