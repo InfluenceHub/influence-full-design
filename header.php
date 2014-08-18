@@ -77,6 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MCHHLQ');</script>
 <!-- End Google Tag Manager 2-->
+<div class="fixed_social_block"><a href="https://www.facebook.com/ShopTheInfluence" target="_blank">Facebook</a><a href="https://twitter.com/theinfluence" target="_blank">twitter</a><a href="http://www.pinterest.com/theinfluencepin/" target="_blank">pinterest</a><a href="http://theinfluencecom.tumblr.com/" target="_blank">tumblr</a><a href="https://plus.google.com/112763177055912795781/" target="_blank">google+</a><a href="https://www.youtube.com/user/TheInfluenceStyle" target="_blank">youtube</a></div>
     <?php if (is_front_page()) { ?>
     <div id="top_ad-block" class="top_ad-block no-mobile">
       <a href="http://shop.theinfluence.com">
