@@ -3083,6 +3083,7 @@ a.subscribe-img-home {
   color: #fff;
   font: 12px "Oswald",arial,sans-serif;
   border-bottom: 1px solid #fff;
+  position: relative;
 }
 .sign-in-pop p.status {
   color: #fff;
