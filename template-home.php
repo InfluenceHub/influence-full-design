@@ -10,7 +10,7 @@ the_post();
       <section id="content">
         <div class="top-block">
       <div class="column-two no-mobile">
-        <a class="left-arrow no-mobile" style="z-index: 100;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
+        <a class="left-arrow no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
         <a class="right-arrow no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
         <?php inf_home_topslider()?>
       </div>
