@@ -6405,9 +6405,16 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
   float: left;
 }
 
+.theme-archive-image-link {
+  display: block; 
+  text-align: left; 
+  margin-top: 0px;
+}
+
+
 .theme-archive-title-link {
   display: block; 
-  text-align:left; 
+  text-align: center; 
   margin-top: 0px;
 }
 
