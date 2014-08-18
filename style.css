@@ -121,6 +121,18 @@ div.home-box img {
   font-family: "AvenirNext LT Pro Regular",arial,sans-serif;
   font-size: 14px;
 }
+.cta-view-more {
+  display: none;
+}
+.cta-view-more:hover {
+  background-image: url('images/viewmoreblack.png');
+}
+.cta-shop-look {
+  display: none;
+}
+.cta-shop-look:hover {
+  background-image: url('images/shopthelookblack.png');
+}
 @media screen and (min-width: 700px) {
 .mobile-only {
   display:none;
