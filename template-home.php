@@ -242,8 +242,7 @@ the_post();
     </div>      
     <!-- END Bottom Section -->
     <!--MODAL -->
-<div class="no-mobile">
-<div class="ui basic modal">
+<div class="ui basic modal no-mobile">
   <div class="content" style="background-color: #fff; height: 550px; width: 100%;">
   <br /><br />
   <div class="form-wrapper">
@@ -263,7 +262,6 @@ the_post();
 </div>
 </div>
 <a class="close icon"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/skiptosite.png"></a>
-</div>
 </div>
 
  <script>

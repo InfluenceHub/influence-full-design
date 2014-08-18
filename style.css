@@ -3081,14 +3081,12 @@ a.subscribe-img-home {
 
 .sign-in-pop .switchform {
   color: #fff;
-  position: absolute;
-  bottom: 13px;
-  left: 12px;
-  font: 12px "futura-pt", arial,sans-serif;
+  font: 12px "Oswald",arial,sans-serif;
+  border-bottom: 1px solid #fff;
 }
 .sign-in-pop p.status {
   color: #fff;
-  font: 10px "futura-pt",arial,sans-serif;
+  font: 10px "Oswald",arial,sans-serif;
   text-align: center;
 }
 
