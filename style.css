@@ -122,15 +122,22 @@ div.home-box img {
   font-size: 14px;
 }
 .cta-view-more {
-  background-image: url('images/cta.png');
+  height: 43px;
+  width: 134px;
 }
 .cta-view-more:hover {
   background-image: url('images/viewmoreblack.png');
+  height: 43px;
+  width: 134px;
 }
 .cta-shop-look {
-  background-image: url('images/shopthelook.png'); }
+  height: 43px;
+  width: 134px;
+}
 .cta-shop-look:hover {
   background-image: url('images/shopthelookblack.png');
+  height: 43px;
+  width: 134px;
 }
 @media screen and (min-width: 700px) {
 .mobile-only {
