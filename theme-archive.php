@@ -40,7 +40,6 @@ the_post();
                 <div class="column-three">
                     <div class="theme-archive-column-left">
                     <a href="<?php the_permalink() ?>" class="theme-archive-image-link">
-                    View More
                           <?php if (has_post_thumbnail()) {
                               the_post_thumbnail('inf_featured_theme');
                           } ?>  
