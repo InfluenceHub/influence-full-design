@@ -69,7 +69,7 @@ the_post();
               $blockcount++;
 
               if($blockcount != count($themes)){
-                echo '<div class="int-archive-item-divider"></div>';
+                echo '<div class="theme-archive-item-divider"></div>';
               }
 
             }
