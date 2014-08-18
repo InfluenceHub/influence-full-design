@@ -38,7 +38,7 @@ the_post();
               ?>
 
                 <div class="column-three">
-                    <div class="column-left theme-archive-column-left">
+                    <div class="theme-archive-column-left">
                     <a href="<?php the_permalink() ?>" class="theme-archive-image-link">
                           <?php if (has_post_thumbnail()) {
                               the_post_thumbnail('inf_featured_theme');
