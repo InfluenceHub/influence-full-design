@@ -24,14 +24,14 @@ $detect = new Mobile_Detect;
     <link rel="apple-touch-icon" sizes="120x120" href="<?php bloginfo('stylesheet_directory'); ?>/images/icons/apple-touch-icon-120x120.png?ver=<?php echo $version; ?>" />
     <link rel="apple-touch-icon" sizes="144x144" href="<?php bloginfo('stylesheet_directory'); ?>/images/icons/apple-touch-icon-144x144.png?ver=<?php echo $version; ?>" />
     <link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('stylesheet_directory'); ?>/images/icons/apple-touch-icon-152x152.png?ver=<?php echo $version; ?>" />
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?ver=<?php echo $version; ?>" type="text/css" media="screen" />    
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?ver=<?php echo $version; ?>" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/davidtemp.css?ver=<?php echo $version; ?>" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/semantic.css?ver=<?php echo $version; ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    
+
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
-    
+
     <script type="text/javascript" src="//use.typekit.net/lzr4wxq.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.js"></script>
@@ -77,6 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MCHHLQ');</script>
 <!-- End Google Tag Manager 2-->
+<div class="fixed_social_block"><a href="https://www.facebook.com/ShopTheInfluence" target="_blank">Facebook</a><a href="https://twitter.com/theinfluence" target="_blank">twitter</a><a href="http://www.pinterest.com/theinfluencepin/" target="_blank">pinterest</a><a href="http://theinfluencecom.tumblr.com/" target="_blank">tumblr</a><a href="https://plus.google.com/112763177055912795781/" target="_blank">google+</a><a href="https://www.youtube.com/user/TheInfluenceStyle" target="_blank">youtube</a></div>
     <?php if (is_front_page()) { ?>
     <div id="top_ad-block" class="top_ad-block no-mobile">
       <a href="http://shop.theinfluence.com">
@@ -104,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
 -->
-<br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />	
+<br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
 	<header id="header">
 			<div id="header_inner" class="inner_wrap">
 				<?php
@@ -117,9 +118,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }
         ?>
         <a id="logo" class="no-mobile" style="padding-top: 5px;" href="<?php echo get_home_url(null, '/'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" /></a>
-        <a href="#" id="hamburger" style="width: 100%; height: 45px; margin-top: -5px;"> 
+        <a href="#" id="hamburger" style="width: 100%; height: 45px; margin-top: -5px;">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" style="z-index: 2; background-color: #fff; margin-top: 5px;" width="35x" height="35px" />
-	<div style="padding-left: 60px; margin-top: -30px; z-index: 5;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div>    
+	<div style="padding-left: 60px; margin-top: -30px; z-index: 5;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div>
       </a>
 
 				<div class="nav">
@@ -133,12 +134,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </form>
               </li>
             </ul>
-				  </div><!-- /.nav-icons --> 
+				  </div><!-- /.nav-icons -->
           <?php wp_nav_menu( array(
 						'theme_location'  => 'main-navigation',
-						'container'       => '', 
-						'container_class' => '', 
-						'menu_class'      => '', 
+						'container'       => '',
+						'container_class' => '',
+						'menu_class'      => '',
 						'fallback_cb'     => '',
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s' . $signinlink . '<li class="stretcher"></li></ul>'
 					)); ?>
@@ -152,7 +153,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>-->
 				</div><!-- /.nav -->
 			</div><!-- /#header_inner -->
-      
+
       <?php include('template-sign_in.php'); ?>
 
 		</header><!-- /#header -->
