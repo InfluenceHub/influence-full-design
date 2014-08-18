@@ -168,7 +168,11 @@
             <h2 class="boxes"><?php echo($longTitle); ?></h2>
             <p class="slide-text"><?php
               echo($subtext);
-              ?>
+              ?></p>
+          <p class="slide-text">
+            <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
+               <img style="text-align: center;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthelook.png" />
+            </a>
               </p>
           </div>
         </li>
@@ -177,9 +181,6 @@
       }
       // close ul container
        ?>
-      <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
-           <img style="text-align: center;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthelook.png" />
-     </a>
       </ul>
 
       
