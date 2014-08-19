@@ -74,7 +74,7 @@ get_header();
           </ul>
         </div>
       </div>
-      <div class="column right-side no-mobile">
+      <div class="right-side no-mobile">
       <a href="http://www.tkqlhce.com/click-7580048-11850643">
         <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/nasty1.gif" />
         </a>
