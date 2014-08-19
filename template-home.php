@@ -242,7 +242,7 @@ the_post();
     </div>      
     <!-- END Bottom Section -->
     <!--MODAL -->
-<div class="ui basic modal no-mobile">
+<!--<div class="ui basic modal no-mobile">
   <div class="content no-mobile" style="background-color: #fff; height: 550px; width: 100%;">
   <br /><br />
   <div class="form-wrapper no-mobile">
@@ -296,7 +296,7 @@ the_post();
     }
     return "";
   }
-</script> 
+</script> -->
     </div><!-- /.content_wrapper -->
   </div><!-- /.ad_wrapper-block -->
   </section><!-- /#content -->
