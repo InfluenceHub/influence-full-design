@@ -6424,6 +6424,10 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
     }
   #header.pinned {
     border: none;
+    z-index: 1000;
+  }
+  #header {
+    z-index: 1000;
   }
 }
 
