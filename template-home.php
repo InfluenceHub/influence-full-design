@@ -243,13 +243,13 @@ the_post();
     <!-- END Bottom Section -->
     <!--MODAL -->
 <div class="ui basic modal no-mobile">
-  <div class="content" style="background-color: #fff; height: 550px; width: 100%;">
+  <div class="content no-mobile" style="background-color: #fff; height: 550px; width: 100%;">
   <br /><br />
-  <div class="form-wrapper">
+  <div class="form-wrapper no-mobile">
     <form action="http://theinfluence.us8.list-manage.com/subscribe/post?u=527260c47d9de3929c883ec2d&amp;id=69a8f6e293" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="container" target="_blank" novalidate class="container">
         <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/signup5.jpg" alt="The Influence" />
       <br />
-      <div class="input-wrapper">
+      <div class="input-wrapper no-mobile">
         <input type="email" value="" name="EMAIL" class="field" id="mce-EMAIL" placeholder="ENTER YOUR EMAIL">
           <div id="mce-responses" style="display:none">
             <div class="response" id="mce-error-response" style="display:none"></div>
