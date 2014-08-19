@@ -82,7 +82,7 @@ get_header();
         <!-- <IFRAME SRC="http://ib.adnxs.com/tt?id=2438106&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="300" HEIGHT="600"></IFRAME> -->
         <!-- END TAG -->
         <!--<?php inf_item_of_the_day(); ?> -->
-        <!--<a href="<?php echo home_url(); ?>/my-influence" class="subscribe-img"></a> -->
+        <!--<a href="<?php echo home_url(); ?>/my-influence" class="subscribe-img"></a> 
       </div>
     </div>
     <div class="sorted-content influencers-az">
