@@ -64,7 +64,7 @@ a#logo {
 	background: url('images/icons/apple-touch-icon-72x72.png') no-repeat;
 	background-size: contain;
 	margin-top: -2px;
-	z-index: 100;
+	z-index: 1000;
 }
 .mobile-text {
 	backround: url('images/icons/header-influence.gif') no-repeat;

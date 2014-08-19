@@ -77,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MCHHLQ');</script>
 <!-- End Google Tag Manager 2-->
-<div class="fixed_social_block"><a href="https://www.facebook.com/ShopTheInfluence" target="_blank">Facebook</a><a href="https://twitter.com/theinfluence" target="_blank">twitter</a><a href="http://www.pinterest.com/theinfluencepin/" target="_blank">pinterest</a><a href="http://theinfluencecom.tumblr.com/" target="_blank">tumblr</a><a href="https://plus.google.com/112763177055912795781/" target="_blank">google+</a><a href="https://www.youtube.com/user/TheInfluenceStyle" target="_blank">youtube</a></div>
+<div class="fixed_social_block"><a href="https://www.facebook.com/ShopTheInfluence" target="_blank">Facebook</a><a href="https://instagram.com/theinfluence" target="_blank">instagram<a href="https://twitter.com/theinfluence" target="_blank">twitter</a><a href="http://www.pinterest.com/theinfluencepin/" target="_blank">pinterest</a><a href="https://www.youtube.com/user/TheInfluenceStyle" target="_blank">youtube</a><a href="http://theinfluencecom.tumblr.com/" target="_blank">tumblr</a></div>
     <?php if (is_front_page()) { ?>
     <div id="top_ad-block" class="top_ad-block no-mobile">
       <a href="http://shop.theinfluence.com">
@@ -120,7 +120,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a id="logo" class="no-mobile" style="padding-top: 5px;" href="<?php echo get_home_url(null, '/'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" /></a>
         <a href="#" id="hamburger" style="width: 100%; height: 45px; margin-top: -5px;">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" style="z-index: 2; background-color: #fff; margin-top: 5px;" width="35x" height="35px" />
-	<div style="padding-left: 60px; margin-top: -30px; z-index: 10000;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div>
+	<div style="padding-left: 60px; margin-top: -30px; z-index: 10000s;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div>
       </a>
 
 				<div class="nav">
