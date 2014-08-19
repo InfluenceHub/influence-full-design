@@ -263,7 +263,7 @@ the_post();
 </div>
 <a class="close icon"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/skiptosite.png"></a>
 </div>
-
+-->
  <script>
 
  console.log(jQuery('.top-block .slides'));
@@ -296,7 +296,7 @@ the_post();
     }
     return "";
   }
-</script> -->
+</script> 
     </div><!-- /.content_wrapper -->
   </div><!-- /.ad_wrapper-block -->
   </section><!-- /#content -->
