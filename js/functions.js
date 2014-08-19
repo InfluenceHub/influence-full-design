@@ -19,7 +19,7 @@ jQuery(function($) {
   $("#menu-main-menu li a").on('click', function(e) {
     //pages we want to redirect on mobile and where to redirect to
     var pages = {
-      "/in-focus/":"/inf-interview/"
+      "/in-focus/":"/in-focus/"
     }
     
     if (pages[this.pathname] && isMobile.matches) { 
