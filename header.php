@@ -120,7 +120,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a id="logo" class="no-mobile" style="padding-top: 5px;" href="<?php echo get_home_url(null, '/'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" /></a>
         <a href="#" id="hamburger" style="width: 100%; height: 45px; margin-top: -5px;">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" style="z-index: 2; background-color: #fff; margin-top: 5px;" width="35x" height="35px" />
-	<div style="padding-left: 60px; margin-top: -30px; z-index: 5;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div>
+	<div style="padding-left: 60px; margin-top: -30px; z-index: 10000;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div>
       </a>
 
 				<div class="nav">
