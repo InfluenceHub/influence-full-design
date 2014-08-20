@@ -85,8 +85,9 @@ div.home-box img {
   top: 0px;
   right: 4px;
   margin-right: -4px;
-  width: 165px;
+  width: 186px;
   height: 44px;
+  z-index: -50;
 }
 
 .image-wrap .main a img {
