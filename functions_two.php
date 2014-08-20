@@ -95,8 +95,8 @@
       //here are get post options
       $args = array(
         'numberposts' => 9999,
-        'orderby' => 'menu_order',
-        'order' => 'ASC',
+        'orderby' => 'date',
+        'order' => 'DESC',
         'post_type' => 'inf-slide-home',
         'post_status' => 'publish'
       ); 
@@ -193,8 +193,8 @@
     <?php
       $args = array(
         'numberposts' => 9999,
-        'orderby' => 'menu_order',
-        'order' => 'ASC',
+        'orderby' => 'date',
+        'order' => 'DESC',
         'post_type' => 'inf-slide-home',
         'post_status' => 'publish'
       ); 
