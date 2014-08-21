@@ -124,7 +124,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </a>
 
         <div class="nav">
-          <div class="nav-icons">
+          <!--<div class="nav-icons">
            <ul class="soc-list">
               <?php inf_list_social_networks('header'); ?>
               <li>
@@ -133,8 +133,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <input type="submit" value="" />
               </form>
               </li>
-            </ul>
-          </div><!-- /.nav-icons --> 
+            </ul> 
+          </div>--><!-- /.nav-icons --> 
           <?php wp_nav_menu( array(
             'theme_location'  => 'main-navigation',
             'container'       => '', 
