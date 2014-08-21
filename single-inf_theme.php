@@ -63,7 +63,7 @@
             $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
             ?>
             <div class="shop-main-theme">
-						<div class="text-holder" style=" margin-left: -2px; padding-top: 10px; margin-bottom: 10px;">
+						<div class="text-holder" style=" margin-left: -1px; padding-top: 10px; margin-bottom: 10px;">
               <img class="shop-published-by" style="float: right;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
 
               <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
