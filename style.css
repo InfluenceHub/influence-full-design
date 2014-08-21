@@ -929,11 +929,8 @@ img.alignleft {
 
 #content > div {
   width: 968px;
-<<<<<<< HEAD
   margin: 0 auto 29px;
-=======
   margin: 0 auto 29px auto;
->>>>>>> master
   overflow:hidden;
 }
 
@@ -1048,15 +1045,12 @@ div.ad_banner img {
 }
 
 .browse {
-<<<<<<< HEAD
   /*position: fixed;*/
   width: 100% !important;
   background: #000;
   /*bottom: 0;*/
-=======
   width: 100% !important;
   background: #000;
->>>>>>> master
   text-align: center;
   z-index: 10;
   margin-bottom: 40px !important;
@@ -6658,14 +6652,11 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
 
 
 .theme-archive-title-link {
-<<<<<<< HEAD
   display: block; 
   margin-top: 10px;
-=======
   display: inline;
   text-align: center;
   margin-top: 0px;
->>>>>>> 9ffed7de39e21f84a1d3e9530eee80f047006cd4
 }
 
 .theme-archive-image-link-wrap {
