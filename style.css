@@ -6236,7 +6236,7 @@ textarea { overflow: auto; }
   font-family: "AvenirNextLTPro-Regular",arial,sans-serif;
 }
 #foot_content {
-  width: 100%
+  width: 100%;
   overflow: visible;
 }
 .more_interviews {
