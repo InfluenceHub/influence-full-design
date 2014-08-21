@@ -196,6 +196,47 @@ c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s' . $signinlink . '<li class="stretcher"></li></ul>'
 					)); ?>
 
+			<?php
+			$_iDropdownHtml = '<div class="influencer-menu-wrapper" id="influencer_menu"><ul><li class="top-cat-name"><span>The Influencer</span></li>';
+			foreach (range('a', 'e') as $letter) {
+				$_iDropdownHtml .= '<li class="i_letter letter_'.$letter.'"><span>'.$letter . '</span><ul class="influencer_list">';
+				$args = array(
+					'post_type' => 'inf_influencer',
+					'posts_per_page' => 6,
+					'orderby' => 'title',
+					'order' => 'ASC',
+					'meta_query' => array(
+						array(
+							'key' => '_first_letter',
+							'value' => $letter,
+							'compare' => '=='
+						)
+					)
+				);
+
+				$inf_posts = get_posts($args);
+				foreach($inf_posts as $pp) {
+					//Replace first space with br
+					$args = array(
+						'connected_type' => 'posts_to_influencers',
+						'connected_items' => $pp->ID,
+						'posts_per_page' => -1
+					);
+
+					$connected = get_posts($args);
+
+					if (count($connected) > 0) {
+						$_iDropdownHtml .= '<li class="influencer_link"><a href="' . get_permalink($pp->ID) . '">' . '<span>' . $pp->post_title . '</span></a></li>';
+					} else {
+						$_iDropdownHtml .= '<li class="influencer_link">' . '<span>' . $pp->post_title . '</span></li>';
+					}
+				}
+				$_iDropdownHtml .= '<li class="influencer_link">' . '<span>...</span></li></ul></li>';
+			}
+			$_iDropdownHtml .= '</ul><div class="readmore"><a href="/influencers/"><img src="' . get_bloginfo('stylesheet_directory') . '/images/the-influencer-readmore.jpg" /></a></div></div>';
+			echo $_iDropdownHtml;
+      ?>
+
          <!-- <div class="subscribe-mobile mobile-only">
             <form action="http://theinfluence.us8.list-manage.com/subscribe/post?u=527260c47d9de3929c883ec2d&amp;id=69a8f6e293" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
               <input type="email" value="" name="EMAIL" class="required email field">
