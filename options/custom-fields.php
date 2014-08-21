@@ -290,7 +290,7 @@ Carbon_Container::factory('custom_fields', __('Featured Theme Two', 'inf'))
 	));
 */
 
-<<<<<<< HEAD
+
 //Market Story  
 Carbon_Container::factory('custom_fields', __('More Featured Images', 'inf'))
 	->show_on_post_type(array('post', 'inf_market'))
@@ -300,8 +300,7 @@ Carbon_Container::factory('custom_fields', __('More Featured Images', 'inf'))
 				Carbon_Field::factory('attachment', 'inf_market_slider', 'Image')
 			))
 	));
-=======
->>>>>>> master
+
 /*
 Carbon_Container::factory('term_meta', __('Category settings', 'inf'))
 	->show_on_taxonomy('category')
