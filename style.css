@@ -3148,20 +3148,12 @@ a.subscribe-img-home {
 
 .sign-in-pop .switchform {
   color: #fff;
-<<<<<<< HEAD
   font-size: 14px;
   font-family: "Oswald";
   border-bottom: 1px solid #fff;
   letter-spacing: 1.1px;
   position: relative;
   margin-left: 20px;
-
-=======
-  position: absolute;
-  bottom: 13px;
-  left: 12px;
-  font: 12px "futura-pt", arial,sans-serif;
->>>>>>> master
 }
 .sign-in-pop p.status {
   color: #fff;
