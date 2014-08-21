@@ -233,10 +233,7 @@
       ?> 
     </div>
    </div>
-
-
-  </section><!-- /#content -->
-      <div id="foot_content" class="more_interviews">
+      <div class="more_interviews">
         <?php
           $args = array(
             'numberposts' => 4,
@@ -292,9 +289,12 @@
         }
       }
     ?>
-    <div id="foot_content" class="more_interviews">
+    <div class="more_interviews">
     
     </div>
+
+  </section><!-- /#content -->
+
     
 
   <?php } ?>
