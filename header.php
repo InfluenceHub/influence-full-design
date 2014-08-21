@@ -145,7 +145,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           )); ?>
 
       <?php
-      $_iDropdownHtml = '<div class="influencer-menu-wrapper" id="influencer_menu"><ul><li class="top-cat-name"><span>The Influencer</span></li>';
+      $_iDropdownHtml = '<div class="influencer-menu-wrapper" id="influencer_menu"><ul><li class="top-cat-name"><span>Influencers</span></li>';
       foreach (range('a', 'e') as $letter) {
         $_iDropdownHtml .= '<li class="i_letter letter_'.$letter.'"><span>'.$letter . '</span><ul class="influencer_list">';
         $args = array(
