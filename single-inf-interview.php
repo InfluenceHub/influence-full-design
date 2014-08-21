@@ -234,7 +234,9 @@
     </div>
    </div>
 
-    <div class="more_interviews">
+
+  </section><!-- /#content -->
+      <div id="foot_content" class="more_interviews">
         <?php
           $args = array(
             'numberposts' => 4,
@@ -273,9 +275,7 @@
       </div>
 
 
-
-  </section><!-- /#content -->
-      <?php
+    <?php
       $args = array(
         'numberposts' => 4,
         'orderby' => 'date',
