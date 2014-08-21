@@ -3024,36 +3024,20 @@ a.subscribe-img-home {
   position: absolute;
   right: 25%;
   top: 175px;
-<<<<<<< HEAD
   width: 350px;
   height: 250px;
   background: #000;
   opacity: .90;
-=======
-  width: 490px;
-  height: 165px;
-  background: #000;
->>>>>>> master
   display: none;
 }
 
 .sign-in-pop h3 {
   text-align: center;
-<<<<<<< HEAD
   font: 20px/45px "BaskervilleBT-Italic",arial, sans-serif;
   border-bottom: 1px solid #fff;
   padding-bottom: 10px;
   text-transform: uppercase;
-=======
   /*font: 20px/45px "Oswald",arial, sans-serif;*/
-  font-size:20px;
-  line-height:45px;
-  font-style:italic;
-  text-transform:uppercase;
->>>>>>> master
-  color: #fff;
-  letter-spacing: 2.5px;
-  font-weight: normal;
 }
 
 .sign-in-pop .close {
@@ -3078,14 +3062,10 @@ a.subscribe-img-home {
 .sign-in-pop form {
   width: 360px;
   margin: 0 auto;
-<<<<<<< HEAD
-  border-left: 5px solid #d6f7eb;
   padding-left: 10px;
   margin-top: 25px;
-=======
   padding-left:18px;
   border-left:8px solid #d5f7ec;
->>>>>>> master
 }
 
 .sign-in-pop .inner.reset {
