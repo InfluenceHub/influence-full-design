@@ -3024,24 +3024,27 @@ a.subscribe-img-home {
   position: absolute;
   right: 25%;
   top: 175px;
-  width: 350px;
-  height: 250px;
+  width: 490px;
+  height: 165px;
   background: #000;
-  opacity: .90;
+  display: none;
 }
 
 .sign-in-pop h3 {
   text-align: center;
-  font: 20px/45px "BaskervilleBT-Italic",arial, sans-serif;
-  border-bottom: 1px solid #fff;
-  padding-bottom: 10px;
-  text-transform: uppercase;
   /*font: 20px/45px "Oswald",arial, sans-serif;*/
+  font-size:20px;
+  line-height:45px;
+  font-style:italic;
+  text-transform:uppercase;
+  color: #fff;
+  letter-spacing: 2.5px;
+  font-weight: normal;
 }
 
 .sign-in-pop .close {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   width: 30px;
   height: 30px;
@@ -3050,7 +3053,7 @@ a.subscribe-img-home {
 }
 .sign-in-pop .close:hover {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   width: 30px;
   height: 30px;
@@ -3061,8 +3064,6 @@ a.subscribe-img-home {
 .sign-in-pop form {
   width: 360px;
   margin: 0 auto;
-  padding-left: 10px;
-  margin-top: 25px;
   padding-left:18px;
   border-left:8px solid #d5f7ec;
 }
@@ -3127,24 +3128,20 @@ a.subscribe-img-home {
 
 .sign-in-pop .switchform {
   color: #fff;
-  font-size: 14px;
-  font-family: "Oswald";
-  border-bottom: 1px solid #fff;
-  letter-spacing: 1.1px;
-  position: relative;
-  margin-left: 20px;
+  position: absolute;
+  bottom: 13px;
+  left: 12px;
+  font: 12px "futura-pt", arial,sans-serif;
 }
 .sign-in-pop p.status {
-  color: #fff;
-  font-size: 10px;
-  font-family: "Oswald",arial,sans-serif;
+  color: #000;
+  font: 10px "futura-pt",arial,sans-serif;
   text-align: center;
 }
 
 .sign-in-pop form a.facebook-btn {
   margin-bottom: 32px;
 }
-
 .newsletter-pop {
   position: fixed;
   left: 197px;
