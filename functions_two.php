@@ -475,7 +475,7 @@
                                   $content = substr($content, 0, 90) . '...';
                                 }
                           ?>
-                          <p class="home-feed-pcontent"><?php echo $content ?></p>
+                          <p class="home-feed-pcontent"><?php echo $content ?>
                           <a href="<?php the_permalink(); ?>" class="home-feed-post-view-more">
                             VIEW MORE <span class="home-feed-post-view-more-arrow">&rsaquo;</span>
                           </a>

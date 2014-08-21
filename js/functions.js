@@ -38,6 +38,12 @@ jQuery(function($) {
 		}
 	});
 	$('.nav ul ul').prepend('<li class="arrow" />');
+	$('.nav ul#menu-main-menu ul').each(function(index, element) {
+		firstA = $(element).parent().find('a');
+		$(element).prepend('<li class="top-cat-name"><span>'+$(firstA[0]).text()+'</span></li>');
+	})
+	jQuery('ul.sub-menu').wrap('<div class="sub-menu-wrapper" />');
+	$( "#influencer_menu" ).insertAfter( "#menu-item-140 a" );
   //.browse ul.word-list li ul
 
 	//$('.nav > ul').append("<li class='stretcher'/>");
