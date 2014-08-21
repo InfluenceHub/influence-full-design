@@ -290,12 +290,11 @@
         }
       }
     ?>
-    <div class="more_interviews">
+    <div id="foot_content" class="more_interviews">
     
     </div>
   </section><!-- /#content -->
     
 
   <?php } ?>
-<?php inf_footer_signup() ?>
 <?php get_footer(); ?>

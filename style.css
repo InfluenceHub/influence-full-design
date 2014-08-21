@@ -6235,6 +6235,10 @@ textarea { overflow: auto; }
   color: #848484;
   font-family: "AvenirNextLTPro-Regular",arial,sans-serif;
 }
+#foot_content {
+  width: 100%
+  overflow: visible;
+}
 .more_interviews {
   margin: 0 auto;
   width: 100%;
