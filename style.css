@@ -52,7 +52,7 @@ div.home-box img {
   height: 69px;
 }
 .image-wrap {
-  height: 416px;
+  height: 518px;
 }
 
 .text-wrap{
@@ -92,7 +92,7 @@ div.home-box img {
 
 .image-wrap .main a img {
   height: 518px;
-  width: 330px;
+  width: 331px;
 }
 
 .top-block {
@@ -4338,7 +4338,7 @@ padding-left: 30px;
 .influencer-menu-wrapper {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 30px;
   right: 0;
   padding: 20px 0 20px;
   background: #fff url(images/bkg_dropdown.jpg) 80px 99px no-repeat;
@@ -4346,7 +4346,7 @@ padding-left: 30px;
   list-style: none;
   white-space: nowrap;
   border:1px solid #311a2c;
-  min-width:1026px;
+  min-width: 968px;
   z-index:999;
   min-height: 312px;
 }
