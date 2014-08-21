@@ -459,7 +459,14 @@
                             Featured Theme
                           </div>
                           <a href="<?php the_permalink(); ?>">
-                            <?php the_title("<h2>", "</h2>"); ?>
+                          <?php 
+
+                                $title = $post->post_title;
+                                if (strlen($title) > 50) {
+                                  $title = substr($title, 0, 50) . '...';
+                                }
+                          ?>
+                          <h2><?php echo $title ?></h2>
                           </a>
                           <?php 
 
