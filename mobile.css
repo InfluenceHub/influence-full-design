@@ -55,7 +55,7 @@ body.home #content div.content_wrapper {
 /*header styles*/
 
 
-a#logo {
+a#logo-mobile {
 	position: fixed;
 	left: inherit;
 	right:10px;
