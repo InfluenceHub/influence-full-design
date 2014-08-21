@@ -154,6 +154,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				</div><!-- /.nav -->
 			</div><!-- /#header_inner -->
 
-      <?php include('template-sign_in.php'); ?>
+      <!--<?php include('template-sign_in.php'); ?> -->
 
 		</header><!-- /#header -->
