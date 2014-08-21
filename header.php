@@ -24,14 +24,14 @@ $detect = new Mobile_Detect;
     <link rel="apple-touch-icon" sizes="120x120" href="<?php bloginfo('stylesheet_directory'); ?>/images/icons/apple-touch-icon-120x120.png?ver=<?php echo $version; ?>" />
     <link rel="apple-touch-icon" sizes="144x144" href="<?php bloginfo('stylesheet_directory'); ?>/images/icons/apple-touch-icon-144x144.png?ver=<?php echo $version; ?>" />
     <link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('stylesheet_directory'); ?>/images/icons/apple-touch-icon-152x152.png?ver=<?php echo $version; ?>" />
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?ver=<?php echo $version; ?>" type="text/css" media="screen" />    
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?ver=<?php echo $version; ?>" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/davidtemp.css?ver=<?php echo $version; ?>" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/semantic.css?ver=<?php echo $version; ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    
+
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
-    
+
     <script type="text/javascript" src="//use.typekit.net/lzr4wxq.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.js"></script>
@@ -77,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MCHHLQ');</script>
 <!-- End Google Tag Manager 2-->
-<div class="fixed_social_block"><a href="https://www.facebook.com/ShopTheInfluence" target="_blank">Facebook</a><a href="https://twitter.com/theinfluence" target="_blank">twitter</a><a href="http://www.pinterest.com/theinfluencepin/" target="_blank">pinterest</a><a href="http://theinfluencecom.tumblr.com/" target="_blank">tumblr</a><a href="https://plus.google.com/112763177055912795781/" target="_blank">google+</a><a href="https://www.youtube.com/user/TheInfluenceStyle" target="_blank">youtube</a></div>
+<div class="fixed_social_block"><a href="https://www.facebook.com/ShopTheInfluence" target="_blank">Facebook</a><a href="https://instagram.com/theinfluence" target="_blank">instagram<a href="http://www.pinterest.com/theinfluencepin/" target="_blank">pinterest</a><a href="https://twitter.com/theinfluence" target="_blank">twitter</a><a href="https://www.youtube.com/user/TheInfluenceStyle" target="_blank">youtube</a><a href="http://theinfluencecom.tumblr.com/" target="_blank">tumblr</a></div>
     <?php if (is_front_page()) { ?>
     <div id="top_ad-block" class="top_ad-block no-mobile">
       <a href="http://shop.theinfluence.com">
@@ -105,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
 -->
-<br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />	
+<br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
 	<header id="header">
 			<div id="header_inner" class="inner_wrap">
 				<?php
@@ -117,66 +117,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             //$signinlink = '<li><a href="" class="sign-in-link">SIGN IN</a></li><li class="up">/<a href="" class="sign-up-link">UP</a></li>';
           }
         ?>
-        <a id="logo" style="padding-top: 5px;"href="<?php echo get_home_url(null, '/'); ?>"><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg class="no-mobile" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-viewBox="0 0 233 80" enable-background="new 0 0 233 80" xml:space="preserve">
-<g>
-<circle cx="40" cy="40" r="38.9"/>
-<g>
-<path fill="#FFFFFF" d="M38.9,20.6C38.9,20.6,38.9,20.6,38.9,20.6l0.6-0.3c0,0,0,0,0,0l0.6-0.1h1.5c0.1,0,0.1,0,0.1,0.1
-c0.3,1.7,4.1,20.5,4.7,23.3c0.5,2.4,1.9,7.1,2.3,8.7c0.1,0.5,0.2,0.3,0.3,0c0.6-1.8,1.9-7.9,2.2-9.3c0.4-1.8,2.8-13.7,3.4-16.7
-c0.5-2.8,1.7-9,1.9-9.9c0-0.1,0.1-0.1,0.1-0.1l1.7-0.1c0.1,0,0.2,0.1,0.2,0.2c0,1.1-1,6.7-1.5,9.6c-1.1,6-4.4,22-5.2,25.4
-c-0.8,3.4-1.7,7.1-1.8,7.9c-0.1,0.5-0.2,0.9-0.2,1.1c0,0.1-0.1,0.1-0.1,0.1h-1.6c-0.1,0-0.1,0-0.1-0.1c-0.2-0.8-1.3-5.9-1.7-7.4
-C45.9,51.3,42,35.2,41.5,32c-0.4-2.2-0.9-4.4-1.1-5.5c0-0.3-0.2-0.3-0.3,0c-0.6,2.7-1.8,11.1-2,12.7c-0.2,2-0.9,7.2-1,10.3
-c-0.2,2.8-0.4,9.6-0.5,10.7c0,0.1-0.1,0.1-0.1,0.1h-1.6c-0.1,0-0.1-0.1-0.1-0.1c0-1-0.2-6.7,0.2-11.6
-C35.4,43.3,37.1,26.1,38.9,20.6z"/>
-<path fill="#FFFFFF" d="M27.8,18h1.9c0.1,0,0.1,0.1,0.1,0.1c0,0,0,1.8-0.2,2.7c-0.2,1-2.7,10.7-5.1,26.7c-0.7,5-0.8,13.9-0.9,14.2
-c-0.1,0.2-2,0.2-2,0c-0.2-0.7-0.6-6.5,1-17.2c1.5-9.9,4.6-24.2,5-26.3C27.7,18,27.7,18,27.8,18z"/>
-</g>
-</g>
-<g>
-<path d="M91,35.6c-0.2,0-0.4-0.1-0.4-0.4V12.6c0-0.1-0.1-0.2-0.2-0.2H86c-0.2,0-0.4-0.1-0.4-0.4v-0.2c0-0.2,0.1-0.4,0.4-0.4h10.5
-c0.2,0,0.4,0.1,0.4,0.4V12c0,0.2-0.1,0.4-0.4,0.4h-4.5c-0.1,0-0.2,0.1-0.2,0.2v22.6c0,0.2-0.1,0.4-0.4,0.4H91z"/>
-<path d="M103.1,11.8c0-0.2,0.1-0.4,0.4-0.4h0.3c0.2,0,0.4,0.1,0.4,0.4v10.6c0,0.1,0.1,0.2,0.2,0.2h7.3c0.1,0,0.2-0.1,0.2-0.2V11.8
-c0-0.2,0.1-0.4,0.4-0.4h0.3c0.2,0,0.4,0.1,0.4,0.4v23.4c0,0.2-0.1,0.4-0.4,0.4h-0.3c-0.2,0-0.4-0.1-0.4-0.4V23.8
-c0-0.1-0.1-0.2-0.2-0.2h-7.3c-0.1,0-0.2,0.1-0.2,0.2v11.4c0,0.2-0.1,0.4-0.4,0.4h-0.3c-0.2,0-0.4-0.1-0.4-0.4V11.8z"/>
-<path d="M120.9,11.8c0-0.2,0.1-0.4,0.4-0.4h7.5c0.2,0,0.4,0.1,0.4,0.4V12c0,0.2-0.1,0.4-0.4,0.4h-6.6c-0.1,0-0.2,0.1-0.2,0.2v10
-c0,0.1,0.1,0.2,0.2,0.2h5.8c0.2,0,0.4,0.1,0.4,0.4v0.2c0,0.2-0.1,0.4-0.4,0.4h-5.8c-0.1,0-0.2,0.1-0.2,0.2v10.4
-c0,0.1,0.1,0.2,0.2,0.2h6.6c0.2,0,0.4,0.1,0.4,0.4v0.2c0,0.2-0.1,0.4-0.4,0.4h-7.5c-0.2,0-0.4-0.1-0.4-0.4V11.8z"/>
-<path d="M90.7,44.5c0-0.2,0.1-0.4,0.4-0.4h0.3c0.2,0,0.4,0.1,0.4,0.4v23.4c0,0.2-0.1,0.4-0.4,0.4H91c-0.2,0-0.4-0.1-0.4-0.4V44.5z"
-/>
-<path d="M101.1,44.5c0-0.2,0.1-0.4,0.4-0.4h0.5c0.3,0,0.5,0.1,0.6,0.4l7.6,21.1h0.1V44.5c0-0.2,0.1-0.4,0.4-0.4h0.3
-c0.2,0,0.4,0.1,0.4,0.4v23.4c0,0.2-0.1,0.4-0.4,0.4h-0.5c-0.3,0-0.5-0.1-0.6-0.4l-7.6-21.3h-0.1v21.3c0,0.2-0.1,0.4-0.4,0.4h-0.3
-c-0.2,0-0.4-0.1-0.4-0.4V44.5z"/>
-<path d="M120.6,44.5c0-0.2,0.1-0.4,0.4-0.4h7.5c0.2,0,0.4,0.1,0.4,0.4v0.2c0,0.2-0.1,0.4-0.4,0.4h-6.6c-0.1,0-0.2,0.1-0.2,0.2v10.1
-c0,0.1,0.1,0.2,0.2,0.2h5.8c0.2,0,0.4,0.1,0.4,0.4v0.2c0,0.2-0.1,0.4-0.4,0.4h-5.8c-0.1,0-0.2,0.1-0.2,0.2v11.1
-c0,0.2-0.1,0.4-0.4,0.4H121c-0.2,0-0.4-0.1-0.4-0.4V44.5z"/>
-<path d="M136.2,44.5c0-0.2,0.1-0.4,0.4-0.4h0.3c0.2,0,0.4,0.1,0.4,0.4v22.6c0,0.1,0.1,0.2,0.2,0.2h6.6c0.2,0,0.4,0.1,0.4,0.4v0.2
-c0,0.2-0.1,0.4-0.4,0.4h-7.5c-0.2,0-0.4-0.1-0.4-0.4V44.5z"/>
-<path d="M150.6,62.8V44.5c0-0.2,0.1-0.4,0.4-0.4h0.3c0.2,0,0.4,0.1,0.4,0.4v18.3c0,3.3,1.6,4.8,3.9,4.8s3.9-1.5,3.9-4.8V44.5
-c0-0.2,0.1-0.4,0.4-0.4h0.3c0.2,0,0.4,0.1,0.4,0.4v18.3c0,3.9-2,5.7-4.9,5.7C152.6,68.6,150.6,66.7,150.6,62.8z"/>
-<path d="M169.1,44.5c0-0.2,0.1-0.4,0.4-0.4h7.5c0.2,0,0.4,0.1,0.4,0.4v0.2c0,0.2-0.1,0.4-0.4,0.4h-6.6c-0.1,0-0.2,0.1-0.2,0.2v10
-c0,0.1,0.1,0.2,0.2,0.2h5.8c0.2,0,0.4,0.1,0.4,0.4v0.2c0,0.2-0.1,0.4-0.4,0.4h-5.8c-0.1,0-0.2,0.1-0.2,0.2v10.4
-c0,0.1,0.1,0.2,0.2,0.2h6.6c0.2,0,0.4,0.1,0.4,0.4v0.2c0,0.2-0.1,0.4-0.4,0.4h-7.5c-0.2,0-0.4-0.1-0.4-0.4V44.5z"/>
-<path d="M184.7,44.5c0-0.2,0.1-0.4,0.4-0.4h0.5c0.3,0,0.5,0.1,0.6,0.4l7.6,21.1h0.1V44.5c0-0.2,0.1-0.4,0.4-0.4h0.3
-c0.2,0,0.4,0.1,0.4,0.4v23.4c0,0.2-0.1,0.4-0.4,0.4H194c-0.3,0-0.5-0.1-0.6-0.4l-7.6-21.3h-0.1v21.3c0,0.2-0.1,0.4-0.4,0.4h-0.3
-c-0.2,0-0.4-0.1-0.4-0.4V44.5z"/>
-<path d="M203.2,56.2c0-7.2,0.1-8.2,0.5-9.2c0.7-2.1,2.2-3.1,4.4-3.1c2.6,0,4.2,1.8,4.6,4.5c0,0.2,0,0.4-0.2,0.5l-0.3,0.1
-c-0.2,0.1-0.4,0-0.4-0.2c-0.4-2.4-1.5-3.9-3.7-3.9c-1.7,0-2.8,0.8-3.4,2.5c-0.3,0.9-0.4,1.8-0.4,8.9s0.1,8,0.4,8.9
-c0.6,1.7,1.7,2.5,3.4,2.5c2.1,0,3.3-1.5,3.7-3.9c0-0.2,0.2-0.3,0.4-0.2l0.3,0.1c0.2,0.1,0.2,0.2,0.2,0.5c-0.4,2.8-2,4.5-4.6,4.5
-c-2.2,0-3.7-1-4.4-3.1C203.3,64.4,203.2,63.4,203.2,56.2z"/>
-<path d="M220.1,45.5c0-0.2,0.1-0.3,0.3-0.3h7.2c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-6.3c-0.1,0-0.2,0.1-0.2,0.2v9.6
-c0,0.1,0.1,0.2,0.2,0.2h5.6c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-5.6c-0.1,0-0.2,0.1-0.2,0.2v9.9
-c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c-0.2,0-0.3-0.1-0.3-0.3V45.5z"/>
-</g>
-</svg></a>
-        <a href="#" id="hamburger" style="width: 100%; height: 45px; margin-top: -5px;"> 
+        <a id="logo" style="padding-top: 5px;" href="<?php echo get_home_url(null, '/'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" /></a>
+        <a href="#" id="hamburger" style="width: 100%; height: 45px; margin-top: -5px;">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" style="z-index: 2; background-color: #fff; margin-top: 5px;" width="35x" height="35px" />
-	<div style="padding-left: 60px; margin-top: -30px; z-index: 5;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div>    
+	<div style="padding-left: 60px; margin-top: -30px; z-index: 10000s;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div>
       </a>
 
 				<div class="nav">
-					<div class="nav-icons">
+					<div class="nav-icons" style="display:none;">
            <ul class="soc-list">
               <?php inf_list_social_networks('header'); ?>
               <li>
@@ -186,56 +134,15 @@ c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c
               </form>
               </li>
             </ul>
-				  </div><!-- /.nav-icons --> 
+				  </div><!-- /.nav-icons -->
           <?php wp_nav_menu( array(
 						'theme_location'  => 'main-navigation',
-						'container'       => '', 
-						'container_class' => '', 
-						'menu_class'      => '', 
+						'container'       => '',
+						'container_class' => '',
+						'menu_class'      => '',
 						'fallback_cb'     => '',
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s' . $signinlink . '<li class="stretcher"></li></ul>'
 					)); ?>
-
-			<?php
-			$_iDropdownHtml = '<div class="influencer-menu-wrapper" id="influencer_menu"><ul><li class="top-cat-name"><span>The Influencer</span></li>';
-			foreach (range('a', 'e') as $letter) {
-				$_iDropdownHtml .= '<li class="i_letter letter_'.$letter.'"><span>'.$letter . '</span><ul class="influencer_list">';
-				$args = array(
-					'post_type' => 'inf_influencer',
-					'posts_per_page' => 6,
-					'orderby' => 'title',
-					'order' => 'ASC',
-					'meta_query' => array(
-						array(
-							'key' => '_first_letter',
-							'value' => $letter,
-							'compare' => '=='
-						)
-					)
-				);
-
-				$inf_posts = get_posts($args);
-				foreach($inf_posts as $pp) {
-					//Replace first space with br
-					$args = array(
-						'connected_type' => 'posts_to_influencers',
-						'connected_items' => $pp->ID,
-						'posts_per_page' => -1
-					);
-
-					$connected = get_posts($args);
-
-					if (count($connected) > 0) {
-						$_iDropdownHtml .= '<li class="influencer_link"><a href="' . get_permalink($pp->ID) . '">' . '<span>' . $pp->post_title . '</span></a></li>';
-					} else {
-						$_iDropdownHtml .= '<li class="influencer_link">' . '<span>' . $pp->post_title . '</span></li>';
-					}
-				}
-				$_iDropdownHtml .= '<li class="influencer_link">' . '<span>...</span></li></ul></li>';
-			}
-			$_iDropdownHtml .= '</ul><div class="readmore"><a href="/influencers/"><img src="' . get_bloginfo('stylesheet_directory') . '/images/the-influencer-readmore.jpg" /></a></div></div>';
-			echo $_iDropdownHtml;
-      ?>
 
          <!-- <div class="subscribe-mobile mobile-only">
             <form action="http://theinfluence.us8.list-manage.com/subscribe/post?u=527260c47d9de3929c883ec2d&amp;id=69a8f6e293" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -246,7 +153,7 @@ c0,0.1,0.1,0.2,0.2,0.2h6.3c0.2,0,0.3,0.1,0.3,0.3v0.2c0,0.2-0.1,0.3-0.3,0.3h-7.2c
           </div>-->
 				</div><!-- /.nav -->
 			</div><!-- /#header_inner -->
-      
+
       <?php include('template-sign_in.php'); ?>
 
 		</header><!-- /#header -->

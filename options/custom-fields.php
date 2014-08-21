@@ -1,3 +1,4 @@
+
 <?php
 
 $available_post_categories = inf_get_post_categories();
@@ -162,7 +163,6 @@ Carbon_Container::factory('custom_fields', __('Additional Featured Images', 'inf
 				Carbon_Field::factory('attachment', 'inf_featured_image', 'Image')
 			))
 	));
-
 Carbon_Container::factory('term_meta', __('Category settings', 'inf'))
 	->show_on_taxonomy('category')
 	->add_fields(array(
@@ -253,17 +253,31 @@ inf-hslide-image
 inf-hslide-bottom-image
 */
 Carbon_Container::factory('custom_fields', __('Slide Options', 'inf'))
-	->show_on_post_type('inf-slide-home')
+	->show_on_post_type(array('post','inf-slide-home'))
   ->add_fields(array(
+  		Carbon_Field::factory( 'textarea', 'hslide_subtext', 'Subtext'),
 		Carbon_Field::factory('text', 'hslide_title_two', 'Secondary Title'),
 		Carbon_Field::factory('text', 'hslide_link_url', 'Link URL'),
 		Carbon_Field::factory('attachment', 'hslide_image', 'Image')
 			->help_text('Image dimensions - 332 × 423 pixels.'),
-		Carbon_Field::factory('attachment', 'hslide_bottom_image', 'Bottom Image')
-			->help_text('Image dimensions - 332 × 83 pixels.')
+		Carbon_Field::factory('attachment', 'hslide_side_image1', 'Side Attachment 1')
+			->help_text('Image dimensions - 130 × 130 pixels.'),
+		Carbon_Field::factory('attachment', 'hslide_side_image2', 'Side Attachment 2')
+			->help_text('Image dimensions - 130 × 130 pixels.'),
+		Carbon_Field::factory('attachment', 'hslide_side_image3', 'Side Attachment 3')
+			->help_text('Image dimensions - 130 × 130 pixels.')
 	));
-  
-  
+
+ Carbon_Container::factory('custom_fields', __('Box Options', 'inf'))
+	->show_on_post_type('inf_home_box1')
+  ->add_fields(array(
+		Carbon_Field::factory('text', 'homebox1_link_url', 'Link URL'),
+	)); 
+  Carbon_Container::factory('custom_fields', __('Box Options2', 'inf'))
+	->show_on_post_type('inf_home_box2')
+  ->add_fields(array(
+		Carbon_Field::factory('text', 'homebox2_link_url', 'Link URL'),
+	)); 
 /*
 Carbon_Container::factory('custom_fields', __('Featured Theme Two', 'inf'))
 	->show_on_template(array('template-home.php'))
@@ -275,6 +289,17 @@ Carbon_Container::factory('custom_fields', __('Featured Theme Two', 'inf'))
 			->set_max(4)
 	));
 */
+
+
+//Market Story  
+Carbon_Container::factory('custom_fields', __('More Featured Images', 'inf'))
+	->show_on_post_type(array('post', 'inf_market'))
+	->add_fields(array(
+		Carbon_Field::factory('complex', 'inf_market_slider', 'Images')
+			->add_fields(array(
+				Carbon_Field::factory('attachment', 'inf_market_slider', 'Image')
+			))
+	));
 
 /*
 Carbon_Container::factory('term_meta', __('Category settings', 'inf'))

@@ -9,7 +9,7 @@
 
   add_theme_support('post-thumbnails');
   add_image_size('inf_makrket_slider',               460, 552, false);
-  add_image_size('inf_home_slider',                  342, 416, true);
+  add_image_size('inf_home_slider',                  330, 518, false);
   add_image_size('inf_home_latest',                  210, 400, true);
   add_image_size('inf_home_latest_shoplook',         90, 400, true);
   add_image_size('inf_styleseeker',                  268, 268, true);
@@ -41,6 +41,32 @@
   add_image_size('inf_interviewmore', 220, 235, true);
   add_image_size('inf_featured_theme',                 634, 500, true);
 
+
+  function inf_home_box1() {
+    $args = array(
+      'post_type' => 'inf_home_box1',
+      'posts_per_page' => 1
+    );
+    $box1 = get_posts($args);
+    if(isset($box1[0])){
+      return $box1[0];
+    }
+    return null;
+  }
+
+  function inf_home_box2(){
+    $args = array(
+      'post_type' => 'inf_home_box2',
+      'posts_per_page' => 1
+    );
+    $box2 = get_posts($args);
+    if(isset($box2[0])){
+      return $box2[0];
+    }
+    return null;
+  }
+
+
   
   //Attachments metabox customization
   function inf_interview_attachments($attachments) {
@@ -66,15 +92,109 @@
  
   //Home Top Slider
   function inf_home_topslider() {
+      //here are get post options
+      $args = array(
+        'numberposts' => 9999,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'post_type' => 'inf-slide-home',
+        'post_status' => 'publish'
+      ); 
+
+      //get posts
+      $list_items = get_posts($args);
+
+      //slide container
+      ?>  
+      <ul class="slides">
+      <?php
+
+      //iterate
+      foreach ($list_items as $key => $list_item ) {
+        //get some content from post
+        $title      = trim(get_the_title($list_item->ID));
+        $title_two  = trim(carbon_get_post_meta($list_item->ID, 'hslide_title_two'));
+        $slide_link = trim(carbon_get_post_meta($list_item->ID, 'hslide_link_url'));
+        $subtext = trim(carbon_get_post_meta($list_item->ID, 'hslide_subtext'));
+        $longTitle = $title . ' ' . $title_two;
+
+        //retrieve images from post meta data
+        $image_oneID = carbon_get_post_meta($list_item->ID, 'hslide_image');
+        $image_oneA = wp_get_attachment_image_src($image_oneID,'full', true);
+        $image_one = $image_oneA[0];
+
+        $side_oneID = carbon_get_post_meta($list_item->ID, 'hslide_side_image1');
+        $side_image1A = wp_get_attachment_image_src($side_oneID,'full', true);
+        $side_one = $side_image1A[0];       
+        $side_twoID = carbon_get_post_meta($list_item->ID, 'hslide_side_image2');
+        $side_image2A = wp_get_attachment_image_src($side_twoID,'full', true);
+        $side_two = $side_image2A[0];
+        $side_threeID = carbon_get_post_meta($list_item->ID, 'hslide_side_image3');
+        $side_image3A = wp_get_attachment_image_src($side_threeID,'full', true);
+        $side_three = $side_image3A[0];
+
+        // PAGELY PERFORMACE HACK
+        // $image_one is the url to the image, so getimagesize downloads the image (from cloudflare and on the miss case all the way back to us
+        // you must use the local file
+        // lets get it a hacky way
+        $image_one_file = '/httpdocs/'.str_replace(get_option('siteurl'), '', $image_one);
+        list($width_one, $height_one) = getimagesize($image_one_file);
+
+        //get da content
+        $content    = apply_filters('the_content', get_post_field('hslide_title_two', $list_item->ID));
+        //build homepage slide
+      ?>
+        <li>
+          <div class="image-wrap">
+            <div class="main">
+              <img class="look-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/the_look_overlay.png" />
+              <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
+              <?php
+              if (trim($image_one) > '') {
+                    echo '<img src="' . $image_one . '" width="' . $width_one . '" height="' . $height_one . '" alt="' . $longTitle . '" />';
+                  }
+              ?>
+              </a>
+            </div>
+            <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
+            <div class='right'>
+              <div style="margin-bottom: 40px;"> <img src="<?php echo $side_one ?>" height="130px" width="130px"></div>
+              <div style="margin-bottom: 40px;"> <img src="<?php echo $side_two ?>" height="130px" width="130px"></div>
+              <div> <img src="<?php echo $side_three ?>" height="130px" width="130px"></div>
+            </div>
+            </a>
+          </div>
+          <div class='text-wrap'>
+            <h2 class="boxes"><?php echo($longTitle); ?></h2>
+            <p class="slide-text"><?php
+              echo($subtext);
+              ?></p>
+          <p class="slide-text">
+            <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
+               <img style="text-align: center;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthelook.png" />
+            </a>
+              </p>
+          </div>
+        </li>
+
+      <?php 
+      }
+      // close ul container
+       ?>
+      </ul>
+
+      
+  <?php
+  }
+
+    function inf_home_thelatestslide() {
     ?>
-      <div class="top-slider">
-      <div class="loader">&nbsp;</div><!-- /.loader -->
-        <ul class="slides">
+    <ul class="slides">
     <?php
       $args = array(
         'numberposts' => 9999,
-        'orderby' => 'menu_order',
-        'order' => 'ASC',
+        'orderby' => 'date',
+        'order' => 'DESC',
         'post_type' => 'inf-slide-home',
         'post_status' => 'publish'
       ); 
@@ -114,10 +234,10 @@
           $shortTitle = '<span>' . $title . '</span> ' . substr($title_two, 0, 79) . '...';
         }
 
-	// PAGELY PERFORMACE HACK
-	// $image_one is the url to the image, so getimagesize downloads the image (from cloudflare and on the miss case all the way back to us
-	// you must use the local file
-	// lets get it a hacky way
+  // PAGELY PERFORMACE HACK
+  // $image_one is the url to the image, so getimagesize downloads the image (from cloudflare and on the miss case all the way back to us
+  // you must use the local file
+  // lets get it a hacky way
    $image_one_file = '/httpdocs/'.str_replace(get_option('siteurl'), '', $image_one);
    $image_two_file = '/httpdocs/'.str_replace(get_option('siteurl'), '', $image_two);
 
@@ -127,8 +247,10 @@
         //$image      = wp_get_attachment_image_src(get_post_thumbnail_id($list_item->ID), 'inf_home_slider');
     ?>
           <li>
+          <
             <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
-              <div class="inner-slide">
+              <div class="image-wrap">
+                <div class="main">
                 <?php
                   if (trim($image_one) > '') {
                     echo '<img src="' . $image_one . '" width="' . $width_one . '" height="' . $height_one . '" alt="' . $longTitle . '" />';
@@ -142,9 +264,10 @@
                       }
                     ?>
                   </div><!-- /.products-box -->
-                  <h4><?php echo $shortTitle; ?></h4>
+                  <h4 class="boxes"><?php echo $shortTitle; ?></h4>
                 </div><!-- /.text-box -->
               </div><!-- /.inner-slide -->
+              </div>
             </a>
           </li>
     <?php
@@ -190,10 +313,10 @@
           </div>
         </div>
         <div class="shell">
-          <div class="section-heading first">	
-           <h2 class="no-mobile" style="margin-top: -25px; border: none;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br />
+         <h2 class="no-mobile" style=" width=: 100%; border: none; text-align: center;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
+
           </div><!-- /.section-heading -->
-          <ul>
+         <ul>
             <?php
               $latest_theme = inf_get_latest_theme();
               global $post;
@@ -312,10 +435,15 @@
                           <?php endif; ?>
                             
                         </div> <!-- END .home-feed-post-info -->
-
                   </li>
+
+<!--                 <img width="600px" height="59px" src='<?php echo get_stylesheet_directory_uri(); ?>/images/breaker.png' />                
+
+ -->
                 <?php elseif ($k == 7 && !is_null($latest_theme)): // replace the last one with a featured theme, if it exists ?>
+
                   <?php $post = $latest_theme ?>
+
                   <li class="column home-feed-post home-feed-side-by-side">
                         <div class="home-feed-post-img-wrap">
                           <a href="<?php the_permalink(); ?>">
@@ -331,7 +459,14 @@
                             Featured Theme
                           </div>
                           <a href="<?php the_permalink(); ?>">
-                            <?php the_title("<h2>", "</h2>"); ?>
+                          <?php 
+
+                                $title = $post->post_title;
+                                if (strlen($title) > 50) {
+                                  $title = substr($title, 0, 50) . '...';
+                                }
+                          ?>
+                          <h2><?php echo $title ?></h2>
                           </a>
                           <?php 
 
@@ -375,8 +510,8 @@
                           <?php 
 
                                 $title = $post->post_title;
-                                if (strlen($title) > 55) {
-                                  $title = substr($title, 0, 55) . '...';
+                                if (strlen($title) > 50) {
+                                  $title = substr($title, 0, 50) . '...';
                                 }
                           ?>
                             <h2><?php echo $title ?></h2>
@@ -405,11 +540,12 @@
 
               } // end foreach $latest_posts as $post
             ?>
+
           </ul><!-- /.recent-list -->
           <!-- HOME PAGE 300 X 900 AD SPACE -->
           <div class="column adcolumn no-mobile">
-          <a href="http://click.linksynergy.com/fs-bin/click?id=pwlaa2*cgnI&offerid=276224.10013359&subid=0&type=4">
-           <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nordstrom2.jpg" />
+          <a href="http://www.anrdoezrs.net/click-7580048-11914509">
+           <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nastydenim.gif" />
           </a>
           <a href="https://www.thehunt.com/the-hunt/6Dmf7D-janel-on-the-hunt-">
            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/thehunt.jpg" />

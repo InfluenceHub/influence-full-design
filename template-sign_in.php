@@ -16,7 +16,7 @@
       <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
       <p class="status"></p>
 		</form>
-    <a class="lost switchform">FORGOT?</a>
+    <a class="lost switchform">Forgot?</a>
   </div><!-- /.inner -->
   <div class="inner reset">
     <h3>RESET PASSWORD</h3>

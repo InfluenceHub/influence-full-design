@@ -7,15 +7,50 @@ get_header();
 the_post();
 //Detect mobile
 ?>
-  <section id="content">
-    <div class="shell no-mobile">
-      <?php inf_home_topslider(); ?>
-    </div><!-- /.shell -->
+      <section id="content">
+        <div class="top-block">
+      <div class="column-two no-mobile" style="margin-left: 15px; margin-right: -15px;">
+        <a class="left-arrow no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
+        <a class="right-arrow no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
+        <?php inf_home_topslider()?>
+      </div>
+      <div class="column">
+        <?php $box1 = inf_home_box1(); ?>
+        <div class="home-box">
+          <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox1_link_url'); ?>">
+            <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1') ?>
+            <h2 class="boxes"> <?php echo $box1->post_title ?> </h2>
+            <p class="small-boxes"> <?php echo substr( $box1->post_content, 0, 60) . ''; ?> </p>
+          </a>
+        </div>
+        <div style="margin-top: -30px;">
+          <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox1_link_url'); ?>">
+            <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
+          </a>
+          </div>
+        <div class="home-box" style="margin-top: -210px;">
+          <?php $box2 = inf_home_box2(); ?>
+          <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
+            <?php echo get_the_post_thumbnail($box2->ID, 'inf_home_box2') ?>
+            <h2 class="boxes"> <?php echo $box2->post_title ?> </h2>
+            <p class= "small-boxes"> <?php echo substr( $box2->post_content, 0, 60) . ''; ?></p>
+          </a>
+        </div>
+        <div style="margin-top: -30px;">        
+          <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
+            <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
+          </a>
+          </div>
+      </div>
+    </div>
 
     <div class="ad_wrapper-block">
+
       <?php inf_footer_signup() ?>
       <?php //inf_browse_by(); ?>
+
       <div class="content_wrapper">
+
     <?php
       inf_home_latest();
 
@@ -50,7 +85,7 @@ the_post();
  <div class="video-row" id="videos">
   <br />
         <div class="section-heading">
-          <h2 style="width: 400px;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/TITLES_IN VIDEO.svg" /></h2></div><!-- /.section-heading -->
+          <h2><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/invideo.png" /></h2></div><br /><br /><!-- /.section-heading -->
         <div class="column-two">
           <div class="player-part">
             <div class="playbutton"></div>
@@ -207,15 +242,14 @@ the_post();
     </div>      
     <!-- END Bottom Section -->
     <!--MODAL -->
-<div class="no-mobile">
-<div class="ui basic modal">
-  <div class="content" style="background-color: #fff; height: 550px; width: 100%;">
+<!--<div class="ui basic modal no-mobile">
+  <div class="content no-mobile" style="background-color: #fff; height: 550px; width: 100%;">
   <br /><br />
-  <div class="form-wrapper">
+  <div class="form-wrapper no-mobile">
     <form action="http://theinfluence.us8.list-manage.com/subscribe/post?u=527260c47d9de3929c883ec2d&amp;id=69a8f6e293" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="container" target="_blank" novalidate class="container">
         <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/signup5.jpg" alt="The Influence" />
       <br />
-      <div class="input-wrapper">
+      <div class="input-wrapper no-mobile">
         <input type="email" value="" name="EMAIL" class="field" id="mce-EMAIL" placeholder="ENTER YOUR EMAIL">
           <div id="mce-responses" style="display:none">
             <div class="response" id="mce-error-response" style="display:none"></div>
@@ -229,9 +263,19 @@ the_post();
 </div>
 <a class="close icon"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/skiptosite.png"></a>
 </div>
-</div>
-
+-->
  <script>
+
+ console.log(jQuery('.top-block .slides'));
+
+ jQuery('.top-block .slides').carouFredSel({
+  prev: '.left-arrow',
+  next: '.right-arrow',
+  items:1, 
+  scroll: { items: 1 }, 
+  auto: false
+ });
+
   //uncomment to force cookie reset
   //document.cookie = "showHomePopup=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
   var homeCookie = getCookie('showHomePopup');

@@ -9,8 +9,9 @@ jQuery(function($) {
 
   var isMobile = window.matchMedia("only screen and (max-width: 760px)");
   if (isMobile.matches) {
-    $("li.menu-item-has-children a").on('click', function(e){
+    $("li.menu-item-has-children > a").on('click', function(e){
       e.preventDefault();
+      console.log('Something');
       $(this).next('.sub-menu').toggle();
     });
   }
@@ -18,7 +19,7 @@ jQuery(function($) {
   $("#menu-main-menu li a").on('click', function(e) {
     //pages we want to redirect on mobile and where to redirect to
     var pages = {
-      "/in-focus/":"/inf-interview/"
+      "/in-focus/":"/in-focus/"
     }
     
     if (pages[this.pathname] && isMobile.matches) { 
