@@ -107,6 +107,9 @@ div.nav {
 .influencer-menu-wrapper {
 	display: none;
 }
+.influencer-menu-wrapper ul {
+	display: none;
+}
 
 ul.sub-menu {
 	position:static !important;
