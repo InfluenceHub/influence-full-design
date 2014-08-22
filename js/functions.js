@@ -203,7 +203,7 @@ jQuery(function($) {
     $('.video-row .slider-part .slides').carouFredSel({
 			prev: '.v-prev',
 			next: '.v-next',
-			items: 3,
+			items: 2,
       scroll: {
         items: 1
       },
