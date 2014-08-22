@@ -6241,7 +6241,7 @@ textarea { overflow: auto; }
 .more_interviews {
   margin: 0 auto;
   width: 100%;
-  background-color: #d5f7ec;
+  /*background-color: #d5f7ec;*/
 }
 #content.interview .more_interviews h2 {
   border-bottom: 1px solid #ccc;
