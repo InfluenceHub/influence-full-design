@@ -313,7 +313,7 @@ jQuery(function($) {
     $('.video-slider .slides').carouFredSel({
 			prev: '.prev-v',
 			next: '.next-v',
-			items: 3,
+			items: 1,
       direction: 'up',
       scroll: {
         items: 1
