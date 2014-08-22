@@ -4258,9 +4258,9 @@ a#logo {
   list-style: none;
   white-space: nowrap;
   border:1px solid #311a2c;
-  max-width:650px;
+  min-width:650px;
   z-index:99;
-  /*min-height: 312px; */
+  min-height: 312px;
 }
 
 .nav > ul > li .sub-menu-wrapper > ul {
