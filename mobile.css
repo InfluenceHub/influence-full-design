@@ -100,6 +100,11 @@ div.nav {
 	border-bottom: solid 1px black;
 }
 
+.sub-menu-wrapper {
+	min-width: initial !important;
+	position:static !important;
+}
+
 ul.sub-menu {
 	position:static !important;
 	background: white !important;
