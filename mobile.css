@@ -102,15 +102,12 @@ div.nav {
 
 .sub-menu-wrapper {
 	min-width: initial !important;
-	/*position:static !important;*/
-}
-.influencer-menu-wrapper {
-	display: none;
-}
-.influencer-menu-wrapper ul {
-	display: none;
+	position:static !important;
 }
 
+#menu-item-140 {
+	display: none;
+}
 ul.sub-menu {
 	position:static !important;
 	background: white !important;
