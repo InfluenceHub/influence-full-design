@@ -21,11 +21,6 @@ jQuery(function($) {
     var pages = {
       "/in-focus/":"/in-focus/"
     }
-  $("#menu-item-140 a").on('click', function(e) {
-    //pages we want to redirect on mobile and where to redirect to
-    var pages = {
-      "/influencers/":"/influencers/"
-    }
     
     if (pages[this.pathname] && isMobile.matches) { 
       e.preventDefault();
