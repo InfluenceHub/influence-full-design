@@ -191,9 +191,9 @@ body.home #content .content_wrapper {
 }
 
 /* remove after these sections are removed from markup*/
-.section-heading.more-videos, .video-row .slider-part {
+/*.section-heading.more-videos, .video-row .slider-part {
   display: none;
-}
+}*/
 .video-row .column.adcolumn {
   display: none;
 }
