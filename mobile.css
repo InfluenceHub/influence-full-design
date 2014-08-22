@@ -104,6 +104,9 @@ div.nav {
 	min-width: initial !important;
 	position:static !important;
 }
+.influencer-menu-wrapper {
+	display: none;
+}
 
 ul.sub-menu {
 	position:static !important;
