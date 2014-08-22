@@ -49,7 +49,7 @@ the_post();
       <?php inf_footer_signup() ?>
       <?php //inf_browse_by(); ?>
 
-      <div class="content_wrapper">
+      <div class="content_wrapper" style="margin-top: 10px;">
 
     <?php
       inf_home_latest();
