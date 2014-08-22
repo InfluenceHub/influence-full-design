@@ -4348,9 +4348,9 @@ padding-left: 30px;
 .influencer-menu-wrapper {
   display: none;
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 0;
-  padding: 30px 0 20px;
+  padding: 10px 0 20px;
   background: #fff url(images/bkg_dropdown.jpg) 80px 99px no-repeat;
   /* box-shadow: 0 0 2px rgba(0,0,0,.5); */
   list-style: none;
