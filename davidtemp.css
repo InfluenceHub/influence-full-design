@@ -138,14 +138,14 @@ body.home #content .content_wrapper {
 }
 .video-row .video-slider ul li .hoverbox {
   border: 0;
-  height: 140px;
+  height: 150px;
   position: absolute;
   top: 0;
   width: 127px;
 }
 .video-row .video-slider ul li.active .hoverbox {
   border: 3px solid #6cead2;
-  height: 140px;
+  height: 150px;
   position: absolute;
   top: 0;
   width: 127px;
