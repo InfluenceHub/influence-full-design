@@ -36,9 +36,9 @@ the_post();
             <p class= "small-boxes"> <?php echo substr( $box2->post_content, 0, 60) . ''; ?></p>
           </a>
         </div>
-        <div style="margin-top: -30px;">        
-          <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
-            <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />
+        <div style="margin-top: -30px;">
+          <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>" class="cta-view-more">
+            <!-- <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" /> -->
           </a>
           </div>
       </div>
@@ -111,13 +111,13 @@ the_post();
                     }
                     $video_temp = explode('?v=', $video_url);
                     $video_id = $video_temp[1];
-                    
+
                     $image_url = wp_get_attachment_image_src(get_post_thumbnail_id($v->ID),'inf_homevid', true);
                     $video_info_img = $image_url[0];
-                    
+
                     //$video_thumbID = carbon_get_post_meta($v->ID, 'inf_video_thumb');
                     //$video_thumb = wp_get_attachment_image_src($video_thumbID,'inf_homevid_thumb', true);
-                    
+
                     $video_thumb = wp_get_attachment_image_src(get_post_thumbnail_id($v->ID),'inf_homevid_thumb', true);
                     //$video_thumb_info_img = $video_thumb[0];
                   ?>
@@ -145,13 +145,13 @@ the_post();
                     $video_temp = explode('?v=', $video_url);
                     $video_id = $video_temp[1];
                     $video_title = get_the_title($entry_id);
-                    
+
                     $image_url = wp_get_attachment_image_src(get_post_thumbnail_id($v->ID),'inf_homevid', true);
                     $video_info_img = $image_url[0];
-                    
+
                     $video_thumbID = carbon_get_post_meta($v->ID, 'inf_video_thumb');
                     $video_thumb = wp_get_attachment_image_src($video_thumbID,'inf_homevid_thumb', true);
-                    
+
                     //$video_thumb = wp_get_attachment_image_src(get_post_thumbnail_id($v->ID),'inf_homevid_thumb', true);
                     //$video_thumb_info_img = $video_thumb[0];
                   ?>
@@ -213,7 +213,7 @@ the_post();
               ?>
               <div class="istragram-box group">
                 <ul class="pins-feed-list">
-                  <?php 
+                  <?php
                     if (count($instagram_data) > 0) {
                       foreach($instagram_data as $index => $id) {
                       ?>
@@ -238,8 +238,8 @@ the_post();
           </div>
 
         <?php } ?>
-      </div>    
-    </div>      
+      </div>
+    </div>
     <!-- END Bottom Section -->
     <!--MODAL -->
 <!--<div class="ui basic modal no-mobile">
@@ -271,8 +271,8 @@ the_post();
  jQuery('.top-block .slides').carouFredSel({
   prev: '.left-arrow',
   next: '.right-arrow',
-  items:1, 
-  scroll: { items: 1 }, 
+  items:1,
+  scroll: { items: 1 },
   auto: false
  });
 
@@ -284,7 +284,7 @@ the_post();
     setTimeout(function(){showSignup()}, 10000);
     function showSignup() {
       $('.ui.modal').modal('show');
-    }      
+    }
   }
 
   function getCookie(cname) {
@@ -296,7 +296,7 @@ the_post();
     }
     return "";
   }
-</script> 
+</script>
     </div><!-- /.content_wrapper -->
   </div><!-- /.ad_wrapper-block -->
   </section><!-- /#content -->

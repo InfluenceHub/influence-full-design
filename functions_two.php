@@ -14,7 +14,7 @@
   add_image_size('inf_home_latest',                  210, 400, true);
   add_image_size('inf_home_latest_shoplook',         90, 400, true);
   add_image_size('inf_styleseeker',                  268, 268, true);
-  
+
   //add_image_size('inf_single_image',                  372, 576, true);
   add_image_size('inf_single_image',                  331, 518, true);
   add_image_size('inf_influencer_single_image',       300, 323, true);
@@ -24,18 +24,18 @@
   add_image_size('inf_single_product',                144, 164, false);
   add_image_size('inf_single_more_like',              186, 352, true);
   add_image_size('inf_profile_loop',                  300, 542, true);
-  
+
   add_image_size('inf_instagram',                     314, 314, false);
   //add_image_size('inf_instagram',                     230, 230, true);
   add_image_size('inf_inst_product',                  314, 314, false);
   add_image_size('inf_hash_influenced',               232, 232, false);
-  
-  
+
+
   //add_image_size('inf_homevid_thumb',                  215, 130, true);
   //add_image_size('inf_homevid',                        650, 370, true);
   add_image_size('inf_homevid_thumb',                  133, 133, true);
   add_image_size('inf_homevid',                        830, 401, true);
-  
+
   add_image_size('inf_interview_featured',             267, 267, true);
   add_image_size('inf_interviewslider',                1214, 794, false);
   add_image_size('inf_interviewslider_small',          114, 72, true);
@@ -68,7 +68,7 @@
   }
 
 
-  
+
   //Attachments metabox customization
   function inf_interview_attachments($attachments) {
     $args = array(
@@ -90,7 +90,7 @@
     $attachments->register('inf_interview_attachments', $args);
   }
   add_action('attachments_register', 'inf_interview_attachments');
- 
+
   //Home Top Slider
   function inf_home_topslider() {
       //here are get post options
@@ -100,13 +100,13 @@
         'order' => 'DESC',
         'post_type' => 'inf-slide-home',
         'post_status' => 'publish'
-      ); 
+      );
 
       //get posts
       $list_items = get_posts($args);
 
       //slide container
-      ?>  
+      ?>
       <ul class="slides">
       <?php
 
@@ -126,7 +126,7 @@
 
         $side_oneID = carbon_get_post_meta($list_item->ID, 'hslide_side_image1');
         $side_image1A = wp_get_attachment_image_src($side_oneID,'full', true);
-        $side_one = $side_image1A[0];       
+        $side_one = $side_image1A[0];
         $side_twoID = carbon_get_post_meta($list_item->ID, 'hslide_side_image2');
         $side_image2A = wp_get_attachment_image_src($side_twoID,'full', true);
         $side_two = $side_image2A[0];
@@ -148,7 +148,7 @@
         <li>
           <div class="image-wrap">
             <div class="main">
-              <img class="look-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/the_look_overlay.png" />
+              <img class="look-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/TheLook_overlay.png" />
               <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
               <?php
               if (trim($image_one) > '') {
@@ -171,20 +171,20 @@
               echo($subtext);
               ?></p>
           <p class="slide-text">
-            <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>">
-               <img style="text-align: center;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthelook.png" />
+            <a href="<?php echo $slide_link; ?>" title="<?php echo $longTitle; ?>" class="cta-shop-look">
+               <!-- <img style="text-align: center;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/shopthelook.png" /> -->
             </a>
               </p>
           </div>
         </li>
 
-      <?php 
+      <?php
       }
       // close ul container
        ?>
       </ul>
 
-      
+
   <?php
   }
 
@@ -198,7 +198,7 @@
         'order' => 'DESC',
         'post_type' => 'inf-slide-home',
         'post_status' => 'publish'
-      ); 
+      );
       $list_items = get_posts($args);
       $listblock = '';
 
@@ -218,7 +218,7 @@
         $image_one  = trim($custom_fields['wpcf-hslide-image'][0]);
         $image_two  = trim($custom_fields['wpcf-hslide-bottom-image'][0]);
         */
-        
+
         //NEW FIELDS
         $title      = trim(get_the_title($list_item->ID));
         $title_two  = trim(carbon_get_post_meta($list_item->ID, 'hslide_title_two'));
@@ -280,7 +280,7 @@
   </div><!-- /.top-slider -->
   <?php
   }
-  
+
   //Home Page Latest Looks
   function inf_home_latest() {
     $args = array(
@@ -329,8 +329,8 @@
                   <li class="column-two home-feed-post">
                         <div class="home-feed-post-img-wrap">
                         <a href="<?php the_permalink(); ?>">
-                          <?php 
-                                echo the_post_thumbnail('inf_home_latest'); 
+                          <?php
+                                echo the_post_thumbnail('inf_home_latest');
                                 $post_categories = wp_get_post_categories(get_the_id());
                                 if(!empty($post_categories[0])){
                                   $cat = get_category($post_categories[0]);
@@ -370,7 +370,7 @@
 
                           </div>
 
-                          <?php 
+                          <?php
 
                                 $content = $post->post_content;
                                 if (strlen($content) > 180) {
@@ -385,7 +385,7 @@
                           </p>
 
                           <?php $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex'); ?>
-                          
+
                           <?php if(!empty($products_sections)): ?>
                             <?php
                               $products_section = $products_sections[0];
@@ -394,7 +394,7 @@
                             <div class="home-feed-prod-row prod-row small">
                               <ul class="home-feed-prod-list group">
                                   <?php foreach ($products as $k => $post_id): ?>
-                                    <?php 
+                                    <?php
                                       if ($k >2) { // Only list first three products
                                         break;
                                       }
@@ -416,7 +416,7 @@
                                         <?php if(has_post_thumbnail($post_id)) : ?>
                                           <span class="img-hold">
                                             <?php echo get_the_post_thumbnail($post_id, 'inf_single_product'); ?>
-                                          </span> 
+                                          </span>
                                         <?php endif; ?>
                                         <h5 style="font-weight: bold;"><?php echo $shortDesigner; ?></h5>
                                         <h5><?php echo $shortTitle; ?></h5>
@@ -434,11 +434,11 @@
                             SHOP THE LOOK <span class="home-feed-post-view-more-arrow">&rsaquo;</span>
                           </a>
                           <?php endif; ?>
-                            
+
                         </div> <!-- END .home-feed-post-info -->
                   </li>
 
-<!--                 <img width="600px" height="59px" src='<?php echo get_stylesheet_directory_uri(); ?>/images/breaker.png' />                
+<!--                 <img width="600px" height="59px" src='<?php echo get_stylesheet_directory_uri(); ?>/images/breaker.png' />
 
  -->
                 <?php elseif ($k == 7 && !is_null($latest_theme)): // replace the last one with a featured theme, if it exists ?>
@@ -460,7 +460,7 @@
                             Featured Theme
                           </div>
                           <a href="<?php the_permalink(); ?>">
-                          <?php 
+                          <?php
 
                                 $title = $post->post_title;
                                 if (strlen($title) > 50) {
@@ -469,7 +469,7 @@
                           ?>
                           <h2><?php echo $title ?></h2>
                           </a>
-                          <?php 
+                          <?php
 
                                 $content = $post->post_content;
                                 if (strlen($content) > 90) {
@@ -486,19 +486,19 @@
                   <li class="column home-feed-post home-feed-side-by-side">
                         <div class="home-feed-post-img-wrap">
                           <a href="<?php the_permalink(); ?>">
-                            <?php echo the_post_thumbnail('inf_single_image'); ?>  
+                            <?php echo the_post_thumbnail('inf_single_image'); ?>
                           </a>
                         </div>
                         <div class="home-feed-post-info">
                           <div class="home-feed-meta-content">
                             <?php the_time('F j, Y'); ?>
-                              <?php 
+                              <?php
                                     $post_categories = wp_get_post_categories(get_the_id());
                                     if(!empty($post_categories[0])){
                                       $cat = get_category($post_categories[0]);
                                       $category_link = get_category_link($cat); // Refactor to use category obj?
                               ?>
-                                    
+
                                     <span class="meta-content-divider">|</span>
                                     <a href="<?php echo esc_url($category_link); ?>">
                                         <?php echo $cat->cat_name; ?>
@@ -508,7 +508,7 @@
 
                           </div>
                           <a href="<?php the_permalink(); ?>">
-                          <?php 
+                          <?php
 
                                 $title = $post->post_title;
                                 if (strlen($title) > 50) {
@@ -518,7 +518,7 @@
                             <h2><?php echo $title ?></h2>
                           </a>
 
-                          <?php 
+                          <?php
 
                                 $content = $post->post_content;
                                 if (strlen($content) > 90) {
@@ -529,7 +529,7 @@
                           <a href="<?php the_permalink(); ?>" class="home-feed-post-view-more">
                             VIEW MORE <span class="home-feed-post-view-more-arrow">&rsaquo;</span>
                           </a>
-                            
+
                         </div> <!-- END .home-feed-post-info -->
 
                   </li>
@@ -570,16 +570,16 @@
           </div>
         </div><!-- /.shell -->
 
-         <?php //inf_featured_theme('one'); ?> 
+         <?php //inf_featured_theme('one'); ?>
 
         <?php inf_home_instagram(); ?>
-        
+
         <?php //inf_featured_theme('two'); ?>
-        
+
       </div><!-- /.latest -->
   <?php
   }
-  
+
   //Featured Themes
   function inf_featured_theme($theme_num) {
     $home_id = get_option('page_on_front');
@@ -591,7 +591,7 @@
     if ($theme_num == 'two') {
       $style = ' style="margin-top: 70px; padding-bottom: 20px;"';
     }
-    
+
     $imgID = carbon_get_post_meta($home_id, '_inf_theme_' . $theme_num . '_image');
     $image = wp_get_attachment_image_src($imgID,'full', true);
     $link_url  = get_permalink($theme_items[0]);
@@ -633,7 +633,7 @@
     }
     return null;
   }
-  
+
   //Favorite Items
   function inf_favorite_items() {
     $home_id = get_option('page_on_front');
@@ -661,7 +661,7 @@
       <?php
     }
   }
-  
+
   //Q&A
   function inf_qa() {
     $args = array(
@@ -683,27 +683,27 @@
       foreach($qa as $key => $this_qa) {
         $entry_id  = $this_qa->ID;
         $inf_url = carbon_get_post_meta($this_qa, 'inf_hinfluencer_link_url');
-        
+
         $question   = carbon_get_post_meta($entry_id, 'inf_qa_question');
         $question_n = carbon_get_post_meta($entry_id, 'inf_qa_question_n');
         $answer     = carbon_get_post_meta($entry_id, 'inf_qa_answer');
         $answer_n   = carbon_get_post_meta($entry_id, 'inf_qa_answer_n');
         $image      = wp_get_attachment_image_src(get_post_thumbnail_id($entry_id), 'inf_inst_product', true);
-          
+
           //$custom_fields = get_post_custom($post->ID);
           //$question   = trim($custom_fields['wpcf-home-style-question'][0]);
           //$question_n = trim($custom_fields['wpcf-home-style-question-name'][0]);
           //$answer     = trim($custom_fields['wpcf-home-style-answer'][0]);
           //$answer_n   = trim($custom_fields['wpcf-home-style-answer-name'][0]);
           //$image      = trim($custom_fields['wpcf-home-style-image'][0]);
-          
+
           //Q & A
           //$question   = 'Can you help me find Miranda Kerr`s top?';
           //$question_n = 'Amanda, NY';
           //$answer     = 'That is <span style="text-decoration: underline;">name goes here blouse</span> by Tory Burch';
           //$answer_n   = 'Danielle, Editor';
           //$image = get_bloginfo('stylesheet_directory') . '/images/styleseeker.jpg';
-      ?>      
+      ?>
         <li class="slide">
           <p class="question"><?php echo $question; ?></p>
           <div class="name">- <?php echo $question_n; ?></div>
@@ -725,7 +725,7 @@
       <?php
     }
   }
-  
+
   //#Influencer
   function inf_hash_influencer() {
     $args = array(
@@ -761,7 +761,7 @@
       <?php
     }
   }
-  
+
   //Home Page Latest Looks -- Replaced 5/20/14 DC
   function inf_home_latest_old() {
         $args = array(
@@ -787,7 +787,7 @@
           </div>
         </div>
         <div class="shell">
-          <div class="section-heading first">	
+          <div class="section-heading first">
            <h2><a href="<?php echo home_url().'/the-latest'; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/thelatest2.png" /></a></h2><br />
           </div><!-- /.section-heading -->
           <ul>
@@ -808,7 +808,7 @@
                     $infTitle = inf_name_from_post($lp->ID);
                     if (trim($infTitle) <= '') { $infTitle = '&nbsp;'; }
                     $thisTitle = get_the_title($lp->ID);
-                    
+
                     $custom_fields = get_post_custom($lp->ID);
                     $image  = trim($custom_fields['wpcf-post-shop-the-look'][0]);
                     if ($image <= '') {
@@ -848,7 +848,7 @@
             <div class="line" style="margin-top: 7px; padding-top: 7px;"></div>
             <div class="favorite-items">
               <h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/header-fav-items.png" alt="Favorite Items of the Moment" /></h2>
-              
+
               <div class="fav-items-grid">
                 <div class="fav-items-grid">
                   <?php
@@ -874,7 +874,7 @@
               $answer     = trim($custom_fields['wpcf-home-style-answer'][0]);
               $answer_n   = trim($custom_fields['wpcf-home-style-answer-name'][0]);
               $image      = trim($custom_fields['wpcf-home-style-image'][0]);
-              
+
               //Q & A
               $question   = 'Can you help me find Miranda Kerr`s top?';
               $question_n = 'Amanda, NY';
@@ -887,10 +887,10 @@
               <h2><img class="qa" src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/header-qa.png" alt="Q and A" /></h2>
               <p class="question"><?php echo $question; ?></p>
               <div class="name">- <?php echo $question_n; ?></div>
-                
+
               <div class="image-container">
                 <img class="main" src="<?php echo $image; ?>" width="280" height="280" alt="" />
-                
+
                 <p class="answer"><?php echo $answer; ?></p>
                 <div class="name two">- <?php echo $answer_n; ?></div>
               </div>
@@ -905,25 +905,25 @@
             <a href="<?php echo home_url(); ?>/the-latest/">VIEW ALL LATEST LOOKS</a>
           </div>
         </div><!-- /.shell -->
-        
+
         <div class="featured-theme">
           <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/_temp-featured-theme.jpg" alt="Favorite Items of the Moment" />
           <h2>featured theme</h2>
           <p>BEYONCE KILLING IT WEARING LEOPARD<br />SKINNY JEANS AT THE COACHELL A FESTIVAL</p>
         </div>
-        
+
         <?php inf_home_instagram(); ?>
-        
+
         <div class="featured-theme" style="margin-top: 70px; padding-bottom: 20px;">
           <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/_temp-featured-theme.jpg" alt="Favorite Items of the Moment" />
           <h2>featured theme</h2>
           <p>BEYONCE KILLING IT WEARING LEOPARD<br />SKINNY JEANS AT THE COACHELL A FESTIVAL</p>
         </div>
-        
+
       </div><!-- /.latest -->
   <?php
   }
-  
+
   function inf_home_instagram() {
     //Get Shop Instagram items
       $args = array(
@@ -932,14 +932,14 @@
         'order' => 'DESC',
         'post_type' => 'inf_instagram',
         'post_status' => 'publish'
-      ); 
+      );
       $inst_items = get_posts($args);
 
         $instagram_one_prod = get_post_meta($inst_items[0]->ID, '_inf_instagram_products', true);
         $instagram_one_prodID   = $instagram_one_prod[0];
         $instagram_two_prod = get_post_meta($inst_items[1]->ID, '_inf_instagram_products', true);
         $instagram_two_prodID   = $instagram_two_prod[0];
-        
+
         $image_one = wp_get_attachment_image_src(get_post_thumbnail_id($inst_items[0]->ID), 'inf_home_inst_prod_nocrop_quad');
         $title_one = trim(get_the_title($inst_items[0]->ID));
         if (strlen($title_one) > 20) {
@@ -949,7 +949,7 @@
         $caption_one = $page_object->post_content;
         if (strlen($caption_one) > 25) {
           $caption_one = substr($caption_one, 0, 0)  . ' <span style="font-weight; bold; text-transform: uppercase;">READ MORE ></span>';
-        }        
+        }
         /*
         $product_title_one    = get_the_title($instagram_one_prodID);
         if (strlen($product_title_one) > 45) {
@@ -960,7 +960,7 @@
 				$product_link_one     = get_post_meta($instagram_one_prodID, 'product_url', true);
         $product_image_one    = wp_get_attachment_image_src(get_post_thumbnail_id($instagram_one_prodID), 'inf_home_inst_prod_nocrop');
         */
-        
+
         $image_two = wp_get_attachment_image_src(get_post_thumbnail_id($inst_items[1]->ID), 'inf_home_inst_prod_nocrop_quad');
         $title_two = trim(get_the_title($inst_items[1]->ID));
         if (strlen($title_two) > 30) {
@@ -1001,7 +1001,7 @@
         if (strlen($caption_four) > 24) {
           $caption_four = substr($caption_four, 0, 0) . ' <span style="font-weight; bold; text-transform: uppercase;">READ MORE ></span>';
         }
-    ?>  
+    ?>
      <!-- <div class="instagram-posts">
         <div class="section-heading" style="margin-top: -15px;">
           <h2><a href="<?php echo home_url().'/shop-this-instagram'; ?>">
@@ -1042,7 +1042,7 @@
                 <?php echo $caption_four; ?></p>
                 </div>
               </div>
-            </a>            
+            </a>
       </div>
       <div class="viewall-latest">
         <a href="<?php echo home_url(); ?>/shop-this-instagram/">VIEW ALL INSTAGRAM</a>
@@ -1050,16 +1050,16 @@
       <div style="clear: left;"></div>  -->
     <?php
   }
-  
+
   function inf_item_of_the_day() {
     $home_id = get_option('page_on_front');
     ?>
       <div class="item-of-the-day">
-          <?php  
+          <?php
           //$item_of_the_day = carbon_get_theme_option('inf_item_of_the_day');
           $home_products = get_post_meta($home_id, '_inf_product_of_the_day', true);
           $home_prodID   = $home_products[0];
-          
+
         $product_title    = get_the_title($home_prodID);
         if (strlen($product_title) > 45) {
           $product_title = substr($product_title, 0, 45) . '...';
@@ -1072,12 +1072,12 @@
           <a href="<?php echo esc_url($product_url); ?>" target="_blank">
             <h2>Item of the Day</h2>
             <img src="<?php echo $product_image[0] ?>" width="<?php echo $product_image[1]; ?>" height="<?php echo $product_image[2]; ?>" alt="Item of the Day" />
-             <h5><span style="text-transform: uppercase; font-weight: bold;"><?php echo $product_designer?></span></h5><h6><?php echo $product_title; ?>, $<?php echo $product_price; ?></h6> 
+             <h5><span style="text-transform: uppercase; font-weight: bold;"><?php echo $product_designer?></span></h5><h6><?php echo $product_title; ?>, $<?php echo $product_price; ?></h6>
           </a>
       </div><!-- /.item-of-the-day -->
     <?php
   }
-  
+
   function the_post_thumbnail_caption($post_id) {
     //global $post;
 
