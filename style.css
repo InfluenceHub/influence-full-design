@@ -1061,6 +1061,7 @@ div.ad_banner img {
   z-index: 10;
   margin-bottom: 40px !important;
   margin-top: -5px;
+  overflow: visible;
 }
 
 .browse > div.shell {
