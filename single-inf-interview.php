@@ -65,7 +65,7 @@
           </ul>
           </div>
           </section>
-        <section id="content">
+        <section id="content" class="interview">
         <!-- /.interview-slider-bottom -->
 
                 
