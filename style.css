@@ -1051,10 +1051,10 @@ div.ad_banner img {
 
 .browse {
   /*position: fixed;*/
-  width: 100% !important;
+  width: 80% !important;
   background: #000;
   /*bottom: 0;*/
-  width: 100% !important;
+  width: 80% !important;
   background: #000;
   text-align: center;
   z-index: 10;
