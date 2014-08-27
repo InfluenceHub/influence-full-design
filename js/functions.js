@@ -658,7 +658,7 @@ var headerHeight = parseInt($('#header').height()+20);
       }
     });
   } else {
-    $('.browse').addClass('pinned');
+    $('#header').addClass('pinned');
     $('#content').css({'margin-top': headerHeight+'px'});
   }
 //Pin Newsletter
@@ -666,7 +666,7 @@ var newsHeight = parseInt($('#header').height()+20);
   if ($('#top_ad-block').length > 0) {
     var topOffset = $('#top_ad-block').height();
     $(window).scroll(function() {
-      var thisEl = $('.browse');
+      var thisEl = $('#header');
       if ($(window).scrollTop() >= topOffset && !thisEl.hasClass('pinned')) {
         thisEl.addClass('pinned');
         $('#content').css({'margin-top': headerHeight+'px'});
