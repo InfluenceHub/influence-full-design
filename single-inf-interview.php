@@ -28,10 +28,9 @@
 
     <div id="topSlider" class="interview-slider group">
 
-
+<a class="right-arrow-int no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
+<a class="right-left-int no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
   <ul class="slides">
-        <a class="right-arrow-int no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
-        <a class="right-left-int no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
 
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
