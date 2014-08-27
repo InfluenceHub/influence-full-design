@@ -46,7 +46,7 @@ div.home-box img {
 
 .callout > ul {
   display: inline-block;
-  
+
 }
 .right-arrow {
   left: 580px;
@@ -4175,57 +4175,52 @@ a#logo {
 }
 
 .soc-list li a.youtube {
-  background-position: 0 0;
-  width: 29px;
+  display: none;
 }
 
 .soc-list li a.youtube:hover {
-  background-position: 0 bottom;
+  display: none;
 }
 
 .soc-list li a.instagram {
-  background-position: -29px 0;
-  width: 29px;
+  display: none;
+
 }
 
 .soc-list li a.instagram:hover {
-  background-position: -29px bottom;
+  display: none;
 }
 
 .soc-list li a.tumblr {
-  background-position: -58px 0;
-  width: 27px;
+  display: none;
 }
 
 .soc-list li a.tumblr:hover {
-  background-position: -58px bottom;
+  display: none;
 }
 
 .soc-list li a.twitter {
-  background-position: -85px 0;
-  width: 32px;
+  display: none;
 }
 
 .soc-list li a.twitter:hover {
-  background-position: -85px bottom;
+  display: none;
 }
 
 .soc-list li a.pinterest {
-  background-position: -117px 0;
-  width: 32px;
+  display: none;
 }
 
 .soc-list li a.pinterest:hover {
-  background-position: -117px bottom;
+  display: none;
 }
 
 .soc-list li a.facebook {
-  background-position: -149px 0;
-  width: 33px;
+  display: none;
 }
 
 .soc-list li a.facebook:hover {
-  background-position: -149px bottom;
+  display: none;
 }
 
 
