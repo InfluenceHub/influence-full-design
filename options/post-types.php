@@ -275,7 +275,7 @@ register_post_type('inf_home_box1', array(
 register_post_type('inf_home_box2', array(
 	'labels' => array(
 		'name'	 => 'Callout 2',
-		'singular_name' => 'Callout Box',
+		'singular_name' => 'Callout Box 2',
 		'add_new' => __( 'Add New' ),
 		'add_new_item' => __( 'Add new Home Box Story' ),
 		'view_item' => 'View Home Box',
@@ -302,7 +302,7 @@ register_post_type('inf_home_box2', array(
 register_post_type('inf_home_box3', array(
 	'labels' => array(
 		'name'	 => 'Callout 3',
-		'singular_name' => 'Callout Box',
+		'singular_name' => 'Callout Box 3',
 		'add_new' => __( 'Add New' ),
 		'add_new_item' => __( 'Add new Home Box Story' ),
 		'view_item' => 'View Home Box',
@@ -329,7 +329,7 @@ register_post_type('inf_home_box3', array(
 register_post_type('inf_home_box4', array(
 	'labels' => array(
 		'name'	 => 'Callout 4',
-		'singular_name' => 'Callout Box',
+		'singular_name' => 'Callout Box 4',
 		'add_new' => __( 'Add New' ),
 		'add_new_item' => __( 'Add new Home Box Story' ),
 		'view_item' => 'View Home Box',
