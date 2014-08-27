@@ -11,63 +11,41 @@
 ?>
 <?php } else { ?>
 
-  <section id="content" class="interview">
-    <div class="shell group">
-    <div class="top_ad-block no-mobile">
-      <a href="http://shop.theinfluence.com">
-      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shop-banner.gif" />
-      </a>
-      <!-- BEGIN IFRAME TAG - theinfluence 728x90 < - DO NOT MODIFY -->
-      <!--<IFRAME SRC="http://ib.adnxs.com/tt?id=2411079&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="728" HEIGHT="90"></IFRAME>-->
-      <!-- END TAG -->
-    </div>
-<br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
-
-        <!--
-        -->
-
-    <div id="topSlider" class="interview-slider group">
-
-  <ul class="slides">
-
+    <section id="content" class="interview">
+                <div class="shell group">
+      <h1><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/interview-header.png" width="530" height="86" alt="" /><span><?php echo get_the_title(); ?></span></h1>
+        <div class="interview-social-bar">
+          <?php
+            $thisDESC = get_the_content();
+            $thisURL = get_permalink();
+            $influencerName = get_the_title();
+            $img_obj = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+          ?>
+          <div class="social-vert">
+            <a class="pint" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo $thisURL; ?>&amp;media=<?php echo $thisIMG; ?>&amp;description=<?php echo $thisDESC; ?>"></a>
+            <a class="tw" target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo $thisURL; ?>"></a>
+            <a class="tumblr" target="_blank" href="http://www.tumblr.com/share/link?url=<?php echo $thisURL; ?>&amp;name=<?php echo $thisTITLE; ?>&amp;description=<?php echo $thisDESC; ?>"></a>
+          </div>   
+        </div>
+        <div id="topSlider" class="interview-slider group">
+          <ul class="slides">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
-            $attachments_type = 'attachments';
+            $attachments_type = 'attachments';  
             $i = 0;
             while($attachment = $attachments->get()) {
               $title = $attachments->field('title');
               $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider');
-              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" /></li>';
+              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" width="930" height="536" /></li>';
               $i++;
-            }
+            }  
           ?>
-
-          </ul><!-- /.slides -->
-        </div>
-       <div class="interview-slider bottom group">
-          <ul class="slides">
-          <?php
-            $attachments = new Attachments('inf_interview_attachments', $post->ID);
-            $attachments_type = 'attachments';
-            $i = 0;
-            //$credit_styling = 'Styling by Danielle Combs';
-            //$credit_photos  = 'Photography by Lauren Dukoff';
-            //$credit_makeup  = 'Make-up and Hair by Haley MAu';
-            
-            $credit_styling = 'Styling by ' . carbon_get_the_post_meta('inf_credit_styling');
-            $credit_photos   = 'Photography by ' . carbon_get_the_post_meta('inf_credit_photo');
-            $credit_makeup  = 'Make-up and Hair by ' . carbon_get_the_post_meta('inf_credit_makeup');
-            while($attachment = $attachments->get()) {
-              $title = $attachments->field('title');
-              $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider_small');
-              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" width="90" /></li>';
-              $i++;
-            }
-          ?> 
           </ul><!-- /.slides -->
           <div class="prev top">&nbsp;</div><!-- /.prev -->
           <div class="next top">&nbsp;</div><!-- /.next -->
-          </div>
+        </div><!-- /.interview-slider -->   
+        
+
         <!-- /.interview-slider-bottom -->
 
                 
