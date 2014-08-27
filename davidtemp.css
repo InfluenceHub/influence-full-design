@@ -555,8 +555,8 @@ a.shop-inf-name:hover {
   width: 100%;
   height: 100%;
 }
-.interview-slider > div.caroufredsel_wrapper {
-  margin: 0 !important;
+.interview-slider > div.caroufredsel_wrapper { 
+  margin: 0 auto !important
 }
 .interview-slider ul.slides {
   position: relative;
