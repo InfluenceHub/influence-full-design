@@ -35,7 +35,7 @@
           ?>
         </div>
         <div id="topSlider" class="interview-slider group">
-          <ul class="slides">
+          <ul class="slides" style="margin-left: -100px; overflow: visible;">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
             $attachments_type = 'attachments';  
