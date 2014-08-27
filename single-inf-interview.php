@@ -34,7 +34,7 @@
             $img_obj = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
           ?>
         </div>
-        <div id="topSlider" class="interview-slider group">
+        <div id="topSlider" class="interview-slider group" style="overflow: visible;">
           <ul class="slides">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
