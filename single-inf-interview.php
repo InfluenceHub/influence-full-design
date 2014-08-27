@@ -41,7 +41,6 @@
 
           </ul><!-- /.slides -->
         </div>
-        </div> <!--/.interview-slider -->
        <!-- <div class="interview-slider bottom group">
           <ul class="slides">
           <?php
