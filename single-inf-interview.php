@@ -34,7 +34,7 @@
             $img_obj = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
           ?>
         </div>
-        <div id="topSlider" class="interview-slider group" style="overflow: visible;">
+        <div id="topSlider" class="interview-slider group">
           <ul class="slides">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
@@ -52,7 +52,27 @@
           <div class="next top">&nbsp;</div><!-- /.next -->
         </div><!-- /.interview-slider -->   
         
-
+<div class="interview-slider bottom group">
+          <ul class="slides">
+          <?php
+            $attachments = new Attachments('inf_interview_attachments', $post->ID);
+            $attachments_type = 'attachments';
+            $i = 0;
+            //$credit_styling = 'Styling by Danielle Combs';
+            //$credit_photos  = 'Photography by Lauren Dukoff';
+            //$credit_makeup  = 'Make-up and Hair by Haley MAu';
+            
+            $credit_styling = 'Styling by ' . carbon_get_the_post_meta('inf_credit_styling');
+            $credit_photos   = 'Photography by ' . carbon_get_the_post_meta('inf_credit_photo');
+            $credit_makeup  = 'Make-up and Hair by ' . carbon_get_the_post_meta('inf_credit_makeup');
+            while($attachment = $attachments->get()) {
+              $title = $attachments->field('title');
+              $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider_small');
+              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" width="90" /></li>';
+              $i++;
+            }
+          ?> 
+          </ul>
         <!-- /.interview-slider-bottom -->
 
                 
