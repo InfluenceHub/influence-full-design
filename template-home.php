@@ -14,38 +14,35 @@ the_post();
         <div class="top-block">
       <div class="column">
         <?php $box1 = inf_home_box1(); ?>
-        <div class="home-box">
           <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox1_link_url'); ?>">
             <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1') ?>
             <h2 class="boxes"> <?php echo $box1->post_title ?> </h2>
             <p class="small-boxes"> <?php echo substr( $box1->post_content, 0, 60) . ''; ?> </p>
           </a>
-        </div>
-        <div class="home-box" style="margin-top: -210px;">
+
           <?php $box2 = inf_home_box2(); ?>
           <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
             <?php echo get_the_post_thumbnail($box2->ID, 'inf_home_box2') ?>
             <h2 class="boxes"> <?php echo $box2->post_title ?> </h2>
             <p class= "small-boxes"> <?php echo substr( $box2->post_content, 0, 60) . ''; ?></p>
           </a>
-        </div>
 
-      <div class="home-box">
+
+
         <?php $box3 = inf_home_box3(); ?>
           <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox3_link_url'); ?>">
             <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box3') ?>
             <h2 class="boxes"> <?php echo $box3->post_title ?> </h2>
             <p class="small-boxes"> <?php echo substr( $box3->post_content, 0, 60) . ''; ?> </p>
-          </a>
-      </div>
-      <div class="home-box">
+
+
         <?php $box4 = inf_home_box4(); ?>
           <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox4_link_url'); ?>">
             <?php echo get_the_post_thumbnail($box4->ID, 'inf_home_box4') ?>
             <h2 class="boxes"> <?php echo $box4->post_title ?> </h2>
             <p class="small-boxes"> <?php echo substr( $box4->post_content, 0, 60) . ''; ?> </p>
           </a>
-      </div>
+
       </div>
     </div>
 
