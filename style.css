@@ -40,6 +40,14 @@ div.home-box img {
   margin-top: -4px;
 }
 
+.callout_container {
+  margin: 0 auto !important;
+}
+
+.callout > ul {
+  display: inline-block;
+  
+}
 .right-arrow {
   left: 580px;
 

@@ -12,6 +12,9 @@ the_post();
       <section id="content">
 
         <div class="top-block">
+    <div class="callout_container">
+      <div class="callout">
+        <ul>
         <?php $box1 = inf_home_box1(); ?>
             <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1') ?>
             <h2 class="boxes"> <?php echo $box1->post_title ?> </h2>
@@ -31,7 +34,9 @@ the_post();
         <?php $box4 = inf_home_box4(); ?>
             <?php echo get_the_post_thumbnail($box4->ID, 'inf_home_box4') ?>
             <h2 class="boxes"> <?php echo $box4->post_title ?> </h2>
-
+      </ul>
+    </div>
+    </div>
       </div>
 
     <div class="ad_wrapper-block">
