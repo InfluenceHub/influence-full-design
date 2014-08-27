@@ -884,7 +884,6 @@ function inf_footer_signup() { ?>
 
   <div class="browse no-mobile">
     <div class="shell">
-      <div class="browse-holder">
         <ul class="word-list">
           <div class="browse-email-signup">
             <form action="http://theinfluence.us8.list-manage.com/subscribe/post?u=527260c47d9de3929c883ec2d&amp;id=69a8f6e293" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -895,7 +894,6 @@ function inf_footer_signup() { ?>
             </form>
           </div>
         </ul>
-      </div>
     </div>
   </div>
 
