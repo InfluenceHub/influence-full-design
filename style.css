@@ -1077,7 +1077,7 @@ div.ad_banner img {
   margin-top: 50px;
 }
 
-.browse.scroll {
+.browse.pinned {
   position: fixed;
   width: 100% !important;
   background: #000;
