@@ -1062,7 +1062,6 @@ div.ad_banner img {
   z-index: 10;
   margin-bottom: 40px !important;
   margin-top: -5px;
-  overflow: visible;
 }
 
 .browse > div.shell {
@@ -1089,8 +1088,8 @@ div.ad_banner img {
 
 .browse ul.word-list {
   position: relative;
-  width: 968px;
-  height: 30px;
+  width: 80%;
+  height: 40px;
   margin: 0 auto;
   text-align: left;
   white-space: nowrap;
