@@ -126,7 +126,7 @@ body.home #content .content_wrapper {
 .video-row .video-slider ul li {
   position: relative;
   width: 133px;
-  height: 165px;
+  height: 200px;
   margin: 0 0 1px 0;
   cursor: pointer;
 }
@@ -213,8 +213,8 @@ body.home #content .content_wrapper {
  padding-top: 10px;
 }
 .shop-main .left-col .inner {
-  height: 518px;
-  width: 331px;
+  height: 300px;
+  width: 600px;
   overflow: hidden;
 }
 .shop-main .left-col .slides {
@@ -222,12 +222,13 @@ body.home #content .content_wrapper {
 }
 .shop-main .left-col .slides li {
   float: left;
+  overflow:hidden;
 }
 .shop-main .shop-featured-prev, .shop-main .shop-featured-next {
   background: url("images/small_black_arrows_white.png") repeat 0 0;
   height: 30px;
   position: absolute;
-  top: 41%;
+  top: 46%;
   left: 10px;
   width: 25px;
   height: 30px;
@@ -309,6 +310,15 @@ body.home #content .content_wrapper {
   overflow: visible;
   text-align: left;
   width: 100%;
+}
+
+.shop-main .caroufredsel_wrapper { 
+  top:50% !important;
+  overflow:visible !important;
+  margin-top:-42% !important;
+}
+.shop-main .caroufredsel_wrapper ul.slides { 
+  /**/
 }
 .prod-row.small {
   /*height: 240px;*/

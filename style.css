@@ -3629,10 +3629,10 @@ a.subscribe-img {
   max-height: 518px;
 }
 .shop-main .left-col.theme img {
-  width: 634px;
-  height: 500px;
-  max-width: 634px;
-  max-height: 500px;
+  width: auto !important;
+  height: auto !important;
+  max-width: 430px;
+  max-height: 600px;
 }
 .shop-main .right-col {
   width: 634px;
@@ -4245,6 +4245,11 @@ a#logo {
 .nav > ul > li:hover  > a {
   color: #6CEAD2;
   text-decoration: none;
+}
+
+.nav > ul > li:hover > a {
+  color:#000;
+  font-weight:bold;
 }
 
 .nav > ul > li .sub-menu-wrapper {
@@ -6716,4 +6721,18 @@ font-size: 0;
 }
 .fixed_social_block a:first-child {
 margin-top: 0;
+}
+.single-inf_theme .shop-main {
+  margin:0 -22px;
+}
+.single-inf_theme .shop-main .column-three {
+  width:100%;
+}
+.single-inf_theme #content > div.shell.shop {
+  overflow:visible;
+}
+
+.shop-main-title {
+  font: 500 28px/46px "Oswald", arial, sans-serif !important;
+  text-transform:uppercase;
 }
