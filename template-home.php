@@ -7,8 +7,9 @@ get_header();
 the_post();
 //Detect mobile
 ?>
+<?php inf_footer_signup() ?>
+
       <section id="content">
-      <?php inf_footer_signup() ?>
 
         <div class="top-block">
       <div class="column-two no-mobile" style="margin-left: 15px; margin-right: -15px;">
