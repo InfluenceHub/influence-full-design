@@ -12,7 +12,7 @@ the_post();
       <section id="content">
 
         <div class="top-block">
-      <div class="column two">
+      <div class="column">
         <?php $box1 = inf_home_box1(); ?>
         <div class="home-box">
           <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox1_link_url'); ?>">
@@ -34,8 +34,8 @@ the_post();
         <?php $box3 = inf_home_box3(); ?>
           <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox3_link_url'); ?>">
             <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box3') ?>
-            <h2 class="boxes"> <?php echo $box4->post_title ?> </h2>
-            <p class="small-boxes"> <?php echo substr( $box4->post_content, 0, 60) . ''; ?> </p>
+            <h2 class="boxes"> <?php echo $box3->post_title ?> </h2>
+            <p class="small-boxes"> <?php echo substr( $box3->post_content, 0, 60) . ''; ?> </p>
           </a>
       </div>
       <div class="home-box">
