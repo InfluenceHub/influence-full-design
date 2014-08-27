@@ -11,10 +11,22 @@
 ?>
 <?php } else { ?>
 
-    <section id="content" class="interview">
-                <div class="shell group">
+  <section id="content" class="interview">
+    <div class="shell group">
+    <div class="top_ad-block no-mobile">
+      <a href="http://shop.theinfluence.com">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shop-banner.gif" />
+      </a>
+      <!-- BEGIN IFRAME TAG - theinfluence 728x90 < - DO NOT MODIFY -->
+      <!--<IFRAME SRC="http://ib.adnxs.com/tt?id=2411079&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="728" HEIGHT="90"></IFRAME>-->
+      <!-- END TAG -->
+    </div>
+<br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
+
+        <!--
+        -->
+
       <h1><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/interview-header.png" width="530" height="86" alt="" /><span><?php echo get_the_title(); ?></span></h1>
-        <div class="interview-social-bar">
           <?php
             $thisDESC = get_the_content();
             $thisURL = get_permalink();
