@@ -4148,11 +4148,11 @@ a#logo {
 
 .nav-icons {
   position: absolute;
-  top: -10px;
+  /*top: -10px; */
   border-bottom: 1px solid #000;
   padding-bottom: 5px;
   right: 0;
-  width: 100%;
+  width: 10%;
   text-align: top;
   text-align: right;
   z-index: 1;
