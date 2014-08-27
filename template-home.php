@@ -13,35 +13,11 @@ the_post();
 
         <div class="top-block">
     <div class="callout_container">
-      <div class="callout">
-        <ul>
-        <li>
+
         <?php $box1 = inf_home_box1(); ?>
             <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1') ?>
-            <h2 class="boxes"> <?php echo $box1->post_title ?> </h2>
-<br />
-</li>
-<li>
-          <?php $box2 = inf_home_box2(); ?>
-            <?php echo get_the_post_thumbnail($box2->ID, 'inf_home_box2') ?>
-            <h2 class="boxes"> <?php echo $box2->post_title ?> </h2>
 
 
-<br />
-</li>
-<li>
-        <?php $box3 = inf_home_box3(); ?>
-            <?php echo get_the_post_thumbnail($box3->ID, 'inf_home_box3') ?>
-            <h2 class="boxes"> <?php echo $box3->post_title ?> </h2>
-
-<br />
-</li>
-<li>
-    <?php $box4 = inf_home_box4(); ?>
-            <?php echo get_the_post_thumbnail($box4->ID, 'inf_home_box4') ?>
-            <h2 class="boxes"> <?php echo $box4->post_title ?> </h2>
-</li>
-      </ul>
     </div>
     </div>
       </div>
