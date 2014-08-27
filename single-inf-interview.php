@@ -11,7 +11,7 @@
 ?>
 <?php } else { ?>
 
-  <section id="content" class="interview">
+  <section class="interview">
     <div class="shell group">
     <div class="top_ad-block no-mobile">
       <a href="http://shop.theinfluence.com">
