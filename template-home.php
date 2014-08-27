@@ -12,12 +12,6 @@ the_post();
       <section id="content">
 
         <div class="top-block">
-
-     <!-- <div class="column-two no-mobile" style="margin-left: 15px; margin-right: -15px;">
-        <a class="left-arrow no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
-        <a class="right-arrow no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
-        <?php inf_home_topslider()?>
-      </div> -->
       <div class="column two">
         <?php $box1 = inf_home_box1(); ?>
         <div class="home-box">
@@ -27,11 +21,6 @@ the_post();
             <p class="small-boxes"> <?php echo substr( $box1->post_content, 0, 60) . ''; ?> </p>
           </a>
         </div>
-        <div style="margin-top: -30px;">
-          <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox1_link_url'); ?>" class="cta-view-more">
-   <!--         <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" />-->
-          </a>
-          </div>
         <div class="home-box" style="margin-top: -210px;">
           <?php $box2 = inf_home_box2(); ?>
           <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>">
@@ -40,11 +29,7 @@ the_post();
             <p class= "small-boxes"> <?php echo substr( $box2->post_content, 0, 60) . ''; ?></p>
           </a>
         </div>
-        <div style="margin-top: -30px;">
-          <a href="<?php echo carbon_get_post_meta($box2->ID, 'homebox2_link_url'); ?>" class="cta-view-more">
-            <!-- <img height="43px" width="134px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/cta.png" /> -->
-          </a>
-          </div>
+
       <div class="home-box">
         <?php $box3 = inf_home_box3(); ?>
           <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox3_link_url'); ?>">
