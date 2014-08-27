@@ -5483,7 +5483,7 @@ div.archive-col .shop-link {
   overflow: visible;
 }
 .interview-slider > div.caroufredsel_wrapper {
-  margin: 0 !important;
+  margin: 0 auto !important
 }
 .interview-slider ul.slides {
   position: relative;
