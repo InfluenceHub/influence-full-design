@@ -8,6 +8,8 @@ the_post();
 //Detect mobile
 ?>
       <section id="content">
+      <?php inf_footer_signup() ?>
+
         <div class="top-block">
       <div class="column-two no-mobile" style="margin-left: 15px; margin-right: -15px;">
         <a class="left-arrow no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
@@ -46,7 +48,6 @@ the_post();
 
     <div class="ad_wrapper-block">
 
-      <?php inf_footer_signup() ?>
       <?php //inf_browse_by(); ?>
 
       <div class="content_wrapper">
