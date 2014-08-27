@@ -9,7 +9,7 @@ the_post();
 ?>
 
       <section id="content">
-       <div class="content_wrapper">
+       <div class="content_wrapper" style="border: none;">
        <?php inf_footer_signup() ?>
        </div>
         <div class="top-block">
