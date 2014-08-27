@@ -247,7 +247,7 @@ register_post_type('inf_market', array(
 
 register_post_type('inf_home_box1', array(
 	'labels' => array(
-		'name'	 => 'Callout Box 1',
+		'name'	 => 'Callout 1',
 		'singular_name' => 'Callout Box',
 		'add_new' => __( 'Add New' ),
 		'add_new_item' => __( 'Add new Home Box Story' ),
