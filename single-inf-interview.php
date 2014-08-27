@@ -23,19 +23,9 @@
     </div>
 <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
 
-        <!--
-        -->
-
-      <h1><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/interview-header.png" width="530" height="86" alt="" /><span><?php echo get_the_title(); ?></span></h1>
-          <?php
-            $thisDESC = get_the_content();
-            $thisURL = get_permalink();
-            $influencerName = get_the_title();
-            $img_obj = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
-          ?>
         </div>
-        <div id="topSlider" class="interview-slider group">
-          <ul class="slides" style="margin-left: -100px; overflow: visible;">
+        <div id="topSlider" class="interview-slider group" style="margin-left: -100px; overflow: visible;">
+          <ul class="slides" >
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
             $attachments_type = 'attachments';  
