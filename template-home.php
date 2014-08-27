@@ -12,7 +12,6 @@ the_post();
       <section id="content">
 
         <div class="top-block">
-      <div class="column">
         <?php $box1 = inf_home_box1(); ?>
           <a href="<?php echo carbon_get_post_meta($box1->ID, 'homebox1_link_url'); ?>">
             <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1') ?>
@@ -44,7 +43,6 @@ the_post();
           </a>
 
       </div>
-    </div>
 
     <div class="ad_wrapper-block">
 
