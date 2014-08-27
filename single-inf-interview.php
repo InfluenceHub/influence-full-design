@@ -25,9 +25,10 @@
 
         <!--
         -->
-    <div id="topSlider" class="interview-slider group">
-        <a class="left-arrow-int no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
+          <a class="left-arrow-int no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
         <a class="right-arrow-int no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
+    <div id="topSlider" class="interview-slider group">
+
 
   <ul class="slides">
           <?php
