@@ -298,7 +298,7 @@
 
  console.log(jQuery('.interview-slider .slides'));
 
- jQuery('.interview-slider group .slides').carouFredSel({
+ jQuery('.interview-slider .slides').carouFredSel({
   prev: '.left-arrow-int',
   next: '.right-arrow-int',
   items:1,
