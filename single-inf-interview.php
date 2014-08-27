@@ -22,6 +22,8 @@
       <!-- END TAG -->
     </div>
 <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
+        <a class="left-arrow no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
+        <a class="right-arrow no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
         <!--
         -->
     <div id="topSlider" class="interview-slider group">
@@ -293,11 +295,11 @@
     </div>
  <script>
 
- console.log(jQuery('.interview-slider group .slides'));
+ console.log(jQuery('.interview-slider .slides'));
 
  jQuery('.interview-slider group .slides').carouFredSel({
-  prev: '.left-arrow',
-  next: '.right-arrow',
+  prev: '.left-arrow-int',
+  next: '.right-arrow-int',
   items:1,
   scroll: { items: 1 },
   auto: false
