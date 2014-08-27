@@ -46,6 +46,7 @@ the_post();
             <p class="small-boxes"> <?php echo substr( $box4->post_content, 0, 60) . ''; ?> </p>
           </a>
       </div>
+      </div>
     </div>
 
     <div class="ad_wrapper-block">
