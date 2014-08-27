@@ -572,6 +572,7 @@ a.shop-inf-name:hover {
 }
 .interview-slider ul.slides > li img {
   display: block;
+  text-align: center;
 }
 .interview-slider .prev, .interview-slider .next {
   position: absolute;
