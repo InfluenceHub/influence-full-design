@@ -65,8 +65,9 @@
             }
           ?> 
           </ul><!-- /.slides -->
-          <div class="interview-slider next"></div>
-          <div class="interview-slider prev"></div>
+          <div class="prev top">&nbsp;</div><!-- /.prev -->
+          <div class="next top">&nbsp;</div><!-- /.next -->
+          </div>
         <!-- /.interview-slider-bottom -->
 
                 
