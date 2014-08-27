@@ -28,8 +28,6 @@
 
     <div id="topSlider" class="interview-slider group">
 
-<a class="right-arrow-int no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/right-arrow.png"></a>
-<a class="right-left-int no-mobile" style="z-index: 1;"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/left-arrow.png"></a>
   <ul class="slides">
 
           <?php
@@ -67,6 +65,8 @@
             }
           ?> 
           </ul><!-- /.slides -->
+          <div class="interview-slider next"></div>
+          <div class="interview-slider prev"></div>
         <!-- /.interview-slider-bottom -->
 
                 
@@ -296,18 +296,7 @@
     <div class="more_interviews">
     
     </div>
- <script>
 
- console.log(jQuery('#TopSlider .slides'));
-
- jQuery('#TopSlider .slides').carouFredSel({
-  prev: '.left-arrow-int',
-  next: '.right-arrow-int',
-  items:1,
-  scroll: { items: 1 },
-  auto: false
- });
- </script>
   </section><!-- /#content -->
 
     
