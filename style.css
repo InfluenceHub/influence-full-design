@@ -1059,7 +1059,8 @@ div.ad_banner img {
   background: #000;
   text-align: center;
   z-index: 10;
-  margin-bottom: 10px !important;
+  margin-bottom: 20px !important;
+  margin-top: -40px;
 }
 
 .browse > div.shell {
