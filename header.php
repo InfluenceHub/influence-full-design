@@ -79,14 +79,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager 2-->
 <div class="fixed_social_block"><a href="https://www.facebook.com/ShopTheInfluence" target="_blank">Facebook</a><a href="https://instagram.com/theinfluence" target="_blank">instagram<a href="http://www.pinterest.com/theinfluencepin/" target="_blank">pinterest</a><a href="https://twitter.com/theinfluence" target="_blank">twitter</a><a href="https://www.youtube.com/user/TheInfluenceStyle" target="_blank">youtube</a><a href="http://theinfluencecom.tumblr.com/" target="_blank">tumblr</a></div>
     <?php if (is_front_page()) { ?>
-    <div id="top_ad-block" class="top_ad-block no-mobile">
-      <a href="http://shop.theinfluence.com">
-      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shop-banner.gif" />
-      </a>
-      <!-- BEGIN IFRAME TAG - theinfluence 728x90 < - DO NOT MODIFY -->
-      <!--<IFRAME SRC="http://ib.adnxs.com/tt?id=2411079&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="728" HEIGHT="90"></IFRAME>-->
-      <!-- END TAG -->
-    </div>
     <?php } ?>
 
     <!-- <div class="newsletter-pop">
