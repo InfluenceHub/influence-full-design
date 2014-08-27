@@ -24,7 +24,7 @@
 <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
         <!--
         -->
-        <!--<div id="topSlider" class="interview-slider group"> -->
+    <div id="topSlider" class="interview-slider group">
 
   <ul class="slides" style="list-style-type: none;">
           <?php
@@ -41,7 +41,7 @@
 
           </ul><!-- /.slides -->
         </div>
-        <!-- </div> /.interview-slider -->
+        </div> <!--/.interview-slider -->
        <!-- <div class="interview-slider bottom group">
           <ul class="slides">
           <?php
