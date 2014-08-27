@@ -5,7 +5,7 @@ div.home-box img {
 
 .top-block {
   border: 0 !important;
-  margin-left: -15px;
+  /*margin-left: -15px;*/
 }
 
 .top-block .slides {
@@ -98,6 +98,7 @@ div.home-box img {
 
 .top-block {
   height: 750px ;
+  width: 80%;
 }
 
 .top-block .column-two {
