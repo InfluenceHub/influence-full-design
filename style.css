@@ -1058,11 +1058,11 @@ div.ad_banner img {
   background: #000;
   text-align: center;
   z-index: 10;
-  margin-bottom: 40px !important;
+  /*margin-bottom: 40px !important;*/
 }
 
 .browse > div.shell {
-  width: 80%;
+  width: 100%;
 }
 
 .browse .browse-holder {
