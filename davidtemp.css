@@ -553,7 +553,7 @@ a.shop-inf-name:hover {
   position: relative;
   margin: 20px 0 0 0;
   width: 100%;
-  height: 794px;
+  height: 100%;
 }
 .interview-slider > div.caroufredsel_wrapper {
   margin: 0 !important;
@@ -567,7 +567,7 @@ a.shop-inf-name:hover {
   float: left;
   display: block;
   margin: 0;
-  height: 794px;
+  height: 100%;
   list-style: none;
 }
 .interview-slider ul.slides > li img {
