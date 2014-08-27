@@ -9,8 +9,9 @@ the_post();
 ?>
 
       <section id="content">
-        <?php inf_footer_signup() ?>
-
+       <div class="content_wrapper">
+       <?php inf_footer_signup() ?>
+       </div>
         <div class="top-block">
 
       <div class="column-two no-mobile" style="margin-left: 15px; margin-right: -15px;">
