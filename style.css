@@ -1054,14 +1054,12 @@ div.ad_banner img {
   /*position: fixed;*/
   width: 100% !important;
   background: #000;
-  height: 40px;
   /*bottom: 0;*/
   width: 100% !important;
   background: #000;
   text-align: center;
   z-index: 10;
   margin-bottom: 40px !important;
-  margin-top: -5px;
 }
 
 .browse > div.shell {
