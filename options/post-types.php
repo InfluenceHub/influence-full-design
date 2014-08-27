@@ -247,8 +247,8 @@ register_post_type('inf_market', array(
 
 register_post_type('inf_home_box1', array(
 	'labels' => array(
-		'name'	 => 'Home Box 1',
-		'singular_name' => 'Home Box',
+		'name'	 => 'Callout Box 1',
+		'singular_name' => 'Callout Box',
 		'add_new' => __( 'Add New' ),
 		'add_new_item' => __( 'Add new Home Box Story' ),
 		'view_item' => 'View Home Box',
@@ -274,8 +274,62 @@ register_post_type('inf_home_box1', array(
 ));
 register_post_type('inf_home_box2', array(
 	'labels' => array(
-		'name'	 => 'Home Box 2',
-		'singular_name' => 'Home Box',
+		'name'	 => 'Callout 2',
+		'singular_name' => 'Callout Box',
+		'add_new' => __( 'Add New' ),
+		'add_new_item' => __( 'Add new Home Box Story' ),
+		'view_item' => 'View Home Box',
+		'edit_item' => 'Edit Story',
+		'new_item' => __('New Home Box Story'),
+		'view_item' => __('View Home Box Story'),
+		'search_items' => __('Search Home Box Stories'),
+		'not_found' =>  __('No entries found'),
+		'not_found_in_trash' => __('No entries found in Trash'),
+	),
+	'public' => true,
+	'exclude_from_search' => true,
+	'show_ui' => true,
+	'capability_type' => 'post',
+	'hierarchical' => false,
+	'_edit_link' =>  'post.php?post=%d',
+	'rewrite' => array(
+		"slug" => "homebox2",
+		"with_front" => false,
+	),
+	'query_var' => true,
+	'supports' => array('title', 'editor', 'page-attributes', 'thumbnail'),
+));
+register_post_type('inf_home_box3', array(
+	'labels' => array(
+		'name'	 => 'Callout 3',
+		'singular_name' => 'Callout Box',
+		'add_new' => __( 'Add New' ),
+		'add_new_item' => __( 'Add new Home Box Story' ),
+		'view_item' => 'View Home Box',
+		'edit_item' => 'Edit Story',
+		'new_item' => __('New Home Box Story'),
+		'view_item' => __('View Home Box Story'),
+		'search_items' => __('Search Home Box Stories'),
+		'not_found' =>  __('No entries found'),
+		'not_found_in_trash' => __('No entries found in Trash'),
+	),
+	'public' => true,
+	'exclude_from_search' => true,
+	'show_ui' => true,
+	'capability_type' => 'post',
+	'hierarchical' => false,
+	'_edit_link' =>  'post.php?post=%d',
+	'rewrite' => array(
+		"slug" => "homebox2",
+		"with_front" => false,
+	),
+	'query_var' => true,
+	'supports' => array('title', 'editor', 'page-attributes', 'thumbnail'),
+));
+register_post_type('inf_home_box4', array(
+	'labels' => array(
+		'name'	 => 'Callout 4',
+		'singular_name' => 'Callout Box',
 		'add_new' => __( 'Add New' ),
 		'add_new_item' => __( 'Add new Home Box Story' ),
 		'view_item' => 'View Home Box',
