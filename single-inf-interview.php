@@ -41,7 +41,7 @@
 
           </ul><!-- /.slides -->
         </div>
-       <!-- <div class="interview-slider bottom group">
+       <div class="interview-slider bottom group">
           <ul class="slides">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
@@ -60,7 +60,7 @@
               echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" width="90" /></li>';
               $i++;
             }
-          ?> -->
+          ?> 
           </ul><!-- /.slides -->
         <!-- /.interview-slider-bottom -->
 
