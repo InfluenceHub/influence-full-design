@@ -33,11 +33,6 @@
             $influencerName = get_the_title();
             $img_obj = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
           ?>
-          <div class="social-vert">
-            <a class="pint" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php echo $thisURL; ?>&amp;media=<?php echo $thisIMG; ?>&amp;description=<?php echo $thisDESC; ?>"></a>
-            <a class="tw" target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo $thisURL; ?>"></a>
-            <a class="tumblr" target="_blank" href="http://www.tumblr.com/share/link?url=<?php echo $thisURL; ?>&amp;name=<?php echo $thisTITLE; ?>&amp;description=<?php echo $thisDESC; ?>"></a>
-          </div>   
         </div>
         <div id="topSlider" class="interview-slider group">
           <ul class="slides">
@@ -48,7 +43,7 @@
             while($attachment = $attachments->get()) {
               $title = $attachments->field('title');
               $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider');
-              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" width="930" height="536" /></li>';
+              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" /></li>';
               $i++;
             }  
           ?>
