@@ -43,7 +43,7 @@
             while($attachment = $attachments->get()) {
               $title = $attachments->field('title');
               $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider');
-              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" width= 100% " /></li>';
+              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" width="1191px" height="794px" " /></li>';
               $i++;
             }  
           ?>
