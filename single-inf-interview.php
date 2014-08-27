@@ -291,7 +291,18 @@
     <div class="more_interviews">
     
     </div>
+ <script>
 
+ console.log(jQuery('.interview-slider group .slides'));
+
+ jQuery('.interview-slider group .slides').carouFredSel({
+  prev: '.left-arrow',
+  next: '.right-arrow',
+  items:1,
+  scroll: { items: 1 },
+  auto: false
+ });
+ </script>
   </section><!-- /#content -->
 
     
