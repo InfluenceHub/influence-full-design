@@ -300,7 +300,7 @@
 
  console.log(jQuery('.interview-slider .slides'));
 
- jQuery('.interview-slider .slides').carouFredSel({
+ jQuery('#TopSlider .slides').carouFredSel({
   prev: '.left-arrow-int',
   next: '.right-arrow-int',
   items:1,
