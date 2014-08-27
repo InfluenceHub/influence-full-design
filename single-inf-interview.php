@@ -43,7 +43,7 @@
             while($attachment = $attachments->get()) {
               $title = $attachments->field('title');
               $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider');
-              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" /></li>';
+              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" width= 100% " /></li>';
               $i++;
             }  
           ?>
@@ -84,11 +84,6 @@
         
         <div id="interview_wrapper">
           <div class="column one">
-            <?php
-  	        $credit_styling = 'Styling by ' . carbon_get_the_post_meta('inf_credit_styling');
-            $credit_photos   = 'Photography by ' . carbon_get_the_post_meta('inf_credit_photo');
-            $credit_makeup  = 'Make-up and Hair by ' . carbon_get_the_post_meta('inf_credit_makeup');
- 	   ?>
 	  <!--<h2 style="text-align:center;"><?php echo $credit_styling ?></h2>
         <h2 style="text-align:center;"> <?php echo $credit_photos ?></h2>
         <h2 style="text-align:center;"> <?php echo $credit_makeup ?></h2>--><br />
