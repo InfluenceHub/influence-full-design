@@ -48,6 +48,14 @@ div.home-box img {
 .left-arrow {
   left: 0px;
 }
+.right-arrow-int {
+  left: 580px;
+
+}
+
+.left-arrow-int {
+  left: 0px;
+}
 .breaker-shell {
   width: 600px;
   height: 69px;
