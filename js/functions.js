@@ -662,6 +662,25 @@ var headerHeight = parseInt($('#header').height()+20);
     $('#content').css({'margin-top': headerHeight+'px'});
   }
 
+//Change Opacity on Scroll
+var signupHeight = parseInt($('.browse').height()+20);
+  if ($('#top_ad-block').length > 0) {
+    var topOffset = $('#top_ad-block').height();
+    $(window).scroll(function() {
+      var thisEl = $('.browse');
+      if ($(window).scrollTop() >= topOffset && !thisEl.hasClass('pinned')) {
+        thisEl.addClass('pinned');
+        $('#content').css({'margin-top': headerHeight+'px'});
+      } else if ($(window).scrollTop() < topOffset && thisEl.hasClass('pinned')) {
+        thisEl.removeClass('pinned');
+        $('#content').css({'margin-top': '0px'});
+      }
+    });
+  } else {
+    $('.browse').addClass('pinned');
+    $('#content').css({'margin-top': headerHeight+'px'});
+  }
+
   
 //Initialize Home Page Slider
   function homeSliderInit() {

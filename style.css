@@ -1063,6 +1063,20 @@ div.ad_banner img {
   margin-top: 20px;
 }
 
+.browse.scroll {
+  position: fixed;
+  width: 100% !important;
+  background: #000;
+  /*bottom: 0;*/
+  width: 100% !important;
+  background: #000;
+  text-align: center;
+  z-index: 10;
+  margin-bottom: 40px !important;
+  margin-top: 20px;
+  opacity: .80;
+}
+
 .browse > div.shell {
   width: 100%;
 }
