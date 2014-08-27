@@ -43,7 +43,7 @@
         </div><!-- /.interview-slider -->   
         
 <div class="interview-slider bottom group">
-          <ul class="slides">
+          <ul class="slides" style="margin-left: 50%">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
             $attachments_type = 'attachments';
@@ -58,7 +58,7 @@
             while($attachment = $attachments->get()) {
               $title = $attachments->field('title');
               $image = wp_get_attachment_image_src($attachments->id(), 'inf_interviewslider_small');
-              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" width="90" /></li>';
+              echo '<li data-index="' . $i . '"><img src="' . $image[0] . '" alt="' . $title . '" /></li>';
               $i++;
             }
           ?> 
