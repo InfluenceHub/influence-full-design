@@ -5478,9 +5478,9 @@ div.archive-col .shop-link {
 }
 .interview-slider {
   position: relative;
-  margin: 35px 0 0 0;
+  margin: 35px 35px 35px;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 .interview-slider > div.caroufredsel_wrapper {
   margin: 0 !important;
