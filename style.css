@@ -55,7 +55,15 @@ div.home-box img {
   padding-bottom: 10px;
   display: inline-block;
 }
-
+.callout img.callout-overlay {
+  position:absolute;
+  bottom: 0px;
+  right: 0px;
+ /* margin-right: 50px;
+  margin-bottom: 4px;
+  width: 149px;
+  height: 46px; */
+}
 .right-arrow {
   left: 580px;
 
