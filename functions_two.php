@@ -46,10 +46,8 @@
 // Items of The Week
   function inf_tems_of_week() {
     $args = array(
-      'post_type' => 'inf_home_items',
-      'posts_per_page' => 1
+      'post_type' => 'inf_home_items'
     );
-
     $list_item = $get_post($args)
     $title      = trim(get_the_title($list_item->ID));
     $link1 = trim(carbon_get_post_meta($list_item->ID, 'item1_link_url'));
