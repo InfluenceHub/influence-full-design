@@ -44,7 +44,11 @@ div.home-box img {
   font-size: 14px;
   margin-top: -4px;
 }
-
+.callout_container {
+  width: 1200px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 .callout {
   margin-top: 75px;
   padding-top: 10px;

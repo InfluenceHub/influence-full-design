@@ -9,7 +9,7 @@ the_post();
 ?>
 <?php inf_footer_signup() ?>
   <section id="callout">
-   <div class="top-block">
+   <div class="callout_container">
       <div class="callout">
         <?php $box1 = inf_home_box1(); ?>
             <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1') ?>
