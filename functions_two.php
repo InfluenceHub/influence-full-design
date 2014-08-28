@@ -339,7 +339,7 @@
         </div>
         <div class="shell">
          <div class="section-heading">
-         <h2 class="no-mobile" style=" width=: 100%; border: none; text-align: center;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
+         <h2 class="no-mobile"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
           </div><!-- /.section-heading -->
          <ul>
             <?php
