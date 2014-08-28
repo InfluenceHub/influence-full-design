@@ -39,7 +39,47 @@ the_post();
         </a>
         </div>
     </div>
-    <?php inf_item_of_the_week(); ?>
+    <div class="favorites_container">
+<?php 
+  
+    $list_item = $get_post($args)
+    $link1 = trim(carbon_get_post_meta($list_item->ID, 'item1_link_url'));
+    $link2 = trim(carbon_get_post_meta($list_item->ID, 'item2_link_url'));
+    $link3 = trim(carbon_get_post_meta($list_item->ID, 'item3_link_url'));
+    $link4 = trim(carbon_get_post_meta($list_item->ID, 'item4_link_url'));
+    $link5 = trim(carbon_get_post_meta($list_item->ID, 'item5_link_url'));
+    $image1 = carbon_get_post_meta($list_item->ID, 'itemofweek1');
+    $image2 = carbon_get_post_meta($list_item->ID, 'itemofweek2');
+    $image3 = carbon_get_post_meta($list_item->ID, 'itemofweek3');
+    $image4 = carbon_get_post_meta($list_item->ID, 'itemofweek4');
+    $image5 = carbon_get_post_meta($list_item->ID, 'itemofweek5');
+?>
+ <div class="favorites">
+   <a href="<?php echo $link1 ?>">
+    <img src="<?php echo $image1 ?>" height="133px" width="133px" />
+   </a>
+ </div>
+ <div class="favorites">
+   <a href="<?php echo $link2 ?>">
+    <img src="<?php echo $image2 ?>" height="133px" width="133px" />
+   </a>
+ </div>
+ <div class="favorites">
+   <a href="<?php echo $link3 ?>">
+    <img src="<?php echo $image3 ?>" height="133px" width="133px"/>
+   </a>
+ </div>
+ <div class="favorites">
+   <a href="<?php echo $link4 ?>">
+    <img src="<?php echo $image4 ?>" height="133px" width="133px" />
+   </a>
+ </div>
+ <div class="favorites">
+  <a href="<?php echo $link5 ?>">
+    <img src="<?php echo $image5 ?>" height="133px" width="133px" />
+  </a>
+ </div>
+</div>
 </section>
   <section id="content">
 
