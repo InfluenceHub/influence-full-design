@@ -62,7 +62,7 @@
     $image3 = carbon_get_post_meta($list_item->ID, 'itemofweek3');
     $image4 = carbon_get_post_meta($list_item->ID, 'itemofweek4');
     $image5 = carbon_get_post_meta($list_item->ID, 'itemofweek5');
- ?>
+?>
 <div class="favorites_container">
  <div class="favorites">
    <a href="<?php echo $link1 ?>">
@@ -90,8 +90,8 @@
   </a>
  </div>
 </div>
- <?php
 }
+<?php
 
 
 // Call Out Boxes Functions
