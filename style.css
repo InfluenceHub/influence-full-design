@@ -49,10 +49,8 @@ div.home-box img {
 .callout {
   padding-top: 10px;
   padding-bottom: 10px;
-}
-.callout .box {
   display: inline-block;
-}
+
 }
 .right-arrow {
   left: 580px;
