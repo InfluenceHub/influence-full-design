@@ -26,12 +26,12 @@
 				<div class="shop-main">
 					<!--<div class="breadcrumbs"><a href="#">SHOP ></a> <?php //echo strtoupper(get_the_title()); ?></div> /.breadcrumbs -->
           <div class="column-three" style="border: none;">
-          <div class="column adcolumn" style="margin-left: -15px;">
+          <div class="column adcolumn" style="">
                 <a href="http://click.linksynergy.com/fs-bin/click?id=pwlaa2*cgnI&offerid=276224.10013359&subid=0&type=4">
                   <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nordstrom2.jpg" />
                 </a>
-             </div>  
-          <div class="left-col theme left">
+             </div>
+          <div class="left-col theme right">
 						<?php if(has_post_thumbnail()) { ?>
 							<?php
                 $thisDESC = get_the_content();
@@ -40,7 +40,7 @@
                 inf_social_share($thisURL, $influencer_name, $img_obj[0], $thisDESC);
                 $category_link = get_category_link($post_categories[0]->term_id);
               ?>
-              <div class="inner" style="width: 634px; height: 500px;">
+              <div class="inner" style="width: 430px; height:600px; margin-right:24px; background:#d6f7ee">
 								<ul class="slides"><?php } ?>
 								<li><a href="<?php echo $img_obj[1]; ?>" class="colorbox">
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
@@ -55,16 +55,17 @@
               <!--<div class="shop-maintag"><a href="<?php echo $category_link; ?>"><?php echo strtoupper($post_categories[0]->name); ?></a></div> -->
 						<?php //} ?>
 					</div><!-- /.left-col -->
-          <br /> <br />
-					<div class="right-col right" style="float: left;">
+					<div class="right-col left" style="float: left; width:225px;">
 						<?php
 
 						//$exact_items = carbon_get_the_post_meta('inf_influencer_products'); 
             $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
             ?>
             <div class="shop-main-theme">
-						<div class="text-holder" style=" margin-left: -1px; padding-top: 10px; margin-bottom: 10px;">
-              <img class="shop-published-by" style="float: right;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
+				<div class="shop-main-title"><?php echo get_the_title(get_the_ID()); ?></div>
+						<div class="text-holder" style="margin:0; padding:0; height:auto;">
+              <img class="shop-published-by1" style="display:block; margin:20px auto 40px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
+			  <div class="shop-main-social"></div>
 
               <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
 							<?php
@@ -84,7 +85,8 @@
 					</div><!-- /.right-col -->
           </div><!-- /.column-three -->
 			  </div>	<!-- /.shop-main -->
-        <div class="column-three bottom" style="margin-top: 200px;">
+        <div class="column-three bottom" style="margin-top: 120px;">
+			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopthetrend.jpg" class="" style="margin:0 auto; display:block; margin-bottom:80px;" />
 				<?php $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
 				if(!empty($products_sections)) {
 					foreach($products_sections as $key=>$ps) {
