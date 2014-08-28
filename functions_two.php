@@ -44,7 +44,21 @@
 
 
 // Items of The Week
+function inf_items() {
+  $args = array(
+    'post_type' => 'inf_home_items',
+    'posts_per_page' => 1
+    );
+  $list_items = get_posts($args);
 
+  $title = get_the_title($list_item ->ID);
+  $link1 = trim(carbon_get_post_meta($list_item->ID, 'item1_link_url'));
+  $link2 = trim(carbon_get_post_meta($list_item->ID, 'item2_link_url'));
+  $link3 = trim(carbon_get_post_meta($list_item->ID, 'item3_link_url'));
+  $link4 = trim(carbon_get_post_meta($list_item->ID, 'item4_link_url'));
+  $link5 = trim(carbon_get_post_meta($list_item->ID, 'item5_link_url'));
+
+}
 
 
 // Call Out Boxes Functions
