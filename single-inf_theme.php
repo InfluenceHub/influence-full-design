@@ -42,7 +42,7 @@
               ?>
               <div class="inner" style="width: 634px; height: 500px;">
 								<ul class="slides"><?php } ?>
-								<li><a href="<?php echo $img_obj[0]; ?>" class="colorbox">
+								<li><a href="<?php echo $img_obj[1]; ?>" class="colorbox">
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</a></li>
                 <?php inf_theme_slider_theme(); ?>
