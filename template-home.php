@@ -13,14 +13,19 @@ the_post();
       <div class="callout">
         <?php $box1 = inf_home_box1(); ?>
             <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1') ?>
+        </div>
+        <div class="callout">
         <?php $box2 = inf_home_box2(); ?>
             <?php echo get_the_post_thumbnail($box2->ID, 'inf_home_box2') ?>
+        </div>
+        <div class="callout">
         <?php $box3 = inf_home_box3(); ?>
             <?php echo get_the_post_thumbnail($box3->ID, 'inf_home_box3') ?>
-
+        </div>
+        <div class="callout">
         <?php $box4 = inf_home_box4(); ?>
             <?php echo get_the_post_thumbnail($box4->ID, 'inf_home_box4') ?>
-      </div>
+        </div>
     </div>
 </section>
   <section id="content">
