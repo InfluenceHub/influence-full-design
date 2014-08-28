@@ -42,7 +42,7 @@
   add_image_size('inf_interviewmore', 220, 235, true);
   add_image_size('inf_featured_theme',                 634, 500, true);
 
-
+// Call Out Boxes Functions
   function inf_home_box1() {
     $args = array(
       'post_type' => 'inf_home_box1',
