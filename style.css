@@ -42,10 +42,9 @@ div.home-box img {
 
 .callout_container {
   margin: 0 auto !important;
+  width: 1200px;
+  height: 400px;
 }
-
-.callout > ul {
-  display: inline-block;
 
 }
 .right-arrow {
