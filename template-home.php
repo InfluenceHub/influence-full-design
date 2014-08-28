@@ -8,10 +8,8 @@ the_post();
 //Detect mobile
 ?>
 <?php inf_footer_signup() ?>
-
-      <section id="content">
-
-        <div class="top-block">
+  <section id="callout">
+   <div class="top-block">
       <div class="callout">
         <?php $box1 = inf_home_box1(); ?>
             <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1') ?>
@@ -24,6 +22,10 @@ the_post();
             <?php echo get_the_post_thumbnail($box4->ID, 'inf_home_box4') ?>
       </div>
     </div>
+</section>
+  <section id="content">
+
+
 
     <div class="ad_wrapper-block">
 
