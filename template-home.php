@@ -11,22 +11,22 @@ the_post();
   <section id="callout">
    <div class="callout_container">
       <div class="callout">
-        <img class="callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png">
+        <img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png">
         <?php $box1 = inf_home_box1(); ?>
             <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1') ?>
         </div>
         <div class="callout">
-        <img class="callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/in-focu.png">
+        <img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/in-focu.png">
         <?php $box2 = inf_home_box2(); ?>
             <?php echo get_the_post_thumbnail($box2->ID, 'inf_home_box2') ?>
         </div>
         <div class="callout">
-        <img class="callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/trend-report.png">
+        <img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/trend-report.png">
         <?php $box3 = inf_home_box3(); ?>
             <?php echo get_the_post_thumbnail($box3->ID, 'inf_home_box3') ?>
         </div>
         <div class="callout">
-        <img class="callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/just-spotted.png">
+        <img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/just-spotted.png">
         <?php $box4 = inf_home_box4(); ?>
             <?php echo get_the_post_thumbnail($box4->ID, 'inf_home_box4') ?>
         </div>
