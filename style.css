@@ -53,6 +53,9 @@ div.home-box img {
   width: 1350px;
   margin-left: 15%;
   border: 1px solid #ccc;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0 auto !important;
 }
 .favorites {
   display: inline-block;
