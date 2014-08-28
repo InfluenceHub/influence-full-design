@@ -46,8 +46,7 @@
 // Items of The Week
 function inf_items() {
   $args = array(
-    'post_type' => 'inf_home_items',
-    'posts_per_page' => 1
+    'post_type' => 'inf_home_items'
     );
   $list_item = get_posts($args);
 
