@@ -119,7 +119,8 @@ div.home-box img {
 }
 
 .top-block {
-  height: 750px ;
+  height: 750px;
+  width: 1200px;
 }
 
 .top-block .column-two {
