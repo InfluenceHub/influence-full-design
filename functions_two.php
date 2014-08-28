@@ -49,6 +49,10 @@
       'post_type' => 'inf_home_items',
       'posts_per_page' => 1
     );
+?>
+<div class="favorites_container">
+<?php 
+  
     $list_item = $get_post($args)
     $link1 = trim(carbon_get_post_meta($list_item->ID, 'item1_link_url'));
     $link2 = trim(carbon_get_post_meta($list_item->ID, 'item2_link_url'));
@@ -61,7 +65,6 @@
     $image4 = carbon_get_post_meta($list_item->ID, 'itemofweek4');
     $image5 = carbon_get_post_meta($list_item->ID, 'itemofweek5');
 ?>
-<div class="favorites_container">
  <div class="favorites">
    <a href="<?php echo $link1 ?>">
     <img src="<?php echo $image1 ?>" height="133px" width="133px" />
@@ -168,6 +171,7 @@
   //Home Top Slider
   function inf_home_topslider() {
       //here are get post options
+     
       $args = array(
         'numberposts' => 9999,
         'orderby' => 'date',
