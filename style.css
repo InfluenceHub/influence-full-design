@@ -50,13 +50,12 @@ div.home-box img {
   background-color: #fbf1ea;
 }
 .favorites_container {
-  width: 1350px;
+  width: 1200px;
   margin-left: 15%;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding-top: 15px;
   padding-bottom: 15px;
-  margin: 0 auto !important;
 }
 .favorites {
   display: inline-block;
