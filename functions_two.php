@@ -50,7 +50,6 @@
       'posts_per_page' => 1
     );
     $list_item = $get_post($args)
-    $title      = trim(get_the_title($list_item->ID));
     $link1 = trim(carbon_get_post_meta($list_item->ID, 'item1_link_url'));
     $link2 = trim(carbon_get_post_meta($list_item->ID, 'item2_link_url'));
     $link3 = trim(carbon_get_post_meta($list_item->ID, 'item3_link_url'));
