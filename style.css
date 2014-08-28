@@ -52,6 +52,7 @@ div.home-box img {
 .favorites_container {
   width: 1200px;
   margin-left: 15%;
+  margin-top: 50px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding-top: 15px;
