@@ -46,7 +46,7 @@
 // Items of The Week
   function inf_tems_of_week() {
     $args = array(
-      'post_type' => 'inf_home_items'
+      'post_type' => 'inf_home_items',
       'posts_per_page' => 1
     );
 
