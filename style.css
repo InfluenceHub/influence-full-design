@@ -1,7 +1,6 @@
 #callout {
   width: 100%;
   margin: 0 auto !important;
-  background-color: #fbf1ea;
 }
 div.home-box img {
   width: 300px;
@@ -48,14 +47,16 @@ div.home-box img {
   width: 1250px;
   margin-left: 15%;
   margin-right: 20%;
+  background-color: #fbf1ea;
 }
 .callout {
   margin-top: 100px;
   padding-top: 10px;
   padding-bottom: 10px;
   display: inline-block;
+  padding-left: 10px;
 }
-.callout img.callout-overlay {
+.callout .callout-overlay {
   position:absolute;
   bottom: 0px;
   right: 0px;
