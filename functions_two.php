@@ -42,6 +42,58 @@
   add_image_size('inf_interviewmore', 220, 235, true);
   add_image_size('inf_featured_theme',                 634, 500, true);
 
+
+// Items of The Week
+  function inf_tems_of_week() {
+    $args = array(
+      'post_type' => 'inf_home_items'
+      'posts_per_page' => 1
+    );
+
+    $list_item = $get_post($args)
+    $title      = trim(get_the_title($list_item->ID));
+    $link1 = trim(carbon_get_post_meta($list_item->ID, 'item1_link_url'));
+    $link2 = trim(carbon_get_post_meta($list_item->ID, 'item2_link_url'));
+    $link3 = trim(carbon_get_post_meta($list_item->ID, 'item3_link_url'));
+    $link4 = trim(carbon_get_post_meta($list_item->ID, 'item4_link_url'));
+    $link5 = trim(carbon_get_post_meta($list_item->ID, 'item5_link_url'));
+    $image1 = carbon_get_post_meta($list_item->ID, 'itemofweek1');
+    $image2 = carbon_get_post_meta($list_item->ID, 'itemofweek2');
+    $image3 = carbon_get_post_meta($list_item->ID, 'itemofweek3');
+    $image4 = carbon_get_post_meta($list_item->ID, 'itemofweek4');
+    $image5 = carbon_get_post_meta($list_item->ID, 'itemofweek5');
+ ?>
+<div class="favorites_container">
+ <div class="favorites">
+   <a href="<?php echo $link1 ?>">
+    <img src="<?php echo $image1 ?>" height="133px" width="133px" />
+   </a>
+ </div>
+ <div class="favorites">
+   <a href="<?php echo $link2 ?>">
+    <img src="<?php echo $image2 ?>" height="133px" width="133px" />
+   </a>
+ </div>
+ <div class="favorites">
+   <a href="<?php echo $link3 ?>">
+    <img src="<?php echo $image3 ?>" height="133px" width="133px"/>
+   </a>
+ </div>
+ <div class="favorites">
+   <a href="<?php echo $link4 ?>">
+    <img src="<?php echo $image4 ?>" height="133px" width="133px" />
+   </a>
+ </div>
+ <div class="favorites">
+  <a href="<?php echo $link5 ?>">
+    <img src="<?php echo $image5 ?>" height="133px" width="133px" />
+  </a>
+ </div>
+</div>
+ <?php
+}
+
+
 // Call Out Boxes Functions
   function inf_home_box1() {
     $args = array(

@@ -39,6 +39,7 @@ the_post();
         </a>
         </div>
     </div>
+    <?php inf_item_of_the_week(); ?>
 </section>
   <section id="content">
 
