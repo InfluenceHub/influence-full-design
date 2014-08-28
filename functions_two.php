@@ -49,19 +49,19 @@ function inf_items() {
     'post_type' => 'inf_home_items',
     'posts_per_page' => 1
     );
-  $list_items = get_posts($args);
+  $list_item = get_posts($args);
 
-  $title = get_the_title($list_items ->ID);
-  $link1 = trim(carbon_get_post_meta($list_items->ID, 'item1_link_url'));
-  $link2 = trim(carbon_get_post_meta($list_items->ID, 'item2_link_url'));
-  $link3 = trim(carbon_get_post_meta($list_items->ID, 'item3_link_url'));
-  $link4 = trim(carbon_get_post_meta($list_items->ID, 'item4_link_url'));
-  $link5 = trim(carbon_get_post_meta($list_items->ID, 'item5_link_url'));
-  $image1 = carbon_get_post_meta($list_items->ID, 'itemofweek1');
-  $image2 = carbon_get_post_meta($list_items->ID, 'itemofweek2');
-  $image3 = carbon_get_post_meta($list_items->ID, 'itemofweek3');
-  $image4 = carbon_get_post_meta($list_items->ID, 'itemofweek4');
-  $image5 = carbon_get_post_meta($list_items->ID, 'itemofweek5');
+  $title = get_the_title($list_item->ID);
+  $link1 = trim(carbon_get_post_meta($list_item->ID, 'item1_link_url'));
+  $link2 = trim(carbon_get_post_meta($list_item->ID, 'item2_link_url'));
+  $link3 = trim(carbon_get_post_meta($list_item->ID, 'item3_link_url'));
+  $link4 = trim(carbon_get_post_meta($list_item->ID, 'item4_link_url'));
+  $link5 = trim(carbon_get_post_meta($list_item->ID, 'item5_link_url'));
+  $image1 = carbon_get_post_meta($list_item->ID, 'itemofweek1');
+  $image2 = carbon_get_post_meta($list_item->ID, 'itemofweek2');
+  $image3 = carbon_get_post_meta($list_item->ID, 'itemofweek3');
+  $image4 = carbon_get_post_meta($list_item->ID, 'itemofweek4');
+  $image5 = carbon_get_post_meta($list_item->ID, 'itemofweek5');
   ?>
   <div class="favorites_container">
   <div class="favorites">
