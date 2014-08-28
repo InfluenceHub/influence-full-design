@@ -10,8 +10,6 @@ the_post();
 <?php inf_footer_signup() ?>
 
       <section id="content">
-
-        <div class="top-block">
     <div class="callout_container">
       <div class="callout box">
         <?php $box1 = inf_home_box1(); ?>
@@ -30,9 +28,6 @@ the_post();
             <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box4') ?>
       </div>
     </div>
-    </div>
-      </div>
-
     <div class="ad_wrapper-block">
 
       <?php //inf_browse_by(); ?>
