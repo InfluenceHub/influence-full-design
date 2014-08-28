@@ -39,7 +39,6 @@ the_post();
         </a>
         </div>
     </div>
-    <div class="favorites_container">
 <?php inf_items(); ?>
 
 </section>
