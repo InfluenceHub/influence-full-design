@@ -1308,7 +1308,7 @@ body.home #content .ad_wrapper-block > div.latest {
   position: absolute;
   padding: 0;
   color: #000;
-  font: 44px/20px "Oswald",serif;
+  font-family: "Oswald",arial.sans-serif;
   font-weight: 300;
   z-index: 2;
   white-space: nowrap;
@@ -1887,7 +1887,8 @@ div.adspot {
 }
 
 .bottom-section .shell h2 {
-  font: 18px/35px "Oswald",arial,sans-serif;
+  font-size: 18px;
+  font-family: "Oswald",arial,sans-serif;
   font-weight: 300;
   letter-spacing: .75px;
   height: 25px;
