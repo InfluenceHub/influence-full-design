@@ -67,6 +67,30 @@
     return null;
   }
 
+    function inf_home_box3(){
+    $args = array(
+      'post_type' => 'inf_home_box3',
+      'posts_per_page' => 1
+    );
+    $box2 = get_posts($args);
+    if(isset($box3[0])){
+      return $box3[0];
+    }
+    return null;
+  }
+
+    function inf_home_box4(){
+    $args = array(
+      'post_type' => 'inf_home_box4',
+      'posts_per_page' => 1
+    );
+    $box2 = get_posts($args);
+    if(isset($box4[0])){
+      return $box4[0];
+    }
+    return null;
+  }
+
 
 
   //Attachments metabox customization
