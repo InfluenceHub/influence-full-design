@@ -353,3 +353,30 @@ register_post_type('inf_home_box4', array(
 	'query_var' => true,
 	'supports' => array('title', 'editor', 'page-attributes', 'thumbnail'),
 ));
+register_post_type('inf_items_of_the_week', array(
+	'labels' => array(
+		'name'	 => 'Items of the Week',
+		'singular_name' => 'Items This Week',
+		'add_new' => __( 'Add New' ),
+		'add_new_item' => __( 'Add New Products' ),
+		'view_item' => 'View Items This Week',
+		'edit_item' => 'Edit Story',
+		'new_item' => __('New Items of The Week Story'),
+		'view_item' => __('View Items of the Week Story'),
+		'search_items' => __('Search Items of the Week Stories'),
+		'not_found' =>  __('No entries found'),
+		'not_found_in_trash' => __('No entries found in Trash'),
+	),
+	'public' => true,
+	'exclude_from_search' => true,
+	'show_ui' => true,
+	'capability_type' => 'post',
+	'hierarchical' => false,
+	'_edit_link' =>  'post.php?post=%d',
+	'rewrite' => array(
+		"slug" => "homebox2",
+		"with_front" => false,
+	),
+	'query_var' => true,
+	'supports' => array('title', 'editor', 'page-attributes', 'thumbnail'),
+));

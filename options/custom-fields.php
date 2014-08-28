@@ -311,6 +311,27 @@ Carbon_Container::factory('custom_fields', __('More Featured Images', 'inf'))
 			))
 	));
 
+//Items of The Week Home Banner
+	Carbon_Container::factory('custom_fields', __('Items of The Week Options', 'inf'))
+	->show_on_post_type(array('post','inf-items_of_the_week'))
+    ->add_fields(array(
+		Carbon_Field::factory('text', 'item1_link_url', 'Item 1 URL'),
+        Carbon_Field::factory('text', 'item2_link_url', 'Item 2 URL'),
+		Carbon_Field::factory('text', 'item3_link_url', 'Item 3 URL'),
+		Carbon_Field::factory('text', 'item4_link_url', 'Item 4 URL'),
+		Carbon_Field::factory('text', 'item5_link_url', 'Item 5 URL'),
+		Carbon_Field::factory('attachment', 'itemofweek1', 'First Item')
+			->help_text('Image dimensions - 133 x 133 pixels.'),
+		Carbon_Field::factory('attachment', 'itemofweek2', 'Second Item')
+			->help_text('Image dimensions - 133 × 133 pixels.'),
+		Carbon_Field::factory('attachment', 'itemofweek3', 'Third Item')
+			->help_text('Image dimensions - 133 × 133 pixels.'),
+		Carbon_Field::factory('attachment', 'itemofweek4', 'Fourth Item')
+			->help_text('Image dimensions - 133 × 133 pixels.'),
+		Carbon_Field::factory('attachment', 'itemofweek5', 'Fith Item')
+			->help_text('Image dimensions - 133 × 133 pixels.')
+	));
+
 /*
 Carbon_Container::factory('term_meta', __('Category settings', 'inf'))
 	->show_on_taxonomy('category')
