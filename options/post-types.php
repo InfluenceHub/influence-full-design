@@ -266,7 +266,7 @@ register_post_type('inf_home_box1', array(
 	'hierarchical' => false,
 	'_edit_link' =>  'post.php?post=%d',
 	'rewrite' => array(
-		"slug" => "homebox2",
+		"slug" => "homebox",
 		"with_front" => false,
 	),
 	'query_var' => true,
@@ -293,7 +293,7 @@ register_post_type('inf_home_box2', array(
 	'hierarchical' => false,
 	'_edit_link' =>  'post.php?post=%d',
 	'rewrite' => array(
-		"slug" => "homebox2",
+		"slug" => "homebox",
 		"with_front" => false,
 	),
 	'query_var' => true,
@@ -320,7 +320,7 @@ register_post_type('inf_home_box3', array(
 	'hierarchical' => false,
 	'_edit_link' =>  'post.php?post=%d',
 	'rewrite' => array(
-		"slug" => "homebox2",
+		"slug" => "homebox",
 		"with_front" => false,
 	),
 	'query_var' => true,
@@ -347,7 +347,7 @@ register_post_type('inf_home_box4', array(
 	'hierarchical' => false,
 	'_edit_link' =>  'post.php?post=%d',
 	'rewrite' => array(
-		"slug" => "homebox2",
+		"slug" => "homebox",
 		"with_front" => false,
 	),
 	'query_var' => true,
@@ -374,7 +374,7 @@ register_post_type('inf_home_items', array(
 	'hierarchical' => false,
 	'_edit_link' =>  'post.php?post=%d',
 	'rewrite' => array(
-		"slug" => "homebox2",
+		"slug" => "itemsoftheweek",
 		"with_front" => false,
 	),
 	'query_var' => true,
