@@ -50,7 +50,7 @@ jQuery(function($) {
 
   //$('.pins-feed-list a').attr('target', '_blank');
   //always open outside links in a new tab
-  $('a:not([href^="http://64.50.176.63"]):not([href^="http://theinfluence.com"]):not([href^="http://www.theinfluence.com"]):not([href^="#"]):not([href^="/"])').attr('target','_blank');
+  $('a:not([href^="http://64.50.176.63"]):not([href^="http://theinfluence.com"]):not([href^="http://www.theinfluence.com"]):not([href^="http://dev.theinfluence.com"]):not([href^="http://staging.theinfluence.com"]):not([href^="#"]):not([href^="/"])').attr('target','_blank');
   
   $('#header form.search input[type="submit"]').click(function() {
     var thisEl = $(this);
