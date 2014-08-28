@@ -313,7 +313,7 @@ Carbon_Container::factory('custom_fields', __('More Featured Images', 'inf'))
 
 //Items of The Week Home Banner
 	Carbon_Container::factory('custom_fields', __('Items of The Week Options', 'inf'))
-	->show_on_post_type(array('post','inf_items_of_the_week'))
+	->show_on_post_type(array('post','inf_home_items'))
     ->add_fields(array(
 		Carbon_Field::factory('text', 'item1_link_url', 'Item 1 URL'),
         Carbon_Field::factory('text', 'item2_link_url', 'Item 2 URL'),
