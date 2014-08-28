@@ -4283,7 +4283,7 @@ a#logo {
   text-transform: uppercase;
   text-align: center;
   padding-top: 6px;
-  padding-bottom: 7px;
+  padding-bottom: 20px;
 }
 
 .nav > ul > li.current-menu-ancestor > a,
@@ -4296,12 +4296,13 @@ a#logo {
 .nav > ul > li:hover > a {
   color:#000;
   font-weight:bold;
+  background:url(images/bkg_active_nav.jpg) 0 22px repeat-x;
 }
 
 .nav > ul > li .sub-menu-wrapper {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 40px;
   right: 0;
   padding: 5px 0 38px;
   background-color: #fff;
