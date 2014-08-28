@@ -358,7 +358,7 @@ register_post_type('inf_home_items', array(
 		'name'	 => 'Items of the Week',
 		'singular_name' => 'Items This Week',
 		'add_new' => __( 'Add New' ),
-		'add_new_item' => __( 'Add New Products' ),
+		'add_new_item' => __( 'Add New Items' ),
 		'view_item' => 'View Items This Week',
 		'edit_item' => 'Edit Story',
 		'new_item' => __('New Items of The Week Story'),
