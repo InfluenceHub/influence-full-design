@@ -353,7 +353,7 @@ register_post_type('inf_home_box4', array(
 	'query_var' => true,
 	'supports' => array('title', 'editor', 'page-attributes', 'thumbnail'),
 ));
-register_post_type('inf_items_of_the_week', array(
+register_post_type('inf_home_items', array(
 	'labels' => array(
 		'name'	 => 'Items of the Week',
 		'singular_name' => 'Items This Week',
