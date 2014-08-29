@@ -70,6 +70,9 @@ div.home-box img {
   border-right: 5px solid #d5f7ec;
   font-family: "BaskervilleBT-Italic";
   font-size: 24pt;
+  word-wrap: break-word;
+  width: 133px;
+  height: 133px;
 }
 .callout {
   margin-top: 100px;
