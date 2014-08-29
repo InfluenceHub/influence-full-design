@@ -91,25 +91,21 @@ $args = array(
   </div>
   <div class="favorites">
    <a href="<?php echo $link2; ?>">
-   Shop Item
     <img src="<?php echo $image2SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link3; ?>">
-   Shop Item
     <img src="<?php echo $image3SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link4; ?>">
-   Shop Item
     <img src="<?php echo $image4SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link5; ?>">
-   Shop Item
     <img src="<?php echo $image5SRC; ?>" width="133px" height="133px"/>
     </a>
   </div>
