@@ -39,7 +39,6 @@ the_post();
         </a>
         </div>
     </div>
-<?php inf_items(); ?>
 
 </section>
   <section id="content">
