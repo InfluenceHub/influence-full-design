@@ -118,10 +118,10 @@ $args = array(
     $box1 = get_posts($args);
     $boxlink1= get_post_meta($box1, '_homebox1_link_url', true);
     $image1 = get_the_post_thumbnail($box1->ID, '_inf_home_box1');
-    if(isset($box1[0])){
-      return $box1[0];
-    }
-    return null;
+   // if(isset($box1[0])){
+   //   return $box1[0];
+  //  }
+//return null;
     ?>
      <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
