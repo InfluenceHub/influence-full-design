@@ -86,27 +86,27 @@ $args = array(
   <div class="favorites_container">
   <div class="favorites">
    <a href="<?php echo $link1; ?>">
-    <img src="<?php echo $image1; ?>" height="133px" width="133px" />
+    <img src="<?php echo $image1; ?>"/>
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link2; ?>">
-    <img src="<?php echo $image2; ?>" height="133px" width="133px" />
+    <img src="<?php echo $image2; ?>" />
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link3; ?>">
-    <img src="<?php echo $image3; ?>" height="133px" width="133px" />
+    <img src="<?php echo $image3; ?>" />
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link4; ?>">
-    <img src="<?php echo $image4; ?>" height="133px" width="133px" />
+    <img src="<?php echo $image4; ?>" />
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link5; ?>">
-    <img src="<?php echo $image5; ?>" height="133px" width="133px" />
+    <img src="<?php echo $image5; ?>" />
     </a>
   </div>
 <?php
