@@ -64,8 +64,7 @@ div.home-box img {
   margin-left: 20px;
 }
 .favorites_title {
-  position: absolute;
-  top: 10px;
+  position: relative;
   display: inline-block;
   padding-right: 10px;
   margin-left: 15px;
