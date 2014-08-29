@@ -68,11 +68,11 @@ div.home-box img {
   display: inline-block;
   padding-right: 10px;
   margin-left: 15px;
-  margin: 0 auto;
   font-family: "BaskervilleBT-Italic";
   font-size: 24pt;
   word-wrap: break-word;
   width: 133px;
+  height: 100px;
 }
 .callout {
   margin-top: 100px;
