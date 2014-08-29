@@ -56,11 +56,11 @@ function inf_items() {
   $link3 = trim(carbon_get_post_meta($list_item->ID, 'item3_link_url'));
   $link4 = trim(carbon_get_post_meta($list_item->ID, 'item4_link_url'));
   $link5 = trim(carbon_get_post_meta($list_item->ID, 'item5_link_url'));
-  $image1 = carbon_get_post_meta($list_item[0]->ID, 'itemofweek1');
-  $image2 = carbon_get_post_meta($list_item[0]->ID, 'itemofweek2');
-  $image3 = carbon_get_post_meta($list_item[0]->ID, 'itemofweek3');
-  $image4 = carbon_get_post_meta($list_item[0]->ID, 'itemofweek4');
-  $image5 = carbon_get_post_meta($list_item[0]->ID, 'itemofweek5');
+  $image1 = carbon_get_post_meta('itemofweek1');
+  $image2 = carbon_get_post_meta('itemofweek2');
+  $image3 = carbon_get_post_meta('itemofweek3');
+  $image4 = carbon_get_post_meta('itemofweek4');
+  $image5 = carbon_get_post_meta('itemofweek5');
   ?>
   <div class="favorites_container">
   <div class="favorites">
