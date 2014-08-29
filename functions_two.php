@@ -72,11 +72,11 @@ $args = array(
   $link4 = get_post($link4ID[0]); 
   $link5ID = get_post_meta($list_items[0]->ID, 'item5_link_url'); 
   $link5 = get_post($link5ID[0]); 
-  $image1SRC = $image1->guid
-  $image2SRC = $image2->guid
-  $image3SRC = $image3->guid
-  $image4SRC = $image4->guid
-  $image5SRC = $image5->guid
+  $image1SRC = $image1->guid;
+  $image2SRC = $image2->guid;
+  $image3SRC = $image3->guid;
+  $image4SRC = $image4->guid;
+  $image5SRC = $image5->guid;
   ?>
   <div class="favorites_container">
   <div class="favorites">
