@@ -41,7 +41,7 @@ the_post();
         </div>
         </div>
     </div>
-
+<?php inf_items(); ?>
 </section>
   <section id="content">
 
