@@ -63,11 +63,11 @@ $args = array(
   $image4SRC = get_post($image4ID[0])->guid;
   $image5SRC = get_post($image5ID[0])->guid;
 
-  $link1ID = get_post_meta($postID, '_item1_link_url'); 
-  $link21ID = get_post_meta($postID, '_item2_link_url'); 
-  $link3ID = get_post_meta($postID, '_item3_link_url'); 
-  $link41ID = get_post_meta($postID, '_item4_link_url'); 
-  $link5ID = get_post_meta($postID, '_item5_link_url'); 
+  $link1 = trim(carbon_get_post_meta($postID->ID, 'item1_link_url'): 
+  $link2 = trim(carbon_get_post_meta($postID->ID, 'item2_link_url'): 
+  $link3 = trim(carbon_get_post_meta($postID->ID, 'item3_link_url'): 
+  $link4 = trim(carbon_get_post_meta($postID->ID, 'item4_link_url'): 
+  $link5 = trim(carbon_get_post_meta($postID->ID, 'item5_link_url'): 
 
   $link1SRC = get_post($link1ID[0])->guid;
   $link2SRC = get_post($link2ID[0])->guid;
@@ -79,27 +79,27 @@ $args = array(
   ?>
   <div class="favorites_container">
   <div class="favorites">
-   <a href="<?php echo $link1ID; ?>">
+   <a href="<?php echo $link1; ?>">
     <img src="<?php echo $image1SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php echo $link2ID; ?>">
+   <a href="<?php echo $link2; ?>">
     <img src="<?php echo $image2SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php echo $link3ID; ?>">
+   <a href="<?php echo $link3; ?>">
     <img src="<?php echo $image3SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php echo $link4ID; ?>">
+   <a href="<?php echo $link4; ?>">
     <img src="<?php echo $image4SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php echo $link5ID; ?>">
+   <a href="<?php echo $link5; ?>">
     <img src="<?php echo $image5SRC; ?>" width="133px" height="133px"/>
     </a>
   </div>
