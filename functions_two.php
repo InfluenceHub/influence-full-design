@@ -62,31 +62,45 @@ $args = array(
   $image3SRC = get_post($image3ID[0])->guid;
   $image4SRC = get_post($image4ID[0])->guid;
   $image5SRC = get_post($image5ID[0])->guid;
+
+  $link1ID = get_post_meta($postID, '_item1_link_url'); 
+  $link21ID = get_post_meta($postID, '_item2_link_url'); 
+  $link3ID = get_post_meta($postID, '_item3_link_url'); 
+  $link41ID = get_post_meta($postID, '_item4_link_url'); 
+  $link5ID = get_post_meta($postID, '_item5_link_url'); 
+
+  $link1SRC = get_post($link1ID[0])->guid;
+  $link2SRC = get_post($link2ID[0])->guid;
+  $link3SRC = get_post($link3ID[0])->guid;
+  $link4SRC = get_post($link4ID[0])->guid;
+  $link5SRC = get_post($link5ID[0])->guid;
+
+
   ?>
   <div class="favorites_container">
   <div class="favorites">
-   <a href="<?php echo $link1; ?>">
-    <img src="<?php echo $image1SRC; ?>"/>
+   <a href="<?php echo $link1SRC; ?>">
+    <img src="<?php echo $image1SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php echo $link2; ?>">
-    <img src="<?php echo $image2SRC; ?>" />
+   <a href="<?php echo $link2SRC; ?>">
+    <img src="<?php echo $image2SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php echo $link3; ?>">
-    <img src="<?php echo $image3SRC; ?>" />
+   <a href="<?php echo $link3SRC; ?>">
+    <img src="<?php echo $image3SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php echo $link4; ?>">
-    <img src="<?php echo $image4SRC; ?>" />
+   <a href="<?php echo $link4SRC; ?>">
+    <img src="<?php echo $image4SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php echo $link5; ?>">
-    <img src="<?php echo $image5SRC; ?>" />
+   <a href="<?php echo $link5SRC; ?>">
+    <img src="<?php echo $image5SRC; ?>" width="133px" height="133px"/>
     </a>
   </div>
 <?php
