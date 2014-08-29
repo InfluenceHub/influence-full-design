@@ -75,6 +75,7 @@ div.home-box img {
 
 .favorites-link-overlay {
   font-family: "Oswald",sans-serif;
+  display: none;
   font-size: 12px;
   background-color: transparent;
   transition: all 100ms ease-in-out;
