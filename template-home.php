@@ -15,8 +15,8 @@ the_post();
       <?php inf_home_box2(); ?>
       <?php inf_home_box3(); ?>
       <?php inf_home_box4(); ?>
-      <?php inf_items(); ?>
     </div>
+    <?php inf_items(); ?>
   </div>
 </section>
   <section id="content">
