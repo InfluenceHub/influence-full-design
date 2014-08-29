@@ -146,7 +146,6 @@ return null;
       'posts_per_page' => 1
     );
     $box3 = get_posts($args);
-    $boxlink3= get_post_meta($box1, '_homebox3_link_url', true);
     if(isset($box3[0])){
       return $box3[0];
     }
