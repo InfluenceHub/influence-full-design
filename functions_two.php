@@ -160,7 +160,7 @@ $args = array(
       'post_type' => 'inf_home_box3',
       'posts_per_page' => 1
     );
-    $box3 = get_posts($args)
+    $box3 = get_posts($args);
     $boxlink3= get_post_meta($box1, '_homebox3_link_url', true);
     $image3 = get_the_post_thumbnail($box1->ID, '_inf_home_box3');
     if(isset($box3[0])){
