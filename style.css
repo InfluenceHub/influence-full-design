@@ -6333,6 +6333,10 @@ textarea { overflow: auto; }
   width: 100%;
   /*background-color: #d5f7ec;*/
 }
+.more_interviews_wrapper {
+  width:968px;
+  margin:0 auto;
+}
 #content.interview .more_interviews h2 {
   border-bottom: 1px solid #ccc;
   border-top: 0 none;
@@ -6352,6 +6356,26 @@ textarea { overflow: auto; }
 }
 .more_int_block.last {
   margin: 0;
+}
+.more_interviews_wrapper {
+  padding:40px 0 115px;
+}
+.more_interviews_wrapper .more_int_block {
+  width: 306px;
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 0 0 10px;
+  text-align:center;
+}
+
+.more_interviews_wrapper .more_int_block h3 {
+  margin: 5px 0;
+  font-size:24px;
+  font-family:"franklin-gothic-urw-comp",arial,sans-serif;
+  font-weight:normal;
+}
+.more_interviews_wrapper .more_int_block:nth-child(3n) {
+  margin-right:0;
 }
 
 /* 7/24/2014 Code by Mauri */
