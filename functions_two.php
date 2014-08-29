@@ -69,11 +69,11 @@ $args = array(
  $link4ID = get_post_meta($postID, '_item4_link_url'); 
  $link5ID = get_post_meta($postID, '_item5_link_url'); 
 
- $link1 = get_post($link1ID[0])->guid;
- $link2 = get_post($link2ID[0])->guid;
- $link3 = get_post($link3ID[0])->guid;
- $link4 = get_post($link4ID[0])->guid;
- $link5 = get_post($link5ID[0])->guid;
+ $link1 = get_post($link1ID[0]);
+ $link2 = get_post($link2ID[0]);
+ $link3 = get_post($link3ID[0]);
+ $link4 = get_post($link4ID[0]);
+ $link5 = get_post($link5ID[0]);
 
 
   ?>
