@@ -80,10 +80,8 @@ $args = array(
 
   ?>
   <div class="favorites_container">
-  <div class="favorites">
   <div class="favorites_title">
     <?php echo get_the_title($postID); ?>
-  </div>
   </div>
   <div class="favorites" style="border-left: 10px solid #d5f7ec;">
    <a href="<?php echo $link1; ?>">
