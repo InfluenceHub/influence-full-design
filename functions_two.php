@@ -116,11 +116,20 @@ $args = array(
       'posts_per_page' => 1
     );
     $box1 = get_posts($args);
-    $boxlink1= get_post_meta($box1, 'homebox1_link_url', true);
+    $boxlink1= get_post_meta($box1, '_homebox1_link_url', true);
+    $image1 = get_the_post_thumbnail($box1->ID, '_inf_home_box1');
     if(isset($box1[0])){
       return $box1[0];
     }
     return null;
+    ?>
+     <div class="callout">
+        <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
+     <a href="<?php echo $boxlink1 ?>">
+          <img src="<?php echo $image1 ?>" />
+      </a>
+    </div>
+ <?php
   }
 
   function inf_home_box2(){
@@ -129,12 +138,21 @@ $args = array(
       'posts_per_page' => 1
     );
     $box2 = get_posts($args);
-    $boxlink2= get_post_meta($box1, '_homebox2_link_url', true);
+    $boxlink1= get_post_meta($box1, '_homebox2_link_url', true);
+    $image2 = get_the_post_thumbnail($box1->ID, '_inf_home_box2');
 
     if(isset($box2[0])){
       return $box2[0];
     }
     return null;
+    ?>
+     <div class="callout">
+        <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
+     <a href="<?php echo $boxlink2 ?>">
+          <img src="<?php echo $image2 ?>" />
+      </a>
+    </div>
+  <?php
   }
 
     function inf_home_box3(){
@@ -142,12 +160,21 @@ $args = array(
       'post_type' => 'inf_home_box3',
       'posts_per_page' => 1
     );
-    $box3 = get_posts($args);
+    $box3 = get_posts($args)
     $boxlink3= get_post_meta($box1, '_homebox3_link_url', true);
+    $image3 = get_the_post_thumbnail($box1->ID, '_inf_home_box3');
     if(isset($box3[0])){
       return $box3[0];
     }
     return null;
+    ?>
+     <div class="callout">
+        <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
+     <a href="<?php echo $boxlink3 ?>">
+          <img src="<?php echo $image3 ?>" />
+      </a>
+    </div>
+   <?php
   }
 
     function inf_home_box4(){
@@ -157,11 +184,20 @@ $args = array(
     );
     $box4 = get_posts($args);
     $boxlink4= get_post_meta($box1, '_homebox4_link_url', true);
+    $image4 = get_the_post_thumbnail($box1->ID, '_inf_home_box4');
 
     if(isset($box4[0])){
       return $box4[0];
     }
     return null;
+    ?>
+     <div class="callout">
+        <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
+     <a href="<?php echo $boxlink4 ?>">
+          <img src="<?php echo $image4 ?>" />
+      </a>
+    </div>
+  <?php
   }
 
 
