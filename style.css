@@ -64,16 +64,13 @@ div.home-box img {
   margin-left: 20px;
 }
 .favorites_title {
-  position: relative;
+  position: inherit;
   display: inline-block;
-  padding-right: 10px;
-  padding-bottom: 40px;
   margin-left: 15px;
   font-family: "BaskervilleBT-Italic";
   font-size: 24pt;
   word-wrap: break-word;
   width: 133px;
-  height: 100px;
 }
 .callout {
   margin-top: 100px;
