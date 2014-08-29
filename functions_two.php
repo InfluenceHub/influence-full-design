@@ -79,27 +79,27 @@ $args = array(
   ?>
   <div class="favorites_container">
   <div class="favorites">
-   <a href="<?php get_post_meta($postID->ID, 'item1_link_url'); ?>">
+   <a href="<?php echo $link1; ?>">
     <img src="<?php echo $image1SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php get_post_meta($postID->ID, 'item2_link_url');">
+   <a href="<?php echo $link2;">
     <img src="<?php echo $image2SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php get_post_meta($postID->ID, 'item3_link_url'); ?>">
+   <a href="<?php echo $link3; ?>">
     <img src="<?php echo $image3SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php get_post_meta($postID->ID, 'item1_link_url'); ?>">
+   <a href="<?php echo $link4;; ?>">
     <img src="<?php echo $image4SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php get_post_meta($postID->ID, 'item1_link_url'); ?>">
+   <a href="<?php echo $link5; ?>">
     <img src="<?php echo $image5SRC; ?>" width="133px" height="133px"/>
     </a>
   </div>
