@@ -63,11 +63,11 @@ $args = array(
   $image4SRC = get_post($image4ID[0])->guid;
   $image5SRC = get_post($image5ID[0])->guid;
 
-  $link1ID = get_post_meta($postID->ID, '_item1_link_url'); 
-  $link2ID = get_post_meta($postID->ID, '_item2_link_url'); 
-  $link3ID = get_post_meta($postID->ID, '_item3_link_url'); 
-  $link4ID = get_post_meta($postID->ID, '_item4_link_url'); 
-  $link5ID = get_post_meta($postID->ID, '_item5_link_url'); 
+  $link1ID = get_post_meta($postID->ID, 'item1_link_url'); 
+  $link2ID = get_post_meta($postID->ID, 'item2_link_url'); 
+  $link3ID = get_post_meta($postID->ID, 'item3_link_url'); 
+  $link4ID = get_post_meta($postID->ID, 'item4_link_url'); 
+  $link5ID = get_post_meta($postID->ID, 'item5_link_url'); 
 
   $link1 = get_post($link1ID[0]);
   $link2 = get_post($link2ID[0]);
