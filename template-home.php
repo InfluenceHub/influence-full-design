@@ -34,8 +34,8 @@ the_post();
         </div>
         <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/just-spotted.png"> -->
-        <a href="<?php echo carbon_get_post_meta('homebox4_link_url', true) ?>">
         <?php $box4 = inf_home_box4(); ?>
+          <a href="<?php echo $boxlink4; ?>">
             <?php echo get_the_post_thumbnail($box4->ID, 'inf_home_box4') ?>
         </a>
         </div>
