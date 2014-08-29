@@ -84,7 +84,7 @@ $args = array(
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php echo $link2ID;">
+   <a href="<?php echo $link2ID; ?>">
     <img src="<?php echo $image2SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
