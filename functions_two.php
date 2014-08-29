@@ -50,7 +50,6 @@ $args = array(
     'posts_per_page' => 1
     );
   $postID = get_posts($args)[0]->ID; // this gets an array of wordpress posts
-  $title  = trim(get_the_title($postID->ID));
   
   $image1ID = get_post_meta($postID, '_itemofweek1'); 
   $image2ID = get_post_meta($postID, '_itemofweek2');
@@ -82,7 +81,8 @@ $args = array(
   ?>
   <div class="favorites_container">
   <div class="favorites_title">
-    <?php echo $title ?>
+    <?php echo get_the_title($postID); ?>
+  </div>
   <div class="favorites">
    <a href="<?php echo $link1; ?>">
     <img src="<?php echo $image1SRC; ?>" width="133px" height="133px" />
