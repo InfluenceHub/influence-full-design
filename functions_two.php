@@ -138,8 +138,8 @@ $args = array(
       'posts_per_page' => 1
     );
     $box2 = get_posts($args);
-    $boxlink1= get_post_meta($box1, '_homebox2_link_url', true);
-    $image2 = get_the_post_thumbnail($box1->ID, '_inf_home_box2');
+    $boxlink1= get_post_meta($box2, '_homebox2_link_url', true);
+    $image2 = get_the_post_thumbnail($box2->ID, '_inf_home_box2');
 
     if(isset($box2[0])){
       return $box2[0];
@@ -170,7 +170,7 @@ $args = array(
      <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
      <a href="<?php echo $boxlink3; ?>">
-      <img src="<?php echo get_the_post_thumbnail($box3->ID, 'inf_home_box3') ?>" />
+      <?php echo get_the_post_thumbnail($box3->ID, '_inf_home_box3') ?>
       </a>
     </div>
    <?php
@@ -182,7 +182,7 @@ $args = array(
       'posts_per_page' => 1
     );
     $box4 = get_posts($args);
-    $boxlink4= get_post_meta($box1, '_homebox4_link_url', true);
+    $boxlink4= get_post_meta($box4, '_homebox4_link_url', true);
     $image4 = get_the_post_thumbnail($box1->ID, '_inf_home_box4');
 
     if(isset($box4[0])){
