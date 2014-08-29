@@ -73,16 +73,6 @@ div.home-box img {
   width: 100px;
 }
 
-.favorites-link-overlay:hover {
-  font-family: "Oswald",sans-serif;
-  font-size: 12px;
-  background-color: transparent;
-  transition: all 100ms ease-in-out;
-  -webkit-transition: all 100ms ease-in-out;
-  -moz-transition: all 100ms ease-in-out;
-  -o-transition: all 100ms ease-in-out;
-}
-
 
 
 .callout {
@@ -6226,11 +6216,11 @@ div.blocked-title > div {
   padding: 0 25px;
   width: 100%;
 }
-li#menu-item-15636 {
+/*li#menu-item-15636 {
   padding-bottom: 3px;
   background: url('images/slash.png')
   center bottom no-repeat;
-}
+}*/
 
 .subsrcribe-to-inf {
   {
