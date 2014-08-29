@@ -83,7 +83,7 @@ $args = array(
   <div class="favorites_title">
     <?php echo get_the_title($postID); ?>
   </div>
-  <div class="favorites">
+  <div class="favorites" style="border-left: 10px solid #d5f7ec;">
    <a href="<?php echo $link1; ?>">
     <img src="<?php echo $image1SRC; ?>" width="133px" height="133px" />
     </a>
