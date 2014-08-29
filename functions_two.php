@@ -162,7 +162,7 @@ $args = array(
     );
     $box3 = get_posts($args);
     $boxlink3= get_post_meta($box1, '_homebox3_link_url', true);
-    $image3 = get_the_post_thumbnail($box1->ID, '_inf_home_box3');
+ get_the_post_thumbnail($box1->ID, '_inf_home_box3');
     if(isset($box3[0])){
       return $box3[0];
     }
@@ -171,7 +171,7 @@ $args = array(
      <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
      <a href="<?php echo $boxlink3; ?>">
-          <img src="<?php echo $image3; ?>" />
+     <?php get_the_post_thumbnail($box1->ID, 'inf_home_box3'); ?>
       </a>
     </div>
    <?php
