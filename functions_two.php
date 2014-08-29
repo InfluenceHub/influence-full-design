@@ -125,8 +125,8 @@ $args = array(
     ?>
      <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
-     <a href="<?php echo $boxlink1 ?>">
-          <img src="<?php echo $image1 ?>" />
+     <a href="<?php echo $boxlink1; ?>">
+          <img src="<?php echo $image1; ?>" />
       </a>
     </div>
  <?php
@@ -148,8 +148,8 @@ $args = array(
     ?>
      <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
-     <a href="<?php echo $boxlink2 ?>">
-          <img src="<?php echo $image2 ?>" />
+     <a href="<?php echo $boxlink2; ?>">
+          <img src="<?php echo $image2; ?>" />
       </a>
     </div>
   <?php
@@ -170,8 +170,8 @@ $args = array(
     ?>
      <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
-     <a href="<?php echo $boxlink3 ?>">
-          <img src="<?php echo $image3 ?>" />
+     <a href="<?php echo $boxlink3; ?>">
+          <img src="<?php echo $image3; ?>" />
       </a>
     </div>
    <?php
@@ -193,8 +193,8 @@ $args = array(
     ?>
      <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
-     <a href="<?php echo $boxlink4 ?>">
-          <img src="<?php echo $image4 ?>" />
+     <a href="<?php echo $boxlink4; ?>">
+          <img src="<?php echo $image4; ?>" />
       </a>
     </div>
   <?php
