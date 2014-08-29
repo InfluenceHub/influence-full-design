@@ -81,7 +81,7 @@ $args = array(
   ?>
 
   <div class="favorites_container">
-   <div class="favorites_title">
+   <div class="favorites favorites_title">
     <?php echo get_the_title($postID); ?>
   </div>
   <div class="favorites" style="border-left: 10px solid #d5f7ec;">
