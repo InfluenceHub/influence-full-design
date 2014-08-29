@@ -45,22 +45,33 @@
 
 // Items of The Week
 function inf_items() {
-  $args = array(
-    'post_type' => 'inf_home_items'
+$args = array(
+    'post_type' => 'inf_home_items',
+    'posts_per_page' => 1
     );
-  $list_item[0] = get_posts($args);
-
-  $title = get_the_title($list_item->ID);
-  $link1 = trim(carbon_get_post_meta($list_item->ID, 'item1_link_url'));
-  $link2 = trim(carbon_get_post_meta($list_item->ID, 'item2_link_url'));
-  $link3 = trim(carbon_get_post_meta($list_item->ID, 'item3_link_url'));
-  $link4 = trim(carbon_get_post_meta($list_item->ID, 'item4_link_url'));
-  $link5 = trim(carbon_get_post_meta($list_item->ID, 'item5_link_url'));
-  $image1 = carbon_get_post_meta($list_item->ID, 'itemofweek1');
-  $image2 = carbon_get_post_meta($list_item->ID,'itemofweek2');
-  $image3 = carbon_get_post_meta($list_item->ID,'itemofweek3');
-  $image4 = carbon_get_post_meta($list_item->ID,'itemofweek4');
-  $image5 = carbon_get_post_meta($list_item->ID,'itemofweek5');
+  $list_items = get_posts($args); // this gets an array of wordpress posts
+  $post = $list_items[0]; // get the first of this array, which is a wp post
+  $postID = $post->ID; // call id method on wp post to get this post id
+  $image1ID = get_post_meta($list_items[0]->ID, '_itemofweek1'); 
+  $image1 = get_post($image1ID[0]);
+  $image2ID = get_post_meta($list_items[0]->ID, '_itemofweek2');
+  $image2 = get_post($image2ID[0]);
+  $image3ID = get_post_meta($list_items[0]->ID, '_itemofweek3');
+  $image3 = get_post($image3ID[0]);
+  $image4ID = get_post_meta($list_items[0]->ID, '_itemofweek4');
+  $image4 = get_post($image4ID[0]);
+  $image5ID = get_post_meta($list_items[0]->ID, '_itemofweek5');
+  $image5 = get_post($image5ID[0]);
+  $link1ID = get_post_meta($list_items[0]->ID, '_item1_link_url');
+  $link1 = get_post($link1ID[0]); 
+  $link2ID = get_post_meta($list_items[0]->ID, '_item2_link_url');
+  $link2 = get_post($link2ID[0]); 
+  $link3ID = get_post_meta($list_items[0]->ID, '_item3_link_url'); 
+  $link3 = get_post($link3ID[0]); 
+  $link4ID = get_post_meta($list_items[0]->ID, '_item4_link_url'); 
+  $link4 = get_post($link4ID[0]); 
+  $link5ID = get_post_meta($list_items[0]->ID, '_item5_link_url'); 
+  $link5 = get_post($link5ID[0]); 
   ?>
   <div class="favorites_container">
   <div class="favorites">
