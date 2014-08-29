@@ -85,27 +85,32 @@ $args = array(
     <?php echo get_the_title($postID); ?>
   </div>
   <div class="favorites" style="border-left: 10px solid #d5f7ec;">
-   <a href="<?php echo $link1; ?>">
+   <a href="<?php echo $link1; ?>" class="favorites-link-overlay">
+    Shop Item
     <img src="<?php echo $image1SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php echo $link2; ?>">
+   <a href="<?php echo $link2; ?>" class="favorites-link-overlay">
+   Shop Item
     <img src="<?php echo $image2SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php echo $link3; ?>">
+   <a href="<?php echo $link3; ?>" class="favorites-link-overlay">
+   Shop Item
     <img src="<?php echo $image3SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php echo $link4; ?>">
+   <a href="<?php echo $link4; ?>" class="favorites-link-overlay">
+   Shop Item
     <img src="<?php echo $image4SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
   <div class="favorites">
-   <a href="<?php echo $link5; ?>">
+   <a href="<?php echo $link5; ?>" class="favorites-link-overlay">
+   Shop Item
     <img src="<?php echo $image5SRC; ?>" width="133px" height="133px"/>
     </a>
   </div>

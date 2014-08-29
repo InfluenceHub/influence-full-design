@@ -72,6 +72,36 @@ div.home-box img {
   word-wrap: break-word;
   width: 100px;
 }
+
+.favorites-link-overlay {
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  text-align:center;
+  padding-top:30%;
+  opacity:0;
+  color:#FFF;
+  font-family: "Oswald",sans-serif;
+  font-size: 12px;
+  background-color: transparent;
+  transition: all 100ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+}
+
+.favorites-link-overlay:hover {
+  opacity: 1;
+  background-color: rgb(65, 65, 65);
+  background-color: rgba(65, 65, 65, 0.6);
+  transition: all 100ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+}
+
 .callout {
   margin-top: 100px;
   padding-top: 10px;
