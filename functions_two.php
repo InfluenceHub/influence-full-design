@@ -171,7 +171,7 @@ $args = array(
      <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
      <a href="<?php echo $boxlink3; ?>">
-     <?php get_the_post_thumbnail($box1->ID, 'inf_home_box3'); ?>
+      <?php echo get_the_post_thumbnail($box3->ID, 'inf_home_box3') ?>
       </a>
     </div>
    <?php
