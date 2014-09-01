@@ -6821,11 +6821,6 @@ margin-top: 0;
   overflow:visible;
 }
 
-.shop-main-social {
-  .background-color: #F4F4F4;
-  .height: 50px;
-  width: 100%;
-}
 .shop-main-title {
   font: 300 28px/46px "Oswald", arial, sans-serif !important;
   text-transform:uppercase;
