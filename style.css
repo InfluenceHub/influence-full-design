@@ -46,6 +46,10 @@ div.home-box img {
 .callout_container {
   width: 1265px;
   background-color: #fbf1ea;
+  margin: 0 auto !important;
+}
+.favorites_center {
+  margin: 0 auto !important;
 }
 .favorites_container {
   width: 1265px;

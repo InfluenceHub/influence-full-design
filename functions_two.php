@@ -78,7 +78,7 @@ $args = array(
 
 
   ?>
-
+ <div class="favorites_center">
   <div class="favorites_container">
    <div class="favorites favorites_title">
     <?php echo get_the_title($postID); ?>
@@ -108,6 +108,8 @@ $args = array(
     <img src="<?php echo $image5SRC; ?>" width="133px" height="133px"/>
     </a>
   </div>
+  </div>
+</div>
 <?php
 }
 
