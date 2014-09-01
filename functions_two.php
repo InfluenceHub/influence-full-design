@@ -40,7 +40,6 @@
   add_image_size('inf_interviewslider',                1214, 794, false);
   add_image_size('inf_interviewslider_small',          114, 72, true);
   add_image_size('inf_interviewmore', 220, 235, true);
-  add_image_size('inf_featured_theme',                 634, 500, true);
 
 
 // Items of The Week
