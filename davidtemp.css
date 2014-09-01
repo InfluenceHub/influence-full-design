@@ -313,9 +313,13 @@ body.home #content .content_wrapper {
 }
 
 .shop-main .caroufredsel_wrapper { 
-  top:50% !important;
+  /*top:50% !important;*/
   overflow:visible !important;
-  margin-top:-42% !important;
+  /*margin-top:-42% !important;*/
+}
+
+.shop-main .slides ul li a {
+  display: block;
 }
 .shop-main .caroufredsel_wrapper ul.slides { 
   /**/
