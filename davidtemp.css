@@ -218,6 +218,10 @@ body.home #content .content_wrapper {
   overflow: visible;
 }
 
+.shop-main.theme .left-col .inner {
+  overflow: hidden;
+}
+
 .shop-main .left-col .slides {
   list-style: none;
 }
