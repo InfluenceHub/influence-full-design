@@ -420,7 +420,7 @@ return null;
           </div>
         </div>
         <div class="shell">
-                 <h2 class="no-mobile column-two"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
+             <h2 class="no-mobile column-two home-feed-post"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
 
          <ul>
             <?php
