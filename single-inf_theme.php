@@ -46,6 +46,8 @@
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
                   <?php the_post_thumbnail_caption(); ?>
 								</a></li>
+                <?php print_r(the_post_thumbnail_caption()); ?>
+
                 <?php inf_theme_slider_theme(); ?>
                 </ul>
                 <div class="shop-featured-prev">&nbsp;</div>
