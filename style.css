@@ -6868,3 +6868,13 @@ margin-top: 0;
   font-family: "Oswald", arial, sans-serif !important;
   text-transform:uppercase;
 }
+
+.shop-main-title .theme {
+  font-size: 20px;
+  line-height:24px; 
+  font-family: "Oswald", arial, sans-serif !important;
+  text-transform:uppercase;
+  word-wrap: break-word;
+  width: 150px;
+}
+
