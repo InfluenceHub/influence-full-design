@@ -226,38 +226,7 @@
 	</section><!-- /#content -->
   <?php #inf_browse_by(); ?>
 
-  <?php
-  ini_set('display_errors', 1);
-  // The interviews page displays the latest interview for now
-  $args = array(
-    'numberposts' => 3,
-    'orderby' => 'date',
-    'order' => 'DESC',
-    'post_type' => 'inf-interview',
-    'post_status' => 'publish'
-  );
-  $interviews = get_posts($args);
-  #print_r($interviews);
-  $key = 0;
-  ?>
-  <div class="more_interviews">
-	<div class="more_interviews_wrapper">
-	<?php foreach ($interviews as $_interview):
-		#print_r($_interview); die();
-		$image_id = get_post_thumbnail_id($_interview->ID);
-		$thumbnail = wp_get_attachment_image_src($image_id, 'medium');
-	?>
-			<div class="more_int_block">
-                <a href="<?php echo $_interview->post_link; ?>">
-                <img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo $_interview->post_title; ?>" width="100%" />
-				<h3><?php echo $_interview->post_title; ?></h3>
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn_viewmore.jpg" />
-                </a>
-            </div>
-	<?php
-	endforeach; ?>
-		</div>
-  </div>
+  
 <?php get_footer(); ?>
 
 <?php
