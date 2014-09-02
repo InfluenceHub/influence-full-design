@@ -421,7 +421,7 @@ return null;
           </div>
         </div>
         <div class="shell">
-            <h2 class="no-mobile" style="float: left;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
+            <h2 class="no-mobile"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
          <ul>
             <?php
               $latest_theme = inf_get_latest_theme();
