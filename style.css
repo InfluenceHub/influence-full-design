@@ -3177,7 +3177,9 @@ a.subscribe-img-home {
   height: 30px;
   line-height: 30px;
   color: #000;
-  font: 12px/30px "Oswald",arial,sans-serif;
+  font-size: 12px;
+  line-height: 30px; 
+  font-family: "Oswald",arial,sans-serif;
   font-weight: 300;
   margin-bottom: 8px;
   padding-left: 8px;
@@ -3782,7 +3784,9 @@ a.subscribe-img {
 }
 
 .shop-main .shop-maintag {
-  font: 14px/21px "Oswald",arial,sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Oswald",arial,sans-serif;
   font-weight: 300;
   color: #fff;
   text-align: center;
@@ -3820,7 +3824,9 @@ a.subscribe-img {
 }
 
 .shop .column-three h2 {
-  font: bold 16px/16px "Oswald",arial,sans-serif;
+  font-size:  16px;
+  line-height: 16px; 
+  font-family: "Oswald",arial,sans-serif;
   font-weight: 300;
   color: #000;
   letter-spacing: 0.3px;
@@ -3998,7 +4004,9 @@ a.subscribe-img {
 
 
 .prod-row ul li h5 {
-  font: 16px/14px "Oswald",serif;
+  font-size: 16px;
+  line-height: 14px; 
+  font-family: "Oswald",serif;
   font-weight: 300;
   font-weight: normal;
   letter-spacing: 0;
@@ -4782,7 +4790,9 @@ padding-left: 30px;
 }
 
 .latest-home li h4 {
-  font: 18px/33px "Oswald",arial,sans-serif;
+  font-size: 18px;
+  line-height: 33px; 
+  font-family: "Oswald",arial,sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
   white-space: normal;
@@ -4793,7 +4803,9 @@ padding-left: 30px;
 .latest-home li p {
   height: 75px;
   border-top: 1px solid #ccc;
-  font: 14px/20px "Oswald",serif;
+  font-size: 14px;
+  line-height: 15px;
+  font-family: "Oswald",serif;
   font-weight: 300;
   color: #000;
   margin: 3px 0 0 0;
@@ -4812,7 +4824,9 @@ padding-left: 30px;
 }
 .latest-home .viewall-latest a {
   position: relative;
-  font:  14px/15px "Oswald",arial,sans-serif;
+  font-size:  14px;
+  line-height: 15px; 
+  font-family: "Oswald",arial,sans-serif;
   color: #000;
   letter-spacing: 1.2px;
   border: 1px solid gray;
@@ -5198,7 +5212,9 @@ div.archive-col .shop-link {
 }
 
 .influencers-az h3 {
-  font: 12px/13px "Oswald",arial,sans-serif;
+  font-size: 12px;
+  line-height: 13px;
+  font-family: "Oswald",arial,sans-serif;
   font-weight: 300;
   color: #fff;
   text-align: left;
@@ -6181,7 +6197,9 @@ div.blocked-title > div {
   padding: 38px 25px 0;
 }
 .blocked-title h2 {
-  font: bold 19px/18px "Oswald",arial,sans-serif;
+  font-size: 19px;
+  line-height: 18px;
+  font-family:"Oswald",arial,sans-serif;
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -6192,7 +6210,9 @@ div.blocked-title > div {
   border-top:1px solid #fff;
   margin-top:10px;
   padding:10px 5px 0;
-  font: 40px/58px "Oswald",arial,sans-serif;
+  font-size: 40px;
+  line-height: 54px;
+  font-family:"Oswald",arial,sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
   text-align: center;
@@ -6354,12 +6374,15 @@ textarea { overflow: auto; }
 #content.interview .more_interviews h2 {
   border-bottom: 1px solid #ccc;
   border-top: 0 none;
-  font: bold 22px/40px "Oswald",arial,sans-serif;
+  font-size:  22px;
+  line-height: 40px; 
+  font-family: "Oswald",arial,sans-serif;
   font-weight: 300;
   margin: 0 0 22px;
 }
 #content.interview .more_int_block h3 {
-  font: 15px "Oswald",sans-serif;
+  font-size:  15px; 
+  font-family: "Oswald",sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
 }
@@ -6838,6 +6861,8 @@ margin-top: 0;
 
 
 .shop-main-title {
-  font: 300 28px/46px "Oswald", arial, sans-serif !important;
+  font-size: 24px;
+  line-height:46px; 
+  font-family: "Oswald", arial, sans-serif !important;
   text-transform:uppercase;
 }
