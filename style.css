@@ -3692,6 +3692,11 @@ a.subscribe-img-home {
   margin-bottom: 0;
 }
 
+.shop-main-theme {
+  position: relative;
+  margin-bottom: 0;
+}
+
 .shop-main .column-three {
   margin-right: 0;
   height: 550px;
@@ -6829,6 +6834,16 @@ margin-top: 0;
   width:100%;
 }
 .single-inf_theme #content > div.shell.shop {
+  overflow:visible;
+}
+
+.single-inf_theme .shop-main-theme {
+  margin:0 -22px;
+}
+.single-inf_theme .shop-main-theme .column-three {
+  width:100%;
+}
+.single-inf_theme #content > div.shell.shop-theme {
   overflow:visible;
 }
 
