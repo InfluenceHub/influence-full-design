@@ -8,7 +8,7 @@ the_post();
 //Detect mobile
 ?>
 <?php inf_footer_signup() ?>
-  <section id="callout">
+  <section id="callout no-mobile">
   <div class="top-block">
     <div class="callout_container">
       <div class="callout no-mobile">
