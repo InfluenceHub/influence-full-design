@@ -6406,7 +6406,7 @@ textarea { overflow: auto; }
 .more_interviews {
   margin: 0 auto;
   width: 100%;
-  background-color: #d5f7ec;
+  /*background-color: #d5f7ec;*/
 }
 .more_interviews_wrapper {
   width:968px;
