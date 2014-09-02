@@ -94,7 +94,7 @@ div.home-box img {
   padding-left: 10px;
 }
 
-.callout:hover {
+.callout:hover img {
   height: 300px
   width: 300px;
   background-color: #000;
