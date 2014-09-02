@@ -92,14 +92,54 @@ div.home-box img {
   padding-bottom: 10px;
   display: inline-block;
   padding-left: 10px;
+  position:relative;
+}
+.callout img {
+  max-width:300px;
+  max-height:300px;
+}
+.callout .callout_hover_container {
+  opacity:0;
+  background:#000;
+  color:#fff;
+  width:280px;
+  line-height:55px;
+  font: 14px "AvenirNext LT Pro Regular",arial,sans-serif;
+  text-transform:uppercase;
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  padding:10px;
+  text-align: center;
+}
+
+.callout .callout_hover_container .callout_hover {
+  position:relative;
+  display:table-cell;
+  vertical-align:middle;
+  width:280px;
+  line-height:55px;
+}
+.callout .callout_hover_container span {
+  vertical-align: middle;
+  display: inline-block;
+  line-height:normal;
+}
+
+.callout .callout_hover_container a {
+  text-decoration:underline;
+  color:#77f9d7;
 }
 
 .callout:hover img {
-  height: 300px
-  width: 300px;
+  /*height: 300px;
+  width: 300px;*/
   color: #000;
   opacity: .5;
   z-index: 50;
+}
+.callout:hover .callout_hover_container {
+  opacity:0.8;
 }
 
 .right-arrow {
@@ -6366,7 +6406,7 @@ textarea { overflow: auto; }
 .more_interviews {
   margin: 0 auto;
   width: 100%;
-  /*background-color: #d5f7ec;*/
+  background-color: #d5f7ec;
 }
 .more_interviews_wrapper {
   width:968px;
@@ -6864,18 +6904,35 @@ margin-top: 0;
 
 .shop-main-title {
   font-size: 24px;
-  line-height:46px; 
-  font-family: "Oswald", arial, sans-serif !important;
+  line-height:46px;
+  font-family: "Oswald", sans-serif !important;
   text-transform:uppercase;
 }
 
 .shop-main-title-theme {
   font-size: 20px;
-  line-height:24px; 
-  font-family: "Oswald", arial, sans-serif !important;
+  line-height:24px;
+  font-family: "Oswald", sans-serif !important;
   text-transform:uppercase;
   text-align: center;
   height: 150px;
   width: 150px;
 }
 
+.single-inf_theme .shop-main-title-theme {
+  width:auto;
+  height:auto;
+  font: 300 28px/46px "franklin-gothic-urw-comp",arial,sans-serif !important;
+  text-transform:uppercase;
+}
+
+.single-inf_theme .shop-main-social {
+background: #f7f7f7;
+padding: 10px;
+margin-bottom: 40px;
+text-align:center;
+}
+
+.single-inf_theme .shop-main-social a {
+  margin:0 15px;
+}

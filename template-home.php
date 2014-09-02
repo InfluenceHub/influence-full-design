@@ -16,28 +16,32 @@ the_post();
        <?php $box1 = inf_home_box1(); ?>
         <a href="<?php echo get_post_meta($box1->ID, '_homebox1_link_url')[0]; ?>">
           <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1'); ?>
-        <a>
+        </a>
+		<div class="callout_hover_container"><div class="callout_hover"><span><?php echo get_the_title($box1->ID) ?> <a href="<?php echo get_post_meta($box1->ID, '_homebox1_link_url')[0]; ?>">View More></a></span></div></div>
         </div>
         <div class="callout no-mobile">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/in-focu.png"> -->
        <?php $box2 = inf_home_box2(); ?>
         <a href="<?php echo get_post_meta($box2->ID, '_homebox2_link_url')[0]; ?>">
           <?php echo get_the_post_thumbnail($box2->ID, 'inf_home_box2'); ?>
-        <a>
+        </a>
+		<div class="callout_hover_container"><div class="callout_hover"><span><?php echo get_the_title($box2->ID) ?> <a href="<?php echo get_post_meta($box2->ID, '_homebox2_link_url')[0]; ?>">View More></a></span></div></div>
         </div>
         <div class="callout no-mobile">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/trend-report.png"> -->
         <?php $box3 = inf_home_box3(); ?>
         <a href="<?php echo get_post_meta($box3->ID, '_homebox3_link_url')[0]; ?>">
           <?php echo get_the_post_thumbnail($box3->ID, 'inf_home_box3'); ?>
-        <a>
+        </a>
+		<div class="callout_hover_container"><div class="callout_hover"><span><?php echo get_the_title($box3->ID) ?> <a href="<?php echo get_post_meta($box3->ID, '_homebox3_link_url')[0]; ?>">View More></a></span></div></div>
         </div>
         <div class="callout no-mobile">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/just-spotted.png"> -->
        <?php $box4 = inf_home_box4(); ?>
         <a href="<?php echo get_post_meta($box4->ID, '_homebox4_link_url')[0]; ?>">
           <?php echo get_the_post_thumbnail($box4->ID, 'inf_home_box4'); ?>
-        <a>
+        </a>
+		<div class="callout_hover_container"><div class="callout_hover"><span><?php echo get_the_title($box4->ID) ?> <a href="<?php echo get_post_meta($box4->ID, '_homebox4_link_url')[0]; ?>">View More></a></span></div></div>
         </div>
     </div>
    <div class="no-mobile"><?php inf_items(); ?></div>
