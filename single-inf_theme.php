@@ -246,7 +246,7 @@
 		#print_r($_interview); die();
 		$image_id = get_post_thumbnail_id($_interview->ID);
 		$thumbnail = wp_get_attachment_image_src($image_id, 'medium');
-    $link = get_permalink($_interviews->ID);
+    $link = get_permalink($_interview->ID);
 
 	?>
 			<div class="more_int_block">
