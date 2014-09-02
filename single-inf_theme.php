@@ -246,11 +246,11 @@
 		#print_r($_interview); die();
 		$image_id = get_post_thumbnail_id($_interview->ID);
 		$thumbnail = wp_get_attachment_image_src($image_id, 'medium');
-    $link = get_permalink($image_id->ID);
+    $link = get_permalink($_interview->ID);
 
 	?>
 			<div class="more_int_block">
-              <a href="<?php the_permalink(); ?>">
+              <a href="<?php $link; ?>">
                 <img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo $_interview->post_title; ?>" width="100%" />
 				<h3><?php echo $_interview->post_title; ?></h3>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn_viewmore.jpg" />
