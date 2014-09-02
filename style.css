@@ -3720,6 +3720,12 @@ a.subscribe-img {
   max-width: 331px;
   max-height: 518px;
 }
+.shop-main-theme .left-col img {
+  width: 331px;
+  height: 518px;
+  max-width: 331px;
+  max-height: 518px;
+}
 .shop-main .left-col.theme img {
   width: auto !important;
   height: auto !important;
@@ -3816,7 +3822,16 @@ a.subscribe-img {
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
-
+.shop-main-theme .column-three h1 {
+  font: 36px/40px "futura-pt",serif;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  margin-bottom: 14px;
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
 .shop .column-three.bottom {
   margin: 21px 0 0 0;
 }
