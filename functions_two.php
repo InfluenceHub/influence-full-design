@@ -78,17 +78,17 @@ $args = array(
 
 
   ?>
- <div class="favorites_center no-mobile">
-  <div class="favorites_container no-mobile">
-   <div class="favorites_title no-mobile">
+ <div class="favorites_center">
+  <div class="favorites_container">
+   <div class="favorites_title">
     <?php echo get_the_title($postID); ?>
   </div>
-  <div class="favorites no-mobile" style="border-left: 10px solid #d5f7ec;">
+  <div class="favorites" style="border-left: 10px solid #d5f7ec;">
    <a href="<?php echo $link1; ?>">
     <img src="<?php echo $image1SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
-  <div class="favorite no-mobile">
+  <div class="favorites">
    <a href="<?php echo $link2; ?>">
     <img src="<?php echo $image2SRC; ?>" width="133px" height="133px" />
     </a>
@@ -98,12 +98,12 @@ $args = array(
     <img src="<?php echo $image3SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
-  <div class="favorites no-mobile">
+  <div class="favorites">
    <a href="<?php echo $link4; ?>">
     <img src="<?php echo $image4SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
-  <div class="favorites mo-mobile">
+  <div class="favorites">
    <a href="<?php echo $link5; ?>">
     <img src="<?php echo $image5SRC; ?>" width="133px" height="133px"/>
     </a>
