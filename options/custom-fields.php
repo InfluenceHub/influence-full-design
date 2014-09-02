@@ -160,12 +160,12 @@ Carbon_Container::factory('custom_fields', __('Additional Featured Images', 'inf
 	->add_fields(array(
 		Carbon_Field::factory('complex', 'inf_featured_images', 'Images'),
 			->add_fields(array(
-				Carbon_Field::factory('attachment', 'inf_featured_image', 'Image'),
+				Carbon_Field::factory('attachment', 'inf_featured_image', 'Image')
 	));
 Carbon_Container::factory('custom_fields', __('Additional Featured Images', 'inf'))
 	->show_on_post_type(array('post', 'inf_theme'))
 	->add_fields(array(
-		Carbon_Field::factory('complex', 'inf_captions', 'Captions'),
+		Carbon_Field::factory('complex', 'inf_captions', 'Captions')
 			->add_fields(array(
 				Carbon_Field::factory('textarea', 'inf_caption', 'Caption')
 			));
