@@ -50,7 +50,7 @@
                 <div class="shop-featured-prev">&nbsp;</div>
                 <div class="shop-featured-next">&nbsp;</div>
 							</div>
-              <!-- /.inner --> 
+              <!-- /.inner -->
 
               <!--<div class="shop-maintag"><a href="<?php echo $category_link; ?>"><?php echo strtoupper($post_categories[0]->name); ?></a></div> -->
 						<?php //} ?>
@@ -58,7 +58,7 @@
 					<div class="right-col left" style="float: left; width:225px;">
 						<?php
 
-						//$exact_items = carbon_get_the_post_meta('inf_influencer_products'); 
+						//$exact_items = carbon_get_the_post_meta('inf_influencer_products');
             $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
 			global $wp;
 			$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
@@ -67,7 +67,7 @@
 				<div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>
 						<div class="text-holder" style="margin:0; padding:0; height:auto;">
               <img class="shop-published-by1" style="display:block; margin:20px auto 30px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
-			  <!--<div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/soc-facebook.png" /></a> <a href="https://instagram.com/theinfluence" class="instagram"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/soc-instagram.png" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/soc-pinterest.png" /></a></div> -->
+			  <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/soc-facebook.png" /></a> <a href="https://instagram.com/theinfluence" class="instagram"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/soc-instagram.png" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/soc-pinterest.png" /></a></div>
 
               <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
 							<?php
@@ -81,8 +81,8 @@
                 }
                 echo $content;
                 */
-              ?>                      
-              </div>      
+              ?>
+              </div>
 						</div><!-- /.text-holder -->
 					</div><!-- /.right-col -->
           </div><!-- /.column-three -->
@@ -112,7 +112,7 @@
                         if (strlen($post_title) > 24) {
                           $shortTitle = substr($shortTitle, 0, 24) . '...';
                         }
-                        
+
                         $product_designer = get_post_meta($post_id, 'designer', true);
                         $shortDesigner = $product_designer;
                         if (strlen($shortDesigner) > 24) {
@@ -136,7 +136,7 @@
                           </a>
                         </li>
                         <?php  ?>
-                          
+
                         <?php
 
                         $index++;
@@ -154,7 +154,7 @@
 				}
       ?>
         </div>
-        
+
         <div class="ad_banner">
         <a href="http://shop.theinfluence.com">
           <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shop-banner.gif" />
@@ -196,12 +196,12 @@
 							);
 
 							$influencer = get_posts($args);
-              
+
               $thisTitle = get_the_title($r->ID);
               if (strlen($thisTitle) > 40) {
                 $thisTitle = substr($thisTitle, 0, 40) . '...';
               }
-              
+
               //echo get_the_title($influencer[0]->ID);
 
 							?>
@@ -221,12 +221,12 @@
 				</div><!-- /.cols -->
 			<?php } ?>
 		</div><!-- /.shell -->
-    
-    
+
+
 	</section><!-- /#content -->
   <?php #inf_browse_by(); ?>
 
-  
+
 <?php get_footer(); ?>
 
 <?php
