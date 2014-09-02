@@ -8,7 +8,7 @@
 		$current_user_influencers = inf_get_influencers();
 	} ?>
 	<section id="content">
-		<div class="shell shop-theme">
+		<div class="shell shop">
 			<?php $post_categories = wp_get_post_terms( get_the_ID(), 'category' );
 
 			$args = array(
