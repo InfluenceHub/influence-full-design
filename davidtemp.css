@@ -217,11 +217,6 @@ body.home #content .content_wrapper {
   width: 600px;
   overflow: visible;
 }
-.shop-main .left-col .inner {
-  height: 300px;
-  width: 600px;
-  overflow: hidden;
-}
 
 .shop-main .left-col .slides {
   list-style: none;
