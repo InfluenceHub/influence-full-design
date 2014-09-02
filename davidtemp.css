@@ -266,25 +266,7 @@ body.home #content .content_wrapper {
   width: 25px;
   height: 30px;
 }
-.shop-main-theme .shop-featured-prev:hover {
-  background-position: 0 0;
-  opacity: .4;
-}
-.shop-main-theme .shop-featured-next {
-  background-position: -28px -28px;
-  right: 10px;
-  left: auto;
-  opacity: .7;
-  width: 25px;
-  height: 30px;
-}
-.shop-main-theme .shop-featured-next:hover {
-  background-position: -28px -28px;
-  opacity: .4;
-  right: 10px;
-  width: 25px;
-  height: 30px;
-}
+
 .shop-main .interact-with-influencer {
   /*
   position: absolute;
