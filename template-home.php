@@ -9,8 +9,8 @@ the_post();
 ?>
 <?php inf_footer_signup() ?>
   <section id="callout no-mobile">
-  <div class="top-block">
-    <div class="callout_container">
+  <div class="top-block no-mobile">
+    <div class="callout_container no-mobile">
       <div class="callout no-mobile">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
        <?php $box1 = inf_home_box1(); ?>
@@ -25,14 +25,14 @@ the_post();
           <?php echo get_the_post_thumbnail($box2->ID, 'inf_home_box2'); ?>
         <a>
         </div>
-        <div class="callout">
+        <div class="callout no-mobile">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/trend-report.png"> -->
         <?php $box3 = inf_home_box3(); ?>
         <a href="<?php echo get_post_meta($box3->ID, '_homebox3_link_url')[0]; ?>">
           <?php echo get_the_post_thumbnail($box3->ID, 'inf_home_box3'); ?>
         <a>
         </div>
-        <div class="callout">
+        <div class="callout no-mobile">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/just-spotted.png"> -->
        <?php $box4 = inf_home_box4(); ?>
         <a href="<?php echo get_post_meta($box4->ID, '_homebox4_link_url')[0]; ?>">
