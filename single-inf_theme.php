@@ -226,7 +226,7 @@
 	</section><!-- /#content -->
   <?php #inf_browse_by(); ?>
 
-  <?php
+ <!--  <?php
   ini_set('display_errors', 1);
   // The interviews page displays the latest interview for now
   $args = array(
@@ -247,8 +247,8 @@
 		$image_id = get_post_thumbnail_id($_interview->ID);
 		$thumbnail = wp_get_attachment_image_src($image_id, 'medium');
 		$_interviewLink = get_permalink($_interview->ID);
-	?>
-			<div class="more_int_block">
+	?> -->
+			<!-- <div class="more_int_block">
                 <a href="<?php echo $_interviewLink; ?>">
                 <img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo $_interview->post_title; ?>" width="100%" />
 				<h3><?php echo $_interview->post_title; ?></h3>
@@ -258,7 +258,7 @@
 	<?php
 	endforeach; ?>
 		</div>
-  </div>
+  </div> -->
 <?php get_footer(); ?>
 
 <?php
