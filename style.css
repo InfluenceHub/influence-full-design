@@ -183,7 +183,8 @@ div.home-box img {
 }
 
 .top-block .column div {
-  height: 295px;
+  height: 200px;
+  /* height: 295px; */
 }
 .slide-text {
   font-family: "AvenirNext LT Pro Regular",arial,sans-serif;
