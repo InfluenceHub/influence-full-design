@@ -415,7 +415,6 @@ return null;
       <div class="latest-home group">
         <div class="sideads_wrapper no-mobile">
           <div class="sidead leftad">
-
           </div>
           <div class="sidead rightad">
           </div>
