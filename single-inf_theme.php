@@ -64,7 +64,7 @@
 			$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
             ?>
             <div class="shop-main">
-				<div class="shop-main-title theme"><?php echo get_the_title(get_the_ID()); ?></div>
+				<div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>
 						<div class="text-holder" style="margin:0; padding:0; height:auto;">
               <img class="shop-published-by1" style="display:block; margin:20px auto 30px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
 			  <!--<div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/soc-facebook.png" /></a> <a href="https://instagram.com/theinfluence" class="instagram"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/soc-instagram.png" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/soc-pinterest.png" /></a></div> -->
