@@ -6511,7 +6511,8 @@ li.home-feed-side-by-side {
 }
 
 li.home-feed-side-by-side:nth-child(2n+1) {
-  margin-right: 30px;
+  margin-right: 10px;
+  margin-left: 20px;
 }
 
 li.home-feed-side-by-side .home-feed-post-img-wrap {
