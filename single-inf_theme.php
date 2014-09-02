@@ -23,7 +23,7 @@
 
 			//if(!empty($influencer)) {
         ?>
-				<div class="shop-main">
+				<div class="shop-main-theme">
 					<!--<div class="breadcrumbs"><a href="#">SHOP ></a> <?php //echo strtoupper(get_the_title()); ?></div> /.breadcrumbs -->
           <div class="column-three" style="border: none;">
           <div class="column adcolumn" style="">
