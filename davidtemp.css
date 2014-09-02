@@ -340,6 +340,9 @@ body.home #content .content_wrapper {
 .shop-main ul.slides li a {
   display: block;
 }
+.shop-main ul.slides li.slide-theme a {
+  display: block;
+}
 .shop-main .caroufredsel_wrapper ul.slides { 
   /**/
 }
