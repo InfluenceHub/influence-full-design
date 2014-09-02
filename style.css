@@ -6874,7 +6874,8 @@ margin-top: 0;
   line-height:24px; 
   font-family: "Oswald", arial, sans-serif !important;
   text-transform:uppercase;
-  word-wrap: break-word;
+  text-align: center;
+  height: 150px;
   width: 150px;
 }
 
