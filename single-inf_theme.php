@@ -44,6 +44,7 @@
 								<ul class="slides">
 								<li><a href="<?php echo $img_obj[1]; ?>" class="colorbox">
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
+                  <?php the_post_thumbnail_caption(); ?>
 								</a></li>
                 <?php inf_theme_slider_theme(); ?>
                 </ul>
