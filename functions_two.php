@@ -415,6 +415,8 @@ return null;
       <div class="latest-home group">
         <div class="sideads_wrapper no-mobile">
           <div class="sidead leftad">
+                       <h2 class="no-mobile"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
+
           </div>
           <div class="sidead rightad">
           </div>
@@ -430,7 +432,6 @@ return null;
                 ?>
                 <?php if($k <= 3): // Show the first 4 posts as two column posts ?>
                   <li class="column-two home-feed-post">
-             <h2 class="no-mobile"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
 
                         <div class="home-feed-post-img-wrap">
                         <a href="<?php the_permalink(); ?>">
