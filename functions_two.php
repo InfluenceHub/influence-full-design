@@ -40,6 +40,7 @@
   add_image_size('inf_interviewslider',                1214, 794, false);
   add_image_size('inf_interviewslider_small',          114, 72, true);
   add_image_size('inf_interviewmore', 220, 235, true);
+  add_image_size('inf_featured_theme',                 634, 500, true);
 
 
 // Items of The Week
@@ -48,68 +49,56 @@ $args = array(
     'post_type' => 'inf_home_items',
     'posts_per_page' => 1
     );
-  $postID = get_posts($args)[0]->ID; // this gets an array of wordpress posts
-  
-  $image1ID = get_post_meta($postID, '_itemofweek1'); 
-  $image2ID = get_post_meta($postID, '_itemofweek2');
-  $image3ID = get_post_meta($postID, '_itemofweek3');
-  $image4ID = get_post_meta($postID, '_itemofweek4');
-  $image5ID = get_post_meta($postID, '_itemofweek5');
-  
-  $image1SRC = get_post($image1ID[0])->guid;
-  $image2SRC = get_post($image2ID[0])->guid;
-  $image3SRC = get_post($image3ID[0])->guid;
-  $image4SRC = get_post($image4ID[0])->guid;
-  $image5SRC = get_post($image5ID[0])->guid;
-
- $link1 = (get_post_meta($postID, '_item1_link_url', true)); 
- $link2 = get_post_meta($postID, '_item2_link_url', true); 
- $link3 = get_post_meta($postID, '_item3_link_url', true); 
- $link4 = get_post_meta($postID, '_item4_link_url', true); 
- $link5 = get_post_meta($postID, '_item5_link_url', true); 
-
-
-
- //$link1 = get_post($link1ID[0]);
- //$link2 = get_post($link2ID[0]);
- //$link3 = get_post($link3ID[0]);
- //$link4 = get_post($link4ID[0]);
- //$link5 = get_post($link5ID[0]);
-
-
+  $list_items = get_posts($args);
+  $post = $list_items[0];
+  $postID = $post->ID;
+  $image1ID = get_post_meta($list_items[0]->ID, '_itemofweek1'); 
+  $image1 = get_post($image1ID[0]);
+  $image2ID = get_post_meta($list_items[0]->ID, '_itemofweek2');
+  $image2 = get_post($image2ID[0]);
+  $image3ID = get_post_meta($list_items[0]->ID, '_itemofweek3');
+  $image3 = get_post($image3ID[0]);
+  $image4ID = get_post_meta($list_items[0]->ID, '_itemofweek4');
+  $image4 = get_post($image4ID[0]);
+  $image5ID = get_post_meta($list_items[0]->ID, '_itemofweek5');
+  $image5 = get_post($image5ID[0]);
+  $link1ID = get_post_meta($list_items[0]->ID, '_item1_link_url');
+  $link1 = get_post($link1ID[0]); 
+  $link2ID = get_post_meta($list_items[0]->ID, '_item2_link_url');
+  $link2 = get_post($link2ID[0]); 
+  $link3ID = get_post_meta($list_items[0]->ID, '_item3_link_url'); 
+  $link3 = get_post($link3ID[0]); 
+  $link4ID = get_post_meta($list_items[0]->ID, '_item4_link_url'); 
+  $link4 = get_post($link4ID[0]); 
+  $link5ID = get_post_meta($list_items[0]->ID, '_item5_link_url'); 
+  $link5 = get_post($link5ID[0]); 
   ?>
- <div class="favorites_center">
   <div class="favorites_container">
-   <div class="favorites_title">
-    <?php echo get_the_title($postID); ?>
-  </div>
-  <div class="favorites" style="border-left: 10px solid #d5f7ec;">
+  <div class="favorites">
    <a href="<?php echo $link1; ?>">
-    <img src="<?php echo $image1SRC; ?>" width="133px" height="133px" />
+    <img src="<?php echo $image1; ?>"/>
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link2; ?>">
-    <img src="<?php echo $image2SRC; ?>" width="133px" height="133px" />
+    <img src="<?php echo $image2; ?>" />
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link3; ?>">
-    <img src="<?php echo $image3SRC; ?>" width="133px" height="133px" />
+    <img src="<?php echo $image3; ?>" />
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link4; ?>">
-    <img src="<?php echo $image4SRC; ?>" width="133px" height="133px" />
+    <img src="<?php echo $image4; ?>" />
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link5; ?>">
-    <img src="<?php echo $image5SRC; ?>" width="133px" height="133px"/>
+    <img src="<?php echo $image5; ?>" />
     </a>
   </div>
-  </div>
-</div>
 <?php
 }
 
@@ -123,10 +112,8 @@ $args = array(
     $box1 = get_posts($args);
     if(isset($box1[0])){
       return $box1[0];
-   }
-return null;
-
-
+    }
+    return null;
   }
 
   function inf_home_box2(){
@@ -135,14 +122,10 @@ return null;
       'posts_per_page' => 1
     );
     $box2 = get_posts($args);
-
     if(isset($box2[0])){
       return $box2[0];
     }
     return null;
-  
-
-
   }
 
     function inf_home_box3(){
@@ -155,7 +138,6 @@ return null;
       return $box3[0];
     }
     return null;
-
   }
 
     function inf_home_box4(){
@@ -164,12 +146,10 @@ return null;
       'posts_per_page' => 1
     );
     $box4 = get_posts($args);
-
     if(isset($box4[0])){
       return $box4[0];
     }
     return null;
-
   }
 
 
@@ -420,7 +400,8 @@ return null;
           </div>
         </div>
         <div class="shell">
-            <h2 class="no-mobile"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
+         <h2 class="no-mobile"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
+          </div><!-- /.section-heading -->
          <ul>
             <?php
               $latest_theme = inf_get_latest_theme();
@@ -616,7 +597,7 @@ return null;
 
                                 $title = $post->post_title;
                                 if (strlen($title) > 50) {
-                                  $title = substr($title, 0, 50) . '...';
+                                  $title = substr($title, 0, 45) . '...';
                                 }
                           ?>
                             <h2><?php echo $title ?></h2>
