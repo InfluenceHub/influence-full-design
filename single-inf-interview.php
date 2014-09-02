@@ -24,7 +24,7 @@
 <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
 
         </div>
-        <div id="topSlider" class="interview-slider group">
+        <div id="topSlider" class="interview-slider group no-mobile">
           <ul class="slides" style=" margin-left: -50px;" >
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
