@@ -420,7 +420,8 @@ return null;
           </div>
         </div>
         <div class="shell">
-         <h2 class="no-mobile"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
+                 <h2 class="no-mobile column-two"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
+
          <ul>
             <?php
               $latest_theme = inf_get_latest_theme();
@@ -431,6 +432,7 @@ return null;
                 ?>
                 <?php if($k <= 3): // Show the first 4 posts as two column posts ?>
                   <li class="column-two home-feed-post">
+
                         <div class="home-feed-post-img-wrap">
                         <a href="<?php the_permalink(); ?>">
                           <?php
