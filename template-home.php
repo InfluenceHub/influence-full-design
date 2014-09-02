@@ -11,14 +11,14 @@ the_post();
   <section id="callout">
   <div class="top-block">
     <div class="callout_container">
-      <div class="callout">
+      <div class="callout no-mobile">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
        <?php $box1 = inf_home_box1(); ?>
         <a href="<?php echo get_post_meta($box1->ID, '_homebox1_link_url')[0]; ?>">
           <?php echo get_the_post_thumbnail($box1->ID, 'inf_home_box1'); ?>
         <a>
         </div>
-        <div class="callout">
+        <div class="callout no-mobile">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/in-focu.png"> -->
        <?php $box2 = inf_home_box2(); ?>
         <a href="<?php echo get_post_meta($box2->ID, '_homebox2_link_url')[0]; ?>">
