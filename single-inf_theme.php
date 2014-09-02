@@ -250,7 +250,7 @@
 
 	?>
 			<div class="more_int_block">
-              <a href="<?php echo $link;">
+              <a href="<?php echo $link; ?>">
                 <img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo $_interview->post_title; ?>" width="100%" />
 				<h3><?php echo $_interview->post_title; ?></h3>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn_viewmore.jpg" />
