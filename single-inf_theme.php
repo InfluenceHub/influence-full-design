@@ -67,7 +67,7 @@
 				<div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>
 						<div class="text-holder" style="margin:0; padding:0; height:auto;">
               <img class="shop-published-by1" style="display:block; margin:20px auto 30px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
-			  <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/soc-facebook.png" /></a> <a href="https://instagram.com/theinfluence" class="instagram"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/soc-instagram.png" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/soc-pinterest.png" /></a></div>
+			  <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a> <a href="https://instagram.com/theinfluence" class="instagram"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_insta.jpg" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a></div>
 
               <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
 							<?php
@@ -226,7 +226,38 @@
 	</section><!-- /#content -->
   <?php #inf_browse_by(); ?>
 
-
+  <?php
+  ini_set('display_errors', 1);
+  // The interviews page displays the latest interview for now
+  $args = array(
+    'numberposts' => 3,
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'post_type' => 'inf_theme',
+    'post_status' => 'publish'
+  );
+  $interviews = get_posts($args);
+  #print_r($interviews);
+  $key = 0;
+  ?>
+  <div class="more_interviews">
+	<div class="more_interviews_wrapper">
+	<?php foreach ($interviews as $_interview):
+		#print_r($_interview); die();
+		$image_id = get_post_thumbnail_id($_interview->ID);
+		$thumbnail = wp_get_attachment_image_src($image_id, 'medium');
+	?>
+			<div class="more_int_block">
+                <a href="<?php echo $_interview->post_link; ?>">
+                <img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo $_interview->post_title; ?>" width="100%" />
+				<h3><?php echo $_interview->post_title; ?></h3>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn_viewmore.jpg" />
+                </a>
+            </div>
+	<?php
+	endforeach; ?>
+		</div>
+  </div>
 <?php get_footer(); ?>
 
 <?php
