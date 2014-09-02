@@ -95,11 +95,8 @@ div.home-box img {
 }
 
 .callout:hover {
-  margin-top: 100px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: inline-block;
-  padding-left: 10px;
+  height: 300px
+  width: 300px;
   background-color: #000;
   opacity: .5;
 }
