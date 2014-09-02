@@ -32,8 +32,6 @@
                 </a>
              </div>
           <div class="left-col theme right">
-            <?php print_r(the_post_thumbnail_caption()); ?>
-
 						<?php if(has_post_thumbnail()) { ?>
 							<?php
                 $thisDESC = get_the_content();
