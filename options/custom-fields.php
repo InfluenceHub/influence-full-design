@@ -168,7 +168,7 @@ Carbon_Container::factory('custom_fields', __('Additional Captions', 'inf'))
 	->add_fields(array(
 		Carbon_Field::factory('complex', 'inf_captions', 'Captions')
 			->add_fields(array(
-				Carbon_Field::factory('text', 'inf_caption', 'Caption')
+				Carbon_Field::factory('textarea', 'inf_caption', 'Caption')
 	    ))		
 	));
 Carbon_Container::factory('term_meta', __('Category settings', 'inf'))
