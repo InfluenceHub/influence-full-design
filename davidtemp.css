@@ -333,7 +333,9 @@ body.home #content .content_wrapper {
 }
 
 .shop-main.theme .caroufredsel_wrapper {
+  top: initial !important;
   overflow: hidden !important;
+  margin-top: initial !important;
 }
 .shop-main.theme ul.slides li {
   position:relative;
