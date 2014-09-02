@@ -327,8 +327,8 @@ body.home #content .content_wrapper {
 
 
 .shop-main .caroufredsel_wrapper { 
-/*  top:50% !important; 
-*/  overflow:hidden !important;
+  top:50% !important; 
+  overflow:hidden !important;
   margin-top:-42% !important;
 }
 .shop-main ul.slides li.slide-theme {
