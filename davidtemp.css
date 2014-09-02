@@ -343,12 +343,8 @@ body.home #content .content_wrapper {
   width: 100%;
 }
 
+
 .shop-main .caroufredsel_wrapper { 
-  /*top:50% !important; */
-  overflow:visible !important;
-  /*margin-top:-42% !important;*/
-}
-.shop-main-theme .caroufredsel_wrapper { 
   top:50% !important; 
   overflow:hidden !important;
   /*margin-top:-42% !important;*/
