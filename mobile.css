@@ -30,7 +30,10 @@ show if we have more than 1 item*/
 #content > div {
 	margin: 0 auto 0 auto;
 }
-
+#callout > div {
+  width: 100%;
+  margin: 0 auto !important;
+}
 #content .content_wrapper {
 	margin: 0;
 }
