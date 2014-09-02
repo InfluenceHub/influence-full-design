@@ -415,13 +415,15 @@ return null;
       <div class="latest-home group">
         <div class="sideads_wrapper no-mobile">
           <div class="sidead leftad">
-                       <h2 class="no-mobile"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
 
           </div>
           <div class="sidead rightad">
           </div>
         </div>
         <div class="shell">
+         <div class="section-heading">
+            <h2 class="no-mobile"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/styleset.png" /></h2><br class="no-mobile" />
+            </div>
          <ul>
             <?php
               $latest_theme = inf_get_latest_theme();
