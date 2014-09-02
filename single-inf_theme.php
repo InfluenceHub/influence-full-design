@@ -278,7 +278,7 @@ function inf_theme_slider_theme() {
 
 <script>
 jQuery(window).load(function() {
-  //jQuery('.shop-main .inner.slides').flexslider();
+  jQuery('.shop-main .inner.slides').flexslider();
   jQuery('.shop-main .left-col .slides').carouFredSel({
 			prev: '.shop-featured-prev',
 			next: '.shop-featured-next',
