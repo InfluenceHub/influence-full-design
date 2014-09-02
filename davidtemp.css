@@ -212,10 +212,10 @@ body.home #content .content_wrapper {
  color: #000;
  padding-top: 10px;
 }
-.shop-main .left-col .inner {
+/*.shop-main .left-col .inner {
   height: 300px;
   width: 600px;
-  overflow: hidden;
+  overflow: hidden;*/
 }
 .shop-main .left-col .slides {
   list-style: none;
