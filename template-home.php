@@ -40,7 +40,7 @@ the_post();
         <a>
         </div>
     </div>
-    <?php inf_items(); ?>
+   <!-- <?php inf_items(); ?> -->
   </div>
 </section>
   <section id="content">
