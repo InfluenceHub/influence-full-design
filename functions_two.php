@@ -432,7 +432,6 @@ return null;
                 ?>
                 <?php if($k <= 3): // Show the first 4 posts as two column posts ?>
                   <li class="column-two home-feed-post">
-
                         <div class="home-feed-post-img-wrap">
                         <a href="<?php the_permalink(); ?>">
                           <?php
