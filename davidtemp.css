@@ -229,14 +229,14 @@ body.home #content .content_wrapper {
   float: left;
   overflow:hidden;
 }
-.shop-main-theme .left-col .slides {
+.shop-main .left-col .slides {
   list-style: none;
 }
-.shop-main-theme .left-col .slides li {
+.shop-main .left-col .slides li {
   float: left;
   overflow:hidden;
 }
-.shop-main-theme .shop-featured-prev, .shop-main .shop-featured-next {
+.shop-main .shop-featured-prev, .shop-main .shop-featured-next {
   background: url("images/small_black_arrows_white.png") repeat 0 0;
   height: 30px;
   position: absolute;
