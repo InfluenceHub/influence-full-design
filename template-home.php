@@ -40,7 +40,7 @@ the_post();
         <a>
         </div>
     </div>
-   <?php inf_items(); ?>
+   <div class="no-mobile"><?php inf_items(); ?></div>
   </div>
 </section>
   <section id="content">
