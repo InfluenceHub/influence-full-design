@@ -37,7 +37,6 @@
                 $thisDESC = get_the_content();
                 $thisURL = get_permalink();
                 $img_obj = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
-                inf_social_share($thisURL, $influencer_name, $img_obj[0], $thisDESC);
                 $category_link = get_category_link($post_categories[0]->term_id);
               ?>
               <div class="inner" style="width: 430px; height:600px; margin-right:24px; background:#d6f7ee">
