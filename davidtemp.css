@@ -222,19 +222,13 @@ body.home #content .content_wrapper {
   width: 600px;
   overflow: hidden;
 }
+
 .shop-main .left-col .slides {
   list-style: none;
 }
 .shop-main .left-col .slides li {
   float: left;
-  overflow:hidden;
-}
-.shop-main .left-col .slides {
-  list-style: none;
-}
-.shop-main .left-col .slides li {
-  float: left;
-  overflow:hidden;
+  overflow:visible;
 }
 .shop-main .shop-featured-prev, .shop-main .shop-featured-next {
   background: url("images/small_black_arrows_white.png") repeat 0 0;
@@ -326,11 +320,11 @@ body.home #content .content_wrapper {
 }
 
 
-.shop-main .caroufredsel_wrapper { 
+/*.shop-main .caroufredsel_wrapper { 
   top:50% !important; 
   overflow:hidden !important;
   margin-top:-42% !important;
-}
+}*/
 
 
 .shop-main.theme .caroufredsel_wrapper {
