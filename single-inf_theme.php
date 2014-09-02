@@ -38,9 +38,10 @@
                 $thisURL = get_permalink();
                 $img_obj = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
                 $category_link = get_category_link($post_categories[0]->term_id);
+              }
               ?>
               <div class="inner" style="width: 430px; height:600px; margin-right:24px; background:#d6f7ee">
-								<ul class="slides"><?php } ?>
+								<ul class="slides">
 								<li><a href="<?php echo $img_obj[1]; ?>" class="colorbox">
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</a></li>
