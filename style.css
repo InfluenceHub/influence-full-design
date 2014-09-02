@@ -81,7 +81,8 @@ div.home-box img {
 
 
 .favorites:hover {
-               opacity:.5;}
+    opacity:.5;
+  }
 
 
 .callout {
@@ -91,15 +92,7 @@ div.home-box img {
   display: inline-block;
   padding-left: 10px;
 }
-.callout .callout-overlay {
-  position:absolute;
-  bottom: 0px;
-  right: 0px;
- /* margin-right: 50px;
-  margin-bottom: 4px;
-  width: 149px;
-  height: 46px; */
-}
+
 .right-arrow {
   left: 580px;
 
