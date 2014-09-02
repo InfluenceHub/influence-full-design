@@ -326,11 +326,11 @@ body.home #content .content_wrapper {
 }
 
 
-.shop-main .caroufredsel_wrapper { 
+/*.shop-main .caroufredsel_wrapper { 
   top:50% !important; 
   overflow:hidden !important;
   margin-top:-42% !important;
-}
+}*/
 .shop-main ul.slides li {
   position:relative;
   top:50%;
@@ -341,8 +341,7 @@ body.home #content .content_wrapper {
   display: block;
 }
 .shop-main .caroufredsel_wrapper ul.slides { 
-  /**/
-}
+  overflow: visible;}
 .prod-row.small {
   /*height: 240px;*/
   height: 292px;
