@@ -120,7 +120,7 @@
                         }
                         $buy_link = get_post_meta($post_id, 'product_url', true);
                         $product_price = get_post_meta($post_id, 'price', true); ?>
-                        <li>
+                        <li class="slide-theme">
                           <?php //inf_social_share($buy_link, get_the_title($post_id), wp_get_attachment_thumb_url($post_id), get_the_title($post_id)); ?>
                           <a href="<?php echo esc_url($buy_link); ?>" target="_blank" title="<?php echo $product_designer . ' -- ' . $post_title; ?>">
                             <?php if(has_post_thumbnail($post_id)) { ?>
