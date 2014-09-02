@@ -327,11 +327,18 @@ body.home #content .content_wrapper {
 
 
 .shop-main .caroufredsel_wrapper { 
-  /*top:50% !important; */
+  top:50% !important; */
   overflow:hidden !important;
-/*  margin-top:-42% !important;
+  margin-top:-42% !important;
 */}
-.shop-main ul.slides li.slide-theme {
+
+
+.shop-main.theme .caroufredsel_wrapper {
+  top: initial !important;
+  overflow: visible !important;
+  margin-top: initial !important;
+}
+.shop-main.theme ul.slides li {
   position:relative;
   top:50%;
   transform: translate(0, -50%);
