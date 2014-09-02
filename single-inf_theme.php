@@ -31,7 +31,7 @@
                   <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nordstrom2.jpg" />
                 </a>
              </div>
-          <div class="left-col theme right">
+          <div class="left-col shop right">
 						<?php if(has_post_thumbnail()) { ?>
 							<?php
                 $thisDESC = get_the_content();
