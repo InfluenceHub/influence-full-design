@@ -1200,4 +1200,3 @@ function inf_social_share($thisURL, $thisTITLE, $thisIMG, $thisDESC) {
     </div><!-- .social-vert -->
   <?php
 }
-?>
