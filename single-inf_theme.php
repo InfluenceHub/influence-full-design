@@ -67,6 +67,8 @@
 			$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
             ?>
             <div class="shop-main">
+            <?php inf_theme_captions() ?>
+
 				<div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>
 						<div class="text-holder" style="margin:0; padding:0; height:auto;">
               <img class="shop-published-by1" style="display:block; margin:20px auto 30px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
