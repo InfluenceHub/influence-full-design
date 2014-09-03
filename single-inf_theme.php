@@ -42,7 +42,7 @@
 							?>
 							<div class="inner" style="width: 430px; height:600px; margin-right:24px; background:#d6f7ee">
 								<ul class="slides">
-								<li><<!-- a href="<?php echo $img_obj[1]; ?>" class="colorbox"> -->
+								<li><!-- a href="<?php echo $img_obj[1]; ?>" class="colorbox"> -->
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 <!-- 								</a> -->
 								</li>
@@ -267,14 +267,15 @@
 function inf_theme_slider_theme() {
 	global $post;
 	$images = carbon_get_post_meta($post->ID, 'inf_featured_image', 'complex');
+	$captions = carbon_get_post_meta($post->ID, 'inf_captions', 'complex');
 	foreach($images as $image) {
 		$image_full  = wp_get_attachment_image_src($image[inf_featured_image], 'full');
 		$image_small = wp_get_attachment_image_src($image[inf_featured_image], 'inf_featured_theme');
-		$captions = carbon_get_post_meta($post->ID, 'inf_captions', 'complex');
+		$caption =  wp_get_post_terms($image[inf_featured_image], 'inf_featured_theme');
 		?>
 		<li class="slide-theme"><a href="<?php echo $image_full[0]; ?>" class="colorbox">
 			<img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
-			<?php echo $captions[0]?>
+			<?php echo $caption[0]?>
 		</a></li>
 		<?php
 	}
