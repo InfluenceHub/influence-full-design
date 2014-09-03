@@ -61,7 +61,7 @@
         'posts_per_page' => 1
       );
     $postID = get_posts($args)[0]->ID;
-    $caption = get_post_meta($postID, '_inf_caption[0]', true)
+    $caption = get_post_meta($postID, '_inf_caption[0]', true);
   }
 // Items of The Week
 function inf_items() {
