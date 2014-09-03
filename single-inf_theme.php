@@ -274,7 +274,7 @@ function inf_theme_slider_theme() {
 		?>
 		<li class="slide-theme"><a href="<?php echo $image_full[0]; ?>" class="colorbox">
 			<img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
-			<?php print_r($captions[0]); ?>
+			<?php echo $captions[0]?>
 		</a></li>
 		<?php
 	}
