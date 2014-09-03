@@ -135,6 +135,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
 -->
+<div id="header_inner" class="inner_wrap">
 <div class="ad_unit">
 <!-- BCBG_HEADER -->
 <div id='div-gpt-ad-1409787982871-0' style='width:728px; height:90px;'>
@@ -143,16 +144,9 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787982871-0');
 </script>
 </div>
 </div>
-<div id="header_inner" class="inner_wrap">
 <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
 	<header id="header">
 			<div id="header_inner" class="inner_wrap">
-      <!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409787486213-0' style='width:728px; height:90px;'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787486213-0'); });
-</script>
-</div>
 				<?php
           //Create login/out link
           if(is_user_logged_in()) {
