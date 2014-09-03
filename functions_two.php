@@ -62,7 +62,7 @@
       );
     $postID = get_posts($args)[0]->ID;
     $caption = carbon_get_the_post_meta('inf_captions', 'complex');
-   echo $caption[1];
+   echo $caption[0];
   
   }
 // Items of The Week
