@@ -62,6 +62,7 @@
       );
     $postID = get_posts($args)[0]->ID;
     $caption = get_post_meta($postID, '_inf_caption', true);
+    echo $caption[0]
   }
 // Items of The Week
 function inf_items() {
