@@ -6947,6 +6947,6 @@ text-align:center;
 .social-share-me a {
   margin: 0 15px;
 }
-.social-share-me:hover a {
-  opacity: .5;
+.share-me:hover {
+  opacity: .8;
 }
