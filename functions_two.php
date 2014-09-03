@@ -1234,4 +1234,4 @@ return null;
       $influencer_id = $influencer[0]->ID;
     }
     return $influencer_id;
-  }
+  } ?>
