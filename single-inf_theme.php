@@ -43,10 +43,10 @@
 							?>
 							<div class="inner" style="width: 430px; height:600px; margin-right:24px; background:#d6f7ee">
 								<ul class="slides">
-								<li><a href="<?php echo $img_obj[1]; ?>" class="colorbox">
+								<li><<!-- a href="<?php echo $img_obj[1]; ?>" class="colorbox"> -->
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 									<?php the_post_thumbnail_caption($post_id); ?>
-								</a>
+<!-- 								</a> -->
 								</li>
 
 								<?php inf_theme_slider_theme(); ?>
