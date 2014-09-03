@@ -57,4 +57,3 @@ function crb_user_is($user_id, $capability) {
 	$all_capabilities = get_user_meta($user_id, $wpdb->prefix . 'capabilities', true);
 	return isset($all_capabilities[$capability]);
 }
-

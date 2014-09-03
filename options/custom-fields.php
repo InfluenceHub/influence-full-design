@@ -339,10 +339,3 @@ Carbon_Container::factory('custom_fields', __('More Featured Images', 'inf'))
 		Carbon_Field::factory('attachment', 'itemofweek5', 'Fith Item')
 			->help_text('Image dimensions - 133 × 133 pixels.')
 	));
-
-/*
-Carbon_Container::factory('term_meta', __('Category settings', 'inf'))
-	->show_on_taxonomy('category')
-	->add_fields(array(
-		Carbon_Field::factory('attachment', 'inf_category_image', 'Category image')
-	));*/
