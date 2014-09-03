@@ -61,7 +61,7 @@
         'posts_per_page' => 99999
       );
     $postID = get_posts($args)[0]->ID;
-    $caption = carbon_get_the_post_meta('inf_captions', 'complex');
+    $caption = carbon_get_the_post_meta('_inf_captions', 'complex');
    echo $caption[0];
   
   }
