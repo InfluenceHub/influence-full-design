@@ -103,7 +103,8 @@ div.home-box img {
   background:#000;
   color:#fff;
   width:280px;
-  line-height:55px;
+  height: 55px;
+  line-height:24px;
   font: 14px "AvenirNext LT Pro Regular",arial,sans-serif;
   text-transform:uppercase;
   position:absolute;
@@ -118,7 +119,8 @@ div.home-box img {
   display:table-cell;
   vertical-align:middle;
   width:280px;
-  line-height:55px;
+  height: 55px;
+  line-height:24px;
 }
 .callout .callout_hover_container span {
   vertical-align: middle;

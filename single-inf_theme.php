@@ -45,7 +45,6 @@
 								<li><a href="<?php echo $img_obj[1]; ?>" class="colorbox">
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</a>
-                <?php inf_theme_captions() ?>
                 </li>
 
                 <?php inf_theme_slider_theme(); ?>
@@ -67,8 +66,6 @@
 			$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
             ?>
             <div class="shop-main">
-            <?php inf_theme_captions() ?>
-
 				<div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>
 						<div class="text-holder" style="margin:0; padding:0; height:auto;">
               <img class="shop-published-by1" style="display:block; margin:20px auto 30px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
