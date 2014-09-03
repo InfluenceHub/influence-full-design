@@ -7,14 +7,6 @@ get_header();
 the_post();
 //Detect mobile
 ?>
-<!-- Side Ads -->
-<div style="position:fixed;">
-<div id='div-gpt-ad-1409787626873-0' style='width:600px; height:1000px;'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787626873-0'); });
-</script>
-</div>
-</div>
 <?php inf_footer_signup() ?>
   <section id="callout no-mobile">
   <div class="top-block no-mobile">

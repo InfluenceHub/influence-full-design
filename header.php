@@ -54,13 +54,6 @@ node.parentNode.insertBefore(gads, node);
 </script>
 
 <script type='text/javascript'>
-googletag.cmd.push(function() {
-googletag.defineSlot('/61413193/BCBG_HEADER', [728, 90], 'div-gpt-ad-1409787486213-0').addService(googletag.pubads());
-googletag.pubads().enableSingleRequest();
-googletag.enableServices();
-});
-</script>
-<script type='text/javascript'>
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
 (function() {
@@ -77,7 +70,8 @@ node.parentNode.insertBefore(gads, node);
 
 <script type='text/javascript'>
 googletag.cmd.push(function() {
-googletag.defineSlot('/61413193/BCBG_SIDE', [600, 1000], 'div-gpt-ad-1409787626873-0').addService(googletag.pubads());
+googletag.defineSlot('/61413193/BCBG_HEADER', [728, 90], 'div-gpt-ad-1409787982871-0').addService(googletag.pubads());
+googletag.defineSlot('/61413193/BCBG_SIDE', [600, 1000], 'div-gpt-ad-1409787982871-1').addService(googletag.pubads());
 googletag.pubads().enableSingleRequest();
 googletag.enableServices();
 });
@@ -141,13 +135,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
 -->
-<div id="header_inner" class="inner_wrap">
-      <!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409787486213-0' style='width:728px; height:90px;'>
+<div class="ad_unit">
+<!-- BCBG_HEADER -->
+<div id='div-gpt-ad-1409787982871-0' style='width:728px; height:90px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787486213-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787982871-0'); });
 </script>
 </div>
+</div>
+<div id="header_inner" class="inner_wrap">
 <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
 	<header id="header">
 			<div id="header_inner" class="inner_wrap">
