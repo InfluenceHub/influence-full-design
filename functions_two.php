@@ -61,7 +61,7 @@
         'posts_per_page' => 99999
       );
     $postID = get_posts($args)[0]->ID;
-    $caption = get_post_meta($postID, '_inf_caption', true);
+    $caption = carbon_get_the_post_meta('inf_captions', 'complex');
     echo $caption[0];
   }
 // Items of The Week
