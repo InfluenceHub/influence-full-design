@@ -62,7 +62,11 @@
       );
     $postID = get_posts($args)[0]->ID;
     $caption = carbon_get_the_post_meta('inf_caption', 'complex');
-    echo $caption;
+?>
+<p class="shop-main-theme">
+  <?php echo $caption[1] ?>
+</p>
+  <?php
   }
 // Items of The Week
 function inf_items() {
