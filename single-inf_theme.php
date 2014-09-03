@@ -38,14 +38,12 @@
 								$thisURL = get_permalink();
 								$img_obj = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
 								$category_link = get_category_link($post_categories[0]->term_id);
-								$captions = carbon_get_post_meta('inf_captions', 'complex');
 							}
 							?>
 							<div class="inner" style="width: 430px; height:600px; margin-right:24px; background:#d6f7ee">
 								<ul class="slides">
 								<li><<!-- a href="<?php echo $img_obj[1]; ?>" class="colorbox"> -->
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
-									<?php the_post_thumbnail_caption($post_id); ?>
 <!-- 								</a> -->
 								</li>
 
@@ -269,12 +267,14 @@
 function inf_theme_slider_theme() {
 	global $post;
 	$images = carbon_get_post_meta($post->ID, 'inf_featured_image', 'complex');
+	$captions = carbon_get_post_meta($post->ID 'inf_caption', 'complex');
 	foreach($images as $image) {
 		$image_full  = wp_get_attachment_image_src($image[inf_featured_image], 'full');
 		$image_small = wp_get_attachment_image_src($image[inf_featured_image], 'inf_featured_theme');
 		?>
 		<li class="slide-theme"><a href="<?php echo $image_full[0]; ?>" class="colorbox">
 			<img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
+			<?php print_r($caption[0]); ?>
 		</a></li>
 		<?php
 	}
