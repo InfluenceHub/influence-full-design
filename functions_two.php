@@ -53,6 +53,16 @@
 //     echo '<span>'.$thumbnail_image[0]->post_excerpt.'</span>';
 //   }
 // }
+
+//Theme Captions
+  function inf_theme_captions() {
+    $args = array(
+        'post_type' => 'inf_theme',
+        'posts_per_page' => 1
+      );
+    $postID = get_posts($args)[0]->ID;
+    $caption = get_post_meta($postID, '_inf_caption[0]', true)
+  }
 // Items of The Week
 function inf_items() {
 $args = array(
