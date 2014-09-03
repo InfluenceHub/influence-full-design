@@ -443,7 +443,7 @@ jQuery(function($) {
         flashvars.shelfToggleButtonTopYOffset = "75";
         flashvars.shelfPreviewDisplaySeconds  = "5.0";
         flashvars.shelfPreviewTextCopy = "Click the Screen to Shop and Bookmark Items in this Video!\nFYI : Double Check That Your PopUp Blocker Is Disabled! ";
-        
+        flashvars.browserTitle = "_blank"     
         var params = {
           "quality":           "high",
           "bgcolor":           "#aaa",
