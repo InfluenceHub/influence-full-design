@@ -38,7 +38,7 @@ $detect = new Mobile_Detect;
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/mobile.css<?php echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" media="screen and (max-width: 700px)" />
-    
+
 
 <script type='text/javascript'>
 var googletag = googletag || {};
@@ -67,13 +67,7 @@ googletag.enableServices();
 
 	<body <?php body_class(); ?>>
        <!-- BCBG_HEADER -->
-<div class="top_ad-block">
-<div id='div-gpt-ad-1409789912092-0' style='width:728px; height:90px;'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409789912092-0'); });
-</script>
-</div>
-</div>
+
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -130,9 +124,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
 -->
+<div class="top_ad-block">
+<div id='div-gpt-ad-1409789912092-0' style='width:728px; height:90px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409789912092-0'); });
+</script>
+</div>
+</div>
 <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
   <header id="header">
-
 			<div id="header_inner" class="inner_wrap">
 				<?php
           //Create login/out link
