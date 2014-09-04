@@ -139,6 +139,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="header_inner" class="inner_wrap" >
 <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
 	<header id="header">
+  <div class="ad_banner">
+<!-- BCBG_HEADER -->
+<div id='div-gpt-ad-1409787982871-0' style='width:728px; height:90px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787982871-0'); });
+</script>
+</div>
+</div>
+</div>
 			<div id="header_inner" class="inner_wrap">
 				<?php
           //Create login/out link
@@ -148,16 +157,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             $signinlink = '<li><a href="" class="sign-in-link">SIGN IN</a></li>';
             //$signinlink = '<li><a href="" class="sign-in-link">SIGN IN</a></li><li class="up">/<a href="" class="sign-up-link">UP</a></li>';
           }
-        ?>
-          <div class="ad_banner">
-<!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409787982871-0' style='width:728px; height:90px;'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787982871-0'); });
-</script>
-</div>
-</div>
-</div>  
+        ?>  
         <a id="logo" style="padding-top: 5px;" href="<?php echo get_home_url(null, '/'); ?>"><img  class="no-mobile"src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" /></a>
         <a href="#" id="hamburger" style="width: 100%; height: 45px; margin-top: -5px;">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" style="z-index: 2; background-color: #fff; margin-top: 5px;" width="35x" height="35px" />
