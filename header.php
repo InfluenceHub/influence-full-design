@@ -124,17 +124,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
 -->
-
-<!-- <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
- -->  <header id="header">
-			<div id="header_inner" class="inner_wrap">
-        <div class="top_ad-block">
 <div id='div-gpt-ad-1409789912092-0' style='width:728px; height:90px;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409789912092-0'); });
 </script>
 </div>
-</div>
+<!-- <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
+ -->  <header id="header">
+ 
+			<div id="header_inner" class="inner_wrap">
 				<?php
           //Create login/out link
           if(is_user_logged_in()) {
