@@ -7,6 +7,7 @@ get_header();
 the_post();
 //Detect mobile
 ?>
+<section id="content">
 <div class="top_ad-block">
      <!-- BCBG_HEADER -->
 <div id='div-gpt-ad-1409789912092-0' style='width:728px; height:90px;'>
@@ -15,6 +16,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409789912092-0');
 </script>
 </div>
 </div>
+</section>
 <?php inf_footer_signup() ?>
   <section id="callout no-mobile">
   <div class="top-block no-mobile">
