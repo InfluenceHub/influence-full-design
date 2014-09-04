@@ -81,10 +81,12 @@ googletag.enableServices();
 
 	<body <?php body_class(); ?>>
        <!-- BCBG_HEADER -->
+<div id="top_ad-block">
 <div id='div-gpt-ad-1409789912092-0' style='width:728px; height:90px;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409789912092-0'); });
 </script>
+</div>
 </div>
     <script>
       window.fbAsyncInit = function() {
