@@ -137,7 +137,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 -->
 <div id="header_inner" class="inner_wrap" >
-<br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
 	<header id="header">
   <div class="ad_banner">
 <!-- BCBG_HEADER -->
@@ -147,6 +146,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787982871-0');
 </script>
 </div>
 </div>
+<br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
 </div>
 			<div id="header_inner" class="inner_wrap">
 				<?php
