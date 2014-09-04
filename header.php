@@ -136,17 +136,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
 -->
-<div class="ad_banner">
-<!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409787982871-0' style='width:728px; height:90px;'>
+
+<br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
+  <header id="header">
+  <div class="top_ad-block">
+     <!-- BCBG_HEADER -->
+<div id='div-gpt-ad-1409789912092-0' style='width:728px; height:90px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787982871-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409789912092-0'); });
 </script>
 </div>
 </div>
-<br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
-  <header id="header">
-
 			<div id="header_inner" class="inner_wrap">
 				<?php
           //Create login/out link
