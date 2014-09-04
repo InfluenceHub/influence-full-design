@@ -116,6 +116,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MCHHLQ');</script>
 <!-- End Google Tag Manager 2-->
 <div class="fixed_social_block"><a href="https://www.facebook.com/ShopTheInfluence" target="_blank">Facebook</a><a href="https://instagram.com/theinfluence" target="_blank">instagram<a href="http://www.pinterest.com/theinfluencepin/" target="_blank">pinterest</a><a href="https://twitter.com/theinfluence" target="_blank">twitter</a><a href="https://www.youtube.com/user/TheInfluenceStyle" target="_blank">youtube</a><a href="http://theinfluencecom.tumblr.com/" target="_blank">tumblr</a></div>
+  <div class="ad_banner">
+<!-- BCBG_HEADER -->
+<div id='div-gpt-ad-1409787982871-0' style='width:728px; height:90px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787982871-0'); });
+</script>
+</div>
+</div>
+</div>  
     <?php if (is_front_page()) { ?>
     <?php } ?>
 
@@ -136,15 +145,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 -->
 <div id="header_inner" class="inner_wrap" >
-<div class="ad_banner">
-<!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409787982871-0' style='width:728px; height:90px;'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787982871-0'); });
-</script>
-</div>
-</div>
-</div>
 <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
 	<header id="header">
 			<div id="header_inner" class="inner_wrap">
