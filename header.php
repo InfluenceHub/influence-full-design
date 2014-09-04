@@ -116,15 +116,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MCHHLQ');</script>
 <!-- End Google Tag Manager 2-->
 <div class="fixed_social_block"><a href="https://www.facebook.com/ShopTheInfluence" target="_blank">Facebook</a><a href="https://instagram.com/theinfluence" target="_blank">instagram<a href="http://www.pinterest.com/theinfluencepin/" target="_blank">pinterest</a><a href="https://twitter.com/theinfluence" target="_blank">twitter</a><a href="https://www.youtube.com/user/TheInfluenceStyle" target="_blank">youtube</a><a href="http://theinfluencecom.tumblr.com/" target="_blank">tumblr</a></div>
-  <div class="ad_banner">
-<!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409787982871-0' style='width:728px; height:90px;'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787982871-0'); });
-</script>
-</div>
-</div>
-</div>  
+
     <?php if (is_front_page()) { ?>
     <?php } ?>
 
@@ -157,6 +149,15 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787982871-0');
             //$signinlink = '<li><a href="" class="sign-in-link">SIGN IN</a></li><li class="up">/<a href="" class="sign-up-link">UP</a></li>';
           }
         ?>
+          <div class="ad_banner">
+<!-- BCBG_HEADER -->
+<div id='div-gpt-ad-1409787982871-0' style='width:728px; height:90px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409787982871-0'); });
+</script>
+</div>
+</div>
+</div>  
         <a id="logo" style="padding-top: 5px;" href="<?php echo get_home_url(null, '/'); ?>"><img  class="no-mobile"src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" /></a>
         <a href="#" id="hamburger" style="width: 100%; height: 45px; margin-top: -5px;">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" style="z-index: 2; background-color: #fff; margin-top: 5px;" width="35x" height="35px" />
