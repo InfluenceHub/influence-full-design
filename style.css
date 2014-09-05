@@ -88,7 +88,6 @@ div.home-box img {
 
 
 .callout {
-  margin-top: 100px;
   padding-top: 10px;
   padding-bottom: 10px;
   display: inline-block;
@@ -104,7 +103,7 @@ div.home-box img {
   background:#000;
   color:#fff;
   width:280px;
-  line-height:55px;
+  line-height:16px;
   font: 14px "AvenirNext LT Pro Regular",arial,sans-serif;
   text-transform:uppercase;
   position:absolute;
@@ -1183,7 +1182,6 @@ div.ad_banner img {
   text-align: center;
   z-index: 10;
   margin-bottom: 40px !important;
-  margin-top: 50px !important;
   opacity: .80;
 }
 
