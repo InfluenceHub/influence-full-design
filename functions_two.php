@@ -41,30 +41,7 @@
   add_image_size('inf_interviewslider_small',          114, 72, true);
   add_image_size('inf_interviewmore', 220, 235, true);
 
-// Captions
 
-//   function the_post_thumbnail_caption() {
-//   global $post;
-
-//   $thumbnail_id    = get_post_thumbnail_id($post->ID);
-//   $thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
-
-//   if ($thumbnail_image && isset($thumbnail_image[0])) {
-//     echo '<span>'.$thumbnail_image[0]->post_excerpt.'</span>';
-//   }
-// }
-
-//Theme Captions
-  function inf_theme_captions() {
-    $args = array(
-        'post_type' => 'inf_theme',
-        'posts_per_page' => 99999
-      );
-    $postID = get_posts($args)[0]->ID;
-    $caption = carbon_get_the_post_meta('_inf_captions', 'complex');
-   echo $caption[0];
-  
-  }
 // Items of The Week
 function inf_items() {
 $args = array(
@@ -72,24 +49,24 @@ $args = array(
     'posts_per_page' => 1
     );
   $postID = get_posts($args)[0]->ID; // this gets an array of wordpress posts
-  
-  $image1ID = get_post_meta($postID, '_itemofweek1'); 
+
+  $image1ID = get_post_meta($postID, '_itemofweek1');
   $image2ID = get_post_meta($postID, '_itemofweek2');
   $image3ID = get_post_meta($postID, '_itemofweek3');
   $image4ID = get_post_meta($postID, '_itemofweek4');
   $image5ID = get_post_meta($postID, '_itemofweek5');
-  
+
   $image1SRC = get_post($image1ID[0])->guid;
   $image2SRC = get_post($image2ID[0])->guid;
   $image3SRC = get_post($image3ID[0])->guid;
   $image4SRC = get_post($image4ID[0])->guid;
   $image5SRC = get_post($image5ID[0])->guid;
 
- $link1 = (get_post_meta($postID, '_item1_link_url', true)); 
- $link2 = get_post_meta($postID, '_item2_link_url', true); 
- $link3 = get_post_meta($postID, '_item3_link_url', true); 
- $link4 = get_post_meta($postID, '_item4_link_url', true); 
- $link5 = get_post_meta($postID, '_item5_link_url', true); 
+ $link1 = (get_post_meta($postID, '_item1_link_url', true));
+ $link2 = get_post_meta($postID, '_item2_link_url', true);
+ $link3 = get_post_meta($postID, '_item3_link_url', true);
+ $link4 = get_post_meta($postID, '_item4_link_url', true);
+ $link5 = get_post_meta($postID, '_item5_link_url', true);
 
 
 
@@ -116,7 +93,7 @@ $args = array(
     <img src="<?php echo $image2SRC; ?>" width="133px" height="133px" />
     </a>
   </div>
-  <div class="favorites no-mobile">
+  <div class="favorites">
    <a href="<?php echo $link3; ?>">
     <img src="<?php echo $image3SRC; ?>" width="133px" height="133px" />
     </a>
@@ -163,7 +140,7 @@ return null;
       return $box2[0];
     }
     return null;
-  
+
 
 
   }
@@ -222,7 +199,7 @@ return null;
   //Home Top Slider
   function inf_home_topslider() {
       //here are get post options
-     
+
       $args = array(
         'numberposts' => 9999,
         'orderby' => 'date',
@@ -438,7 +415,6 @@ return null;
       <div class="latest-home group">
         <div class="sideads_wrapper no-mobile">
           <div class="sidead leftad">
-
           </div>
           <div class="sidead rightad">
           </div>
@@ -673,6 +649,12 @@ return null;
           </ul><!-- /.recent-list -->
           <!-- HOME PAGE 300 X 900 AD SPACE -->
           <div class="column adcolumn no-mobile">
+		  <!-- 300x500BCBG -->
+<div id='div-gpt-ad-1409865199994-0' style='width:300px; height:500px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409865199994-0'); });
+</script>
+</div>
           <a href="http://www.anrdoezrs.net/click-7580048-11914509">
            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nastydenim.gif" />
           </a>
@@ -1234,4 +1216,5 @@ return null;
       $influencer_id = $influencer[0]->ID;
     }
     return $influencer_id;
-  } ?>
+  }
+    ?>

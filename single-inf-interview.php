@@ -24,7 +24,7 @@
 <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
 
         </div>
-        <div id="topSlider" class="interview-slider group no-mobile">
+        <div id="topSlider" class="interview-slider group">
           <ul class="slides" style=" margin-left: -50px;" >
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
@@ -42,7 +42,7 @@
           <div class="next top">&nbsp;</div><!-- /.next -->
         </div><!-- /.interview-slider -->   
         
-<div class="interview-slider bottom group no-mobile">
+<div class="interview-slider bottom group">
           <ul class="slides" style="margin-left: 50%">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
@@ -234,7 +234,7 @@
       <div class="more_interviews">
         <?php
           $args = array(
-            'numberposts' => 5,
+            'numberposts' => 4,
             'orderby' => 'date',
             'order' => 'DESC',
             'post_type' => 'inf-interview',

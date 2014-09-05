@@ -1199,4 +1199,5 @@ function inf_social_share($thisURL, $thisTITLE, $thisIMG, $thisDESC) {
       <a class="fb" target="_blank" href="http://facebook.com/sharer.php?u=<?php echo $thisURL; ?>"></a>
     </div><!-- .social-vert -->
   <?php
-} ?>
+}
+?>

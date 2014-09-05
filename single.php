@@ -69,7 +69,6 @@
             $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
             ?>
 						<div class="text-holder">
-
               <?php if(!empty($post_categories) || is_user_logged_in()) : ?>                  
 							<h1><a class="shop-inf-name" href="<?php echo get_permalink($influencer_id); ?>"><?php echo $influencer_name; ?></a></h1>
               									<div class="browse-type">
@@ -95,7 +94,6 @@
 											<?php //} ?>
 									</div><!-- /.browse-type -->
 							<h2><?php the_title(); ?></h2>
-
 							<?php
                 the_content();
                 //echo get_the_content();
@@ -110,8 +108,7 @@
               ?>			
 		<!--<a href="<?php //echo get_permalink($influencer_id); ?>" class="shop-viewall">VIEW ALL <?php //echo $influencer_name; ?> LOOKS</a>-->
               <img class="shop-published-by" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
-               <div class="social-share-me"><a class="share-me" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a> <a  class="share-me" href="https://instagram.com/theinfluence" class="instagram"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_insta.jpg" /></a> <a class="share-me" href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a></div>
-          	</div><!-- /.text-holder -->
+						</div><!-- /.text-holder -->
 
           </div><!-- /.right-col --> 	
             <?php 

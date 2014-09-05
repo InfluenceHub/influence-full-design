@@ -167,3 +167,4 @@ function create_vimeo_embedcode($video_url, $width = 440, $height = 350, $autopl
 	
 	return '<iframe src="http://player.vimeo.com/video/' . $video_id[1] . '?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff' . ($autoplay ? '&amp;autoplay=autoplay' : '') . '" width="' . $width . '" height="' . $height . '" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>';
 }
+

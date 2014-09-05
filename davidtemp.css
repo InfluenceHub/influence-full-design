@@ -283,7 +283,7 @@ body.home #content .content_wrapper {
   border-bottom: 0 none;
   margin-top: 0;
   padding-top: 8px;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   margin-top: -30px;
   padding-bottom: 15px;
 }
@@ -302,19 +302,19 @@ body.home #content .content_wrapper {
   font: 16px/16px "AvenirNext LT Pro MediumCn",arial,sans-serif;
 }
 .shop-main p {
-  font: 12px/18px "AvenirNext LT Pro Regular",arial,sans-serif;
+  font: 12px/22px "AvenirNext LT Pro Regular",arial,sans-serif;
   height: auto;
   overflow: visible;
+  line-height: 15px;
   margin-top: -15px;
   padding-bottom: 10px;
 }
-.shop-main .theme p {
+.shop-main-theme p {
   font: 14px/20px "AvenirNext LT Pro Regular",arial,sans-serif;
   height: auto;
   overflow: visible;
   text-align: left;
   width: 100%;
-  display: block;
 }
 
 

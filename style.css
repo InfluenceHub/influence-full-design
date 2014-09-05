@@ -48,6 +48,7 @@ div.home-box img {
   background-color: #fbf1ea;
   margin: 0 auto !important;
 }
+
 .favorites_center {
   margin: 0 auto !important;
 }
@@ -76,8 +77,8 @@ div.home-box img {
   font-family: "BaskervilleBT-Italic";
   font-size: 24pt;
   word-wrap: break-word;
-  width: 125px;
-  transform: translate(0, -25%);
+  width: 100px;
+  transform: translate(0, -15%);
 }
 
 
@@ -103,8 +104,7 @@ div.home-box img {
   background:#000;
   color:#fff;
   width:280px;
-  height: 55px;
-  line-height:24px;
+  line-height:55px;
   font: 14px "AvenirNext LT Pro Regular",arial,sans-serif;
   text-transform:uppercase;
   position:absolute;
@@ -119,8 +119,7 @@ div.home-box img {
   display:table-cell;
   vertical-align:middle;
   width:280px;
-  height: 55px;
-  line-height:24px;
+  line-height:55px;
 }
 .callout .callout_hover_container span {
   vertical-align: middle;
@@ -209,8 +208,9 @@ div.home-box img {
 }
 
 .top-block {
+  height: 350px;
   width: 100%;
-  height:600px;
+  /* height:600px; */
 }
 
 .top-block .column-two {
@@ -3220,7 +3220,7 @@ a.subscribe-img-home {
   line-height: 30px;
   color: #000;
   font-size: 12px;
-  line-height: 30px; 
+  line-height: 30px;
   font-family: "Oswald",arial,sans-serif;
   font-weight: 300;
   margin-bottom: 8px;
@@ -3868,7 +3868,7 @@ a.subscribe-img {
 
 .shop .column-three h2 {
   font-size:  16px;
-  line-height: 16px; 
+  line-height: 16px;
   font-family: "Oswald",arial,sans-serif;
   font-weight: 300;
   color: #000;
@@ -4048,7 +4048,7 @@ a.subscribe-img {
 
 .prod-row ul li h5 {
   font-size: 16px;
-  line-height: 14px; 
+  line-height: 14px;
   font-family: "Oswald",serif;
   font-weight: 300;
   font-weight: normal;
@@ -4834,7 +4834,7 @@ padding-left: 30px;
 
 .latest-home li h4 {
   font-size: 18px;
-  line-height: 33px; 
+  line-height: 33px;
   font-family: "Oswald",arial,sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
@@ -4868,7 +4868,7 @@ padding-left: 30px;
 .latest-home .viewall-latest a {
   position: relative;
   font-size:  14px;
-  line-height: 15px; 
+  line-height: 15px;
   font-family: "Oswald",arial,sans-serif;
   color: #000;
   letter-spacing: 1.2px;
@@ -5596,7 +5596,7 @@ div.archive-col .shop-link {
 }
 .interview-slider {
   position: relative;
-  margin: 0 auto !important  
+  margin: 0 auto !important
   width: 100%;
   overflow: visible;
 }
@@ -6408,7 +6408,7 @@ textarea { overflow: auto; }
 .more_interviews {
   margin: 0 auto;
   width: 100%;
-  /*background-color: #d5f7ec;*/
+  background-color: #d5f7ec;
 }
 .more_interviews_wrapper {
   width:968px;
@@ -6418,13 +6418,13 @@ textarea { overflow: auto; }
   border-bottom: 1px solid #ccc;
   border-top: 0 none;
   font-size:  22px;
-  line-height: 40px; 
+  line-height: 40px;
   font-family: "Oswald",arial,sans-serif;
   font-weight: 300;
   margin: 0 0 22px;
 }
 #content.interview .more_int_block h3 {
-  font-size:  15px; 
+  font-size:  15px;
   font-family: "Oswald",sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
@@ -6578,7 +6578,7 @@ li.home-feed-side-by-side .home-feed-post-info {
 }
 
 li.home-feed-side-by-side .home-feed-post-info h2 {
-  font-size: 14px;
+  font-size: 16px;
   height: 52px; /* Give it a defined height to ensure all the borders and sub text line up */
 }
 
@@ -6924,7 +6924,7 @@ margin-top: 0;
 .single-inf_theme .shop-main-title-theme {
   width:auto;
   height:auto;
-  font: 300 28px/30px "franklin-gothic-urw-comp",arial,sans-serif !important;
+  font: 300 28px/46px "franklin-gothic-urw-comp",arial,sans-serif !important;
   text-transform:uppercase;
 }
 
@@ -6937,16 +6937,4 @@ text-align:center;
 
 .single-inf_theme .shop-main-social a {
   margin:0 15px;
-}
-.social-share-me {
-  padding: 10px;
-  margin-bottom: 40px;
-  text-align: vertical;
-  display: inline-block;
-}
-.social-share-me a {
-  margin: 0 15px;
-}
-.share-me:hover {
-  opacity: .8;
 }

@@ -38,29 +38,38 @@ $detect = new Mobile_Detect;
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/mobile.css<?php echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" media="screen and (max-width: 700px)" />
+  </head>
 
+<!-- REPLACE HEADER SCRIPT WITH ALL OF THIS -->
 
 <script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
 (function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
 var useSSL = 'https:' == document.location.protocol;
-var src = (useSSL ? 'https:' : 'http:') +
+gads.src = (useSSL ? 'https:' : 'http:') +
 '//www.googletagservices.com/tag/js/gpt.js';
-document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
 })();
 </script>
 
 <script type='text/javascript'>
-googletag.defineSlot('/61413193/BCBG_HEADER', [728, 90], 'div-gpt-ad-1409792194307-0').addService(googletag.pubads());
-googletag.pubads().enableSyncRendering();
+googletag.cmd.push(function() {
+googletag.defineSlot('/61413193/300x500BCBG', [300, 500], 'div-gpt-ad-1409865199994-0').addService(googletag.pubads());
+googletag.defineSlot('/61413193/BCBG_HEADER', [728, 90], 'div-gpt-ad-1409865199994-1').addService(googletag.pubads());
 googletag.pubads().enableSingleRequest();
 googletag.enableServices();
+});
 </script>
-  </head>
+
+<!--END HEADER SCRIPT -->
 
 
 	<body <?php body_class(); ?>>
-       <!-- BCBG_HEADER -->
-
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -97,7 +106,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MCHHLQ');</script>
 <!-- End Google Tag Manager 2-->
 <div class="fixed_social_block"><a href="https://www.facebook.com/ShopTheInfluence" target="_blank">Facebook</a><a href="https://instagram.com/theinfluence" target="_blank">instagram<a href="http://www.pinterest.com/theinfluencepin/" target="_blank">pinterest</a><a href="https://twitter.com/theinfluence" target="_blank">twitter</a><a href="https://www.youtube.com/user/TheInfluenceStyle" target="_blank">youtube</a><a href="http://theinfluencecom.tumblr.com/" target="_blank">tumblr</a></div>
-
     <?php if (is_front_page()) { ?>
     <?php } ?>
 
@@ -117,11 +125,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </div>
 -->
-
-<!-- <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
- -->  <header id="header">
-
+<br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
+	<header id="header">
 			<div id="header_inner" class="inner_wrap">
+
 				<?php
           //Create login/out link
           if(is_user_logged_in()) {
@@ -130,7 +137,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             $signinlink = '<li><a href="" class="sign-in-link">SIGN IN</a></li>';
             //$signinlink = '<li><a href="" class="sign-in-link">SIGN IN</a></li><li class="up">/<a href="" class="sign-up-link">UP</a></li>';
           }
-        ?>  
+        ?>
         <a id="logo" style="padding-top: 5px;" href="<?php echo get_home_url(null, '/'); ?>"><img  class="no-mobile"src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" /></a>
         <a href="#" id="hamburger" style="width: 100%; height: 45px; margin-top: -5px;">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" style="z-index: 2; background-color: #fff; margin-top: 5px;" width="35x" height="35px" />
@@ -147,13 +154,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <input type="submit" value="" />
               </form>
               </li>
-            </ul> 
-          </div><!-- /.nav-icons --> 
+            </ul>
+          </div><!-- /.nav-icons -->
           <?php wp_nav_menu( array(
             'theme_location'  => 'main-navigation',
-            'container'       => '', 
-            'container_class' => '', 
-            'menu_class'      => '', 
+            'container'       => '',
+            'container_class' => '',
+            'menu_class'      => '',
             'fallback_cb'     => '',
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s' . $signinlink . '<li class="stretcher"></li></ul>'
           )); ?>
@@ -209,11 +216,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div><!-- /.nav -->
 			</div><!-- /#header_inner -->
 
-      <?php include('template-sign_in.php'); ?> 
+      <?php include('template-sign_in.php'); ?>
 
 		</header><!-- /#header -->
-    <div id='div-gpt-ad-1409789912092-0' style='width:728px; height:90px;'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409789912092-0'); });
-</script>
-</div>
+

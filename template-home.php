@@ -8,10 +8,16 @@ the_post();
 //Detect mobile
 ?>
 <?php inf_footer_signup() ?>
-  <section id="callout no-mobile">
-  <div class="top-block no-mobile">
-    <div class="callout_container no-mobile">
-      <div class="callout no-mobile">
+<!-- BCBG_HEADER -->
+<div id='div-gpt-ad-1409865199994-1' style='width:971px; height:auto; margin:100px auto 15px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409865199994-1'); });
+</script>
+</div>
+  <section id="callout">
+  <div class="top-block">
+    <div class="callout_container">
+      <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
        <?php $box1 = inf_home_box1(); ?>
         <a href="<?php echo get_post_meta($box1->ID, '_homebox1_link_url')[0]; ?>">
@@ -19,7 +25,7 @@ the_post();
         </a>
 		<div class="callout_hover_container"><div class="callout_hover"><span><?php echo get_the_title($box1->ID) ?> <a href="<?php echo get_post_meta($box1->ID, '_homebox1_link_url')[0]; ?>">View More></a></span></div></div>
         </div>
-        <div class="callout no-mobile">
+        <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/in-focu.png"> -->
        <?php $box2 = inf_home_box2(); ?>
         <a href="<?php echo get_post_meta($box2->ID, '_homebox2_link_url')[0]; ?>">
@@ -27,7 +33,7 @@ the_post();
         </a>
 		<div class="callout_hover_container"><div class="callout_hover"><span><?php echo get_the_title($box2->ID) ?> <a href="<?php echo get_post_meta($box2->ID, '_homebox2_link_url')[0]; ?>">View More></a></span></div></div>
         </div>
-        <div class="callout no-mobile">
+        <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/trend-report.png"> -->
         <?php $box3 = inf_home_box3(); ?>
         <a href="<?php echo get_post_meta($box3->ID, '_homebox3_link_url')[0]; ?>">
@@ -35,7 +41,7 @@ the_post();
         </a>
 		<div class="callout_hover_container"><div class="callout_hover"><span><?php echo get_the_title($box3->ID) ?> <a href="<?php echo get_post_meta($box3->ID, '_homebox3_link_url')[0]; ?>">View More></a></span></div></div>
         </div>
-        <div class="callout no-mobile">
+        <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/just-spotted.png"> -->
        <?php $box4 = inf_home_box4(); ?>
         <a href="<?php echo get_post_meta($box4->ID, '_homebox4_link_url')[0]; ?>">
@@ -44,9 +50,10 @@ the_post();
 		<div class="callout_hover_container"><div class="callout_hover"><span><?php echo get_the_title($box4->ID) ?> <a href="<?php echo get_post_meta($box4->ID, '_homebox4_link_url')[0]; ?>">View More></a></span></div></div>
         </div>
     </div>
-   <div class="no-mobile"><?php inf_items(); ?></div>
+   <!-- <?php inf_items(); ?> -->
   </div>
 </section>
+
   <section id="content">
 
 
