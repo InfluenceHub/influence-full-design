@@ -9,9 +9,9 @@ the_post();
 ?>
 <?php inf_footer_signup() ?>
 <!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409865199994-1' style='width:971px; height:auto; margin:100px auto 15px;'>
+<div id='div-gpt-ad-1409956722451-1' style='width:971px; height:auto; margin:100px auto 15px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409865199994-1'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409956722451-1'); });
 </script>
 </div>
   <section id="callout">
@@ -61,9 +61,20 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409865199994-1');
     <div class="ad_wrapper-block">
 
       <?php //inf_browse_by(); ?>
+	  <div class="content_wrapper" style="position:relative;">
+	  <!-- Skin_Sides -->
+<div id='div-gpt-ad-1409956722451-3' style='width:120px; height:1000px;position:fixed; top:138px; left:0;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409956722451-3'); });
+</script>
+</div>
 
-      <div class="content_wrapper">
-
+<!-- Right_Skin -->
+<div id='div-gpt-ad-1409956722451-2' style='width:120px; height:1000px;position:fixed; top:138px; right:0;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409956722451-2'); });
+</script>
+</div>
     <?php
       inf_home_latest();
 
