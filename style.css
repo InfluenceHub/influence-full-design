@@ -44,7 +44,7 @@ div.home-box img {
   margin-top: -4px;
 }
 .callout_container {
-  width: 1265px;
+  width: 968px;
   background-color: #fbf1ea;
   margin: 0 auto !important;
 }
@@ -53,7 +53,7 @@ div.home-box img {
   margin: 0 auto !important;
 }
 .favorites_container {
-  width: 1265px;
+  width: 968px;
   margin-top: 50px;
   margin-right: auto !important;
   margin-left: auto !important;
@@ -65,7 +65,6 @@ div.home-box img {
 }
 .favorites {
   display: inline-block;
-  padding-left: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-left: 20px;
@@ -78,7 +77,7 @@ div.home-box img {
   font-size: 24pt;
   word-wrap: break-word;
   width: 100px;
-  transform: translate(0, -15%);
+  transform: translate(0, -20%);
 }
 
 
@@ -95,16 +94,16 @@ div.home-box img {
   position:relative;
 }
 .callout img {
-  max-width:300px;
-  max-height:300px;
+  max-width:225px;
+  max-height:225px;
 }
 .callout .callout_hover_container {
   opacity:0;
   background:#000;
   color:#fff;
-  width:280px;
-  line-height:16px;
-  font: 14px "AvenirNext LT Pro Regular",arial,sans-serif;
+  width:205px;
+  line-height:12px;
+  font: 12px "AvenirNext LT Pro Regular",arial,sans-serif;
   text-transform:uppercase;
   position:absolute;
   bottom:10px;
@@ -117,8 +116,8 @@ div.home-box img {
   position:relative;
   display:table-cell;
   vertical-align:middle;
-  width:280px;
-  line-height:55px;
+  width:205px;
+  line-height:12px;
 }
 .callout .callout_hover_container span {
   vertical-align: middle;

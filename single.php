@@ -9,9 +9,12 @@
 	} ?>
 	<section id="content">
     <div class="ad_banner no-mobile">
-      <a href="http://shop.theinfluence.com">
-      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shop-banner.gif" />
-      </a>
+<!-- BCBG_HEADER -->
+<div id='div-gpt-ad-1409963968603-1' style='width:971px; height:120px; margin:100px auto 15px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1'); });
+</script>
+</div>
     </div>
 		<div class="shell shop">
 			<?php $post_categories = wp_get_post_terms( get_the_ID(), 'category' );
