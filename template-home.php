@@ -9,9 +9,9 @@ the_post();
 ?>
 <?php inf_footer_signup() ?>
 <!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409956722451-1' style='width:971px; height:auto; margin:100px auto 15px;'>
+<div id='div-gpt-ad-1409963968603-1' style='width:728px; height:90px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409956722451-1'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1'); });
 </script>
 </div>
   <section id="callout">
@@ -62,17 +62,18 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409956722451-1');
 
       <?php //inf_browse_by(); ?>
 	  <div class="content_wrapper" style="position:relative;">
-	  <!-- Skin_Sides -->
-<div id='div-gpt-ad-1409956722451-3' style='width:120px; height:1000px;position:fixed; top:138px; left:0;'>
+
+<!-- Right_Skin -->
+<div id='div-gpt-ad-1409963968603-2' style='width:120px; height:1000px; position:fixed; top:138px; right:0;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409956722451-3'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2'); });
 </script>
 </div>
 
-<!-- Right_Skin -->
-<div id='div-gpt-ad-1409956722451-2' style='width:120px; height:1000px;position:fixed; top:138px; right:0;'>
+<!-- Skin_Sides -->
+<div id='div-gpt-ad-1409963968603-3' style='width:120px; height:1000px;position:fixed; top:138px; left:0;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409956722451-2'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-3'); });
 </script>
 </div>
     <?php
