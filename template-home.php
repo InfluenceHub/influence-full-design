@@ -9,7 +9,7 @@ the_post();
 ?>
 <?php inf_footer_signup() ?>
 <!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409963968603-1' style='width:971px; height:auto; margin:0 auto !important;'>
+<div id='div-gpt-ad-1409963968603-1' style='width:971px; height:auto; margin:100px auto 15px;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1'); });
 </script>
