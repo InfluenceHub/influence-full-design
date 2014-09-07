@@ -310,11 +310,22 @@ function inf_captions() {
 <script>
 jQuery(window).load(function() {
   //jQuery('.shop-main .inner.slides').flexslider();
-  jQuery('.shop-main .left-col .slides .text-holder').carouFredSel({
+  jQuery('.shop-main .left-col .slides').carouFredSel({
 			prev: '.shop-featured-prev',
 			next: '.shop-featured-next',
 			items: 1,
 			auto: false
+  });
+});
+</script>
+<script>
+jQuery(window).load(function() {
+  //jQuery('.shop-main .inner.slides').flexslider();
+  jQuery('shop-main .theme .text-holder').carouFredSel({
+      prev: '.shop-featured-prev',
+      next: '.shop-featured-next',
+      items: 1,
+      auto: false
   });
 });
 </script>
