@@ -25,7 +25,7 @@
         ?>
 <SCRIPT LANGUAGE="JavaScript">function mailpage() 
 { 
-mail_str = "mailto:?subject= Check this link --> " + document.title; 
+mail_str = "mailto:?subject= Check Out What I Read at THEINFLUENCE.COM! --  " + document.title; 
 mail_str += "&body= " + document.title; 
 mail_str += "... at: " + location.href; 
 location.href = mail_str; 
