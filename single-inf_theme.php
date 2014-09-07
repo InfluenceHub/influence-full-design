@@ -81,8 +81,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
           
           <div class="text-holder" style="margin:0; padding:0; height:auto;">
              <div class="inner" width="auto" height="auto">
-                <ul clas="caption">
-              <li class="caption">
+                <ul>
+              <li>
               <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
 							<?php
                 the_content();
@@ -304,7 +304,7 @@ function inf_captions() {
   $captions = carbon_get_the_post_meta($post->ID, 'inf_caption', 'complex');
   foreach($captions as $caption) {
 ?>
- <li class="caption"><p><?php echo ($caption[0]); ?></p></li>
+ <li><p><?php echo ($caption[0]); ?></p></li>
  <?php
   }
 }
@@ -323,7 +323,7 @@ jQuery(window).load(function() {
 <script>
 jQuery(window).load(function() {
   //jQuery('.shop-main .inner.slides').flexslider();
-  jQuery('.shop-main .theme .text-holder .caption').carouFredSel({
+  jQuery('.shop-main .theme .text-holder .inner').carouFredSel({
       prev: '.shop-featured-prev',
       next: '.shop-featured-next',
       items: 1,
