@@ -304,8 +304,6 @@ function inf_captions() {
   foreach($captions as $caption) {
 ?>
  <li style="list-style: none;"><p><?php echo $caption[0]; ?></p></li>
-  <div class="shop-featured-prev-<?php echo $caption+1; ?>">&nbsp;</div><!-- /.prev -->
-  <div class="shop-featured-next-<?php echo $caption+1; ?>">&nbsp;</div><!-- /.next -->
  <?php
   }
 }
@@ -321,15 +319,5 @@ jQuery(window).load(function() {
   });
 });
 </script>
-<script>
-jQuery(window).load(function() {
-  //jQuery('.shop-main .inner.slides').flexslider();
-  jQuery('.shop-main .theme').carouFredSel({
-      prev: '.shop-featured-prev',
-      next: '.shop-featured-next',
-      auto: false,
-      items: 1
-  });
-});
-</script>
+
 
