@@ -58,7 +58,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</li>
                 <?php inf_theme_slider_theme(); ?>
-                <?php inf_captions(); ?>
 
 <!--        <div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
 
