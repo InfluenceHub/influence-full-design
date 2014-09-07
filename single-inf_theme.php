@@ -80,7 +80,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 			  <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a> <a href="javascript:mailpage()" target="_top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_email.png" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a></div>
           
           <div class="text-holder" style="margin:0; padding:0; height:auto;">
-             <div class="inner" width="auto" height="auto">
                 <ul>
               <li>
               <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
@@ -97,11 +96,10 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 */
               ?>
                </li>
-               <li class="slides">
+               <li class=>
                 <?php inf_captions; ?>
               </li>
             </ul>
-            </div>
               </div>
 						</div><!-- /.text-holder -->
 					</div><!-- /.right-col -->
@@ -323,7 +321,7 @@ jQuery(window).load(function() {
 <script>
 jQuery(window).load(function() {
   //jQuery('.shop-main .inner.slides').flexslider();
-  jQuery('.shop-main .theme .text-holder .inner').carouFredSel({
+  jQuery('.shop-main .theme .text-holder').carouFredSel({
       prev: '.shop-featured-prev',
       next: '.shop-featured-next',
       items: 1,
