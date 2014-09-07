@@ -327,7 +327,6 @@ jQuery(window).load(function() {
   jQuery('.shop-main .text-holder').carouFredSel({
       prev: '.shop-featured-prev',
       next: '.shop-featured-next',
-      items: 1,
       auto: false
   });
 });
