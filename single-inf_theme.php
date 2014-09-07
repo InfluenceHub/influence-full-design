@@ -324,10 +324,11 @@ jQuery(window).load(function() {
 <script>
 jQuery(window).load(function() {
   //jQuery('.shop-main .inner.slides').flexslider();
-  jQuery('.shop-main .theme .text-holder .ul .li').carouFredSel({
+  jQuery('.shop-main .theme .text-holder').carouFredSel({
       prev: '.shop-featured-prev',
       next: '.shop-featured-next',
-      auto: false
+      auto: false,
+      items: 1
   });
 });
 </script>
