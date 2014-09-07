@@ -307,7 +307,7 @@ function inf_captions() {
   $postID = get_posts($args)[0]->ID;
   $captionID = carbon_get_the_post_meta('inf_captions', 'complex');
   foreach($captionID as $caption) {
-  $captions = carbon_get_post_meta($caption[inf_captions]);
+  $captions = carbon_get_post_meta($caption[inf_caption]);
 ?>
  <li class="slide-theme"><p><?php echo $captions[0]; ?></p></li>
  <?php
