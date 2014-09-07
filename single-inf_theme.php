@@ -51,17 +51,15 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 $category_link = get_category_link($post_categories[0]->term_id);
               }
               ?>
-              <div class="inner" style="width: 426px; height:640px; margin-right:24px;">
+              <!-- style="width: 426px; height:640px; margin-right:24px;" -->
+              <div class="inner">
 								<ul class="slides">
 								<li>
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</li>
                 <?php inf_theme_slider_theme(); ?>
-                <div class="shop-main theme">
 <!--        <div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
-              <img class="shop-published-by1" style="display:block; margin:20px auto 30px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
-            <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a> <a href="javascript:mailpage()" target="_top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_email.png" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a></div>
-          <div class="text-holder" style="margin:0; padding:0; height:auto;">
+             <div class="text-holder" style="margin:0; padding:0; height:auto;">
               <li style="list-style: none;">
               <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
               <?php
@@ -80,7 +78,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                <li class="list-style: none;">
                 <?php inf_captions(); ?>
               </li>
-                </ul>
+              </ul>
                 <div class="shop-featured-prev">&nbsp;</div>
                 <div class="shop-featured-next">&nbsp;</div>
 							</div>
