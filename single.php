@@ -10,7 +10,7 @@
 	<section id="content">
     <div class="ad_banner no-mobile">
 <!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409963968603-1' style='width:971px; height:120px; margin:100px auto 15px;'>
+<div id='div-gpt-ad-1409963968603-1' style='width:971px; height:120px; margin: 0 auto;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1'); });
 </script>
