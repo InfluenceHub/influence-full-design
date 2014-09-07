@@ -303,7 +303,7 @@ function inf_captions() {
   $captions = carbon_get_the_post_meta($post->ID, 'inf_caption', 'complex');
   foreach($captions as $caption) {
 ?>
- <li style="list-style: none;"><p><?php echo $caption[0]); ?></p></li>
+ <li style="list-style: none;"><p><?php echo $caption[0]; ?></p></li>
   <div class="shop-featured-prev-<?php echo $caption+1; ?>">&nbsp;</div><!-- /.prev -->
   <div class="shop-featured-next-<?php echo $caption+1; ?>">&nbsp;</div><!-- /.next -->
  <?php
