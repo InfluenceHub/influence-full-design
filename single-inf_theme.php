@@ -97,7 +97,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
               ?>
                </li>
                <li class="list-style: none;">
-                <?php inf_captions; ?>
+                <?php inf_captions(); ?>
               </li>
             </ul>
               </div>
