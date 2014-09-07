@@ -301,10 +301,10 @@ function inf_theme_slider_theme() {
 // Captions for slider
 function inf_captions() {
   global $post;
-  $captions = carbon_get_the_post_meta($post->ID, 'inf_captions', 'complex');
+  $captions = carbon_get_the_post_meta($post->ID, 'inf_caption', 'complex');
   foreach($captions as $caption) {
 ?>
- <li class="slide-theme"><p><?php echo ($caption[0]); ?></p></li>
+ <li class="slide-theme"><p class="inf_single_image"><?php echo ($caption[0]); ?></p></li>
  <?php
   }
 }
