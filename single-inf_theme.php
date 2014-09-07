@@ -50,7 +50,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 $category_link = get_category_link($post_categories[0]->term_id);
               }
               ?>
-              <div class="inner" style="width: 430px; height:600px; margin-right:24px;">
+              <div class="inner" style="width: 426px; height:640px; margin-right:24px;">
 								<ul class="slides">
 								<li>
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
@@ -73,7 +73,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 			global $wp;
 			$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
             ?>
-            <div class="shop-main">
+            <div class="shop-main theme">
 				<div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>
 						<div class="text-holder" style="margin:0; padding:0; height:auto;">
               <img class="shop-published-by1" style="display:block; margin:20px auto 30px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
