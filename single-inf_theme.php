@@ -101,8 +101,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 <?php inf_captions; ?>
               </li>
             </ul>
-                <div class="shop-featured-prev">&nbsp;</div>
-                <div class="shop-featured-next">&nbsp;</div>
             </div>
               </div>
 						</div><!-- /.text-holder -->
@@ -302,15 +300,12 @@ function inf_theme_slider_theme() {
 <?php
 // Captions for slider
 function inf_captions() {
+  global $post;
   $args = array(
-    'post_type' => 'inf_theme',
-    'posts_per_page' => 1
-    );
-  $postID = get_posts($args)[0]->ID;
-  $caption = carbon_get_the_post_meta('inf_captions', 'complex');
-  foreach($captionID as $captions) {
+  $captions = carbon_get_the_post_meta('inf_captions', 'complex');
+  foreach($captions as $caption) {
 ?>
- <li class="slide-theme"><p><?php echo print_r($captions[0]); ?></p></li>
+ <li class="slide-theme"><p><?php echo print_r($caption[0]); ?></p></li>
  <?php
   }
 }
