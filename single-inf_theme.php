@@ -324,7 +324,7 @@ jQuery(window).load(function() {
 <script>
 jQuery(window).load(function() {
   //jQuery('.shop-main .inner.slides').flexslider();
-  jQuery('.text-holder .ul .li').carouFredSel({
+  jQuery('.shop-main .theme .text-holder .ul .li').carouFredSel({
       prev: '.shop-featured-prev',
       next: '.shop-featured-next',
       auto: false
