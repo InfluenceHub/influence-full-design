@@ -74,10 +74,10 @@ div.home-box img {
   display: inline-block;
   margin-left: 15px;
   font-family: "BaskervilleBT-Italic";
-  font-size: 24pt;
+  font-size: 18pt;
   word-wrap: break-word;
   width: 100px;
-  transform: translate(0, -20%);
+  transform: translate(0, -75%);
 }
 
 
