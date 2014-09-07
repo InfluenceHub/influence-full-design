@@ -101,6 +101,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 <?php inf_captions; ?>
               </li>
             </ul>
+                <div class="shop-featured-prev">&nbsp;</div>
+                <div class="shop-featured-next">&nbsp;</div>
             </div>
               </div>
 						</div><!-- /.text-holder -->
