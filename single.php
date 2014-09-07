@@ -7,7 +7,7 @@
 	if(is_user_logged_in()) {
 		$current_user_influencers = inf_get_influencers();
 	} ?>
-	<section id="content">
+	<section id="content" style="margin-top: 50px;">
     <div class="ad_banner no-mobile">
 <!-- BCBG_HEADER -->
 <div id='div-gpt-ad-1409963968603-1' style='width:971px; height:120px; margin: 0 auto;'>
