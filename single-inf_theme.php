@@ -301,6 +301,9 @@ function inf_captions() {
 ?>
  <li style="list-style: none;"><p><?php echo $caption[0]; ?></p></li>
  <?php
+  ChromePhp::log($caption);
+  ChromePhp::log($captions);
+
   }
 }
 ?>
