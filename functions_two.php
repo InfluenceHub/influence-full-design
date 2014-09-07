@@ -756,7 +756,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
     $fav_items = get_post_meta($home_id, '_inf_favorite_items', true);
     if(!empty($fav_items)) {
       ?>
-        <div class="favorite-items">
+        <div class="favorite-items" class="no-mobile">
           <h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/header-fav-items.png" alt="Favorite Items of the Moment" /></h2>
           <div class="fav-items-grid">
             <div class="fav-items-grid">

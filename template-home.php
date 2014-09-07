@@ -15,7 +15,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
 </script>
 </div>
   <section id="callout">
-  <div class="top-block">
+  <div class="top-block no-mobile">
     <div class="callout_container">
       <div class="callout">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
