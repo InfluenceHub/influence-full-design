@@ -6907,16 +6907,15 @@ margin-top: 0;
   text-transform:uppercase;
 }
 
-.shop-main-title-theme {
+/*.shop-main-title-theme {
   font-size: 20px;
   line-height:24px;
   font-family: "Oswald", sans-serif !important;
-  text-transform:uppercase;
   text-align: center;
   height: 150px;
   width: 150px;
 }
-
+*/
 .single-inf_theme .shop-main-title-theme {
   width:675px;
   text-align: left;
