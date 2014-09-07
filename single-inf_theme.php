@@ -27,9 +27,11 @@
 					<!--<div class="breadcrumbs"><a href="#">SHOP ></a> <?php //echo strtoupper(get_the_title()); ?></div> /.breadcrumbs -->
           <div class="column-three" style="border: none;">
           <div class="column adcolumn" style="">
-                <a href="http://click.linksynergy.com/fs-bin/click?id=pwlaa2*cgnI&offerid=276224.10013359&subid=0&type=4">
-                  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nordstrom2.jpg" />
-                </a>
+<div id='div-gpt-ad-1410050142891-0' class="no-mobile" style='width:300px; height:600px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0'); });
+</script>
+</div>
              </div>
           <div class="left-col theme right">
 						<?php if(has_post_thumbnail()) { ?>
@@ -40,7 +42,7 @@
                 $category_link = get_category_link($post_categories[0]->term_id);
               }
               ?>
-              <div class="inner" style="width: 430px; height:600px; margin-right:24px; background:#d6f7ee">
+              <div class="inner" style="width: 430px; height:600px; margin-right:24px;">
 								<ul class="slides">
 								<li><a href="<?php echo $img_obj[1]; ?>" class="colorbox">
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>

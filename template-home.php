@@ -9,7 +9,7 @@ the_post();
 ?>
 <?php inf_footer_signup() ?>
 <!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409963968603-1' style='width:971px; height:120px; margin:100px auto 15px;'>
+<div id='div-gpt-ad-1409963968603-1' class="no-mobile" style='width:971px; height:120px; margin:100px auto 15px;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1'); });
 </script>
@@ -63,14 +63,14 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
       <?php //inf_browse_by(); ?>
 	  <div class="content_wrapper" style="position:relative;">
 	  <!-- Skin_Sides -->
-<div id='div-gpt-ad-1409963968603-3' style='width:120px; height:1000px;position:fixed; top:138px; left:0;'>
+<div id='div-gpt-ad-1409963968603-3' class="no-mobile" style='width:120px; height:1000px;position:fixed; top:138px; left:0;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-3'); });
 </script>
 </div>
 
 <!-- Right_Skin -->
-<div id='div-gpt-ad-1409963968603-2' style='width:120px; height:1000px;position:fixed; top:138px; right:0;'>
+<div id='div-gpt-ad-1409963968603-2' class="no-mobile" style='width:120px; height:1000px;position:fixed; top:138px; right:0;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2'); });
 </script>
