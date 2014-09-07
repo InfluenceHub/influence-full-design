@@ -301,7 +301,6 @@ function inf_theme_slider_theme() {
 // Captions for slider
 function inf_captions() {
   global $post;
-  $args = array(
   $captions = carbon_get_the_post_meta('inf_captions', 'complex');
   foreach($captions as $caption) {
 ?>
