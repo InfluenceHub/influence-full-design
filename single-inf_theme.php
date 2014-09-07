@@ -100,6 +100,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 <?php inf_captions(); ?>
               </li>
             </ul>
+
               </div>
 						</div><!-- /.text-holder -->
 					</div><!-- /.right-col -->
@@ -303,6 +304,8 @@ function inf_captions() {
   foreach($captions as $caption) {
 ?>
  <li style="list-style: none;"><p><?php var_dump($caption[0]); ?></p></li>
+  <div class="shop-featured-prev-<?php echo $caption+1; ?>">&nbsp;</div><!-- /.prev -->
+  <div class="shop-featured-next-<?php echo $caption+1; ?>">&nbsp;</div><!-- /.next -->
  <?php
   }
 }
