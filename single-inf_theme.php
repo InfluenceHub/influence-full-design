@@ -320,3 +320,14 @@ jQuery(window).load(function() {
   });
 });
 </script>
+<script>
+jQuery(window).load(function() {
+  //jQuery('.shop-main .inner.slides').flexslider();
+  jQuery('.shop-main .theme .text-holder .slides').carouFredSel({
+      prev: '.shop-featured-prev',
+      next: '.shop-featured-next',
+      items: 1,
+      auto: false
+  });
+});
+</script>
