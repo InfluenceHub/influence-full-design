@@ -6918,10 +6918,11 @@ margin-top: 0;
 }
 
 .single-inf_theme .shop-main-title-theme {
-  width:auto;
+  width:675px;
+  text-align: left;
+  margin-left: -20px;
   height:auto;
-  font: 300 28px/46px "franklin-gothic-urw-comp",arial,sans-serif !important;
-  text-transform:uppercase;
+  font: 300 38px/46px "franklin-gothic-urw-comp",arial,sans-serif !important;
 }
 
 .single-inf_theme .shop-main-social {
