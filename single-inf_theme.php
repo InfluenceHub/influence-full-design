@@ -58,6 +58,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</li>
                 <?php inf_theme_slider_theme(); ?>
+                <?php inf_captions(); ?>
+
 <!--        <div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
 
               </ul>
@@ -83,8 +85,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 			  <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a> <a href="javascript:mailpage()" target="_top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_email.png" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a></div>
           
           <div class="text-holder" style="margin:0; padding:0; height:auto;">
-                <ul style="list-style:none;">
-              <li style="list-style: none;">
               <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
 							<?php
                 the_content();
@@ -98,8 +98,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 echo $content;
                 */
               ?>
-               </li>
-            </ul>
 
               </div>
 						</div><!-- /.text-holder -->
@@ -291,7 +289,6 @@ function inf_theme_slider_theme() {
     $image_small = wp_get_attachment_image_src($image[inf_featured_image], 'inf_featured_theme');
     ?>
     <li class="slide-theme"><a href="<?php echo $image_full[0]; ?>" class="colorbox">
-    <?php inf_captions(); ?>
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
 		</a></li>
     <?php
