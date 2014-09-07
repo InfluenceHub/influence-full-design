@@ -41,17 +41,7 @@
   add_image_size('inf_interviewslider_small',          114, 72, true);
   add_image_size('inf_interviewmore', 220, 235, true);
 
-// Captions for slider
-function inf_captions() {
-  $args = array(
-    'post_type' => 'inf_theme',
-    'posts_per_page' => 1
-    );
-  $postID = get_posts($args)[0]->ID;
-  $captionID = carbon_get_the_post_meta('inf_captions', 'complex');
-  $caption = $captionID[0];
-  $captions = $caption['captions'];
-}
+
 // Items of The Week
 function inf_items() {
 $args = array(
