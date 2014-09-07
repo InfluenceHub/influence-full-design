@@ -310,7 +310,7 @@ function inf_captions() {
   $caption = carbon_get_the_post_meta('inf_captions', 'complex');
   foreach($captionID as $captions) {
 ?>
- <li class="slide-theme"><p><?php echo $captions[0]; ?></p></li>
+ <li class="slide-theme"><p><?php echo print_r($captions[0]); ?></p></li>
  <?php
   }
 }
