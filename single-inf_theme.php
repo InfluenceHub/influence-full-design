@@ -51,33 +51,15 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 $category_link = get_category_link($post_categories[0]->term_id);
               }
               ?>
-              <!-- style="width: 426px; height:640px; margin-right:24px;" -->
-              <div class="inner">
+              <!-- style="width: ; height:640px; margin-right:24px;" -->
+              <div class="inner" style="width:100%; height: 100%>
 								<ul class="slides">
 								<li>
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</li>
                 <?php inf_theme_slider_theme(); ?>
 <!--        <div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
-             <div class="text-holder" style="margin:0; padding:0; height:auto;">
-              <li style="list-style: none;">
-              <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
-              <?php
-                the_content();
-                //echo get_the_content();
-                /*
-                $content = get_the_content();
-                $content = apply_filters($content);
-                if (strlen($content) > 120) {
-                  $content = substr($content, 0, 120) . '...';
-                }
-                echo $content;
-                */
-              ?>
-               </li>
-               <li class="list-style: none;">
-                <?php inf_captions(); ?>
-              </li>
+
               </ul>
                 <div class="shop-featured-prev">&nbsp;</div>
                 <div class="shop-featured-next">&nbsp;</div>
@@ -117,9 +99,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 */
               ?>
                </li>
-               <li class="list-style: none;">
-                <?php inf_captions(); ?>
-              </li>
             </ul>
 
               </div>
@@ -306,11 +285,13 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 function inf_theme_slider_theme() {
   global $post;
   $images = carbon_get_post_meta($post->ID, 'inf_featured_image', 'complex');
+  $captions= carbon_get_post_meta($post -)
   foreach($images as $image) {
     $image_full  = wp_get_attachment_image_src($image[inf_featured_image], 'full');
     $image_small = wp_get_attachment_image_src($image[inf_featured_image], 'inf_featured_theme');
     ?>
     <li class="slide-theme"><a href="<?php echo $image_full[0]; ?>" class="colorbox">
+    <?php inf_captions(); ?>
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
 		</a></li>
     <?php
