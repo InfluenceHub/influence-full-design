@@ -302,7 +302,7 @@ function inf_captions() {
   $captions = carbon_get_the_post_meta($post->ID, 'inf_caption', 'complex');
   foreach($captions as $caption) {
 ?>
- <li style="list-style: none;"><p><?php echo ($caption[0]); ?></p></li>
+ <li style="list-style: none;"><?php var_dump($caption[0]); ?></li>
  <?php
   }
 }
