@@ -259,7 +259,9 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 	?>
 			<div class="more_int_block">
                 <a href="<?php echo $_interviewLink; ?>">
+            <div class="home-feed-side-by-side home-feed-post-img-wrap">
                 <img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo $_interview->post_title; ?>" width="100%" />
+                </div>
 				<h3><?php echo $_interview->post_title; ?></h3>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/btn_viewmore.jpg" />
                 </a>

@@ -6437,8 +6437,8 @@ textarea { overflow: auto; }
   padding:40px 0 115px;
 }
 .more_interviews_wrapper .more_int_block {
-  width: 306px;
-  background: #fff;
+/*  width: 306px;
+*/  background: #fff;
   margin-bottom: 20px;
   padding: 0 0 10px;
   text-align:center;
