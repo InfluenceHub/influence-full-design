@@ -299,7 +299,7 @@ function inf_theme_slider_theme() {
 // Captions for slider
 function inf_captions() {
   global $post;
-  $captions = carbon_get_the_post_meta($post->ID, ('inf_captions', 'complex');
+  $captions = carbon_get_the_post_meta($post->ID, 'inf_captions', 'complex');
   foreach($captions as $caption) {
 ?>
  <li style="list-style: none;"><p><?php var_dump($caption[0]); ?></p></li>
