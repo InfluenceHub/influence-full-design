@@ -52,7 +52,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
               }
               ?>
               <!-- style="width: ; height:640px; margin-right:24px;" -->
-              <div class="inner" style="width:100%; height: 100%>
+              <div class="inner" style="margin-right:24px;width:426px height:640px;">
 								<ul class="slides">
 								<li>
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
@@ -60,7 +60,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 <?php inf_theme_slider_theme(); ?>
 
 <!--        <div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
-
               </ul>
                 <div class="shop-featured-prev">&nbsp;</div>
                 <div class="shop-featured-next">&nbsp;</div>
