@@ -23,6 +23,14 @@
 
 			//if(!empty($influencer)) {
         ?>
+<SCRIPT LANGUAGE="JavaScript">function mailpage() 
+{ 
+mail_str = "mailto:?subject= Check this link --> " + document.title; 
+mail_str += "&body= " + document.title; 
+mail_str += "... at: " + location.href; 
+location.href = mail_str; 
+} 
+</SCRIPT>
 				<div class="shop-main theme">
 					<!--<div class="breadcrumbs"><a href="#">SHOP ></a> <?php //echo strtoupper(get_the_title()); ?></div> /.breadcrumbs -->
           <div class="column-three" style="border: none;">
@@ -44,9 +52,9 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
               ?>
               <div class="inner" style="width: 430px; height:600px; margin-right:24px;">
 								<ul class="slides">
-								<li><a href="<?php echo $img_obj[1]; ?>" class="colorbox">
+								<li>
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
-								</a></li>
+								</li>
                 <?php inf_theme_slider_theme(); ?>
                 </ul>
                 <div class="shop-featured-prev">&nbsp;</div>
@@ -69,7 +77,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 				<div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>
 						<div class="text-holder" style="margin:0; padding:0; height:auto;">
               <img class="shop-published-by1" style="display:block; margin:20px auto 30px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
-			  <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a> <a href="https://instagram.com/theinfluence" class="instagram"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_insta.jpg" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a></div>
+			  <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a> <a href="javascript:mailpage()" target="_top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_email.png" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a></div>
 
               <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
 							<?php

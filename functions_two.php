@@ -48,7 +48,9 @@ function inf_captions() {
     'posts_per_page' => 1
     );
   $postID = get_posts($args)[0]->ID;
-  
+  $captionID = carbon_get_the_post_meta('inf_captions', 'complex');
+  $caption = $captionID[0];
+  $captions = $caption['captions'];
 }
 // Items of The Week
 function inf_items() {
