@@ -32,6 +32,7 @@ location.href = mail_str;
 } 
 </SCRIPT>
 				<div class="shop-main theme">
+        <div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>
 					<!--<div class="breadcrumbs"><a href="#">SHOP ></a> <?php //echo strtoupper(get_the_title()); ?></div> /.breadcrumbs -->
           <div class="column-three" style="border: none;">
           <div class="column adcolumn" style="">
