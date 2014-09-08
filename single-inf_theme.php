@@ -262,7 +262,7 @@ function inf_theme_slider_theme() {
 function inf_captions() {
   global $post;
   $captions = carbon_get_theme_meta($post->ID, 'inf_captions', 'complex');
-  $caption = $caption[0];
+  $caption = $captions[0];
   // foreach($caption as $_caption) {
   //   $cap = get_post_meta($_caption, 'inf_caption', true);
 ?>
