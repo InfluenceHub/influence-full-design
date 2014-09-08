@@ -282,8 +282,8 @@ function inf_theme_slider_theme() {
   global $post;
   $images = carbon_get_post_meta($post->ID, 'inf_featured_image', 'complex');
   $captions = carbon_get_post_meta($post->ID, 'inf_caption' ,  'complex');
-  $caption = $captions[0];
-  foreach($images as $image and $captions as $caption) {
+  $caption = get_post_meta($captions[0]);
+  foreach($images as $image) {
     $image_full  = wp_get_attachment_image_src($image[inf_featured_image], 'full');
     $image_small = wp_get_attachment_image_src($image[inf_featured_image], 'inf_featured_theme');
     ?>
