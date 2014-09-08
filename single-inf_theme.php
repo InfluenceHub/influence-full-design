@@ -285,11 +285,11 @@ function inf_theme_slider_theme() {
   foreach($images as $image) {
     $image_full  = wp_get_attachment_image_src($image[inf_featured_image], 'full');
     $image_small = wp_get_attachment_image_src($image[inf_featured_image], 'inf_featured_theme');
-    $caption = carbon_get_post_meta($captions->ID, 'inf_caption');
+    $caption = $captions[0];
     ?>
     <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
-      <p><?php echo $caption[0] ?></p>
+      <p><?php echo var_dump($caption); ?></p>
 		</li>
     <?php
   }
