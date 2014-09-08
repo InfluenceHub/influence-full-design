@@ -262,8 +262,9 @@ function inf_theme_slider_theme() {
 function inf_captions() {
   global $post;
   $captions = carbon_get_theme_meta($post->ID, 'inf_captions', 'complex');
-  foreach($captions as $caption) {
-    $caption_me = carbon_get_post_meta($caption[inf_caption], 'inf_featured_theme');
+  $caption = $caption[0];
+  foreach($caption as $c) {
+  $caption_me = carbon_get_post_meta($c[inf_caption], 'inf_featured_theme');
 ?>
  <pre><?php echo print_r($caption_me)[0]; ?></pre>
  <?php
