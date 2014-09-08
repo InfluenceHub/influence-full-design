@@ -291,7 +291,7 @@ function inf_theme_slider_theme() {
     ?>
     <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
-      <p><?php echo print_r($caption[$x]); ?></p>
+      <p><?php echo print_r($caption[$x -1]); ?></p>
 		</li>
     <?php
     }
