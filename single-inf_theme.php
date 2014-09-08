@@ -282,13 +282,14 @@ function inf_theme_slider_theme() {
   global $post;
   $images = carbon_get_post_meta($post->ID, 'inf_featured_image', 'complex');
   $captions = carbon_get_post_meta($post->ID, 'inf_caption' ,  'complex');
+  $caption = $captions[0];
   foreach($images as $image) {
     $image_full  = wp_get_attachment_image_src($image[inf_featured_image], 'full');
     $image_small = wp_get_attachment_image_src($image[inf_featured_image], 'inf_featured_theme');
     ?>
     <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
-      <pre><?php echo print_r($captions[0]); ?></pre>
+      <pre><?php echo print_r($captions[$caption]); ?></pre>
 		</li>
      <?php
     }   
