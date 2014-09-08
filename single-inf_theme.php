@@ -289,7 +289,7 @@ function inf_theme_slider_theme() {
     ?>
     <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
-      <pre><?php echo print_r(carbon_get_post_meta($caption[inf-caption])); ?></pre>
+      <pre><?php echo print_r(carbon_get_post_meta($caption->ID, 'inf-caption')); ?></pre>
 		</li>
      <?php
     }   
