@@ -292,7 +292,7 @@ function inf_theme_slider_theme() {
 		</li>
     <?php
   }
-  foreach ($image as $caption) {
+  foreach ($image_small as $caption) {
     $caption_me = carbon_get_post_meta($caption['inf_caption']); ?>
     <li>      
     <pre><?php echo print_r($caption_me); ?></pre>
