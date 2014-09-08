@@ -294,7 +294,6 @@ function inf_theme_slider_theme() {
      <?php
     }   
   }
-}
 ?>
 <!--<?php
 // Captions for slider
