@@ -289,14 +289,15 @@ function inf_theme_slider_theme() {
     ?>
     <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
+      <pre><?php echo print_r($caption); ?></pre>
+
 		</li>
+
     <?php
   }
-  foreach ($image_small as $caption) {
-    $caption_me = carbon_get_post_meta($caption['inf_caption']); ?>
-    <li>      
+      
     <pre><?php echo print_r($caption_me); ?></pre>
-    </li>
+
 <?php
   }
 }
