@@ -1070,7 +1070,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
  -->       
       <a href="javascript:void(0)">
       <h2>Item of the Day</h2>
-            <img src="<?php echo $product_image[0] ?>" width="<?php echo $product_image[1]; ?>" height="<?php echo $product_image[2]; ?>" data-cid= "5" data-prodid="213643581"
+            <img src="<?php echo $product_image[0] ?>" width="<?php echo $product_image[1]; ?>" height="<?php echo $product_image[2]; ?>" data-cid= "7" data-prodid="213663453"
 alt="Item of the Day" />
              <h5><span style="text-transform: uppercase; font-weight: bold;"><?php echo $product_designer?></span></h5><h6><?php echo $product_title; ?>, $<?php echo $product_price; ?></h6>
           </a>
