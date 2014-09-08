@@ -287,7 +287,7 @@ function inf_theme_slider_theme() {
     ?>
     <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
-      <?php inf_captions(): ?>
+      <?php inf_captions(); ?>
 		</li>
      <?php
     }   
