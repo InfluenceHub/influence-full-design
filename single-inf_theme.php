@@ -263,10 +263,10 @@ function inf_captions() {
   global $post;
   $captions = carbon_get_theme_meta($post->ID, 'inf_captions', 'complex');
   $caption = $caption[0];
-  foreach($caption as $_caption) {
-    $cap = get_post_meta($_caption, 'inf_caption', true);
+  // foreach($caption as $_caption) {
+  //   $cap = get_post_meta($_caption, 'inf_caption', true);
 ?>
- <pre><?php echo print_r($cap); ?></pre>
+ <pre><?php echo print_r($caption[0]); ?></pre>
  <?php
   }
 }
