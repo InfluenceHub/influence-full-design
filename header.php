@@ -59,6 +59,7 @@ googletag.defineSlot('/61413193/BCBG_HEADER', [971, 120], 'div-gpt-ad-1409963968
 googletag.defineSlot('/61413193/Right_Skin', [120, 1000], 'div-gpt-ad-1409963968603-2').addService(googletag.pubads());
 googletag.defineSlot('/61413193/Skin_Sides', [120, 1000], 'div-gpt-ad-1409963968603-3').addService(googletag.pubads());
 googletag.defineSlot('/61413193/300x600', [300, 600], 'div-gpt-ad-1410050142891-0').addService(googletag.pubads());
+googletag.defineSlot('/61413193/728x90_Interior', [728, 90], 'div-gpt-ad-1410204268874-0').addService(googletag.pubads());
 googletag.pubads().enableSingleRequest();
 googletag.enableServices();
 });

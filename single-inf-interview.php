@@ -13,10 +13,10 @@
   <section class="interview">
     <div class="shell group">
     <div class="top_ad-block no-mobile" style="margin-top: 10px;">
-<!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409963968603-1' class="no-mobile" style='width:971px; height:120px; margin: 0 auto;'>
+<!-- 728x90_Interior -->
+<div id='div-gpt-ad-1410204268874-0' style='width:728px; height:90px; margin: 0 auto;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410204268874-0'); });
 </script>
 </div>
       <!-- BEGIN IFRAME TAG - theinfluence 728x90 < - DO NOT MODIFY -->
