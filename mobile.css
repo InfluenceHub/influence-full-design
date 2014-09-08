@@ -612,7 +612,7 @@ a.sign-in-link {
 	display: none;
 }*/
 @media only screen and (max-width: 768px) {
-	.shop-subscribe {
+	/*.shop-subscribe {
 		visibility: hidden;
 		display: none;
 	}
@@ -623,7 +623,7 @@ a.sign-in-link {
     .in-circle {
     	visibility: hidden;
     	display: none;
-    }
+    }*/
     .shop-main .next, .shop .next-1, .shop .next-2, .shop .next-3, .shop .next-4, .shop .next-5, .shop .next-6 {
     	display: block;
     	height: 25px;

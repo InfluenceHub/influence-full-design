@@ -452,15 +452,15 @@ return null;
                             <?php if($influencer_id): ?>
                               <form method="post" class="interact-with-influencer">
                                 <div class="home-feed-subscribe-options">
-                                  <?php if(in_array($influencer_id, $current_user_influencers)) { ?>
+                                  <!-- <?php if(in_array($influencer_id, $current_user_influencers)) { ?>-->
                                     <input type="hidden" name="influencer_unsubscribe" value="<?php echo $influencer_id; ?>">
                                     <a class="in-circle active <?php echo $extraclass ?>" href="<?php echo home_url().'/my-influence/'; ?>"></a>
                                     <div class="shop-subscribe"><a class="sub-link <?php echo $extraclass; ?>" href="<?php echo home_url().'/my-influence/'; ?>">UNSUBSCRIBE</a></div><!-- /.flag -->
-                                  <?php } else { ?>
+                                  <!--<?php } else { ?>-->
                                     <input type="hidden" name="influencer_subscribe" value="<?php echo $influencer_id; ?>">
                                     <a class="in-circle <?php echo $extraclass ?>" href="<?php echo home_url().'/my-influence/'; ?>"></a>
                                     <div class="shop-subscribe"><a class="sub-link <?php echo $extraclass; ?>" href="<?php echo home_url().'/my-influence/'; ?>">SUBSCRIBE</a></div><!-- /.flag -->
-                                  <?php } ?>
+                                 <!-- <?php } ?>-->
                                 </div>
                               </form>
                             <?php endif; // $influencer_id ?>

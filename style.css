@@ -6756,7 +6756,7 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
   font-family:
 }
 @media only screen and (max-width: 700px) {
-  .shop-subscribe {
+  /*.shop-subscribe {
     visibility: hidden;
     display: none;
   }
@@ -6767,7 +6767,7 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
     .in-circle {
       visibility: hidden;
       display: none;
-    }
+    }*/
     .shop-main .next, .shop .next-1, .shop .next-2, .shop .next-3, .shop .next-4, .shop .next-5, .shop .next-6 {
       display: block;
       height: 25px;
