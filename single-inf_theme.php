@@ -87,6 +87,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 echo $content;
                 */
               ?>
+           <pre><?php echo print_r($caption_me)[0]; ?></pre>
               </div>
 						</div><!-- /.text-holder -->
 					</div><!-- /.right-col -->
