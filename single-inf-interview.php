@@ -218,7 +218,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410204268874-0');
       <div class="more_interviews">
         <?php
           $args = array(
-            'numberposts' => 5,
+            'numberposts' => 9999,
             'orderby' => 'date',
             'order' => 'DESC',
             'post_type' => 'inf-interview',
