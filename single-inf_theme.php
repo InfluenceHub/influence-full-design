@@ -52,8 +52,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</li>
                 <?php inf_theme_slider_theme(); ?>
-<!--                 <?php inf_captions(); ?>
- -->
+                <?php inf_captions(); ?>
 <!--        <div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
               </ul>
                 <div class="shop-featured-prev">&nbsp;</div>
@@ -260,14 +259,13 @@ function inf_theme_slider_theme() {
   }
 ?>
 <?php
-// Captions for slider
 function inf_captions() {
   global $post;
-  $captions = carbon_get_the_post_meta($post->ID, 'inf_caption', 'complex');
+  $captions = carbon_get_theme_option($post->ID, 'inf_captions', 'complex');
   foreach($captions as $caption) {
-    $caption_me = $captions[0];
+    $caption_me = carbon_get_post_meta($captions['inf_caption'], 'inf_featured_theme');
 ?>
- <li class="slide-theme"><pre><?php echo print_r($caption_me); ?></pre></li>
+ <li class="slide-theme"><pre><?php echo print_r($caption_me)[0]; ?></pre></li>
  <?php
   }
 }
