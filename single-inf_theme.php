@@ -286,10 +286,10 @@ function inf_theme_slider_theme() {
     $image_full  = wp_get_attachment_image_src($image[inf_featured_image], 'full');
     $image_small = wp_get_attachment_image_src($image[inf_featured_image], 'inf_featured_theme');
     $caption = $captions[0];
-    foreach ($captions as $caption) {
     ?>
     <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
+    <?php foreach ($captions as $caption) { ?>
       <pre><?php echo print_r($caption); ?></pre>
 		</li>
      <?php
