@@ -289,8 +289,8 @@ function inf_theme_slider_theme() {
     ?>
     <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
-    <?php foreach ($captions as $caption) { ?>
-      <pre><?php echo print_r($caption); ?></pre>
+    <?php foreach ($caption as $value) { ?>
+      <pre><?php echo print_r($value); ?></pre>
 		</li>
      <?php
      }
