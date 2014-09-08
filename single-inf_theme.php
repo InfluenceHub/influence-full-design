@@ -294,11 +294,7 @@ function inf_theme_slider_theme() {
 		</li>
 
     <?php
-  }
-      
-    <pre><?php echo print_r($caption_me); ?></pre>
-
-<?php
+  }   
   }
 }
 ?>
