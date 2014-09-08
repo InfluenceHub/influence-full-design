@@ -5,12 +5,10 @@
  * @package Smarty
  * @subpackage PluginsModifierCompiler
  */
-
 /**
  * @ignore
  */
 require_once( SMARTY_PLUGINS_DIR .'shared.literal_compiler_param.php' );
-
 /**
  * Smarty escape modifier plugin
  *
@@ -29,16 +27,13 @@ function smarty_modifiercompiler_escape($params, $compiler)
     if ($_double_encode === null) {
         $_double_encode = version_compare(PHP_VERSION, '5.2.3', '>=');
     }
-
     try {
         $esc_type = smarty_literal_compiler_param($params, 1, 'html');
         $char_set = smarty_literal_compiler_param($params, 2, Smarty::$_CHARSET);
         $double_encode = smarty_literal_compiler_param($params, 3, true);
-
         if (!$char_set) {
             $char_set = Smarty::$_CHARSET;
         }
-
         switch ($esc_type) {
             case 'html':
                 if ($_double_encode) {
@@ -53,7 +48,6 @@ function smarty_modifiercompiler_escape($params, $compiler)
                 } else {
                     // fall back to modifier.escape.php
                 }
-
             case 'htmlall':
                 if (Smarty::$_MBSTRING) {
                     if ($_double_encode) {
@@ -75,7 +69,6 @@ function smarty_modifiercompiler_escape($params, $compiler)
                         // fall back to modifier.escape.php
                     }
                 }
-
                 // no MBString fallback
                 if ($_double_encode) {
                     // php >=5.2.3 - go native
@@ -91,26 +84,20 @@ function smarty_modifiercompiler_escape($params, $compiler)
                 } else {
                     // fall back to modifier.escape.php
                 }
-
             case 'url':
                 return 'rawurlencode(' . $params[0] . ')';
-
             case 'urlpathinfo':
                 return 'str_replace("%2F", "/", rawurlencode(' . $params[0] . '))';
-
             case 'quotes':
                 // escape unescaped single quotes
                 return 'preg_replace("%(?<!\\\\\\\\)\'%", "\\\'",' . $params[0] . ')';
-
             case 'javascript':
                 // escape quotes and backslashes, newlines, etc.
                 return 'strtr(' . $params[0] . ', array("\\\\" => "\\\\\\\\", "\'" => "\\\\\'", "\"" => "\\\\\"", "\\r" => "\\\\r", "\\n" => "\\\n", "</" => "<\/" ))';
-
         }
     } catch (SmartyException $e) {
         // pass through to regular plugin fallback
     }
-
     // could not optimize |escape call, so fallback to regular plugin
     if ($compiler->template->caching && ($compiler->tag_nocache | $compiler->nocache)) {
         $compiler->template->required_plugins['nocache']['escape']['modifier']['file'] = SMARTY_PLUGINS_DIR .'modifier.escape.php';
@@ -119,6 +106,5 @@ function smarty_modifiercompiler_escape($params, $compiler)
         $compiler->template->required_plugins['compiled']['escape']['modifier']['file'] = SMARTY_PLUGINS_DIR .'modifier.escape.php';
         $compiler->template->required_plugins['compiled']['escape']['modifier']['function'] = 'smarty_modifier_escape';
     }
-
     return 'smarty_modifier_escape(' . join( ', ', $params ) . ')';
 }

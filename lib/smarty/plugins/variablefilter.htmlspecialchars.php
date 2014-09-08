@@ -5,7 +5,6 @@
  * @package Smarty
  * @subpackage PluginsFilter
  */
-
 /**
  * Smarty htmlspecialchars variablefilter plugin
  *

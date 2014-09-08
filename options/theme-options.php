@@ -1,8 +1,6 @@
 <?php
-
 $available_products = inf_get_products();
 $available_wp_categories = inf_get_terms_for_carbon_select('category');
-
 $header_fields = array(
 	Carbon_Field::factory('separator', 'header_fields', 'Header'),
 	Carbon_Field::factory('textarea', 'inf_header_box_text', 'Black box text'),
@@ -14,61 +12,48 @@ $header_fields = array(
 	Carbon_Field::factory('text', 'inf_sign_up_text', 'Text'),
 	Carbon_Field::factory('text', 'inf_sign_up_url', 'URL'),
 );
-
 $footer_fields = array(
 	Carbon_Field::factory('separator', 'footer_fields', 'Footer'),
 	Carbon_Field::factory('text', 'inf_copyright_text', 'Copyright text')
 		->help_text('Use {year} for the current year.'),
 );
-
 $script_fields = array(
 	Carbon_Field::factory('separator', 'script_fields', 'Scripts'),
 	Carbon_Field::factory('header_scripts', 'header_script', 'Header script'),
 	Carbon_Field::factory('footer_scripts', 'footer_script', 'Footer script'),
 );
-
 $carbon_fields = array_merge($header_fields, $footer_fields, $script_fields);
-
 Carbon_Container::factory('theme_options', 'Theme Options')
 	->add_fields($carbon_fields);
-
 $social_networks = inf_get_social_networks('header');
 $social_network_fields = array();
 foreach($social_networks as $network => $address) {
 	array_push($social_network_fields, Carbon_Field::factory('text', $network . '_header')
 		->set_default_value($address));
 }
-
 array_push($social_network_fields, Carbon_Field::factory('separator', 'inf_footer_sosials_sep', 'Footer'));
-
 $social_networks = inf_get_social_networks('footer');
 foreach($social_networks as $network => $address) {
 	array_push($social_network_fields, Carbon_Field::factory('text', $network . '_footer')
 		->set_default_value($address));
 }
 array_unshift($social_network_fields, Carbon_Field::factory('separator', 'social_networks_fields', 'Social networks'));
-
 $pinterest_fields = array(
 	Carbon_Field::factory('text', 'inf_home_pinterest_username', 'Pinterest username')
 );
-
 Carbon_Container::factory('theme_options', 'Pinterest settings')
 	->set_page_parent('Theme Options')
 	->add_fields($pinterest_fields);
-
 $influencer_fields = array(
 	Carbon_Field::factory('select', 'inf_item_of_the_day', 'Item of the day')
 		->add_options($available_products)
 );
-
 Carbon_Container::factory('theme_options', 'Influencer settings')
 	->set_page_parent('Theme Options')
 	->add_fields($influencer_fields);
-
 Carbon_Container::factory('theme_options', 'Social Networks')
 	->set_page_parent('Theme Options')
 	->add_fields($social_network_fields);
-
 if ( carbon_twitter_widget_registered() ) {
 	Carbon_Container::factory('theme_options', 'Twitter Settings')
 		->set_page_parent('Theme Options')

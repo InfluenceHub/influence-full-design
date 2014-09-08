@@ -10,7 +10,6 @@
   if ($_GET['test']) {
 ?>
 <?php } else { ?>
-
   <section class="interview">
     <div class="shell group">
     <div class="top_ad-block no-mobile" style="margin-top: 10px;">
@@ -25,7 +24,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
       <!-- END TAG -->
     </div>
 <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
-
         </div>
         <div id="topSlider" class="interview-slider group">
           <ul class="slides" style=" margin-left: -50px;" >
@@ -70,7 +68,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
           </section>
         <section id="content" class="interview">
         <!-- /.interview-slider-bottom -->
-
                 
         <!-- <div class="credits">
         <h2><?php echo $credit_styling; ?></h2>-
@@ -87,7 +84,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
  -->            <?php echo the_content(); ?>              
           </div>
           
-
             <?php 
             
             //if(!empty($exact_items)) { 
@@ -163,26 +159,17 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
       <div class="shop">
       <div class="column-three bottom" style="margin-top: 75px;">
        <h1> Shop The Shoot </h1>
-
         <?php $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
-
         if(!empty($products_sections)) {
-
           foreach($products_sections as $key=>$ps) {
-
               $products = $ps['products'];
-
               if(!empty($products)) { ?>
                 <div id="shop-slider-<?php echo $key; ?>" class="prod-row interview" style="border-bottom: 1px solid #ccc;"> 
                   <ul class="slides">
                     <?php $index = 1;
-
                     foreach($products as $p) {
-
                       $post_obj = get_post($p);
-
                       if(!empty($post_obj)) {
-
                         $post_id = $post_obj->ID;
                         $post_title = get_the_title($post_id);
                         $shortTitle = $post_title;
@@ -215,21 +202,15 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
                         <?php  ?>
                           
                         <?php
-
                         $index++;
-
                       }
-
                     } ?>
-
                   </ul>
                     <div class="prev-<?php echo $key; ?> no-mobile" >&nbsp;</div><!-- /.prev -->
                     <div class="next-<?php echo $key; ?> no-mobile">&nbsp;</div><!-- /.next -->
                 </div><!-- /.prod-row -->
               <?php }
             }
-
-
         }
       ?> 
     </div>
@@ -271,8 +252,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
           }
         ?>
       </div>
-
-
     <?php
       $args = array(
         'numberposts' => 4,
@@ -293,10 +272,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
     <div class="more_interviews">
     
     </div>
-
   </section><!-- /#content -->
-
     
-
   <?php } ?>
 <?php get_footer(); ?>

@@ -5,7 +5,6 @@
  * @package Smarty
  * @subpackage PluginsShared
  */
-
 /**
  * Function: smarty_make_timestamp<br>
  * Purpose:  used by other smarty functions to make a timestamp from a string.
@@ -35,7 +34,6 @@ function smarty_make_timestamp($string)
             // strtotime() was not able to parse $string, use "now":
             return time();
         }
-
         return $time;
     }
 }

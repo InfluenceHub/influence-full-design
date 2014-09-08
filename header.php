@@ -28,10 +28,8 @@ $detect = new Mobile_Detect;
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/davidtemp.css?ver=<?php echo $version; ?>" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/semantic.css?ver=<?php echo $version; ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
-
     <script type="text/javascript" src="//use.typekit.net/lzr4wxq.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/javascript/semantic.js"></script>
@@ -39,9 +37,7 @@ $detect = new Mobile_Detect;
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/mobile.css<?php echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" media="screen and (max-width: 700px)" />
   </head>
-
 <!-- REPLACE HEADER SCRIPT WITH ALL OF THIS -->
-
 <script type='text/javascript'>
 var googletag = googletag || {};
 googletag.cmd = googletag.cmd || [];
@@ -56,7 +52,6 @@ var node = document.getElementsByTagName('script')[0];
 node.parentNode.insertBefore(gads, node);
 })();
 </script>
-
 <script type='text/javascript'>
 googletag.cmd.push(function() {
 googletag.defineSlot('/61413193/300x500BCBG', [300, 600], 'div-gpt-ad-1409963968603-0').addService(googletag.pubads());
@@ -68,11 +63,7 @@ googletag.pubads().enableSingleRequest();
 googletag.enableServices();
 });
 </script>
-
-
 <!--END HEADER SCRIPT -->
-
-
 	<body <?php body_class(); ?>>
     <script>
       window.fbAsyncInit = function() {
@@ -82,7 +73,6 @@ googletag.enableServices();
           version    : 'v2.0'
         });
       };
-
       (function(d, s, id){
          var js, fjs = d.getElementsByTagName(s)[0];
          if (d.getElementById(id)) {return;}
@@ -112,7 +102,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="fixed_social_block"><a href="https://www.facebook.com/ShopTheInfluence" target="_blank">Facebook</a><a href="https://instagram.com/theinfluence" target="_blank">instagram<a href="http://www.pinterest.com/theinfluencepin/" target="_blank">pinterest</a><a href="https://twitter.com/theinfluence" target="_blank">twitter</a><a href="https://www.youtube.com/user/TheInfluenceStyle" target="_blank">youtube</a><a href="http://theinfluencecom.tumblr.com/" target="_blank">tumblr</a></div>
     <?php if (is_front_page()) { ?>
     <?php } ?>
-
     <!-- <div class="newsletter-pop">
       <div class="close">&nbsp;</div>
       <div class="inner">
@@ -132,7 +121,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <br class="no-mobile" /><br class="no-mobile" /><br class="no-mobile" />
 	<header id="header">
 			<div id="header_inner" class="inner_wrap">
-
 				<?php
           //Create login/out link
           if(is_user_logged_in()) {
@@ -147,7 +135,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" style="z-index: 2; background-color: #fff; margin-top: 5px;" width="35x" height="35px" />
 	   <div style="padding-left: 60px; margin-top: -30px;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div>
     </a>
-
         <div class="nav">
           <div class="nav-icons">
            <ul class="soc-list">
@@ -168,7 +155,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'fallback_cb'     => '',
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s' . $signinlink . '<li class="stretcher"></li></ul>'
           )); ?>
-
       <?php
       $_iDropdownHtml = '<div class="influencer-menu-wrapper" id="influencer_menu"><ul><li class="top-cat-name"><span>Influencers</span></li>';
       foreach (range('a', 'e') as $letter) {
@@ -186,7 +172,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             )
           )
         );
-
         $inf_posts = get_posts($args);
         foreach($inf_posts as $pp) {
           //Replace first space with br
@@ -195,9 +180,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'connected_items' => $pp->ID,
             'posts_per_page' => -1
           );
-
           $connected = get_posts($args);
-
           if (count($connected) > 0) {
             $_iDropdownHtml .= '<li class="influencer_link"><a href="' . get_permalink($pp->ID) . '">' . '<span>' . $pp->post_title . '</span></a></li>';
           } else {
@@ -209,7 +192,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       $_iDropdownHtml .= '</ul><div class="readmore"><a href="/influencers/"><img src="' . get_bloginfo('stylesheet_directory') . '/images/the-influencer-readmore.jpg" /></a></div></div>';
       echo $_iDropdownHtml;
       ?>
-
          <!-- <div class="subscribe-mobile mobile-only">
             <form action="http://theinfluence.us8.list-manage.com/subscribe/post?u=527260c47d9de3929c883ec2d&amp;id=69a8f6e293" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
               <input type="email" value="" name="EMAIL" class="required email field">
@@ -219,8 +201,5 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>-->
         </div><!-- /.nav -->
 			</div><!-- /#header_inner -->
-
       <?php include('template-sign_in.php'); ?>
-
 		</header><!-- /#header -->
-

@@ -3,7 +3,6 @@
 * Template Name: Home
 */
 get_header();
-
 the_post();
 //Detect mobile
 ?>
@@ -53,13 +52,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
    <?php inf_items(); ?>
   </div>
 </section>
-
   <section id="content">
-
-
-
     <div class="ad_wrapper-block">
-
       <?php //inf_browse_by(); ?>
 	  <div class="content_wrapper" style="position:relative;">
 	  <!-- Skin_Sides -->
@@ -68,7 +62,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-3'); });
 </script>
 </div>
-
 <!-- Right_Skin -->
 <div id='div-gpt-ad-1409963968603-2' class="no-mobile" style='width:120px; height:1000px;position:fixed; top:138px; right:0;'>
 <script type='text/javascript'>
@@ -77,7 +70,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2');
 </div>
     <?php
       inf_home_latest();
-
     $args = array(
       'post_type' => 'inf_video',
       'posts_per_page' => -1,
@@ -99,9 +91,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2');
       //'orderby' => 'menu_order',
       //'order' => 'ASC'
     );
-
     $videos = get_posts($args);
-
     if(!empty($videos)) :
     ?>
 <!--<div class="in-video"> -->
@@ -135,13 +125,10 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2');
                     }
                     $video_temp = explode('?v=', $video_url);
                     $video_id = $video_temp[1];
-
                     $image_url = wp_get_attachment_image_src(get_post_thumbnail_id($v->ID),'inf_homevid', true);
                     $video_info_img = $image_url[0];
-
                     //$video_thumbID = carbon_get_post_meta($v->ID, 'inf_video_thumb');
                     //$video_thumb = wp_get_attachment_image_src($video_thumbID,'inf_homevid_thumb', true);
-
                     $video_thumb = wp_get_attachment_image_src(get_post_thumbnail_id($v->ID),'inf_homevid_thumb', true);
                     //$video_thumb_info_img = $video_thumb[0];
                   ?>
@@ -169,13 +156,10 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2');
                     $video_temp = explode('?v=', $video_url);
                     $video_id = $video_temp[1];
                     $video_title = get_the_title($entry_id);
-
                     $image_url = wp_get_attachment_image_src(get_post_thumbnail_id($v->ID),'inf_homevid', true);
                     $video_info_img = $image_url[0];
-
                     $video_thumbID = carbon_get_post_meta($v->ID, 'inf_video_thumb');
                     $video_thumb = wp_get_attachment_image_src($video_thumbID,'inf_homevid_thumb', true);
-
                     //$video_thumb = wp_get_attachment_image_src(get_post_thumbnail_id($v->ID),'inf_homevid_thumb', true);
                     //$video_thumb_info_img = $video_thumb[0];
                   ?>
@@ -187,15 +171,11 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2');
                 </li>
                 <?php } ?>
               </ul><!-- /.slides -->
-
            <!-- <div style="width: 300px; height: 600px; background: #000;"></div> -->
 <!--/* Revive Adserver iFrame Tag v3.0.4 */-->
-
 <!--
 <iframe id='ad099d26' name='ad099d26' src='http://theinfluence.com/revive/www/delivery/afr.php?campaignid=4&amp;target=_blank&amp;cb=INSERT_RANDOM_NUMBER_HERE' frameborder='0' scrolling='no' width='300' height='600'><a href='http://theinfluence.com/revive/www/delivery/ck.php?n=abb7539a&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://theinfluence.com/revive/www/delivery/avw.php?campaignid=4&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=abb7539a' border='0' alt='' /></a></iframe>
-
 -->
-
             <!-- BEGIN IFRAME TAG - theinfluence 300x600 < - DO NOT MODIFY -->
             <!-- <IFRAME SRC="http://ib.adnxs.com/tt?id=2438106&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="300" HEIGHT="600"></IFRAME> -->
             <!-- END TAG -->
@@ -205,7 +185,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2');
       </div><!-- /.video-row -->
    </div>
     <?php endif; ?>
-
     <!-- Bottom Section -->
     <?php
       //$section_title = carbon_get_the_post_meta('inf_home_social_section_title');
@@ -216,17 +195,13 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2');
       </div> -->
       <br />
       <div class="shell" style="margin-top: -10px;">
-
         <?php $pinterest_username = carbon_get_theme_option('inf_home_pinterest_username'); ?>
-
         <?php if(!empty($pinterest_username)) { ?>
-
           <div class="column-three">
             <h2><img height="30px" width="30px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/pinterest-logo-black.jpg" /></h2>
             <div class="shop-pinterest-inner">
               <?php echo do_shortcode('[prw username="theinfluencepin" maxfeeds="12" thumbwidth="153" thumbheight="153" showfollow="none"]'); ?>
             </div>
-
             <div class="home-instagram">
               <h2 ><img height="30px" width="30px" src="<?php echo get_stylesheet_directory_uri(); ?>/images/instagram.jpg" /></h2>
               <?php
@@ -258,9 +233,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2');
                 </ul>
               </div><!-- /.istragram-box -->
             </div>
-
           </div>
-
         <?php } ?>
       </div>
     </div>
@@ -279,7 +252,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2');
             <div class="response" id="mce-error-response" style="display:none"></div>
             <div class="response" id="mce-success-response" style="display:none"></div>
           </div>
-
       <input type="submit" value="" class="button" />
       </div>
     </form>
@@ -289,9 +261,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2');
 </div>
 -->
  <script>
-
  console.log(jQuery('.top-block .slides'));
-
  jQuery('.top-block .slides').carouFredSel({
   prev: '.left-arrow',
   next: '.right-arrow',
@@ -299,7 +269,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2');
   scroll: { items: 1 },
   auto: false
  });
-
   //uncomment to force cookie reset
   //document.cookie = "showHomePopup=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
   var homeCookie = getCookie('showHomePopup');
@@ -310,7 +279,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2');
       $('.ui.modal').modal('show');
     }
   }
-
   function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');

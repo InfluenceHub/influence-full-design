@@ -26,7 +26,6 @@ function filter_video($html, $wmode = false, $width = false, $height = false) {
 	
 	return $final_html;
 }
-
 /**
  * Return the thumbnail src for Youtube and Vimeo videos
  * @param  string $embed_code  the full video embed code ( or YouTube video url )
@@ -50,11 +49,8 @@ function get_video_thumb($embed_code) {
 		$thumb = get_vimeo_thumb($video_id[1]);
 		$return = $thumb[0]['thumbnail_medium'];
 	}
-
 	return $return;
 }
-
-
 /**
  * Return the thumbnail src for Vimeo videos
  * @param  mixed Vimeo video id
@@ -91,7 +87,6 @@ function get_vimeo_thumb($videoid) {
 	
 	return $finaldata;
 }
-
 /**
  * Return a URL to an embedabble YouTube Video (the actual video file URL)
  * @param  string $video_url
@@ -100,7 +95,6 @@ function get_vimeo_thumb($videoid) {
 function get_youtube_video($video_url) {
 	return preg_replace('~http:\/\/www\.youtube\.com\/watch(\?v=)?(.*&v=)(.*)~', 'http://www.youtube.com/v/$3', $video_url);
 }
-
 /**
  * Builds embed code from a video URL
  * @param  string  $video_url
@@ -121,7 +115,6 @@ function create_embedcode($video_url, $width = 440, $height = 350, $old_embed_co
 	
 	return $embed_code;
 }
-
 /**
  * Generates an embedcode of a YouTube Video.
  * @param  string  $video_url URL of the playable YouTube Video (for example: http://www.youtube.com/watch?v=emMDmRtdP7w0)
@@ -137,7 +130,6 @@ function create_youtube_embedcode($video_url, $width = 440, $height = 350, $old_
 	
 	if (!$width) $width = 440;
 	if (!$height) $height = 350;
-
 	if ( $old_embed_code ) {
 		$actual_file = get_youtube_video($video_url);
 		return '<object width="' . $width . '" height="' . $height . '"><param name="movie" value="' . $actual_file . '"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="wmode" value="transparent"><embed src="' . $actual_file . '" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="' . $width . '" height="' . $height . '" wmode="transparent"></embed></object>';
@@ -146,8 +138,6 @@ function create_youtube_embedcode($video_url, $width = 440, $height = 350, $old_
 		return '<iframe title="YouTube video player" width="' . $width . '" height="' . $height . '" src="' . add_query_arg(array('wmode'=>'transparent', 'autoplay'=>$autoplay), preg_replace('~watch?([^"]*)v=([^&]*).*~', 'embed/$2', $video_url)) . '" frameborder="0" allowfullscreen></iframe>';
 	}
 }
-
-
 /**
  * Return an embedcode of a Vimeo Video.
  * @param  string  $video_url URL of the playable Vimeo Video (for example: http://vimeo.com/29081264)
@@ -167,4 +157,3 @@ function create_vimeo_embedcode($video_url, $width = 440, $height = 350, $autopl
 	
 	return '<iframe src="http://player.vimeo.com/video/' . $video_id[1] . '?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff' . ($autoplay ? '&amp;autoplay=autoplay' : '') . '" width="' . $width . '" height="' . $height . '" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>';
 }
-

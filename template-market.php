@@ -3,33 +3,25 @@
 * Template Name: Market Story
 */
 get_header();
-
 the_post();
-
 ?>
 <?php get_header();
   error_reporting(0);
 	inf_update_posts_views(get_the_ID());
-
 	the_post();
-
 	if(is_user_logged_in()) {
 		$current_user_influencers = inf_get_influencers();
 	} ?>
 	<section id="content">
 		<div class="shell shop">
 			<?php $post_categories = wp_get_post_terms( get_the_ID(), 'category' );
-
 			$args = array(
 				'connected_type' => 'posts_to_influencers',
 				'connected_items' => get_the_ID(),
 				'nopaging' => true,
 				'posts_per_page' => 1
 			);
-
 			$influencer = get_posts($args);
-
-
 			//if(!empty($influencer)) {
         ?>
 				<div class="shop-main">
@@ -60,21 +52,18 @@ the_post();
                 <div class="shop-featured-next">&nbsp;</div>
 							</div>
               <!-- /.inner --> 
-
               <!--<div class="shop-maintag"><a href="<?php echo $category_link; ?>"><?php echo strtoupper($post_categories[0]->name); ?></a></div> -->
 						<?php //} ?>
 					</div><!-- /.left-col -->
           <br /> <br />
 					<div class="right-col right" style="float: left;">
 						<?php
-
 						//$exact_items = carbon_get_the_post_meta('inf_influencer_products'); 
             $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
             ?>
             <div class="shop-main-theme">
 						<div class="text-holder" style="margin-left: -5px; padding-top: 10px;">
               <img class="shop-published-by" style="float: right;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
-
               <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
 							<?php
                 the_content();
@@ -104,13 +93,9 @@ the_post();
                 <div id="shop-slider-<?php echo $key+1; ?>" class="prod-row">
                   <ul class="slides">
                     <?php $index = 1;
-
                     foreach($products as $p) {
-
                       $post_obj = get_post($p);
-
                       if(!empty($post_obj)) {
-
                         $post_id = $post_obj->ID;
                         $post_title = get_the_title($post_id);
                         $shortTitle = $post_title;
@@ -143,11 +128,8 @@ the_post();
                         <?php  ?>
                           
                         <?php
-
                         $index++;
-
                       }
-
                     } ?>
                   </ul>
                     <div class="prev-<?php echo $key+1; ?>">&nbsp;</div><!-- /.prev -->
@@ -155,7 +137,6 @@ the_post();
                 </div><!-- /.prod-row -->
               <?php }
             }
-
 				}
       ?>
         </div>
@@ -169,9 +150,7 @@ the_post();
           <!-- END TAG -->
         </div>
       <?php
-
 			//}
-
 			// showing random ("related") below
 			$args = array(
 				'post_type' => 'post',
@@ -185,21 +164,17 @@ the_post();
 					)
 				)
 			);
-
 			//$random = get_posts($args);
-
 			if(!empty($random)) { ?>
 				<div class="cols column-three morelike">
           <h2>more like this</h2>
 					<div class="row no-border">
 						<?php foreach($random as $r) {
-
 							$args = array(
 								'connected_type' => 'posts_to_influencers',
 								'connected_items' => $r->ID,
 								'posts_per_page' => 1
 							);
-
 							$influencer = get_posts($args);
               
               $thisTitle = get_the_title($r->ID);
@@ -208,7 +183,6 @@ the_post();
               }
               
               //echo get_the_title($influencer[0]->ID);
-
 							?>
 								<div class="col_5">
 									<a href="<?php echo get_permalink($r->ID); ?>">
@@ -220,7 +194,6 @@ the_post();
 									</a>
 								</div><!-- /.col_5 -->
 							<?php
-
 						} ?>
 					</div><!-- /.row -->
 				</div><!-- /.cols -->
@@ -231,7 +204,6 @@ the_post();
 	</section><!-- /#content -->
   <?php inf_browse_by(); ?>
 <?php get_footer(); ?>
-
 <?php
 function inf_market_slider_market() {
   global $post;
@@ -247,7 +219,6 @@ function inf_market_slider_market() {
   }
 }
 ?>
-
 <script>
 jQuery(window).load(function() {
   //jQuery('.shop-main .inner.slides').flexslider();

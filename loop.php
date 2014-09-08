@@ -169,7 +169,6 @@
 			<div class="cl">&nbsp;</div>
 		</div>
 	<?php endif;
-
 else : ?>
 	<div id="container" class="row">
 		<div class="item error404 not-found">

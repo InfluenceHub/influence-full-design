@@ -1,10 +1,7 @@
-
 <?php
-
 $available_post_categories = inf_get_post_categories();
 $available_products = inf_get_products();
 $link_targets = inf_link_targets();
-
 /*
 Carbon_Container::factory('custom_fields', __('Home template settings', 'inf'))
 	->show_on_template(array('template-home.php'))
@@ -12,7 +9,6 @@ Carbon_Container::factory('custom_fields', __('Home template settings', 'inf'))
 	->add_fields(array(
 		Carbon_Field::factory('text', 'inf_home_latest_posts_title', 'Latest posts section title')
 			->set_default_value('Latest looks'),
-
 		Carbon_Field::factory('text', 'inf_home_videos_section_title', 'Videos section title')
 			->set_default_value('Video'),
 		Carbon_Field::factory('attachment', 'inf_home_videos_ad_image_id', 'Ad image')
@@ -20,12 +16,10 @@ Carbon_Container::factory('custom_fields', __('Home template settings', 'inf'))
 		Carbon_Field::factory('text', 'inf_home_videos_ad_image_link_url', 'Ad link'),
 		Carbon_Field::factory('select', 'inf_home_videos_ad_image_link_target', 'Open link in')
 			->add_options($link_targets),
-
 		Carbon_Field::factory('text', 'inf_home_social_section_title', 'Social section title')
 			->set_default_value('SOCIAL')
 	));
 */
-
 Carbon_Container::factory('custom_fields', __('Product of the Day', 'inf'))
 	->show_on_template(array('template-home.php'))
 	->show_on_post_type('page')
@@ -34,7 +28,6 @@ Carbon_Container::factory('custom_fields', __('Product of the Day', 'inf'))
 			->set_post_type(array('rewardstyle_products'))
 			->set_max(1),
 	));
-
 Carbon_Container::factory('custom_fields', __('Video settings', 'inf'))
 	->show_on_post_type(array('inf_video'))
 	->add_fields(array(
@@ -48,20 +41,17 @@ Carbon_Container::factory('custom_fields', __('Video settings', 'inf'))
 			->set_required(true)
 			->help_text('Recommended image dimensions - 133 x 133 pixels.')
 	));
-
 Carbon_Container::factory('custom_fields', __('Additional settings', 'inf'))
 	->show_on_post_type(array('post'))
 	->add_fields(array(
 		Carbon_Field::factory('checkbox', 'inf_featured', 'Featured?'),
 	));
-
 Carbon_Container::factory('user_meta', __('User influencers', 'inf'))
 	->add_fields(array(
 		Carbon_Field::factory('relationship', 'inf_user_unfluencers', 'My influencers')
 			->set_post_type(array('inf_influencer'))
 			->set_max(-1),
 	));
-
 Carbon_Container::factory('custom_fields', __('Description settings', 'inf'))
 	->show_on_post_type(array('inf_influencer', 'post'))
 	->add_fields(array(
@@ -78,7 +68,6 @@ Carbon_Container::factory('custom_fields', __('Instagram Product', 'inf'))
 			->set_post_type(array('rewardstyle_products'))
 			->set_max(1),
 	));
-
 Carbon_Container::factory('custom_fields', __('Influencers template settings', 'inf'))
 	->show_on_template(array('template-influencers.php'))
 	->show_on_post_type('page')
@@ -88,14 +77,12 @@ Carbon_Container::factory('custom_fields', __('Influencers template settings', '
 		Carbon_Field::factory('select', 'inf_popular_posts_category', '\'Most popular\' category')
 			->add_options($available_post_categories),
 	));
-
 Carbon_Container::factory('custom_fields', __('Product settings', 'inf'))
 	->show_on_post_type(array('inf_product'))
 	->add_fields(array(
 		Carbon_Field::factory('text', 'inf_product_price', 'Price'),
 		Carbon_Field::factory('text', 'inf_product_link', 'Buy link')
 	));
-
 Carbon_Container::factory('custom_fields', __('Products settings', 'inf'))
 	->show_on_post_type(array('post', 'inf_theme'))
 	->add_fields(array(
@@ -141,7 +128,6 @@ Carbon_Container::factory('custom_fields', __('Right Column Quotes', 'inf'))
             ->help_text('Recommended image width - 494 pixels.')
         ))
 	));
-
 Carbon_Container::factory('custom_fields', __('Images settings', 'inf'))
 	->show_on_post_type(array('post'))
 	->add_fields(array(
@@ -177,7 +163,6 @@ Carbon_Container::factory('term_meta', __('Category settings', 'inf'))
 		Carbon_Field::factory('attachment', 'inf_category_image', 'Category image')
 			->help_text('Recommended image dimensions - 24 x 31 pixels.<br/>Shown on single post page.')
 	));
-
 Carbon_Container::factory('custom_fields', __('Sections settings', 'inf'))
 	->show_on_post_type('page')
 	->show_on_template('template-beauty.php')
@@ -197,7 +182,6 @@ Carbon_Container::factory('custom_fields', __('Sections settings', 'inf'))
 					->set_required(true)
 			))
 	));
-
 Carbon_Container::factory('custom_fields', __('"Videos" template settings', 'inf'))
 	->show_on_post_type('page')
 	->show_on_template('template-videos.php')
@@ -254,7 +238,6 @@ wpcf-hslide-title-two
 wpcf-hslide-link-url
 wpcf-hslide-image
 wpcf-hslide-bottom-image
-
 inf-hslide-title-two
 inf-hslide-link-url
 inf-hslide-image
@@ -275,7 +258,6 @@ Carbon_Container::factory('custom_fields', __('Slide Options', 'inf'))
 		Carbon_Field::factory('attachment', 'hslide_side_image3', 'Side Attachment 3')
 			->help_text('Image dimensions - 130 × 130 pixels.')
 	));
-
  Carbon_Container::factory('custom_fields', __('Box Options', 'inf'))
 	->show_on_post_type('inf_home_box1')
   ->add_fields(array(
@@ -307,8 +289,6 @@ Carbon_Container::factory('custom_fields', __('Featured Theme Two', 'inf'))
 			->set_max(4)
 	));
 */
-
-
 //Market Story  
 Carbon_Container::factory('custom_fields', __('More Featured Images', 'inf'))
 	->show_on_post_type(array('post', 'inf_market'))
@@ -318,7 +298,6 @@ Carbon_Container::factory('custom_fields', __('More Featured Images', 'inf'))
 				Carbon_Field::factory('attachment', 'inf_market_slider', 'Image')
 			))
 	));
-
 //Items of The Week Home Banner
 	Carbon_Container::factory('custom_fields', __('Items of The Week Options', 'inf'))
 	->show_on_post_type(array('post','inf_home_items'))
@@ -339,7 +318,6 @@ Carbon_Container::factory('custom_fields', __('More Featured Images', 'inf'))
 		Carbon_Field::factory('attachment', 'itemofweek5', 'Fith Item')
 			->help_text('Image dimensions - 133 × 133 pixels.')
 	));
-
 /*
 Carbon_Container::factory('term_meta', __('Category settings', 'inf'))
 	->show_on_taxonomy('category')

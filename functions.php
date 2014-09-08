@@ -6,7 +6,6 @@ function crb_init_theme() {
 	}
 	# Enqueue jQuery
 	wp_enqueue_script('jquery');
-
 	if (is_admin()) { /* Front end scripts and styles won't be included in admin area */
 		if (isset($_GET['page']) && $_GET['page'] == 'instagratetowordpress') {
 			wp_enqueue_style('instagratetowp', get_bloginfo('stylesheet_directory') . '/css/instagratetowp.css', array(), '1.0', 'all');
@@ -27,24 +26,19 @@ function crb_init_theme() {
   wp_enqueue_script('tubePlayer', get_bloginfo('stylesheet_directory') . '/js/jQuery.tubeplayer.min.js', array('jquery'));
 	wp_enqueue_script('jquery-functions', get_bloginfo('stylesheet_directory') . '/js/functions.js', array('jquery'), time());
 	wp_enqueue_style('google-font-chivo', 'http://fonts.googleapis.com/css?family=Chivo:400,400italic,900,900italic');
-
 	if(wp_script_is('jquery-colorbox', 'queue')) {
 		wp_enqueue_style('style-colorbox', get_bloginfo('stylesheet_directory') . '/css/colorbox.css');
 	}
-
 }
-
 define('CRB_THEME_DIR', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 add_action('init', 'crb_init_theme');
 add_action('after_setup_theme', 'crb_setup_theme');
-
 # To override theme setup process in a child theme, add your own crb_setup_theme() to your child theme's
 # functions.php file.
 if (!function_exists('crb_setup_theme')) {
 	function crb_setup_theme() {
 		include_once(CRB_THEME_DIR . 'lib/common.php');
 		include_once(CRB_THEME_DIR . 'lib/carbon-fields/carbon-fields.php');
-
 		# Theme supports
 		add_theme_support('automatic-feed-links');
 		
@@ -52,14 +46,12 @@ if (!function_exists('crb_setup_theme')) {
 		// add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
 		//add_theme_support('post-thumbnails', array('inf_influencer', 'post', 'rewardstyle_products', 'inf_video'));
     add_theme_support('post-thumbnails');
-
 		# Register Theme Menu Locations
 		add_theme_support('menus');
 		register_nav_menus(array(
 			'main-navigation'=>__('Main Menu'),
 			'footer-navigation'=>__('Footer Menu')
 		));
-
 		# Register CPTs
 		include_once(CRB_THEME_DIR . 'options/post-types.php');
 		
@@ -68,12 +60,10 @@ if (!function_exists('crb_setup_theme')) {
 		
 		# Add Actions
 		#add_action('widgets_init', 'crb_widgets_init');
-
 		add_action('carbon_register_fields', 'crb_attach_theme_options');
 		add_action('carbon_after_register_fields', 'crb_attach_theme_help');
 		add_action( 'p2p_init', 'inf_connection_types' );
 		add_action('wp_head', 'inf_attach_scripts');
-
     
 		# Add Custom image sizes
     add_image_size('inf_home_slide',                   342, 416, true);
@@ -81,16 +71,13 @@ if (!function_exists('crb_setup_theme')) {
     
 		//add_image_size('inf_most_popular',                 256, 387, true);
     add_image_size('inf_most_popular',                 227, 333, array('center', 'top'));
-
 		add_image_size('inf_influencer_listing',           237, 369, true);
 		//add_image_size('inf_influencer_post_listing',      176, 268      );
     add_image_size('inf_influencer_post_listing',      183, 346, true);
 		add_image_size('inf_influencer_single',            365, 584, true);
 		add_image_size('inf_influencer_product',           168, 173, true);
 		add_image_size('inf_influencer_item_of_the_day',   365, 365, true);
-
 		add_image_size('rewardstyle_products',             179, 205, true);
-
 		//add_image_size('inf_post_single',                  300, 475, true);
     add_image_size('inf_post_single',                  412, 674, true);
 		add_image_size('inf_post_single_thumb',            99,  118, true);
@@ -105,7 +92,6 @@ if (!function_exists('crb_setup_theme')) {
 		
 		add_image_size('inf_beauty_product',               179, 190, true);
 		add_image_size('inf_beauty_product_no_labels',     168, 167, true);
-
 		add_image_size('inf_home_ad',                      158, 111, true);
 		//add_image_size('inf_home_featured',                214, 320, true);
     add_image_size('inf_home_featured',                500, 938, true);
@@ -115,7 +101,6 @@ if (!function_exists('crb_setup_theme')) {
     //add_image_size('inf_home_inst_prod',              313, 263, true);
     add_image_size('inf_home_inst_prod_nocrop',              298, 298, false);
     add_image_size('inf_home_inst_prod_nocrop_quad',		 298, 298, false);
-
 		add_image_size('inf_admin_thumbnail',              0,   40,  true);
 		//add_image_size('inf_video_thumbnail',              157, 96,  true);
     add_image_size('inf_video_thumbnail',              230, 294,  true);
@@ -131,7 +116,6 @@ if (!function_exists('crb_setup_theme')) {
 		# Add Filters
 	}
 }
-
 # Register Sidebars
 # Note: In a child theme with custom crb_setup_theme() this function is not hooked to widgets_init
 /*function crb_widgets_init() {
@@ -144,18 +128,15 @@ if (!function_exists('crb_setup_theme')) {
 		'after_title' => '</h2>',
 	));
 }*/
-
 function crb_attach_theme_options() {
 	# Attach fields
 	include_once(CRB_THEME_DIR . 'options/theme-options.php');
 	include_once(CRB_THEME_DIR . 'options/custom-fields.php');
 }
-
 function crb_attach_theme_help() {
 	# Theme Help needs to be after options/theme-options.php
 	include_once(CRB_THEME_DIR . 'lib/theme-help/theme-readme.php');
 }
-
 //Hide admin bar for all but admins
 //Never allow non-admins in the dashboard
 if (is_user_logged_in() and !current_user_can('manage_options')) {
@@ -165,9 +146,7 @@ if (is_user_logged_in() and !current_user_can('manage_options')) {
     exit;
   }
 }
-
 function inf_get_social_networks($part = 'header') {
-
 	if($part == 'header') {
 		$network_array = array(
 			'youtube' => 'https://www.youtube.com/user/TheInfluenceStyle',
@@ -185,10 +164,8 @@ function inf_get_social_networks($part = 'header') {
       'facebook' => 'http://fb.me'
 		);
 	}
-
 	return $network_array;
 }
-
 function inf_list_social_networks($part = 'header') {
 	$social_networks = inf_get_social_networks($part);
 	foreach($social_networks as $network_name => $network_address) {
@@ -199,41 +176,32 @@ function inf_list_social_networks($part = 'header') {
 		<li><a href="<?php echo esc_url($current_network_address); ?>" target="_blank" class="<?php echo $network_name; ?>" title="<?php echo $network_name; ?>"></a></li>
 	<?php }
 }
-
 function inf_sitename($return = false) {
-
 	$sitename = esc_attr(get_bloginfo('name'));
-
 	if($return) {
 		return $sitename;
 	}
-
 	echo $sitename;
 }
-
 function inf_connection_types() {
 	p2p_register_connection_type( array(
 		'name' => 'posts_to_influencers',
 		'from' => 'post',
 		'to' => 'inf_influencer'
 	) );
-
     p2p_register_connection_type( array(
         'name' => 'users_to_influencers',
         'from' => 'inf_influencer',
         'to' => 'user'
     ) );
-
     //inf_do_this_daily();
 }
-
 add_action('save_post', 'inf_influencer_letter_meta');
 function inf_influencer_letter_meta($post_id) {
 	$post_obj = get_post($post_id);
 	$first_letter = strtolower(substr($post_obj->post_title, 0, 1));
 	update_post_meta($post_id, '_first_letter', $first_letter);
 }
-
 add_action( 'publish_post', 'inf_publish_post' );
 function inf_publish_post($post_id) {
     $post_obj = get_post($post_id);
@@ -243,7 +211,6 @@ function inf_publish_post($post_id) {
         'posts_per_page' => 1
     );
     $connected = get_posts($args);
-
     foreach($connected as $influencer)
     {
         update_post_meta($influencer->ID, "lastEmailListUpdate", time());
@@ -251,7 +218,6 @@ function inf_publish_post($post_id) {
             'connected_type' => 'users_to_influencers',
             'connected_items' => $influencer->ID
         ) );
-
         foreach($users as $user)
         {
             $userID = $user->ID;
@@ -262,9 +228,7 @@ function inf_publish_post($post_id) {
             update_user_meta($userID, "lastEmailListUpdate", time());
         }*/
     }
-
 }
-
 add_action( 'wp', 'inf_setup_schedule' );
 /**
  * On an early action hook, check if the hook is scheduled - if not, schedule it.
@@ -277,20 +241,15 @@ function inf_setup_schedule() {
         wp_schedule_event( $timeoffset, 'daily', 'inf_daily_event');
     }*/
 }
-
 add_action( 'inf_daily_event', 'inf_do_this_daily' );
 /**
  * On the scheduled action hook, run a function.
  */
 function inf_do_this_daily($daysBackToCollect = 1) {
-
     $time = strtotime("today");
     $time -= (24 * 60 * 60 * $daysBackToCollect);
-
     //$influencers = get_posts(array('meta_key' => 'lastEmailListUpdate', "type" => "influencer", 'meta_value' => $time,));
     $influencers = get_posts(array('meta_key' => 'lastEmailListUpdate', 'meta_value' => $time, 'meta_compare' => ">", "post_type" => "inf_influencer"));
-
-
     include "lib/smarty/Smarty.class.php";
     $smarty = new \Smarty();
     $smarty->template_dir = dirname(__FILE__) .  '/templates/';
@@ -301,7 +260,6 @@ function inf_do_this_daily($daysBackToCollect = 1) {
     $host = $_SERVER['HTTP_HOST'];
     $smarty->assign("imgBase", "http://" . $host .  "/");
     $smarty->assign("baseDomain", "http://" . $host);
-
     $emailDataArray = array();
     $emailAddresses = array();
     foreach($influencers as $influencer)
@@ -317,9 +275,7 @@ function inf_do_this_daily($daysBackToCollect = 1) {
                 ),
             ),
         );
-
         $todaysPosts = get_posts($args);
-
         foreach($todaysPosts as $iPost)
         {
             $meta = carbon_get_post_meta($iPost->ID, 'inf_post_products_sections', "complex");
@@ -336,33 +292,25 @@ function inf_do_this_daily($daysBackToCollect = 1) {
             }
             else $iPost->productImages = null;
         }
-
         if(empty($todaysPosts)) continue;
-
         $users = get_users( array(
             'connected_type' => 'users_to_influencers',
             'connected_items' => $infID,
             'suppress_filters' => false,
             'nopaging' => true
         ) );
-
         foreach($users as $user)
         {
             $userID = $user->ID;
-
             if(!isset($emailDataArray[$userID])) $emailDataArray[$userID] = array("user" => $user, "influencers" => array());
-
             $emailDataArray[$userID]['influencers'][$infID] = array("influencer" => $influencer, "posts" =>$todaysPosts);
-
         }
     }
-
     $subRenders = array();
     foreach($emailDataArray as $emailData)
     {
     	//$emailAddresses[] = 'philip@newthink.com';
         $emailAddresses[] = $emailData['user']->user_email;
-
         $smarty->assign("influencers", $emailData['influencers']);
         $render = $smarty->fetch("influencerdaily.tpl");
         //UNCOMMENT THIS TO RENDER EMAIL DIRECTLY TO BROWSER
@@ -370,12 +318,9 @@ function inf_do_this_daily($daysBackToCollect = 1) {
 		
         $subRenders[] = $render;
     }
-
     include "lib/sendgrid-php/sendgrid-php.php";
-
     $sendgrid = new SendGrid('theinfluence', 'theinfluence1');
     $email       = new SendGrid\Email();
-
     $recipients = $emailAddresses;
     $email->setFrom("updates@theinfluence.com")->
         setFromName("The Influence")->
@@ -383,11 +328,8 @@ function inf_do_this_daily($daysBackToCollect = 1) {
         setTos($recipients)->
         addSubstitution("%subRender%", $subRenders)->
         setHtml("%subRender%");
-
     $result = $sendgrid->send($email);
-
 }
-
 function inf_letters() {
 	$letter_array = array(
 		'a' => array(),
@@ -417,22 +359,18 @@ function inf_letters() {
 		'y' => array(),
 		'z' => array()
 	);
-
 	return $letter_array;
 }
-
 function inf_get_influencers() {
 	$user_id = get_current_user_id();
 	return carbon_get_user_meta($user_id, 'inf_user_unfluencers');
 }
-
 function inf_content_edit() {
 	the_content(__('<p class="serif">Read the rest of this page &raquo;</p>')); ?>
 	<div class="cl">&nbsp;</div>
 	<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
 	<?php
 }
-
 add_action('template_redirect', 'inf_handle_users');
 function inf_handle_users() {
 	//if user not logged in
@@ -445,7 +383,6 @@ function inf_handle_users() {
     $info['user_password'] = trim($_POST['az-password']);
     //azFreq checkboxes
     $info['user_login']    = sanitize_user($info['user_email']);
-
     $formerror = array();
     $formvals  = $info;
     if($info['user_email'] <= '') {
@@ -479,7 +416,6 @@ function inf_handle_users() {
   //Update influencers for current user
   if(isset($_POST['influencers']) && $_POST['influencers'] != '') {
 		$influencers = $_POST['influencers'];
-
 		if(is_array($influencers)) {
 			if (empty($user_id)) {
         $user_id = get_current_user_id();
@@ -489,17 +425,13 @@ function inf_handle_users() {
             {
                 $influencersToRemove = array_diff($prevInfluencers[0], $influencers);
             }
-
-
 			update_usermeta($user_id, '_inf_user_unfluencers', $influencers);
-
             //Connect influencers using a different connection scheme for better/faster queries (e.g. getting all users connected to a particular influencer)
             foreach($influencers as $influencerID)
             {
                 p2p_type( 'users_to_influencers' )->connect( $influencerID, $user_id, array(
                 ) );
             }
-
             //Disconnect influencers that were unchecked in the form
             foreach($influencersToRemove as $influencerToRemoveID)
             {
@@ -507,18 +439,14 @@ function inf_handle_users() {
             }
 		}
 	}
-
 	if(isset($_POST['influencer_subscribe']) && $_POST['influencer_subscribe'] != '') {
 		$influencer_subscribe = intval($_POST['influencer_subscribe']);
-
 		$post_obj = get_post($influencer_subscribe);
-
 		if($post_obj) {
 			$user_id = get_current_user_id();
 			$current_user_influencers = carbon_get_user_meta($user_id, 'inf_user_unfluencers');
       if (empty($current_user_influencers)) { $current_user_influencers = array(); }
             array_push($current_user_influencers, $post_obj->ID);
-
             /**
              * Connect influencers using a different connection scheme for better/faster queries (e.g. getting all users connected to a particular influencer)
              * This is the most efficient way to do this using the plugins, apis and utilities provided to us by wordpress, but it is definitely not
@@ -527,24 +455,18 @@ function inf_handle_users() {
              * */
             p2p_type( 'users_to_influencers' )->connect( $post_obj->ID, $user_id, array(
             ) );
-
 			update_usermeta($user_id, '_inf_user_unfluencers', $current_user_influencers);
 		}
 	}
-
 	if(isset($_POST['influencer_unsubscribe']) && $_POST['influencer_unsubscribe'] != '') {
 		$influencer_unsubscribe = intval($_POST['influencer_unsubscribe']);
-
 		$post_obj = get_post($influencer_unsubscribe);
-
 		if($post_obj) {
 			$user_id = get_current_user_id();
 			$current_user_influencers = carbon_get_user_meta($user_id, 'inf_user_unfluencers');
-
 			if(($key = array_search($influencer_unsubscribe, $current_user_influencers)) !== false) {
 				unset($current_user_influencers[$key]);
 			}
-
             p2p_type( 'users_to_influencers' )->disconnect( $post_obj->ID, $user_id);
 			update_usermeta($user_id, '_inf_user_unfluencers', $current_user_influencers);
 		}
@@ -555,28 +477,21 @@ function inf_handle_users() {
     wp_redirect($redirect_to); exit;
   }
 }
-
 function inf_users_can_register() {
 	return get_option('users_can_register');
 }
-
 function inf_get_post_categories() {
 	$args = array(
 		'taxonomy' => 'category',
 		'hide_empty' => false
 	);
-
 	$cats = get_categories($args);
-
 	$category_ids[''] = 'None';
-
 	foreach($cats as $cat) {
 		$category_ids[$cat->term_id] = $cat->name;
 	}
-
 	return $category_ids;
 }
-
 function inf_attach_scripts() {  
   return false;
 ?>
@@ -592,19 +507,16 @@ function inf_attach_scripts() {
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	<script src="//platform.tumblr.com/v1/share.js" type="text/javascript"></script>
 <?php }
-
 function inf_get_thumb_url($src, $w = '', $h = '', $zc = 1, $ap = '') {
 	$src = urlencode($src);
 	return get_bloginfo('template_directory') . '/lib/timthumb.php?src=' . $src . ( ($w) ? '&amp;w=' . $w : '') . ( ($h) ? '&amp;h=' . $h : '') . '&amp;zc=' . $zc . ($ap != '' ? $ap : '');
 }
-
 add_filter('manage_post_posts_columns', 'inf_custom_post_columns');
 function inf_custom_post_columns($defaults) {
 	$defaults['featured_image'] = __('Featured image', 'inf');
 	$defaults['inf_featured'] = __('Featured on home page?', 'inf'); //featured_post
 	return $defaults;
 }
-
 add_action('manage_post_posts_custom_column', 'inf_custom_post_column_values', 10, 2);
 function inf_custom_post_column_values($column_name, $post_id) {
 	if( $column_name == 'inf_featured' ) {
@@ -619,20 +531,15 @@ function inf_custom_post_column_values($column_name, $post_id) {
 		}
 	}
 }
-
 function inf_get_id_by_template($template) {
 	$template_page = get_posts(array('post_type'=>'page', 'posts_per_page'=>1, 'meta_query'=>array(array('key'=>'_wp_page_template', 'value'=>$template)) ));
-
 	if (!empty($template_page)) {
 		return $template_page[0]->ID;
 	}
-
 	return false;
 }
-
 function inf_get_video_id($video_url) {
 	$video_id = '';
-
 	if (preg_match('~youtu~', $video_url)) {
 		$pattern = '%^(?:https?://)?(?:www\.)?(?:youtu\.be/|youtube\.com(?:/embed/|/v/|/watch\?v=))([\w-]{10,12})$%x';
 	    $result = preg_match($pattern, $video_url, $matches);
@@ -643,14 +550,10 @@ function inf_get_video_id($video_url) {
 		preg_match('~vimeo.com/([\d]+)~', $video_url, $video_id);
 		return $video_id[1];
 	}
-
 	return $video_id;
 }
-
 function inf_generate_iframe($video_url, $width = 610, $height = 355) {
-
 	$video_id = inf_get_video_id($video_url);
-
 	if(is_numeric($video_id)) {
 		$link = 'http://player.vimeo.com/video/' . $video_id;
 	} else {
@@ -658,7 +561,6 @@ function inf_generate_iframe($video_url, $width = 610, $height = 355) {
 	} ?>
 	<iframe width="<?php echo $width; ?>" height="<?php echo $height; ?>" src="<?php echo $link; ?>" frameborder="0" allowfullscreen></iframe>
 <?php }
-
 add_action('wp_head', 'inf_create_posts_views_table');
 function inf_create_posts_views_table() {
 	global $wpdb;
@@ -672,7 +574,6 @@ function inf_create_posts_views_table() {
 	require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 	dbDelta($sql);
 }
-
 function inf_get_post_view_count($id) {
 	global $wpdb;
 	$sql = "SELECT COUNT(post_id) as count
@@ -680,7 +581,6 @@ function inf_get_post_view_count($id) {
 			WHERE post_id = {$id}";
 	return $wpdb->get_results($sql);
 }
-
 function inf_update_posts_views($postID) {
 	global $wpdb;
 	$table_name = $wpdb->prefix . "posts_views";
@@ -688,7 +588,6 @@ function inf_update_posts_views($postID) {
 	$sql = "INSERT INTO $table_name (post_id,date_viewed) VALUES ($postID, '$date')";
 	$wpdb->query($sql);
 }
-
 function inf_get_most_popular_posts($count = 5, $interval = '') {
 	global $wpdb;
 	$where = '';
@@ -707,27 +606,21 @@ function inf_get_most_popular_posts($count = 5, $interval = '') {
 	$results = $wpdb->get_results($sql);
 	return $results;
 }
-
 function inf_get_products() {
 	$args = array(
 		'post_type' => 'rewardstyle_products',
 		'posts_per_page' => -1
 	);
-
 	$products = get_posts($args);
-
 	$available_products = array();
-
 	if(!empty($products)) {
 		$available_products[''] = 'None';
 		foreach($products as $ap) {
 			$available_products[$ap->ID] = $ap->post_title;
 		}
 	}
-
 	return $available_products;
 }
-
 function inf_get_instagram_feed() {
 	if(class_exists('itw_Instagram')) {
 		$access_token = get_option('itw_accesstoken');
@@ -740,7 +633,6 @@ function inf_get_instagram_feed() {
 			$loginUrl = $instagram->authorizeUrl(REDIRECT_URI.'?return_uri='.htmlentities(ITW_RETURN_URI));
 		
 		} else {   
-
 			//logged in
 			try {
 				$username = get_option('itw_username');
@@ -749,7 +641,6 @@ function inf_get_instagram_feed() {
 				$msg_class = 'itw_connected';
 				$cache_key = 'instagram_feed_' . $username;
 				$cached = get_option($cache_key);
-
 				if ($cached!==-1) {
 				    $expires = $cached['expires'];
 				    if ($expires > time()) {
@@ -758,9 +649,7 @@ function inf_get_instagram_feed() {
 				}
 				
 				$data = array();
-
 				$feed = $instagram->get('users/'.$userid.'/media/recent');
-
 				if (!is_wp_error($feed)) {
 					if($feed->meta->code == 200) {
 						$images = array();
@@ -773,7 +662,6 @@ function inf_get_instagram_feed() {
 						}
 					}
 				}
-
 				if($data) {
 					krsort($data);
 					foreach($data as $image) {
@@ -781,7 +669,6 @@ function inf_get_instagram_feed() {
 					}
 					$data = $asc_data;
 				}
-
 				if(empty($data)) {
 					$data = get_option($cache_key);
 				}
@@ -793,25 +680,18 @@ function inf_get_instagram_feed() {
 					        'expires'=>time() + 3600,
 					        'data'=>$data
 					    ));
-
 					}
 				}
 				return $data;
-
 			} catch (Exception $e) {
 				
 			}
-
 		}
 	}
-
 	return false;
 }
-
 function inf_page_title($wrapper_start = '<h3 class="page-title">', $wrapper_end = '</h3>') {
-
 	$title = '';
-
 	if(is_home()) :
 		$blog_page_id = get_option('page_for_posts');
 		if($blog_page_id != 0) :
@@ -841,12 +721,10 @@ function inf_page_title($wrapper_start = '<h3 class="page-title">', $wrapper_end
 		global $post;
 		$title = get_the_title($post->ID);
 	endif;
-
 	if(!empty($title)) {
 		echo $wrapper_start . $title . $wrapper_end;
 	}
 }
-
 function inf_search_filter($query) {
 	if(!is_admin()) {
 	    if ($query->is_search) {
@@ -856,32 +734,24 @@ function inf_search_filter($query) {
 	return $query;
 }
 add_filter('pre_get_posts', 'inf_search_filter');
-
 function inf_link_targets() {
 	return array(
 		'_blank' => 'A new window/tab',
 		'_self' => 'The same window/tab'
 	);
 }
-
 function inf_get_terms_for_carbon_select($taxonomy) {
-
 	$terms = get_terms($taxonomy);
-
 	$available_terms = array();
-
 	if(!empty($terms)) {
 		$available_terms[''] = '';
 		foreach($terms as $t) {
 			$available_terms[$t->term_id] = $t->name;
 		}
 	}
-
 	return $available_terms;
 }
-
 function inf_footer_signup() { ?>
-
   <div class="browse no-mobile">
     <div class="shell">
       <div class="browse-holder">
@@ -898,43 +768,32 @@ function inf_footer_signup() { ?>
       </div>
     </div>
   </div>
-
 <?php }
-
 function inf_browse_by() { ?>
 	<div class="browse no-mobile">
 		<div class="shell">
 			<div class="browse-holder">
 				<?php $letters_influencers = inf_letters();
-
 					$args = array(
 						'post_type' => 'inf_influencer',
 						'posts_per_page' => -1,
 						'orderby' => 'title',
 						'order' => 'ASC'
 					);
-
 				 $influencers = get_posts($args);
-
 				foreach($influencers as $influencer) :
-
 					$first_letter = strtolower(substr($influencer->post_title, 0, 1));
-
 					$letters_influencers[$first_letter][] = $influencer;
-
 				endforeach; ?>
 				<ul class="word-list">
 					<li class="browse-by-az">Browse By influencer</li>
           <?php $influencers_count = 0;
-
 					$influencers_page_id = inf_get_id_by_template('template-influencers.php');
-
 					if($influencers_page_id) {
 						$influencers_link = get_permalink($influencers_page_id);
 					} else {
 						$influencers_link = '#';
 					}
-
 					foreach($letters_influencers as $letter => $influencers) :
 						$extraClass = '';
             if ($letter == 'a') { $extraClass = ' class="first"'; }
@@ -980,7 +839,6 @@ function inf_browse_by() { ?>
 		</div>
 	</div><!-- /.browse -->
 <?php }
-
 //Get the thumbnail for a youtube or vimeo video
 function inf_video_image($url){
   $image_url = parse_url($url);
@@ -992,7 +850,6 @@ function inf_video_image($url){
     return $hash[0]["thumbnail_medium"];
   }
 }
-
 //Get influencer name from post for this influencer
 function inf_name_from_post($post_id) {
   $args = array(
@@ -1008,7 +865,6 @@ function inf_name_from_post($post_id) {
   }
   return get_the_title($cid);
 }
-
 //AJAX LOGIN
 function ajax_login_init(){
     wp_register_script('ajax-login-script', get_template_directory_uri() . '/js/ajax-login-script.js', array('jquery') ); 
@@ -1034,17 +890,14 @@ function ajax_login_init(){
 if (!is_user_logged_in()) {
     add_action('init', 'ajax_login_init');
 }
-
 function ajax_login(){
   // First check the nonce, if it fails the function will break
   check_ajax_referer( 'ajax-login-nonce', 'security' );
-
   // Nonce is checked, get the POST data and sign user on
   $info = array();
   $info['user_login'] = $_POST['username'];
   $info['user_password'] = $_POST['password'];
   $info['remember'] = true;
-
   $user_signon = wp_signon($info, false);
     
   if ( is_wp_error($user_signon) ){
@@ -1052,31 +905,24 @@ function ajax_login(){
   } else {
     echo json_encode(array('loggedin'=>true, 'message'=>__('success')));
   }
-
   die();
 }
-
 function ajax_reset(){
   // First check the nonce, if it fails the function will break
   check_ajax_referer( 'ajax-login-nonce', 'security' );
-
   //Include wp-load.php for retrieve_password() function
   $user_login = sanitize_text_field($_POST['username']);
-
   $user_reset = inf_retrieve_password($user_login);
   if (!$user_reset) {
     echo json_encode(array('message'=>__('Sorry, couldn\'t find that email.')));
   } else {
     echo json_encode(array('message'=>__('Check your email for a link to create a new password.')));
   }
-
   die();
 }
-
 function ajax_registration(){
   // First check the nonce, if it fails the function will break
   check_ajax_referer( 'ajax-login-nonce', 'security' );
-
   // Nonce is checked, get the POST data and sign user on
   $info = array();
   $info['user_email']    = trim($_POST['username']);
@@ -1084,9 +930,7 @@ function ajax_registration(){
   if ($info['user_email'] == 'EMAIL') { $info['user_email'] = ''; }
   if ($info['user_password'] == 'PASSWORD') { $info['user_password'] = ''; }
   $info['user_login']    = sanitize_user($info['user_email']);
-
   $myerror = '';
-
   if($info['user_email'] <= '') {
     $myerror .= 'email ';
   } 
@@ -1109,7 +953,6 @@ function ajax_registration(){
   }
   die();
 }
-
 /**
  * Modified retrieve password function
  * Handles sending password retrieval email to user.
@@ -1120,7 +963,6 @@ function ajax_registration(){
  */
 function inf_retrieve_password($user_login) {
     global $wpdb, $current_site;
-
     if ( empty( $user_login) ) {
         return false;
     } else if ( strpos( $user_login, '@' ) ) {
@@ -1131,26 +973,18 @@ function inf_retrieve_password($user_login) {
         $login = trim($user_login);
         $user_data = get_user_by('login', $login);
     }
-
     do_action('lostpassword_post');
-
-
     if ( !$user_data ) return false;
-
     // redefining user_login ensures we return the right case in the email
     $user_login = $user_data->user_login;
     $user_email = $user_data->user_email;
-
     do_action('retreive_password', $user_login);  // Misspelled and deprecated
     do_action('retrieve_password', $user_login);
-
     $allow = apply_filters('allow_password_reset', true, $user_data->ID);
-
     if ( ! $allow )
         return false;
     else if ( is_wp_error($allow) )
         return false;
-
     $key = $wpdb->get_var($wpdb->prepare("SELECT user_activation_key FROM $wpdb->users WHERE user_login = %s", $user_login));
     if ( empty($key) ) {
         // Generate something random for a key...
@@ -1165,25 +999,19 @@ function inf_retrieve_password($user_login) {
     $message .= __('If this was a mistake, just ignore this email and nothing will happen.') . "\r\n\r\n";
     $message .= __('To reset your password, visit the following address:') . "\r\n\r\n";
     $message .= '<' . network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user_login), 'login') . ">\r\n";
-
     if ( is_multisite() )
         $blogname = $GLOBALS['current_site']->site_name;
     else
         // The blogname option is escaped with esc_html on the way into the database in sanitize_option
         // we want to reverse this for the plain text arena of emails.
         $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
-
     $title = sprintf( __('[%s] Password Reset'), $blogname );
-
     $title = apply_filters('retrieve_password_title', $title);
     $message = apply_filters('retrieve_password_message', $message, $key);
-
     if ( $message && !wp_mail($user_email, $title, $message) )
         wp_die( __('The e-mail could not be sent.') . "<br />\n" . __('Possible reason: your host may have disabled the mail() function...') );
-
     return true;
 }
-
 //Vertical social share buttons
 function inf_social_share($thisURL, $thisTITLE, $thisIMG, $thisDESC) {
   $thisURL   = urlencode($thisURL);

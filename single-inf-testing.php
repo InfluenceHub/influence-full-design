@@ -93,19 +93,14 @@
                 foreach($products_sections as $key=>$ps) {
                   if ($key == 0) {
                   $products = $ps['products'];
-
                   if(!empty($products)) : ?>
                     <h3><?php echo $ps['section_name']; ?></h3>
                     <div class="prod-row">
                       <ul>
                         <?php $index = 1;
-
                         foreach($products as $p) {
-
                           $post_obj = get_post($p);
-
                           if(!empty($post_obj)) :
-
                             $post_id = $post_obj->ID;
                             $post_title = get_the_title($post_id);
                             $shortTitle = $post_title;
@@ -133,7 +128,6 @@
                             </li>
                              <?php
                           endif;
-
                         } ?>
                       </ul>
                     </div><!-- /.prod-row -->

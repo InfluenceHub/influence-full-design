@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 /**
  * Server Side Chrome PHP debugger class
  *
@@ -27,67 +26,54 @@ class ChromePhp
      * @var string
      */
     const VERSION = '4.1.0';
-
     /**
      * @var string
      */
     const HEADER_NAME = 'X-ChromeLogger-Data';
-
     /**
      * @var string
      */
     const BACKTRACE_LEVEL = 'backtrace_level';
-
     /**
      * @var string
      */
     const LOG = 'log';
-
     /**
      * @var string
      */
     const WARN = 'warn';
-
     /**
      * @var string
      */
     const ERROR = 'error';
-
     /**
      * @var string
      */
     const GROUP = 'group';
-
     /**
      * @var string
      */
     const INFO = 'info';
-
     /**
      * @var string
      */
     const GROUP_END = 'groupEnd';
-
     /**
      * @var string
      */
     const GROUP_COLLAPSED = 'groupCollapsed';
-
     /**
      * @var string
      */
     const TABLE = 'table';
-
     /**
      * @var string
      */
     protected $_php_version;
-
     /**
      * @var int
      */
     protected $_timestamp;
-
     /**
      * @var array
      */
@@ -96,36 +82,30 @@ class ChromePhp
         'columns' => array('log', 'backtrace', 'type'),
         'rows' => array()
     );
-
     /**
      * @var array
      */
     protected $_backtraces = array();
-
     /**
      * @var bool
      */
     protected $_error_triggered = false;
-
     /**
      * @var array
      */
     protected $_settings = array(
         self::BACKTRACE_LEVEL => 1
     );
-
     /**
      * @var ChromePhp
      */
     protected static $_instance;
-
     /**
      * Prevent recursion when working with objects referring to each other
      *
      * @var array
      */
     protected $_processed = array();
-
     /**
      * constructor
      */
@@ -135,7 +115,6 @@ class ChromePhp
         $this->_timestamp = $this->_php_version >= 5.1 ? $_SERVER['REQUEST_TIME'] : time();
         $this->_json['request_uri'] = $_SERVER['REQUEST_URI'];
     }
-
     /**
      * gets instance of this class
      *
@@ -148,7 +127,6 @@ class ChromePhp
         }
         return self::$_instance;
     }
-
     /**
      * logs a variable to the console
      *
@@ -160,7 +138,6 @@ class ChromePhp
         $args = func_get_args();
         return self::_log('', $args);
     }
-
     /**
      * logs a warning to the console
      *
@@ -172,7 +149,6 @@ class ChromePhp
         $args = func_get_args();
         return self::_log(self::WARN, $args);
     }
-
     /**
      * logs an error to the console
      *
@@ -184,7 +160,6 @@ class ChromePhp
         $args = func_get_args();
         return self::_log(self::ERROR, $args);
     }
-
     /**
      * sends a group log
      *
@@ -195,7 +170,6 @@ class ChromePhp
         $args = func_get_args();
         return self::_log(self::GROUP, $args);
     }
-
     /**
      * sends an info log
      *
@@ -207,7 +181,6 @@ class ChromePhp
         $args = func_get_args();
         return self::_log(self::INFO, $args);
     }
-
     /**
      * sends a collapsed group log
      *
@@ -218,7 +191,6 @@ class ChromePhp
         $args = func_get_args();
         return self::_log(self::GROUP_COLLAPSED, $args);
     }
-
     /**
      * ends a group log
      *
@@ -229,7 +201,6 @@ class ChromePhp
         $args = func_get_args();
         return self::_log(self::GROUP_END, $args);
     }
-
     /**
      * sends a table log
      *
@@ -240,7 +211,6 @@ class ChromePhp
         $args = func_get_args();
         return self::_log(self::TABLE, $args);
     }
-
     /**
      * internal logging call
      *
@@ -253,27 +223,20 @@ class ChromePhp
         if (count($args) == 0 && $type != self::GROUP_END) {
             return;
         }
-
         $logger = self::getInstance();
-
         $logger->_processed = array();
-
         $logs = array();
         foreach ($args as $arg) {
             $logs[] = $logger->_convert($arg);
         }
-
         $backtrace = debug_backtrace(false);
         $level = $logger->getSetting(self::BACKTRACE_LEVEL);
-
         $backtrace_message = 'unknown';
         if (isset($backtrace[$level]['file']) && isset($backtrace[$level]['line'])) {
             $backtrace_message = $backtrace[$level]['file'] . ' : ' . $backtrace[$level]['line'];
         }
-
         $logger->_addRow($logs, $backtrace_message, $type);
     }
-
     /**
      * converts an object to a better format for logging
      *
@@ -286,58 +249,45 @@ class ChromePhp
         if (!is_object($object)) {
             return $object;
         }
-
         //Mark this object as processed so we don't convert it twice and it
         //Also avoid recursion when objects refer to each other
         $this->_processed[] = $object;
-
         $object_as_array = array();
-
         // first add the class name
         $object_as_array['___class_name'] = get_class($object);
-
         // loop through object vars
         $object_vars = get_object_vars($object);
         foreach ($object_vars as $key => $value) {
-
             // same instance as parent object
             if ($value === $object || in_array($value, $this->_processed, true)) {
                 $value = 'recursion - parent object [' . get_class($value) . ']';
             }
             $object_as_array[$key] = $this->_convert($value);
         }
-
         $reflection = new ReflectionClass($object);
-
         // loop through the properties and add those
         foreach ($reflection->getProperties() as $property) {
-
             // if one of these properties was already added above then ignore it
             if (array_key_exists($property->getName(), $object_vars)) {
                 continue;
             }
             $type = $this->_getPropertyKey($property);
-
             if ($this->_php_version >= 5.3) {
                 $property->setAccessible(true);
             }
-
             try {
                 $value = $property->getValue($object);
             } catch (ReflectionException $e) {
                 $value = 'only PHP 5.3 can access private/protected properties';
             }
-
             // same instance as parent object
             if ($value === $object || in_array($value, $this->_processed, true)) {
                 $value = 'recursion - parent object [' . get_class($value) . ']';
             }
-
             $object_as_array[$type] = $this->_convert($value);
         }
         return $object_as_array;
     }
-
     /**
      * takes a reflection property and returns a nicely formatted key of the property name
      *
@@ -350,16 +300,13 @@ class ChromePhp
         if ($property->isPublic()) {
             return 'public' . $static . ' ' . $property->getName();
         }
-
         if ($property->isProtected()) {
             return 'protected' . $static . ' ' . $property->getName();
         }
-
         if ($property->isPrivate()) {
             return 'private' . $static . ' ' . $property->getName();
         }
     }
-
     /**
      * adds a value to the data array
      *
@@ -372,28 +319,22 @@ class ChromePhp
         if (in_array($backtrace, $this->_backtraces)) {
             $backtrace = null;
         }
-
         // for group, groupEnd, and groupCollapsed
         // take out the backtrace since it is not useful
         if ($type == self::GROUP || $type == self::GROUP_END || $type == self::GROUP_COLLAPSED) {
             $backtrace = null;
         }
-
         if ($backtrace !== null) {
             $this->_backtraces[] = $backtrace;
         }
-
         $row = array($logs, $backtrace, $type);
-
         $this->_json['rows'][] = $row;
         $this->_writeHeader($this->_json);
     }
-
     protected function _writeHeader($data)
     {
         header(self::HEADER_NAME . ': ' . $this->_encode($data));
     }
-
     /**
      * encodes the data to be sent along with the request
      *
@@ -404,7 +345,6 @@ class ChromePhp
     {
         return base64_encode(utf8_encode(json_encode($data)));
     }
-
     /**
      * adds a setting
      *
@@ -416,7 +356,6 @@ class ChromePhp
     {
         $this->_settings[$key] = $value;
     }
-
     /**
      * add ability to set multiple settings in one call
      *
@@ -429,7 +368,6 @@ class ChromePhp
             $this->addSetting($key, $value);
         }
     }
-
     /**
      * gets a setting
      *

@@ -7,7 +7,6 @@ function crb_load_widgets() {
 	// register_widget('ThemeWidgetExample');
 }
 add_action('widgets_init', 'crb_load_widgets');
-
 /**
  * Displays a block with latest tweets from particular user
  */
@@ -15,7 +14,6 @@ class CrbLatestTweetsWidget extends Carbon_Widget {
 	protected $form_options = array(
 		'width' => 300
 	);
-
 	function __construct() {
 		$this->setup('Latest Tweets', 'Displays a block with your latest tweets', array(
 			Carbon_Field::factory('text', 'title', 'Title'),
@@ -23,7 +21,6 @@ class CrbLatestTweetsWidget extends Carbon_Widget {
 			Carbon_Field::factory('text', 'count', 'Number of Tweets to show')->set_default_value('5')
 		));
 	}
-
 	/**
 	 * Called when rendering the widget in the front-end
 	 */
@@ -31,12 +28,10 @@ class CrbLatestTweetsWidget extends Carbon_Widget {
 		if ( !carbon_twitter_is_configured() ) {
 			return; //twitter settings are not configured
 		}
-
 		$tweets = TwitterHelper::get_tweets($instance['username'], $instance['count']);
 		if (empty($tweets)) {
 			return; //no tweets, or error while retrieving
 		}
-
 		extract($args);
 		if ($instance['title']) {
 			echo $before_title . $instance['title'] . $after_title;
@@ -50,7 +45,6 @@ class CrbLatestTweetsWidget extends Carbon_Widget {
 		<?php
 	}
 }
-
 /**
  * An example widget
  */

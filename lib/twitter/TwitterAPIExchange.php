@@ -20,7 +20,6 @@ class CrbTwitterAPIExchange
     private $getfield;
     protected $oauth;
     public $url;
-
     /**
      * Create the API access object. Requires an array of settings::
      * oauth access token, oauth access token secret, consumer key, consumer secret
@@ -43,7 +42,6 @@ class CrbTwitterAPIExchange
         {
             throw new Exception('Make sure you are passing in the correct parameters');
         }
-
         $this->oauth_access_token = $settings['oauth_access_token'];
         $this->oauth_access_token_secret = $settings['oauth_access_token_secret'];
         $this->consumer_key = $settings['consumer_key'];
@@ -172,7 +170,6 @@ class CrbTwitterAPIExchange
         
         $getfield = $this->getGetfield();
         $postfields = $this->getPostfields();
-
         $options = array( 
             CURLOPT_HTTPHEADER => $header,
             CURLOPT_HEADER => false,
@@ -180,7 +177,6 @@ class CrbTwitterAPIExchange
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_SSL_VERIFYPEER => false
         );
-
         if (!is_null($postfields))
         {
             $options[CURLOPT_POSTFIELDS] = $postfields;
@@ -192,12 +188,10 @@ class CrbTwitterAPIExchange
                 $options[CURLOPT_URL] .= $getfield;
             }
         }
-
         $feed = curl_init();
         curl_setopt_array($feed, $options);
         $json = curl_exec($feed);
         curl_close($feed);
-
         if ($return) { return $json; }
     }
     
@@ -240,5 +234,4 @@ class CrbTwitterAPIExchange
         $return .= implode(', ', $values);
         return $return;
     }
-
 }

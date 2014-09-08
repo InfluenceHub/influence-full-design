@@ -14,8 +14,6 @@
 				</td>
 			</tr>
 		<?php continue; endif; ?>
-
-
 		<tr>
 			<td>
 				<label for="<?php echo $field->get_id() ?>">

@@ -5,7 +5,6 @@
 get_header();
 the_post();
 ?>
-
 <?php
   // The interviews page displays the latest interview for now
   $args = array(
@@ -37,7 +36,6 @@ the_post();
           'post_status' => 'publish'
         ); 
         $list_items = get_posts($args);
-
         if (count($list_items) > 0) {
           foreach ($list_items as $key => $list_item) {
             $image = wp_get_attachment_image_src(get_post_thumbnail_id($list_item->ID), 'inf_interview_featured');

@@ -15,15 +15,12 @@
 			</div>
 		<?php endforeach ?>
 	<?php endif; ?>
-
 	<form method="post" class="" enctype="multipart/form-data" action="<?php echo remove_query_arg(array('settings-updated')) ?>">
 		<table border="0" cellspacing="0" cellpadding="0" class="form-table">
 			<?php foreach ($this->fields as $field): 
 				$field->load();
 				$help_text = $field->get_help_text();
-
 			?>
-
 				<?php if( $field->type == 'Separator' ) : ?>
 					<tr class="carbon-separator">
 						<td colspan="2">
@@ -34,7 +31,6 @@
 						</td>
 					</tr>
 				<?php continue; endif; ?>
-
 				<tr>
 					<th scope="row">
 						<label for="<?php echo $field->get_id(); ?>"><?php 
@@ -51,7 +47,6 @@
 						<?php if( !empty( $help_text ) ) :  ?><div class="help-text"><em><?php echo $help_text; ?></em></div> <?php endif; ?>
 					</td>
 				</tr>
-
 			<?php endforeach ?>
 		</table>
 		<p class="submit"><input type="submit" name="submit" id="submit" class="button-primary" value="Save Changes"></p>

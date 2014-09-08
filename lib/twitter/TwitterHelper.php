@@ -39,7 +39,6 @@ class TwitterHelper {
 	 */
 	public $general_error = "Cannot get latest tweets";
 	
-
 	static function get_tweets($username, $limit) {
 		$self = new self($username);
 		return $self->_get_tweets($limit);
@@ -54,27 +53,22 @@ class TwitterHelper {
 		    'consumer_key' => carbon_get_theme_option('twitter_consumer_key'),
 		    'consumer_secret' => carbon_get_theme_option('twitter_consumer_secret')
 		);
-
 		# TODO: retrieve basic user information
 		// https://api.twitter.com/1.1/users/show.json?screen_name={$this->username}
 	}
 	
 	function _get_data($type, $request_url, $params) {
 		$cache_key = "twitter::" . md5($request_url . $params);
-
 		$cached = get_transient($cache_key);
 		if ($cached) {
 			return $cached;
 		}
-
 		$twitter = new CrbTwitterAPIExchange($this->settings);
 		$response = $twitter->setGetfield($params)->buildOauth($request_url, 'GET')->performRequest();
 		$data = json_decode($response);
-
 		if (!empty($data->errors)) {
 			return $this->general_error;
 		}
-
 		set_transient($cache_key, $data, $this->cache_lifetime);
 		
 		return $data;
@@ -95,7 +89,6 @@ class TwitterHelper {
 			"http://api.twitter.com/1.1/statuses/user_timeline.json",
 			"?include_entities=true&include_rts=true&screen_name={$this->username}&count={$limit}"
 		);
-
 		if($tweets == $this->general_error) {
 			return array();
 		} elseif (is_array($tweets) && !empty($tweets)) {
@@ -104,7 +97,6 @@ class TwitterHelper {
 				$tweet->tweet_link = "https://twitter.com/{$this->username}/status/{$tweet->id_str}";
 				$tweet->timestamp = strtotime($tweet->created_at);
 				$tweet->time_distance = $this->distance_of_time_in_words($tweet->timestamp, time());
-
 				if (isset($tweet->retweeted_status)) {
 					$tweet->image = $tweet->retweeted_status->user->profile_image_url;
 				} else {

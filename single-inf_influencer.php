@@ -1,5 +1,4 @@
 <?php get_header();
-
 	the_post(); 
   if(is_user_logged_in()) {
 		$current_user_influencers = inf_get_influencers();
@@ -14,7 +13,6 @@
 					'nopaging' => true,
 					'posts_per_page' => 1
 				);
-
 				query_posts($args);
         
         $influencer_id = $post->ID;
@@ -25,11 +23,9 @@
         
         $img_obj = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
 				$profile_image = '<a class="profile-image colorbox" href="' . $img_obj[0] . '">' . get_the_post_thumbnail($post->ID, 'inf_influencer_single_image', array('class' => 'inf_influencer_single_image')) . '</a>';
-
 				//get_template_part('loop');
         $profile_flag = true;
         include(locate_template('loop.php'));
-
 				wp_reset_query(); ?>
 			</div><!-- /.cols -->
 		</div><!-- /.shell -->

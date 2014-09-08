@@ -7,12 +7,10 @@ the_post();
 ?>
 <section id="content">
   <div class="shell">
-
       <div class="section-heading" style="margin-bottom: 70px;">
         <h1><span>Featured</span>THEMES</h1>
         <div class="line"></div>
       </div>
-
         <?php
           $num_posts = 4;
           $args = array(
@@ -23,9 +21,7 @@ the_post();
             'post_status' => 'publish'
           );
           $themes = get_posts($args);
-
           if (count($themes) > 0) { ?>
-
             <?php 
             $blockcount = 0;
             
@@ -33,7 +29,6 @@ the_post();
                 setup_postdata($post);
                 $attachments = new Attachments('inf_featured_images', $post->ID);
               ?>
-
                 <div class="column-three">
                     <div class="theme-archive-column-left">
                     <a href="<?php the_permalink() ?>" class="theme-archive-image-link">
@@ -49,11 +44,8 @@ the_post();
                         <?php 
                           if($attachments->exist()){
                             $first_attachment = $attachments->get_single(0);
-
                             $image = wp_get_attachment_image_src($first_attachment->id, 'inf_featured_images');
-
                             echo '<img src="'.$image[1].'" style="width:100%">';
-
                           }
                           ?>
                         <a href="<?php the_permalink() ?>" class="int-archive-image-link-overlay">
@@ -63,13 +55,10 @@ the_post();
                     </div>
                 </div> -->
               <?php 
-
               $blockcount++;
-
               if($blockcount != count($themes)){
                 echo '<div class="theme-archive-item-divider"></div>';
               }
-
             }
           }
          

@@ -3,7 +3,6 @@
 * Template Name: My Influence
 */
   get_header();
-
 	the_post();
 ?>
 	<section id="content" class="browse-by my-inf">
@@ -53,7 +52,6 @@
         }
         ?>
         <div class="shell browse-az<?php echo $extraclass; ?>">
-
           <div class="right-side">
          <a href="http://www.tkqlhce.com/click-7580048-11850643">
            <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/nasty1.gif" />
@@ -62,7 +60,6 @@
             <!-- <IFRAME SRC="http://ib.adnxs.com/tt?id=2438106&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="300" HEIGHT="600"></IFRAME> -->
             <!-- END TAG -->
            <?php inf_item_of_the_day(); ?>
-
             <br />
              <a href="<?php echo home_url(); ?>/my-influence" class="subscribe-img" style="margin-top: 4px;"></a>
               

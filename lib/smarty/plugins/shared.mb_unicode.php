@@ -5,7 +5,6 @@
  * @package Smarty
  * @subpackage PluginsShared
  */
-
 /**
  * convert characters to their decimal unicode equivalents
  *
@@ -22,10 +21,8 @@ function smarty_mb_to_unicode($string, $encoding=null)
     } else {
         $expanded = mb_convert_encoding($string, "UTF-32BE");
     }
-
     return unpack("N*", $expanded);
 }
-
 /**
  * convert unicodes to the character of given encoding
  *
@@ -45,6 +42,5 @@ function smarty_mb_from_unicode($unicode, $encoding=null)
         $character = pack("N*", $utf32be);
         $t .= mb_convert_encoding($character, $encoding, "UTF-32BE");
     }
-
     return $t;
 }

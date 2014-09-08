@@ -28,7 +28,6 @@ register_post_type('custom-type', array(
 	'supports' => array('title', 'editor', 'page-attributes'),
 ));
 */
-
 register_post_type('inf_influencer', array(
 	'labels' => array(
 		'name'	 => 'Influencers',
@@ -56,7 +55,6 @@ register_post_type('inf_influencer', array(
 	'query_var' => true,
 	'supports' => array('title', 'editor', 'page-attributes', 'thumbnail'),
 ));
-
 register_post_type('inf_instagram', array(
 	'labels' => array(
 		'name'	 => 'Shop this Instagram',
@@ -84,7 +82,6 @@ register_post_type('inf_instagram', array(
 	'query_var' => false,
 	'supports' => array('title', 'editor', 'page-attributes', 'thumbnail'),
 ));
-
 /** register_post_type('inf_product', array(
 	'labels' => array(
 		'name'	 => 'Products',
@@ -110,7 +107,6 @@ register_post_type('inf_instagram', array(
 	'supports' => array('title', 'page-attributes', 'thumbnail'),
 ));
 */
-
 register_post_type('inf_video', array(
 	'labels' => array(
 		'name'	 => 'Videos',
@@ -135,7 +131,6 @@ register_post_type('inf_video', array(
 	'query_var' => true,
 	'supports' => array('title', 'editor', 'page-attributes', 'thumbnail'),
 ));
-
 //#Influencer
 register_post_type('inf_hash_influencer', array(
 	'labels' => array(
@@ -161,7 +156,6 @@ register_post_type('inf_hash_influencer', array(
 	'query_var' => true,
 	'supports' => array('title', 'page-attributes', 'thumbnail'),
 ));
-
 //Q & A
 register_post_type('inf_qanda', array(
 	'labels' => array(
@@ -187,7 +181,6 @@ register_post_type('inf_qanda', array(
 	'query_var' => true,
 	'supports' => array('title', 'page-attributes', 'thumbnail'),
 ));
-
 //Featured Themes
 register_post_type('inf_theme', array(
 	'labels' => array(
@@ -244,7 +237,6 @@ register_post_type('inf_market', array(
 	'query_var' => true,
 	'supports' => array('title', 'editor', 'page-attributes', 'thumbnail'),
 ));
-
 register_post_type('inf_home_box1', array(
 	'labels' => array(
 		'name'	 => 'Callout 1',

@@ -3,7 +3,6 @@
 * Template Name: Influencers
 */
 get_header();
-
 	the_post(); ?>
   <section id="content" class="influencers">
     <div class="sorted-content influencers-az">
@@ -77,10 +76,7 @@ get_header();
       <!-- END TAG -->
     </div>
   </section>
-
     
-
     
-
  <?php inf_footer_signup() ?>
 <?php get_footer(); ?>

@@ -6,7 +6,6 @@
   } else {
     $version = 134; //update to force reload of CSS
   }
-
   add_theme_support('post-thumbnails');
   add_image_size('inf_makrket_slider',               460, 552, false);
   add_image_size('inf_home_slider',                  330, 518, false);
@@ -14,7 +13,6 @@
   add_image_size('inf_home_latest',                  210, 400, true);
   add_image_size('inf_home_latest_shoplook',         90, 400, true);
   add_image_size('inf_styleseeker',                  268, 268, true);
-
   //add_image_size('inf_single_image',                  372, 576, true);
   add_image_size('inf_single_image',                  331, 518, true);
   add_image_size('inf_influencer_single_image',       300, 323, true);
@@ -24,24 +22,18 @@
   add_image_size('inf_single_product',                144, 164, false);
   add_image_size('inf_single_more_like',              186, 352, true);
   add_image_size('inf_profile_loop',                  300, 542, true);
-
   add_image_size('inf_instagram',                     314, 314, false);
   //add_image_size('inf_instagram',                     230, 230, true);
   add_image_size('inf_inst_product',                  314, 314, false);
   add_image_size('inf_hash_influenced',               232, 232, false);
-
-
   //add_image_size('inf_homevid_thumb',                  215, 130, true);
   //add_image_size('inf_homevid',                        650, 370, true);
   add_image_size('inf_homevid_thumb',                  133, 133, true);
   add_image_size('inf_homevid',                        830, 401, true);
-
   add_image_size('inf_interview_featured',             267, 267, true);
   add_image_size('inf_interviewslider',                1214, 794, false);
   add_image_size('inf_interviewslider_small',          114, 72, true);
   add_image_size('inf_interviewmore', 220, 235, true);
-
-
 // Items of The Week
 function inf_items() {
 $args = array(
@@ -49,34 +41,26 @@ $args = array(
     'posts_per_page' => 1
     );
   $postID = get_posts($args)[0]->ID; // this gets an array of wordpress posts
-
   $image1ID = get_post_meta($postID, '_itemofweek1');
   $image2ID = get_post_meta($postID, '_itemofweek2');
   $image3ID = get_post_meta($postID, '_itemofweek3');
   $image4ID = get_post_meta($postID, '_itemofweek4');
   $image5ID = get_post_meta($postID, '_itemofweek5');
-
   $image1SRC = get_post($image1ID[0])->guid;
   $image2SRC = get_post($image2ID[0])->guid;
   $image3SRC = get_post($image3ID[0])->guid;
   $image4SRC = get_post($image4ID[0])->guid;
   $image5SRC = get_post($image5ID[0])->guid;
-
  $link1 = (get_post_meta($postID, '_item1_link_url', true));
  $link2 = get_post_meta($postID, '_item2_link_url', true);
  $link3 = get_post_meta($postID, '_item3_link_url', true);
  $link4 = get_post_meta($postID, '_item4_link_url', true);
  $link5 = get_post_meta($postID, '_item5_link_url', true);
-
-
-
  //$link1 = get_post($link1ID[0]);
  //$link2 = get_post($link2ID[0]);
  //$link3 = get_post($link3ID[0]);
  //$link4 = get_post($link4ID[0]);
  //$link5 = get_post($link5ID[0]);
-
-
   ?>
  <div class="favorites_center">
   <div class="favorites_container">
@@ -112,8 +96,6 @@ $args = array(
 </div>
 <?php
 }
-
-
 // Call Out Boxes Functions
   function inf_home_box1() {
     $args = array(
@@ -125,26 +107,18 @@ $args = array(
       return $box1[0];
    }
 return null;
-
-
   }
-
   function inf_home_box2(){
     $args = array(
       'post_type' => 'inf_home_box2',
       'posts_per_page' => 1
     );
     $box2 = get_posts($args);
-
     if(isset($box2[0])){
       return $box2[0];
     }
     return null;
-
-
-
   }
-
     function inf_home_box3(){
     $args = array(
       'post_type' => 'inf_home_box3',
@@ -155,25 +129,18 @@ return null;
       return $box3[0];
     }
     return null;
-
   }
-
     function inf_home_box4(){
     $args = array(
       'post_type' => 'inf_home_box4',
       'posts_per_page' => 1
     );
     $box4 = get_posts($args);
-
     if(isset($box4[0])){
       return $box4[0];
     }
     return null;
-
   }
-
-
-
   //Attachments metabox customization
   function inf_interview_attachments($attachments) {
     $args = array(
@@ -195,11 +162,9 @@ return null;
     $attachments->register('inf_interview_attachments', $args);
   }
   add_action('attachments_register', 'inf_interview_attachments');
-
   //Home Top Slider
   function inf_home_topslider() {
       //here are get post options
-
       $args = array(
         'numberposts' => 9999,
         'orderby' => 'date',
@@ -207,15 +172,12 @@ return null;
         'post_type' => 'inf-slide-home',
         'post_status' => 'publish'
       );
-
       //get posts
       $list_items = get_posts($args);
-
       //slide container
       ?>
       <ul class="slides">
       <?php
-
       //iterate
       foreach ($list_items as $key => $list_item ) {
         //get some content from post
@@ -224,12 +186,10 @@ return null;
         $slide_link = trim(carbon_get_post_meta($list_item->ID, 'hslide_link_url'));
         $subtext = trim(carbon_get_post_meta($list_item->ID, 'hslide_subtext'));
         $longTitle = $title . ' ' . $title_two;
-
         //retrieve images from post meta data
         $image_oneID = carbon_get_post_meta($list_item->ID, 'hslide_image');
         $image_oneA = wp_get_attachment_image_src($image_oneID,'full', true);
         $image_one = $image_oneA[0];
-
         $side_oneID = carbon_get_post_meta($list_item->ID, 'hslide_side_image1');
         $side_image1A = wp_get_attachment_image_src($side_oneID,'full', true);
         $side_one = $side_image1A[0];
@@ -239,14 +199,12 @@ return null;
         $side_threeID = carbon_get_post_meta($list_item->ID, 'hslide_side_image3');
         $side_image3A = wp_get_attachment_image_src($side_threeID,'full', true);
         $side_three = $side_image3A[0];
-
         // PAGELY PERFORMACE HACK
         // $image_one is the url to the image, so getimagesize downloads the image (from cloudflare and on the miss case all the way back to us
         // you must use the local file
         // lets get it a hacky way
         $image_one_file = '/httpdocs/'.str_replace(get_option('siteurl'), '', $image_one);
         list($width_one, $height_one) = getimagesize($image_one_file);
-
         //get da content
         $content    = apply_filters('the_content', get_post_field('hslide_title_two', $list_item->ID));
         //build homepage slide
@@ -283,17 +241,13 @@ return null;
               </p>
           </div>
         </li>
-
       <?php
       }
       // close ul container
        ?>
       </ul>
-
-
   <?php
   }
-
     function inf_home_thelatestslide() {
     ?>
     <ul class="slides">
@@ -307,7 +261,6 @@ return null;
       );
       $list_items = get_posts($args);
       $listblock = '';
-
       foreach ($list_items as $key => $list_item ) {
         /* old fields
         $custom_fields = get_post_custom($list_item->ID);
@@ -324,7 +277,6 @@ return null;
         $image_one  = trim($custom_fields['wpcf-hslide-image'][0]);
         $image_two  = trim($custom_fields['wpcf-hslide-bottom-image'][0]);
         */
-
         //NEW FIELDS
         $title      = trim(get_the_title($list_item->ID));
         $title_two  = trim(carbon_get_post_meta($list_item->ID, 'hslide_title_two'));
@@ -340,14 +292,12 @@ return null;
         if (strlen(strip_tags($title_two)) > 80) {
           $shortTitle = '<span>' . $title . '</span> ' . substr($title_two, 0, 79) . '...';
         }
-
   // PAGELY PERFORMACE HACK
   // $image_one is the url to the image, so getimagesize downloads the image (from cloudflare and on the miss case all the way back to us
   // you must use the local file
   // lets get it a hacky way
    $image_one_file = '/httpdocs/'.str_replace(get_option('siteurl'), '', $image_one);
    $image_two_file = '/httpdocs/'.str_replace(get_option('siteurl'), '', $image_two);
-
         list($width_one, $height_one) = getimagesize($image_one_file);
         list($width_two, $height_two) = getimagesize($image_two_file);
         $content    = apply_filters('the_content', get_post_field('post_content', $list_item->ID));
@@ -386,7 +336,6 @@ return null;
   </div><!-- /.top-slider -->
   <?php
   }
-
   //Home Page Latest Looks
   function inf_home_latest() {
     $args = array(
@@ -401,16 +350,12 @@ return null;
       )
     );
     $latest_posts = get_posts($args);
-
-
     $extraclass = '';
     $current_user_influencers = array();
     if(is_user_logged_in()) {
       $extraclass = 'subscribe-link';
       $current_user_influencers = inf_get_influencers();
     }
-
-
      ?>
       <div class="latest-home group">
         <div class="sideads_wrapper no-mobile">
@@ -426,7 +371,6 @@ return null;
               $latest_theme = inf_get_latest_theme();
               global $post;
               foreach($latest_posts as $k => $post) {
-
                 $influencer_id = get_influencer_id_by_connected_post($post);
                 ?>
                 <?php if($k <= 3): // Show the first 4 posts as two column posts ?>
@@ -440,14 +384,12 @@ return null;
                                   $cat = get_category($post_categories[0]);
                                   $category_link = get_category_link($cat); // Refactor to use category obj?
                                   ?> </a>
-
                           <?php } // endif !empty($post_categories[0]) ?>
                         </div>
                         <div class="home-feed-post-info">
                           <a href="<?php the_permalink(); ?>">
                             <?php the_title("<h2>", "</h2>"); ?>
                           </a>
-
                           <div class="home-feed-subheading-options">
                             <?php if($influencer_id): ?>
                               <form method="post" class="interact-with-influencer">
@@ -464,18 +406,14 @@ return null;
                                 </div>
                               </form>
                             <?php endif; // $influencer_id ?>
-
                             <div class="home-feed-pint-options no-mobile">
                               <a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink() ?>&amp;media=<?php echo wp_get_attachment_thumb_url( get_post_thumbnail_id( $post->ID ) ) ?>&amp;description=<?php echo urlencode($post->post_content) ?>" target="_blank" class="home-feed-pint-link" title="Pin This">
                                 <img src="<?php echo bloginfo('stylesheet_directory'); ?>/images/pinterest-logo-black.jpg" class="home-feed-pint-img">
                                 Pin it
                               </a>
                             </div>
-
                           </div>
-
                           <?php
-
                                 $content = $post->post_content;
                                 if (strlen($content) > 180) {
                                   $content = substr($content, 0, 180).'...';
@@ -487,9 +425,7 @@ return null;
                               VIEW MORE<span class="home-feed-post-view-more-arrow">&rsaquo;</span>
                             </a>
                           </p>
-
                           <?php $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex'); ?>
-
                           <?php if(!empty($products_sections)): ?>
                             <?php
                               $products_section = $products_sections[0];
@@ -538,17 +474,12 @@ return null;
                             SHOP THE LOOK <span class="home-feed-post-view-more-arrow">&rsaquo;</span>
                           </a>
                           <?php endif; ?>
-
                         </div> <!-- END .home-feed-post-info -->
                   </li>
-
 <!--                 <img width="600px" height="59px" src='<?php echo get_stylesheet_directory_uri(); ?>/images/breaker.png' />
-
  -->
                 <?php elseif ($k == 7 && !is_null($latest_theme)): // replace the last one with a featured theme, if it exists ?>
-
                   <?php $post = $latest_theme ?>
-
                   <li class="column home-feed-post home-feed-side-by-side">
                         <div class="home-feed-post-img-wrap">
                           <a href="<?php the_permalink(); ?>">
@@ -565,7 +496,6 @@ return null;
                           </div>
                           <a href="<?php the_permalink(); ?>">
                           <?php
-
                                 $title = $post->post_title;
                                 if (strlen($title) > 50) {
                                   $title = substr($title, 0, 50) . '...';
@@ -574,7 +504,6 @@ return null;
                           <h2><?php echo $title ?></h2>
                           </a>
                           <?php
-
                                 $content = $post->post_content;
                                 if (strlen($content) > 90) {
                                   $content = substr($content, 0, 90) . '...';
@@ -602,18 +531,14 @@ return null;
                                       $cat = get_category($post_categories[0]);
                                       $category_link = get_category_link($cat); // Refactor to use category obj?
                               ?>
-
                                     <span class="meta-content-divider">|</span>
                                     <a href="<?php echo esc_url($category_link); ?>">
                                         <?php echo $cat->cat_name; ?>
                                       </a>
-
                               <?php } // end if !empty ?>
-
                           </div>
                           <a href="<?php the_permalink(); ?>">
                           <?php
-
                                 $title = $post->post_title;
                                 if (strlen($title) > 50) {
                                   $title = substr($title, 0, 50) . '...';
@@ -621,9 +546,7 @@ return null;
                           ?>
                             <h2><?php echo $title ?></h2>
                           </a>
-
                           <?php
-
                                 $content = $post->post_content;
                                 if (strlen($content) > 90) {
                                   $content = substr($content, 0, 90) . '...';
@@ -633,19 +556,13 @@ return null;
                           <a href="<?php the_permalink(); ?>" class="home-feed-post-view-more">
                             VIEW MORE <span class="home-feed-post-view-more-arrow">&rsaquo;</span>
                           </a>
-
                         </div> <!-- END .home-feed-post-info -->
-
                   </li>
                 <?php endif; ?>
-
                   <?php
-
                 wp_reset_postdata();
-
               } // end foreach $latest_posts as $post
             ?>
-
           </ul><!-- /.recent-list -->
           <!-- HOME PAGE 300 X 900 AD SPACE -->
           <div class="column adcolumn no-mobile">
@@ -661,7 +578,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-0');
           <a href="https://www.thehunt.com/the-hunt/6Dmf7D-janel-on-the-hunt-">
            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/thehunt.jpg" />
           </a> -->
-
             <!-- BEGIN IFRAME TAG - theinfluence 300x600 < - DO NOT MODIFY -->
             <!-- <IFRAME SRC="http://ib.adnxs.com/tt?id=2438106&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="300" HEIGHT="600"></IFRAME> -->
             <!-- END TAG -->
@@ -685,17 +601,12 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
             <a href="<?php echo home_url(); ?>/the-latest/">VIEW ALL LATEST LOOKS</a>
           </div>
         </div><!-- /.shell -->
-
          <?php //inf_featured_theme('one'); ?>
-
         <?php inf_home_instagram(); ?>
-
         <?php //inf_featured_theme('two'); ?>
-
       </div><!-- /.latest -->
   <?php
   }
-
   //Featured Themes
   function inf_featured_theme($theme_num) {
     $home_id = get_option('page_on_front');
@@ -707,7 +618,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
     if ($theme_num == 'two') {
       $style = ' style="margin-top: 70px; padding-bottom: 20px;"';
     }
-
     $imgID = carbon_get_post_meta($home_id, '_inf_theme_' . $theme_num . '_image');
     $image = wp_get_attachment_image_src($imgID,'full', true);
     $link_url  = get_permalink($theme_items[0]);
@@ -737,7 +647,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
       </div>
     <?php
   }
-
   function inf_get_latest_theme() {
     $args = array(
       'post_type' => 'inf_theme',
@@ -749,7 +658,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
     }
     return null;
   }
-
   //Favorite Items
   function inf_favorite_items() {
     $home_id = get_option('page_on_front');
@@ -777,7 +685,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
       <?php
     }
   }
-
   //Q&A
   function inf_qa() {
     $args = array(
@@ -787,7 +694,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
       'order' => 'ASC'
     );
     $qa = get_posts($args);
-
     if(!empty($qa)) {
       ?>
         <div class="styleseeker home_feature">
@@ -799,20 +705,17 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
       foreach($qa as $key => $this_qa) {
         $entry_id  = $this_qa->ID;
         $inf_url = carbon_get_post_meta($this_qa, 'inf_hinfluencer_link_url');
-
         $question   = carbon_get_post_meta($entry_id, 'inf_qa_question');
         $question_n = carbon_get_post_meta($entry_id, 'inf_qa_question_n');
         $answer     = carbon_get_post_meta($entry_id, 'inf_qa_answer');
         $answer_n   = carbon_get_post_meta($entry_id, 'inf_qa_answer_n');
         $image      = wp_get_attachment_image_src(get_post_thumbnail_id($entry_id), 'inf_inst_product', true);
-
           //$custom_fields = get_post_custom($post->ID);
           //$question   = trim($custom_fields['wpcf-home-style-question'][0]);
           //$question_n = trim($custom_fields['wpcf-home-style-question-name'][0]);
           //$answer     = trim($custom_fields['wpcf-home-style-answer'][0]);
           //$answer_n   = trim($custom_fields['wpcf-home-style-answer-name'][0]);
           //$image      = trim($custom_fields['wpcf-home-style-image'][0]);
-
           //Q & A
           //$question   = 'Can you help me find Miranda Kerr`s top?';
           //$question_n = 'Amanda, NY';
@@ -841,7 +744,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
       <?php
     }
   }
-
   //#Influencer
   function inf_hash_influencer() {
     $args = array(
@@ -851,7 +753,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
       'order' => 'ASC'
     );
     $hash_infs = get_posts($args);
-
     if(!empty($hash_infs)) {
       ?>
         <div class="hash-influence home_feature">
@@ -877,7 +778,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
       <?php
     }
   }
-
   //Home Page Latest Looks -- Replaced 5/20/14 DC
   function inf_home_latest_old() {
         $args = array(
@@ -892,8 +792,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
       )
     );
     $latest_posts = get_posts($args);
-
-
      ?>
       <div class="latest-home group">
         <div class="sideads_wrapper">
@@ -924,7 +822,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                     $infTitle = inf_name_from_post($lp->ID);
                     if (trim($infTitle) <= '') { $infTitle = '&nbsp;'; }
                     $thisTitle = get_the_title($lp->ID);
-
                     $custom_fields = get_post_custom($lp->ID);
                     $image  = trim($custom_fields['wpcf-post-shop-the-look'][0]);
                     if ($image <= '') {
@@ -950,9 +847,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                   <?php
                   //}
                 //}
-
                 wp_reset_postdata();
-
               }
             ?>
           </ul><!-- /.recent-list -->
@@ -964,7 +859,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
             <div class="line" style="margin-top: 7px; padding-top: 7px;"></div>
             <div class="favorite-items">
               <h2><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/header-fav-items.png" alt="Favorite Items of the Moment" /></h2>
-
               <div class="fav-items-grid">
                 <div class="fav-items-grid">
                   <?php
@@ -990,7 +884,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
               $answer     = trim($custom_fields['wpcf-home-style-answer'][0]);
               $answer_n   = trim($custom_fields['wpcf-home-style-answer-name'][0]);
               $image      = trim($custom_fields['wpcf-home-style-image'][0]);
-
               //Q & A
               $question   = 'Can you help me find Miranda Kerr`s top?';
               $question_n = 'Amanda, NY';
@@ -1003,10 +896,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
               <h2><img class="qa" src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/header-qa.png" alt="Q and A" /></h2>
               <p class="question"><?php echo $question; ?></p>
               <div class="name">- <?php echo $question_n; ?></div>
-
               <div class="image-container">
                 <img class="main" src="<?php echo $image; ?>" width="280" height="280" alt="" />
-
                 <p class="answer"><?php echo $answer; ?></p>
                 <div class="name two">- <?php echo $answer_n; ?></div>
               </div>
@@ -1021,25 +912,20 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
             <a href="<?php echo home_url(); ?>/the-latest/">VIEW ALL LATEST LOOKS</a>
           </div>
         </div><!-- /.shell -->
-
         <div class="featured-theme">
           <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/_temp-featured-theme.jpg" alt="Favorite Items of the Moment" />
           <h2>featured theme</h2>
           <p>BEYONCE KILLING IT WEARING LEOPARD<br />SKINNY JEANS AT THE COACHELL A FESTIVAL</p>
         </div>
-
         <?php inf_home_instagram(); ?>
-
         <div class="featured-theme" style="margin-top: 70px; padding-bottom: 20px;">
           <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/_temp-featured-theme.jpg" alt="Favorite Items of the Moment" />
           <h2>featured theme</h2>
           <p>BEYONCE KILLING IT WEARING LEOPARD<br />SKINNY JEANS AT THE COACHELL A FESTIVAL</p>
         </div>
-
       </div><!-- /.latest -->
   <?php
   }
-
   function inf_home_instagram() {
     //Get Shop Instagram items
       $args = array(
@@ -1050,12 +936,10 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
         'post_status' => 'publish'
       );
       $inst_items = get_posts($args);
-
         $instagram_one_prod = get_post_meta($inst_items[0]->ID, '_inf_instagram_products', true);
         $instagram_one_prodID   = $instagram_one_prod[0];
         $instagram_two_prod = get_post_meta($inst_items[1]->ID, '_inf_instagram_products', true);
         $instagram_two_prodID   = $instagram_two_prod[0];
-
         $image_one = wp_get_attachment_image_src(get_post_thumbnail_id($inst_items[0]->ID), 'inf_home_inst_prod_nocrop_quad');
         $title_one = trim(get_the_title($inst_items[0]->ID));
         if (strlen($title_one) > 20) {
@@ -1076,7 +960,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 				$product_link_one     = get_post_meta($instagram_one_prodID, 'product_url', true);
         $product_image_one    = wp_get_attachment_image_src(get_post_thumbnail_id($instagram_one_prodID), 'inf_home_inst_prod_nocrop');
         */
-
         $image_two = wp_get_attachment_image_src(get_post_thumbnail_id($inst_items[1]->ID), 'inf_home_inst_prod_nocrop_quad');
         $title_two = trim(get_the_title($inst_items[1]->ID));
         if (strlen($title_two) > 30) {
@@ -1166,7 +1049,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
       <div style="clear: left;"></div>  -->
     <?php
   }
-
   function inf_item_of_the_day() {
     $home_id = get_option('page_on_front');
     ?>
@@ -1175,7 +1057,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
           //$item_of_the_day = carbon_get_theme_option('inf_item_of_the_day');
           $home_products = get_post_meta($home_id, '_inf_product_of_the_day', true);
           $home_prodID   = $home_products[0];
-
         $product_title    = get_the_title($home_prodID);
         if (strlen($product_title) > 45) {
           $product_title = substr($product_title, 0, 45) . '...';
@@ -1193,20 +1074,15 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
       </div><!-- /.item-of-the-day -->
     <?php
   }
-
   function the_post_thumbnail_caption($post_id) {
     //global $post;
-
     $thumbnail_id    = get_post_thumbnail_id($post_id);
     $thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
-
     if ($thumbnail_image && isset($thumbnail_image[0])) {
       $caption = $thumbnail_image[0]->post_excerpt;
     }
-
     return $caption;
   }
-
   // Pass in a WP_Post object connected to an influencer
   function get_influencer_id_by_connected_post($post){
     $args = array(
@@ -1216,7 +1092,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
       'posts_per_page' => 1
     );
     $influencer = get_posts($args);
-
     $influencer_id = null;
     if(isset($influencer[0])){
       $influencer_id = $influencer[0]->ID;

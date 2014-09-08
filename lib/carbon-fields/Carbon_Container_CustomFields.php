@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Field container designed to extend WordPress custom fields functionality,
  * providing easier user interface to add, edit and delete text, media files, 
@@ -14,7 +13,6 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 	 * @var array
 	 */
 	static protected $registered_field_names;
-
 	/**
 	 * ID of the post the container is working with
 	 *
@@ -22,7 +20,6 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 	 * @var int
 	 */
 	protected $post_id;
-
 	/**
 	 * List of default container settings
 	 *
@@ -45,15 +42,12 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 				'post_path' => null,
 			),
 	);
-
 	function __construct($title) {
 		parent::__construct($title);
-
 		if ( !$this->get_datastore() ) {
 			$this->set_datastore(new Carbon_DataStore_CustomField());
 		}
 	}
-
 	function check_setup_settings(&$settings = array()) {
 		if ( isset($settings['show_on']) ) {
 			$invalid_settings = array_diff_key($settings['show_on'], $this->settings['show_on']);
@@ -61,35 +55,28 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 				throw new Carbon_Exception ('Invalid show_on settings supplied to setup(): "' . implode('", "', array_keys($invalid_settings)) . '"');
 			}
 		}
-
 		if ( isset($settings['show_on']['post_formats']) ) {
 			$settings['show_on']['post_formats'] = (array) $settings['show_on']['post_formats'];
 		}
-
 		if ( isset($settings['show_on']['post_path']) ) {
 			$page = get_page_by_path($settings['show_on']['post_path']);
-
 			if ( $page ) {
 				$settings['show_on']['page_id'] = $page->ID;
 			} else {
 				$settings['show_on']['page_id'] = -1;
 			}
 		}
-
 		// Transform category slug to taxonomy + term slug + term id
 		if ( isset($settings['show_on']['category']) ) {
 			$term = get_term_by('slug', $settings['show_on']['category'], 'category');
-
 			if ( $term ) {
 				$settings['show_on']['tax_slug'] = $term->taxonomy;
 				$settings['show_on']['tax_term'] = $term->slug;
 				$settings['show_on']['tax_term_id'] = $term->term_id;
 			}
 		}
-
 		return parent::check_setup_settings($settings);
 	}
-
 	/**
 	 * Create DataStore instance, set post ID to operate with (if such exists).
 	 * Bind attach() and save() to the appropriate WordPress actions.
@@ -100,16 +87,13 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 		if ( isset($_GET['post']) ) {
 			$this->set_post_id($_GET['post']);
 		}
-
 		// force post_type to be array
 		if ( !is_array($this->settings['post_type']) ) {
 			$this->settings['post_type'] = array($this->settings['post_type']);
 		}
-
 		add_action('admin_init', array($this, '_attach'));
 		add_action('save_post', array($this, '_save'));
 	}
-
 	/**
 	 * Perform save operation after successful is_valid_save() check.
 	 * The call is propagated to all fields in the container.
@@ -120,15 +104,12 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 	function save($post_id) {
 		// Unhook action to garantee single save
 		remove_action('save_post', array($this, 'save'));
-
 		$this->set_post_id($post_id);
-
 		foreach ($this->fields as $field) {
 			$field->set_value_from_input();
 			$field->save();
 		}
 	}
-
 	/**
 	 * Perform checks whether the current save() request is valid
 	 * Possible errors are triggering save() for autosave requests
@@ -146,10 +127,8 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 		} else if ($post_id < 1) {
 			return false;
 		}
-
 		return $this->is_valid_save_conditions($post_id);
 	}
-
 	/**
 	 * Perform checks whether the current save() request is valid
 	 * Possible errors are triggering save() for autosave requests
@@ -161,110 +140,86 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 	function is_valid_save_conditions($post_id) {
 		$valid = true;
 		$post = get_post($post_id);
-
 		// Check post type
 		if ( !in_array($post->post_type, $this->settings['post_type']) ) {
 			return false;
 		}
-
 		// Check show on conditions
 		foreach ($this->settings['show_on'] as $condition => $value) {
 			if ( is_null($value) ) {
 				continue;
 			}
-
 			switch ($condition) {
 				// show_on_post_format
 				case 'post_formats':
 					if ( empty($value) || $post->post_type != 'post' ) {
 						break;
 					}
-
 					$current_format = get_post_format($post_id);
 					if ( !in_array($current_format, $value) ) {
 						$valid = false;
 						break 2;
 					}
-
 					break;
-
 				// show_on_taxonomy_term or show_on_category
 				case 'category':
 					$this->show_on_category($value);
-
 					/* fall-through intended */
 				case 'tax_term_id':
 					$current_terms = wp_get_object_terms( $post_id, $this->settings['show_on']['tax_slug'], array('fields' => 'ids') );
-
 					if ( !is_array($current_terms) || !in_array($this->settings['show_on']['tax_term_id'], $current_terms) ) {
 						$valid = false;
 						break 2;
 					}
-
 					break;
-
 				// show_on_level
 				case 'level_limit':
 					$post_level = count(geT_post_ancestors($post_id)) + 1;
-
 					if ( $post_level != $value ) {
 						$valid = false;
 						break 2;
 					}
-
 					break;
-
 				// show_on_page
 				case 'page_id':
 					if ( $post_id != $value ) {
 						$valid = false;
 						break 2;
 					}
-
 					break;
-
 				// show_on_page_children
 				case 'parent_page_id':
 					if ( $post->post_parent != $value ) {
 						$valid = false;
 						break 2;
 					}
-
 					break;
-
 				// show_on_template
 				case 'template_names':
 					if ( empty($value) || $post->post_type != 'page' ) {
 						break;
 					}
 					$current_template = get_post_meta($post_id, '_wp_page_template', 1);
-
 					if ( !in_array($current_template, $value) ) {
 						$valid = false;
 						break 2;
 					}
-
 					break;
-
 				// hide_on_template
 				case 'not_in_template_names':
 					if ( empty($value) || $post->post_type != 'page' ) {
 						break;
 					}
 					$current_template = get_post_meta($post_id, '_wp_page_template', 1);
-
 					if ( in_array($current_template, $value) ) {
 						$valid = false;
 						break 2;
 					}
-
 					break;
 			}
 		}
-
 		return $valid;
 	}
-
 	/**
 	 * Add meta box for each of the container post types
 	 *
@@ -281,17 +236,14 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 				$this->settings['panel_priority']
 			);
 		}
-
 		foreach ($this->settings['post_type'] as $post_type) {
 			add_filter("postbox_classes_{$post_type}_{$this->id}", array($this, 'postbox_classes'));
 		}
 	}
-
 	function postbox_classes($classes) {
 		$classes[] = 'carbon-postbox';
 		return $classes;
 	}
-
 	/**
 	 * Perform checks whether the container should be attached during the current request
 	 *
@@ -299,13 +251,11 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 	 **/
 	function is_valid_attach() {
 		$valid = true;
-
 		// Check show on conditions
 		foreach ($this->settings['show_on'] as $condition => $value) {
 			if ( is_null($value) ) {
 				continue;
 			}
-
 			switch ($condition) {
 				case 'page_id':
 					if ( $value < 1 || $this->post_id != $value ) {
@@ -322,7 +272,6 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 					break;
 			}
 		}
-
 		return $valid;
 	}
 	
@@ -333,16 +282,13 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 	 **/
 	function detach() {
 		parent::detach();
-
 		remove_action('admin_init', array($this, '_attach'));
 		remove_action('save_post', array($this, '_save'));
-
 		// unregister field names
 		foreach ($this->fields as $field) {
 			$this->drop_unique_field_name($field->get_name());
 		}
 	}
-
 	/**
 	 * Output the container markup
 	 *
@@ -352,10 +298,8 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 		$container_tag_class_name = get_class($this);
 		$container_type = 'CustomFields';
 		$container_options = array('show_on' => $this->settings['show_on']);
-
 		include dirname(__FILE__) . '/admin-templates/container-custom-fields.php';
 	}
-
 	/**
 	 * Set the post ID the container will operate with.
 	 *
@@ -366,7 +310,6 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 		$this->post_id = $post_id;
 		$this->store->set_id($post_id);
 	}
-
 	/**
 	 * Perform checks whether there is a field registered with the name $name.
 	 * If not, the field name is recorded.
@@ -378,20 +321,16 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 		if ( empty($this->settings['post_type']) ) {
 			throw new Carbon_Exception ('Panel instance is not setup correctly (missing post type)');
 		}
-
 		foreach ($this->settings['post_type'] as $post_type) {
 			if ( !isset(self::$registered_field_names[$post_type]) ) {
 				self::$registered_field_names[$post_type] = array();
 			}
-
 			if ( in_array($name, self::$registered_field_names[$post_type]) ) {
 				throw new Carbon_Exception ('Field name "' . $name . '" already registered');
 			}
-
 			self::$registered_field_names[$post_type][] = $name;
 		}
 	}
-
 	/**
 	 * Remove field name $name from the list of unique field names
 	 *
@@ -406,7 +345,6 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 			}
 		}
 	}
-
 	/**
 	 * Show the container only on pages whose parent is referenced by $parent_page_path.
 	 *
@@ -415,13 +353,11 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 	 **/
 	function show_on_page_children($parent_page_path) {
 		$page = get_page_by_path($parent_page_path);
-
 		if ( $page ) {
 			$this->settings['show_on']['parent_page_id'] = $page->ID;
 		} else {
 			$this->settings['show_on']['parent_page_id'] = -1;
 		}
-
 		return $this;
 	}
 	
@@ -433,13 +369,11 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 	 **/
 	function show_on_page($page_path) {
 		$page = get_page_by_path($page_path);
-
 		if ( $page ) {
 			$this->settings['show_on']['page_id'] = $page->ID;
 		} else {
 			$this->settings['show_on']['page_id'] = -1;
 		}
-
 		return $this;
 	}
 	
@@ -468,9 +402,7 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 			}
 			return $this;
 		}
-
 		$this->settings['show_on']['template_names'][] = $template_path;
-
 		return $this;
 	}
 	
@@ -487,9 +419,7 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 			}
 			return $this;
 		}
-
 		$this->settings['show_on']['not_in_template_names'][] = $template_path;
-
 		return $this;
 	}
 	
@@ -504,9 +434,7 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 		if ($level < 0 ) {
 			throw new Carbon_Exception('Invalid level limitation (' . $level . ')');
 		}
-
 		$this->settings['show_on']['level_limit'] = $level;
-
 		return $this;
 	}
 	
@@ -519,15 +447,12 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 	 **/
 	function show_on_taxonomy_term($term_slug, $taxonomy_slug) {
 		$term = get_term_by('slug', $term_slug, $taxonomy_slug);
-
 		if ( !$term ) {
 			return $this;
 		}
-
 		$this->settings['show_on']['tax_slug'] = $taxonomy_slug;
 		$this->settings['show_on']['tax_term'] = $term_slug;
 		$this->settings['show_on']['tax_term_id'] = $term->term_id;
-
 		return $this;
 	}
 	
@@ -545,12 +470,9 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 			}
 			return $this;
 		}
-
 		$this->settings['show_on']['post_formats'][] = strtolower($post_format);
-
 		return $this;
 	}
-
 	/**
 	 * Show the container only on posts from the specified type(s).
 	 *
@@ -559,10 +481,7 @@ class Carbon_Container_CustomFields extends Carbon_Container {
 	 **/
 	function show_on_post_type($post_types) {
 		$post_types = (array)$post_types;
-
 		$this->settings['post_type'] = $post_types;
-
 		return $this;
 	}
 } // END Carbon_Container_CustomFields 
-
