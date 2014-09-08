@@ -281,32 +281,31 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 function inf_theme_slider_theme() {
   global $post;
   $images = carbon_get_post_meta($post->ID, 'inf_featured_image', 'complex');
-  $captions = carbon_get_post_meta($post->ID, 'inf_caption' ,  'complex');
   foreach($images as $image) {
     $image_full  = wp_get_attachment_image_src($image[inf_featured_image], 'full');
     $image_small = wp_get_attachment_image_src($image[inf_featured_image], 'inf_featured_theme');
-    $caption = carbon_get_post_meta($image[inf_caption]);
     ?>
     <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
-      <pre><?php echo print_r($caption); ?></pre>
+      <?php inf_captions(): ?>
 		</li>
      <?php
     }   
   }
 ?>
-<!--<?php
+<?php
 // Captions for slider
 function inf_captions() {
   global $post;
   $captions = carbon_get_the_post_meta($post->ID, 'inf_caption', 'complex');
   foreach($captions as $caption) {
+    $caption_me = $captions[0];
 ?>
- <li style="list-style: none;"><p><?php echo $caption[0]; ?></p></li>
+ <li class="slide-theme"><pre><?php echo print_r($caption_me); ?></pre></li>
  <?php
   }
 }
-?>-->
+?>
 <script>
 jQuery(window).load(function() {
   //jQuery('.shop-main .inner.slides').flexslider();
