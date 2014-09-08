@@ -268,7 +268,6 @@ function inf_captions() {
 ?>
  <pre><?php echo print_r($caption[0]); ?></pre>
  <?php
-  }
 }
 ?>
 <script>
