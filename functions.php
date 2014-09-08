@@ -1,6 +1,5 @@
 <?php
 include('functions_two.php');
-include('lib/ChromePHP.php');
 function crb_init_theme() {
 	if (class_exists('instagrate_to_wordpress')) {
 		remove_action( 'template_redirect', 'instagrate_to_wordpress::auto_post_images');
