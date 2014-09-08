@@ -83,7 +83,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
 	  <!--<h2 style="text-align:center;"><?php echo $credit_styling ?></h2>
         <h2 style="text-align:center;"> <?php echo $credit_photos ?></h2>
         <h2 style="text-align:center;"> <?php echo $credit_makeup ?></h2>--><br />
-	   <h3><?php echo post_title(); ?></h3>
+	   <h3><?php get_the_title(); ?></h3>
             <?php echo the_content(); ?>              
           </div>
           
