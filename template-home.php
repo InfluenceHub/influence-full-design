@@ -53,7 +53,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
   </div>
 
   <div class="mobile-only swipe-hint">
-    <p>&#9664; Swipe to Browse &#9654;</p>
+    <p> &#60; Swipe to Browse &#62; </p>
   </div>  
 
 </section>
