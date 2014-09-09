@@ -1,12 +1,10 @@
 <?php
 add_action('admin_menu', 'crb_add_theme_readme');
-
 function crb_add_theme_readme() {
 	wp_register_style('theme-help-style', get_bloginfo('stylesheet_directory') . '/lib/theme-help/theme-help.css', array(), '0.1', 'screen');
 	wp_enqueue_style('theme-help-style');
 	add_menu_page('Theme Help', 'Theme Help', 'administrator', 'theme-readme', 'crb_include_theme_help');
 }
-
 function crb_include_theme_help() {
 	?>
 	<div id="theme-help">

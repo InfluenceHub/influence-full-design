@@ -33,7 +33,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>The Influence</title>
-
 <!--[if gte mso 6]>
 <style>
     table.mcnFollowContent {width:100% !important;}
@@ -307,7 +306,6 @@ h4{
 .leftColumnContainer .mcnTextContent img {
     line-height: 0;
 }
-
 .leftColumnContainer .mcnTextContent .product-image img { max-width: 56px; }
 /*
 @tab Columns
@@ -395,15 +393,9 @@ h4{
     /*@editable*/font-weight:normal;
     /*@editable*/text-decoration:underline;
 }
-
-
 }
-
 </style></head>
-
 <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
-
-
 <div style="background-color:#f6f6f6;">
 <!--[if gte mso 9]>
 <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
@@ -413,8 +405,6 @@ h4{
 <table height="100%" width="100%" cellpadding="0" cellspacing="0" border="0">
 <tr>
 <td valign="top" align="left" background="http://i.imgur.com/n8Q6f.png">
-
-
 <center>
 <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
 <tr>
@@ -433,10 +423,8 @@ h4{
                                     <tbody class="mcnTextBlockOuter">
                                     <tr>
                                         <td valign="top" class="mcnTextBlockInner">
-
                                             <table align="left" border="0" cellpadding="0" cellspacing="0" width="700" class="mcnTextContentContainer">
                                                 <tbody><tr>
-
                                                     <td valign="top" class="mcnTextContent" width="130">
                                                         <a href="#"><img align="none" height="29" src="http://64.50.176.63/dev/wp-content/themes/influence-full-design/images/email/topnav-1.gif" style="width: 85px; height: 29px;" width="85"></a>
                                                     </td>
@@ -455,10 +443,8 @@ h4{
                                                     <td valign="top" class="mcnTextContent">
                                                         <a href="#"><img align="none" height="29" src="http://64.50.176.63/dev/wp-content/themes/influence-full-design/images/email/topnav-6.gif" style="width: 85px; height: 29px;" width="85"></a>
                                                     </td>
-
                                                 </tr>
                                                 </tbody></table>
-
                                         </td>
                                     </tr>
                                     </tbody>
@@ -486,9 +472,7 @@ h4{
                                             <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer">
                                                 <tbody>
                                                 <tr>
-
                                                     <td valign="top" width="195">
-
                                                         <a href="http://www.theinfluence.com/"><img align="none" height="77" src="http://64.50.176.63/dev/wp-content/themes/influence-full-design/images/email/header-in.gif" style="width: 77px; height: 77px;" width="77"></a>
                                                     </td>
                                                     <td valign="top" width="400">
@@ -523,12 +507,10 @@ h4{
                                                         </table>
                                                     </td>
                                                     <td valign="top">
-
                                                         <a href="http://www.theinfluence.com/"><img align="none" height="77" src="http://64.50.176.63/dev/wp-content/themes/influence-full-design/images/email/header-pref.gif" style="width: 105px; height: 77px;" width="105"></a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-
                                                     <td valign="top" colspan="3" align="center">
                                                         <img align="none" height="122" src="http://64.50.176.63/dev/wp-content/themes/influence-full-design/images/email/thisjustin.gif" style="width: 670px; height: 122px;" width="670">
                                                     </td>
@@ -552,15 +534,12 @@ h4{
         <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns">
             <tr>
                 <td align="center" valign="top" style="padding-top: 12px;">
-
-
                     <?php $_smarty_tpl->tpl_vars['inc'] = new Smarty_variable(0, null, 0);?>
                     <?php  $_smarty_tpl->tpl_vars['influencer'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['influencer']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['influencers']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['influencer']->key => $_smarty_tpl->tpl_vars['influencer']->value) {
 $_smarty_tpl->tpl_vars['influencer']->_loop = true;
 ?>
-
                     <?php  $_smarty_tpl->tpl_vars['post'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['post']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['influencer']->value['posts']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['post']->key => $_smarty_tpl->tpl_vars['post']->value) {
@@ -578,8 +557,6 @@ $_smarty_tpl->tpl_vars['post']->_loop = true;
                                                 <tbody class="mcnCaptionBlockOuter">
                                                 <tr>
                                                     <td class="mcnCaptionBlockInner" valign="top">
-
-
                                                         <table align="center" border="0" cellpadding="0" cellspacing="0" class="mcnCaptionBottomContent" width="false">
                                                             <tbody>
                                                             <tr>
@@ -590,7 +567,6 @@ $_smarty_tpl->tpl_vars['post']->_loop = true;
 /dev/<?php echo $_smarty_tpl->tpl_vars['post']->value->post_name;?>
 " style="outline: 0; color: #000; text-decoration: none; cursor: pointer; margin: 0; padding: 0; display: block; width: 224px; height: 357px;">
                                                                         <?php echo get_the_post_thumbnail($_smarty_tpl->tpl_vars['post']->value->ID,array(224,423));?>
-
                                                                     </a>
                                                                     <?php if ($_smarty_tpl->tpl_vars['post']->value->productImages) {?>
                                                                         <table>
@@ -617,7 +593,6 @@ $_smarty_tpl->tpl_vars['productImage']->_loop = true;
                                                                     </a>
                                                                 </td>
                                                             </tr>
-
                                                             </tbody></table>
                                                     </td>
                                                 </tr>
@@ -632,7 +607,6 @@ $_smarty_tpl->tpl_vars['productImage']->_loop = true;
                         </tr>
                     </table>
                     <?php }?>
-
                 </td>
             </tr>
         </table>
@@ -656,7 +630,6 @@ $_smarty_tpl->tpl_vars['productImage']->_loop = true;
                                     <tbody class="mcnTextBlockOuter">
                                     <tr>
                                         <td valign="top" class="mcnTextBlockInner">
-
                                             <table align="left" border="0" cellpadding="0" cellspacing="0" width="700" class="mcnTextContentContainer">
                                                 <tbody>
                                                 <tr>
@@ -691,26 +664,22 @@ $_smarty_tpl->tpl_vars['productImage']->_loop = true;
                                                                 </td>
                                                             </tr>
                                                         </table>
-
                                                     </td>
                                                     <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-bottom: 9px; text-align: right;">
                                                         <a href="#"><img align="none" height="67" src="http://64.50.176.63/dev/wp-content/themes/influence-full-design/images/email/header-pref.gif" style="width: 92px; height: 67px;" width="92"></a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-
                                                     <td  colspan="3" valign="top" class="mcnTextContent" align="center" style="padding-top:0px; padding-bottom: 0px; text-transform: uppercase; color: #b3b3b3; text-align: center;">
                                                         <img align="none" height="3" src="http://64.50.176.63/dev/wp-content/themes/influence-full-design/images/email/footer-line.gif" style="width: 700px; height: 3px;" width="700">
                                                     </td>
                                                 </tr>
                                                 <tr>
-
                                                     <td  colspan="3" valign="top" class="mcnTextContent" align="center" style="padding-top:5px; padding-bottom: 9px; text-align: center;">
                                                         <img align="none" height="18" src="http://64.50.176.63/dev/wp-content/themes/influence-full-design/images/email/footer-copy.gif" style="width: 237px; height: 18px;" width="237">
                                                     </td>
                                                 </tr>
                                                 </tbody></table>
-
                                         </td>
                                     </tr>
                                     </tbody>
@@ -729,12 +698,9 @@ $_smarty_tpl->tpl_vars['productImage']->_loop = true;
 </tr>
 </table>
 </center>
-
 </td>
 </tr>
 </table>
 </div>
-
-
 </body>
 </html><?php }} ?>

@@ -33,7 +33,6 @@ function crb_render_comment($comment, $args, $depth) {
 		</div>
 	<?php
 }
-
 /**
  * Restricts direct access to the comments.php and checks whether the comments are password protected.
  * @return boolean
@@ -41,15 +40,12 @@ function crb_render_comment($comment, $args, $depth) {
 function crb_comments_restrict_access() {
 	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
 		die ('Please do not load this page directly. Thanks!');
-
 	if ( post_password_required() ) {
 		echo '<p class="nocomments">This post is password protected. Enter the password to view comments.</p>';
 		return false;
 	}
-
 	return true;
 }
-
 /**
  * Renders all current comments
  * @param  callable $callback
@@ -61,7 +57,6 @@ function crb_comments_render_list($callback) {
 		<ol class="commentlist">
 			<?php wp_list_comments('callback=' . $callback); ?>
 		</ol>
-
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 			<div class="navigation">
 				<div class="alignleft"><?php previous_comments_link() ?></div>
@@ -77,7 +72,6 @@ function crb_comments_render_list($callback) {
 	<?php endif; ?>
 	<?php
 }
-
 /**
  * Comment form hooks:
  *  - comment_form_before

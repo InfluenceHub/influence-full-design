@@ -33,7 +33,6 @@
  * @ignore
  */
 require(dirname(__FILE__) . '/Smarty.class.php');
-
 /**
  * Smarty Backward Compatability Wrapper Class
  *
@@ -46,7 +45,6 @@ class SmartyBC extends Smarty
      * @var string
      */
     public $_version = self::SMARTY_VERSION;
-
     /**
      * Initialize new SmartyBC object
      *
@@ -58,7 +56,6 @@ class SmartyBC extends Smarty
         // register {php} tag
         $this->registerPlugin('block', 'php', 'smarty_php_tag');
     }
-
     /**
      * wrapper for assign_by_ref
      *
@@ -69,7 +66,6 @@ class SmartyBC extends Smarty
     {
         $this->assignByRef($tpl_var, $value);
     }
-
     /**
      * wrapper for append_by_ref
      *
@@ -81,7 +77,6 @@ class SmartyBC extends Smarty
     {
         $this->appendByRef($tpl_var, $value, $merge);
     }
-
     /**
      * clear the given assigned template variable.
      *
@@ -91,7 +86,6 @@ class SmartyBC extends Smarty
     {
         $this->clearAssign($tpl_var);
     }
-
     /**
      * Registers custom function to be used in templates
      *
@@ -104,7 +98,6 @@ class SmartyBC extends Smarty
     {
         $this->registerPlugin('function', $function, $function_impl, $cacheable, $cache_attrs);
     }
-
     /**
      * Unregisters custom function
      *
@@ -114,7 +107,6 @@ class SmartyBC extends Smarty
     {
         $this->unregisterPlugin('function', $function);
     }
-
     /**
      * Registers object to be used in templates
      *
@@ -130,7 +122,6 @@ class SmartyBC extends Smarty
         settype($smarty_args, 'boolean');
         $this->registerObject($object, $object_impl, $allowed, $smarty_args, $block_methods);
     }
-
     /**
      * Unregisters object
      *
@@ -140,7 +131,6 @@ class SmartyBC extends Smarty
     {
         $this->unregisterObject($object);
     }
-
     /**
      * Registers block function to be used in templates
      *
@@ -153,7 +143,6 @@ class SmartyBC extends Smarty
     {
         $this->registerPlugin('block', $block, $block_impl, $cacheable, $cache_attrs);
     }
-
     /**
      * Unregisters block function
      *
@@ -163,7 +152,6 @@ class SmartyBC extends Smarty
     {
         $this->unregisterPlugin('block', $block);
     }
-
     /**
      * Registers compiler function
      *
@@ -175,7 +163,6 @@ class SmartyBC extends Smarty
     {
         $this->registerPlugin('compiler', $function, $function_impl, $cacheable);
     }
-
     /**
      * Unregisters compiler function
      *
@@ -185,7 +172,6 @@ class SmartyBC extends Smarty
     {
         $this->unregisterPlugin('compiler', $function);
     }
-
     /**
      * Registers modifier to be used in templates
      *
@@ -196,7 +182,6 @@ class SmartyBC extends Smarty
     {
         $this->registerPlugin('modifier', $modifier, $modifier_impl);
     }
-
     /**
      * Unregisters modifier
      *
@@ -206,7 +191,6 @@ class SmartyBC extends Smarty
     {
         $this->unregisterPlugin('modifier', $modifier);
     }
-
     /**
      * Registers a resource to fetch a template
      *
@@ -217,7 +201,6 @@ class SmartyBC extends Smarty
     {
         $this->registerResource($type, $functions);
     }
-
     /**
      * Unregisters a resource
      *
@@ -227,7 +210,6 @@ class SmartyBC extends Smarty
     {
         $this->unregisterResource($type);
     }
-
     /**
      * Registers a prefilter function to apply
      * to a template before compiling
@@ -238,7 +220,6 @@ class SmartyBC extends Smarty
     {
         $this->registerFilter('pre', $function);
     }
-
     /**
      * Unregisters a prefilter function
      *
@@ -248,7 +229,6 @@ class SmartyBC extends Smarty
     {
         $this->unregisterFilter('pre', $function);
     }
-
     /**
      * Registers a postfilter function to apply
      * to a compiled template after compilation
@@ -259,7 +239,6 @@ class SmartyBC extends Smarty
     {
         $this->registerFilter('post', $function);
     }
-
     /**
      * Unregisters a postfilter function
      *
@@ -269,7 +248,6 @@ class SmartyBC extends Smarty
     {
         $this->unregisterFilter('post', $function);
     }
-
     /**
      * Registers an output filter function to apply
      * to a template output
@@ -280,7 +258,6 @@ class SmartyBC extends Smarty
     {
         $this->registerFilter('output', $function);
     }
-
     /**
      * Unregisters an outputfilter function
      *
@@ -290,7 +267,6 @@ class SmartyBC extends Smarty
     {
         $this->unregisterFilter('output', $function);
     }
-
     /**
      * load a filter of specified type and name
      *
@@ -301,7 +277,6 @@ class SmartyBC extends Smarty
     {
         $this->loadFilter($type, $name);
     }
-
     /**
      * clear cached content for the given template and cache id
      *
@@ -315,7 +290,6 @@ class SmartyBC extends Smarty
     {
         return $this->clearCache($tpl_file, $cache_id, $compile_id, $exp_time);
     }
-
     /**
      * clear the entire contents of cache (all templates)
      *
@@ -326,7 +300,6 @@ class SmartyBC extends Smarty
     {
         return $this->clearCache(null, null, null, $exp_time);
     }
-
     /**
      * test to see if valid cache exists for this template
      *
@@ -339,7 +312,6 @@ class SmartyBC extends Smarty
     {
         return $this->isCached($tpl_file, $cache_id, $compile_id);
     }
-
     /**
      * clear all the assigned template variables.
      */
@@ -347,7 +319,6 @@ class SmartyBC extends Smarty
     {
         $this->clearAllAssign();
     }
-
     /**
      * clears compiled version of specified template resource,
      * or all compiled template files if one is not specified.
@@ -362,7 +333,6 @@ class SmartyBC extends Smarty
     {
         return $this->clearCompiledTemplate($tpl_file, $compile_id, $exp_time);
     }
-
     /**
      * Checks whether requested template exists.
      *
@@ -373,7 +343,6 @@ class SmartyBC extends Smarty
     {
         return $this->templateExists($tpl_file);
     }
-
     /**
      * Returns an array containing template variables
      *
@@ -384,7 +353,6 @@ class SmartyBC extends Smarty
     {
         return $this->getTemplateVars($name);
     }
-
     /**
      * Returns an array containing config variables
      *
@@ -395,7 +363,6 @@ class SmartyBC extends Smarty
     {
         return $this->getConfigVars($name);
     }
-
     /**
      * load configuration values
      *
@@ -407,7 +374,6 @@ class SmartyBC extends Smarty
     {
         $this->ConfigLoad($file, $section, $scope);
     }
-
     /**
      * return a reference to a registered object
      *
@@ -418,7 +384,6 @@ class SmartyBC extends Smarty
     {
         return $this->getRegisteredObject($name);
     }
-
     /**
      * clear configuration values
      *
@@ -428,7 +393,6 @@ class SmartyBC extends Smarty
     {
         $this->clearConfig($var);
     }
-
     /**
      * trigger Smarty error
      *
@@ -439,9 +403,7 @@ class SmartyBC extends Smarty
     {
         trigger_error("Smarty error: $error_msg", $error_type);
     }
-
 }
-
 /**
  * Smarty {php}{/php} block function
  *
@@ -454,6 +416,5 @@ class SmartyBC extends Smarty
 function smarty_php_tag($params, $content, $template, &$repeat)
 {
     eval($content);
-
     return '';
 }

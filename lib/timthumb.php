@@ -12,7 +12,6 @@
  * 
  * $Rev$
  */
-
 /*
  * --- TimThumb CONFIGURATION ---
  * To edit the configs it is best to create a file called timthumb-config.php
@@ -33,7 +32,6 @@ if(! defined('ALLOW_EXTERNAL') )			define ('ALLOW_EXTERNAL', TRUE);						// Allo
 if(! defined('ALLOW_ALL_EXTERNAL_SITES') ) 	define ('ALLOW_ALL_EXTERNAL_SITES', false);				// Less secure. 
 if(! defined('FILE_CACHE_ENABLED') ) 		define ('FILE_CACHE_ENABLED', TRUE);					// Should we store resized/modified images on disk to speed things up?
 if(! defined('FILE_CACHE_TIME_BETWEEN_CLEANS'))	define ('FILE_CACHE_TIME_BETWEEN_CLEANS', 86400);	// How often the cache is cleaned 
-
 if(! defined('FILE_CACHE_MAX_FILE_AGE') ) 	define ('FILE_CACHE_MAX_FILE_AGE', 86400);				// How old does a file have to be to be deleted from the cache
 if(! defined('FILE_CACHE_SUFFIX') ) 		define ('FILE_CACHE_SUFFIX', '.timthumb.txt');			// What to put at the end of all files in the cache directory so we can identify them
 if(! defined('FILE_CACHE_PREFIX') ) 		define ('FILE_CACHE_PREFIX', 'timthumb');				// What to put at the beg of all files in the cache directory so we can identify them
@@ -41,11 +39,9 @@ if(! defined('FILE_CACHE_DIRECTORY') ) 		define ('FILE_CACHE_DIRECTORY', './cach
 if(! defined('MAX_FILE_SIZE') )				define ('MAX_FILE_SIZE', 10485760);						// 10 Megs is 10485760. This is the max internal or external file size that we'll process.  
 if(! defined('CURL_TIMEOUT') )				define ('CURL_TIMEOUT', 20);							// Timeout duration for Curl. This only applies if you have Curl installed and aren't using PHP's default URL fetching mechanism.
 if(! defined('WAIT_BETWEEN_FETCH_ERRORS') )	define ('WAIT_BETWEEN_FETCH_ERRORS', 3600);				// Time to wait between errors fetching remote file
-
 //Browser caching
 if(! defined('BROWSER_CACHE_MAX_AGE') ) 	define ('BROWSER_CACHE_MAX_AGE', 864000);				// Time to cache in the browser
 if(! defined('BROWSER_CACHE_DISABLE') ) 	define ('BROWSER_CACHE_DISABLE', false);				// Use for testing if you want to disable all browser caching
-
 //Image size and defaults
 if(! defined('MAX_WIDTH') )					define ('MAX_WIDTH', 1500);								// Maximum image width
 if(! defined('MAX_HEIGHT') )				define ('MAX_HEIGHT', 1500);							// Maximum image height
@@ -59,33 +55,26 @@ if(! defined('DEFAULT_S') )					define ('DEFAULT_S', 0);								// Default sharp
 if(! defined('DEFAULT_CC') )				define ('DEFAULT_CC', 'ffffff');						// Default canvas colour. Allows overrid in timthumb-config.php
 if(! defined('DEFAULT_WIDTH') )				define ('DEFAULT_WIDTH', 100);							// Default thumbnail width. Allows overrid in timthumb-config.php
 if(! defined('DEFAULT_HEIGHT') )			define ('DEFAULT_HEIGHT', 100);							// Default thumbnail height. Allows overrid in timthumb-config.php
-
 /**
  * Additional Parameters:
  * LOCAL_FILE_BASE_DIRECTORY = Override the DOCUMENT_ROOT. This is best used in timthumb-config.php
  */
-
 //Image compression is enabled if either of these point to valid paths
-
 //These are now disabled by default because the file sizes of PNGs (and GIFs) are much smaller than we used to generate. 
 //They only work for PNGs. GIFs and JPEGs are not affected.
 if(! defined('OPTIPNG_ENABLED') ) 		define ('OPTIPNG_ENABLED', false);  
 if(! defined('OPTIPNG_PATH') ) 			define ('OPTIPNG_PATH', '/usr/bin/optipng'); //This will run first because it gives better compression than pngcrush. 
 if(! defined('PNGCRUSH_ENABLED') ) 		define ('PNGCRUSH_ENABLED', false); 
 if(! defined('PNGCRUSH_PATH') ) 		define ('PNGCRUSH_PATH', '/usr/bin/pngcrush'); //This will only run if OPTIPNG_PATH is not set or is not valid
-
 /*
 	-------====Website Screenshots configuration - BETA====-------
 	
 	If you just want image thumbnails and don't want website screenshots, you can safely leave this as is.	
 	
 	If you would like to get website screenshots set up, you will need root access to your own server.
-
 	Enable ALLOW_ALL_EXTERNAL_SITES so you can fetch any external web page. This is more secure now that we're using a non-web folder for cache.
 	Enable BLOCK_EXTERNAL_LEECHERS so that your site doesn't generate thumbnails for the whole Internet.
-
 	Instructions to get website screenshots enabled on Ubuntu Linux:
-
 	1. Install Xvfb with the following command: sudo apt-get install subversion libqt4-webkit libqt4-dev g++ xvfb
 	2. Go to a directory where you can download some code
 	3. Check-out the latest version of CutyCapt with the following command: svn co https://cutycapt.svn.sourceforge.net/svnroot/cutycapt
@@ -96,20 +85,16 @@ if(! defined('PNGCRUSH_PATH') ) 		define ('PNGCRUSH_PATH', '/usr/bin/pngcrush');
 	8. Test it by running: xvfb-run --server-args="-screen 0, 1024x768x24" CutyCapt --url="http://markmaunder.com/" --out=test.png
 	9. If you get a file called test.png with something in it, it probably worked. Now test the script by accessing it as follows:
 	10. http://yoursite.com/path/to/timthumb.php?src=http://markmaunder.com/&webshot=1
-
 	Notes on performance: 
 	The first time a webshot loads, it will take a few seconds.
 	From then on it uses the regular timthumb caching mechanism with the configurable options above
 	and loading will be very fast.
-
 	--ADVANCED USERS ONLY--
 	If you'd like a slight speedup (about 25%) and you know Linux, you can run the following command which will keep Xvfb running in the background.
 	nohup Xvfb :100 -ac -nolisten tcp -screen 0, 1024x768x24 > /dev/null 2>&1 &
 	Then set WEBSHOT_XVFB_RUNNING = true below. This will save your server having to fire off a new Xvfb server and shut it down every time a new shot is generated. 
 	You will need to take responsibility for keeping Xvfb running in case it crashes. (It seems pretty stable)
 	You will also need to take responsibility for server security if you're running Xvfb as root. 
-
-
 */
 if(! defined('WEBSHOT_ENABLED') ) 	define ('WEBSHOT_ENABLED', false);			//Beta feature. Adding webshot=1 to your query string will cause the script to return a browser screenshot rather than try to fetch an image.
 if(! defined('WEBSHOT_CUTYCAPT') ) 	define ('WEBSHOT_CUTYCAPT', '/usr/local/bin/CutyCapt'); //The path to CutyCapt. 
@@ -125,8 +110,6 @@ if(! defined('WEBSHOT_JAVA_ON') ) 	define ('WEBSHOT_JAVA_ON', false);			//Have o
 if(! defined('WEBSHOT_PLUGINS_ON') ) 	define ('WEBSHOT_PLUGINS_ON', true);			//Enable flash and other plugins
 if(! defined('WEBSHOT_PROXY') ) 	define ('WEBSHOT_PROXY', '');				//In case you're behind a proxy server. 
 if(! defined('WEBSHOT_XVFB_RUNNING') )	define ('WEBSHOT_XVFB_RUNNING', false);			//ADVANCED: Enable this if you've got Xvfb running in the background.
-
-
 // If ALLOW_EXTERNAL is true and ALLOW_ALL_EXTERNAL_SITES is false, then external images will only be fetched from these domains and their subdomains. 
 if(! isset($ALLOWED_SITES)){
 	$ALLOWED_SITES = array (
@@ -145,9 +128,7 @@ if(! isset($ALLOWED_SITES)){
 // -------------------------------------------------------------
 // -------------- STOP EDITING CONFIGURATION HERE --------------
 // -------------------------------------------------------------
-
 timthumb::start();
-
 class timthumb {
 	protected $src = "";
 	protected $is404 = false;
@@ -262,7 +243,6 @@ class timthumb {
 				}
 			}
 		}
-
 		$cachePrefix = ($this->isURL ? '_ext_' : '_int_');
 		if($this->isURL){
 			$arr = explode('&', $_SERVER ['QUERY_STRING']);
@@ -282,7 +262,6 @@ class timthumb {
 			$this->cachefile = $this->cacheDirectory . '/' . FILE_CACHE_PREFIX . $cachePrefix . md5($this->salt . $this->localImageMTime . $_SERVER ['QUERY_STRING'] . $this->fileCacheVersion) . FILE_CACHE_SUFFIX;
 		}
 		$this->debug(2, "Cache file is: " . $this->cachefile);
-
 		return true;
 	}
 	public function __destruct(){
@@ -309,7 +288,6 @@ class timthumb {
 			} else {
 				$this->debug(3, "webshot is NOT set so we're going to try to fetch a regular image.");
 				$this->serveExternalImage();
-
 			}
 		} else {
 			$this->debug(3, "Got request for internal image. Starting serveInternalImage()");
@@ -356,7 +334,6 @@ class timthumb {
 				$this->debug(3, "Cached file's modification time is $mtime");
 			}
 			if(! $mtime){ return false; }
-
 			$iftime = strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']);
 			$this->debug(3, "The conditional get's if-modified-since unixtime is $iftime");
 			if($iftime < 1){
@@ -413,7 +390,6 @@ class timthumb {
 		$this->debug(3, "Adding error message: $err");
 		$this->errors[] = $err;
 		return false;
-
 	}
 	protected function haveErrors(){
 		if(sizeof($this->errors) > 0){
@@ -499,16 +475,13 @@ class timthumb {
 		$sData = getimagesize($localImage);
 		$origType = $sData[2];
 		$mimeType = $sData['mime'];
-
 		$this->debug(3, "Mime type of image is $mimeType");
 		if(! preg_match('/^image\/(?:gif|jpg|jpeg|png)$/i', $mimeType)){
 			return $this->error("The image being resized is not a valid gif, jpg or png.");
 		}
-
 		if (!function_exists ('imagecreatetruecolor')) {
 		    return $this->error('GD Library Error: imagecreatetruecolor does not exist - please contact your webhost and ask them to install the GD library');
 		}
-
 		if (function_exists ('imagefilter') && defined ('IMG_FILTER_NEGATE')) {
 			$imageFilters = array (
 				1 => array (IMG_FILTER_NEGATE, 0),
@@ -524,7 +497,6 @@ class timthumb {
 				11 => array (IMG_FILTER_SMOOTH, 0),
 			);
 		}
-
 		// get standard input properties		
 		$new_width =  (int) abs ($this->param('w', 0));
 		$new_height = (int) abs ($this->param('h', 0));
@@ -535,66 +507,52 @@ class timthumb {
 		$sharpen = (bool) $this->param('s', DEFAULT_S);
 		$canvas_color = $this->param('cc', DEFAULT_CC);
 		$canvas_trans = (bool) $this->param('ct', '1');
-
 		// set default width and height if neither are set already
 		if ($new_width == 0 && $new_height == 0) {
 		    $new_width = (int) DEFAULT_WIDTH;
 		    $new_height = (int) DEFAULT_HEIGHT;
 		}
-
 		// ensure size limits can not be abused
 		$new_width = min ($new_width, MAX_WIDTH);
 		$new_height = min ($new_height, MAX_HEIGHT);
-
 		// set memory limit to be able to have enough space to resize larger images
 		$this->setMemoryLimit();
-
 		// open the existing image
 		$image = $this->openImage ($mimeType, $localImage);
 		if ($image === false) {
 			return $this->error('Unable to open image.');
 		}
-
 		// Get original width and height
 		$width = imagesx ($image);
 		$height = imagesy ($image);
 		$origin_x = 0;
 		$origin_y = 0;
-
 		// generate new w/h if not provided
 		if ($new_width && !$new_height) {
 			$new_height = floor ($height * ($new_width / $width));
 		} else if ($new_height && !$new_width) {
 			$new_width = floor ($width * ($new_height / $height));
 		}
-
 		// scale down and add borders
 		if ($zoom_crop == 3) {
-
 			$final_height = $height * ($new_width / $width);
-
 			if ($final_height > $new_height) {
 				$new_width = $width * ($new_height / $height);
 			} else {
 				$new_height = $final_height;
 			}
-
 		}
-
 		// create a new true color image
 		$canvas = imagecreatetruecolor ($new_width, $new_height);
 		imagealphablending ($canvas, false);
-
 		if (strlen($canvas_color) == 3) { //if is 3-char notation, edit string into 6-char notation
 			$canvas_color =  str_repeat(substr($canvas_color, 0, 1), 2) . str_repeat(substr($canvas_color, 1, 1), 2) . str_repeat(substr($canvas_color, 2, 1), 2); 
 		} else if (strlen($canvas_color) != 6) {
 			$canvas_color = DEFAULT_CC; // on error return default canvas color
  		}
-
 		$canvas_color_R = hexdec (substr ($canvas_color, 0, 2));
 		$canvas_color_G = hexdec (substr ($canvas_color, 2, 2));
 		$canvas_color_B = hexdec (substr ($canvas_color, 4, 2));
-
 		// Create a new transparent color for image
 	    // If is a png and PNG_IS_TRANSPARENT is false then remove the alpha transparency 
 		// (and if is set a canvas color show it in the background)
@@ -603,57 +561,37 @@ class timthumb {
 		}else{
 			$color = imagecolorallocatealpha ($canvas, $canvas_color_R, $canvas_color_G, $canvas_color_B, 0);
 		}
-
-
 		// Completely fill the background of the new image with allocated color.
 		imagefill ($canvas, 0, 0, $color);
-
 		// scale down and add borders
 		if ($zoom_crop == 2) {
-
 			$final_height = $height * ($new_width / $width);
-
 			if ($final_height > $new_height) {
-
 				$origin_x = $new_width / 2;
 				$new_width = $width * ($new_height / $height);
 				$origin_x = round ($origin_x - ($new_width / 2));
-
 			} else {
-
 				$origin_y = $new_height / 2;
 				$new_height = $final_height;
 				$origin_y = round ($origin_y - ($new_height / 2));
-
 			}
-
 		}
-
 		// Restore transparency blending
 		imagesavealpha ($canvas, true);
-
 		if ($zoom_crop > 0) {
-
 			$src_x = $src_y = 0;
 			$src_w = $width;
 			$src_h = $height;
-
 			$cmp_x = $width / $new_width;
 			$cmp_y = $height / $new_height;
-
 			// calculate x or y coordinate and width or height of source
 			if ($cmp_x > $cmp_y) {
-
 				$src_w = round ($width / $cmp_x * $cmp_y);
 				$src_x = round (($width - ($width / $cmp_x * $cmp_y)) / 2);
-
 			} else if ($cmp_y > $cmp_x) {
-
 				$src_h = round ($height / $cmp_y * $cmp_x);
 				$src_y = round (($height - ($height / $cmp_y * $cmp_x)) / 2);
-
 			}
-
 			// positional cropping!
 			if ($align) {
 				if (strpos ($align, 't') !== false) {
@@ -669,24 +607,17 @@ class timthumb {
 					$src_x = $width - $src_w;
 				}
 			}
-
 			imagecopyresampled ($canvas, $image, $origin_x, $origin_y, $src_x, $src_y, $new_width, $new_height, $src_w, $src_h);
-
 		} else {
-
 			// copy and resize part of an image with resampling
 			imagecopyresampled ($canvas, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
-
 		}
-
 		if ($filters != '' && function_exists ('imagefilter') && defined ('IMG_FILTER_NEGATE')) {
 			// apply filters to image
 			$filterList = explode ('|', $filters);
 			foreach ($filterList as $fl) {
-
 				$filterSettings = explode (',', $fl);
 				if (isset ($imageFilters[$filterSettings[0]])) {
-
 					for ($i = 0; $i < 4; $i ++) {
 						if (!isset ($filterSettings[$i])) {
 							$filterSettings[$i] = null;
@@ -694,59 +625,41 @@ class timthumb {
 							$filterSettings[$i] = (int) $filterSettings[$i];
 						}
 					}
-
 					switch ($imageFilters[$filterSettings[0]][1]) {
-
 						case 1:
-
 							imagefilter ($canvas, $imageFilters[$filterSettings[0]][0], $filterSettings[1]);
 							break;
-
 						case 2:
-
 							imagefilter ($canvas, $imageFilters[$filterSettings[0]][0], $filterSettings[1], $filterSettings[2]);
 							break;
-
 						case 3:
-
 							imagefilter ($canvas, $imageFilters[$filterSettings[0]][0], $filterSettings[1], $filterSettings[2], $filterSettings[3]);
 							break;
-
 						case 4:
-
 							imagefilter ($canvas, $imageFilters[$filterSettings[0]][0], $filterSettings[1], $filterSettings[2], $filterSettings[3], $filterSettings[4]);
 							break;
-
 						default:
-
 							imagefilter ($canvas, $imageFilters[$filterSettings[0]][0]);
 							break;
-
 					}
 				}
 			}
 		}
-
 		// sharpen image
 		if ($sharpen && function_exists ('imageconvolution')) {
-
 			$sharpenMatrix = array (
 					array (-1,-1,-1),
 					array (-1,16,-1),
 					array (-1,-1,-1),
 					);
-
 			$divisor = 8;
 			$offset = 0;
-
 			imageconvolution ($canvas, $sharpenMatrix, $divisor, $offset);
-
 		}
 		//Straight from Wordpress core code. Reduces filesize by up to 70% for PNG's
 		if ( (IMAGETYPE_PNG == $origType || IMAGETYPE_GIF == $origType) && function_exists('imageistruecolor') && !imageistruecolor( $image ) && imagecolortransparent( $image ) > 0 ){
 			imagetruecolortopalette( $canvas, false, imagecolorstotal( $image ) );
 		}
-
 		$imgType = "";
 		$tempfile = tempnam($this->cacheDirectory, 'timthumb_tmpimg_');
 		if(preg_match('/^image\/(?:jpg|jpeg)$/i', $mimeType)){ 
@@ -761,7 +674,6 @@ class timthumb {
 		} else {
 			return $this->sanityFail("Could not match mime type after verifying it previously.");
 		}
-
 		if($imgType == 'png' && OPTIPNG_ENABLED && OPTIPNG_PATH && @is_file(OPTIPNG_PATH)){
 			$exec = OPTIPNG_PATH;
 			$this->debug(3, "optipng'ing $tempfile");
@@ -799,7 +711,6 @@ class timthumb {
 			}
 			@unlink($todel);
 		}
-
 		$this->debug(3, "Rewriting image with security header.");
 		$tempfile4 = tempnam($this->cacheDirectory, 'timthumb_tmpimg_');
 		$context = stream_context_create ();
@@ -853,7 +764,6 @@ class timthumb {
 		if($docRoot && $_SERVER['DOCUMENT_ROOT'] != '/'){ $docRoot = preg_replace('/\/$/', '', $docRoot); }
 		$this->debug(3, "Doc root is: " . $docRoot);
 		$this->docRoot = $docRoot;
-
 	}
 	protected function getLocalImagePath($src){
 		$src = ltrim($src, '/'); //strip off the leading '/'
@@ -870,7 +780,6 @@ class timthumb {
 		}
 		
 		//Do not go past this point without docRoot set
-
 		//Try src under docRoot
 		if(file_exists ($this->docRoot . '/' . $src)) {
 			$this->debug(3, "Found file as " . $this->docRoot . '/' . $src);
@@ -903,7 +812,6 @@ class timthumb {
 		} else {
 			$sub_directories = explode('/', str_replace($this->docRoot, '', $_SERVER['SCRIPT_FILENAME']));
 		}
-
 		foreach ($sub_directories as $sub){
 			$base .= $sub . '/';
 			$this->debug(3, "Trying file as: " . $base . $src);
@@ -1000,7 +908,6 @@ class timthumb {
 			$this->error("Error reading the URL you specified from remote host." . $this->lastURLError);
 			return false;
 		}
-
 		$mimeType = $this->getMimeType($tempfile);
 		if(! preg_match("/^image\/(?:jpg|jpeg|gif|png)$/i", $mimeType)){
 			$this->debug(3, "Remote file has invalid mime type: $mimeType");
@@ -1098,13 +1005,11 @@ class timthumb {
 			case 'image/jpeg':
 				$image = imagecreatefromjpeg ($src);
 				break;
-
 			case 'image/png':
 				$image = imagecreatefrompng ($src);
 				imagealphablending( $image, true );
 				imagesavealpha( $image, true );
 				break;
-
 			case 'image/gif':
 				$image = imagecreatefromgif ($src);
 				break;
@@ -1112,7 +1017,6 @@ class timthumb {
 			default:
 				$this->error("Unrecognised mimeType");
 		}
-
 		return $image;
 	}
 	protected function getIP(){
@@ -1224,7 +1128,6 @@ class timthumb {
 				if(preg_match('/404/', $this->lastURLError)){
 					$this->set404();
 				}
-
 				return false;
 			}
 			if(! file_put_contents($tempfile, $img)){
@@ -1233,7 +1136,6 @@ class timthumb {
 			}
 			return true;
 		}
-
 	}
 	protected function serveImg($file){
 		$s = getimagesize($file);
@@ -1254,7 +1156,6 @@ class timthumb {
 			return true;
 		}
 		return false;
-
 	}
 	protected function set404(){
 		$this->is404 = true;

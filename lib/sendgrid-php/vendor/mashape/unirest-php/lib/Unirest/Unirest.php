@@ -1,16 +1,12 @@
 <?php
-
     use Unirest\HttpMethod;
     use Unirest\HttpResponse;
-
     class Unirest
     {
 			 
 				private static $verifyPeer = true;
-
     		private static $socketTimeout = null;
 				private static $defaultHeaders = array();
-
 				/**
 			  * Verify SSL peer
 			  * @param bool $enabled enable SSL verification, by default is true
@@ -18,7 +14,6 @@
 			  public static function verifyPeer($enabled) {
 						Unirest::$verifyPeer = $enabled;
 				}
-
 				/**
 				 * Set a timeout
 				 * @param integer $seconds timeout value in seconds
@@ -26,7 +21,6 @@
 				public static function timeout($seconds) {
 						Unirest::$socketTimeout = $seconds;
 				}
-
 				/**
 				 * Set a new default header to send on every request
 				 * @param string $name header name
@@ -35,14 +29,12 @@
 				public static function defaultHeader($name, $value) {
 						Unirest::$defaultHeaders[$name] = $value;
 				}
-
 				/**
 				 * Clear all the default headers
 				 */
 				public static function clearDefaultHeaders() {
 						Unirest::$defaultHeaders = array();
 				}
-
 				/**
 				 * Send a GET request to a URL
 				 * @param string $url URL to send the GET request to
@@ -84,7 +76,6 @@
 				{
 						return Unirest::request(HttpMethod::DELETE, $url, $body, $headers, $username, $password);
 				}
-
 				/**
 				 * Send PUT request to a URL
 				 * @param string $url URL to send the PUT request to
@@ -112,7 +103,6 @@
 				{
 						return Unirest::request(HttpMethod::PATCH, $url, $body, $headers, $username, $password);
 				}
-
 				/**
 				 * Prepares a file for upload. To be used inside the parameters declaration for a request.
 				 * @param string $path The file path
@@ -124,7 +114,6 @@
 								return "@" . $path;
 						}
 				}
-
 				/**
          * This function is useful for serializing multidimensional arrays, and avoid getting
          * the "Array to string conversion" notice
@@ -133,7 +122,6 @@
 				    if ( is_object( $arrays ) ) {
 				        $arrays = get_object_vars( $arrays );
 				    }
-
 				    foreach ( $arrays AS $key => $value ) {
 				        $k = isset( $prefix ) ? $prefix . '[' . $key . ']' : $key;
 				        if ( is_array( $value ) OR is_object( $value )  ) {
@@ -143,7 +131,6 @@
 				        }
 				    }
 				}
-
         /**
          * Send a cURL request
          * @param string $httpMethod HTTP method to use (based off \Unirest\HttpMethod constants)
@@ -165,10 +152,8 @@
 						foreach (Unirest::$defaultHeaders as $key => $val) {
 								$lowercaseHeaders[] = Unirest::getHeader($key, $val);
 						}
-
 						$lowercaseHeaders[] = "user-agent: unirest-php/1.1";
 						$lowercaseHeaders[] = "expect:";
-
 						$ch = curl_init();
 						if ($httpMethod != HttpMethod::GET) {
               curl_setopt ($ch, CURLOPT_CUSTOMREQUEST, $httpMethod);
@@ -218,7 +203,6 @@
 						
 						return new HttpResponse($httpCode, $body, $header);
         }
-
         private static function getArrayFromQuerystring($querystring) {
         		$pairs = explode("&", $querystring);
         		$vars = array();
@@ -230,7 +214,6 @@
     				}
     				return $vars;
         }
-
         /**
          * Ensure that a URL is encoded and safe to use with cURL
          * @param  string $url URL to encode
@@ -239,32 +222,26 @@
         private static function encodeUrl($url)
         {
             $url_parsed = parse_url($url);
-
             $scheme = $url_parsed['scheme'] . '://';
             $host = $url_parsed['host'];
             $port = (isset($url_parsed['port']) ? $url_parsed['port'] : null);
             $path = (isset($url_parsed['path']) ? $url_parsed['path'] : null);
             $query = (isset($url_parsed['query']) ? $url_parsed['query'] : null);
-
             if ($query != null) {
                 $query = '?' . http_build_query(Unirest::getArrayFromQuerystring($url_parsed['query']));
             }
             
             if ($port && $port[0] != ":")
                 $port = ":" . $port;
-
             $result = $scheme . $host . $port . $path . $query;
             return $result;
         }
-
         private static function getHeader($key, $val) {
 						$key = trim(strtolower($key));
 						if ($key == "user-agent" || $key == "expect") continue;
 						return $key . ": " . $val;
 				}
-
     }
-
     if (!function_exists('http_chunked_decode')) {
         /**
          * Dechunk an http 'transfer-encoding: chunked' message 
@@ -276,7 +253,6 @@
             $pos = 0;
             $len = strlen($chunk);
             $dechunk = null;
-
             while (($pos < $len) 
                 && ($chunkLenHex = substr($chunk, $pos, ($newlineAt = strpos($chunk, "\n", $pos + 1)) - $pos))) {
                
@@ -284,7 +260,6 @@
                     trigger_error('Value is not properly chunk encoded', E_USER_WARNING);
                     return $chunk;
                 }
-
                 $pos = $newlineAt + 1;
                 $chunkLen = hexdec(rtrim($chunkLenHex, "\r\n"));
                 $dechunk .= substr($chunk, $pos, $chunkLen);
@@ -294,7 +269,6 @@
             return $dechunk;
         }
     }
-
     /**
      * determine if a string can represent a number in hexadecimal 
      * @link http://uk1.php.net/ctype_xdigit

@@ -1,15 +1,11 @@
 <?php
-
     namespace Unirest;
-
     class HttpResponse
     {
-
         private $code;
         private $raw_body;
         private $body;
         private $headers;
-
         /**
          * @param int $code response code of the cURL request
          * @param string $raw_body the raw body of the cURL response
@@ -27,7 +23,6 @@
                 $this->body = $json;
             }
         }
-
         /**
          * Return a property of the response if it exists.
          * Possibilities include: code, raw_body, headers, body (if the response is json-decodable)
@@ -39,7 +34,6 @@
                 return $this->$property;
             }
         }
-
         /**
          * Set the properties of this object
          * @param string $property the property name
@@ -52,7 +46,6 @@
             }
             return $this;
         }
-
         /**
          * Retrieve the cURL response headers from the
          * header string and convert it into an array
@@ -63,15 +56,12 @@
         {
             $headers = explode("\r\n", $headers);
             array_shift($headers);
-
             foreach ($headers as $line) {
                 if (strstr($line, ': ')) {
                     list ($key, $value) = explode(': ', $line);
                     $result[$key] = $value;
                 }
             }
-
             return $result;
         }
-
     }

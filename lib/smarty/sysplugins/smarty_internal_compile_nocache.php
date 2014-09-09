@@ -8,7 +8,6 @@
  * @subpackage Compiler
  * @author Uwe Tews
  */
-
 /**
  * Smarty Internal Plugin Compile Nocache Classv
  *
@@ -39,12 +38,9 @@ class Smarty_Internal_Compile_Nocache extends Smarty_Internal_CompileBase
         }
         // this tag does not return compiled code
         $compiler->has_code = false;
-
         return true;
     }
-
 }
-
 /**
  * Smarty Internal Plugin Compile Nocacheclose Class
  *
@@ -71,8 +67,6 @@ class Smarty_Internal_Compile_Nocacheclose extends Smarty_Internal_CompileBase
         }
         // this tag does not return compiled code
         $compiler->has_code = false;
-
         return true;
     }
-
 }

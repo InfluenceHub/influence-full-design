@@ -3,7 +3,6 @@ include_once(dirname(__FILE__) . '/twitter/TwitterHelper.php');
 include_once(dirname(__FILE__) . '/video-functions.php');
 include_once(dirname(__FILE__) . '/user-functions.php');
 include_once(dirname(__FILE__) . '/comments.php');
-
 /**
  * Truncates a string to a certain word count.
  * @param  string  $input Text to be shortalized. Any HTML will be stripped.
@@ -14,11 +13,9 @@ include_once(dirname(__FILE__) . '/comments.php');
 function crb_shortalize($input, $words_limit=15, $end='...') {
 	$input = strip_tags($input);
 	$words_limit = abs(intval($words_limit));
-
 	if ($words_limit == 0) {
 		return $input;
 	}
-
 	$words = str_word_count($input, 2, '0123456789');
 	if (count($words) <= $words_limit + 1) {
 		return $input;
@@ -32,7 +29,6 @@ function crb_shortalize($input, $words_limit=15, $end='...') {
 		}
 	}
 }
-
 /**
  * Crawls the taxonomy tree up to top level taxonomy ancestor and returns
  * that taxonomy as object. 
@@ -47,7 +43,6 @@ function crb_taxonomy_ancestor($term_id, $taxonomy) {
 	}
 	return get_term_by('id', $term_obj->term_id, $taxonomy);
 }
-
 /**
  * Shortcut for get_post_meta. 
  * @param  string $key 
@@ -64,7 +59,6 @@ function crb_get_meta($key, $id=null) {
 	}
 	return get_post_meta($id, $key, true);
 }
-
 /**
  * Gets all pages / posts which have the specified custom field. Does not check
  * whether it has any value - just for existence. 

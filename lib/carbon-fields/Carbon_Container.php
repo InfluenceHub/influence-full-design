@@ -1,8 +1,6 @@
 <?php 
-
 add_action('admin_print_scripts', array('Carbon_Container', 'admin_hook_scripts'));
 add_action('admin_print_styles', array('Carbon_Container', 'admin_hook_styles'));
-
 /**
  * Base container class. 
  * Defines the key container methods and their default implementations.
@@ -16,7 +14,6 @@ abstract class Carbon_Container {
 	 * @var array
 	 */
 	static $registered_panel_ids = array();
-
 	/**
 	 * List of registered unique field names
 	 *
@@ -24,7 +21,6 @@ abstract class Carbon_Container {
 	 * @var array
 	 */
 	static protected $registered_field_names = array();
-
 	/**
 	 * List of containers created via factory that 
 	 * should be initialized
@@ -33,7 +29,6 @@ abstract class Carbon_Container {
 	 * @var array
 	 */
 	static protected $init_containers = array();
-
 	/**
 	 * List of default container settings
 	 *
@@ -41,14 +36,12 @@ abstract class Carbon_Container {
 	 * @var array
 	 */
 	public $settings = array();
-
 	/**
 	 * Title of the container
 	 *
 	 * @var string
 	 */
 	public $title = '';
-
 	/**
 	 * Whether the container was setup
 	 *
@@ -56,22 +49,18 @@ abstract class Carbon_Container {
 	 */
 	public $setup_ready = false;
 	
-
 	/**
 	 * List of notification messages to be displayed on the front-end
 	 *
 	 * @var array
 	 */
 	protected $notifications = array();
-
 	/**
 	 * List of error messages to be displayed on the front-end
 	 *
 	 * @var array
 	 */
 	protected $errors = array();
-
-
 	/**
 	 * List of container fields
 	 *
@@ -79,7 +68,6 @@ abstract class Carbon_Container {
 	 * @var array
 	 */
 	protected $fields = array();
-
 	/**
 	 * Container DataStore. Propagated to all container fields
 	 *
@@ -88,7 +76,6 @@ abstract class Carbon_Container {
 	 * @var Carbon_DataStore
 	 */
 	protected $store;
-
 	/**
 	 * Create a new container of type $type and name $name and label $label.
 	 *
@@ -98,21 +85,15 @@ abstract class Carbon_Container {
 	 **/
 	static function factory($type, $name) {
 		$type = str_replace(" ", '', ucwords(str_replace("_", ' ', $type)));
-
 		$class = 'Carbon_Container_' . $type;
-
 		if (!class_exists($class)) {
 			throw new Carbon_Exception ('Unknown container "' . $type . '".');
 		}
-
 		$container = new $class($name);
 		$container->type = $type;
-
 		self::$init_containers[] = $container;
-
 		return $container;
 	}
-
 	/**
 	 * Init containers created via factory
 	 *
@@ -122,31 +103,25 @@ abstract class Carbon_Container {
 		while (($container = array_shift(self::$init_containers))) {
 			$container->init();
 		}
-
 		return $container;
 	}
-
 	/**
 	 * Perform instance initialization after calling setup()
 	 *
 	 * @return void
 	 **/
 	abstract function init();
-
 	/**
 	 * Output the container markup
 	 *
 	 * @return void
 	 **/
 	abstract function render();
-
 	function __construct($title) {
 		$this->title = $title;
 		$this->id = preg_replace('~\W~', '', $title);
-
 		$this->verify_unique_panel_id($this->id);
 	}
-
 	/**
 	 * Update container settings and begin initialization
 	 *
@@ -158,29 +133,22 @@ abstract class Carbon_Container {
 		if ( $this->setup_ready ) {
 			throw new Carbon_Exception ('Panel "' . $this->title . '" already setup');
 		}
-
 		$this->check_setup_settings($settings);
-
 		$this->settings = array_merge($this->settings, $settings);
-
 		foreach ($this->settings as $key => $value) {
 			if ( is_null($value) ) {
 				unset($this->settings[$key]);
 			}
 		}
-
 		$this->setup_ready = true;
-
 		return $this;
 	}
-
 	function check_setup_settings(&$settings = array()) {
 		$invalid_settings = array_diff_key($settings, $this->settings);
 		if ( !empty($invalid_settings) ) {
 			throw new Carbon_Exception ('Invalid settings supplied to setup(): "' . implode('", "', array_keys($invalid_settings)) . '"');
 		}
 	}
-
 	/**
 	 * Called first as part of the container save procedure.
 	 * Responsible for checking the request validity and 
@@ -196,7 +164,6 @@ abstract class Carbon_Container {
 			call_user_func_array(array($this, 'save'), $param);
 		}
 	}
-
 	/**
 	 * Load submitted data and save each field in the container
 	 *
@@ -209,7 +176,6 @@ abstract class Carbon_Container {
 			$field->save();
 		}
 	}
-
 	/**
 	 * Checks whether the current request is valid
 	 *
@@ -218,7 +184,6 @@ abstract class Carbon_Container {
 	function is_valid_save() {
 		return false;
 	}
-
 	/**
 	 * Load the value for each field in the container.
 	 * Could be used internally during container rendering
@@ -231,7 +196,6 @@ abstract class Carbon_Container {
 		}
 	}
 	
-
 	/**
 	 * Called first as part of the container attachment procedure.
 	 * Responsible for checking  it's ok to attach the container 
@@ -247,7 +211,6 @@ abstract class Carbon_Container {
 			call_user_func_array(array($this, 'attach'), $param);
 		}
 	}
-
 	/**
 	 * Attach the container rendering and helping methods 
 	 * to concrete WordPress Action hooks
@@ -255,7 +218,6 @@ abstract class Carbon_Container {
 	 * @return void
 	 **/
 	function attach() {}
-
 	/**
 	 * Perform checks whether the container should be attached during the current request
 	 *
@@ -264,7 +226,6 @@ abstract class Carbon_Container {
 	function is_valid_attach() {	
 		return true;
 	}
-
 	/**
 	 * Revert the result of attach()
 	 *
@@ -272,13 +233,11 @@ abstract class Carbon_Container {
 	 **/
 	function detach() {
 		$this->drop_unique_panel_id($this->id);
-
 		// unregister field names
 		foreach ($this->fields as $field) {
 			$this->drop_unique_field_name($field->get_name());
 		}
 	}
-
 	/**
 	 * Append array of fields to the current fields set. All items of the array
 	 * must be instances of Carbon_Field and their names should be unique for all
@@ -294,20 +253,15 @@ abstract class Carbon_Container {
 			if ( !is_a($field, 'Carbon_Field') ) {
 				throw new Carbon_Exception('Object must be of type Carbon_Field');
 			}
-
 			$this->verify_unique_field_name($field->get_name());
-
 			$field->set_context($this->type);
 			if ( !$field->get_datastore() ) {
 				$field->set_datastore($this->store);
 			}
 		}
-
 		$this->fields = array_merge($this->fields, $fields);
-
 		return $this;
 	}
-
 	/**
 	 * Returns the private container array of fields.
 	 * Use only if you are completely aware of what you are doing.
@@ -317,7 +271,6 @@ abstract class Carbon_Container {
 	function get_fields() {
 		return $this->fields;
 	}
-
 	/**
 	 * Perform checks whether there is a container registered with identificator $id
 	 *
@@ -327,11 +280,8 @@ abstract class Carbon_Container {
 		if ( in_array($id, self::$registered_panel_ids) ) {
 			throw new Carbon_Exception ('Panel ID "' . $id .'" already registered');
 		}
-
 		self::$registered_panel_ids[] = $id;
 	}
-
-
 	/**
 	 * Remove container identificator $id from the list of unique container ids
 	 *
@@ -343,7 +293,6 @@ abstract class Carbon_Container {
 			unset(self::$registered_panel_ids[ array_search($id, self::$registered_panel_ids) ]);
 		}
 	}
-
 	/**
 	 * Perform checks whether there is a field registered with the name $name.
 	 * If not, the field name is recorded.
@@ -355,10 +304,8 @@ abstract class Carbon_Container {
 		if ( in_array($name, self::$registered_field_names) ) {
 			throw new Carbon_Exception ('Field name "' . $name . '" already registered');
 		}
-
 		self::$registered_field_names[] = $name;
 	}
-
 	/**
 	 * Remove field name $name from the list of unique field names
 	 *
@@ -371,7 +318,6 @@ abstract class Carbon_Container {
 			unset(self::$registered_field_names[$index]);
 		}
 	}
-
 	/**
 	 * Assign DataStore instance for use by the container fields
 	 *
@@ -380,12 +326,10 @@ abstract class Carbon_Container {
 	 **/
 	function set_datastore(Carbon_DataStore $store) {
 		$this->store = $store;
-
 		foreach ($this->fields as $field) {
 			$field->set_datastore($this->store);
 		}
 	}
-
 	/**
 	 * Return the DataStore instance used by container fields
 	 *
@@ -394,7 +338,6 @@ abstract class Carbon_Container {
 	function get_datastore() {
 		return $this->store;
 	}
-
 	/**
 	 * Return WordPress nonce name used to identify the current container instance
 	 *
@@ -403,14 +346,10 @@ abstract class Carbon_Container {
 	function get_nonce_name() {
 		return 'carbon_panel_' . $this->id . '_nonce';
 	}
-
 	static function admin_hook_scripts() {
 		wp_enqueue_script('carbon_containers', CARBON_PLUGIN_URL . '/js/containers.js');
 	}
-
 	static function admin_hook_styles() {
 		wp_enqueue_style('carbon_containers', CARBON_PLUGIN_URL . '/css/containers.css');
 	}
-
 } // END Carbon_Container 
-

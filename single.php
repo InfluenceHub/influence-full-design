@@ -1,28 +1,23 @@
 <?php get_header();
   error_reporting(0);
 	inf_update_posts_views(get_the_ID());
-
 	the_post();
-
 	if(is_user_logged_in()) {
 		$current_user_influencers = inf_get_influencers();
 	} ?>
 	<section id="content">
     <div class="ad_banner no-mobile" style="margin-top: -75px;">
-<!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409963968603-1' class="no-mobile" style='width:971px; height:120px; margin: 0 auto;'>
+<!-- 728x90_Interior -->
+<div id='div-gpt-ad-1410204268874-0' style='width:728px; height:90px; margin: 0 auto;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410204268874-0'); });
 </script>
 </div>
     </div>
 		<div class="shell shop">
 			<?php $post_categories = wp_get_post_terms( get_the_ID(), 'category' );
-
       $influencer_id = get_influencer_id_by_connected_post($post);
-
 			if(!is_null($influencer_id)) :
-
         $influencer_name = get_the_title($influencer_id);
         $influencer_name_parts = explode(' ', $influencer_name);
         $influencer_name_first = $influencer_name_parts[0];
@@ -67,7 +62,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
 					</div><!-- /.left-col -->
 					<div class="right-col right">
 						<?php
-
 						//$exact_items = carbon_get_the_post_meta('inf_influencer_products'); 
             $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
             ?>
@@ -112,7 +106,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
 		<!--<a href="<?php //echo get_permalink($influencer_id); ?>" class="shop-viewall">VIEW ALL <?php //echo $influencer_name; ?> LOOKS</a>-->
               <img class="shop-published-by" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
 						</div><!-- /.text-holder -->
-
           </div><!-- /.right-col --> 	
             <?php 
             
@@ -180,25 +173,18 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
        
         <div class="bottom">
 				<?php $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
-
 				if(!empty($products_sections)) :
-
 					foreach($products_sections as $key=>$ps) {
             if ($key > 0) {
               $products = $ps['products'];
-
               if(!empty($products)) : ?>
                 <h2 class="prod-section" style="font-family: futura-pt; font-weight: lighter; font-size: 16px; color: #000; text-transform: uppercase;"><?php echo $ps['section_name']; ?></h2>
                 <div id="shop-slider-<?php echo $key; ?>" class="prod-row">
                   <ul class="slides">
                     <?php $index = 1;
-
                     foreach($products as $p) {
-
                       $post_obj = get_post($p);
-
                       if(!empty($post_obj)) {
-
                         $post_id = $post_obj->ID;
                         $post_title = get_the_title($post_id);
                         $shortTitle = $post_title;
@@ -231,11 +217,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
                         <?php  ?>
                           
                         <?php
-
                         $index++;
-
                       }
-
                     } ?>
                   </ul>
                     <div class="no-mobile prev-<?php echo $key; ?>">&nbsp;</div><!-- /.prev -->
@@ -244,7 +227,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
               <?php endif;
             }
 					}
-
 				endif;
       ?>
         </div>
@@ -258,9 +240,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
           <!-- END TAG -->
         </div>
       <?php
-
 			endif;
-
 			// showing random ("related") below
 			$args = array(
 				'post_type' => 'post',
@@ -275,21 +255,17 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
 					)
 				)
 			);
-
 			$random = get_posts($args);
-
 			if(!empty($random)) : ?>
 				<div class="cols morelike">
           <h2 class="prod-section" style="font-family: 'AvenirNext LT Pro Regular', arial, sans-serif; font-weight: lighter; font-size: 24px; color: #000; text-align: center; text-transform: uppercase;">More Like This</h2>
 					<div class="row no-border">
 						<?php foreach($random as $r) :
-
 							$args = array(
 								'connected_type' => 'posts_to_influencers',
 								'connected_items' => $r->ID,
 								'posts_per_page' => 1
 							);
-
 							$influencer = get_posts($args);
               
               $thisTitle = get_the_title($r->ID);
@@ -298,7 +274,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
               }
               
               //echo get_the_title($influencer[0]->ID);
-
 							?>
 								<div class="col_5">
 									<a href="<?php echo get_permalink($r->ID); ?>">
@@ -310,7 +285,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
 									</a>
 								</div><!-- /.col_5 -->
 							<?php
-
 						endforeach; ?>
 					</div><!-- /.row -->
 				</div><!-- /.cols -->
@@ -321,7 +295,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
 	</section><!-- /#content -->
  <?php inf_footer_signup() ?>
 <?php get_footer(); ?>
-
 <?php
 function inf_shop_slider() {
   global $post;
@@ -337,7 +310,6 @@ function inf_shop_slider() {
   }
 }
 ?>
-
 <script>
 jQuery(window).load(function() {
   //jQuery('.shop-main .inner.slides').flexslider();

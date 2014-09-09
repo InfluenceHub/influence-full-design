@@ -8,8 +8,6 @@ function crb_is_logged_in() {
 	global $user_ID;
 	return $user_ID;
 }
-
-
 /**
  * Returns the currently logged in user's object
  * @return array
@@ -19,7 +17,6 @@ function crb_get_current_user() {
 	get_currentuserinfo();
 	return $userdata;
 }
-
 /**
  * Redirects if the current user is not logged in. Be careful with the $redirect -
  * may cause infinite redirection loop if the redirect requires login as well
@@ -32,7 +29,6 @@ function crb_require_login($redirect = '') {
 		exit;
 	}
 }
-
 /**
  * Redirects if the current user is not of the specified level. Admins are always alowed.
  * @param  string $level required user capability
@@ -45,7 +41,6 @@ function crb_require_user_level($level, $redirect = '') {
 		header('Location: ' . $redirect);
 	}
 }
-
 /**
  * Returns boolean indicating whether the specified user has the specified role
  * @param  int $user_id
@@ -57,4 +52,3 @@ function crb_user_is($user_id, $capability) {
 	$all_capabilities = get_user_meta($user_id, $wpdb->prefix . 'capabilities', true);
 	return isset($all_capabilities[$capability]);
 }
-

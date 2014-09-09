@@ -5,7 +5,6 @@
 			There are no <?php echo $this->labels['plural_name'] ?> yet. Click <a href="#">here</a> to add one.
 		</td>
 	</tr>
-
 	<?php 
 	$index = 0;
 	foreach ($this->values as $fields_num => $fields): 
@@ -32,7 +31,6 @@
 							// in complex field groups. Just using index doesn't work in 
 							// some setups with nested complex fields. 
 							$id_salt = substr(md5(mt_rand()), 0, 6);
-
 							$field->set_id( $old_id . '-' . $id_salt );
 							$field->set_name( $this->get_name() . '[' . $index . '][' . $field->get_name() . ']' );
 						?>
@@ -87,16 +85,13 @@
 			</td>
 		</tr>
 	<?php $index ++; endforeach ?>
-
 	<!-- New Group -->
-
 	<?php 
 	$index = '__ei__';
 	foreach ($this->groups as $group): ?>
 		<tr class="carbon-group-preview carbon-group-<?php echo $group->get_name() ?>">
 			<td class="carbon-drag-handle"><span></span></td>
 			<td>
-
 				<input type="hidden" name="<?php echo $this->get_name() . '[' . $index . '][group]' ?>" value="" />
 				<div class="carbon-btn-holder">
 					<div class="carbon-btn-dropdown">
@@ -105,7 +100,6 @@
 					</div>
 				</div>
 				
-
 				<?php if ( $this->layout == self::LAYOUT_TABLE ): ?>
 					<table class="layout-<?php echo $this->layout ?>">
 						<?php 
@@ -166,7 +160,6 @@
 			</td>
 		</tr>
 	<?php endforeach; ?>
-
 	<tr class="carbon-actions">
 		<td colspan="2">
 			<div class="carbon-button">
@@ -177,8 +170,6 @@
 					<?php endforeach; ?>
 				</ul>
 			</div>
-
-
 		</td>
 	</tr>
 </table>

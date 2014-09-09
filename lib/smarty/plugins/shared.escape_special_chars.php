@@ -5,7 +5,6 @@
  * @package Smarty
  * @subpackage PluginsShared
  */
-
 if (version_compare(PHP_VERSION, '5.2.3', '>=')) {
     /**
      * escape_special_chars common function
@@ -23,7 +22,6 @@ if (version_compare(PHP_VERSION, '5.2.3', '>=')) {
         if (!is_array($string)) {
             $string = htmlspecialchars($string, ENT_COMPAT, Smarty::$_CHARSET, false);
         }
-
         return $string;
     }
 } else {
@@ -45,7 +43,6 @@ if (version_compare(PHP_VERSION, '5.2.3', '>=')) {
             $string = htmlspecialchars($string);
             $string = str_replace(array('%%%SMARTY_START%%%', '%%%SMARTY_END%%%'), array('&', ';'), $string);
         }
-
         return $string;
     }
 }

@@ -3,7 +3,6 @@
 * Template Name: Featured Themes
 */
 get_header();
-
 	the_post();
 ?>
 <section id="content">

@@ -1,26 +1,20 @@
 <?php get_header();
   error_reporting(0);
 	inf_update_posts_views(get_the_ID());
-
 	the_post();
-
 	if(is_user_logged_in()) {
 		$current_user_influencers = inf_get_influencers();
 	} ?>
 	<section id="content">
 		<div class="shell shop">
 			<?php $post_categories = wp_get_post_terms( get_the_ID(), 'category' );
-
 			$args = array(
 				'connected_type' => 'posts_to_influencers',
 				'connected_items' => get_the_ID(),
 				'nopaging' => true,
 				'posts_per_page' => 1
 			);
-
 			$influencer = get_posts($args);
-
-
 			//if(!empty($influencer)) {
         ?>
 <SCRIPT LANGUAGE="JavaScript">function mailpage() 
@@ -58,20 +52,17 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</li>
                 <?php inf_theme_slider_theme(); ?>
-
 <!--        <div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
               </ul>
                 <div class="shop-featured-prev">&nbsp;</div>
                 <div class="shop-featured-next">&nbsp;</div>
 							</div>
               <!-- /.inner -->
-
               <!--<div class="shop-maintag"><a href="<?php echo $category_link; ?>"><?php echo strtoupper($post_categories[0]->name); ?></a></div> -->
 						<?php //} ?>
 					</div><!-- /.left-col -->
 					<div class="right-col left" style="float: left; width:225px;">
 						<?php
-
 						//$exact_items = carbon_get_the_post_meta('inf_influencer_products');
             $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
 			global $wp;
@@ -96,7 +87,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 echo $content;
                 */
               ?>
-
+           <pre><?php echo print_r($caption_me)[0]; ?></pre>
               </div>
 						</div><!-- /.text-holder -->
 					</div><!-- /.right-col -->
@@ -114,20 +105,15 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 <div id="shop-slider-<?php echo $key+1; ?>" class="prod-row">
                   <ul class="slides">
                     <?php $index = 1;
-
                     foreach($products as $p) {
-
                       $post_obj = get_post($p);
-
                       if(!empty($post_obj)) {
-
                         $post_id = $post_obj->ID;
                         $post_title = get_the_title($post_id);
                         $shortTitle = $post_title;
                         if (strlen($post_title) > 24) {
                           $shortTitle = substr($shortTitle, 0, 24) . '...';
                         }
-
                         $product_designer = get_post_meta($post_id, 'designer', true);
                         $shortDesigner = $product_designer;
                         if (strlen($shortDesigner) > 24) {
@@ -151,13 +137,9 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                           </a>
                         </li>
                         <?php  ?>
-
                         <?php
-
                         $index++;
-
                       }
-
                     } ?>
                   </ul>
                     <div class="prev-<?php echo $key+1; ?>">&nbsp;</div><!-- /.prev -->
@@ -165,11 +147,9 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
                 </div><!-- /.prod-row -->
               <?php }
             }
-
 				}
       ?>
         </div>
-
         <div class="ad_banner">
         <a href="http://shop.theinfluence.com">
           <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shop-banner.gif" />
@@ -179,9 +159,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
           <!-- END TAG -->
         </div>
       <?php
-
 			//}
-
 			// showing random ("related") below
 			$args = array(
 				'post_type' => 'post',
@@ -195,30 +173,23 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 					)
 				)
 			);
-
 			//$random = get_posts($args);
-
 			if(!empty($random)) { ?>
 				<div class="cols column-three morelike">
           <h2>more like this</h2>
 					<div class="row no-border">
 						<?php foreach($random as $r) {
-
 							$args = array(
 								'connected_type' => 'posts_to_influencers',
 								'connected_items' => $r->ID,
 								'posts_per_page' => 1
 							);
-
 							$influencer = get_posts($args);
-
               $thisTitle = get_the_title($r->ID);
               if (strlen($thisTitle) > 40) {
                 $thisTitle = substr($thisTitle, 0, 40) . '...';
               }
-
               //echo get_the_title($influencer[0]->ID);
-
 							?>
 								<div class="col_5">
 									<a href="<?php echo get_permalink($r->ID); ?>">
@@ -230,17 +201,13 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 									</a>
 								</div><!-- /.col_5 -->
 							<?php
-
 						} ?>
 					</div><!-- /.row -->
 				</div><!-- /.cols -->
 			<?php } ?>
 		</div><!-- /.shell -->
-
-
 	</section><!-- /#content -->
   <?php #inf_browse_by(); ?>
-
   <?php
   ini_set('display_errors', 1);
   // The interviews page displays the latest interview for now
@@ -276,7 +243,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 		</div>
   </div>
 <?php get_footer(); ?>
-
 <?php
 function inf_theme_slider_theme() {
   global $post;
@@ -285,26 +251,23 @@ function inf_theme_slider_theme() {
     $image_full  = wp_get_attachment_image_src($image[inf_featured_image], 'full');
     $image_small = wp_get_attachment_image_src($image[inf_featured_image], 'inf_featured_theme');
     ?>
-    <li class="slide-theme"><a href="<?php echo $image_full[0]; ?>" class="colorbox">
+    <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
-		</a></li>
-    <?php
+		</li>
+     <?php
+    }   
   }
-}
 ?>
 <?php
-// Captions for slider
 function inf_captions() {
   global $post;
-  $captions = carbon_get_the_post_meta($post->ID, 'inf_caption', 'complex');
-  foreach($captions as $caption) {
+  $captions = carbon_get_theme_meta($post->ID, 'inf_captions', 'complex');
+  $caption = $captions[0];
+  // foreach($caption as $_caption) {
+  //   $cap = get_post_meta($_caption, 'inf_caption', true);
 ?>
- <li style="list-style: none;"><p><?php echo $caption[0]; ?></p></li>
+ <pre><?php echo print_r($caption[0]); ?></pre>
  <?php
-  ChromePhp::log($caption);
-  ChromePhp::log($captions);
-
-  }
 }
 ?>
 <script>
@@ -318,5 +281,3 @@ jQuery(window).load(function() {
   });
 });
 </script>
-
-
