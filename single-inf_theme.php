@@ -30,10 +30,12 @@ location.href = mail_str;
 					<!--<div class="breadcrumbs"><a href="#">SHOP ></a> <?php //echo strtoupper(get_the_title()); ?></div> /.breadcrumbs -->
           <div class="column-three" style="border: none;">
           <div class="column adcolumn no-mobile">
-<div id='div-gpt-ad-1410050142891-0' class="no-mobile" style='width:300px; height:600px;'>
+<!-- ROS_300x600 -->
+<div id='div-gpt-ad-1410302527331-0' style='width:300px; height:600px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0'); });
 </script>
+</div>
 </div>
              </div>
           <div class="left-col theme right">
