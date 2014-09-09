@@ -85,7 +85,31 @@ div.home-box img {
     opacity:.5;
   }
 
+.favorites .favorites_hover_container {
+  opacity: 0;
+  background: #fff;
+  color: #000;
+  font: 12px "AvenirNext LT Pro Regular",arial,sans-serif;
+  line-height: 12px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  height: auto ;
+  width: auto;
 
+}
+
+.favorites .favorites_hover_container:hover {
+  opacity: .85;
+  background: #fff;
+  color: #000;
+  font: 12px "AvenirNext LT Pro Regular",arial,sans-serif;
+  line-height: 12px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  height: auto;
+  width: auto;
+
+}
 .callout {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -99,6 +123,20 @@ div.home-box img {
 }
 .callout .callout_hover_container {
   opacity:0;
+  background:#000;
+  color:#fff;
+  width:205px;
+  line-height:12px;
+  font: 12px "AvenirNext LT Pro Regular",arial,sans-serif;
+  text-transform:uppercase;
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  padding:10px;
+  text-align: center;
+}
+.callout .callout_hover_container:hover {
+  opacity:.0;
   background:#000;
   color:#fff;
   width:205px;

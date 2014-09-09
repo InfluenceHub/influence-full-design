@@ -70,26 +70,31 @@ $args = array(
   <div class="favorites" style="border-left: 10px solid #d5f7ec;">
    <a href="<?php echo $link1; ?>">
     <img src="<?php echo $image1SRC; ?>" width="133px" height="133px" />
+    <div class="favorites_hover_container">SHOP<br />ITEM</div>
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link2; ?>">
     <img src="<?php echo $image2SRC; ?>" width="133px" height="133px" />
+    <div class="favorites_hover_container">SHOP<br />ITEM</div>
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link3; ?>">
     <img src="<?php echo $image3SRC; ?>" width="133px" height="133px" />
+    <div class="favorites_hover_container">SHOP<br />ITEM</div>
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link4; ?>">
     <img src="<?php echo $image4SRC; ?>" width="133px" height="133px" />
+    <div class="favorites_hover_container">SHOP<br />ITEM</div>
     </a>
   </div>
   <div class="favorites">
    <a href="<?php echo $link5; ?>">
     <img src="<?php echo $image5SRC; ?>" width="133px" height="133px"/>
+    <div class="favorites_hover_container">SHOP<br />ITEM</div>
     </a>
   </div>
   </div>
