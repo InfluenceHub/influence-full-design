@@ -92,9 +92,13 @@ location.href = mail_str;
 															<div class="shop-subscribe"><a class="sub-link<?php echo $extraclass; ?>" href="<?php echo home_url().'/my-influence/'; ?>">UNSUBSCRIBE</a></div><!-- /.flag -->
 														<?php } else { ?>
 															<input type="hidden" name="influencer_subscribe" value="<?php echo $influencer_id; ?>">
-															<a class="in-circle<?php echo $extraclass; ?>" href="<?php echo home_url().'/my-influence/'; ?>"></a>
-															<div class="shop-subscribe"><a class="sub-link<?php echo $extraclass; ?>" href="<?php echo home_url().'/my-influence/'; ?>">SUBSCRIBE</a></div><!-- /.flag -->
-                            <?php } ?>
+															 <?php if ( is_user_logged_in() ) { ?>  
+                                    <a class="in-circle <?php echo $extraclass ?>" href="<?php echo home_url().'/my-influence/'; ?>"></a>
+                                    <div class="shop-subscribe"><a class="sub-link <?php echo $extraclass; ?>" href="<?php echo home_url().'/my-influence/'; ?>">SUBSCRIBE</a></div><!-- /.flag -->
+                                    <?php } else { ?>
+                                    <a class="sign-in-link in-circle <?php echo $extraclass ?>" target="_blank"></a>
+                                    <div class="shop-subscribe"><a class="sign-in-link sub-link <?php echo $extraclass; ?>" target="_blank">SUBSCRIBE</a></div><!-- /.flag -->
+                                 <?php } } ?>
 													</form>
 											<?php //} ?>
 									</div><!-- /.browse-type -->

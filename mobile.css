@@ -159,7 +159,7 @@ li#menu-item-15636 {
 	margin-top: 10px;
 }
 
-.home-feed-post-info h2 {
+.home-feed-post-info h2, li.home-feed-side-by-side .home-feed-post-info h2 {
 	font-size: 14px;
 }
 
@@ -211,7 +211,8 @@ li.home-feed-side-by-side {
 }
 
 #menu-footer-menu li {
-	display: block;
+	display: inline-block;
+	margin: 5px;
 }
 
 .foot-nav {
@@ -220,7 +221,9 @@ li.home-feed-side-by-side {
 }
 
 .foot-nav li a {
-	font: 16px/18px "Oswald",arial,sans-serif; 
+	font-size: 12px "Oswald",arial,sans-serif; 
+	text-transform: uppercase;
+	font-family: 'AvenirNext LT Pro Regular',arial,sans-serif;
 }
 
 .foot-copy {
@@ -255,7 +258,8 @@ li.home-feed-side-by-side {
 
 .shop .column-three h2 {
 	margin-top: 0px;
-	font: 18px/18px "Oswald",arial,sans-serif;
+	margin-bottom: 0.5em;
+	font: 14px "Oswald",arial,sans-serif;
 }
 .shop-published-by {
 	position: initial
@@ -277,7 +281,7 @@ li.home-feed-side-by-side {
 }*/
 
 .shop-main p {
-	font: 16px/22px "AvenirNext LT Pro Regular",arial,sans-serif; 
+	font: 12px "AvenirNext LT Pro Regular",arial,sans-serif; 
 }
 
 .prod-row.small ul li {

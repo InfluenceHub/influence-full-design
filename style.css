@@ -6575,6 +6575,7 @@ li.home-feed-side-by-side .home-feed-post-info {
 
 li.home-feed-side-by-side .home-feed-post-info h2 {
   font-size: 16px;
+  padding-bottom:4px;
   height: 52px; /* Give it a defined height to ensure all the borders and sub text line up */
 }
 
@@ -7018,7 +7019,7 @@ text-align:center;
   .swipe-hint{
     background-color:black;
     color:rgb(240,240,240);
-    padding:0.25em 0;
+    font-size: 2em;
     text-align: center;
     font-family: 'AvenirNext LT Pro Regular', arial, sans-serif;
   }
