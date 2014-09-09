@@ -17,6 +17,7 @@
       <p class="status"></p>
 		</form>
     <a class="lost switchform">Forgot?</a>
+    <a class="sign-up-link switchform">Sign Up</a>
   </div><!-- /.inner -->
   <div class="inner reset">
     <h3>RESET PASSWORD</h3>
