@@ -78,7 +78,7 @@ div.nav {
 	position: relative;
 	display:none;
 	background: #fff;
-	top: 0px;
+	top:39px;
 }
 
 #hamburger {
@@ -509,8 +509,9 @@ div.az-links li.scr-link a {
 	
 	div.nav {
 		height: 400px !important ;
-		border-bottom: solid 1px black;
-
+		box-shadow: 2px 2px 23px -3px rgba(40,40,40,0.3);
+		width:60%;
+		min-width:100px;
 	}
 
 	.subscribe-mobile {

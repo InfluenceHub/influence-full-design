@@ -7083,6 +7083,9 @@ text-align:center;
     display:none !important;
   }
   .archive-col.blocked-title h3{
-    font-size:30px;
+    font-size:30px !important;
   }
+
+  /*Temp Hide for Browse By link*/
+  #menu-item-15429{display:none!important;}
 }
