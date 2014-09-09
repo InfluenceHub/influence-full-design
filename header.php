@@ -134,8 +134,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a id="logo" style="padding-top: 5px;" href="<?php echo get_home_url(null, '/'); ?>"><img  class="no-mobile"src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" /></a>
         <a href="#" id="hamburger" style="width: 100%; height: 45px; margin-top: -5px;">
     <img src="<?php bloginfo('stylesheet_directory'); ?>/images/hamz.png" style="z-index: 2; background-color: #fff; margin-top: 5px;" width="35x" height="35px" />
-	   <div style="padding-left: 60px; margin-top: -30px;"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/></div>
-    </a>
+
+	  </a>
+    <div class="mobile-logo mobile-only">
+      <a href="<?php bloginfo('url'); ?>" target="_self">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/header-influence.gif" height="25px"/>
+      </a>
+    </div>
+    
         <div class="nav">
           <div class="nav-icons">
            <ul class="soc-list">
@@ -156,6 +162,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'fallback_cb'     => '',
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s' . $signinlink . '<li class="stretcher"></li></ul>'
           )); ?>
+          <div class="mobile-search mobile-only">
+            <form action="<?php bloginfo('url'); ?>" method="get" class="search">
+                <input type="text" value="" title="" name="s" class="field" />
+                <input type="submit" value="" />
+            </form>
+          </div>
+
       <?php
       $_iDropdownHtml = '<div class="influencer-menu-wrapper" id="influencer_menu"><ul><li class="top-cat-name"><span>Influencers</span></li>';
       foreach (range('a', 'e') as $letter) {

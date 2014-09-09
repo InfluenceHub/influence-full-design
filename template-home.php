@@ -14,9 +14,9 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
 </script>
 </div>
   <section id="callout">
-  <div class="top-block no-mobile">
-    <div class="callout_container">
-      <div class="callout">
+  <div class="top-block" id="swiped">
+    <div class="callout_container swipe-wrap">
+      <div class="callout swipe-slide">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/editors-pick.png"> -->
        <?php $box1 = inf_home_box1(); ?>
         <a href="<?php echo get_post_meta($box1->ID, '_homebox1_link_url')[0]; ?>">
@@ -24,7 +24,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
         </a>
 		<div class="callout_hover_container"><div class="callout_hover"><span><?php echo get_the_title($box1->ID) ?> <a href="<?php echo get_post_meta($box1->ID, '_homebox1_link_url')[0]; ?>">View More></a></span></div></div>
         </div>
-        <div class="callout">
+        <div class="callout swipe-slide">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/in-focu.png"> -->
        <?php $box2 = inf_home_box2(); ?>
         <a href="<?php echo get_post_meta($box2->ID, '_homebox2_link_url')[0]; ?>">
@@ -32,7 +32,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
         </a>
 		<div class="callout_hover_container"><div class="callout_hover"><span><?php echo get_the_title($box2->ID) ?> <a href="<?php echo get_post_meta($box2->ID, '_homebox2_link_url')[0]; ?>">View More></a></span></div></div>
         </div>
-        <div class="callout">
+        <div class="callout swipe-slide">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/trend-report.png"> -->
         <?php $box3 = inf_home_box3(); ?>
         <a href="<?php echo get_post_meta($box3->ID, '_homebox3_link_url')[0]; ?>">
@@ -40,7 +40,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
         </a>
 		<div class="callout_hover_container"><div class="callout_hover"><span><?php echo get_the_title($box3->ID) ?> <a href="<?php echo get_post_meta($box3->ID, '_homebox3_link_url')[0]; ?>">View More></a></span></div></div>
         </div>
-        <div class="callout">
+        <div class="callout swipe-slide">
         <!--<img class="callout callout-overlay" src="<?php echo get_stylesheet_directory_uri(); ?>/images/just-spotted.png"> -->
        <?php $box4 = inf_home_box4(); ?>
         <a href="<?php echo get_post_meta($box4->ID, '_homebox4_link_url')[0]; ?>">
@@ -49,9 +49,15 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
 		<div class="callout_hover_container"><div class="callout_hover"><span><?php echo get_the_title($box4->ID) ?> <a href="<?php echo get_post_meta($box4->ID, '_homebox4_link_url')[0]; ?>">View More></a></span></div></div>
         </div>
     </div>
-   <?php inf_items(); ?>
+   <div class="no-mobile"><?php inf_items(); ?></div><!--favorites-->
   </div>
+
+  <div class="mobile-only swipe-hint">
+    <p>&#9664; Swipe to Browse &#9654;</p>
+  </div>  
+
 </section>
+
   <section id="content">
     <div class="ad_wrapper-block">
       <?php //inf_browse_by(); ?>

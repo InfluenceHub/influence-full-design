@@ -206,7 +206,7 @@ div.home-box img {
 }
 
 .top-block {
-  height: 350px;
+  min-height: 350px;
   width: 100%;
   /* height:600px; */
 }
@@ -6756,7 +6756,7 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
   font-family:
 }
 @media only screen and (max-width: 700px) {
-  .shop-subscribe {
+  /*.shop-subscribe {
     visibility: hidden;
     display: none;
   }
@@ -6767,7 +6767,7 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
     .in-circle {
       visibility: hidden;
       display: none;
-    }
+    }*/
     .shop-main .next, .shop .next-1, .shop .next-2, .shop .next-3, .shop .next-4, .shop .next-5, .shop .next-6 {
       display: block;
       height: 25px;
@@ -6933,4 +6933,93 @@ text-align:center;
 
 .single-inf_theme .shop-main-social a {
   margin:0 15px;
+}
+
+
+/***************
+******* DWM Mobile Styles
+***************/
+
+.sign-in-pop .sign-up-link.switchform{
+    left:100px;
+  }
+
+@media screen AND (max-width:700px){
+
+  /*  Menu Styles   */
+  .mobile-logo{
+    position:absolute;
+    top:10px;left:60px;
+    z-index:1000;
+  }
+
+  .mobile-search{
+    position:absolute;
+    top:270px;
+    left:0.75em;
+    z-index: 1000;
+  }
+
+  .nav-icons{display:none;}
+
+  .mobile-search form label{
+    display:none;
+  }
+  .sign-in-pop{
+    z-index: 999;
+  }
+
+  .sign-in-pop{
+    width:100%;
+    right:0;
+    left:0;
+    max-width: 100%;
+  }
+
+  .fixed_social_block{
+    z-index:10;
+  }
+
+  /*  Overrides for "4-pack" callout */
+
+  #swiped{
+    display:none;
+    overflow-y: hidden;
+    overflow-x: auto;
+    min-height: 250px;
+  }
+  .swipe-wrap{
+    max-width: none !important;;
+  }
+  .swipe-slide{
+    display:inline-block;
+    right:0;  left:0;
+    margin-left:-5px;
+    text-align: center;
+  }
+
+  #callout{
+    padding-top:50px;
+  }
+  .callout img{
+    width:250px;
+    height:250px;
+    max-height:none;
+    margin:0.5em auto;
+  }
+  .callout .callout_hover_container{
+    opacity:1;
+    bottom:20px;
+    left:50%;
+    margin-left:-120px;
+    width:250px;
+  }
+
+  .swipe-hint{
+    background-color:black;
+    color:rgb(240,240,240);
+    padding:0.25em 0;
+    text-align: center;
+    font-family: 'AvenirNext LT Pro Regular', arial, sans-serif;
+  }
 }

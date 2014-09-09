@@ -30,6 +30,7 @@ function crb_init_theme() {
 		wp_enqueue_style('style-colorbox', get_bloginfo('stylesheet_directory') . '/css/colorbox.css');
 	}
 }
+
 define('CRB_THEME_DIR', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 add_action('init', 'crb_init_theme');
 add_action('after_setup_theme', 'crb_setup_theme');
