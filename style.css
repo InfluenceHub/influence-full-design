@@ -6940,6 +6940,10 @@ text-align:center;
 ******* DWM Mobile Styles
 ***************/
 
+.sign-in-pop .sign-up-link.switchform{
+    left:100px;
+  }
+
 @media screen AND (max-width:700px){
 
   /*  Menu Styles   */
@@ -6974,9 +6978,6 @@ text-align:center;
     right:0;
     left:0;
     max-width: 100%;
-  }
-  .sign-in-pop .sign-up-link.switchform{
-    left:100px;
   }
 
   .fixed_social_block{
