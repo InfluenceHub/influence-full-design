@@ -7077,4 +7077,12 @@ text-align:center;
     text-align: center;
     font-family: 'AvenirNext LT Pro Regular', arial, sans-serif;
   }
+
+  /*Hack to hide top box on View Latest Looks page*/
+  .infinite-block.archive-col.isotope-item:first-child{
+    display:none !important;
+  }
+  .archive-col.blocked-title h3{
+    font-size:30px;
+  }
 }
