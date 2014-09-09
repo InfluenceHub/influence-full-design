@@ -38,8 +38,6 @@ $detect = new Mobile_Detect;
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/mobile.css<?php echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" media="screen and (max-width: 700px)" />
-
-    <!--<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/swipe.css" type="text/css" media="screen and (max-width: 700px)" />-->
   </head>
 
 <!-- REPLACE HEADER SCRIPT WITH ALL OF THIS -->
