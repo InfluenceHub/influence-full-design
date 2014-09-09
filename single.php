@@ -117,8 +117,8 @@ location.href = mail_str;
               ?>			
 		<!--<a href="<?php //echo get_permalink($influencer_id); ?>" class="shop-viewall">VIEW ALL <?php //echo $influencer_name; ?> LOOKS</a>-->
               <img class="shop-published-by" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
-              <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a><a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img style="margin-left: 10px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a><a href="javascript:mailpage()" target="_top"><img style="margin-left: 10px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/social_email.png" /></a> </div>
-            </div><!-- /.text-holder -->
+<!--               <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a><a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img style="margin-left: 10px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a><a href="javascript:mailpage()" target="_top"><img style="margin-left: 10px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/social_email.png" /></a> </div>
+ -->            </div><!-- /.text-holder -->
           </div><!-- /.right-col --> 	
             <?php 
             
