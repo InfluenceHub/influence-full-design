@@ -6969,10 +6969,6 @@ text-align:center;
     z-index: 999;
   }
 
-  #swiped{
-    display:none;
-  }
-
   .sign-in-pop{
     width:100%;
     right:0;
@@ -6987,6 +6983,7 @@ text-align:center;
   /*  Overrides for "4-pack" callout */
 
   #swiped{
+    display:none;
     overflow-y: hidden;
     overflow-x: auto;
     min-height: 250px;
@@ -7016,5 +7013,13 @@ text-align:center;
     left:50%;
     margin-left:-120px;
     width:250px;
+  }
+
+  .swipe-hint{
+    background-color:black;
+    color:rgb(240,240,240);
+    padding:0.25em 0;
+    text-align: center;
+    font-family: 'AvenirNext LT Pro Regular', arial, sans-serif;
   }
 }
