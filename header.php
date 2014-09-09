@@ -38,6 +38,8 @@ $detect = new Mobile_Detect;
     <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/mobile.css<?php echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" media="screen and (max-width: 700px)" />
+
+    <!--<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/swipe.css" type="text/css" media="screen and (max-width: 700px)" />-->
   </head>
 
 <!-- REPLACE HEADER SCRIPT WITH ALL OF THIS -->
@@ -173,7 +175,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'fallback_cb'     => '',
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s' . $signinlink . '<li class="stretcher"></li></ul>'
           )); ?>
-          <div class="mobile-search mobile-only"><?php get_search_form( true ); ?></div>
+          <div class="mobile-search mobile-only">
+            <form action="<?php bloginfo('url'); ?>" method="get" class="search">
+                <input type="text" value="" title="" name="s" class="field" />
+                <input type="submit" value="" />
+              </form>
+          </div>
 
       <?php
       $_iDropdownHtml = '<div class="influencer-menu-wrapper" id="influencer_menu"><ul><li class="top-cat-name"><span>Influencers</span></li>';

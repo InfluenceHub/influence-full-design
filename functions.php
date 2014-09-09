@@ -33,6 +33,9 @@ function crb_init_theme() {
 		wp_enqueue_style('style-colorbox', get_bloginfo('stylesheet_directory') . '/css/colorbox.css');
 	}
 
+
+	// wp_enqueue_script('swipe', get_bloginfo('stylesheet_directory') . '/js/swipe.js');
+
 }
 
 define('CRB_THEME_DIR', dirname(__FILE__) . DIRECTORY_SEPARATOR);

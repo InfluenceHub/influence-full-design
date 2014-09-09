@@ -6940,35 +6940,77 @@ text-align:center;
 ******* DWM Mobile Styles
 ***************/
 
-.mobile-logo{
-  position:absolute;
-  top:10px;left:60px;
-  z-index:1000;
-}
-
-.mobile-search{
-  position:absolute;
-  top:270px;
-  z-index: 1000;
-}
-.mobile-search form label{
-  display:none;
-}
-
-/*  Overrides for "4-pack" callout */
-
 @media screen AND (max-width:700px){
-  .callout_container{
+
+  /*  Menu Styles   */
+  .mobile-logo{
+    position:absolute;
+    top:10px;left:60px;
+    z-index:1000;
+  }
+
+  .mobile-search{
+    position:absolute;
+    top:270px;
+    left:0.75em;
+    z-index: 1000;
+  }
+
+  .nav-icons{display:none;}
+
+  .mobile-search form label{
+    display:none;
+  }
+  .sign-in-pop{
+    z-index: 999;
+  }
+
+  #swiped{
+    display:none;
+  }
+
+  .sign-in-pop{
+    width:100%;
+    right:0;
+    left:0;
+    max-width: 100%;
+  }
+
+  .fixed_social_block{
+    z-index:10;
+  }
+
+  /*  Overrides for "4-pack" callout */
+
+  #swiped{
+    overflow-y: hidden;
+    overflow-x: auto;
+    min-height: 250px;
+  }
+  .swipe-wrap{
+    max-width: none !important;;
+  }
+  .swipe-slide{
+    display:inline-block;
+    right:0;  left:0;
+    margin-left:-5px;
     text-align: center;
   }
-  .callout{
-    /*display: block;*/
-    text-align: center;
+
+  #callout{
+    padding-top:50px;
   }
   .callout img{
     width:250px;
     height:250px;
     max-height:none;
     margin:0.5em auto;
+  }
+  .callout .callout_hover_container{
+    opacity:1;
+    bottom:20px;
+    left:50%;
+    margin-left:-120px;
+    width:250px;
   }
 }
