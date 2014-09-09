@@ -13,6 +13,14 @@
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410204268874-0'); });
 </script>
 </div>
+<SCRIPT LANGUAGE="JavaScript">function mailpage() 
+{ 
+mail_str = "mailto:?subject= Check Out This Look At THEINFLUENCE.COM! --  " + document.title; 
+mail_str += "&body= " + document.title; 
+mail_str += "... at: " + location.href; 
+location.href = mail_str; 
+} 
+</SCRIPT>
     </div>
 		<div class="shell shop">
 			<?php $post_categories = wp_get_post_terms( get_the_ID(), 'category' );
@@ -105,7 +113,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410204268874-0');
               ?>			
 		<!--<a href="<?php //echo get_permalink($influencer_id); ?>" class="shop-viewall">VIEW ALL <?php //echo $influencer_name; ?> LOOKS</a>-->
               <img class="shop-published-by" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
-						</div><!-- /.text-holder -->
+              <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a> <a href="javascript:mailpage()" target="_top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_email.png" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a></div>
+            </div><!-- /.text-holder -->
           </div><!-- /.right-col --> 	
             <?php 
             
