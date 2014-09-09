@@ -96,12 +96,11 @@ div.home-box img {
   height: auto;
   width: auto;
   position: absolute;
-  top: 50%;
-
+  text-align: center;
 }
 
 .favorites .favorites_hover_container:hover {
-  opacity: .85;
+  opacity: .0;
   background: #fff;
   color: #000;
   font: 12px "AvenirNext LT Pro Regular",arial,sans-serif;
@@ -111,8 +110,22 @@ div.home-box img {
   height: auto;
   width: auto;
   position: absolute;
-  top: 50%;
+  text-align: center;
+}
 
+.favorites .favorites_hover_container .favorites_hover{
+  position:relative;
+  display:table-cell;
+  vertical-align:middle;
+  line-height:12px;
+}
+
+.favorites .favorites__hover_container .favorites_hover span {
+  vertical-align: middle;
+  display: inline-block;
+  line-height:normal;
+}
+}
 }
 .callout {
   padding-top: 10px;
