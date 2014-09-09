@@ -108,6 +108,8 @@ div.home-box img {
   margin: 0 auto;
   height: auto;
   width: auto;
+  position: absolute;
+  top: 50%;
 
 }
 .callout {
