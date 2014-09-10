@@ -463,6 +463,15 @@ li.home-feed-side-by-side {
 .home-feed-post {
 	border: none;
 }
+
+.foot-nav {
+	padding-top: 5px;
+	padding-bottom: 8px;
+}
+
+#footer p.copy {
+	padding-top: 5px;
+}
 .category-list {
 	padding-left: 15px;
 }
