@@ -438,7 +438,7 @@ return null;
                                   $content = substr($content, 0, 180).'...';
                                 }
                           ?>
-                          <p class="home-feed-pcontent">
+                          <p class="home-feed-pcontent no-mobile">
                             <?php echo $content ?>
                             <a href="<?php the_permalink(); ?>" class="home-feed-post-view-more">
                               VIEW MORE<span class="home-feed-post-view-more-arrow">&rsaquo;</span>
@@ -450,7 +450,7 @@ return null;
                               $products_section = $products_sections[0];
                               $products = $products_section['products'];
                             ?>
-                            <div class="home-feed-prod-row prod-row small">
+                            <div class="home-feed-prod-row prod-row small no-mobile">
                               <ul class="home-feed-prod-list group">
                                   <?php foreach ($products as $k => $post_id): ?>
                                     <?php

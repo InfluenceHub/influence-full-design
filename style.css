@@ -7098,6 +7098,46 @@ text-align:center;
     font-family: 'AvenirNext LT Pro Regular', arial, sans-serif;
   }
 
+
+  /*Home Page Overrides*/
+  .home-feed-post-info h2{
+    text-transform: capitalize;
+    padding-bottom:5px;
+  }
+  .shop-subscribe{
+    margin-top:0;
+  }
+
+  .home-feed-post{
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(210,210,210);
+    padding-bottom: 15px;
+  }
+  .home-feed-post-img-wrap,  .home-feed-post-info{
+    display: inline-block;
+    margin-left:-4px;
+    vertical-align: middle;
+    float:none;
+  }
+  .home-feed-post-img-wrap{
+    width:40%;
+    margin-right:1em;
+  }
+  .home-feed-post-info{
+    width:60%;
+  }
+  .home-feed-post-info, .home-feed-post-view-more.shop-look{
+    text-align:left;
+  }
+  .home-feed-post-view-more.shop-look{padding-left:1px;}
+
+  li.home-feed-side-by-side:nth-child(2n+1) {
+   margin:0.5em 0;
+  }
+
+  
+
+
   /*Hack to hide top box on View Latest Looks page*/
   .infinite-block.archive-col.isotope-item:first-child{
     display:none !important;
