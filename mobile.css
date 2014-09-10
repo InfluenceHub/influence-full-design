@@ -464,8 +464,11 @@ li.home-feed-side-by-side {
 	border: none;
 }
 
-.slides ul {
-	margin-top: 10px;
+.interview #topSlider ul.slides li img{
+    width:100%;
+    height: initial;
+  
+    margin-top: 50px;
 }
 .foot-nav {
 	padding-top: 5px;
