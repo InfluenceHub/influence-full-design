@@ -58,7 +58,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1');
 
 </section>
 
-  <section id="content" style="margin-top: 10px;">
+  <section id="content" style="margin-top:-100px;">
     <div class="ad_wrapper-block">
       <?php //inf_browse_by(); ?>
 	  <div class="content_wrapper" style="position:relative;">
