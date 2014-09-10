@@ -31,7 +31,7 @@
 		</div><!-- /.shell -->
 	</section><!-- /#content -->
 <?php inf_footer_signup() ?>
-  <?php
+ <!--  <?php
   ini_set('display_errors', 1);
   // The interviews page displays the latest interview for now
   $args = array(
@@ -62,5 +62,5 @@
 	<?php
 	endforeach; ?>
 		</div>
-  </div>
+  </div> -->
 <?php get_footer(); ?>
