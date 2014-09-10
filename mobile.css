@@ -460,10 +460,11 @@ li.home-feed-side-by-side {
 	padding-bottom: 40px;
 	margin-bottom: 0px;
 }
-.home-feed-post {
-	border: none;
-}
 
+.column home-feed-post .home-feed-side-by-side {
+	border: none;
+
+}
 .interview #topSlider ul.slides li img{
     width:100%;
     height: initial;
