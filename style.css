@@ -4394,6 +4394,7 @@ a#logo {
   width: 100%;
   text-align: justify;
   z-index: 4;
+  padding-top:15px;
 }
 
 .nav > ul > li {
@@ -6991,12 +6992,13 @@ text-align:center;
 ******* DWM Mobile Styles
 ***************/
 
+
 .sign-in-pop .sign-up-link.switchform{
     left:100px;
   }
 
 @media screen AND (max-width:700px){
-
+  .nav > ul#menu-main-menu{padding-top:0;}
   /*  Menu Styles   */
   .mobile-logo{
     position:absolute;
@@ -7013,13 +7015,12 @@ text-align:center;
   }
   .mobile-search input{
     display:inline-block;
-    margin-left:-4px;
+    margin-left:-3px;
     padding:1em;
     outline:none;
   }
   .mobile-search form{
-
-    min-width: 150px;
+    min-width: 155px;
   }
   .mobile-search input[type='text']{
     width:70%;
@@ -7033,7 +7034,6 @@ text-align:center;
     color:white;
     border-radius:0;
     border:none;
-    right:0;
   }
   .nav-icons{display:none;}
 
