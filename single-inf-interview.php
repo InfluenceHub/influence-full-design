@@ -40,8 +40,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410297406212-0');
             }  
           ?>
           </ul><!-- /.slides -->
-          <div class="prev top">&nbsp;</div><!-- /.prev -->
-          <div class="next top">&nbsp;</div><!-- /.next -->
+          <div class="prev top no-mobile">&nbsp;</div><!-- /.prev -->
+          <div class="next top no-mobile">&nbsp;</div><!-- /.next -->
         </div><!-- /.interview-slider -->   
         
 <div class="interview-slider bottom group no-mobile">
