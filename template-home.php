@@ -100,11 +100,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2');
     $videos = get_posts($args);
     if(!empty($videos)) :
     ?>
-  <style>
-    .pe-powered-by {
-      .display: none;
-    }
-  </style>
 <div id="pubexchange_below_content" class="no-mobile"></div>
 <!--<div class="in-video"> -->
 <div class="in-video no-mobile" style="margin-top: -50px;">
