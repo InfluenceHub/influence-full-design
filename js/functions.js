@@ -291,13 +291,13 @@ jQuery(function($) {
       },
 			auto: false
 		});
-    $('#topSlider.interview-slider .slides').carouFredSel({
-			prev: '.prev.top',
-			next: '.next.top',
-			items: 1,
-			auto: false,
-      responsive: true,
-		});
+   if($(window).width() > 700 ){ $('#topSlider.interview-slider .slides').carouFredSel({
+         prev: '.prev.top',
+         next: '.next.top',
+         items: 1,
+         auto: false,
+         responsive: true,
+       });}
     $('.interview-slider.bottom .slides').carouFredSel({
 			prev: '.prev.bottom',
 			next: '.next.bottom',
@@ -305,7 +305,8 @@ jQuery(function($) {
       scroll: {
         items: 1
       },
-			auto: false
+			auto: false,
+      responsive: true,
 		});
     $('#hash-inf-slider .slides').carouFredSel({
 			prev: '.hash-influence .prev',
