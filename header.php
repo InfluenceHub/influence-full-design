@@ -28,6 +28,7 @@ $detect = new Mobile_Detect;
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/davidtemp.css?ver=<?php echo $version; ?>" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/semantic.css?ver=<?php echo $version; ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    <meta name="google-site-verification" content="vUzgkCun4eFlulAAb_uAY1b-42sLiFWZeTAXk9v-uSE" />
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
     <script type="text/javascript" src="//use.typekit.net/lzr4wxq.js"></script>
