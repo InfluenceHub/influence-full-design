@@ -475,6 +475,11 @@ li.home-feed-side-by-side:nth-child(n) {
   margin-top: 15px;
 }
 
+.latest-home .viewall-latest {
+	padding-top: 50px;
+	margin-top: 30px;
+}
+
 .home-feed-post.home-feed-side-by-side {
 	border: none;
 
