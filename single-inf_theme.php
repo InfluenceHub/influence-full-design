@@ -29,11 +29,13 @@ location.href = mail_str;
         <div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>
 					<!--<div class="breadcrumbs"><a href="#">SHOP ></a> <?php //echo strtoupper(get_the_title()); ?></div> /.breadcrumbs -->
           <div class="column-three" style="border: none;">
-          <div class="column adcolumn" style="">
-<div id='div-gpt-ad-1410050142891-0' class="no-mobile" style='width:300px; height:600px;'>
+          <div class="column adcolumn no-mobile">
+<!-- ROS_300x600 -->
+<div id='div-gpt-ad-1410302527331-0' style='width:300px; height:600px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0'); });
 </script>
+</div>
 </div>
              </div>
           <div class="left-col theme right">
@@ -150,7 +152,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0');
 				}
       ?>
         </div>
-        <div class="ad_banner">
+        <div class="ad_banner no-mobile">
         <a href="http://shop.theinfluence.com">
           <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shop-banner.gif" />
         </a>

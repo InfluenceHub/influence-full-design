@@ -35,7 +35,7 @@
   ini_set('display_errors', 1);
   // The interviews page displays the latest interview for now
   $args = array(
-    'numberposts' => 3,
+    'numberposts' => 9999,
     'orderby' => 'date',
     'order' => 'DESC',
     'post_type' => 'inf-interview',

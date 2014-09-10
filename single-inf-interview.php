@@ -14,9 +14,10 @@
     <div class="shell group">
     <div class="top_ad-block no-mobile" style="margin-top: 25px;">
 <!-- 728x90_Interior -->
-<div id='div-gpt-ad-1410204268874-0' style='width:728px; height:90px; margin: 0 auto;'>
+<!-- ROS_970x120 -->
+<div id='div-gpt-ad-1410297406212-0' style='width:970px; height:120px; margin: 0 auto;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410204268874-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410297406212-0'); });
 </script>
 </div>
       <!-- BEGIN IFRAME TAG - theinfluence 728x90 < - DO NOT MODIFY -->
