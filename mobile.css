@@ -467,6 +467,10 @@ li.home-feed-side-by-side:nth-child(n) {
 	margin-bottom: -10px;
 }
 
+.home-feed-post-info h2 {
+	text-transform: none;
+}
+
 .latest-home .viewall-latest {
   position: relative;
   width: 660px;
