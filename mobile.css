@@ -461,7 +461,7 @@ li.home-feed-side-by-side {
 	margin-bottom: 0px;
 }
 
-.column .home-feed-post .home-feed-side-by-side {
+.home-feed-post.home-feed-side-by-side {
 	border: none;
 
 }
