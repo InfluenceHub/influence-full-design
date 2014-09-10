@@ -585,18 +585,18 @@ return null;
           </ul><!-- /.recent-list -->
           <!-- HOME PAGE 300 X 900 AD SPACE -->
           <div class="column adcolumn no-mobile">
-<!-- 300x500BCBG -->
-<div id='div-gpt-ad-1409963968603-0' class="no-mobile" style='width:300px; height:600px;'>
+
+<div id='div-gpt-ad-1410302527331-0' style='width:300px; height:600px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0'); });
 </script>
 </div>
-<!--           <a href="http://www.anrdoezrs.net/click-7580048-11914509">
+<!--          <a href="http://www.anrdoezrs.net/click-7580048-11914509">
            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nastydenim.gif" />
           </a>
           <a href="https://www.thehunt.com/the-hunt/6Dmf7D-janel-on-the-hunt-">
            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/thehunt.jpg" />
-          </a> -->
+          </a>  -->
             <!-- BEGIN IFRAME TAG - theinfluence 300x600 < - DO NOT MODIFY -->
             <!-- <IFRAME SRC="http://ib.adnxs.com/tt?id=2438106&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="300" HEIGHT="600"></IFRAME> -->
             <!-- END TAG -->

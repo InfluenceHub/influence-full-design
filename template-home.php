@@ -7,11 +7,12 @@ the_post();
 //Detect mobile
 ?>
 <?php inf_footer_signup() ?>
-<!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1409963968603-1' class="no-mobile" style='width:971px; height:120px; margin:100px auto 15px;'>
+<!-- ROS_970x120 -->
+<div id='div-gpt-ad-1410297406212-0' style='width:970px; height:120px; margin: 0 auto;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-1'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410297406212-0'); });
 </script>
+</div>
 </div>
   <section id="callout">
   <div class="top-block" id="swiped">
