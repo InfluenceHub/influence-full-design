@@ -163,10 +163,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s' . $signinlink . '<li class="stretcher"></li></ul>'
           )); ?>
           <div class="mobile-search mobile-only">
-            <form action="<?php bloginfo('url'); ?>" method="get" class="search">
-                <input type="text" value="" title="" name="s" class="field" />
-                <input type="submit" value="" />
-            </form>
+            <?php get_search_form(); ?>
           </div>
 
       <?php

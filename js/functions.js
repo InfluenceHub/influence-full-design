@@ -3,7 +3,13 @@ jQuery(function($) {
   //mobile js for menu
   $("#hamburger").on('click', function(e){
     e.preventDefault();
-    $(this).siblings('.nav').toggle(); 
+    var burger = $(this).siblings('.nav');
+    if (burger.hasClass('open')) {
+      burger.removeClass('open');
+    }
+    else {
+      burger.addClass('open');
+    }
   });
 
 

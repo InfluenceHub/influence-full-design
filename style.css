@@ -4393,8 +4393,6 @@ a#logo {
 .nav > ul#menu-main-menu {
   width: 100%;
   text-align: justify;
-  position: absolute;
-  top: 20px;
   z-index: 4;
 }
 
@@ -4404,6 +4402,7 @@ a#logo {
 
 .nav > ul > li.stretcher {
   width: 100%;
+  border-bottom: none !important;
 }
 
 .nav > ul > li.video {
@@ -6838,9 +6837,6 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
       display: none !important;
       visibility: hidden !important;
     }
-    div.nav {
-      height: 10%;
-    }
   #header.pinned {
     border: none;
   }
@@ -7009,12 +7005,34 @@ text-align:center;
   }
 
   .mobile-search{
-    position:absolute;
-    top:270px;
-    left:0.75em;
+    position: absolute;
+    right:0;
+    left:0;
     z-index: 1000;
+    overflow: hidden;
   }
-
+  .mobile-search input{
+    display:inline-block;
+    margin-left:-4px;
+    padding:1em;
+    outline:none;
+  }
+  .mobile-search form{
+    min-width: 150px;
+  }
+  .mobile-search input[type='text']{
+    width:70%;
+    border:1px solid rgb(190,190,190);
+    border-top:none;
+  }
+  .mobile-search input[type="submit"]{
+    width:30%;
+    /*display:none;*/
+    background:black;
+    color:white;
+    border-radius:0;
+    border:none;
+  }
   .nav-icons{display:none;}
 
   .mobile-search form label{

@@ -76,10 +76,27 @@ a#logo {
 div.nav {
 	/*height: 250px;*/
 	position: relative;
-	display:none;
+	/*display:none;*/
 	background: #fff;
-	top:39px;
+	top:45px;
+	margin-left:-7px;
+	width:0px;
+	padding-bottom:1em;
+	border:1px solid rgb(210,210,210);
+	transition: width 0.35s;
+	-webkit-transition: width 0.35s;
 }
+div.nav.open{
+	width:80%;
+}
+div.nav ul, div.nav .mobile-search{
+	width:100%;
+	overflow: hidden;
+}
+div.nav ul li a{
+	white-space: nowrap;
+}
+
 
 #hamburger {
 	margin-top: 5px;
@@ -96,7 +113,7 @@ div.nav {
 #menu-main-menu {
 	background: white;
 	top:0;
-	padding: 20px 5px 5px 10px;
+	padding: 0;
 	border-bottom: solid 1px black;
 }
 
@@ -126,13 +143,16 @@ li#menu-item-15636 {
 
 #menu-main-menu > li {
 	display: block;
-	padding-top: 5px;
+	border-bottom:1px solid rgb(210,210,210);
 }
 
 #menu-main-menu > li > a {
-	padding-top: 5px;
+	font-size:14px;
+	letter-spacing: 1px;
+	font-weight: bold;
 	display: block;
 	text-align: left;
+	padding:1em;
 }
 
 #header {
@@ -508,10 +528,10 @@ div.az-links li.scr-link a {
 @media screen and (max-width: 400px) {
 	
 	div.nav {
-		height: 400px !important ;
-		box-shadow: 2px 2px 23px -3px rgba(40,40,40,0.3);
-		width:60%;
-		min-width:100px;
+		/*height: 400px !important ;*/
+		/*box-shadow: 2px 2px 23px -3px rgba(40,40,40,0.3);*/
+		/*width:60%;*/
+
 	}
 
 	.subscribe-mobile {
