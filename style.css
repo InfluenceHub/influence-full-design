@@ -7131,9 +7131,13 @@ text-align:center;
   }
   .home-feed-post-view-more.shop-look{padding-left:1px;}
 
-  li.home-feed-side-by-side:nth-child(2n+1) {
+  li.home-feed-side-by-side:nth-child(n) {
+    text-align: center;
    margin:0.5em 0;
   }  
+  li.home-feed-side-by-side .home-feed-post-img-wrap{
+    margin:15px auto;
+  }
 
   
 
