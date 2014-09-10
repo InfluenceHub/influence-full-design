@@ -440,7 +440,9 @@ li.home-feed-side-by-side {
   margin-left: 15%;
   width: 220px;
 }
-
+.more_int_block.last {
+	margin-left: 15%;
+}
 .category-list {
 	padding-left: 15px;
 }
