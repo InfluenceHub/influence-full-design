@@ -82,15 +82,17 @@ div.nav {
 	margin-left:-7px;
 	width:0;
 	height:auto;
-	padding:0 0 3em;
+	padding:0 ;
 	border:1px solid rgb(210,210,210);
-	transition: width 0.35s;
-	-webkit-transition: width 0.35s;
+	transition: width 0.35s, box-shadow 0.35s;
+	-webkit-transition: width 0.35s, box-shadow 0.35s;
+	/*z-index: 1000;*/
 }
 div.nav.open{
 	width:80%;
+	box-shadow: 1px 1px 6px 2px rgba(210,210,210,0.45);
 }
-div.nav ul, div.nav .mobile-search{
+div.nav ul, div.nav .mobile-form{
 	width:100%;
 	overflow: hidden;
 }
@@ -100,14 +102,14 @@ div.nav ul li a{
 
 
 #hamburger {
-	margin-top: 5px;
-	padding-bottom: 2px;
+	margin: 5px 0 0 -5px;
+	padding: 0 5px 2px;
 	display: block;
 	position: fixed;
 	z-index: 20;
 	background-color: #fff;
 	width: 100%;
-	
+	box-shadow:0 -2px 6px 2px rgba(150,150,150,0.45);
 }
 
 

@@ -7006,28 +7006,33 @@ text-align:center;
     z-index:1000;
   }
 
-  .mobile-search{
-    position: absolute;
+  .mobile-form{
+    /*position: absolute;*/
     right:0;
     left:0;
     z-index: 1000;
     overflow: hidden;
   }
-  .mobile-search input{
+  .mobile-form input{
     display:inline-block;
     margin-left:-3px;
     padding:1em;
     outline:none;
   }
-  .mobile-search form{
-    min-width: 155px;
+  .mobile-form form, .mobile-form p{
+    min-width: 210px;
+    font-family: "AvenirNext LT Pro Regular", arial, sans-serif;
   }
-  .mobile-search input[type='text']{
+  .mobile-form input[type='text'],.mobile-form input[type='email']{
     width:70%;
     border:1px solid rgb(190,190,190);
     border-top:none;
   }
-  .mobile-search input[type="submit"]{
+  .mobile-form input[type='email']{
+    border-top:1px solid rgb(190,190,190);
+    border-bottom:none;
+  }
+  .mobile-form input[type="submit"]{
     width:30%;
     /*display:none;*/
     background:black;
@@ -7035,9 +7040,18 @@ text-align:center;
     border-radius:0;
     border:none;
   }
+  .mobile-subscribe p{
+    margin:2em 0 0.5em;
+    text-align: left;
+    text-transform: uppercase;
+    padding-left: 1em;
+    font-weight: bold;
+    font-size: 10px;
+  }
+
   .nav-icons{display:none;}
 
-  .mobile-search form label{
+  .mobile-form form label{
     display:none;
   }
   .sign-in-pop{

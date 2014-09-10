@@ -165,8 +165,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'fallback_cb'     => '',
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s' . $signinlink . '<li class="stretcher"></li></ul>'
           )); ?>
-          <div class="mobile-search mobile-only">
+          <div class="mobile-form mobile-only">
             <?php get_search_form(); ?>
+          </div>
+          <div class="mobile-form mobile-subscribe mobile-only">
+            <form action="http://theinfluence.us8.list-manage.com/subscribe/post?u=527260c47d9de3929c883ec2d&amp;id=69a8f6e293" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <p>Subscribe to our email list:</p>
+              <input placeholder="email" type="email" value="" name="EMAIL" class="required email field">
+              <div style="position: absolute; left: -5000px;"><input type="text" name="b_527260c47d9de3929c883ec2d_69a8f6e293" value=""></div>
+              <input type="submit" value="+" name="subscribe" class="submit_button">
+            </form>
           </div>
 
       <?php
