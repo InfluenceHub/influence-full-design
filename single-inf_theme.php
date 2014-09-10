@@ -48,7 +48,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
               }
               ?>
               <!-- style="width: ; height:640px; margin-right:24px;" -->
-              <div class="inner" style="margin-right:24px; width:426px; height:640px;">
+              <div class="inner no-mobile" style="margin-right:24px; width:426px; height:640px;">
 								<ul class="slides">
 								<li>
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
