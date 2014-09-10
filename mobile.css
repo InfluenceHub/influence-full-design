@@ -460,6 +460,9 @@ li.home-feed-side-by-side {
 	padding-bottom: 40px;
 	margin-bottom: 0px;
 }
+.home-feed-post {
+	border: none;
+}
 .category-list {
 	padding-left: 15px;
 }
