@@ -37,8 +37,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
 </script>
 </div>
 </div>
-             </div>
-          <div class="left-col theme right">
+<!--              </div>
+ -->          <div class="left-col theme right">
 						<?php if(has_post_thumbnail()) { ?>
 							<?php
                 $thisDESC = get_the_content();
