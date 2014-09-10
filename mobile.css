@@ -454,6 +454,10 @@ li.home-feed-side-by-side {
 .single-inf_theme .shop-main {
 	margin-left: 10%;
 }
+
+.column-two.home-feed-post:nth-child(4) {
+	border: none;
+}
 .category-list {
 	padding-left: 15px;
 }
