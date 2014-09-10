@@ -95,7 +95,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
 					</div><!-- /.right-col -->
           </div><!-- /.column-three -->
 			  </div>	<!-- /.shop-main -->
-        <div class="column-three bottom" style="margin-top: 175px;">
+        <div class="column-three bottom" style="margin-top: 100px;">
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopthetrend.jpg" class="" style="margin:0 auto; display:block; margin-bottom:80px;" />
 				<?php $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
 				if(!empty($products_sections)) {
