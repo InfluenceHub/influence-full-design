@@ -464,7 +464,15 @@ li.home-feed-side-by-side:nth-child(n) {
 	margin-top: -10px; 
 	margin-right: 0;
 	margin-left: 0;
-	margin-bottom: 0;
+	margin-bottom: -10px;
+}
+
+.latest-home .viewall-latest {
+  position: relative;
+  width: 660px;
+  clear: left;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .home-feed-post.home-feed-side-by-side {
