@@ -7110,6 +7110,9 @@ text-align:center;
   #menu-item-15429{display:none!important;}
 
   /*in focus page*/
+  .interview #topSlider .slides{
+    margin-left:0 !important;
+  }
   .interview #topSlider ul.slides li img{
     width:100%;
     height:auto;

@@ -44,7 +44,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410297406212-0');
           <div class="next top">&nbsp;</div><!-- /.next -->
         </div><!-- /.interview-slider -->   
         
-<div class="interview-slider bottom group">
+<div class="interview-slider bottom group no-mobile">
           <ul class="slides" style="margin-left: 50%">
           <?php
             $attachments = new Attachments('inf_interview_attachments', $post->ID);
