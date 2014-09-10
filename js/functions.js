@@ -295,7 +295,8 @@ jQuery(function($) {
 			prev: '.prev.top',
 			next: '.next.top',
 			items: 1,
-			auto: false
+			auto: false,
+      responsive: true,
 		});
     $('.interview-slider.bottom .slides').carouFredSel({
 			prev: '.prev.bottom',

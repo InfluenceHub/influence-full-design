@@ -7018,6 +7018,7 @@ text-align:center;
     outline:none;
   }
   .mobile-search form{
+
     min-width: 150px;
   }
   .mobile-search input[type='text']{
@@ -7032,6 +7033,7 @@ text-align:center;
     color:white;
     border-radius:0;
     border:none;
+    right:0;
   }
   .nav-icons{display:none;}
 
@@ -7106,4 +7108,14 @@ text-align:center;
 
   /*Temp Hide for Browse By link*/
   #menu-item-15429{display:none!important;}
+
+  /*in focus page*/
+  .interview #topSlider ul.slides li img{
+    width:100%;
+    height:auto;
+  }
+
 }
+
+
+
