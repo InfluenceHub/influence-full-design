@@ -460,7 +460,9 @@ li.home-feed-side-by-side {
 	padding-bottom: 40px;
 	margin-bottom: 0px;
 }
-
+li.home-feed-side-by-side:nth-child(n) {
+	margin: -10px 0;
+}
 .home-feed-post.home-feed-side-by-side {
 	border: none;
 
