@@ -461,11 +461,12 @@ li.home-feed-side-by-side {
 	margin-bottom: 0px;
 }
 li.home-feed-side-by-side:nth-child(n) {
-	margin: -10px 0;
+	margin-top: -10px; 
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 0;
 }
-li.home-feed-side-by-side:nth-child(4) {
-	margin: 10px 0;
-}
+
 .home-feed-post.home-feed-side-by-side {
 	border: none;
 
