@@ -436,7 +436,13 @@ li.home-feed-side-by-side {
 .morelike h2 {
 	padding: 0 0 0 15px;
 }
-
+.single-inf_theme .shop-main-title-theme {
+  width:80%;
+  text-align: left;
+  margin-left: 50px;
+  height:auto;
+  font: 300 38px/46px "franklin-gothic-urw-comp",arial,sans-serif !important;
+}
 .more_int_block {
   display: inline-block;
   margin-left: 15%;
