@@ -8,7 +8,7 @@ the_post();
 ?>
 <?php inf_footer_signup() ?>
 <!-- ROS_970x120 -->
-<div id='div-gpt-ad-1410297406212-0' style='width:970px; height:120px; margin-top: 50px; maring: 0 auto;'>
+<div id='div-gpt-ad-1410297406212-0'  class="no-mobile" style='width:970px; height:120px; margin: 100px auto 15px">
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410297406212-0'); });
 </script>
