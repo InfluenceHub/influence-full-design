@@ -464,6 +464,9 @@ li.home-feed-side-by-side {
 	border: none;
 }
 
+.slides ul {
+	margin-top: 10px;
+}
 .foot-nav {
 	padding-top: 5px;
 	padding-bottom: 8px;
