@@ -21,6 +21,14 @@
 		</footer>
 		<!-- END Footer -->
 		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/swipe.js"></script>
+		<script>(function(d, s, id) {
+  var js, pjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "http://cdn.pubexchange.com/modules/partner/the_influence";
+  pjs.parentNode.insertBefore(js, pjs);
+}(document, 'script', 'pubexchange-jssdk'));</script>
+
 		<?php wp_footer(); ?>
 	</body>
 </html>
