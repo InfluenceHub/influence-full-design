@@ -7181,6 +7181,15 @@ text-align:center;
   .foot-copy{
     padding-bottom: 1em;
   }
+
+  /*Themes page*/
+  .single-inf_theme .shop-main {
+    margin:0 0.5em;
+  }
+  .single-inf_theme .shop-main-title-theme{
+    margin-left:0.5em;
+  }
+
 }
 
 
