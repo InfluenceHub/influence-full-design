@@ -181,7 +181,7 @@ li#menu-item-15636 {
 }
 
 .home-feed-post-info h2, li.home-feed-side-by-side .home-feed-post-info h2 {
-	font-size: 14px;
+	font-size: 18px;
 }
 
 li.home-feed-side-by-side .home-feed-post-info h2 {
@@ -433,6 +433,12 @@ li.home-feed-side-by-side {
 
 .morelike h2 {
 	padding: 0 0 0 15px;
+}
+
+.more_int_block {
+  display: inline-block;
+  margin-left: 15%;
+  width: 220px;
 }
 
 .category-list {
