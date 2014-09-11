@@ -74,8 +74,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
 <!-- 				<div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
               <img class="shop-published-by1" style="display:block; margin:20px auto 30px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
 			  <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a> <a href="javascript:mailpage()" target="_top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_email.png" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a></div>
-          
-          <div class="text-holder" style="margin:0; padding:0; height:auto;">
+
+          <div class="text-holder" style="margin:0; padding:0; height:auto;" id="text_holder">
               <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
 							<?php
                 the_content();
@@ -89,8 +89,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
                 echo $content;
                 */
               ?>
-           <pre><?php echo print_r($caption_me)[0]; ?></pre>
-              </div>
+           <!-- <pre><?php echo print_r($caption_me)[0]; ?></pre> -->
+              </div><div id="post_content" style="display:none;"><?php the_content(); ?></div>
 						</div><!-- /.text-holder -->
 					</div><!-- /.right-col -->
           </div><!-- /.column-three -->
@@ -248,16 +248,21 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
 <?php
 function inf_theme_slider_theme() {
   global $post;
-  $images = carbon_get_post_meta($post->ID, 'inf_featured_image', 'complex');
+  $images = carbon_get_post_meta($post->ID, 'inf_featured_images', 'complex');
+  #$captions = carbon_get_post_meta($post->ID,'inf_featured_images', 'complex');
+  $i = 1;
+  #print_r($captions); die();
   foreach($images as $image) {
-    $image_full  = wp_get_attachment_image_src($image[inf_featured_image], 'full');
-    $image_small = wp_get_attachment_image_src($image[inf_featured_image], 'inf_featured_theme');
+    $image_full  = wp_get_attachment_image_src($image['inf_featured_image'], 'full');
+    $image_small = wp_get_attachment_image_src($image['inf_featured_image'], 'inf_featured_theme');
     ?>
     <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
-		</li>
+	  <?php if($image['inf_caption2']): ?><div class="slide_text" style="display:none;" id="slide_text_<?php echo $i; ?>"><?php echo $image['inf_caption2'] ?></div><?php endif; ?>
+	</li>
      <?php
-    }   
+	 $i++;
+    }
   }
 ?>
 <?php
@@ -279,7 +284,17 @@ jQuery(window).load(function() {
 			prev: '.shop-featured-prev',
 			next: '.shop-featured-next',
 			items: 1,
-			auto: false
+			auto: false,
+			scroll: {
+				onBefore: function() {
+					var pos = jQuery(".shop-main .left-col .slides").triggerHandler("currentPosition");
+					if (jQuery("#slide_text_" + pos).length) {
+						jQuery("#text_holder").text(jQuery("#slide_text_" + pos).text());
+					} else {
+						jQuery("#text_holder").text(jQuery("#post_content").text());
+					}
+				}
+			}
   });
 });
 </script>
