@@ -251,6 +251,7 @@ function inf_theme_slider_theme() {
   $images = carbon_get_post_meta($post->ID, 'inf_featured_images', 'complex');
   #$captions = carbon_get_post_meta($post->ID,'inf_featured_images', 'complex');
   $i = 1;
+  echo html_entity_decode($i);
   #print_r($captions); die();
   foreach($images as $image) {
     $image_full  = wp_get_attachment_image_src($image['inf_featured_image'], 'full');
@@ -264,18 +265,6 @@ function inf_theme_slider_theme() {
 	 $i++;
     }
   }
-?>
-<?php
-function inf_captions() {
-  global $post;
-  $captions = carbon_get_theme_meta($post->ID, 'inf_captions', 'complex');
-  $caption = $captions[0];
-  // foreach($caption as $_caption) {
-  //   $cap = get_post_meta($_caption, 'inf_caption', true);
-?>
- <pre><?php echo print_r($caption[0]); ?></pre>
- <?php
-}
 ?>
 <script>
 jQuery(window).load(function() {
