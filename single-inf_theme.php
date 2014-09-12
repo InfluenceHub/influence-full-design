@@ -279,7 +279,7 @@ jQuery(window).load(function() {
 				onBefore: function() {
 					var pos = jQuery(".shop-main .left-col .slides").triggerHandler("currentPosition");
 					if (jQuery("#slide_text_" + pos).length) {
-						jQuery("#text_holder").text(jQuery("#slide_text_" + pos).text());
+						jQuery("#text_holder").text(jQuery("#slide_text_" + pos));
 					} else {
 						jQuery("#text_holder").text(jQuery("#post_content").text());
 					}
