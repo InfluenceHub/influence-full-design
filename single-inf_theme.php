@@ -259,8 +259,8 @@ function inf_theme_slider_theme() {
     ?>
     <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
-	  <?php if($image['inf_caption2']): ?><div class="slide_text" style="display:none;" id="slide_text_<?php echo $i; ?>"><?php echo $image['inf_caption2'] ?><br />
-      <a href="<?php echo $image['inf_caption_url'] ?>"><?php echo $image['product_name'] ?></a></div><?php endif; ?>
+	  <?php if($image['inf_caption2']): ?><div class="slide_text" style="display:none;" id="slide_text_<?php echo $i; ?>"><?php echo $image['inf_caption2'] ?><br /></div><?php endif; ?>
+    <div id ="slide_text_"><a href="<?php echo $image['inf_caption_url'] ?>"><?php echo $image['product_name'] ?></a></div>
 	</li>
      <?php
 	 $i++;
