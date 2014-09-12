@@ -233,8 +233,8 @@ body.home #content .content_wrapper {
   height: 30px;
   position: absolute;
   top: 46%;
-  left: 10px;
-  width: 25px;
+/*  left: 10px;
+*/  width: 25px;
   height: 30px;
   z-index: 3;
   opacity: .7;
