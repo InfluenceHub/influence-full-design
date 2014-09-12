@@ -56,7 +56,7 @@ node.parentNode.insertBefore(gads, node);
 <script type='text/javascript'>
 googletag.cmd.push(function() {
 googletag.defineSlot('/61413193/300x500BCBG', [300, 600], 'div-gpt-ad-1409963968603-0').addService(googletag.pubads());
-googletag.defineSlot('/61413193/BCBG_HEADER', [971, 120], 'div-gpt-ad-1409963968603-1').addService(googletag.pubads());
+googletag.defineSlot('/61413193/BCBG_HEADER', [970, 120], 'div-gpt-ad-1410551574695-0').addService(googletag.pubads());
 googletag.defineSlot('/61413193/Right_Skin', [120, 1000], 'div-gpt-ad-1409963968603-2').addService(googletag.pubads());
 googletag.defineSlot('/61413193/Skin_Sides', [120, 1000], 'div-gpt-ad-1409963968603-3').addService(googletag.pubads());
 googletag.defineSlot('/61413193/300x600', [300, 600], 'div-gpt-ad-1410050142891-0').addService(googletag.pubads());
