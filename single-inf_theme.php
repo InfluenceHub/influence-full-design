@@ -260,7 +260,7 @@ function inf_theme_slider_theme() {
     <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
 	  <?php if($image['inf_caption2']): ?><div class="slide_text" style="display:none;" id="slide_text_<?php echo $i; ?>"><?php echo $image['inf_caption2'] ?><br /></div><?php endif; ?>
-    <?php if ($image['inf_caption2']): ?><div id="text_holder"><div class="slide_text" style="vertical-align: top;" id ="slide_text_"><a href="<?php echo $image['inf_caption_url'] ?>"><?php echo $image['product_name'] ?></a></div></div><?php endif; ?>
+    <?php if ($image['inf_caption2']): ?><div class="slide_text" style="vertical-align: top; position: absolute; top:0;" id ="slide_text_"><a href="<?php echo $image['inf_caption_url'] ?>"><?php echo $image['product_name'] ?></a></div><?php endif; ?>
 	</li>
      <?php
 	 $i++;
