@@ -592,7 +592,6 @@ return null;
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0'); });
 </script>
 </div>
-
 <!--          <a href="http://www.anrdoezrs.net/click-7580048-11914509">
            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nastydenim.gif" />
           </a>
