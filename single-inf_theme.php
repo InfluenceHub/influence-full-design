@@ -260,7 +260,7 @@ function inf_theme_slider_theme() {
     <li class="slide-theme">
       <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
 	  <?php if($image['inf_caption2']): ?><div class="slide_text" style="display:none;" id="slide_text_<?php echo $i; ?>"><?php echo $image['inf_caption2'] ?><br /></div><?php endif; ?>
-    <?php if ($image['inf_caption2']): ?><div class="slide_text" style="display:none;" id ="slide_text_"><a href="<?php echo $image['inf_caption_url'] ?>"><?php echo $image['product_name'] ?></a></div><?php endif; ?>
+    <?php if ($image['inf_caption2']): ?><div class="slide_text" style="vertical-align: top;" id ="slide_text_"><a href="<?php echo $image['inf_caption_url'] ?>"><?php echo $image['product_name'] ?></a></div><?php endif; ?>
 	</li>
      <?php
 	 $i++;
@@ -281,7 +281,7 @@ jQuery(window).load(function() {
 					if (jQuery("#slide_text_" + pos).length) {
 						jQuery("#text_holder").text(jQuery("#slide_text_" + pos).text());
 					} else {
-						jQuery("#text_holder").text(jQuery("#post_content"));
+						jQuery("#text_holder").text(jQuery("#post_content").text());
 					}
 				}
 			}
