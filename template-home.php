@@ -8,7 +8,7 @@ the_post();
 ?>
 <?php inf_footer_signup() ?>
 <!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1410551574695-0' class="no-mobile" style='width:970px; height:120px; margin-top: 100px; margin-right: 165px; margin-bottom 15px; margin-left: 135px;'>
+<div id='div-gpt-ad-1410551574695-0' class="no-mobile" style='width:970px; height:120px; margin-top: 100px; margin-right: 165px; margin-bottom 15px; margin-left: 145px;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410551574695-0'); });
 </script>
