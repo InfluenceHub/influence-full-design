@@ -586,11 +586,13 @@ return null;
           <!-- HOME PAGE 300 X 900 AD SPACE -->
           <div class="column adcolumn no-mobile">
 
-<div id='div-gpt-ad-1410302527331-0' style='width:300px; height:600px;'>
+<!-- 300x600_BCBG -->
+<div id='div-gpt-ad-1410050142891-0' class="no-mobile" style='width:300px; height:600px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410050142891-0'); });
 </script>
 </div>
+
 <!--          <a href="http://www.anrdoezrs.net/click-7580048-11914509">
            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nastydenim.gif" />
           </a>
