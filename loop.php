@@ -95,6 +95,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
       }
       if ($i == 3 and $profile_flag != true) {
         ?>
+             <div class="archive-col">
 <div id='div-gpt-ad-1410397639329-0' style='width:300px; height:250px;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410397639329-0'); });
@@ -104,7 +105,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410397639329-0');
                 <!--<IFRAME SRC="http://ib.adnxs.com/tt?id=2411077&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="300" HEIGHT="250"></IFRAME>-->
                 <!-- END TAG -->
              </div>
-           </div>
         <?php
       }
       if ($i == 5 and $profile_flag == true) {
