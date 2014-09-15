@@ -96,9 +96,10 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
       if ($i == 3 and $profile_flag != true) {
         ?>
              <div class="archive-col">
-<div id='div-gpt-ad-1410397639329-0' style='width:300px; height:250px;'>
+<!-- 300x250_ROS -->
+<div id='div-gpt-ad-1410811923506-0' style='width:300px; height:250px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410397639329-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410811923506-0'); });
 </script>
 </div>
                 <!-- BEGIN IFRAME TAG - theinfluence 300x250 < - DO NOT MODIFY -->
@@ -109,10 +110,10 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410397639329-0');
       }
       if ($i == 5 and $profile_flag == true) {
         ?>
-           <div class="archive-col">
-<div id='div-gpt-ad-1410397639329-0' style='width:300px; height:250px;'>
+<!-- 300x250_ROS -->
+<div id='div-gpt-ad-1410811923506-0' style='width:300px; height:250px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410397639329-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410811923506-0'); });
 </script>
 </div>
               <!-- BEGIN IFRAME TAG - theinfluence 300x250 < - DO NOT MODIFY -->
@@ -155,9 +156,10 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410397639329-0');
       </div>
       <?php if ($i == 9 and $profile_flag != true) { ?>
         <div class="archive-col">
-<div id='div-gpt-ad-1410397639329-0' style='width:300px; height:250px;'>
+<!-- 300x250_ROS -->
+<div id='div-gpt-ad-1410811923506-0' style='width:300px; height:250px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410397639329-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410811923506-0'); });
 </script>
 </div>
         </div>
