@@ -15,7 +15,7 @@
     <div class="top_ad-block no-mobile" style="margin-top: 25px;">
 <!-- 728x90_Interior -->
 <!-- ROS_970x120 -->
-<div id='div-gpt-ad-1410297406212-0' style='width:970px; height:120px; margin: 0 auto;'>
+<div id='div-gpt-ad-1410297406212-0' style='width:1000px; height:120px; margin: 0 auto;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410297406212-0'); });
 </script>

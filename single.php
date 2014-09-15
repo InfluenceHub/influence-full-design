@@ -8,7 +8,7 @@
 	<section id="content">
     <div class="ad_banner no-mobile" style="margin-top: -75px;">
 <!-- ROS_970x120 -->
-<div id='div-gpt-ad-1410297406212-0' style='width:970px; height:120px; margin: 0 auto;'>
+<div id='div-gpt-ad-1410297406212-0' style='width:1000px; height:120px; margin: 0 auto;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410297406212-0'); });
 </script>
