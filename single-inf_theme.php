@@ -38,7 +38,22 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
 </div>
 </div>
 <!--              </div>
- -->          <div class="left-col theme right" style="width: 450px;">
+ -->          <div class="left-col theme">
+          <div class="text-holder" style="margin:0; padding:0; height:auto;">
+              <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
+							<?php
+                the_content();
+                //echo get_the_content();
+                /*
+                $content = get_the_content();
+                $content = apply_filters($content);
+                if (strlen($content) > 120) {
+                  $content = substr($content, 0, 120) . '...';
+                }
+                echo $content;
+                */
+              ?>
+ <!-- 
 						<?php if(has_post_thumbnail()) { ?>
 							<?php
                 $thisDESC = get_the_content();
@@ -46,7 +61,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
                 $img_obj = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
                 $category_link = get_category_link($post_categories[0]->term_id);
               }
-              ?>
+              ?> -->
               <!-- style="width: ; height:640px; margin-right:24px;" -->
 <!--               <div class="inner no-mobile" style="margin-right:24px; width:426px; height:640px;">
  -->		<ul>
@@ -75,20 +90,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
               <img class="shop-published-by1" style="display:block; margin:20px auto 30px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
 			  <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a> <a href="javascript:mailpage()" target="_top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_email.png" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a></div>
 
-          <div class="text-holder" style="margin:0; padding:0; height:auto;" id="text_holder">
-              <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
-							<?php
-                the_content();
-                //echo get_the_content();
-                /*
-                $content = get_the_content();
-                $content = apply_filters($content);
-                if (strlen($content) > 120) {
-                  $content = substr($content, 0, 120) . '...';
-                }
-                echo $content;
-                */
-              ?>
+
            <!-- <pre><?php echo print_r($caption_me)[0]; ?></pre> -->
               </div><div id="post_content" style="display:none;"><?php the_content(); ?></div>
 						</div><!-- /.text-holder -->
