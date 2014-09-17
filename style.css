@@ -5,6 +5,33 @@
   border-bottom: 1px solid #ccc;
   padding-bottom: 100px;
 }
+.left-col .text-holder {
+  text-align: center;
+  padding-top: 45px;
+}
+
+.left-col .text-holder h3 {
+  padding-bottom: 5px;
+  font: 700 22px/24px  arial, sans-serif;
+  color: #000;
+}
+
+.left-col .text-holder h5 {
+  padding-bottom: 12px;
+  font: 14px/16px arial, sans-serif;
+  color: #000;
+}
+
+.left-col .text-holder hr {
+  width: 69px;
+  margin: 0 auto 10px;
+  border: 0;
+  border-top: 1px solid #000;
+}
+
+.left-col .text-holder p a {
+  text-decoration: underline;
+}
 #callout {
   width: 100%;
   margin: 0 auto !important;
