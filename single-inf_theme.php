@@ -48,17 +48,17 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
               }
               ?>
               <!-- style="width: ; height:640px; margin-right:24px;" -->
-              <div class="inner no-mobile" style="margin-right:24px; width:426px; height:640px;">
-								<ul class="slides">
+<!--               <div class="inner no-mobile" style="margin-right:24px; width:426px; height:640px;">
+ -->								<ul class="slides">
 								<li>
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</li>
                 <?php inf_theme_slider_theme(); ?>
 <!--        <div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
               </ul>
-                <div class="shop-featured-prev">&nbsp;</div>
+<!--                 <div class="shop-featured-prev">&nbsp;</div>
                 <div class="shop-featured-next">&nbsp;</div>
-							</div>
+							</div> -->
               <!-- /.inner -->
               <!--<div class="shop-maintag"><a href="<?php echo $category_link; ?>"><?php echo strtoupper($post_categories[0]->name); ?></a></div> -->
 						<?php //} ?>
