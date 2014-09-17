@@ -70,14 +70,14 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
 <!--               <div class="inner no-mobile" style="margin-right:24px; width:426px; height:640px;">
  -->		
        </div>
-     </div>
- <ul>
+ <ul class="theme-ul">
 <!-- 								<li class="theme-list">
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</li> -->
                 <?php inf_theme_slider_theme(); ?>
 <!--        <div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
               </ul>
+       </div>
 <!--                 <div class="shop-featured-prev">&nbsp;</div>
                 <div class="shop-featured-next">&nbsp;</div>
 							</div> -->
