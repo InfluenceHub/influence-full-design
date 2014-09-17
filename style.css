@@ -7027,7 +7027,7 @@ background: #f7f7f7;
 padding: 10px;
 margin-bottom: 40px;
 text-align:center;
-display: inline;
+display: inline-block;
 }
 
 .single-inf_theme .shop-main-social a {
