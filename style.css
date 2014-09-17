@@ -319,9 +319,9 @@ div.home-box img {
   font-family: "AvenirNext LT Pro Regular",arial,sans-serif;
   font-size: 12px;
   margin-top: 10px;
-  text-align: left;
+  text-align: center;
   word-break: break-word;
-  width: inherit;
+  width: 75%;
 }
 .slide-text a:link {
   font-family: "AvenirNext LT Pro Regular",arial,sans-serif;
