@@ -293,6 +293,13 @@ div.home-box img {
   margin-top: 10px;
   text-align: center;
 }
+.slide-text a:link {
+  font-family: "AvenirNext LT Pro Regular",arial,sans-serif;
+  font-size: 12px;
+  margin-top: 10px;
+  text-align: center;
+  color: #0000ff;
+}
 .more-likey {
   font-family: "AvenirNext LT Pro Regular",arial,sans-serif;
   font-size: 14px;
