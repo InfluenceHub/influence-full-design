@@ -1,6 +1,7 @@
 .theme-list {
   display: block;
   width: 100%;
+  list-style: none;
 }
 #callout {
   width: 100%;
