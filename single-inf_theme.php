@@ -152,7 +152,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
 				}
       ?>
         </div>
-        <div class="ad_banner no-mobile">
+        <div class="ad_banner no-mobile" style="display: none;">
         <a href="http://shop.theinfluence.com">
           <img src="<?php bloginfo('stylesheet_directory'); ?>/images/shop-banner.gif" />
         </a>
@@ -224,7 +224,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
   #print_r($interviews);
   $key = 0;
   ?>
-  <div class="more_interviews">
+  <div class="more_interviews" style="display: none;">
 	<div class="more_interviews_wrapper">
 	<?php foreach ($interviews as $_interview):
 		$image_id = get_post_thumbnail_id($_interview->ID);
