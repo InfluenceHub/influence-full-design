@@ -83,20 +83,6 @@ Carbon_Container::factory('custom_fields', __('Product settings', 'inf'))
 		Carbon_Field::factory('text', 'inf_product_price', 'Price'),
 		Carbon_Field::factory('text', 'inf_product_link', 'Buy link')
 	));
-Carbon_Container::factory('custom_fields', __('Products settings', 'inf'))
-	->show_on_post_type(array('post', 'inf_theme'))
-	->add_fields(array(
-		Carbon_Field::factory('complex', 'inf_post_products_sections', 'Product sections')
-			->add_fields(array(
-				Carbon_Field::factory('text', 'section_name', 'Section name')
-					->set_required(true),
-				Carbon_Field::factory('relationship', 'products', 'Products')
-					->set_post_type(array('rewardstyle_products'))
-					->set_max(-1)
-					->set_required(true)
-			))
-	));
-  
 Carbon_Container::factory('custom_fields', __('Credits', 'inf'))
 	->show_on_post_type(array('inf-interview'))
 	->add_fields(array(
