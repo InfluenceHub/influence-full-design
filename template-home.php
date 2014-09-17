@@ -49,8 +49,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410551574695-0');
 		<div class="callout_hover_container"><div class="callout_hover"><span><?php echo get_the_title($box4->ID) ?> <a href="<?php echo get_post_meta($box4->ID, '_homebox4_link_url')[0]; ?>">View More></a></span></div></div>
         </div>
     </div>
-   <div class="no-mobile"><?php inf_items(); ?></div><!--favorites-->
-  </div>
+<!--    <div class="no-mobile"><?php inf_items(); ?></div>
+ -->  </div>
 
   <div class="mobile-only swipe-hint">
     <p> &#8596; </p>

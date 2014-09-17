@@ -260,8 +260,9 @@ div.home-box img {
 }
 
 .top-block {
-  min-height: 350px;
-  width: 100%;
+/*  min-height: 350px;*/
+ width: 100%;
+ height: 150px;
   /* height:600px; */
 }
 
