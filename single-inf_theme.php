@@ -222,7 +222,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
   #print_r($interviews);
   $key = 0;
   ?>
-  <div class="more_interviews" style="display: none;">
+  <div class="more_interviews">
 	<div class="more_interviews_wrapper">
 	<?php foreach ($interviews as $_interview):
 		$image_id = get_post_thumbnail_id($_interview->ID);
