@@ -49,7 +49,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
               ?>
               <!-- style="width: ; height:640px; margin-right:24px;" -->
 <!--               <div class="inner no-mobile" style="margin-right:24px; width:426px; height:640px;">
- -->								<ul class="slides">
+ -->		<ul class="theme-list">
 								<li>
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</li>
@@ -268,23 +268,23 @@ function inf_theme_slider_theme() {
   }
 ?>
 <script>
-jQuery(window).load(function() {
-  //jQuery('.shop-main .inner.slides').flexslider();
-  jQuery('.shop-main .left-col .slides').carouFredSel({
-			prev: '.shop-featured-prev',
-			next: '.shop-featured-next',
-			items: 1,
-			auto: false,
-			scroll: {
-				onBefore: function() {
-					var pos = jQuery(".shop-main .left-col .slides").triggerHandler("currentPosition");
-					if (jQuery("#slide_text_" + pos).length) {
-						jQuery("#text_holder").text(jQuery("#slide_text_" + pos).text());
-					} else {
-						jQuery("#text_holder").text(jQuery("#post_content").text());
-					}
-				}
-			}
-  });
-});
-</script>
+// jQuery(window).load(function() {
+//   //jQuery('.shop-main .inner.slides').flexslider();
+//   jQuery('.shop-main .left-col .slides').carouFredSel({
+// 			prev: '.shop-featured-prev',
+// 			next: '.shop-featured-next',
+// 			items: 1,
+// 			auto: false,
+// 			scroll: {
+// 				onBefore: function() {
+// 					var pos = jQuery(".shop-main .left-col .slides").triggerHandler("currentPosition");
+// 					if (jQuery("#slide_text_" + pos).length) {
+// 						jQuery("#text_holder").text(jQuery("#slide_text_" + pos).text());
+// 					} else {
+// 						jQuery("#text_holder").text(jQuery("#post_content").text());
+// 					}
+// 				}
+// 			}
+//   });
+// });
+// </script>
