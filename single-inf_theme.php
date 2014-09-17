@@ -39,6 +39,14 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
 </div>
 <!--              </div>
  -->          <div class="left-col theme">
+             <div class="shop-main theme">
+<!-- 				<div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
+              <img class="shop-published-by1" style="display:block; margin:20px auto 30px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
+			  <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a> <a href="javascript:mailpage()" target="_top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_email.png" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a></div>
+
+
+                </div>
+			  </div>	<!-- /.shop-main -->
           <div class="text-holder" style="margin:0; padding:0; height:auto;">
               <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
 							<?php
@@ -64,7 +72,9 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
               ?> -->
               <!-- style="width: ; height:640px; margin-right:24px;" -->
 <!--               <div class="inner no-mobile" style="margin-right:24px; width:426px; height:640px;">
- -->		<ul>
+ -->		
+</div>
+ <ul>
 <!-- 								<li class="theme-list">
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</li> -->
@@ -78,25 +88,14 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
               <!--<div class="shop-maintag"><a href="<?php echo $category_link; ?>"><?php echo strtoupper($post_categories[0]->name); ?></a></div> -->
 						<?php //} ?>
 					</div><!-- /.left-col -->
-					<div class="right-col left" style="float: left; width:225px;">
+<!-- 					<div class="right-col left" style="float: left; width:225px;">
 						<?php
 						//$exact_items = carbon_get_the_post_meta('inf_influencer_products');
             $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
 			global $wp;
 			$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
-            ?>
-            <div class="shop-main theme">
-<!-- 				<div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
-              <img class="shop-published-by1" style="display:block; margin:20px auto 30px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
-			  <div class="shop-main-social"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo ($current_url) ?>&redirect_uri=<?php echo urlencode($current_url) ?>" class="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_fb.jpg" /></a> <a href="javascript:mailpage()" target="_top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_email.png" /></a> <a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode($current_url) ?>&media=<?php echo $img_obj[0]; ?>&description=<?php echo str_replace(" ", "+", get_the_title(get_the_ID())); ?>" class="pinterest"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/social_pin.jpg" /></a></div>
+            ?> -->
 
-
-           <!-- <pre><?php echo print_r($caption_me)[0]; ?></pre> -->
-              </div><div id="post_content" style="display:none;"><?php the_content(); ?></div>
-						</div><!-- /.text-holder -->
-					</div><!-- /.right-col -->
-          </div><!-- /.column-three -->
-			  </div>	<!-- /.shop-main -->
         <div class="column-three bottom" style="margin-top: 100px; display: none;">
 			<img src="<?php bloginfo('stylesheet_directory'); ?>/images/shopthetrend.jpg" class="" style="margin:0 auto; display:block; margin-bottom:80px;" />
 				<?php $products_sections = carbon_get_the_post_meta('inf_post_products_sections', 'complex');
