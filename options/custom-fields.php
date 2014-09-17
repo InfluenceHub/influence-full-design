@@ -141,15 +141,13 @@ Carbon_Container::factory('custom_fields', __('Images settings', 'inf'))
 			))
 	));
   
-Carbon_Container::factory('custom_fields', __('Additional Featured Images', 'inf'))
+Carbon_Container::factory('custom_fields', __('Market Images', 'inf'))
 	->show_on_post_type(array('post', 'inf_theme'))
 	->add_fields(array(
 		Carbon_Field::factory('complex', 'inf_featured_images', 'Images')
 			->add_fields(array(
 				Carbon_Field::factory('attachment', 'inf_featured_image', 'Image'),
 				Carbon_Field::factory('textarea', 'inf_caption2', 'Caption'),
-				Carbon_Field::factory('text', 'inf_caption_url', 'Caption Link'),
-				Carbon_Field::factory('text', 'product_name', 'Product Name')
 			))
 	));
 
