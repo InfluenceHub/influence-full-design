@@ -292,6 +292,8 @@ div.home-box img {
   font-size: 12px;
   margin-top: 10px;
   text-align: center;
+  word-break: break-word;
+  width: inherit;
 }
 .slide-text a:link {
   font-family: "AvenirNext LT Pro Regular",arial,sans-serif;
