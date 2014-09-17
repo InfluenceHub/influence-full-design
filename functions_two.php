@@ -1087,10 +1087,10 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410554390932-0');
         $product_image    = wp_get_attachment_image_src(get_post_thumbnail_id($home_prodID), 'inf_home_inst_prod_nocrop');
     ?>
 
-    <a href="<?php echo esc_url($product_url); ?>" target="_blank">
-<!--     <a href="javascript:void(0)">  -->
+    <!--<a href="<?php echo esc_url($product_url); ?>" target="_blank">-->
+    <a href="javascript:void(0)"> 
         <h2>Item of the Day</h2>
-            <img src="<?php echo $product_image[0] ?>" width="<?php echo $product_image[1]; ?>" height="<?php echo $product_image[2]; ?>" 
+            <img src="<?php echo $product_image[0] ?>" width="<?php echo $product_image[1]; ?>" height="<?php echo $product_image[2]; ?>" data-prodid="241753649" data-cid="15" 
 alt="Item of the Day" />
              <h5><span style="text-transform: uppercase; font-weight: bold;"><?php echo $product_designer?></span></h5><h6><?php echo $product_title; ?>, $<?php echo $product_price; ?></h6>
           </a>
