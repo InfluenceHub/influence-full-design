@@ -2,6 +2,8 @@
   display: block;
   width: 100%;
   list-style: none;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 100px;
 }
 #callout {
   width: 100%;

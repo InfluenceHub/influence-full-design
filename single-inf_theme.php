@@ -28,7 +28,7 @@ location.href = mail_str;
 				<div class="shop-main theme">
         <div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>
 					<!--<div class="breadcrumbs"><a href="#">SHOP ></a> <?php //echo strtoupper(get_the_title()); ?></div> /.breadcrumbs -->
-          <div class="column-three" style="border: none;">
+          <div class="column-three" style="border: none; height: auto;">
           <div class="column adcolumn no-mobile">
 <!-- ROS_300x600 -->
 <div id='div-gpt-ad-1410302527331-0' style='width:300px; height:600px;'>
@@ -50,7 +50,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
               <!-- style="width: ; height:640px; margin-right:24px;" -->
 <!--               <div class="inner no-mobile" style="margin-right:24px; width:426px; height:640px;">
  -->		<ul class="theme-list">
-								<li>
+								<li class="theme-list">
 									<?php the_post_thumbnail('inf_featured_theme', array('class' => 'inf_featured_theme')); ?>
 								</li>
                 <?php inf_theme_slider_theme(); ?>
