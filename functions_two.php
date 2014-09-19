@@ -587,12 +587,11 @@ return null;
           <div class="column adcolumn no-mobile">
 
 <!-- 300x600_BCBG -->
-<div id='div-gpt-ad-1410302527331-0' style='width:300px; height:600px;'>
+<div id='div-gpt-ad-1411159895718-0' style='width:300px; height:600px;'>
 <script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1411159895718-0'); });
 </script>
-</div>
-<!--          <a href="http://www.anrdoezrs.net/click-7580048-11914509">
+</div>       <a href="http://www.anrdoezrs.net/click-7580048-11914509">
            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nastydenim.gif" />
           </a>
           <a href="https://www.thehunt.com/the-hunt/6Dmf7D-janel-on-the-hunt-">
