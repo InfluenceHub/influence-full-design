@@ -42,6 +42,9 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
 <!--              </div>
  -->          <div class="left-col theme" style="width: 60%;">
                <div class="theme-date">   
+                 <style>
+                   margin-right: 10px;
+                 </style>
                  <?php the_time('F j, Y'); ?>
          
                      <img class="shop-published-by1" style="display:inline; margin:10px 0px -10px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
