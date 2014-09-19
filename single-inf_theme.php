@@ -61,8 +61,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
                 echo $content;
                 */
               ?>
-     <img class="shop-published-by1" style="position:absolute; right: 375px; display:block; margin:0px 0px 10px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
-
  <!-- 
 						<?php if(has_post_thumbnail()) { ?>
 							<?php
