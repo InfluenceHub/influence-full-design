@@ -6,7 +6,7 @@ get_header();
 the_post();
 //Detect mobile
 ?>
-<?php inf_footer_signup() ?>
+<!--<?php inf_footer_signup() ?>-->
 <!-- 
 <div id='div-gpt-ad-1410551574695-0' class="no-mobile" style='width:1000px; height:120px; margin: 50px auto 15px;'>
 <script type='text/javascript'>
