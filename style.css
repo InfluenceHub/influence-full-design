@@ -3,8 +3,8 @@
   width: 100%;
   list-style: none;
   border-bottom: 1px solid #ccc;
-  padding-bottom: 50px;
-  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 .theme-date {
   font-family: "AvenirNext LT Pro Regular", arial, sans-serif;
@@ -326,7 +326,7 @@ div.home-box img {
   font-family: "AvenirNext LT Pro Regular",arial,sans-serif;
   font-size: 14px;
   margin-top: 10px;
-  text-align: center;
+  text-align: left;
   word-break: break-word;
 }
 .slide-text a:link {

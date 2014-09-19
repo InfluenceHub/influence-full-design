@@ -46,7 +46,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
                 </div>
 <!-- 				<div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
 
-          <div class="text-holder" style="margin-bottom:50px; padding:0; height:auto;">
+          <div class="text-holder" style="margin-bottom:25px; padding:0; height:auto;">
               <?php //if(!empty($post_categories) || is_user_logged_in()) { ?>
 							<?php
                 the_content();
@@ -60,7 +60,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
                 echo $content;
                 */
               ?>
-     <img class="shop-published-by1" style="position:absolute; right: 350px; display:block; margin:0px 0px 10px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
+     <img class="shop-published-by1" style="position:absolute; right: 375px; display:block; margin:0px 0px 10px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
 
  <!-- 
 						<?php if(has_post_thumbnail()) { ?>
