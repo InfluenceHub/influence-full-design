@@ -6673,7 +6673,7 @@ li.home-feed-side-by-side .home-feed-post-img-wrap {
 }
 
 li.home-feed-side-by-side .home-feed-post-img-wrap img {
-  margin-top: -40px;
+/*  margin-top: -40px; */
   min-height: 310px;
   max-width: 300px;
   height: auto;
