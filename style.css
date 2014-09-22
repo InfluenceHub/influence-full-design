@@ -6,6 +6,10 @@
   padding-bottom: 20px;
   padding-top: 20px;
 }
+.published {
+  display: inline-block;
+  text-align: right;
+}
 .theme-date {
   font-family: "AvenirNext LT Pro Regular", arial, sans-serif;
   font-size: 12px;

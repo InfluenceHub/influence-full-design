@@ -42,11 +42,12 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410302527331-0');
 <!--              </div>
  -->          <div class="left-col theme" style="width: 60%;">
                <div class="theme-date" style="margin-left:-10px;">   
-
-                 <?php the_time('F j, Y'); ?>
-         
-                     <img class="shop-published-by1" style="display:inline; margin:10px 0px -10px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
+                 <?php the_time('F j, Y'); ?>         
                 </div>
+                <div class="published">
+                <img class="shop-published-by1" style="display:inline; margin:10px 0px -10px;" src="<?php bloginfo('stylesheet_directory'); ?>/images/published-by-danielle.png" />
+                </div>
+
 <!-- 				<div class="shop-main-title-theme"><?php echo get_the_title(get_the_ID()); ?></div>-->
 
           <div class="text-holder" style="margin-bottom:25px; padding:0; height:auto;">
