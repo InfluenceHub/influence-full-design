@@ -104,6 +104,19 @@ Carbon_Container::factory('custom_fields', __('Interview Products', 'inf'))
 					->set_required(true)
 			))
 	));
+Carbon_Container::factory('custom_fields', __('Products settings', 'inf'))
+        ->show_on_post_type(array('post'))
+        ->add_fields(array(
+                Carbon_Field::factory('complex', 'inf_post_products_sections', 'Product sections')
+                        ->add_fields(array(
+                                Carbon_Field::factory('text', 'section_name', 'Section name')
+                                        ->set_required(true),
+                                Carbon_Field::factory('relationship', 'products', 'Products')
+                                        ->set_post_type(array('rewardstyle_products'))
+                                        ->set_max(-1)
+                                        ->set_required(true)
+                        ))
+        ));
   
 Carbon_Container::factory('custom_fields', __('Right Column Quotes', 'inf'))
 	->show_on_post_type(array('inf-interview'))
