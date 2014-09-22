@@ -592,7 +592,7 @@ return null;
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1411173041444-0'); });
 </script>
 </div>
-  <a href="http://www.anrdoezrs.net/click-7580048-11914509">
+  <!--<a href="http://www.anrdoezrs.net/click-7580048-11914509">
            <img src="<?php bloginfo('stylesheet_directory'); ?>/images/nastydenim.gif" />
           </a>
           <a href="https://www.thehunt.com/the-hunt/6Dmf7D-janel-on-the-hunt-">
