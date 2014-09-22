@@ -8,6 +8,7 @@
 }
 .published {
   text-align: right;
+  margin-top: -35px;
 }
 .theme-date {
   font-family: "AvenirNext LT Pro Regular", arial, sans-serif;
