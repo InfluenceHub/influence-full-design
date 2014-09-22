@@ -15,11 +15,11 @@
     <div class="top_ad-block no-mobile" style="margin-top: 25px;">
 <!-- 728x90_Interior -->
 <!-- ROS_970x120 -->
-<!-- <div id='div-gpt-ad-1410297406212-0' style='width:1000px; height:120px; margin: 0 auto;'>
+<div id='div-gpt-ad-1410297406212-0' style='width:1000px; height:120px; margin: 0 auto;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410297406212-0'); });
 </script>
-</div> -->
+</div>
       <!-- BEGIN IFRAME TAG - theinfluence 728x90 < - DO NOT MODIFY -->
       <!--<IFRAME SRC="http://ib.adnxs.com/tt?id=2411079&cb=[CACHEBUSTER]&referrer=[REFERRER_URL]&pubclickenc=%5BINSERT_CLICK_TAG%5D" FRAMEBORDER="0" SCROLLING="no" MARGINHEIGHT="0" MARGINWIDTH="0" TOPMARGIN="0" LEFTMARGIN="0" ALLOWTRANSPARENCY="true" WIDTH="728" HEIGHT="90"></IFRAME>-->
       <!-- END TAG -->
