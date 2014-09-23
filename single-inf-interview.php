@@ -270,7 +270,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410297406212-0');
         }
       }
     ?>
-    <div class="more_interviews" style="width:100%;">
+    <div class="more_interviews">
     
     </div>
   </section><!-- /#content -->
