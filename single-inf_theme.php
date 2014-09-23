@@ -261,7 +261,7 @@ function inf_theme_slider_theme() {
     $image_small = wp_get_attachment_image_src($image['inf_featured_image'], 'inf_featured_theme');
     ?>
     <li class="theme-list">
-      <img src="<?php echo $image_small[0]; ?>" class="inf_single_image" />
+      <img src="<?php echo $image_small[0]; ?>" />
 	  <?php if($image['inf_caption2']): ?><div class="slide-text"><?php echo $image['inf_caption2'] ?><br /></div><?php endif; ?>
 <!--     <?php if ($image['inf_caption2']): ?><div class="slide_text" style="vertical-align: top; position: absolute; top:0;" id ="slide_text_"><a href="<?php echo $image['inf_caption_url'] ?>"><?php echo $image['product_name'] ?></a></div><?php endif; ?>
  -->	</li>
