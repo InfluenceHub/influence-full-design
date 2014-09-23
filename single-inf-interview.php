@@ -165,7 +165,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410297406212-0');
           foreach($products_sections as $key=>$ps) {
               $products = $ps['products'];
               if(!empty($products)) { ?>
-                <div id="shop-slider-<?php echo $key; ?>" class="prod-row interview" style="border-bottom: 1px solid #ccc;"> 
+                <div id="shop-slider-<?php echo $key; ?>" class="prod-row interview" style="padding-bottom: 20px; border-bottom: 1px solid #ccc;"> 
                   <ul class="slides">
                     <?php $index = 1;
                     foreach($products as $p) {
@@ -270,7 +270,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410297406212-0');
         }
       }
     ?>
-    <div class="more_interviews">
+    <div class="more_interviews" style="width:100%;">
     
     </div>
   </section><!-- /#content -->
