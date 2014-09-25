@@ -6734,6 +6734,7 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     border: none;
+    text-align: left;
 }
 
 .home-feed-post-view-more {
