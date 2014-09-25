@@ -7031,7 +7031,10 @@ margin-top: 0;
   text-align: left;
   margin-left: -20px;
   height:auto;
-  font: 300 38px/46px "franklin-gothic-urw-comp",arial,sans-serif !important;
+  font-family: "Oswald",arial,sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+
 }
 
 .single-inf_theme .shop-main-social {
