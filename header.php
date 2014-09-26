@@ -64,6 +64,11 @@ googletag.defineSlot('/61413193/Skin_Sides', [120, 1000], 'div-gpt-ad-1409963968
 googletag.defineSlot('/61413193/728x90_Interior', [728, 90], 'div-gpt-ad-1410204268874-0').addService(googletag.pubads());
 googletag.defineSlot('/61413193/ROS_970x120', [970, 120], 'div-gpt-ad-1410297406212-0').addService(googletag.pubads());
 googletag.defineSlot('/61413193/300x250_ROS', [300, 250], 'div-gpt-ad-1410811923506-0').addService(googletag.pubads());
+googletag.defineSlot('/61413193/Staging_300x600_ATF', [300, 600], 'div-gpt-ad-1411688893470-0').addService(googletag.pubads());
+googletag.defineSlot('/61413193/Staging_970x120_Ad', [970, 120], 'div-gpt-ad-1411689032410-0').addService(googletag.pubads());
+googletag.defineSlot('/61413193/Staging_Side_Ad', [120, 1000], 'div-gpt-ad-1411689208750-0').addService(googletag.pubads());
+googletag.defineSlot('/61413193/Staging_Side_Ad_Left', [120, 1000], 'div-gpt-ad-1411689317683-0').addService(googletag.pubads());
+googletag.defineSlot('/61413193/Staging_300x600_BTF', [300, 600], 'div-gpt-ad-1411689469408-0').addService(googletag.pubads());
 googletag.pubads().enableSingleRequest();
 googletag.enableServices();
 });

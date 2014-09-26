@@ -14,9 +14,15 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1410551574695-0');
 </script>
 </div> -->
 <!-- BCBG_HEADER -->
-<div id='div-gpt-ad-1411160635394-0' style='width:970px; height:120px; margin: 50px auto 15px;'>
+<!-- <div id='div-gpt-ad-1411160635394-0' style='width:970px; height:120px; margin: 50px auto 15px;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1411160635394-0'); });
+</script>
+</div> -->
+<!-- Staging_970x120_Ad -->
+<div id='div-gpt-ad-1411689032410-0' style='width:970px; height:120px; margin: 50px auto 15px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1411689032410-0'); });
 </script>
 </div>
   <section id="callout">
@@ -70,7 +76,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1411160635394-0');
 	  <div class="content_wrapper" style="position:relative;">
 	  <!-- Skin_Sides -->
 
-<div id='div-gpt-ad-1409963968603-3' class="no-mobile" style='width:120px; height:1000px;position:fixed; top:138px; left:0;'>
+<!-- <div id='div-gpt-ad-1409963968603-3' class="no-mobile" style='width:120px; height:1000px;position:fixed; top:138px; left:0;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-3'); });
 </script>
@@ -78,6 +84,18 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-3');
 <div id='div-gpt-ad-1409963968603-2' class="no-mobile" style='width:120px; height:1000px;position:fixed; top:138px; right:0;'>
 <script type='text/javascript'>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1409963968603-2'); });
+</script>
+</div> -->
+<!-- Staging_Side_Ad -->
+<div id='div-gpt-ad-1411689208750-0' style='width:120px; height:1000px;position:fixed; top:138px; right:0;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1411689208750-0'); });
+</script>
+</div>
+<!-- Staging_Side_Ad_Left -->
+<div id='div-gpt-ad-1411689317683-0' style='width:120px; height:1000px; position:fixed; top: 138px; left:0;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1411689317683-0'); });
 </script>
 </div>
     <?php
