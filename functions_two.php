@@ -629,9 +629,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1411689469408-0');
             <!-- <div class="hash-influence"></div> -->
             <?php // inf_hash_influencer() ?>
           </div>
-          <div class="viewall-latest">
-            <a href="<?php echo home_url(); ?>/the-latest/">VIEW ALL LATEST LOOKS</a>
-          </div>
         </div><!-- /.shell -->
          <?php //inf_featured_theme('one'); ?>
         <?php inf_home_instagram(); ?>

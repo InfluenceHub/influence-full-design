@@ -6695,6 +6695,7 @@ li.home-feed-side-by-side .home-feed-post-info h2 {
   font-size: 12px;
   margin-bottom: 5px;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .home-feed-side-by-side .home-feed-pcontent {
