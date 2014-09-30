@@ -120,10 +120,9 @@ function inf_feature() {
     );
   $feature = get_post($args);
   $main_box =  carbon_get_post_meta($feature->ID, 'main_image');
-  $main_box_imageID = carbon_get_post_meta($main_box,'full', true);
-  $main_box_image = $main_box_imageID[0];
-
-  $feature_link = carbon_get_post_meta($feature->ID, 'feature_url');
+  $main_boxID = wp_get_attachment_image_src($main_boxID,'full', true);
+  $main_box_image = $main_box_ID[0];
+  $feature_link = get_post_meta($feature->ID, 'feature_url', true);
   ?>
 
   <div class="main_feature_container">
