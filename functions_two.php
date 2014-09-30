@@ -118,9 +118,15 @@ function inf_feature {
     'post_type' => 'inf_main_feature',
      'posts_per_page' => 1
     );
-  $feature = get_post($args)
+  $feature = get_post($args);
   $main_box =  carbon_get_post_meta($feature->ID, 'main_image');
-  $feature_link = carbon_get_post_meta($feature->ID, 'feature_url')
+  $feature_link = carbon_get_post_meta($feature->ID, 'feature_url');
+  ?>
+
+  <div class="main_feature_container">
+      <div class=""
+      <a href="<?php echo $feature_link ?>">
+
 }
 // Call Out Boxes Functions
   function inf_home_box1() {
