@@ -122,8 +122,8 @@ function inf_feature() {
   $main_box =  carbon_get_post_meta($feature->ID, 'main_image');
     if(isset($main_box[0])){
       return $main_box[0];
+    }
     $feature_link = get_post_meta($feature->ID, 'feature_url', true);
-   }
   ?>
 
   <div class="main_feature_container">
