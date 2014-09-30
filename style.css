@@ -199,9 +199,9 @@ div.home-box img {
   padding-top: 20px;
   padding-bottom: 10px;
   display: inline;
-  margin-left: 16px;
-  padding-right: 25px;
-  position: initial;
+  margin-left: 5px;
+  padding-right: 10px;
+  position: relative;
 }
 .callout:nth-child(0) {
   padding-left: 10px;
