@@ -120,7 +120,7 @@ function inf_feature() {
     );
   $feature = get_post($args);
   $main_boxID =  get_post_meta($feature->ID, 'main_image');
-  $main_image = get_post($main_boxID[0]->guid;
+  $main_image = get_post($main_boxID[0]->guid
     $feature_link = get_post_meta($feature->ID, 'feature_url', true);
   ?>
 
