@@ -64,12 +64,15 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1411689032410-0');
         </div>
     </div>
 <!--    <div class="no-mobile"><?php inf_items(); ?></div>
- -->  </div>
+
+ --> 
+ <?php inf_feature() ?>
+
+  </div>
 
   <div class="mobile-only swipe-hint">
     <p> &#8596; </p>
   </div>  
- <?php inf_feature() ?>
 </section>
 
   <section id="content" style="margin-top:-100px;">
