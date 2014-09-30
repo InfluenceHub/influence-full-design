@@ -119,9 +119,8 @@ function inf_feature() {
      'posts_per_page' => 1
     );
   $feature = get_post($args);
-  $main_box =  carbon_get_post_meta($feature->ID, 'main_image');
-    if(isset($main_box[0])){
-      return $main_box[0];
+  $main_boxID =  get_post_meta($feature->ID, 'main_image');
+  $main_image = get_post($main_boxID[0]->guid;
     }
     $feature_link = get_post_meta($feature->ID, 'feature_url', true);
   ?>
@@ -129,7 +128,7 @@ function inf_feature() {
   <div class="main_feature_container">
       <div class="main_feature">
       <a href="<?php echo $feature_link ?>">
-        <img src="<?php echo $main_box ?>" />
+        <img src="<?php echo $main_image ?>" />
       </a>
 </div>
 
