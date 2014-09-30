@@ -128,6 +128,8 @@ function inf_feature {
       <a href="<?php echo $feature_link ?>">
 
 }
+<?php 
+
 // Call Out Boxes Functions
   function inf_home_box1() {
     $args = array(
