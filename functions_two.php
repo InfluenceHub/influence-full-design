@@ -126,9 +126,8 @@ function inf_feature() {
   <div class="main_feature_container">
       <div class=""
       <a href="<?php echo $feature_link ?>">
-
-}
 <?php 
+}
 
 // Call Out Boxes Functions
   function inf_home_box1() {
