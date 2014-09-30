@@ -113,7 +113,7 @@ $args = array(
 }
 
 // Main Feature
-function inf_feature {
+function inf_feature() {
   $args = array (
     'post_type' => 'inf_main_feature',
      'posts_per_page' => 1
