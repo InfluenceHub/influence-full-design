@@ -317,3 +317,11 @@ Carbon_Container::factory('term_meta', __('Category settings', 'inf'))
 	->add_fields(array(
 		Carbon_Field::factory('attachment', 'inf_category_image', 'Category image')
 	));*/
+ Carbon_Container::factory('custom_fields', __('Feature Options', 'inf'))
+	->show_on_post_type('inf_main_feature')
+  ->add_fields(array(
+		Carbon_Field::factory('text', 'feature_url', 'The Link'),
+		Carbon_Field::factory('attachment', 'main_image', 'Main Image')
+			->help_text('Image Dimensions - 600 × 600 pixels.')
+	)); 
+
