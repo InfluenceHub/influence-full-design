@@ -121,17 +121,14 @@ function inf_feature() {
   $feature = get_post($args)[0]->ID;
   $feature_link = get_post_meta($feature->ID, 'feature_url', true);
   $main_boxID =  get_post_meta($feature->ID, 'main_image');
-  $main_image = get_post_meta($main_boxID[0]->guid);
-  
+  $main_image = get_post_meta($main_boxID[0])->guid;
 ?>
-
   <div class="main_feature_container">
       <div class="main_feature">
       <a href="<?php echo $feature_link ?>">
         <img src="<?php echo $main_image ?>" />
       </a>
   </div>
-
 <?php 
 }
 
