@@ -1,6 +1,8 @@
 .banner_container {
   width: 1026px;
   height: auto;
+  margin: auto;
+  padding-right: 30px;
 }
 .theme-list {
   display: block;
