@@ -181,9 +181,9 @@ div.home-box img {
 .callout {
   padding-top: 20px;
   padding-bottom: 10px;
-  display: inline-block;
-  padding-left: 15px;
-  padding-right: 15px;
+  display: inline;
+  padding-left: 10px;
+  padding-right: 20px;
   position:relative;
 }
 .callout:nth-child(0) {
