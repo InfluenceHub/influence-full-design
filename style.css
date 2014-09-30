@@ -192,6 +192,7 @@ div.home-box img {
 .callout img {
   max-width:225px;
   max-height:225px;
+  margin-left: -.25px;
 }
 .callout .callout_hover_container {
   opacity:0;
