@@ -1,3 +1,21 @@
+.main_feature_container {
+  width: 968px;
+  height: 650px;
+  background-color: #fbf1ea;
+
+}
+.main_feature {
+ float: left;
+ padding-left: 10px;
+ padding-top: 10px;
+ padding-left: 10px;
+ padding-bottom: 10px;
+
+}
+.main_feature img {
+  width: 600px;
+  height: 600px;
+}
 .banner_container {
   width: 1026px;
   height: auto;

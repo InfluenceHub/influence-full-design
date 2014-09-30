@@ -111,6 +111,17 @@ $args = array(
 </div>
 <?php
 }
+
+// Main Feature
+function inf_feature {
+  $args = array (
+    'post_type' => 'inf_main_feature',
+     'posts_per_page' => 1
+    );
+  $feature = get_post($args)
+  $main_box =  carbon_get_post_meta($feature->ID, 'main_image');
+  $feature_link = carbon_get_post_meta($feature->ID, 'feature_url')
+}
 // Call Out Boxes Functions
   function inf_home_box1() {
     $args = array(
