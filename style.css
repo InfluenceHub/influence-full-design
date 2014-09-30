@@ -115,7 +115,6 @@ div.home-box img {
 }
 .callout_container {
   width: 1026px;
-  background-color: #fbf1ea;
   margin: 0 auto !important;
 }
 
@@ -200,9 +199,9 @@ div.home-box img {
   padding-top: 20px;
   padding-bottom: 10px;
   display: inline;
-  padding-left: 10px;
-  padding-right: 20px;
-  position:relative;
+  margin-left: 16px;
+  padding-right: 25px;
+  position: initial;
 }
 .callout:nth-child(0) {
   padding-left: 10px;
