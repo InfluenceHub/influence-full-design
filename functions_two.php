@@ -119,9 +119,9 @@ function inf_feature() {
      'posts_per_page' => 1
     );
   $feature = get_post($args);
+  $feature_link = get_post_meta($feature->ID, 'feature_url', true);
   $main_boxID =  get_post_meta($feature->ID, 'main_image');
   $main_image = get_post($main_boxID[0]->guid
-    $feature_link = get_post_meta($feature->ID, 'feature_url', true);
   ?>
 
   <div class="main_feature_container">
