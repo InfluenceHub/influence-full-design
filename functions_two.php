@@ -119,14 +119,14 @@ function inf_feature() {
      'posts_per_page' => 1
     );
   $feature = get_post($args)[0]->ID;
-  $feature_link = carbon_get_post_meta($feature, 'feature_url');
+  $feature_link = carbon($feature, 'feature_url');
   $main_boxID =  carbon_get_post_meta($feature, 'main_image');
   $show_image = $main_boxID[0];
 ?>
   <div class="main_feature_container">
       <div class="main_feature">
       <a href="<?php echo $feature_link ?>">
-        <img src="<?php echo $show_image ?>" />
+        <img src="<?php echo $main_boxID ?>" />
       </a>
         
         <pre>
