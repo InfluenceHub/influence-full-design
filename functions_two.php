@@ -126,7 +126,7 @@ function inf_feature() {
   <div class="main_feature_container">
       <div class="main_feature">
       <a href="<?php echo $feature_link ?>">
-        <img src="<?php echo $main_boxID ?>" />
+        <img src="<?php echo $show_image ?>" />
       </a>
         
         <pre>
