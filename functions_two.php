@@ -130,9 +130,9 @@ function inf_feature() {
       </a>
         
         <pre>
-        <?php print_r($feature_link) ?>
-        <?php print_r($show_image) ?>
-        <?php print_r($main_boxID) ?>
+        <?php var_dump($feature_link) ?>
+        <?php var_dump($show_image) ?>
+        <?php var_dump($main_boxID) ?>
         </pre>
   </div>
 <?php 
