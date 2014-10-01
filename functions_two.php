@@ -119,10 +119,9 @@ function inf_feature() {
      'posts_per_page' => 1
     );
   $feature = get_post($args)[0]->ID;
-  $feature_link = get_post_meta($feature, 'feature_url', true);
-  $main_boxID =  get_post_meta($feature, 'main_image', full);
-  $main_image = get_post($main_boxID[0])->guid;
-  $show_image = $main_image[0];
+  $feature_link = get_post_meta($feature, 'feature_url');
+  $main_boxID =  get_post_meta($feature, 'main_image');
+  $show_image = $main_boxID[0];
 ?>
   <div class="main_feature_container">
       <div class="main_feature">
@@ -131,7 +130,7 @@ function inf_feature() {
       </a>
         
         <pre>
-        <?php print_r($main_image) ?>
+        <?php print_r($feature_link) ?>
         <?php print_r($show_image) ?>
         <?php print_r($main_boxID) ?>
         </pre>
