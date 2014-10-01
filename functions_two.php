@@ -131,9 +131,9 @@ function inf_feature() {
       </a>
         
         <pre>
-        <?php print_r($main_image;) ?>
-        <?php print_r($show_image;) ?>
-        <?php print_r($main_boxID;) ?>
+        <?php print_r($main_image) ?>
+        <?php print_r($show_image) ?>
+        <?php print_r($main_boxID) ?>
         </pre>
   </div>
 <?php 
